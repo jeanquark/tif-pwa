@@ -82,13 +82,13 @@
                 <v-flex d-flex x1 justify-end align-center style="padding-left: 20px;" @click="eventsByDate('substractOne')">
                     <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" />
                 </v-flex>
-                <v-flex d-flex x2 justify-start align-center class="text-xs-center navButton menuDay" style="height: 40px" @click="eventsByDate('yesterday')">
+                <v-flex d-flex x2 justify-start align-center class="text-xs-center navButton menuDay" @click="eventsByDate('yesterday')">
                     Hier
                 </v-flex>
-                <v-flex d-flex x6 justify-center align-center class="text-xs-center menuDay" style="height: 40px">
+                <v-flex d-flex x6 justify-center align-center class="text-xs-center menuDay">
                     {{ date | moment('dddd, MMMM Do YYYY') }}
                 </v-flex>
-                <v-flex d-flex x2 justify-end align-center class="text-xs-center navButton menuDay" style="height: 40px" @click="eventsByDate('tomorrow')">
+                <v-flex d-flex x2 justify-end align-center class="text-xs-center navButton menuDay" @click="eventsByDate('tomorrow')">
                     Demain
                 </v-flex>
                 <v-flex d-flex x1 justify-end align-center style="padding-right: 20px;" @click="eventsByDate('addOne')">
@@ -107,7 +107,7 @@
                         </div>
                         <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                         <v-expansion-panel class="elevation-0" :value="0" v-for="competition in competitions" :key="competition.slug">
-                            <v-expansion-panel-content>
+                            <v-expansion-panel-content class="black">
                                 <div slot="header" class="white--text" style="min-height: 0; padding: 0 8px 8px 8px">
                                     <div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
                                         <img :src="'/images/countries/' + country.slug + '.png'" style="width: 13px; height: 13px" />
@@ -399,6 +399,14 @@
 		
 		.menuDay {
 			height: 40px;
+		}
+		
+		.v-expansion-panel__header {
+			display: flex;
+			cursor: pointer;
+			align-items: center;
+			position: relative;
+			min-height: 24px;
 		}
 	
 		.fade-enter-active, .fade-leave-active {
