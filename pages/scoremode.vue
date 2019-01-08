@@ -72,7 +72,7 @@
         </v-container>
         <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white">
             <v-layout>
-                <v-flex d-flex x12 justify-center align-center class="text-xs-center" style="height: 40px">
+                <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport" style="height: 40px">
                     Soccer
                 </v-flex>
             </v-layout>             
@@ -82,13 +82,13 @@
                 <v-flex d-flex x1 justify-end align-center style="padding-left: 20px;" @click="eventsByDate('substractOne')">
                     <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" />
                 </v-flex>
-                <v-flex d-flex x2 justify-start align-center class="text-xs-center navButton" style="height: 40px" @click="eventsByDate('yesterday')">
+                <v-flex d-flex x2 justify-start align-center class="text-xs-center navButton menuDay" style="height: 40px" @click="eventsByDate('yesterday')">
                     Hier
                 </v-flex>
-                <v-flex d-flex x6 justify-center align-center class="text-xs-center" style="height: 40px">
+                <v-flex d-flex x6 justify-center align-center class="text-xs-center menuDay" style="height: 40px">
                     {{ date | moment('dddd, MMMM Do YYYY') }}
                 </v-flex>
-                <v-flex d-flex x2 justify-end align-center class="text-xs-center navButton" style="height: 40px" @click="eventsByDate('tomorrow')">
+                <v-flex d-flex x2 justify-end align-center class="text-xs-center navButton menuDay" style="height: 40px" @click="eventsByDate('tomorrow')">
                     Demain
                 </v-flex>
                 <v-flex d-flex x1 justify-end align-center style="padding-right: 20px;" @click="eventsByDate('addOne')">
@@ -102,15 +102,15 @@
             <v-card-text class="card-text" style="padding: 8px;">
                 <v-expansion-panel class="elevation-0" :value="0">
                     <v-expansion-panel-content class="green">
-                        <div slot="header" class="white--text">
+                        <div slot="header" class="white--text" style="min-height: 0; padding: 2px 12px">
                             ALL EVENTS
                         </div>
                         <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                         <v-expansion-panel class="elevation-0" :value="0" v-for="competition in competitions" :key="competition.slug">
-                            <v-expansion-panel-content class="black">
-                                <div slot="header" class="white--text">
+                            <v-expansion-panel-content class="black" style="margin-top: 5px">
+                                <div slot="header" class="white--text" style="min-height: 0; padding: 2px 12px">
                                     <div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
-                                        <img :src="'/images/countries/' + country.slug + '.png'" width="25" />
+                                        <img :src="'/images/countries/' + country.slug + '.png'" style="width: 13px; height: 13px" />
                                         &nbsp;&nbsp;{{ competition.name }}
                                     </div>
                                 </div>
@@ -118,21 +118,42 @@
                                 <v-card>
                                     <v-card-text style="padding: 0px">
                                         <v-data-table :items="eventsByCompetition(competition.slug)" class="elevation-0" hide-actions hide-headers>
-                                            <template slot="items" slot-scope="props">
-                                                <td class="text-xs-left hidden-xs-only" width="10%"><v-img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" aspect-ratio="1" width="30"></v-img></td>
-                                                <td class="text-xs-left" width="30%" style="font-size: 1.2em;">{{ props.item.home_team.name }}</td>
-                                                <td class="text-xs-center" width="20%">
-                                                    <span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'">
-                                                        <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-                                                            <span :key="props.item.score">
-                                                                {{ props.item.score }}
-                                                            </span>
-                                                        </transition>
-                                                    </span>
-                                                    <span v-else style="font-size: 1.2em;">{{ convertToLocaltime(props.item.timestamp) }}</span>
-                                                </td>
-                                                <td class="text-xs-right" width="30%" style="font-size: 1.2em;">{{ props.item.visitor_team.name }}</td>
-                                                <td class="text-xs-right hidden-xs-only" width="10%"><v-img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" aspect-ratio="1" width="30"></v-img></td>
+                                            <template slot="items" slot-scope="props" style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
+												<tr align-start>
+													<td class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
+														<div style="background-color: red; height: 100%; width: 2px"></div>
+													</td>
+													<td class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
+														<div style="color: orange;font-size: 80%"><span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px"> {{ props.item.status}}</span> {{ props.item.date }} - {{ props.item.time}}</div>
+													</td>
+												</tr>
+												<tr align-center style="width: 100%">
+													<td class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
+														<div style="background-color: red; height: 40px; width: 2px"></div>
+													</td>
+													<td sm1 hidden-xs-only align-center class="text-xs-left" style="width: 50px; padding-left: 15px">
+														<v-img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" aspect-ratio="1" width="25"></v-img>
+													</td>
+													<td sm4 xs5 align-center class="text-xs-left pd-left10">
+														{{ props.item.home_team.name }} 
+													</td>
+													<td sm2 xs2 class="text-xs-center">
+														<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'">
+															<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
+																<span :key="props.item.score">
+																	{{ props.item.score }}
+																</span>
+															</transition>
+														</span>
+														<span v-else style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">{{ convertToLocaltime(props.item.timestamp) }}</span>
+													</td>
+													<td sm4 xs5 align-center class="text-xs-right pd-right10">
+														{{ props.item.visitor_team.name }}
+													</td>
+													<td sm1 hidden-xs-only align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
+														<v-img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" aspect-ratio="1" width="25"></v-img>
+													</td>
+												</tr>
                                             </template>
                                         </v-data-table>
                                     </v-card-text>
@@ -366,336 +387,325 @@
     }
 </script>
 
-<style scoped>
-    .black {
-        background-color: black;
-    }
-        
-    /* ScoreCard */
+	<style scoped>
+	
+		.black {
+		background-color: black;
+		}
+		
+		/* ScoreCard */
 
-    .card {
-        border-radius: 5px;
-    }
-    .card-title {
-        background-color: lightslategray;
-    }
-    .card-text {
-        background-color: whitesmoke;
-        width: auto;
-        border-radius: 8px;
-    }
-    .card-footer {
-        background-color: lightslategrey;
-    }
-    .fas:hover {
-        cursor: pointer;
-        color: #fff;
-    }
-    
-    .v-expansion-panel__header {
-        padding: 2px 12px;
-        min-height: 0;
-    }
-    
-    #app {
-        font: normal 100%/1 "Acme", Helvetica, sans-serif;
-    }
+		.card {
+		border-radius: 5px;
+		}
+		.card-title {
+		background-color: lightslategray;
+		}
+		.card-text {
+		background-color: whitesmoke;
+		width: auto;
+		border-radius: 8px;
+		}
+		.card-footer {
+		background-color: lightslategrey;
+		}
+		.fas:hover {
+		cursor: pointer;
+		color: #fff;
+		}
+		
+		.v-expansion-panel__header {
+	    padding: 2px 12px;
+		min-height: 0;
+		}
+		
+		#app {
+		font: normal 100%/1 "Acme", Helvetica, sans-serif;
+		}
 
-    /* Header */
-    .headerMenu:hover {
-        cursor: pointer;
-        background-color: rgb(248,147,37);
-    }
-    .headerInfo {
-        padding: 0px; height: 20px; margin-top: 0px;
-    }
-    .activeLeft {
-        padding: 0px; height: 20px; margin-top: 0px;
-    }
-    .activeRight {
-        padding: 0px; height: 20px; margin-top: 0px;
-    }
-    
-    .backBlack {
-        background-image: url("/images/header-TIF_03.png");
-        background-position: center;
-        background-repeat: repeat-x;
-    }
-    
-    .headerLogo {
-        height: 83px;
-    }
-    
-    .levelBox {
-        background-color: white;
-        color: black;
-        height: 20px;
-        vertical-align: middle;
-        padding: 0  15px;
-        border-radius: 3px;
-    }
-    
-    .energyBox {
-        background-color: white;
-        color: black;
-        height: 20px;
-        vertical-align: middle;
-        padding: 0 15px;
-        border-radius: 3px;
-    }
-    
-    .dollarBox {
-        background-color: white;
-        color: black;
-        height: 20px;
-        vertical-align: middle;
-        padding: 0 15px;
-        border-radius: 3px;
-    }
+		/* Header */
+		.headerMenu:hover {
+		cursor: pointer;
+		background-color: rgb(248,147,37);
+		}
+		.headerInfo {
+		padding: 0px; height: 20px; margin-top: 0px;
+		}
+		.activeLeft {
+		padding: 0px; height: 20px; margin-top: 0px;
+		}
+		.activeRight {
+		padding: 0px; height: 20px; margin-top: 0px;
+		}
+		
+		.backBlack {
+		background-image: url("header-TIF_03.png");
+		background-position: center;
+		background-repeat: repeat-x;
+		}
+		
+		.headerLogo {
+		height: 83px;
+		}
+		
+		.levelBox {
+		background-color: white;
+		color: black;
+		height: 20px;
+		vertical-align: middle;
+		padding: 0 	15px;
+		border-radius: 3px;
+		}
+		
+		.energyBox {
+		background-color: white;
+		color: black;
+		height: 20px;
+		vertical-align: middle;
+		padding: 0 15px;
+		border-radius: 3px;
+		}
+		
+		.dollarBox {
+		background-color: white;
+		color: black;
+		height: 20px;
+		vertical-align: middle;
+		padding: 0 15px;
+		border-radius: 3px;
+		}
 
-    .tokenBox {
-        background-color: white;
-        color: black;
-        height: 20px;
-        vertical-align: middle;
-        padding: 0 15px;
-        border-radius: 3px;
-    }
+		.tokenBox {
+		background-color: white;
+		color: black;
+		height: 20px;
+		vertical-align: middle;
+		padding: 0 15px;
+		border-radius: 3px;
+		}
 
-    /* Menu */
+		/* Menu */
 
-    #dock-container {
-        height: 80px;
-        padding: 0;
-        margin: 0;
-        bottom: 0;
-        background-color: rgb(248,147,37);
-        border: none;
-        border-top: 4px solid orangered;
-    }
+		#dock-container {
+		height: 80px;
+		padding: 0;
+		margin: 0;
+		bottom: 0;
+		background-color: rgb(248,147,37);
+		border: none;
+		border-top: 4px solid orangered;
+		}
 
-    #dock-container li#active img {
-        -webkit-transform: scale(1.65);
-        margin: 0 0.5em;
-    }
+		#dock-container li#active img {
+		-webkit-transform: scale(1.65);
+		margin: 0 0.5em;
+		}
 
-    #dock-container li {
-        width: 17%;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        display: inline-block;
-        position: relative;
-        padding-top: 10px;
-    }
+		#dock-container li {
+		width: 17%;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		display: inline-block;
+		position: relative;
+		padding-top: 10px;
+		}
 
-    #dock-container ul {
-        width: 100%;
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-bottom: 0;
-    }
+		#dock-container ul {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-bottom: 0;
+		}
 
-    #dock-container li img {
-        width: 58px;
-        height: 58px;
-        /*-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));*/
-        -webkit-transition: all 0.3s;
-        -webkit-transform-origin: 50% 100%;
-    }
+		#dock-container li img {
+		width: 58px;
+		height: 58px;
+		-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
+		-webkit-transition: all 0.3s;
+		-webkit-transform-origin: 50% 100%;
+		}
 
-    #dock-container li:hover img { 
-        -webkit-transform: scale(1.65);
-        margin: 0 0.5em;
-    }
+		#dock-container li:hover img { 
+		-webkit-transform: scale(1.65);
+		margin: 0 0.5em;
+		}
 
-    #dock-container li:hover + li img, #dock-container li.prev img {
-        -webkit-transform: scale(1);
-        margin: 0 0;
-    }
+		#dock-container li:hover + li img, #dock-container li.prev img {
+		-webkit-transform: scale(1);
+		margin: 0 0;
+		}
 
-    #dock-container li span {
-        display: none;
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0,0,0,0.5);
-        border-radius: 5px;
-    }
+		#dock-container li span {
+		display: none;
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+		width: 100%;
+		background-color: rgba(0,0,0,0.5);
+		border-radius: 5px;
+		}
 
-    #dock-container li#active span {
-        display: none;
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0,0,0,0.5);
-        border-radius: 5px;
-    }
+		#dock-container li#active span {
+		display: none;
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+		width: 100%;
+		background-color: rgba(0,0,0,0.5);
+		border-radius: 5px;
+		}
 
-    #dock-container li#active span {
-        display: block;
-        color: #fff;
-    }
+		#dock-container li#active span {
+		display: block;
+		color: #fff;
+		}
 
-    #dock-container li#active .textMenu {
-        font: normal 120%/1 "Acme", Helvetica, sans-serif;
-        padding: 2px;
-    }
+		#dock-container li#active .textMenu {
+		font: normal 120%/1 "Acme", Helvetica, sans-serif;
+		padding: 2px;
+		}
 
-    #dock-container li:hover span {
-        display: block;
-        color: #fff;
-    }
+		#dock-container li:hover span {
+		display: block;
+		color: #fff;
+		}
 
-    #dock-container .textMenu {
-        font: normal 120%/1 "Acme", Helvetica, sans-serif;
-        padding: 2px;
-    }
+		#dock-container .textMenu {
+		font: normal 120%/1 "Acme", Helvetica, sans-serif;
+		padding: 2px;
+		}
 
-    @media only screen and (max-width: 768px) {
+			@media only screen and (max-width: 768px) {
 
-        #app {
-            font: normal 90%/1 "Acme", Helvetica, sans-serif;
-        }
-        
-        .pd-right10 {
-            padding-right: 10px;
-        }
-        
-        .pd-left10 {
-            padding-left: 10px;
-        }
+			#app {
+			font: normal 90%/1 "Acme", Helvetica, sans-serif;
+			}
+			
+			.pd-right10 {
+			padding-right: 10px;
+			}
+			
+			.pd-left10 {
+			padding-left: 10px;
+			}
 
-        /* Header */
+			/* Header */
 
-        .imageLogoTif {
-            width: 60px;
-            height: 60px;
-        }
+			.imageLogoTif {
+			width: 60px;
+			height: 60px;
+			}
 
-        .boxTif {
-            width: 70px;
-            height: 70px;
-        }
+			.boxTif {
+			width: 70px;
+			height: 70px;
+			}
 
-        .imageLogo {
-            width: 30px;
-            height: 30px;
-        }
+			.imageLogo {
+			width: 30px;
+			height: 30px;
+			}
+			
+			.menuSport {
+				height: 30px;
+			}
+			
+			.menuDay {
+				height: 30px;
+			}
 
-        /* Menu */
+			/* Menu */
 
-        #dock-container {
-            height: 55px;
-            padding: 0;
-            margin: 0;
-            bottom: 0;
-            background-color: rgb(248,147,37);
-            border: none;
-            border-top: 4px solid darkred;
-        }
+			#dock-container {
+			height: 55px;
+			padding: 0;
+			margin: 0;
+			bottom: 0;
+			background-color: rgb(248,147,37);
+			border: none;
+			border-top: 4px solid darkred;
+			}
 
-        #dock-container li#active img {
-            -webkit-transform: scale(1.65);
-            margin: 0 0.5em;
-        }
+			#dock-container li#active img {
+			-webkit-transform: scale(1.65);
+			margin: 0 0.5em;
+			}
 
-        #dock-container li {
-            width: 17%;
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
-            display: inline-block;
-            position: relative;
-            padding-top: 3px;
-        }
+			#dock-container li {
+			width: 17%;
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			display: inline-block;
+			position: relative;
+			padding-top: 3px;
+			}
 
-        #dock-container ul {
-            width: 100%;
-            padding-left: 0px;
-            padding-right: 0px;
-            margin-bottom: 0;
-        }
+			#dock-container ul {
+			width: 100%;
+			padding-left: 0px;
+			padding-right: 0px;
+			margin-bottom: 0;
+			}
 
-        #dock-container li img {
-            width: 38px;
-            height: 38px;
-            /*-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));*/
-            -webkit-transition: all 0.3s;
-            -webkit-transform-origin: 50% 100%;
-        }
+			#dock-container li img {
+			width: 38px;
+			height: 38px;
+			-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
+			-webkit-transition: all 0.3s;
+			-webkit-transform-origin: 50% 100%;
+			}
 
-        #dock-container li:hover img { 
-            -webkit-transform: scale(1.65);
-            margin: 0 0.5em;
-        }
+			#dock-container li:hover img { 
+			-webkit-transform: scale(1.65);
+			margin: 0 0.5em;
+			}
 
-        #dock-container li:hover + li img, #dock-container li.prev img {
-            -webkit-transform: scale(1);
-            margin: 0 0;
-        }
+			#dock-container li:hover + li img, #dock-container li.prev img {
+			-webkit-transform: scale(1);
+			margin: 0 0;
+			}
 
-        #dock-container li span {
-            display: none;
-            position: absolute;
-            bottom: 0px;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0,0,0,0.5);
-            border-radius: 5px;
-        }
+			#dock-container li span {
+			display: none;
+			position: absolute;
+			bottom: 0px;
+			left: 0;
+			width: 100%;
+			background-color: rgba(0,0,0,0.5);
+			border-radius: 5px;
+			}
 
-        #dock-container li#active span {
-            display: none;
-            position: absolute;
-            bottom: 0px;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0,0,0,0.5);
-            border-radius: 5px;
-        }
+			#dock-container li#active span {
+			display: none;
+			position: absolute;
+			bottom: 0px;
+			left: 0;
+			width: 100%;
+			background-color: rgba(0,0,0,0.5);
+			border-radius: 5px;
+			}
 
-        #dock-container li#active span {
-            display: block;
-            color: #fff;
-        }
+			#dock-container li#active span {
+			display: block;
+			color: #fff;
+			}
 
-        #dock-container li#active .textMenu {
-            font: normal 90%/1 "Acme", Helvetica, sans-serif;
-            padding: 2px;
-        }
+			#dock-container li#active .textMenu {
+			font: normal 90%/1 "Acme", Helvetica, sans-serif;
+			padding: 2px;
+			}
 
-        #dock-container li:hover span {
-            display: block;
-            color: #fff;
-        }
+			#dock-container li:hover span {
+			display: block;
+			color: #fff;
+			}
 
-        #dock-container .textMenu {
-            font: normal 90%/1 "Acme", Helvetica, sans-serif;
-            padding: 2px;
-        }
+			#dock-container .textMenu {
+			font: normal 90%/1 "Acme", Helvetica, sans-serif;
+			padding: 2px;
+			}
 
-    }
-
-    /* Ajouts J-M */
-    .navButton:hover {
-        cursor: pointer;
-        text-shadow : 0 0 6px #FFF, 0 0 6px #FFF;
-    }
-    .icon:hover {
-        cursor: pointer;
-        text-shadow: 10 10 30px #ff0000; color: orangered;
-    }
-
-    /* Vuejs transitions*/
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity 5s;
-        background-color: #000;
-    }
-    .fade-enter, .fade-leave-to {
-        opacity: 0;
-    }
-
-</style>
+		}
+	</style>
