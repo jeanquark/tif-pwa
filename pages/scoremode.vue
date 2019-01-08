@@ -108,7 +108,7 @@
                         <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                         <v-expansion-panel class="elevation-0" :value="0" v-for="competition in competitions" :key="competition.slug">
                             <v-expansion-panel-content class="black">
-                                <div slot="header" class="white--text" style="min-height: 0; padding: 0 8px 8px 8px">
+                                <div class="white--text" style="min-height: 0; padding: 0 8px 8px 8px">
                                     <div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
                                         <img :src="'/images/countries/' + country.slug + '.png'" style="width: 13px; height: 13px" />
                                         &nbsp;&nbsp;{{ competition.name }}
