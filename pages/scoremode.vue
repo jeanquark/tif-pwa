@@ -99,16 +99,16 @@
 
 
         <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
-            <v-card-text class="card-text" style="padding: 8px;">
+            <v-card-text class="card-text">
                 <v-expansion-panel class="elevation-0" :value="0">
                     <v-expansion-panel-content class="green">
-                        <div slot="header" class="white--text" style="min-height: 0; padding: 2px 12px">
+                        <div slot="header" class="white--text" style="max-height: 24px; padding: 2px 6px">
                             ALL EVENTS
                         </div>
                         <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                         <v-expansion-panel class="elevation-0" :value="0" v-for="competition in competitions" :key="competition.slug">
                             <v-expansion-panel-content class="black">
-                                <div slot="header" class="white--text" style="min-height: 0; padding: 8px 8px">
+                                <div slot="header" class="white--text" style="max-height: 24px; padding: 2px 6px">
                                     <div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
                                         <img :src="'/images/countries/' + country.slug + '.png'" style="width: 13px; height: 13px" />
                                         &nbsp;&nbsp;{{ competition.name }}
@@ -116,7 +116,7 @@
                                 </div>
                                 <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                                 <v-card>
-									<v-card-text style="padding: 0 8px 8px 8px">
+									<v-card-text style="padding: 0">
                                         <v-data-table :items="eventsByCompetition(competition.slug)" class="elevation-0" hide-actions hide-headers>
 											<template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
 												<v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
