@@ -72,7 +72,7 @@
         </v-container>
         <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white">
             <v-layout>
-                <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport" style="height: 40px">
+                <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
                     Soccer
                 </v-flex>
             </v-layout>             
@@ -107,7 +107,7 @@
                         </div>
                         <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                         <v-expansion-panel class="elevation-0" :value="0" v-for="competition in competitions" :key="competition.slug">
-                            <v-expansion-panel-content class="black" style="margin-top: 5px">
+                            <v-expansion-panel-content class="black">
                                 <div slot="header" class="white--text" style="min-height: 0; padding: 2px 12px">
                                     <div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
                                         <img :src="'/images/countries/' + country.slug + '.png'" style="width: 13px; height: 13px" />
@@ -116,42 +116,46 @@
                                 </div>
                                 <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                                 <v-card>
-                                    <v-card-text style="padding: 0px">
+									<v-card-text style="padding: 0 8px 8px 8px">
                                         <v-data-table :items="eventsByCompetition(competition.slug)" class="elevation-0" hide-actions hide-headers>
-                                            <template slot="items" slot-scope="props" style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
-												<v-layout align-start>
-													<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-														<div style="background-color: red; height: 100%; width: 2px"></div>
-													</v-flex>
-													<v-flex rowspan="5" class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-														<div style="color: orange;font-size: 80%"><span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px"> {{ props.item.status}}</span> {{ props.item.date }} - {{ props.item.time}}</div>
-													</v-flex>
-												</v-layout>
-												<v-layout align-center style="max-width: 100%">
-													<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-														<div style="background-color: red; height: 40px; width: 2px"></div>
-													</v-flex>
-													<v-flex sm1 hidden-xs-only align-center class="text-xs-left" style="width: 50px; padding-left: 15px">
-														<v-img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" aspect-ratio="1" width="25"></v-img>
-													</v-flex>
-													<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-														{{ props.item.home_team.name }} 
-													</v-flex>
-													<v-flex sm2 xs2 class="text-xs-center">
-														<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'">
-															<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-																<span :key="props.item.score">
-																	{{ props.item.score }}
+											<template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
+												<v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
+													<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
+														<v-layout align-start>
+															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
+																<div style="background-color: red; height: 100%; width: 2px"></div>
+															</v-flex>
+															<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
+																<div style="color: orange;font-size: 80%"><span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px"> {{ props.item.status }}</span> {{ props.item.date }} - {{ props.item.time}}</div>
+															</v-flex>
+														</v-layout>
+														<v-layout align-center style="max-width: 100%">
+															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
+																<div style="background-color: red; height: 40px; width: 2px"></div>
+															</v-flex>
+															<v-flex sm1 hidden-xs-only align-center class="text-xs-left" style="width: 50px; padding-left: 15px">
+																<v-img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" aspect-ratio="1" max-width="25" max-height="25"></v-img>
+															</v-flex>
+															<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
+																{{ props.item.home_team.name }} 
+															</v-flex>
+															<v-flex sm2 xs2 class="text-xs-center">
+																<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'">
+																	<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
+																		<span :key="props.item.score">
+																			{{ props.item.score }}
+																		</span>
+																	</transition>
 																</span>
-															</transition>
-														</span>
-														<span v-else style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">{{ convertToLocaltime(props.item.timestamp) }}</span>
-													</v-flex>
-													<v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-														{{ props.item.visitor_team.name }}
-													</v-flex>
-													<v-flex sm1 hidden-xs-only align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
-														<v-img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" aspect-ratio="1" width="25"></v-img>
+																<span v-else style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">{{ convertToLocaltime(props.item.timestamp) }}</span>
+															</v-flex>
+															<v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
+																{{ props.item.visitor_team.name }}
+															</v-flex>
+															<v-flex sm1 hidden-xs-only align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
+																<v-img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" aspect-ratio="1" max-width="25" max-height="25"></v-img>
+															</v-flex>
+														</v-layout>
 													</v-flex>
 												</v-layout>
                                             </template>
@@ -388,6 +392,14 @@
 </script>
 
 	<style scoped>
+	
+		.menuSport {
+			height: 40px;
+		}
+		
+		.menuDay {
+			height: 40px;
+		}
 	
 		.fade-enter-active, .fade-leave-active {
 			transition: opacity 5s;
