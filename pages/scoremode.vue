@@ -108,7 +108,7 @@
                         <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                         <v-expansion-panel class="elevation-0" :value="0" v-for="competition in competitions" :key="competition.slug">
                             <v-expansion-panel-content class="black">
-                                <div class="white--text" style="min-height: 0; padding: 0 8px 8px 8px">
+                                <div slot="header" class="white--text" style="min-height: 0; padding: 8px 8px">
                                     <div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
                                         <img :src="'/images/countries/' + country.slug + '.png'" style="width: 13px; height: 13px" />
                                         &nbsp;&nbsp;{{ competition.name }}
@@ -153,7 +153,7 @@
 																{{ props.item.visitor_team.name }}
 															</v-flex>
 															<v-flex sm1 hidden-xs-only align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
-																<v-img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" aspect-ratio="1" max-width="25" max-height="25"></v-img>
+																<v-img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" max-width="25" max-height="25" class="text-xs-right"></v-img>
 															</v-flex>
 														</v-layout>
 													</v-flex>
