@@ -521,7 +521,7 @@
 		#dock-container li img {
 		width: 58px;
 		height: 58px;
-		-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
+		-webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
 		-webkit-transition: all 0.3s;
 		-webkit-transform-origin: 50% 100%;
 		}
