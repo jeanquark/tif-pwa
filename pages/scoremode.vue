@@ -389,6 +389,15 @@
 
 	<style scoped>
 	
+		.fade-enter-active, .fade-leave-active {
+			transition: opacity 5s;
+			background-color: #000;
+		}
+		
+		.fade-enter, .fade-leave-to {
+			opacity: 0;
+		}
+	
 		.black {
 		background-color: black;
 		}
@@ -439,7 +448,7 @@
 		}
 		
 		.backBlack {
-		background-image: url("header-TIF_03.png");
+		background-image: url("/images/header-TIF_03.png");
 		background-position: center;
 		background-repeat: repeat-x;
 		}
