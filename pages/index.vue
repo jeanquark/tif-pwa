@@ -34,9 +34,22 @@
 </template>
 
 <script>
+	import moment from 'moment'
 	export default {
 		// layout: 'layoutLandingPage',
 		middleware: ['unauth-check'],
+		created () {
+			// const last_changed = moment("2019-01-07 13:37:01").format('YYYY-MM-DD HH:mm:ss')
+			// console.log('last_changed: ', last_changed)
+			// const now = moment().format('YYYY-MM-DD HH:mm:ss')
+			// const a = moment(new Date())
+			// console.log('a: ', a)
+			// const b = moment("2019-01-07 15:10:01")
+			// console.log('b: ', b)
+			// console.log(moment(new Date()))
+			// console.log(moment("2019-01-07 13:37:01"))
+			// console.log(a.diff(b, "minutes"))
+		},
 		methods: {
 			async signInWithGoogle() {
 				console.log("signInWithGoogle")

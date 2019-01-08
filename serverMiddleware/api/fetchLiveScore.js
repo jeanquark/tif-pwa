@@ -69,6 +69,15 @@ module.exports = app.use(async function(req, res, next) {
         updates["/events/" + id + "/last_changed"] = match.last_changed;
         if (match.status !== 'FINISHED') {
           updates["/events/" + id + "/notification_sent"] = false
+        } else if (match.status === 'FINISHED') {
+          // Match has ended, update standings
+          const now = moment();
+          const last_changed = moment(match.last_changed);
+          // if (match.now.diff(last_changed, 'minutes') < 10) {}
+          const url = `http://livescore-api.com/api-client/leagues/table.json?key=${api_key}&secret=${api_secret}&league=25&season=2&v`
+          const standing = await axios.get(url);
+          console.log('standing: ', standing)
+          updates["/standings/" + match.league_id] = standing
         }
       }
     }
