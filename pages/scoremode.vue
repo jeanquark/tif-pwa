@@ -403,11 +403,8 @@
 		}
 		
 		.v-expansion-panel__header {
-			display: flex;
-			cursor: pointer;
-			align-items: center;
-			position: relative;
-			min-height: 24px;
+		padding: 2px 2px;
+		min-height: 24px;
 		}
 	
 		.fade-enter-active, .fade-leave-active {
@@ -451,12 +448,7 @@
 		cursor: pointer;
 		color: #fff;
 		}
-		
-		.v-expansion-panel__header {
-	    padding: 2px 12px;
-		min-height: 0;
-		}
-		
+			
 		#app {
 		font: normal 100%/1 "Acme", Helvetica, sans-serif;
 		}
