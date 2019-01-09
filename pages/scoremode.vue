@@ -127,6 +127,7 @@
 															</v-flex>
 															<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
 																<div style="color: orange;font-size: 80%"><span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'"></span> {{ props.item.date }} - {{ props.item.time}}</div>
+																<div style="color: orange;font-size: 80%"><span v-else style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT</span> - {{ convertToLocaltime(props.item.timestamp) }}</div>
 															</v-flex>
 														</v-layout>
 														<v-layout align-center style="max-width: 100%">
@@ -673,7 +674,12 @@
 			.headerLogo {
 			height: 50px;
 			}
-
+			
+			.v-expansion-panel__header {
+			padding: 2px 2px;
+			min-height: 24px;
+			}
+			
 			/* Menu */
 
 			#dock-container {
