@@ -2,7 +2,7 @@
     <v-content id="app">
         <v-container fluid style="padding: 0; max-width: 800px; color: white; border-bottom: 4px solid rgb(248,147,37)" class="backBlack">
             <v-layout row wrap>
-                <v-flex d-flex xs2 justify-start align-center class="text-xs-left backBlack">
+                <v-flex d-flex xs2 justify-start class="text-xs-left backBlack">
                     <v-card flat tile class="black boxTif backBlack" style="max-height: 120px; max-width: 120px">
                         <img src="/images/header-TIF_01.jpg" width="120px" height="120px" class="imageLogoTif" />
                     </v-card>
@@ -63,7 +63,7 @@
                         </v-flex>
                     </v-layout>
                 </v-flex>
-                <v-flex d-flex xs2 justify-end align-center class="text-xs-right">
+                <v-flex d-flex xs2 justify-end class="text-xs-right">
                     <v-card flat tile class="black boxTif" style="max-height: 120px; max-width: 120px">
                         <img src="/images/header-TIF_05.jpg" width="120px" height="120px" class="imageLogoTif"/>
                     </v-card>
@@ -137,7 +137,7 @@
 																<v-img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"></v-img>
 															</v-flex>
 															<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-																<span style="font-size: 1.3em">{{ props.item.home_team.name }}</span>
+																<span class="teamTextSize">{{ props.item.home_team.name }}</span>
 															</v-flex>
 															<v-flex sm2 xs2 class="text-xs-center">
 																<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'">
@@ -150,7 +150,7 @@
 																<span v-else style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">{{ convertToLocaltime(props.item.timestamp) }}</span>
 															</v-flex>
 															<v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-																<span style="font-size: 1.3em">{{ props.item.visitor_team.name }}</span>
+																<span class="teamTextSize">{{ props.item.visitor_team.name }}</span>
 															</v-flex>
 															<v-flex sm1 hidden-xs-only align-center class="right" style="width: 50px; padding-right: 15px">
 																<v-img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"></v-img>
@@ -419,7 +419,11 @@
 		}
 		
 		.imgLogoEquipe {
-		max-width: 35px;
+		max-width: 30px;
+		}
+		
+		.teamTextSize {
+		font-size: 1.3em;
 		}
 	
 		.black {
@@ -626,6 +630,20 @@
 			.imgLogoEquipe {
 			max-width: 35px;
 			}
+			
+			.teamTextSize {
+			font-size: 1.0em;
+			}
+			
+			.energyBox {
+			background-color: white;
+			color: black;
+			height: 20px;
+			vertical-align: middle;
+			padding: 0 2px;
+			border-radius: 3px;
+			font-size: 0.9em;
+			}
 
 			/* Header */
 
@@ -650,6 +668,10 @@
 			
 			.menuDay {
 				height: 30px;
+			}
+			
+			.headerLogo {
+			height: 50px;
 			}
 
 			/* Menu */
