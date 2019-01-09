@@ -16,25 +16,25 @@
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
                                                 <img src="/images/menuShop.png" width="58px" height="58px" class="imageLogo" /><br />
-                                                <span class="energyBox">5 / 100</span>
+                                                <div class="energyBox">5 / 100</div>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
                                             <div class="headerLogo">
                                                 <img src="/images/menuShop.png" width="58px" height="58px" class="imageLogo"/><br />
-                                                <span class="energyBox">10 / 10</span>
+                                                <div class="energyBox">10 / 10</div>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
                                             <div class="headerLogo">
                                                 <img src="/images/menuShop.png" width="58px" height="58px" class="imageLogo"/><br />
-                                                <span class="energyBox">1234 $</span>
+                                                <div class="energyBox">1234 $</div>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-left: 1px solid rgb(248,147,37); border-right: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
                                                 <img src="/images/menuShop.png" width="58px" height="58px" class="imageLogo"/><br />
-                                                <span class="energyBox">16 tokens</span>
+                                                <div class="energyBox">16 tokens</div>
                                             </div>
                                         </v-flex>
                                     </v-layout>
@@ -101,14 +101,14 @@
         <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
             <v-card-text class="card-text">
                 <v-expansion-panel class="elevation-0" :value="0">
-                    <v-expansion-panel-content class="green">
-                        <div slot="header" class="white--text" style="max-height: 24px; padding: 2px 6px">
+                    <v-expansion-panel-content class="green" style="max-height: 24px; padding: 2px 6px">
+                        <div slot="header" class="white--text">
                             ALL EVENTS
                         </div>
                         <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                         <v-expansion-panel class="elevation-0" :value="0" v-for="competition in competitions" :key="competition.slug">
-                            <v-expansion-panel-content class="black">
-                                <div slot="header" class="white--text" style="max-height: 24px; padding: 2px 6px">
+                            <v-expansion-panel-content class="black" style="max-height: 24px; padding: 2px 6px">
+                                <div slot="header" class="white--text">
                                     <div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
                                         <img :src="'/images/countries/' + country.slug + '.png'" style="width: 13px; height: 13px" />
                                         &nbsp;&nbsp;{{ competition.name }}
@@ -420,6 +420,7 @@
 		
 		.imgLogoEquipe {
 		max-width: 30px;
+		max-height: 30px;
 		}
 		
 		.teamTextSize {
@@ -490,12 +491,13 @@
 		}
 		
 		.energyBox {
-		background-color: white;
+		background-color: #424242;
 		color: black;
 		height: 20px;
 		vertical-align: middle;
-		padding: 0 15px;
+		padding: 0;
 		border-radius: 3px;
+		width: 95%;
 		}
 		
 		.dollarBox {
