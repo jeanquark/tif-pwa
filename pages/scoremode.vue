@@ -11,7 +11,7 @@
                     <v-layout row wrap>
                         <v-flex d-flex>
                             <v-layout row wrap>
-                                <v-flex d-flex xs12 hidden-xs-only class="elevation-0">
+                                <v-flex d-flex xs12 class="elevation-0">
                                     <v-layout row wrap>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
@@ -34,36 +34,6 @@
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-left: 1px solid rgb(248,147,37); border-right: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
                                                 <img src="/images/menuShop.png" class="imageLogo"/><br />
-                                                <div class="energyBox">16 tokens</div>
-                                            </div>
-                                        </v-flex>
-                                    </v-layout>
-                                </v-flex>
-                                <v-flex d-flex xs12 hidden-sm-and-up class="elevation-0">
-                                    <v-layout row wrap>
-                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <img src="/images/menuShop.png" class="imageLogo" />
-                                                <div class="energyBox">5 / 100</div>
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <img src="/images/menuShop.png" class="imageLogo"/>
-                                                <div class="energyBox">10 / 10</div>
-                                            </div>
-                                        </v-flex>
-									</v-layout>
-                                    <v-layout row wrap>
-                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <img src="/images/menuShop.png" class="imageLogo"/>
-                                                <div class="energyBox">1234 $</div>
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-left: 1px solid rgb(248,147,37); border-right: 2px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <img src="/images/menuShop.png" class="imageLogo"/>
                                                 <div class="energyBox">16 tokens</div>
                                             </div>
                                         </v-flex>
@@ -700,8 +670,15 @@
 			/* Header */
 
 			.imageLogoTif {
-			width: 60px;
-			height: 60px;
+			width: 70px;
+			height: 70px;
+			}
+			
+			.backBlack {
+			background-image: url("/images/header-TIF_03.png");
+			background-position: center;
+			background-repeat: repeat-x;
+			height: 70px;
 			}
 
 			.boxTif {
