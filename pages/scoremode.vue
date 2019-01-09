@@ -101,13 +101,13 @@
         <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
             <v-card-text class="card-text">
                 <v-expansion-panel class="elevation-0" :value="0">
-                    <v-expansion-panel-content class="green" style="max-height: 24px; padding: 2px 6px">
+                    <v-expansion-panel-content class="green">
                         <div slot="header" class="white--text">
                             ALL EVENTS
                         </div>
                         <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                         <v-expansion-panel class="elevation-0" :value="0" v-for="competition in competitions" :key="competition.slug">
-                            <v-expansion-panel-content class="black" style="max-height: 24px; padding: 2px 6px">
+                            <v-expansion-panel-content class="black">
                                 <div slot="header" class="white--text">
                                     <div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
                                         <img :src="'/images/countries/' + country.slug + '.png'" style="width: 13px; height: 13px" />
@@ -491,13 +491,14 @@
 		}
 		
 		.energyBox {
-		background-color: #424242;
+		background-color: #757575;
 		color: black;
 		height: 20px;
 		vertical-align: middle;
 		padding: 0;
 		border-radius: 3px;
 		width: 95%;
+		margin: auto;
 		}
 		
 		.dollarBox {
