@@ -39,7 +39,7 @@
                                         </v-flex>
                                     </v-layout>
                                 </v-flex>
-                                <v-flex d-flex xs12 hidden-lg hidden-md hidden-sm class="elevation-0">
+                                <v-flex d-flex xs12 hidden-sm-and-up class="elevation-0">
                                     <v-layout row wrap>
                                         <v-flex d-flex xs6 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
