@@ -126,8 +126,10 @@
 																<div style="background-color: red; height: 100%; width: 2px"></div>
 															</v-flex>
 															<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-																<div style="color: orange;font-size: 80%"><span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'"></span> - {{ props.item.time}} (heure local)</div>
-																<div style="color: orange;font-size: 80%"><span v-else style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT</span> - {{ props.item.time}} (heure local)</div>
+																<div style="color: orange;font-size: 80%">
+																	<span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'"></span> - {{ props.item.time}} (heure local)</span>
+																	<span v-else style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT - {{ props.item.time}} (heure local)</span>
+																</div>
 															</v-flex>
 														</v-layout>
 														<v-layout align-center style="max-width: 100%">
@@ -153,8 +155,8 @@
 															<v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
 																<span class="teamTextSize">{{ props.item.visitor_team.name }}</span>
 															</v-flex>
-															<v-flex sm1 hidden-xs-only align-center right style="width: 50px; padding-right: 15px">
-																<v-img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"></v-img>
+															<v-flex sm1 hidden-xs-only align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
+																<img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
 															</v-flex>
 														</v-layout>
 													</v-flex>
