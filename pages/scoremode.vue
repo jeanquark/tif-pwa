@@ -11,7 +11,7 @@
                     <v-layout row wrap>
                         <v-flex d-flex>
                             <v-layout row wrap>
-                                <v-flex d-flex xs12 class="elevation-0">
+                                <v-flex d-flex xs12 class="elevation-0" hidden-xs-only>
                                     <v-layout row wrap>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
@@ -670,20 +670,20 @@
 			/* Header */
 
 			.imageLogoTif {
-			width: 70px;
-			height: 70px;
+			width: 60px;
+			height: 60px;
 			}
 			
 			.backBlack {
 			background-image: url("/images/header-TIF_03.png");
 			background-position: center;
 			background-repeat: repeat-x;
-			height: 70px;
+			height: 60px;
 			}
 
 			.boxTif {
-			width: 70px;
-			height: 70px;
+			width: 60px;
+			height: 60px;
 			}
 
 			.imageLogo {
