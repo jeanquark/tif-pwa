@@ -82,13 +82,13 @@
                 <v-flex d-flex x1 justify-end align-center style="padding-left: 20px;" @click="eventsByDate('substractOne')">
                     <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" />
                 </v-flex>
-                <v-flex d-flex x2 justify-start align-center class="text-xs-center navButton menuDay" @click="eventsByDate('yesterday')">
+                <v-flex d-flex x2 justify-start align-center class="text-xs-center navButton menuDay" @click="eventsByDate('substractOne')">
                     Hier
                 </v-flex>
                 <v-flex d-flex x6 justify-center align-center class="text-xs-center menuDay">
                     {{ date | moment('dddd, MMMM Do YYYY') }}
                 </v-flex>
-                <v-flex d-flex x2 justify-end align-center class="text-xs-center navButton menuDay" @click="eventsByDate('tomorrow')">
+                <v-flex d-flex x2 justify-end align-center class="text-xs-center navButton menuDay" @click="eventsByDate('addOne')">
                     Demain
                 </v-flex>
                 <v-flex d-flex x1 justify-end align-center style="padding-right: 20px;" @click="eventsByDate('addOne')">
@@ -184,11 +184,11 @@
                             </li>
                             <li>
                                 <a href="competitions.html"><img src="/images/menuResultat.png">
-                                <span class="textMenu">Compétition</span></a>
+                                <span class="textMenu">Compétitions</span></a>
                             </li>
                             <li id="active">
                                 <nuxt-link to="/"><img src="/images/menuHome.png">
-                                <span class="textMenu">Matches</span></nuxt-link>
+                                <span class="textMenu">Matches du jour</span></nuxt-link>
                             </li>
                             <li>
                                 <a href="joueurs.html"><img src="/images/menuSocial.png">
