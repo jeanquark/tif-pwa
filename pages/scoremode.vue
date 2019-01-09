@@ -15,25 +15,25 @@
                                     <v-layout row wrap>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <img src="/images/menuShop.png" width="58px" height="58px" class="imageLogo" /><br />
+                                                <img src="/images/menuShop.png" class="imageLogo" /><br />
                                                 <div class="energyBox">5 / 100</div>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <img src="/images/menuShop.png" width="58px" height="58px" class="imageLogo"/><br />
+                                                <img src="/images/menuShop.png" class="imageLogo"/><br />
                                                 <div class="energyBox">10 / 10</div>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <img src="/images/menuShop.png" width="58px" height="58px" class="imageLogo"/><br />
+                                                <img src="/images/menuShop.png" class="imageLogo"/><br />
                                                 <div class="energyBox">1234 $</div>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-left: 1px solid rgb(248,147,37); border-right: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <img src="/images/menuShop.png" width="58px" height="58px" class="imageLogo"/><br />
+                                                <img src="/images/menuShop.png" class="imageLogo"/><br />
                                                 <div class="energyBox">16 tokens</div>
                                             </div>
                                         </v-flex>
@@ -136,7 +136,7 @@
 															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
 																<div style="background-color: red; height: 40px; width: 2px"></div>
 															</v-flex>
-															<v-flex sm1 hidden-xs-only align-center style="width: 50px; padding-left: 15px">
+															<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
 																<v-img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"></v-img>
 															</v-flex>
 															<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
@@ -155,7 +155,7 @@
 															<v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
 																<span class="teamTextSize">{{ props.item.visitor_team.name }}</span>
 															</v-flex>
-															<v-flex sm1 hidden-xs-only align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
+															<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-right: 15px">
 																<img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
 															</v-flex>
 														</v-layout>
@@ -431,6 +431,11 @@
 		background-color: black;
 		}
 		
+		.imageLogo {
+		width: 30px;
+		height: 30px;
+		}
+		
 		/* ScoreCard */
 
 		.card {
@@ -482,41 +487,43 @@
 		}
 		
 		.levelBox {
-		background-color: white;
+		background-color: #757575;
 		color: black;
-		height: 20px;
 		vertical-align: middle;
-		padding: 0 	15px;
+		padding: 2px;
 		border-radius: 3px;
+		width: 95%;
+		margin: auto;
 		}
 		
 		.energyBox {
 		background-color: #757575;
 		color: black;
-		height: 20px;
 		vertical-align: middle;
-		padding: 0;
+		padding: 2px;
 		border-radius: 3px;
 		width: 95%;
 		margin: auto;
 		}
 		
 		.dollarBox {
-		background-color: white;
+		background-color: #757575;
 		color: black;
-		height: 20px;
 		vertical-align: middle;
-		padding: 0 15px;
+		padding: 2px;
 		border-radius: 3px;
+		width: 95%;
+		margin: auto;
 		}
 
 		.tokenBox {
-		background-color: white;
+		background-color: #757575;
 		color: black;
-		height: 20px;
 		vertical-align: middle;
-		padding: 0 15px;
+		padding: 2px;
 		border-radius: 3px;
+		width: 95%;
+		margin: auto;
 		}
 
 		/* Menu */
@@ -634,13 +641,14 @@
 			}
 			
 			.energyBox {
-			background-color: white;
+			background-color: #757575;
 			color: black;
-			height: 20px;
 			vertical-align: middle;
-			padding: 0 2px;
-			border-radius: 3px;
-			font-size: 0.9em;
+			padding: 1px;
+			border-radius: 2px;
+			width: 95%;
+			margin: auto;
+			font-size: 0.8em;
 			}
 
 			/* Header */
@@ -656,8 +664,8 @@
 			}
 
 			.imageLogo {
-			width: 30px;
-			height: 30px;
+			width: 25px;
+			height: 25px;
 			}
 			
 			.menuSport {
