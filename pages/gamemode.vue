@@ -15,26 +15,26 @@
                                     <v-layout row wrap>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <span class="chiffres">1</span>
-												<span class="activity">sport</span>
+                                                <img src="/images/menuShop.png" class="imageLogo" /><br />
+                                                <div class="energyBox">5 / 100</div>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <span class="chiffres">6</span>
-												<span class="activity">pays</span>
+                                                <img src="/images/menuShop.png" class="imageLogo"/><br />
+                                                <div class="energyBox">10 / 10</div>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <span class="chiffres">130</span>
-												<span class="activity">équipes</span>
+                                                <img src="/images/menuShop.png" class="imageLogo"/><br />
+                                                <div class="energyBox">1234 $</div>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-left: 1px solid rgb(248,147,37); border-right: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <span class="chiffres">769</span>
-												<span class="activity">fans</span>
+                                                <img src="/images/menuShop.png" class="imageLogo"/><br />
+                                                <div class="energyBox">16 tokens</div>
                                             </div>
                                         </v-flex>
                                     </v-layout>
@@ -493,14 +493,6 @@
 		
 		.headerLogo {
 		height: 83px;
-		}
-		
-		.chiffres {
-		font-size: 2.0em;
-		}
-		
-		.activity {
-		font-size: 1.0em;
 		}
 		
 		.levelBox {
