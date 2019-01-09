@@ -134,10 +134,10 @@
 																<div style="background-color: red; height: 40px; width: 2px"></div>
 															</v-flex>
 															<v-flex sm1 hidden-xs-only align-center class="text-xs-left" style="width: 50px; padding-left: 15px">
-																<v-img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" max-width="25"></v-img>
+																<v-img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"></v-img>
 															</v-flex>
 															<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-																<span style="font-size: 150%">{{ props.item.home_team.name }}</span>
+																<span style="font-size: 1.3em">{{ props.item.home_team.name }}</span>
 															</v-flex>
 															<v-flex sm2 xs2 class="text-xs-center">
 																<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'">
@@ -150,10 +150,10 @@
 																<span v-else style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">{{ convertToLocaltime(props.item.timestamp) }}</span>
 															</v-flex>
 															<v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-																<span style="font-size: 150%">{{ props.item.visitor_team.name }}</span>
+																<span style="font-size: 1.3em">{{ props.item.visitor_team.name }}</span>
 															</v-flex>
 															<v-flex sm1 hidden-xs-only align-center class="right" style="width: 50px; padding-right: 15px">
-																<v-img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" max-width="25"></v-img>
+																<v-img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"></v-img>
 															</v-flex>
 														</v-layout>
 													</v-flex>
@@ -417,6 +417,10 @@
 		.fade-enter, .fade-leave-to {
 			opacity: 0;
 		}
+		
+		.imgLogoEquipe {
+		max-width: 35px;
+		}
 	
 		.black {
 		background-color: black;
@@ -617,6 +621,10 @@
 			
 			.pd-left10 {
 			padding-left: 10px;
+			}
+			
+			.imgLogoEquipe {
+			max-width: 35px;
 			}
 
 			/* Header */
