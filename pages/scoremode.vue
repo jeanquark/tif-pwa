@@ -10,9 +10,9 @@
                 <v-flex d-flex xs8>
                     <v-layout row wrap>
                         <v-flex d-flex>
-                            <v-layout row wrap style="padding: 0; margin: 0">
-                                <v-flex d-flex xs12 class="elevation-0">
-                                    <v-layout row wrap>
+                            <v-layout row wrap class="headerMenus" style="padding: 0; margin: 0; height: 111px">
+                                <v-flex d-flex xs12>
+                                    <v-layout row wrap class="headerMenu">
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
                                                 <span class="chiffres">1</span></br>
@@ -54,7 +54,7 @@
                                                 {{ loadedUser.email }}
                                             </div>
                                             <div class="connectText" v-else>
-                                                Se connecter
+                                                Se connecter / S'inscrire
                                             </div>
                                         </v-flex>
                                     </v-layout>
@@ -498,6 +498,12 @@
 		height: auto;
 		}
 		
+		.headerMenus {
+		padding: 0; 
+		margin: 0; 
+		height: 111px;
+		}
+		
 		.chiffres {
 		font-size: 2.5em;
 		color: orange;
@@ -660,6 +666,12 @@
 			
 			.teamTextSize {
 			font-size: 1.0em;
+			}
+			
+			.headerMenus {
+			padding: 0; 
+			margin: 0; 
+			height: 80px;
 			}
 			
 			.energyBox {
