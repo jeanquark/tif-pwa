@@ -15,25 +15,25 @@
                                     <v-layout row wrap>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <span class="chiffres">1</span>
+                                                <span class="chiffres">1</span></br>
 												<span class="activity">sport</span>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <span class="chiffres">6</span>
+                                                <span class="chiffres">6</span></br>
 												<span class="activity">pays</span>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <span class="chiffres">130</span>
+                                                <span class="chiffres">130</span></br>
 												<span class="activity">équipes</span>
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-left: 1px solid rgb(248,147,37); border-right: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
-                                                <span class="chiffres">769</span>
+                                                <span class="chiffres">769</span></br>
 												<span class="activity">fans</span>
                                             </div>
                                         </v-flex>
@@ -471,9 +471,8 @@
 		}
 
 		/* Header */
-		.headerMenu:hover {
-		cursor: pointer;
-		background-color: rgb(248,147,37);
+		.headerMenu {
+		height: 85px;
 		}
 		.headerInfo {
 		padding: 0px; height: 20px; margin-top: 0px;
@@ -492,15 +491,15 @@
 		}
 		
 		.headerLogo {
-		height: 83px;
+		height: auto;
 		}
 		
 		.chiffres {
-		font-size: 2.0em;
+		font-size: 2.5em;
 		}
 		
 		.activity {
-		font-size: 1.0em;
+		font-size: 1.5em;
 		}
 		
 		.levelBox {
@@ -709,12 +708,24 @@
 			}
 			
 			.headerLogo {
-			height: 50px;
+			height: auto;
+			}
+			
+			.headerMenu {
+			height: 60px;
 			}
 			
 			.v-expansion-panel__header {
 			padding: 2px 2px;
 			min-height: 24px;
+			}
+			
+			.chiffres {
+			font-size: 1.5em;
+			}
+			
+			.activity {
+			font-size: 1.0em;
 			}
 			
 			/* Menu */
