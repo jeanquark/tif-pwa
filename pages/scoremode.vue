@@ -11,7 +11,7 @@
                     <v-layout row wrap>
                         <v-flex d-flex>
                             <v-layout row wrap>
-                                <v-flex d-flex xs12 class="elevation-0">
+                                <v-flex d-flex xs12 hidden-xs-only class="elevation-0">
                                     <v-layout row wrap>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
@@ -39,21 +39,51 @@
                                         </v-flex>
                                     </v-layout>
                                 </v-flex>
+                                <v-flex d-flex xs12 hidden-lg hidden-md hidden-sm class="elevation-0">
+                                    <v-layout row wrap>
+                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
+                                            <div class="headerLogo">
+                                                <img src="/images/menuShop.png" class="imageLogo" />
+                                                <div class="energyBox">5 / 100</div>
+                                            </div>
+                                        </v-flex>
+                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
+                                            <div class="headerLogo">
+                                                <img src="/images/menuShop.png" class="imageLogo"/>
+                                                <div class="energyBox">10 / 10</div>
+                                            </div>
+                                        </v-flex>
+									</v-layout>
+                                    <v-layout row wrap>
+                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
+                                            <div class="headerLogo">
+                                                <img src="/images/menuShop.png" class="imageLogo"/>
+                                                <div class="energyBox">1234 $</div>
+                                            </div>
+                                        </v-flex>
+                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-left: 1px solid rgb(248,147,37); border-right: 2px solid rgb(248,147,37)">
+                                            <div class="headerLogo">
+                                                <img src="/images/menuShop.png" class="imageLogo"/>
+                                                <div class="energyBox">16 tokens</div>
+                                            </div>
+                                        </v-flex>
+                                    </v-layout>
+                                </v-flex>
                                 <v-flex d-flex xs12>
                                     <v-layout row wrap :class="classObject">
                                         <v-flex d-flex xs6 justify-center align-center class="text-xs-left">
-                                            <div class="" style="font-size: 130%" v-if="!loadedUser">
+                                            <div class="userText" v-if="!loadedUser">
                                                 Utilisateur Invité
                                             </div>
-                                            <div v-else>
+                                            <div class="userText" v-else>
                                                 Bienvenue
                                             </div>
                                         </v-flex>
                                         <v-flex d-flex xs6 justify-center align-center class="text-xs-right">
-                                            <div style="font-size: 130%;" v-if="loadedUser">
+                                            <div class="connectText" v-if="loadedUser">
                                                 {{ loadedUser.email }}
                                             </div>
-                                            <div class="" style="font-size: 130%" v-else>
+                                            <div class="connectText" v-else>
                                                 Se connecter
                                             </div>
                                         </v-flex>
@@ -460,6 +490,14 @@
 		#app {
 		font: normal 100%/1 "Acme", Helvetica, sans-serif;
 		}
+		
+		.userText {
+		font-size: 1.3em;
+		}
+		
+		.connectText {
+		font-size: 1.3em;
+		}
 
 		/* Header */
 		.headerMenu:hover {
@@ -648,6 +686,14 @@
 			border-radius: 2px;
 			width: 95%;
 			margin: auto;
+			font-size: 0.8em;
+			}
+			
+			.userText {
+			font-size: 0.8em;
+			}
+			
+			.connectText {
 			font-size: 0.8em;
 			}
 
