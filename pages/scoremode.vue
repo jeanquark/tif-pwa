@@ -4,14 +4,14 @@
             <v-layout row wrap>
                 <v-flex d-flex xs2 justify-start class="text-xs-left backBlack">
                     <v-card flat tile class="black boxTif backBlack" style="max-height: 120px; max-width: 120px">
-                        <img src="/images/header-TIF_01.jpg" width="120px" height="120px" class="imageLogoTif" />
+                        <img src="/images/header-TIF_01.jpg" class="imageLogoTif" />
                     </v-card>
                 </v-flex>
                 <v-flex d-flex xs8>
                     <v-layout row wrap>
                         <v-flex d-flex>
-                            <v-layout row wrap>
-                                <v-flex d-flex xs12 class="elevation-0" hidden-xs-only>
+                            <v-layout row wrap style="padding: 0; margin: 0">
+                                <v-flex d-flex xs12 class="elevation-0">
                                     <v-layout row wrap>
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
                                             <div class="headerLogo">
@@ -65,7 +65,7 @@
                 </v-flex>
                 <v-flex d-flex xs2 justify-end class="text-xs-right">
                     <v-card flat tile class="black boxTif" style="max-height: 120px; max-width: 120px">
-                        <img src="/images/header-TIF_05.jpg" width="120px" height="120px" class="imageLogoTif"/>
+                        <img src="/images/header-TIF_05.jpg" class="imageLogoTif"/>
                     </v-card>
                 </v-flex>
             </v-layout>
@@ -471,15 +471,19 @@
 		}
 
 		/* Header */
+		
 		.headerMenu {
-		height: 85px;
+		height: 91px;
 		}
+		
 		.headerInfo {
 		padding: 0px; height: 20px; margin-top: 0px;
 		}
+		
 		.activeLeft {
 		padding: 0px; height: 20px; margin-top: 0px;
 		}
+		
 		.activeRight {
 		padding: 0px; height: 20px; margin-top: 0px;
 		}
@@ -496,10 +500,12 @@
 		
 		.chiffres {
 		font-size: 2.5em;
+		color: orange;
 		}
 		
 		.activity {
 		font-size: 1.5em;
+		text-transform: uppercase;
 		}
 		
 		.levelBox {
@@ -721,11 +727,11 @@
 			}
 			
 			.chiffres {
-			font-size: 1.5em;
+			font-size: 1.2em;
 			}
 			
 			.activity {
-			font-size: 1.0em;
+			font-size: 0.8em;
 			}
 			
 			/* Menu */
