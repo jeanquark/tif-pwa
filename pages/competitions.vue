@@ -85,19 +85,19 @@
                     
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
-                    <div style="background-color: white; width: 90%">Europe</div>
+                    <div style="background-color: white; width: 90%; height:40px"><span style="height:auto">Europe</span></div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
-                    <div style="background-color: white; width: 90%">Europe</div>
+                    <div style="background-color: white; width: 90%; height:40px"><span style="height:auto">Europe</span></div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
-                    <div style="background-color: white; width: 90%">Europe</div>
+                    <div style="background-color: white; width: 90%; height:40px"><span style="height:auto">Europe</span></div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
-                    <div style="background-color: white; width: 90%">Europe</div>
+                    <div style="background-color: white; width: 90%; height:40px"><span style="height:auto">Europe</span></div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
-                    <div style="background-color: white; width: 90%">Europe</div>
+                    <div style="background-color: white; width: 90%; height:40px"><span style="height:auto">Europe</span></div>
                 </v-flex>
                 <v-flex d-flex x1 justify-center align-center class="text-xs-center">
                     
