@@ -79,8 +79,8 @@
             </v-layout>             
         </v-container>
 
-        <v-container fluid style="top: 10px; padding: 0; max-width: 800px">
-            <v-layout>
+        <v-container fluid style="max-width: 800px">
+            <v-layout style="40px">
                 <v-flex d-flex x1 justify-center align-center class="text-xs-center">
                     
                 </v-flex>
@@ -88,16 +88,16 @@
                     <div style="background-color: white; width: 90%">Europe</div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center">
-                    Amérique
+                    <div style="background-color: white; width: 90%">Europe</div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center">
-                    Afrique
+                    <div style="background-color: white; width: 90%">Europe</div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center">
-                    Asie
+                    <div style="background-color: white; width: 90%">Europe</div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center">
-                    Océanie
+                    <div style="background-color: white; width: 90%">Europe</div>
                 </v-flex>
                 <v-flex d-flex x1 justify-center align-center class="text-xs-center">
                     
