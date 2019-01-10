@@ -10,7 +10,7 @@
                 <v-flex d-flex xs8 class="backBlack">
                     <v-layout row wrap>
                         <v-flex d-flex>
-                            <v-layout row wrap class="headerMenus" style="padding: 0; margin: 0; height: 111px">
+                            <v-layout row wrap class="headerMenus">
                                 <v-flex d-flex xs12>
                                     <v-layout row wrap class="headerMenu">
                                         <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
