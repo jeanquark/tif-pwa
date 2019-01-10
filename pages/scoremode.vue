@@ -1,13 +1,13 @@
 <template>
     <v-content id="app">
-        <v-container fluid style="padding: 0; max-width: 800px; color: white; border-bottom: 4px solid rgb(248,147,37)" class="backBlack">
+        <v-container fluid style="padding: 0; max-width: 800px; color: white; border-bottom: 4px solid rgb(248,147,37)">
             <v-layout row wrap>
-                <v-flex d-flex xs2 justify-start class="text-xs-left backBlack">
-                    <v-card flat tile class="black boxTif backBlack" style="max-height: 120px; max-width: 120px">
+                <v-flex d-flex xs2 justify-start class="text-xs-left">
+                    <v-card flat tile class="black boxTif" style="max-height: 120px; max-width: 120px">
                         <img src="/images/header-TIF_01.jpg" class="imageLogoTif" />
                     </v-card>
                 </v-flex>
-                <v-flex d-flex xs8>
+                <v-flex d-flex xs8 class="backBlack">
                     <v-layout row wrap>
                         <v-flex d-flex>
                             <v-layout row wrap class="headerMenus" style="padding: 0; margin: 0; height: 111px">
