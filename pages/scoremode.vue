@@ -477,7 +477,7 @@
 		}
 		
 		.headerInfo {
-		padding: 0px; height: 20px; margin-top: 0px;
+		padding: 0px; margin-top: 0px;
 		}
 		
 		.activeLeft {
@@ -671,7 +671,7 @@
 			.headerMenus {
 			padding: 0; 
 			margin: 0; 
-			height: 80px;
+			height: 46px;
 			}
 			
 			.energyBox {
@@ -731,7 +731,7 @@
 			}
 			
 			.headerMenu {
-			height: 60px;
+			height: 46px;
 			}
 			
 			.v-expansion-panel__header {
