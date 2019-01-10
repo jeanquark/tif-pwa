@@ -80,23 +80,23 @@
         </v-container>
 
         <v-container fluid style="max-width: 800px">
-            <v-layout style="40px">
+            <v-layout style="height: 40px">
                 <v-flex d-flex x1 justify-center align-center class="text-xs-center">
                     
                 </v-flex>
-                <v-flex d-flex x2 justify-center align-center class="text-xs-center">
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
                     <div style="background-color: white; width: 90%">Europe</div>
                 </v-flex>
-                <v-flex d-flex x2 justify-center align-center class="text-xs-center">
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
                     <div style="background-color: white; width: 90%">Europe</div>
                 </v-flex>
-                <v-flex d-flex x2 justify-center align-center class="text-xs-center">
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
                     <div style="background-color: white; width: 90%">Europe</div>
                 </v-flex>
-                <v-flex d-flex x2 justify-center align-center class="text-xs-center">
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
                     <div style="background-color: white; width: 90%">Europe</div>
                 </v-flex>
-                <v-flex d-flex x2 justify-center align-center class="text-xs-center">
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
                     <div style="background-color: white; width: 90%">Europe</div>
                 </v-flex>
                 <v-flex d-flex x1 justify-center align-center class="text-xs-center">
