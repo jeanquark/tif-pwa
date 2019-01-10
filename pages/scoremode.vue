@@ -2,7 +2,7 @@
     <v-content id="app">
         <v-container fluid style="padding: 0; max-width: 800px; color: white; border-bottom: 4px solid rgb(248,147,37)">
             <v-layout row wrap>
-                <v-flex d-flex xs2 justify-start class="text-xs-left">
+                <v-flex d-flex xs2 justify-start class="text-xs-left backBlack">
                     <v-card flat tile class="black boxTif" style="max-height: 120px; max-width: 120px">
                         <img src="/images/header-TIF_01.jpg" class="imageLogoTif" />
                     </v-card>
@@ -63,7 +63,7 @@
                         </v-flex>
                     </v-layout>
                 </v-flex>
-                <v-flex d-flex xs2 justify-end class="text-xs-right">
+                <v-flex d-flex xs2 justify-end class="text-xs-right backBlack">
                     <v-card flat tile class="black boxTif" style="max-height: 120px; max-width: 120px">
                         <img src="/images/header-TIF_05.jpg" class="imageLogoTif"/>
                     </v-card>
