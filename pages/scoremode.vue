@@ -2,12 +2,12 @@
     <v-content id="app">
         <v-container fluid style="padding: 0; max-width: 800px; color: white; border-bottom: 4px solid rgb(248,147,37)">
             <v-layout row wrap>
-                <v-flex d-flex xs2 justify-start class="text-xs-left backBlack">
+                <v-flex d-flex xs2 justify-start class="text-xs-left backBlack backBlackXs">
                     <v-card flat tile class="black boxTif" style="max-height: 120px; max-width: 120px">
                         <img src="/images/header-TIF_01.jpg" class="imageLogoTif" />
                     </v-card>
                 </v-flex>
-                <v-flex d-flex xs8 class="backBlack">
+                <v-flex d-flex xs8 class="backBlack backBlackXs">
                     <v-layout row wrap>
                         <v-flex d-flex>
                             <v-layout row wrap class="headerMenus" style="padding: 0; margin: 0; height: 111px">
@@ -63,7 +63,7 @@
                         </v-flex>
                     </v-layout>
                 </v-flex>
-                <v-flex d-flex xs2 justify-end class="text-xs-right backBlack">
+                <v-flex d-flex xs2 justify-end class="text-xs-right backBlack backBlackXs">
                     <v-card flat tile class="black boxTif" style="max-height: 120px; max-width: 120px">
                         <img src="/images/header-TIF_05.jpg" class="imageLogoTif"/>
                     </v-card>
@@ -704,6 +704,10 @@
 			background-image: url("/images/header-TIF_03.png");
 			background-position: center;
 			background-repeat: repeat-x;
+			}
+			
+			.backBlackXs {
+			background-size: contain;
 			height: 60px;
 			}
 
