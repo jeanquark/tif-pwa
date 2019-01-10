@@ -79,27 +79,27 @@
             </v-layout>             
         </v-container>
 
-        <v-container fluid style="top: 10px; padding: 0; max-width: 800px; background-color: green; color: white">
+        <v-container fluid style="top: 10px; padding: 0; max-width: 800px">
             <v-layout>
-                <v-flex d-flex x1 justify-center align-center class="text-xs-center menuSport">
+                <v-flex d-flex x1 justify-center align-center class="text-xs-center">
                     
                 </v-flex>
-                <v-flex d-flex x2 justify-center align-center class="text-xs-center menuSport">
-                    Europe
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center">
+                    <div style="background-color: white; width: 90%">Europe</div>
                 </v-flex>
-                <v-flex d-flex x2 justify-center align-center class="text-xs-center menuSport">
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center">
                     Amérique
                 </v-flex>
-                <v-flex d-flex x2 justify-center align-center class="text-xs-center menuSport">
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center">
                     Afrique
                 </v-flex>
-                <v-flex d-flex x2 justify-center align-center class="text-xs-center menuSport">
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center">
                     Asie
                 </v-flex>
-                <v-flex d-flex x2 justify-center align-center class="text-xs-center menuSport">
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center">
                     Océanie
                 </v-flex>
-                <v-flex d-flex x1 justify-center align-center class="text-xs-center menuSport">
+                <v-flex d-flex x1 justify-center align-center class="text-xs-center">
                     
                 </v-flex>
             </v-layout>             
