@@ -70,6 +70,7 @@
                 </v-flex>
             </v-layout>
         </v-container>
+
         <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
@@ -77,26 +78,32 @@
                 </v-flex>
             </v-layout>             
         </v-container>
-        <v-container fluid style="padding: 0; max-width: 800px; background-color: grey; color: white">
+
+        <v-container fluid style="top: 10px; padding: 0; max-width: 800px; background-color: green; color: white">
             <v-layout>
-                <v-flex d-flex x1 justify-end align-center style="padding-left: 20px;" @click="eventsByDate('substractOne')">
-                    <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" />
+                <v-flex d-flex x1 justify-center align-center class="text-xs-center menuSport">
+                    
                 </v-flex>
-                <v-flex d-flex x2 justify-start align-center class="text-xs-center navButton menuDay" @click="eventsByDate('substractOne')">
-                    Hier
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center menuSport">
+                    Europe
                 </v-flex>
-                <v-flex d-flex x6 justify-center align-center class="text-xs-center menuDay">
-                    {{ date | moment('dddd, MMMM Do YYYY') }}
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center menuSport">
+                    Amérique
                 </v-flex>
-                <v-flex d-flex x2 justify-end align-center class="text-xs-center navButton menuDay" @click="eventsByDate('addOne')">
-                    Demain
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center menuSport">
+                    Afrique
                 </v-flex>
-                <v-flex d-flex x1 justify-end align-center style="padding-right: 20px;" @click="eventsByDate('addOne')">
-                    <fa :icon="['fas', 'angle-double-right']" size="1x" class="icon" style="text-shadow: 0 0 15px #3b5998;"/>
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center menuSport">
+                    Asie
+                </v-flex>
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center menuSport">
+                    Océanie
+                </v-flex>
+                <v-flex d-flex x1 justify-center align-center class="text-xs-center menuSport">
+                    
                 </v-flex>
             </v-layout>             
         </v-container>
-
 
         <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
 		
