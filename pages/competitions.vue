@@ -125,8 +125,7 @@
 															</v-flex>
 															<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
 																<div style="color: orange;font-size: 80%">
-																	<span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'"></span> - {{ props.item.time}} (heure local)</span>
-																	<span v-else style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT - {{ props.item.time}} (heure local)</span>
+																	<span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT</span>
 																</div>
 															</v-flex>
 														</v-layout>
@@ -138,23 +137,13 @@
 																<img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
 															</v-flex>
 															<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-																<span class="teamTextSize">{{ props.item.home_team.name }}</span>
+																<span class="teamTextSize">Nom de la compétition</span>
 															</v-flex>
 															<v-flex sm2 xs2 class="text-xs-center">
-																<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'">
-																	<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-																		<span :key="props.item.score">
-																			{{ props.item.score }}
-																		</span>
-																	</transition>
-																</span>
-																<span v-else style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">{{ convertToLocaltime(props.item.timestamp) }}</span>
+																<span v-else style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">156ème</span>
 															</v-flex>
-															<v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-																<span class="teamTextSize">{{ props.item.visitor_team.name }}</span>
-															</v-flex>
-															<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-right: 15px">
-																<img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
+															<v-flex sm5 xs5 align-center class="text-xs-right pd-right10">
+																<span class="teamTextSize">12345 fans</span>
 															</v-flex>
 														</v-layout>
 													</v-flex>
