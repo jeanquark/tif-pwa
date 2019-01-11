@@ -121,29 +121,29 @@
 													<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
 														<v-layout align-start>
 															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-																<div style="background-color: red; height: 100%; width: 2px"></div>
+																<div style="background-color: green; height: 100%; width: 2px"></div>
 															</v-flex>
 															<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
 																<div style="color: orange;font-size: 80%">
-																	<span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT</span>
+																	<span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT</span>
 																</div>
 															</v-flex>
 														</v-layout>
 														<v-layout align-center style="max-width: 100%">
 															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-																<div style="background-color: red; height: 40px; width: 2px"></div>
+																<div style="background-color: green; height: 40px; width: 2px"></div>
 															</v-flex>
-															<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
+															<v-flex sm1 xs1 align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
 																<img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
 															</v-flex>
-															<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
+															<v-flex sm4 xs4 align-center class="text-xs-left pd-left10">
 																<span class="teamTextSize">Nom de la compétition</span>
 															</v-flex>
-															<v-flex sm2 xs2 class="text-xs-center">
-																<span v-else style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">156ème</span>
+															<v-flex sm3 xs3 class="text-xs-center">
+																<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">123ème</span>
 															</v-flex>
-															<v-flex sm5 xs5 align-center class="text-xs-right pd-right10">
-																<span class="teamTextSize">12345 fans</span>
+															<v-flex sm4 xs4 align-center class="text-xs-center" style="width: 50px; padding-right: 15px">
+																12345 fans
 															</v-flex>
 														</v-layout>
 													</v-flex>
