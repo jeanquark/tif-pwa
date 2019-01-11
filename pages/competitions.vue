@@ -80,7 +80,7 @@
         </v-container>
 
         <v-container fluid style="max-width: 800px">
-            <v-layout style="height: 40px">
+            <v-layout justify-center row fill-height style="height: 40px">
                 <v-flex d-flex x1 justify-center align-center class="text-xs-center">
                     
                 </v-flex>
@@ -124,7 +124,7 @@
                                 <span class="textMenu">Compétitions</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/"><img src="/images/menuHome.png">
+                                <nuxt-link to="/scoremode"><img src="/images/menuHome.png">
                                 <span class="textMenu">Matches du jour</span></nuxt-link>
                             </li>
                             <li>

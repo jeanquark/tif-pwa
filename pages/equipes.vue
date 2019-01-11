@@ -251,7 +251,7 @@
                 <div id="dock-container">
                     <div id="dock">
                         <ul>
-                            <li>
+                            <li id="active">
                                 <nuxt-link to="/equipes"><img src="/images/menuShop.png">
                                 <span class="textMenu">Equipes</span></nuxt-link>
                             </li>
@@ -259,8 +259,8 @@
                                 <nuxt-link to="/competitions"><img src="/images/menuResultat.png">
                                 <span class="textMenu">Compétitions</span></nuxt-link>
                             </li>
-                            <li id="active">
-                                <nuxt-link to="/"><img src="/images/menuHome.png">
+                            <li>
+                                <nuxt-link to="/scoremode"><img src="/images/menuHome.png">
                                 <span class="textMenu">Matches du jour</span></nuxt-link>
                             </li>
                             <li>

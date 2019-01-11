@@ -138,7 +138,7 @@
 																<div style="background-color: red; height: 40px; width: 2px"></div>
 															</v-flex>
 															<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
-																<v-img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"></v-img>
+																<img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
 															</v-flex>
 															<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
 																<span class="teamTextSize">{{ props.item.home_team.name }}</span>
@@ -260,7 +260,7 @@
                                 <span class="textMenu">Compétitions</span></nuxt-link>
                             </li>
                             <li id="active">
-                                <nuxt-link to="/"><img src="/images/menuHome.png">
+                                <nuxt-link to="/scoremode"><img src="/images/menuHome.png">
                                 <span class="textMenu">Matches du jour</span></nuxt-link>
                             </li>
                             <li>

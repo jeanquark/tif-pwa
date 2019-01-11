@@ -259,15 +259,15 @@
                                 <nuxt-link to="/competitions"><img src="/images/menuResultat.png">
                                 <span class="textMenu">Compétitions</span></nuxt-link>
                             </li>
-                            <li id="active">
-                                <nuxt-link to="/"><img src="/images/menuHome.png">
+                            <li>
+                                <nuxt-link to="/scoremode"><img src="/images/menuHome.png">
                                 <span class="textMenu">Matches du jour</span></nuxt-link>
                             </li>
                             <li>
                                 <nuxt-link to="/joueurs"><img src="/images/menuSocial.png">
                                 <span class="textMenu">Joueurs</span></nuxt-link>
                             </li>
-                            <li>
+                            <li id="active">
                                 <nuxt-link to="/tifnews"><img src="/images/menuResultat.png">
                                 <span class="textMenu">TIF News</span></nuxt-link>
                             </li>
