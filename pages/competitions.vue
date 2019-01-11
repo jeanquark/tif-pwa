@@ -74,33 +74,30 @@
         <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
-                    Soccer
+                    <nuxt-link to="/scoremode">Soccer</nuxt-link> - Compétitions
                 </v-flex>
             </v-layout>             
         </v-container>
 
         <v-container fluid style="max-width: 800px">
             <v-layout justify-center row fill-height style="height: 40px">
-                <v-flex d-flex x1 justify-center align-center class="text-xs-center">
-                    
+                <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
+                    <div style="background-color: white; width: 90%; height:40px">Europe</div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
-                    <div style="background-color: white; width: 90%; height:40px"><span style="height:auto">Europe</span></div>
+                    <div style="background-color: white; width: 90%; height:40px">Afrique</div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
-                    <div style="background-color: white; width: 90%; height:40px"><span style="height:auto">Europe</span></div>
+                    <div style="background-color: white; width: 90%; height:40px">Amérique</div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
-                    <div style="background-color: white; width: 90%; height:40px"><span style="height:auto">Europe</span></div>
+                    <div style="background-color: white; width: 90%; height:40px">Asie/Océanie</div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
-                    <div style="background-color: white; width: 90%; height:40px"><span style="height:auto">Europe</span></div>
+                    <div style="background-color: white; width: 90%; height:40px">Sélection</div>
                 </v-flex>
                 <v-flex d-flex x2 justify-center align-center class="text-xs-center" style="width: 100%">
-                    <div style="background-color: white; width: 90%; height:40px"><span style="height:auto">Europe</span></div>
-                </v-flex>
-                <v-flex d-flex x1 justify-center align-center class="text-xs-center">
-                    
+                    <div style="background-color: white; width: 90%; height:40px">Club</div>
                 </v-flex>
             </v-layout>             
         </v-container>
