@@ -79,20 +79,16 @@
             </v-layout>             
         </v-container>
 
-        <v-container fluid style="max-width: 800px">
-            <v-layout>
-                <v-flex d-flex x12 justify-center align-center class="horizontal-scroll-wrapper squares">
-					<div>item 1</div>
-					<div>item 2</div>
-					<div>item 3</div>
-					<div>item 4</div>
-					<div>item 5</div>
-					<div>item 6</div>
-					<div>item 7</div>
-					<div>item 8</div>
-                </v-flex>
-            </v-layout>             
-        </v-container>
+		<div class="horizontal-scroll-wrapper squares">
+		  <div>item 1</div>
+		  <div>item 2</div>
+		  <div>item 3</div>
+		  <div>item 4</div>
+		  <div>item 5</div>
+		  <div>item 6</div>
+		  <div>item 7</div>
+		  <div>item 8</div>
+		</div>
 
         <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
 		
@@ -432,24 +428,27 @@
 		/* Scroll Menu */
 	
 		.horizontal-scroll-wrapper{
+		position:absolute;
 		display:block;
+		top:0;
+		left:0;
 		width:80px;
-		max-height:100px;
+		max-height:500px;
 		margin:0;
+		background:#abc;
 		overflow-y:auto;
 		overflow-x:hidden;
 		transform:rotate(-90deg) translateY(-80px);
 		transform-origin:right top;
 		}
-		
 		.horizontal-scroll-wrapper > div{
 		display:block;
 		padding:5px;
-		background:white;
+		background:#cab;
 		transform:rotate(90deg);
 		transform-origin: right top;
 		}
-		
+
 		.squares{
 		padding:60px 0 0 0;
 		}
@@ -464,17 +463,16 @@
 		top:100px;
 		padding:100px 0 0 0;
 		}
-		
 		.rectangles > div{
 		width:140px;
 		height:60px;
 		margin:50px 10px;
 		padding:5px;
-		background:white;
+		background:#cab;
 		transform:rotate(90deg) translateY(80px);
 		transform-origin: right top;
-		}	
-		
+		}
+	
 		.menuSport {
 		height: 40px;
 		}
