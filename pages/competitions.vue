@@ -432,13 +432,15 @@
 		/* Scroll Menu */
 	
 		.horizontal-scroll-wrapper{
-		max-width:800px;
+		display:block;
+		width:80px;
+		max-height:100px;
 		margin:0;
 		overflow-y:auto;
 		overflow-x:hidden;
 		transform:rotate(-90deg) translateY(-80px);
 		transform-origin:right top;
-		}	
+		}
 		
 		.horizontal-scroll-wrapper > div{
 		display:block;
