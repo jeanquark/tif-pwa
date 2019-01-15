@@ -81,17 +81,17 @@
 
         <v-container fluid style="max-width: 800px">
             <v-layout justify-center row fill-height style="height: 40px">
-<div class="scrolling-wrapper">
-  <div class="card"><h2>Card</h2></div>
-  <div class="card"><h2>Card</h2></div>
-  <div class="card"><h2>Card</h2></div>
-  <div class="card"><h2>Card</h2></div>
-  <div class="card"><h2>Card</h2></div>
-  <div class="card"><h2>Card</h2></div>
-  <div class="card"><h2>Card</h2></div>
-  <div class="card"><h2>Card</h2></div>
-  <div class="card"><h2>Card</h2></div>
-</div>
+				<v-flex  xs12 justify-center align-center class="scrolling-wrapper">
+				  <div class="card"><h2>Card</h2></div>
+				  <div class="card"><h2>Card</h2></div>
+				  <div class="card"><h2>Card</h2></div>
+				  <div class="card"><h2>Card</h2></div>
+				  <div class="card"><h2>Card</h2></div>
+				  <div class="card"><h2>Card</h2></div>
+				  <div class="card"><h2>Card</h2></div>
+				  <div class="card"><h2>Card</h2></div>
+				  <div class="card"><h2>Card</h2></div>
+				</v-flex>
             </v-layout>             
         </v-container>
 
@@ -437,6 +437,7 @@
 
   .card {
     display: inline-block;
+	color: white;
   }
 }
 	
