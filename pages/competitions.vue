@@ -81,17 +81,15 @@
 
         <v-container fluid style="max-width: 800px">
             <v-layout>
-                <v-flex d-flex x12 justify-center align-center>
-					<div class="horizontal-scroll-wrapper squares">
-						<div>item 1</div>
-						<div>item 2</div>
-						<div>item 3</div>
-						<div>item 4</div>
-						<div>item 5</div>
-						<div>item 6</div>
-						<div>item 7</div>
-						<div>item 8</div>
-					</div>  
+                <v-flex d-flex x12 justify-center align-center class="horizontal-scroll-wrapper squares">
+					<div>item 1</div>
+					<div>item 2</div>
+					<div>item 3</div>
+					<div>item 4</div>
+					<div>item 5</div>
+					<div>item 6</div>
+					<div>item 7</div>
+					<div>item 8</div>
                 </v-flex>
             </v-layout>             
         </v-container>
