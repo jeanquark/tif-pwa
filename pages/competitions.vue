@@ -80,8 +80,8 @@
         </v-container>
 
         <v-container fluid style="max-width: 800px">
-            <v-layout row fill-height>
-				<v-flex  xs12 justify-center align-center class="scrolling-wrapper-flexbox">
+            <v-layout justify-center row fill-height>
+				<v-flex  xs12 align-center class="scrolling-wrapper-flexbox">
 				  <div class="cardMenuCompetition"><h2>Tous</h2></div>
 				  <div class="cardMenuCompetition"><h2>Europe</h2></div>
 				  <div class="cardMenuCompetition"><h2>Afrique</h2></div>
