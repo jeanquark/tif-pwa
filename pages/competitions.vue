@@ -80,17 +80,15 @@
         </v-container>
 
         <v-container fluid style="max-width: 800px">
-            <v-layout justify-center row fill-height style="height: 40px">
+            <v-layout justify-center row fill-height style="height: 35px">
 				<v-flex  xs12 justify-center align-center class="scrolling-wrapper-flexbox">
-				  <div class="card"><h2>Card</h2></div>
-				  <div class="card"><h2>Card</h2></div>
-				  <div class="card"><h2>Card</h2></div>
-				  <div class="card"><h2>Card</h2></div>
-				  <div class="card"><h2>Card</h2></div>
-				  <div class="card"><h2>Card</h2></div>
-				  <div class="card"><h2>Card</h2></div>
-				  <div class="card"><h2>Card</h2></div>
-				  <div class="card"><h2>Card</h2></div>
+				  <div class="card"><h2>Tous</h2></div>
+				  <div class="card"><h2>Europe</h2></div>
+				  <div class="card"><h2>Afrique</h2></div>
+				  <div class="card"><h2>Amérique</h2></div>
+				  <div class="card"><h2>Asie/Océanie</h2></div>
+				  <div class="card"><h2>Sélections</h2></div>
+				  <div class="card"><h2>Clubs</h2></div>
 				</v-flex>
             </v-layout>             
         </v-container>
@@ -434,10 +432,16 @@
 		display: flex;
 		flex-wrap: nowrap;
 		overflow-x: auto;
-
-		.card {
-		flex: 0 0 auto;
+	
+			.card {
+			border-radius: 5px;
+			color: black;
+			padding: 10px 10px;
+			background: white;
+			margin: 0 5px;
+			}		
 		}
+
 		}
 	
 		.menuSport {
