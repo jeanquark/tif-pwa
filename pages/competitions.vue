@@ -80,16 +80,20 @@
         </v-container>
 
         <v-container fluid style="max-width: 800px">
-            <div class="horizontal-scroll-wrapper squares">
-				<div>item 1</div>
-				<div>item 2</div>
-				<div>item 3</div>
-				<div>item 4</div>
-				<div>item 5</div>
-				<div>item 6</div>
-				<div>item 7</div>
-				<div>item 8</div>
-			</div>             
+            <v-layout>
+                <v-flex d-flex x12 justify-center align-center>
+					<div class="horizontal-scroll-wrapper squares">
+						<div>item 1</div>
+						<div>item 2</div>
+						<div>item 3</div>
+						<div>item 4</div>
+						<div>item 5</div>
+						<div>item 6</div>
+						<div>item 7</div>
+						<div>item 8</div>
+					</div>  
+                </v-flex>
+            </v-layout>             
         </v-container>
 
         <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
