@@ -81,24 +81,17 @@
 
         <v-container fluid style="max-width: 800px">
             <v-layout justify-center row fill-height style="height: 40px">
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Europe</span></div>
-                </v-flex>
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Afrique</span></div>
-                </v-flex>
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Amérique</span></div>
-                </v-flex>
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Asie/Océanie</span></div>
-                </v-flex>
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Sélection</span></div>
-                </v-flex>
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Club</span></div>
-                </v-flex>
+<div class="scrolling-wrapper">
+  <div class="card"><h2>Card</h2></div>
+  <div class="card"><h2>Card</h2></div>
+  <div class="card"><h2>Card</h2></div>
+  <div class="card"><h2>Card</h2></div>
+  <div class="card"><h2>Card</h2></div>
+  <div class="card"><h2>Card</h2></div>
+  <div class="card"><h2>Card</h2></div>
+  <div class="card"><h2>Card</h2></div>
+  <div class="card"><h2>Card</h2></div>
+</div>
             </v-layout>             
         </v-container>
 
@@ -436,6 +429,16 @@
 </script>
 
 	<style scoped>
+	
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  .card {
+    display: inline-block;
+  }
+}
 	
 		.menuSport {
 			height: 40px;
