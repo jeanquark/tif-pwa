@@ -80,26 +80,16 @@
         </v-container>
 
         <v-container fluid style="max-width: 800px">
-            <v-layout justify-center row fill-height style="height: 40px">
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Europe</span></div>
-                </v-flex>
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Afrique</span></div>
-                </v-flex>
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Amérique</span></div>
-                </v-flex>
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Asie/Océanie</span></div>
-                </v-flex>
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Sélection</span></div>
-                </v-flex>
-                <v-flex d-flex x2 justify-center align-center elevation-1 class="text-xs-center" style="width: 100%; padding: 5px">
-                    <div style="background-color: white; height: 40px; padding: 15px"><span style="height:auto">Club</span></div>
-                </v-flex>
-            </v-layout>             
+            <div class="horizontal-scroll-wrapper squares">
+				<div>item 1</div>
+				<div>item 2</div>
+				<div>item 3</div>
+				<div>item 4</div>
+				<div>item 5</div>
+				<div>item 6</div>
+				<div>item 7</div>
+				<div>item 8</div>
+			</div>             
         </v-container>
 
         <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
@@ -437,8 +427,33 @@
 
 	<style scoped>
 	
+		/* Scroll Menu */
+	
+		.horizontal-scroll-wrapper{
+		position:absolute;
+		display:block;
+		top:0;
+		left:0;
+		width:80px;
+		max-height:500px;
+		margin:0;
+		background:#abc;
+		overflow-y:auto;
+		overflow-x:hidden;
+		transform:rotate(-90deg) translateY(-80px);
+		transform-origin:right top;
+		}	
+		
+		.horizontal-scroll-wrapper > div{
+		display:block;
+		padding:5px;
+		background:#cab;
+		transform:rotate(90deg);
+		transform-origin: right top;
+		}
+		
 		.menuSport {
-			height: 40px;
+		height: 40px;
 		}
 		
 		.menuDay {
