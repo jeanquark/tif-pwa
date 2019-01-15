@@ -430,10 +430,8 @@
 		/* Scroll Menu */
 	
 		.horizontal-scroll-wrapper{
-		width:80px;
-		max-height:500px;
+		max-width:800px;
 		margin:0;
-		background:#abc;
 		overflow-y:auto;
 		overflow-x:hidden;
 		transform:rotate(-90deg) translateY(-80px);
@@ -443,7 +441,7 @@
 		.horizontal-scroll-wrapper > div{
 		display:block;
 		padding:5px;
-		background:#cab;
+		background:white;
 		transform:rotate(90deg);
 		transform-origin: right top;
 		}
@@ -462,12 +460,13 @@
 		top:100px;
 		padding:100px 0 0 0;
 		}
+		
 		.rectangles > div{
 		width:140px;
 		height:60px;
 		margin:50px 10px;
 		padding:5px;
-		background:#cab;
+		background:white;
 		transform:rotate(90deg) translateY(80px);
 		transform-origin: right top;
 		}	
