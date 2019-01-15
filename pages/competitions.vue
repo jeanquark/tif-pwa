@@ -430,16 +430,15 @@
 
 	<style scoped>
 	
-.scrolling-wrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
+		.scrolling-wrapper-flexbox {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: auto;
 
-  .card {
-    display: inline-block;
-	color: white;
-  }
-}
+		.card {
+		flex: 0 0 auto;
+		}
+		}
 	
 		.menuSport {
 			height: 40px;
