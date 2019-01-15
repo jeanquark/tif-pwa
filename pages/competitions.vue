@@ -452,6 +452,30 @@
 		transform-origin: right top;
 		}
 		
+		.squares{
+		padding:60px 0 0 0;
+		}
+
+		.squares > div{
+		width:60px;
+		height:60px;
+		margin:10px;
+		}
+
+		.rectangles{
+		top:100px;
+		padding:100px 0 0 0;
+		}
+		.rectangles > div{
+		width:140px;
+		height:60px;
+		margin:50px 10px;
+		padding:5px;
+		background:#cab;
+		transform:rotate(90deg) translateY(80px);
+		transform-origin: right top;
+		}	
+		
 		.menuSport {
 		height: 40px;
 		}
