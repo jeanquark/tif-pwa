@@ -432,6 +432,7 @@
 		display: flex;
 		flex-wrap: nowrap;
 		overflow-x: auto;
+		}
 	
 		.cardMenuCompetition {
 		border-radius: 5px;
