@@ -430,10 +430,6 @@
 		/* Scroll Menu */
 	
 		.horizontal-scroll-wrapper{
-		position:absolute;
-		display:block;
-		top:0;
-		left:0;
 		width:80px;
 		max-height:500px;
 		margin:0;
