@@ -441,8 +441,6 @@
 			margin: 0 5px;
 			}		
 		}
-
-		}
 	
 		.menuSport {
 			height: 40px;
