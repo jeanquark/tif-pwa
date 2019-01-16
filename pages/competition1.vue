@@ -1,77 +1,6 @@
 <template>
     <v-content id="app">
-        <v-container fluid style="padding: 0; max-width: 800px; color: white; border-bottom: 4px solid rgb(248,147,37)">
-            <v-layout row wrap>
-                <v-flex d-flex xs2 justify-start class="text-xs-left backBlack">
-                    <v-card nuxt to="/scoremode" flat tile class="black boxTif backBlack" style="max-height: 120px; max-width: 120px">
-                        <img src="/images/header-TIF_01.jpg" class="imageLogoTif" />
-                    </v-card>
-                </v-flex>
-                <v-flex d-flex xs8 class="backBlack">
-                    <v-layout row wrap>
-                        <v-flex d-flex>
-                            <v-layout row wrap class="headerMenus">
-                                <v-flex d-flex xs12>
-                                    <v-layout row wrap class="headerMenu">
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <span class="chiffres">1</span><br />
-												<span class="activity">sport</span>
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <span class="chiffres">6</span><br />
-												<span class="activity">pays</span>
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <span class="chiffres">130</span><br />
-												<span class="activity">équipes</span>
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-left: 1px solid rgb(248,147,37); border-right: 2px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <span class="chiffres">769</span><br />
-												<span class="activity">fans</span>
-                                            </div>
-                                        </v-flex>
-                                    </v-layout>
-                                </v-flex>
-                                <v-flex d-flex xs12>
-                                    <v-layout row wrap :class="classObject">
-                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-left">
-                                            <div class="userText" v-if="!loadedUser">
-                                                Utilisateur Invité
-                                            </div>
-                                            <div class="userText" v-else>
-                                                Bienvenue
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-right">
-                                            <div class="connectText" v-if="loadedUser">
-                                                {{ loadedUser.email }}
-                                            </div>
-                                            <div class="connectText" v-else>
-                                                Se connecter / S'inscrire
-                                            </div>
-                                        </v-flex>
-                                    </v-layout>
-                                </v-flex>
-                            </v-layout>
-                        </v-flex>
-                    </v-layout>
-                </v-flex>
-                <v-flex d-flex xs2 justify-end class="text-xs-right backBlack">
-                    <v-card nuxt to="/gamemode" flat tile class="black boxTif backBlack" style="max-height: 120px; max-width: 120px">
-                        <img src="/images/header-TIF_05.jpg" class="imageLogoTif"/>
-                    </v-card>
-                </v-flex>
-            </v-layout>
-        </v-container>
-
-        <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white">
+        <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white; height: 80px">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
                     Soccer - Compétitions
@@ -128,7 +57,7 @@
 																<img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
 															</v-flex>
 															<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-																<nuxt-link to="/competition1" class="teamTextSize">Nom de la compétition</nuxt-link>
+																<span class="teamTextSize">Nom de la compétition</span>
 															</v-flex>
 															<v-flex sm3 hidden-xs-only class="text-xs-right">
 																<span style="background-color: orange; black: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">FC Barcelone</span>
