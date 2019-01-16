@@ -122,7 +122,7 @@
 														</v-layout>
 														<v-layout align-center style="max-width: 100%">
 															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-																<div style="background-color: red; height: 40px; width: 2px"></div>
+																<div style="background-color: green; height: 40px; width: 2px"></div>
 															</v-flex>
 															<v-flex sm1 xs2 align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
 																<img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
