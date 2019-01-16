@@ -1,21 +1,19 @@
 <template>
     <v-content id="app">
-        <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white; height: 80px">
+        <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white;">
             <v-layout>
-                <v-flex d-flex x6 class="competitionName">
-                    Nom de la compétition
-                </v-flex>
-                <v-flex d-flex x6 class="boutonRetour">
+                <v-flex d-flex xs12 class="competitionName">
 					<div>
 						<v-btn color="black" fab small dark>
 							<v-icon>keyboard_arrow_left</v-icon>
 						</v-btn>
 					</div>                    
+                    Nom de la compétition
                 </v-flex>
             </v-layout>
 			<v-layout>
 				<v-flex d-flex xs12 justify-center align-center>
-					<img src="english_premier_league.png'" class="imgCompetition1"/>
+					<img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
 				</v-flex>
 			</v-layout>
             <v-layout justify-center row fill-height>
@@ -347,7 +345,13 @@
 		padding: 10px 10px;
 		background: white;
 		margin: 0 5px;
-		}		
+		}
+
+		/* Header Compététion */
+		
+		.competitionName {
+		padding: 18px 30px;
+		}
 	
 		.menuSport {
 			height: 40px;
