@@ -2,24 +2,22 @@
     <v-content id="app">
         <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white; height: 80px">
             <v-layout>
-                <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
-                    Soccer - Compétitions
+                <v-flex d-flex x6 class="competitionName">
+                    Nom de la compétition
                 </v-flex>
-            </v-layout>             
-        </v-container>
-
-        <v-container fluid style="max-width: 800px">
-            <v-layout justify-center row fill-height>
-				<v-flex  xs12 align-center class="scrolling-wrapper-flexbox">
-				  <div class="cardMenuCompetition"><h2>Tous</h2></div>
-				  <div class="cardMenuCompetition"><h2>Europe</h2></div>
-				  <div class="cardMenuCompetition"><h2>Afrique</h2></div>
-				  <div class="cardMenuCompetition"><h2>Amérique</h2></div>
-				  <div class="cardMenuCompetition"><h2>Asie/Océanie</h2></div>
-				  <div class="cardMenuCompetition"><h2>Sélections</h2></div>
-				  <div class="cardMenuCompetition"><h2>Clubs</h2></div>
+                <v-flex d-flex x6 class="boutonRetour">
+					<div>
+						<v-btn color="primary" fab small dark>
+							<v-icon>keyboard_arrow_left</v-icon>
+						</v-btn>
+					</div>                    
+                </v-flex>
+            </v-layout>
+			<v-layout>
+				<v-flex d-flex xs12 justify-center align-center>
+					<img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
 				</v-flex>
-            </v-layout>             
+			</v-layout>
         </v-container>
 
         <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
@@ -130,37 +128,6 @@
             </v-card-text>
         </v-container>
 
-
-        <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
-            <v-container fluid style="padding: 0; max-width: 800px">
-                <div id="dock-container">
-                    <div id="dock">
-                        <ul>
-                            <li>
-                                <nuxt-link to="/equipes"><img src="/images/menuShop.png">
-                                <span class="textMenu">Equipes</span></nuxt-link>
-                            </li>
-                            <li id="active">
-                                <nuxt-link to="/competitions"><img src="/images/menuResultat.png">
-                                <span class="textMenu">Compétitions</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/scoremode"><img src="/images/menuHome.png">
-                                <span class="textMenu">Matches du jour</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/joueurs"><img src="/images/menuSocial.png">
-                                <span class="textMenu">Joueurs</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/tifnews"><img src="/images/menuResultat.png">
-                                <span class="textMenu">TIF News</span></nuxt-link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </v-container>
-        </v-footer>     
     </v-content>
 </template>
 
