@@ -428,10 +428,13 @@
 
 	<style scoped>
 	
+		/* Menu compétitions */
+	
 		.scrolling-wrapper-flexbox {
 		display: flex;
 		flex-wrap: nowrap;
 		overflow-x: auto;
+		justify-content: center;
 		}
 	
 		.cardMenuCompetition {
@@ -694,7 +697,13 @@
 		}
 
 			@media only screen and (max-width: 768px) {
-
+			
+			/* Menu compétitions */
+		
+			.scrolling-wrapper-flexbox {
+			justify-content: flex-start;
+			}
+		
 			#app {
 			font: normal 90%/1 "Acme", Helvetica, sans-serif;
 			}
