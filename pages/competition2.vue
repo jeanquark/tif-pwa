@@ -1,30 +1,26 @@
 <template>
     <v-content id="app">
         <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white;">
-            <v-layout>
+            <v-layout v-for="competition in competitions" :key="competition.slug">
                 <v-flex d-flex xs12 class="competitionBouton">
 					<div>
-						<v-btn href="/competition2" color="black btnSmall" fab dark>
+						<v-btn href="/competition1" color="black btnSmall" fab dark>
 							<v-icon>keyboard_arrow_left</v-icon>
 						</v-btn>
+						<img :src="'/images/teams/albania.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
 						<span class="competitionName">Nom de la compétition 2</span>
 					</div>                    
                 </v-flex>
             </v-layout>
-			<v-layout v-for="competition in competitions" :key="competition.slug">
-				<v-flex d-flex xs12 justify-center align-center>
-					<img :src="'/images/teams/albania.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
-				</v-flex>
-			</v-layout>
-            <v-layout justify-center row fill-height>
+            <v-layout justify-center row fill-height style="border-top: solid 1px white">
 				<v-flex xs12 align-center class="scrolling-wrapper-flexbox">
-				  <div class="cardMenuCompetition1">MATCHS</div>
-				  <div class="cardMenuCompetition1">CLASSEMENT</div>
-				  <div class="cardMenuCompetition1">INFOS</div>
-				  <div class="cardMenuCompetition1">CLASSEMENTS</div>
-				  <div class="cardMenuCompetition1">EQUIPES</div>
-				  <div class="cardMenuCompetition1">STADES</div>
-				  <div class="cardMenuCompetition1">PALMARES</div>
+					<nuxt-link to="/competition2" class="cardMenuCompetition1">MATCHS</nuxt-link>
+					<nuxt-link to="/competition2"  class="cardMenuCompetition1">CLASSEMENT</nuxt-link>
+					<nuxt-link to="/competition2"  class="cardMenuCompetition1">INFOS</nuxt-link>
+					<nuxt-link to="/competition2"  class="cardMenuCompetition1">CLASSEMENTS</nuxt-link>
+					<nuxt-link to="/competition2"  class="cardMenuCompetition1">EQUIPES</nuxt-link>
+					<nuxt-link to="/competition2"  class="cardMenuCompetition1">STADES</nuxt-link>
+					<nuxt-link to="/competition2"  class="cardMenuCompetition1">PALMARES</nuxt-link>
 				</v-flex>
             </v-layout>             
         </v-container>
@@ -364,8 +360,8 @@
 		}	
 				
 		.btnSmall {
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 		}
 	
 		.menuSport {
