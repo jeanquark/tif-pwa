@@ -7,7 +7,7 @@
 						<v-btn href="/competition2" color="black btnSmall" fab dark>
 							<v-icon>keyboard_arrow_left</v-icon>
 						</v-btn>
-						<span class="competitionName">Nom de la compétition</span>
+						<span class="competitionName">Nom de la compétition 2</span>
 					</div>                    
                 </v-flex>
             </v-layout>
