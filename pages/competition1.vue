@@ -4,11 +4,11 @@
             <v-layout>
                 <v-flex d-flex xs12 class="competitionName">
 					<div>
-						<v-btn color="black" fab small dark>
+						<v-btn color="black btnSmall" fab dark>
 							<v-icon>keyboard_arrow_left</v-icon>
 						</v-btn>
+						<span class="competitionName">Nom de la compétition</span>
 					</div>                    
-                    Nom de la compétition
                 </v-flex>
             </v-layout>
 			<v-layout v-for="competition in competitions" :key="competition.slug">
@@ -18,13 +18,13 @@
 			</v-layout>
             <v-layout justify-center row fill-height>
 				<v-flex xs12 align-center class="scrolling-wrapper-flexbox">
-				  <div class="cardMenuCompetition">MATCHS</div>
-				  <div class="cardMenuCompetition">CLASSEMENT</div>
-				  <div class="cardMenuCompetition">INFOS</div>
-				  <div class="cardMenuCompetition">CLASSEMENTS</div>
-				  <div class="cardMenuCompetition">EQUIPES</div>
-				  <div class="cardMenuCompetition">STADES</div>
-				  <div class="cardMenuCompetition">PALMARES</div>
+				  <div class="cardMenuCompetition1">MATCHS</div>
+				  <div class="cardMenuCompetition1">CLASSEMENT</div>
+				  <div class="cardMenuCompetition1">INFOS</div>
+				  <div class="cardMenuCompetition1">CLASSEMENTS</div>
+				  <div class="cardMenuCompetition1">EQUIPES</div>
+				  <div class="cardMenuCompetition1">STADES</div>
+				  <div class="cardMenuCompetition1">PALMARES</div>
 				</v-flex>
             </v-layout>             
         </v-container>
@@ -350,7 +350,18 @@
 		/* Header Compététion */
 		
 		.competitionName {
-		padding: 18px 30px;
+		padding: 5px;
+		}
+		
+		.cardMenuCompetition1 {
+		color: #fff;
+		padding: 3px 10px;
+		margin: 0 5px;
+		}	
+		
+		.btnSmall {
+		width: 30px;
+		height: 30px;
 		}
 	
 		.menuSport {
