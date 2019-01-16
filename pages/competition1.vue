@@ -15,7 +15,7 @@
             </v-layout>
 			<v-layout>
 				<v-flex d-flex xs12 justify-center align-center>
-					<img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
+					<img src="/images/competitions/english_premier_league.png'" class="imgCompetition1"/>
 				</v-flex>
 			</v-layout>
         </v-container>
