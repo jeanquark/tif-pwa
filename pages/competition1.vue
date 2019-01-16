@@ -7,7 +7,7 @@
                 </v-flex>
                 <v-flex d-flex x6 class="boutonRetour">
 					<div>
-						<v-btn color="primary" fab small dark>
+						<v-btn color="black" fab small dark>
 							<v-icon>keyboard_arrow_left</v-icon>
 						</v-btn>
 					</div>                    
@@ -15,9 +15,20 @@
             </v-layout>
 			<v-layout>
 				<v-flex d-flex xs12 justify-center align-center>
-					<img src="/images/competitions/english_premier_league.png'" class="imgCompetition1"/>
+					<img src="english_premier_league.png'" class="imgCompetition1"/>
 				</v-flex>
 			</v-layout>
+            <v-layout justify-center row fill-height>
+				<v-flex xs12 align-center class="scrolling-wrapper-flexbox">
+				  <div class="cardMenuCompetition">MATCHS</div>
+				  <div class="cardMenuCompetition">CLASSEMENT</div>
+				  <div class="cardMenuCompetition">INFOS</div>
+				  <div class="cardMenuCompetition">CLASSEMENTS</div>
+				  <div class="cardMenuCompetition">EQUIPES</div>
+				  <div class="cardMenuCompetition">STADES</div>
+				  <div class="cardMenuCompetition">PALMARES</div>
+				</v-flex>
+            </v-layout>             
         </v-container>
 
         <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
