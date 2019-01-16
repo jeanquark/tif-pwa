@@ -11,7 +11,7 @@
                     Nom de la compétition
                 </v-flex>
             </v-layout>
-			<v-layout>
+			<v-layout v-for="competition in competitions" :key="competition.slug">
 				<v-flex d-flex xs12 justify-center align-center>
 					<img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
 				</v-flex>
