@@ -1,13 +1,14 @@
 <template>
+    <v-content id="app">
         <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white;">
             <v-layout v-for="competition in competitions" :key="competition.slug">
                 <v-flex d-flex xs12 class="competitionBouton">
 					<div>
-						<v-btn href="/competition" color="black btnSmall" fab dark>
+						<v-btn href="/competitions" color="black btnSmall" fab dark>
 							<v-icon>keyboard_arrow_left</v-icon>
 						</v-btn>
 						<img :src="'/images/teams/albania.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
-						<span class="competitionName">Nom de la compétition 2</span>
+						<span class="competitionName">Nom de la compétition</span>
 					</div>                    
                 </v-flex>
             </v-layout>
