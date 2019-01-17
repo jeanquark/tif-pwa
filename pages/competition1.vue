@@ -1,13 +1,13 @@
 <template>
     <v-content id="app">
         <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white;">
-            <v-layout>
+            <v-layout justify-center row fill-height align-center>
                 <v-flex d-flex xs12 class="competitionBouton">
 					<div>
 						<v-btn href="/competitions" color="black btnSmall" fab dark>
 							<v-icon>keyboard_arrow_left</v-icon>
 						</v-btn>
-						<img src="../static/images/teams/albania.png" class="imgLogoEquipe">
+						<img src="../static/images/teams/albania.png" class="imgCompetitionLogo">
 						<span class="competitionName">Nom de la compétition</span>
 					</div>                    
                 </v-flex>
@@ -358,6 +358,11 @@
 		padding: 3px 10px;
 		margin: 0 5px;
 		}	
+
+		.imgCompetitionLogo {
+		width: 35px;
+		height: 35px;
+		}
 				
 		.btnSmall {
 		width: 25px;
