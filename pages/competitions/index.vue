@@ -40,7 +40,7 @@
                                     </v-layout>
                                 </v-flex>
                                 <v-flex d-flex xs12>
-                                    <v-layout row wrap :class="classObject">
+                                    <v-layout row wrap>
                                         <v-flex d-flex xs6 justify-center align-center class="text-xs-left">
                                             <div class="userText" v-if="!loadedUser">
                                                 Utilisateur Invité
@@ -82,125 +82,64 @@
         <v-container fluid style="max-width: 800px">
             <v-layout justify-center row fill-height>
 				<v-flex  xs12 align-center class="scrolling-wrapper-flexbox">
-				  <div class="cardMenuCompetition"><h2>Tous</h2></div>
-				  <div class="cardMenuCompetition"><h2>Europe</h2></div>
-				  <div class="cardMenuCompetition"><h2>Afrique</h2></div>
-				  <div class="cardMenuCompetition"><h2>Amérique</h2></div>
-				  <div class="cardMenuCompetition"><h2>Asie/Océanie</h2></div>
-				  <div class="cardMenuCompetition"><h2>Sélections</h2></div>
-				  <div class="cardMenuCompetition"><h2>Clubs</h2></div>
+				  <div class="cardMenuCompetition" :class="[continent === '' && type === '' ? 'active' : '']" @click="resetCompetitions"><h2>Tous</h2></div>
+				  <div class="cardMenuCompetition" :class="[continent === 'europe' ? 'active' : '']" @click="competitionsByContinent('europe')"><h2>Europe</h2></div>
+				  <div class="cardMenuCompetition" :class="[continent === 'africa' ? 'active' : '']" @click="competitionsByContinent('africa')"><h2>Afrique</h2></div>
+				  <div class="cardMenuCompetition" :class="[continent === 'america' ? 'active' : '']" @click="competitionsByContinent('america')"><h2>Amérique</h2></div>
+				  <div class="cardMenuCompetition" :class="[continent === 'asia' ? 'active' : '']" @click="competitionsByContinent('asia')"><h2>Asie/Océanie</h2></div>
+				  <div class="cardMenuCompetition" :class="[type === 'selections' ? 'active' : '']" @click="competitionsByType('selections')"><h2>Sélections</h2></div>
+				  <div class="cardMenuCompetition" :class="[type === 'clubs' ? 'active' : '']" @click="competitionsByType('clubs')"><h2>Clubs</h2></div>
 				</v-flex>
             </v-layout>             
         </v-container>
 
         <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
-		
             <v-card-text class="card-text">
-                <v-expansion-panel class="elevation-0" :value="0">
-                    <v-expansion-panel-content class="orange">
-                        <div slot="header" class="white--text">
-                            FAVORITE COMPETITIONS
-                        </div>
-                        <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                        <v-expansion-panel class="elevation-0" :value="0" v-for="competition in competitions" :key="competition.slug">
-                            <v-expansion-panel-content class="black">
-                                <v-card>
-									<v-card-text style="padding: 0">
-                                        <v-data-table :items="eventsByCompetition(competition.slug)" class="elevation-0" hide-actions hide-headers>
-											<template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid orange">
-												<v-layout align-center style="padding: 0; border-right: 1px solid orange; border-left: 1px solid orange; border-bottom: 1px solid orange">
-													<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
-														<v-layout align-start>
-															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-																<div style="background-color: green; height: 100%; width: 2px"></div>
-															</v-flex>
-															<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-																<div style="color: orange;font-size: 80%">
-																	<span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >OUVERT</span>
-																</div>
-															</v-flex>
-														</v-layout>
-														<v-layout align-center style="max-width: 100%">
-															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-																<div style="background-color: green; height: 40px; width: 2px"></div>
-															</v-flex>
-															<v-flex sm1 xs2 align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
-																<img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
-															</v-flex>
-															<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-																<nuxt-link to="/competition1" class="teamTextSize">Nom de la compétition</nuxt-link>
-															</v-flex>
-															<v-flex sm3 hidden-xs-only class="text-xs-right">
-																<span style="background-color: orange; black: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">FC Barcelone</span>
-															</v-flex>
-															<v-flex sm4 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
-																<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">12345 fans</span>
-															</v-flex>
-														</v-layout>
-													</v-flex>
-												</v-layout>
-                                            </template>
-                                        </v-data-table>
-                                    </v-card-text>
-                                </v-card>
-                            </v-expansion-panel-content>
-                        </v-expansion-panel>
-                    </v-expansion-panel-content>
-                </v-expansion-panel>
+                <v-data-table :items="competitionsFiltered(this.type, this.continent)" class="elevation-0" hide-actions hide-headers>
+					<template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid orange">
+						<v-layout align-center style="padding: 0; border-right: 1px solid orange; border-left: 1px solid orange; border-bottom: 1px solid orange">
+							<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
+								<v-layout align-start v-if="props.item.active">
+									<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
+										<div style="background-color: green; height: 100%; width: 2px"></div>
+									</v-flex>
+									<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
+										<div style="color: orange;font-size: 80%">
+											<span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >OUVERT</span>
+										</div>
+									</v-flex>
+								</v-layout>
+                                <v-layout align-start v-if="!props.item.active">
+                                    <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
+                                        <div style="background-color: red; height: 100%; width: 2px"></div>
+                                    </v-flex>
+                                    <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
+                                        <div style="color: orange;font-size: 80%">
+                                            <span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT</span>
+                                        </div>
+                                    </v-flex>
+                                </v-layout>
+								<v-layout align-center style="max-width: 100%">
+									<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
+										<div :class="[props.item.active ? 'greenBar' : 'redBar']"></div>
+									</v-flex>
+									<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
+										<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize">{{ props.item.name }}</nuxt-link>
+									</v-flex>
+									<v-flex sm3 hidden-xs-only class="text-xs-right">
+										<span style="background-color: orange; black: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">FC Barcelone</span>
+									</v-flex>
+									<v-flex sm4 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
+										<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">12345 fans</span>
+									</v-flex>
+								</v-layout>
+							</v-flex>
+						</v-layout>
+                    </template>
+                </v-data-table>
             </v-card-text>
 
-            <v-card-text class="card-text">
-                <v-expansion-panel class="elevation-0" :value="0">
-                    <v-expansion-panel-content class="green">
-                        <div slot="header" class="white--text">
-                            ALL COMPETITIONS
-                        </div>
-                        <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                        <v-expansion-panel class="elevation-0" :value="0" v-for="competition in competitions" :key="competition.slug">
-                            <v-expansion-panel-content class="black">
-                                <v-card>
-									<v-card-text style="padding: 0">
-                                        <v-data-table :items="eventsByCompetition(competition.slug)" class="elevation-0" hide-actions hide-headers>
-											<template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid green">
-												<v-layout align-center style="padding: 0; border-right: 1px solid green; border-left: 1px solid green; border-bottom: 1px solid green">
-													<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
-														<v-layout align-start>
-															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-																<div style="background-color: red; height: 100%; width: 2px"></div>
-															</v-flex>
-															<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-																<div style="color: orange;font-size: 80%">
-																	<span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT</span>
-																</div>
-															</v-flex>
-														</v-layout>
-														<v-layout align-center style="max-width: 100%">
-															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-																<div style="background-color: red; height: 40px; width: 2px"></div>
-															</v-flex>
-															<v-flex sm1 xs2 align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
-																<img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
-															</v-flex>
-															<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-																<span class="teamTextSize">Nom de la compétition</span>
-															</v-flex>
-															<v-flex sm7 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
-																<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">12345 fans</span>
-															</v-flex>
-														</v-layout>
-													</v-flex>
-												</v-layout>
-                                            </template>
-                                        </v-data-table>
-                                    </v-card-text>
-                                </v-card>
-                            </v-expansion-panel-content>
-                        </v-expansion-panel>
-                    </v-expansion-panel-content>
-                </v-expansion-panel>
-            </v-card-text>
         </v-container>
-
 
         <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
             <v-container fluid style="padding: 0; max-width: 800px">
@@ -236,188 +175,52 @@
 </template>
 
 <script>
-    import moment from 'moment'
     export default {
         head: {
-            title: 'Events',
+            title: 'Competitions',
             link: [
 				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }
 			]
         },
         layout: 'layoutScoreMode',
         async created() {
-            const today = moment().format('YYYY-MM-DD')
-   //          console.log('today: ', today)
-   //          // if (this.$store.getters("events/loadedEvents").length < 1) {
-   //              await this.$store.dispatch("events/loadedEvents")
-   //          // }
-   //          if (this.$store.getters['users/loadedUserTeams'].length < 1) {
-			// 	await this.$store.dispatch('users/loadedUserTeams')
-			// }
-            await this.$store.commit('events/setEmptyEvents')
-            await this.$store.commit('competitions/setEmptyCompetitions')
-            // if (this.$store.getters('events/loadedEvents').length < 1) {
-                await this.$store.dispatch("events/loadedEventsAndCompetitionsByDay", today)
-            // }
-            // if (this.$store.getters['competitions/loadedCompetitions'].length < 1) {
-            //     this.$store.dispatch('competitions/loadedCompetitions')
-            // }
+            this.$store.dispatch('competitions/loadedCompetitions')
         },
         data() {
             return {
-                active: "",
-                dayNumber: 0,
-                date: moment(),
-                // competitions: {
-                //     'spanish_la_liga_2018_2019': {
-                //         "name": "La Liga",
-                //         "slug": "spanish_la_liga_2018_2019"
-                //     },
-                //     'english_premier_league_2018_2019': {
-                //         "name": "Premier League",
-                //         "slug": "english_premier_league_2018_2019"
-                //     },
-                //     'italian_serie_a_2018_2019': {
-                //         "name": "Serie A",
-                //         "slug": "italian_serie_a_2018_2019"
-                //     },
-                //     'german_bundesliga_2018_2019': {
-                //         "name": "Bundesliga",
-                //         "slug": "german_bundesliga_2018_2019"
-                //     },
-                //     'french_ligue1_2018_2019': {
-                //         "name": "Ligue 1",
-                //         "slug": "french_ligue1_2018_2019"
-                //     },
-                //     'swiss_super_league_2018_2019': {
-                //         "name": "Super League",
-                //         "slug": "swiss_super_league_2018_2019"
-                //     }
-                // }
+                type: '',
+                continent: 'europe'
             }
         },
         computed: {
-            classObject() {
-                if (this.active === "left") {
-                return "activeLeft";
-                } else if (this.active === "right") {
-                return "activeRight";
-                }
-                return "headerInfo";
-            },
             loadedUser () {
                 return this.$store.getters['users/loadedUser']
-            },
-            userTeams () {
-				return this.$store.getters['users/loadedUserTeams']
-			},
-			userTeamsIds () {
-				const userTeamsIds = []
-				const userTeams = this.$store.getters['users/loadedUserTeams']
-				userTeams.forEach((team) => {
-					userTeamsIds.push(parseInt(team.livescore_api_id))
-				})
-				return userTeamsIds
-			},
-            allEvents () {
-                // return this.$store.getters['events/loadedEvents']
-                const today = moment().format('YYYY-MM-DD')
-                const userTeamsIds = this.userTeamsIds
-                return this.$store.getters['events/loadedEvents']
-                    .filter(event => (event.date === today))
-                    .filter(event => (!userTeamsIds.includes(event.home_team.id) && !userTeamsIds.includes(event.visitor_team.id)))
-                    // .filter(event => (!userTeamsIds.includes(event.visitor_team.id)))
-                    .sort((a, b) => a.timestamp - b.timestamp)
-            },
-            events () {
-                // const today = moment().format('YYYY-MM-DD')
-                return this.$store.getters['events/loadedEvents']
-                    .filter(event => (event.date === this.date.format('YYYY-MM-DD')))
-                    .sort((a, b) => a.timestamp - b.timestamp)
-            },
-            userEvents () {
-                const today = moment().format('YYYY-MM-DD')
-                const userTeamsIds = this.userTeamsIds
-                console.log('userTeamsIds: ', userTeamsIds)
-				return this.$store.getters['events/loadedEvents']
-					.filter(event => (event.date === today))
-					.filter(event => (userTeamsIds.includes(event.home_team.livescore_api_id) || userTeamsIds.includes(event.visitor_team.livescore_api_id)))
-					.sort((a, b) => a.timestamp - b.timestamp)
-            },
-            competitions () {
-                return this.$store.getters['competitions/loadedCompetitions']
             }
         },
         methods: {
-            convertToLocaltime (timestamp) {
-                const utcDiff = new Date().getTimezoneOffset()
-                // const utcDiff = '60'
-                console.log('utcDiff: ', utcDiff)
-                if (utcDiff > 0) {
-                    return moment.unix(timestamp).add(utcDiff, 'minutes').format("HH:mm")
+            competitionsByType (type) {
+                this.type = type
+                this.continent = ''
+            },
+            competitionsByContinent (continent) {
+                this.continent = continent
+                this.type = ''
+            },
+            competitionsFiltered (type, continent) {
+                if (type) {
+                    return this.$store.getters['competitions/loadedCompetitions']
+                        .filter(competition => (competition.type ? competition.type === type : ''))
+                }
+                else if (continent) {
+                    return this.$store.getters['competitions/loadedCompetitions']
+                        .filter(competition => (competition.continent ? competition.continent.slug === continent : ''))
                 } else {
-                    return moment.unix(timestamp).subtract(utcDiff, 'minutes').format("HH:mm")
+                    return this.$store.getters['competitions/loadedCompetitions']
                 }
             },
-            eventsByCompetition (competition) {
-                return this.$store.getters['events/loadedEvents']
-                    .filter(event => (event.date === this.date.format('YYYY-MM-DD') && event.competition.slug === competition))
-                    .sort((a, b) => a.timestamp - b.timestamp)
-                // return this.allEvents.filter(event => event.competition.slug === competition)
-            },
-            convertToLocalTime (timestamp) {
-				const utcDiff = new Date().getTimezoneOffset()
-                console.log('utcDiff: ', utcDiff)
-                // console.log('moment.unix(timestamp): ', moment.unix(timestamp))
-                // return moment.unix(timestamp).format("HH:mm")
-				if (utcDiff > 0) {
-					return moment.unix(timestamp).add(utcDiff, 'minutes').format("HH:mm")
-				} else {
-					return moment.unix(timestamp).subtract(utcDiff, 'minutes').format("HH:mm")
-				}
-			},
-            async eventsByDate (setDayNumber) {
-                console.log('setDate: ', setDayNumber)
-                switch(setDayNumber) {
-                    case 'substractOne':
-                        this.dayNumber -= 1
-                        break
-                    case 'yesterday':
-                        this.dayNumber = -1
-                        break
-                    case 'tomorrow': 
-                        this.dayNumber = 1
-                        break
-                    case 'addOne': 
-                        this.dayNumber += 1
-                        break
-                }
-
-                this.date = moment().add(this.dayNumber, 'days')
-                console.log('this.date: ', this.date)
-
-                const events = this.$store.getters['events/loadedEvents'].filter(event => (
-                    event.date === this.date.format('YYYY-MM-DD')
-                ))
-                if (events.length < 1) {
-                    console.log('events.length < 1')
-                    await this.$store.dispatch('events/loadedEventsAndCompetitionsByDay', this.date.format('YYYY-MM-DD'))
-                }
-                console.log('events: ', events)
-                return events
-
-                // return this.$store.getters['events/loadedEvents']
-            },
-            mouseOver(direction) {
-                console.log(direction);
-                if (direction === "left") {
-                    this.active = "left";
-                } else if (direction === "right") {
-                    this.active = "right";
-                }
-            },
-            mouseLeave() {
-                this.active = null;
+            resetCompetitions () {
+                this.type = ''
+                this.continent = ''
             }
         }
     }
@@ -440,7 +243,10 @@
 		padding: 10px 10px;
 		background: white;
 		margin: 0 5px;
-		}		
+		}
+        .cardMenuCompetition:hover {
+            cursor: pointer;
+        }
 	
 		.menuSport {
 			height: 40px;
@@ -893,4 +699,21 @@
 			}
 
 		}
+
+        /* Début de l'ajout J-M */
+        .active {
+            background: orangered;
+            color: #fff;
+        }
+        .greenBar {
+            background-color: green; 
+            height: 40px; 
+            width: 2px;
+        }
+        .redBar {
+            background-color: red; 
+            height: 40px; 
+            width: 2px;
+        }
+        /* Fin de l'ajout J-M */
 	</style>

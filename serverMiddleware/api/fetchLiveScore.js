@@ -12,37 +12,55 @@ const api_secret = process.env.LIVESCORE_API_SECRET;
 // To be run every minute
 module.exports = app.use(async function(req, res, next) {
   try {
-    const leaguesArray = [
-      "25",
-      "74",
-      "114",
-      "73",
-      "46",
-      "12",
-      "139",
-      "86",
-      "9",
-      "174",
-      "175",
-      "176",
-      "177",
-      "232",
-      "233",
-      "234",
-      "235",
-      "236",
-      "237",
-      "238",
-      "239",
-      "240",
-      "241",
-      "242",
-      "243",
-      "244",
-      "245",
-      "246",
-      "247"
-    ];
+    // 1) First, retrieve all competitions
+    const competitionIdsArray = []
+    const competitionsArray = []
+    const competitions = await admin.database().ref('/competitions').once('value')
+    competitions.forEach(competition => {
+      competitionIdsArray.push(String(competition.val().livescore_api_id))
+      competitionsArray.push({
+        livescore_api_id: competition.val().livescore_api_id,
+        name: competition.val().name,
+        slug: competition.val().slug,
+        countries: competition.val().countries
+      })
+    })
+    // competitionIdsArray.push('277')
+    // console.log('competitionsArray: ', competitionsArray)
+    // console.log('competitionIdsArray: ', competitionIdsArray)
+    // return
+
+    // const leaguesArray = [
+    //   "25", // England
+    //   "74", // Spain
+    //   "114", // Germany
+    //   "73", // Italy
+    //   "46", // France
+    //   "12", // Switzerland
+    //   // "139",
+    //   // "86",
+    //   // "9",
+    //   "174",
+    //   "175",
+    //   "176",
+    //   "177",
+    //   "232",
+    //   "233",
+    //   "234",
+    //   "235",
+    //   "236",
+    //   "237",
+    //   "238",
+    //   "239",
+    //   "240",
+    //   "241",
+    //   "242",
+    //   "243",
+    //   "244",
+    //   "245",
+    //   "246",
+    //   "247"
+    // ];
 
     const url =
       "http://livescore-api.com/api-client/scores/live.json?key=" +
@@ -53,10 +71,13 @@ module.exports = app.use(async function(req, res, next) {
     let updates = {};
 
     const matches = await axios.get(url);
-    console.log("matches: ", matches);
+    // console.log("matches: ", matches);
     for (let match of matches.data.data.match) {
-      console.log("match: ", match);
-      if (leaguesArray.includes(match.league_id)) {
+      // console.log("match.league_id: ", match.league_id);
+      // if (leaguesArray.includes(match.league_id)) {
+      if (competitionIdsArray.includes(match.league_id)) {
+        console.log('match: ', match);
+
         const id = today + "_" + match.home_id + "_vs_" + match.away_id;
 
         updates["/events/" + id + "/livescore_api_id"] = match.id;
@@ -69,18 +90,41 @@ module.exports = app.use(async function(req, res, next) {
         updates["/events/" + id + "/last_changed"] = match.last_changed;
         if (match.status !== 'FINISHED') {
           updates["/events/" + id + "/notification_sent"] = false
+        // } else if (match.status === 'FINISHED') {
         }
+        if (match.status === 'FINISHED') {
+          // Match has ended, update standings
+          const now = moment();
+          const last_changed = moment(match.last_changed);
+          console.log('time diff: ', now.diff(last_changed, 'minutes'));
+
+          if (now.diff(last_changed, 'minutes') < 20) { // If match finished less than 10 minutes ago, update league standing
+            const url = `http://livescore-api.com/api-client/leagues/table.json?key=${api_key}&secret=${api_secret}&league=${match.league_id}&season=2&v`
+            const standing = await axios.get(url);
+            console.log('standing: ', standing);
+            // console.log('match.league_id: ', match.league_id);
+            let competitionData = competitionsArray.find(competition => parseInt(competition.livescore_api_id) === parseInt(match.league_id))
+            // console.log('competitionData: ', competitionData);
+            if (standing.data && standing.data.data) {
+              updates["/standings/" + competitionData.slug] = standing.data.data.table
+            }
+          }          
+        }
+      } else {
+        // console.log('no live match concerning our competitions')
       }
     }
-    // console.log("updates: ", updates);
+    console.log("updates: ", updates);
+    // return
+
     await admin
       .database()
       .ref()
       .update(updates);
     console.log("Step 3");
 
-    const sendNotifications = await axios.get("/");
-    console.log("sendNotifications: ", sendNotifications);
+    // const sendNotifications = await axios.get("/");
+    // console.log("sendNotifications: ", sendNotifications);
     console.log("DONE!");
     res.send("GET request succeeded!");
 

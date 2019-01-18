@@ -104,6 +104,10 @@ module.exports = {
         {
             path: "/api/fetch-live-actions",
             handler: "~/serverMiddleware/api/fetchLiveActions"
+        },
+        {
+            path: "/api/fetch-standings",
+            handler: "~/serverMiddleware/api/fetchStandings"
         }
     ],
     css: ["~/assets/style/app.styl"],
