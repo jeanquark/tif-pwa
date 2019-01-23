@@ -50,7 +50,66 @@ module.exports = {
                     }
                 ]
             }
-        ]
+        ],
+        ['nuxt-i18n', {
+            locales: [
+                // { code: 'en' },
+                // { code: 'fr' },
+                // { code: 'de' }
+                {
+                    code: 'en',
+                    iso: 'en-US',
+                    name: 'English',
+                    // langFile: 'en-US.json'
+                    file: 'en-US.json'
+                },
+                {
+                    code: 'fr',
+                    iso: 'fr-FR',
+                    name: 'Français',
+                    // langFile: 'fr-FR.json'
+                    file: 'fr-FR.json'
+                },
+                {
+                    code: 'de',
+                    iso: 'de-DE',
+                    name: 'Deutsch',
+                    // langFile: 'de-DE.json'
+                    file: 'de-DE.json'
+                }
+            ],
+            // loadLanguagesAsync: true,
+            lazy: true,
+            langDir: 'lang/',
+            defaultLocale: 'en'
+            // parsePages: false,
+            // routes: {
+            //     about: {
+            //         fr: '/a-propos',
+            //         de: '/uber-uns'
+            //     },
+            //     login: {
+            //         fr: '/login',
+            //         de: '/login'
+            //     },
+            //     admin: {
+            //         fr: '/administration',
+            //         de: '/verwaltung'
+            //     },
+            //     user: {
+            //         fr: '/membre',
+            //         de: '/user'
+            //     },
+            //     home: {
+            //         fr: '/accueil',
+            //         de: '/home'
+            //     },
+            //     teams: {
+            //         fr: '/equipes',
+            //         de: '/mannschaften'
+            //     }
+            // }
+        }]
     ],
     plugins: [
         { src: "~/plugins/vuetify.js", ssr: true },

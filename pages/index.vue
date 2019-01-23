@@ -15,7 +15,13 @@
 				  class="text-xs-center"
 				>
 					<v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn>
-					<p>Petit texte explicatif</p>
+					<p>{{ $t('pages.index.explanation') }}</p>
+					<nuxt-link
+					  v-for="locale in $i18n.locales"
+					  v-if="locale.code !== $i18n.locale"
+					  :key="locale.code"
+					  :to="switchLocalePath(locale.code)">{{ locale.name }}
+					</nuxt-link>
 				</v-layout>
 				<v-layout
 				  align-center
