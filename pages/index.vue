@@ -26,6 +26,9 @@
 				  class="text-xs-center"
 				>
 					<p style="margin-bottom: 0">Petit texte explicatif</p>
+					<nuxt-link to="/login">Login</nuxt-link>
+					<nuxt-link to="/register">Register</nuxt-link>
+					<v-btn color="success">Success</v-btn>
 					<v-btn round large color="deep-orange" dark @click="signInWithGoogle">Game Mode</v-btn>
 				</v-layout>
 			</v-container>
@@ -36,7 +39,8 @@
 <script>
 	export default {
 		// layout: 'layoutLandingPage',
-		middleware: ['unauth-check'],
+		// middleware: ['unauth-check'],
+		layout: 'layoutFront',
 		methods: {
 			async signInWithGoogle() {
 				console.log("signInWithGoogle")

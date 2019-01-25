@@ -50,7 +50,10 @@ module.exports = {
                     }
                 ]
             }
-        ]
+        ],
+        ['nuxt-validate', {
+            lang: 'en',
+        }]
     ],
     plugins: [
         { src: "~/plugins/vuetify.js", ssr: true },

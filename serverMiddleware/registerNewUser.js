@@ -16,15 +16,15 @@ function buildUserObject (payload) {
     let user = {}
     user.id = payload.id,
     user.email = payload.email,
-    user.username = payload.username ? payload.username : '',
+    // user.username = payload.username ? payload.username : '',
     user.country = {
         name: payload.country.name ? payload.country.name : '',
         slug: payload.country.slug ? payload.country.slug : ''
     },
-    user.language = {
-        name: payload.language.name ? payload.language.name : '',
-        slug: payload.language.slug ? payload.language.slug : ''
-    },
+    // user.language = {
+    //     name: payload.language.name ? payload.language.name : '',
+    //     slug: payload.language.slug ? payload.language.slug : ''
+    // },
     user.level = {
         value: 1,
         updated_at: moment().unix()

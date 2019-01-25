@@ -39,59 +39,58 @@ export const actions = {
     },
 
     async signUserUp({ commit }, payload) {
-        commit("setLoading", true, { root: true })
+        commit('setLoading', true, { root: true })
         try {
             let authData = await Auth.createUserWithEmailAndPassword(
                 payload.email,
                 payload.password
             )
-            console.log("authData: ", authData)
-            console.log("authData.uid: ", authData.uid)
+            console.log('authData: ', authData)
+            console.log('authData.uid: ', authData.uid)
             const userId = authData.uid
 
             // Add user id to payload
-            payload["id"] = userId
-            console.log("payload: ", payload)
+            payload['id'] = userId
+            console.log('payload: ', payload)
 
             return axios
-                .post("/register-new-user", {
-                    type: "form",
+                .post('/register-new-user', {
+                    type: 'form',
                     data: payload
                 })
                 .then(response => {
                     // console.log('success')
                     // console.log(response)
-                    commit("users/setLoadedUser", response.data, { root: true })
-                    commit("setLoading", false, { root: true })
+                    commit('users/setLoadedUser', response.data, { root: true })
+                    commit('setLoading', false, { root: true })
                     new Noty({
-                        type: "success",
-                        text: "You've just registered successfully",
+                        type: 'success',
+                        text: 'You\'ve just registered successfully',
                         timeout: 5000,
-                        theme: "metroui"
+                        theme: 'metroui'
                     }).show()
                 })
                 .catch(function(error) {
-                    console.log("error: ", error)
-                    commit("setLoading", false, { root: true })
+                    console.log('error: ', error)
+                    commit('setLoading', false, { root: true })
                     new Noty({
-                        type: "error",
-                        text:
-                            "Sorry, an error occured during your registration process.",
+                        type: 'error',
+                        text: 'Sorry, an error occured during your registration process.',
                         timeout: 5000,
-                        theme: "metroui"
+                        theme: 'metroui'
                     }).show()
                 })
         } catch (error) {
             console.log(error)
-            if (error.code === "auth/email-already-in-use") {
+            if (error.code === 'auth/email-already-in-use') {
                 new Noty({
-                    type: "error",
+                    type: 'error',
                     text: error.message,
                     timeout: 5000,
-                    theme: "metroui"
+                    theme: 'metroui'
                 }).show()
             }
-            commit("setLoading", false, { root: true })
+            commit('setLoading', false, { root: true })
             throw new Error(error)
         }
     },
