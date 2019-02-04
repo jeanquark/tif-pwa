@@ -7,12 +7,12 @@
                       class="mx-auto"
                       style="min-width: 500px"
                     > -->
-                    <v-toolbar dark color="primary">
+                    <v-toolbar dark color="deep-orange">
                         <v-toolbar-title>Register</v-toolbar-title>
                         <v-flex class="text-xs-right">
                             <v-avatar
                                 color="primary white"
-                                class="subheading primary--text"
+                                class="subheading deep-orange--text"
                                 size="24"
                                 v-text="step"
                             ></v-avatar>
@@ -162,9 +162,9 @@
 
                     <v-card-actions>
                         <v-btn
-                            :disabled="step === 1"
                             flat
                             @click="step--"
+                            v-if="step !== 1"
                         >
                             Back
                         </v-btn>
