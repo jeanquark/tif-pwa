@@ -53,6 +53,36 @@ module.exports = {
         ],
         ['nuxt-validate', {
             lang: 'en',
+        }],
+        ['nuxt-i18n', {
+            locales: [
+                {
+                    code: 'en',
+                    iso: 'en-US',
+                    name: 'English',
+                    // langFile: 'en-US.json'
+                    file: 'en-US.json'
+                },
+                {
+                    code: 'fr',
+                    iso: 'fr-FR',
+                    name: 'Français',
+                    // langFile: 'fr-FR.json'
+                    file: 'fr-FR.json'
+                },
+                {
+                    code: 'de',
+                    iso: 'de-DE',
+                    name: 'Deutsch',
+                    // langFile: 'de-DE.json'
+                    file: 'de-DE.json'
+                }
+            ],
+            // loadLanguagesAsync: true,
+            lazy: true,
+            langDir: 'lang/',
+            defaultLocale: 'en',
+            seo: false
         }]
     ],
     plugins: [
