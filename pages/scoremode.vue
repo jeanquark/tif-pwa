@@ -1,6 +1,6 @@
 <template>
     <v-content id="app">
-        <v-container fluid style="padding: 0; max-width: 800px; color: white; border-bottom: 4px solid rgb(248,147,37)">
+        <v-container fluid style="padding: 0; max-width: 1000px; color: white; border-bottom: 4px solid rgb(248,147,37)">
             <v-layout row wrap>
                 <v-flex d-flex xs2 justify-start class="text-xs-left backBlack">
                     <v-card nuxt to="/scoremode" flat tile class="black boxTif backBlack" style="max-height: 120px; max-width: 120px">
@@ -70,14 +70,14 @@
                 </v-flex>
             </v-layout>
         </v-container>
-        <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
                     Soccer
                 </v-flex>
             </v-layout>             
         </v-container>
-        <v-container fluid style="padding: 0; max-width: 800px; background-color: grey; color: white">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white">
             <v-layout>
                 <v-flex d-flex x1 justify-end align-center style="padding-left: 20px;" @click="eventsByDate('substractOne')">
                     <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" />
@@ -98,7 +98,7 @@
         </v-container>
 
 
-        <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 80px">
 		
             <v-card-text class="card-text">
                 <v-expansion-panel class="elevation-0" :value="0" v-if="loadedUser">
@@ -247,7 +247,7 @@
 
 
         <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
-            <v-container fluid style="padding: 0; max-width: 800px">
+            <v-container fluid style="padding: 0; max-width: 1000px">
                 <div id="dock-container">
                     <div id="dock">
                         <ul>

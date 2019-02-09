@@ -302,8 +302,8 @@
     position: absolute;
     color: #FFFFFF;
     background-color: black;
-    width: 1000px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     border-left: 1px solid orangered;
     border-right: 1px solid orangered;
     }
