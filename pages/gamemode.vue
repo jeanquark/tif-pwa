@@ -1,5 +1,5 @@
 <template>
-    <v-content id="app">
+    <v-content id="app" class="container">
         <v-container fluid id="header" class="header">
             <v-layout row>
                 <v-flex class="barreHeader">
@@ -111,7 +111,8 @@
         head: {
             title: 'Events',
             link: [
-				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' },
+                { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
 			]
         },
         layout: 'layoutScoreMode',
@@ -304,7 +305,7 @@
     border-right: 1px solid orangered;
     }
     
-    #container {
+    .container {
     height: 100%;
     width: 1000px;
     position: absolute;
