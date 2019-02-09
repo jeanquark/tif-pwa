@@ -295,20 +295,17 @@
 </script>
 
 	<style scoped>
-	
-    body {
+	    
+    .container {
+    height: 100%;
+    width: 1000px;
+    position: absolute;
     color: #FFFFFF;
     background-color: black;
     width: 1000px;
     margin: auto;
     border-left: 1px solid orangered;
     border-right: 1px solid orangered;
-    }
-    
-    .container {
-    height: 100%;
-    width: 1000px;
-    position: absolute;
     }
     
     /* header */
