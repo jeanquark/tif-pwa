@@ -285,8 +285,7 @@
         head: {
             title: 'Events',
             link: [
-				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }
-                { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }                
 			]
         },
         layout: 'layoutScoreMode',

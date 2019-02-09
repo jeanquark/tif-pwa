@@ -1,107 +1,107 @@
 <template>
-    <v-content id="app container">
-            <v-container fluid id="header" class="header">
-                <v-layout row>
-                    <v-flex class="barreHeader">
-                        <v-layout row>
-                            <v-flex xs6 sm6 md6>
-                                <span style="margin-left: 100px; float: left; margin-top: 4px;"><img src="switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
-                            </v-flex>
-                            <v-flex xs6 sm6 md6>
-                                <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Fan de l'équipe de suisse de football (1.34 PF)</span>
-                            </v-flex>
-                    </v-flex>
-                </v-layout>
-                <v-layout row>
-                    <a href="monavatar.html">
-                     <v-flex shrink>
-                        <div id="avatar">
-                            <img src="avatar.png" class="imgAvatar" />
-                        </div>
-                    </a>
-                    </v-flex>
-                    <v-flex grow>
-                        <v-layout row>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                                <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; color: white; border-radius: 5px">3 / 10</v-progress-linear>
-                            </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                                <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
-                                <a href="plus.html" class="aPlusYellow">
-                                <span class="plusYellow">+</span>
-                                </a>
-                            </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                                <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
-                                <div class="dollarFan">1234 $fans</div>
-                                <a href="plus.html" class="aPlusGreen">
-                                <span class="plusGreen">+</span>
-                                </a>
-                            </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
-                                <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
-                                <div class="token">12 tokens</div>
-                                <a href="plus.html" class="aPlusOrangered">
-                                <span class="plusOrangered">+</span>
-                                </a>
-                            </v-flex>
-                        </v-layout>
-                    </v-flex>
-                    <v-flex shrink>
-                    <a href="myteams.html">
-                    <div id="team">
-                        <img src="switzerland.png" class="imgTeam" />
+    <v-content id="app">
+        <v-container fluid id="header" class="header">
+            <v-layout row>
+                <v-flex class="barreHeader">
+                    <v-layout row>
+                        <v-flex xs6 sm6 md6>
+                            <span style="margin-left: 100px; float: left; margin-top: 4px;"><img src="switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
+                        </v-flex>
+                        <v-flex xs6 sm6 md6>
+                            <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Fan de l'équipe de suisse de football (1.34 PF)</span>
+                        </v-flex>
+                </v-flex>
+            </v-layout>
+            <v-layout row>
+                <a href="monavatar.html">
+                 <v-flex shrink>
+                    <div id="avatar">
+                        <img src="avatar.png" class="imgAvatar" />
                     </div>
-                    </a>
-                    </v-flex>
-                </v-layout>
-            </v-container>
+                </a>
+                </v-flex>
+                <v-flex grow>
+                    <v-layout row>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <div style="text-align: center" class="levelHeader">Niv.1</div>
+                            <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; color: white; border-radius: 5px">3 / 10</v-progress-linear>
+                        </v-flex>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
+                            <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
+                            <a href="plus.html" class="aPlusYellow">
+                            <span class="plusYellow">+</span>
+                            </a>
+                        </v-flex>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
+                            <div class="dollarFan">1234 $fans</div>
+                            <a href="plus.html" class="aPlusGreen">
+                            <span class="plusGreen">+</span>
+                            </a>
+                        </v-flex>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
+                            <div class="token">12 tokens</div>
+                            <a href="plus.html" class="aPlusOrangered">
+                            <span class="plusOrangered">+</span>
+                            </a>
+                        </v-flex>
+                    </v-layout>
+                </v-flex>
+                <v-flex shrink>
+                <a href="myteams.html">
+                <div id="team">
+                    <img src="switzerland.png" class="imgTeam" />
+                </div>
+                </a>
+                </v-flex>
+            </v-layout>
+        </v-container>
 
-            <v-container fluid id="content">
-                <div class="centreImage">
-                    <div class="content">
-                        <img src="carte.png" class="imgCarte" />
-                    </div>
-                    <div>
-                        <img src="menuShop.png" class="image1">
+        <v-container fluid id="content">
+            <div class="centreImage">
+                <div class="content">
+                    <img src="carte.png" class="imgCarte" />
+                </div>
+                <div>
+                    <img src="menuShop.png" class="image1">
+                </div>
+            </div>
+        </v-container>
+
+        <v-footer style="position: absolute; bottom: 0; width: 100%; height: auto" class="text-xs-center">
+            <v-container style="padding: 0; margin: 0">
+                <div class="barreOrangered"></div>
+                <div class="barreBlack"></div>
+                <div id="dock-container">
+                    <div id="dock">
+                        <ul>
+                            <li>
+                                <a href="equipes.html"><img src="menuShop.png">
+                                <span class="textMenu">Inventaire</span></a>
+                            </li>
+                            <li>
+                                <a href="shop.html"><img src="menuShop.png">
+                                <span class="textMenu">Le Shop</span></a>
+                            </li>
+                            <li id="active">
+                                <nuxt-link to="/"><img src="menuHome.png">
+                                <span class="textMenu">Aujourd'hui</span></nuxt-link>
+                            </li>
+                            <li>
+                                <a href="joueurs.html"><img src="menuSocial.png">
+                                <span class="textMenu">Mes amis</span></a>
+                            </li>
+                            <li>
+                                <a href="scoremode.html"><img src="menuResultat.png">
+                                <span class="textMenu">ScoreMode</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </v-container>
-
-            <v-footer style="position: absolute; bottom: 0; width: 100%; height: auto" class="text-xs-center">
-                <v-container style="padding: 0; margin: 0">
-                    <div class="barreOrangered"></div>
-                    <div class="barreBlack"></div>
-                    <div id="dock-container">
-                        <div id="dock">
-                            <ul>
-                                <li>
-                                    <a href="equipes.html"><img src="menuShop.png">
-                                    <span class="textMenu">Inventaire</span></a>
-                                </li>
-                                <li>
-                                    <a href="shop.html"><img src="menuShop.png">
-                                    <span class="textMenu">Le Shop</span></a>
-                                </li>
-                                <li id="active">
-                                    <nuxt-link to="/"><img src="menuHome.png">
-                                    <span class="textMenu">Aujourd'hui</span></nuxt-link>
-                                </li>
-                                <li>
-                                    <a href="joueurs.html"><img src="menuSocial.png">
-                                    <span class="textMenu">Mes amis</span></a>
-                                </li>
-                                <li>
-                                    <a href="scoremode.html"><img src="menuResultat.png">
-                                    <span class="textMenu">ScoreMode</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </v-container>
-            </v-footer>
+        </v-footer>
     </v-content>
 </template>
 
@@ -111,8 +111,7 @@
         head: {
             title: 'Events',
             link: [
-				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' },
-                { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }
 			]
         },
         layout: 'layoutScoreMode',
