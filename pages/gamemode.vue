@@ -5,7 +5,7 @@
                 <v-flex class="barreHeader">
                     <v-layout row>
                         <v-flex xs6 sm6 md6>
-                            <span style="margin-left: 100px; float: left; margin-top: 4px;"><img src="switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
+                            <span style="margin-left: 100px; float: left; margin-top: 4px;"><img src="images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
                         </v-flex>
                         <v-flex xs6 sm6 md6>
                             <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Fan de l'équipe de suisse de football (1.34 PF)</span>
@@ -13,10 +13,10 @@
                 </v-flex>
             </v-layout>
             <v-layout row>
-                <a href="monavatar.html">
+                <a href="images/monavatar.html">
                  <v-flex shrink>
                     <div id="avatar">
-                        <img src="avatar.png" class="imgAvatar" />
+                        <img src="images/avatar.png" class="imgAvatar" />
                     </div>
                 </a>
                 </v-flex>
@@ -62,10 +62,10 @@
         <v-container fluid id="content">
             <div class="centreImage">
                 <div class="content">
-                    <img src="carte.png" class="imgCarte" />
+                    <img src="images/carte.png" class="imgCarte" />
                 </div>
                 <div>
-                    <img src="menuShop.png" class="image1">
+                    <img src="images/menuShop.png" class="image1">
                 </div>
             </div>
         </v-container>
@@ -78,23 +78,23 @@
                     <div id="dock">
                         <ul>
                             <li>
-                                <a href="equipes.html"><img src="menuShop.png">
+                                <a href="equipes.html"><img src="images/menuShop.png">
                                 <span class="textMenu">Inventaire</span></a>
                             </li>
                             <li>
-                                <a href="shop.html"><img src="menuShop.png">
+                                <a href="shop.html"><img src="images/menuShop.png">
                                 <span class="textMenu">Le Shop</span></a>
                             </li>
                             <li id="active">
-                                <nuxt-link to="/"><img src="menuHome.png">
+                                <nuxt-link to="/"><img src="images/menuHome.png">
                                 <span class="textMenu">Aujourd'hui</span></nuxt-link>
                             </li>
                             <li>
-                                <a href="joueurs.html"><img src="menuSocial.png">
+                                <a href="joueurs.html"><img src="images/menuSocial.png">
                                 <span class="textMenu">Mes amis</span></a>
                             </li>
                             <li>
-                                <a href="scoremode.html"><img src="menuResultat.png">
+                                <a href="scoremode.html"><img src="images/menuResultat.png">
                                 <span class="textMenu">ScoreMode</span></a>
                             </li>
                         </ul>
