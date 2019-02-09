@@ -1,6 +1,5 @@
 <template>
-    <v-content id="app">
-        <v-content id="container">
+    <v-content id="app container">
             <v-container fluid id="header" class="header">
                 <v-layout row>
                     <v-flex class="barreHeader">
@@ -112,7 +111,7 @@
         head: {
             title: 'Events',
             link: [
-				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' },
                 { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
 			]
         },
