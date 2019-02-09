@@ -1,208 +1,108 @@
 <template>
     <v-content id="app">
-        <v-container fluid style="padding: 0; max-width: 800px; color: white; border-bottom: 4px solid rgb(248,147,37)" class="backBlack">
-            <v-layout row wrap>
-                <v-flex d-flex xs2 justify-start class="text-xs-left backBlack">
-                    <v-card flat tile class="black boxTif backBlack" style="max-height: 120px; max-width: 120px">
-                        <img src="/images/header-TIF_01.jpg" width="120px" height="120px" class="imageLogoTif" />
-                    </v-card>
-                </v-flex>
-                <v-flex d-flex xs8>
-                    <v-layout row wrap>
-                        <v-flex d-flex>
-                            <v-layout row wrap>
-                                <v-flex d-flex xs12 class="elevation-0" hidden-xs-only>
-                                    <v-layout row wrap>
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <img src="/images/menuShop.png" class="imageLogo" /><br />
-                                                <div class="energyBox">5 / 100</div>
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <img src="/images/menuShop.png" class="imageLogo"/><br />
-                                                <div class="energyBox">10 / 10</div>
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <img src="/images/menuShop.png" class="imageLogo"/><br />
-                                                <div class="energyBox">1234 $</div>
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-left: 1px solid rgb(248,147,37); border-right: 2px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <img src="/images/menuShop.png" class="imageLogo"/><br />
-                                                <div class="energyBox">16 tokens</div>
-                                            </div>
-                                        </v-flex>
-                                    </v-layout>
-                                </v-flex>
-                                <v-flex d-flex xs12>
-                                    <v-layout row wrap :class="classObject">
-                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-left">
-                                            <div class="userText" v-if="!loadedUser">
-                                                Utilisateur Invité
-                                            </div>
-                                            <div class="userText" v-else>
-                                                Bienvenue
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-right">
-                                            <div class="connectText" v-if="loadedUser">
-                                                {{ loadedUser.email }}
-                                            </div>
-                                            <div class="connectText" v-else>
-                                                Se connecter
-                                            </div>
-                                        </v-flex>
-                                    </v-layout>
-                                </v-flex>
-                            </v-layout>
-                        </v-flex>
-                    </v-layout>
-                </v-flex>
-                <v-flex d-flex xs2 justify-end class="text-xs-right">
-                    <v-card flat tile class="black boxTif" style="max-height: 120px; max-width: 120px">
-                        <img src="/images/header-TIF_05.jpg" width="120px" height="120px" class="imageLogoTif"/>
-                    </v-card>
-                </v-flex>
-            </v-layout>
-        </v-container>
-        <v-container fluid style="padding: 0; max-width: 800px; background-color: green; color: white">
-            <v-layout>
-                <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
-                    Soccer
-                </v-flex>
-            </v-layout>             
-        </v-container>
-        <v-container fluid style="padding: 0; max-width: 800px; background-color: grey; color: white">
-            <v-layout>
-                <v-flex d-flex x1 justify-end align-center style="padding-left: 20px;" @click="eventsByDate('substractOne')">
-                    <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" />
-                </v-flex>
-                <v-flex d-flex x2 justify-start align-center class="text-xs-center navButton menuDay" @click="eventsByDate('yesterday')">
-                    Hier
-                </v-flex>
-                <v-flex d-flex x6 justify-center align-center class="text-xs-center menuDay">
-                    {{ date | moment('dddd, MMMM Do YYYY') }}
-                </v-flex>
-                <v-flex d-flex x2 justify-end align-center class="text-xs-center navButton menuDay" @click="eventsByDate('tomorrow')">
-                    Demain
-                </v-flex>
-                <v-flex d-flex x1 justify-end align-center style="padding-right: 20px;" @click="eventsByDate('addOne')">
-                    <fa :icon="['fas', 'angle-double-right']" size="1x" class="icon" style="text-shadow: 0 0 15px #3b5998;"/>
-                </v-flex>
-            </v-layout>             
-        </v-container>
-
-
-        <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
-            <v-card-text class="card-text">
-                <v-expansion-panel class="elevation-0" :value="0">
-                    <v-expansion-panel-content class="green">
-                        <div slot="header" class="white--text">
-                            ALL EVENTS
+        <v-content id="container">
+            <v-container fluid id="header" class="header">
+                <v-layout row>
+                    <v-flex class="barreHeader">
+                        <v-layout row>
+                            <v-flex xs6 sm6 md6>
+                                <span style="margin-left: 100px; float: left; margin-top: 4px;"><img src="switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
+                            </v-flex>
+                            <v-flex xs6 sm6 md6>
+                                <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Fan de l'équipe de suisse de football (1.34 PF)</span>
+                            </v-flex>
+                    </v-flex>
+                </v-layout>
+                <v-layout row>
+                    <a href="monavatar.html">
+                     <v-flex shrink>
+                        <div id="avatar">
+                            <img src="avatar.png" class="imgAvatar" />
                         </div>
-                        <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                        <v-expansion-panel class="elevation-0" :value="0" v-for="competition in competitions" :key="competition.slug">
-                            <v-expansion-panel-content class="black">
-                                <div slot="header" class="white--text">
-                                    <div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
-                                        <img :src="'/images/countries/' + country.slug + '.png'" style="width: 13px; height: 13px" />
-                                        &nbsp;&nbsp;{{ competition.name }}
-                                    </div>
-                                </div>
-                                <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                                <v-card>
-									<v-card-text style="padding: 0">
-                                        <v-data-table :items="eventsByCompetition(competition.slug)" class="elevation-0" hide-actions hide-headers>
-											<template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
-												<v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
-													<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
-														<v-layout align-start>
-															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-																<div style="background-color: red; height: 100%; width: 2px"></div>
-															</v-flex>
-															<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-																<div style="color: orange;font-size: 80%">
-																	<span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'"> - {{ props.item.time}} (heure local)</span>
-																	<span v-else style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT - {{ props.item.time}} (heure local)</span>
-																</div>
-															</v-flex>
-														</v-layout>
-														<v-layout align-center style="max-width: 100%">
-															<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-																<div style="background-color: red; height: 40px; width: 2px"></div>
-															</v-flex>
-															<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
-																<v-img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"></v-img>
-															</v-flex>
-															<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-																<span class="teamTextSize">{{ props.item.home_team.name }}</span>
-															</v-flex>
-															<v-flex sm2 xs2 class="text-xs-center">
-																<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'">
-																	<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-																		<span :key="props.item.score">
-																			{{ props.item.score }}
-																		</span>
-																	</transition>
-																</span>
-																<span v-else style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">{{ convertToLocaltime(props.item.timestamp) }}</span>
-															</v-flex>
-															<v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-																<span class="teamTextSize">{{ props.item.visitor_team.name }}</span>
-															</v-flex>
-															<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-right: 15px">
-																<img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
-															</v-flex>
-														</v-layout>
-													</v-flex>
-												</v-layout>
-                                            </template>
-                                        </v-data-table>
-                                    </v-card-text>
-                                </v-card>
-                            </v-expansion-panel-content>
-                        </v-expansion-panel>
-                    </v-expansion-panel-content>
-                </v-expansion-panel>
-            </v-card-text>
-        </v-container>
+                    </a>
+                    </v-flex>
+                    <v-flex grow>
+                        <v-layout row>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                                <div style="text-align: center" class="levelHeader">Niv.1</div>
+                                <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; color: white; border-radius: 5px">3 / 10</v-progress-linear>
+                            </v-flex>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                                <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
+                                <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
+                                <a href="plus.html" class="aPlusYellow">
+                                <span class="plusYellow">+</span>
+                                </a>
+                            </v-flex>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                                <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
+                                <div class="dollarFan">1234 $fans</div>
+                                <a href="plus.html" class="aPlusGreen">
+                                <span class="plusGreen">+</span>
+                                </a>
+                            </v-flex>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
+                                <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
+                                <div class="token">12 tokens</div>
+                                <a href="plus.html" class="aPlusOrangered">
+                                <span class="plusOrangered">+</span>
+                                </a>
+                            </v-flex>
+                        </v-layout>
+                    </v-flex>
+                    <v-flex shrink>
+                    <a href="myteams.html">
+                    <div id="team">
+                        <img src="switzerland.png" class="imgTeam" />
+                    </div>
+                    </a>
+                    </v-flex>
+                </v-layout>
+            </v-container>
 
-
-        <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
-            <v-container fluid style="padding: 0; max-width: 800px">
-                <div id="dock-container">
-                    <div id="dock">
-                        <ul>
-                            <li>
-                                <a href="equipes.html"><img src="/images/menuShop.png">
-                                <span class="textMenu">Equipes</span></a>
-                            </li>
-                            <li>
-                                <a href="competitions.html"><img src="/images/menuResultat.png">
-                                <span class="textMenu">Compétition</span></a>
-                            </li>
-                            <li id="active">
-                                <nuxt-link to="/"><img src="/images/menuHome.png">
-                                <span class="textMenu">Matches</span></nuxt-link>
-                            </li>
-                            <li>
-                                <a href="joueurs.html"><img src="/images/menuSocial.png">
-                                <span class="textMenu">Joueurs</span></a>
-                            </li>
-                            <li>
-                                <a href="tifnews.html"><img src="/images/menuResultat.png">
-                                <span class="textMenu">TIF News</span></a>
-                            </li>
-                        </ul>
+            <v-container fluid id="content">
+                <div class="centreImage">
+                    <div class="content">
+                        <img src="carte.png" class="imgCarte" />
+                    </div>
+                    <div>
+                        <img src="menuShop.png" class="image1">
                     </div>
                 </div>
             </v-container>
-        </v-footer>     
+
+            <v-footer style="position: absolute; bottom: 0; width: 100%; height: auto" class="text-xs-center">
+                <v-container style="padding: 0; margin: 0">
+                    <div class="barreOrangered"></div>
+                    <div class="barreBlack"></div>
+                    <div id="dock-container">
+                        <div id="dock">
+                            <ul>
+                                <li>
+                                    <a href="equipes.html"><img src="menuShop.png">
+                                    <span class="textMenu">Inventaire</span></a>
+                                </li>
+                                <li>
+                                    <a href="shop.html"><img src="menuShop.png">
+                                    <span class="textMenu">Le Shop</span></a>
+                                </li>
+                                <li id="active">
+                                    <nuxt-link to="/"><img src="menuHome.png">
+                                    <span class="textMenu">Aujourd'hui</span></nuxt-link>
+                                </li>
+                                <li>
+                                    <a href="joueurs.html"><img src="menuSocial.png">
+                                    <span class="textMenu">Mes amis</span></a>
+                                </li>
+                                <li>
+                                    <a href="scoremode.html"><img src="menuResultat.png">
+                                    <span class="textMenu">ScoreMode</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </v-container>
+            </v-footer>
     </v-content>
 </template>
 
@@ -213,6 +113,7 @@
             title: 'Events',
             link: [
 				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }
+                { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
 			]
         },
         layout: 'layoutScoreMode',
@@ -396,410 +297,346 @@
 
 	<style scoped>
 	
-		.menuSport {
-			height: 40px;
-		}
-		
-		.menuDay {
-			height: 40px;
-		}
-		
-		.v-expansion-panel__header {
-		padding: 2px 2px;
-		min-height: 24px;
-		}
-	
-		.fade-enter-active, .fade-leave-active {
-			transition: opacity 5s;
-			background-color: #000;
-		}
-		
-		.fade-enter, .fade-leave-to {
-			opacity: 0;
-		}
-		
-		.imgLogoEquipe {
-		max-width: 30px;
-		max-height: 30px;
-		}
-		
-		.teamTextSize {
-		font-size: 1.3em;
-		}
-	
-		.black {
-		background-color: black;
-		}
-		
-		.imageLogo {
-		width: 30px;
-		height: 30px;
-		}
-		
-		/* ScoreCard */
+    body {
+    color: #FFFFFF;
+    background-color: black;
+    width: 1000px;
+    margin: auto;
+    border-left: 1px solid orangered;
+    border-right: 1px solid orangered;
+    }
+    
+    #container {
+    height: 100%;
+    width: 1000px;
+    position: absolute;
+    }
+    
+    /* header */
+    
+    #header {
+    height: 162px;
+    padding: 0;
+    margin: 0;
+    top:0px;
+    left:0px;
+    background-color: black;
+    z-index: 0;
+    border-bottom: 3px solid orangered;
+    }
+    .header {
+    position: relative;
+    }
+    .barreHeader {
+    position:absolute;
+    top: 120px;
+    width: 100%;
+    background-color: orangered;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    }
+    #avatar {
+    background-color: black;
+    border-right: 3px solid orangered;
+    border-bottom: 3px solid orangered;
+    box-shadow: 0 7px 5px black;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 0 100% 0;
+    }
+    .imgAvatar {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 100% 0;
+    }
+    #team {
+    background-color: black;
+    border-left: 3px solid orangered;
+    border-bottom: 3px solid orangered;
+    box-shadow: 0 7px 5px black;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 0 0 100%;
+    }
+    .imgTeam {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 0 100%;
+    }
+    .imgTeamSmall {
+    height: 20px;
+    margin-top: 5px;
+    }
+    .imgHeader {
+    height: 50px;
+    width: 50px;
+    color: green;
+    }
+    .dollarFan {
+    margin-top: 14px;
+    width: 100%;
+    text-align: center;
+    color: green;
+    font-weight: 700;
+    box-shadow: 0 0 10px 2px inset;
+    border-radius: 5px;
+    }
+    .token {
+    margin-top: 14px;
+    width: 100%;
+    text-align: center;
+    color: orangered;
+    font-weight: 700;
+    box-shadow: 0 0 10px 2px inset;
+    border-radius: 5px;
+    }
+    .plusOrangered {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
+    background-color: orangered;
+    }
+    .aPlusOrangered :hover {
+    color: orangered;
+    background-color: white;
+    border-bottom: 1px solid orangered;
+    border-left: 1px solid orangered;
+    }
+    .plusYellow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 10px;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2em;
+    background-color: yellow;
+    }
+    .aPlusYellow :hover {
+    color: black;
+    background-color: white;
+    border-bottom: 1px solid yellow;
+    border-left: 1px solid yellow;
+    }
+    .plusGreen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
+    background-color: green;
+    }
+    .aPlusGreen :hover {
+    color: green;
+    background-color: white;
+    border-bottom: 1px solid green;
+    border-left: 1px solid green;
+    }
+    
+    /* Material Icons */
+    
+    .material-icons.md-18 { font-size: 18px; }
+    .material-icons.md-24 { font-size: 24px; }
+    .material-icons.md-36 { font-size: 36px; }
+    .material-icons.md-48 { font-size: 48px; }
+    
+    .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
 
-		.card {
-		border-radius: 5px;
-		}
-		.card-title {
-		background-color: lightslategray;
-		}
-		.card-text {
-		background-color: whitesmoke;
-		width: auto;
-		border-radius: 8px;
-		padding: 8px;
-		}
-		.card-footer {
-		background-color: lightslategrey;
-		}
-		.fas:hover {
-		cursor: pointer;
-		color: #fff;
-		}
-			
-		#app {
-		font: normal 100%/1 "Acme", Helvetica, sans-serif;
-		}
-		
-		.userText {
-		font-size: 1.3em;
-		}
-		
-		.connectText {
-		font-size: 1.3em;
-		}
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
 
-		/* Header */
-		.headerMenu:hover {
-		cursor: pointer;
-		background-color: rgb(248,147,37);
-		}
-		.headerInfo {
-		padding: 0px; height: 20px; margin-top: 0px;
-		}
-		.activeLeft {
-		padding: 0px; height: 20px; margin-top: 0px;
-		}
-		.activeRight {
-		padding: 0px; height: 20px; margin-top: 0px;
-		}
-		
-		.backBlack {
-		background-image: url("/images/header-TIF_03.png");
-		background-position: center;
-		background-repeat: repeat-x;
-		}
-		
-		.headerLogo {
-		height: 83px;
-		}
-		
-		.levelBox {
-		background-color: #757575;
-		color: black;
-		vertical-align: middle;
-		padding: 2px;
-		border-radius: 3px;
-		width: 95%;
-		margin: auto;
-		}
-		
-		.energyBox {
-		background-color: #757575;
-		color: black;
-		vertical-align: middle;
-		padding: 2px;
-		border-radius: 3px;
-		width: 95%;
-		margin: auto;
-		}
-		
-		.dollarBox {
-		background-color: #757575;
-		color: black;
-		vertical-align: middle;
-		padding: 2px;
-		border-radius: 3px;
-		width: 95%;
-		margin: auto;
-		}
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
 
-		.tokenBox {
-		background-color: #757575;
-		color: black;
-		vertical-align: middle;
-		padding: 2px;
-		border-radius: 3px;
-		width: 95%;
-		margin: auto;
-		}
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+    }   
+    
+    /* End Material Icons */
+    
+    .levelHeader {
+    font-weight: 700;
+    font-size: 36px;  /* Preferred icon size */
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    }
+    
+    /* End Header */
+    
+    /* Content */
+    
+    #content {
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    }
+    .content {
+    height: 100%;
+    overflow: scroll;
+    padding: 0;
+    margin: 0;
+    }
+    .centerImage {
+    height: 100%;
+    }
+    .imgCarte {
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .image1 {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    height: 50px;
+    width: 50px;
+    }
+        
+    /* End Content */
 
-		/* Menu */
+    /* Footer */
 
-		#dock-container {
-		height: 80px;
-		padding: 0;
-		margin: 0;
-		bottom: 0;
-		background-color: rgb(248,147,37);
-		border: none;
-		border-top: 4px solid orangered;
-		}
+    #footer {
+    height: 91px;
+    padding: 0;
+    margin: 0;
+    }
+    
+    .barreBlack {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 8px;
+    background-color: black;
+    }
+    .barreOrangered {
+    width: 100%;
+    padding: 0;
+    margin: 0; 
+    height: 3px;
+    background-color: orangered;
+    }
+    
+    /* Menu */
 
-		#dock-container li#active img {
-		-webkit-transform: scale(1.65);
-		margin: 0 0.5em;
-		}
+    #dock-container {
+    height: 80px;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    background-color: orangered;
+    border: none;
+    border-top: 4px solid orangered;
+    }
 
-		#dock-container li {
-		width: 17%;
-		padding: 0;
-		margin: 0;
-		list-style-type: none;
-		display: inline-block;
-		position: relative;
-		padding-top: 10px;
-		}
+    #dock-container li#active img {
+    -webkit-transform: scale(1.65);
+    margin: 0 0.5em;
+    }
 
-		#dock-container ul {
-		width: 100%;
-		padding-left: 0px;
-		padding-right: 0px;
-		margin-bottom: 0;
-		}
+    #dock-container li {
+    width: 17%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    padding-top: 10px;
+    }
 
-		#dock-container li img {
-		width: 58px;
-		height: 58px;
-		-webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
-		-webkit-transition: all 0.3s;
-		-webkit-transform-origin: 50% 100%;
-		}
+    #dock-container ul {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0;
+    }
 
-		#dock-container li:hover img { 
-		-webkit-transform: scale(1.65);
-		margin: 0 0.5em;
-		}
+    #dock-container li img {
+    width: 58px;
+    height: 58px;
+    -webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
+    -webkit-transition: all 0.3s;
+    -webkit-transform-origin: 50% 100%;
+    }
 
-		#dock-container li:hover + li img, #dock-container li.prev img {
-		-webkit-transform: scale(1);
-		margin: 0 0;
-		}
+    #dock-container li:hover img { 
+    -webkit-transform: scale(1.65);
+    margin: 0 0.5em;
+    }
 
-		#dock-container li span {
-		display: none;
-		position: absolute;
-		bottom: 0px;
-		left: 0;
-		width: 100%;
-		background-color: rgba(0,0,0,0.5);
-		border-radius: 5px;
-		}
+    #dock-container li:hover + li img, #dock-container li.prev img {
+    -webkit-transform: scale(1);
+    margin: 0 0;
+    }
 
-		#dock-container li#active span {
-		display: none;
-		position: absolute;
-		bottom: 0px;
-		left: 0;
-		width: 100%;
-		background-color: rgba(0,0,0,0.5);
-		border-radius: 5px;
-		}
+    #dock-container li span {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    }
 
-		#dock-container li#active span {
-		display: block;
-		color: #fff;
-		}
+    #dock-container li#active span {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    }
 
-		#dock-container li#active .textMenu {
-		font: normal 120%/1 "Acme", Helvetica, sans-serif;
-		padding: 2px;
-		}
+    #dock-container li#active span {
+    display: block;
+    color: #fff;
+    }
 
-		#dock-container li:hover span {
-		display: block;
-		color: #fff;
-		}
+    #dock-container li#active .textMenu {
+    font: normal 120%/1 "Acme", Helvetica, sans-serif;
+    padding: 2px;
+    }
 
-		#dock-container .textMenu {
-		font: normal 120%/1 "Acme", Helvetica, sans-serif;
-		padding: 2px;
-		}
+    #dock-container li:hover span {
+    display: block;
+    color: #fff;
+    }
 
-			@media only screen and (max-width: 768px) {
-
-			#app {
-			font: normal 90%/1 "Acme", Helvetica, sans-serif;
-			}
-			
-			.pd-right10 {
-			padding-right: 10px;
-			}
-			
-			.pd-left10 {
-			padding-left: 10px;
-			}
-			
-			.imgLogoEquipe {
-			max-width: 35px;
-			}
-			
-			.teamTextSize {
-			font-size: 1.0em;
-			}
-			
-			.energyBox {
-			background-color: #757575;
-			color: black;
-			vertical-align: middle;
-			padding: 1px;
-			border-radius: 2px;
-			width: 95%;
-			margin: auto;
-			font-size: 0.8em;
-			}
-			
-			.userText {
-			font-size: 0.8em;
-			}
-			
-			.connectText {
-			font-size: 0.8em;
-			}
-
-			/* Header */
-
-			.imageLogoTif {
-			width: 60px;
-			height: 60px;
-			}
-			
-			.backBlack {
-			background-image: url("/images/header-TIF_03.png");
-			background-position: center;
-			background-repeat: repeat-x;
-			height: 60px;
-			}
-
-			.boxTif {
-			width: 60px;
-			height: 60px;
-			}
-
-			.imageLogo {
-			width: 25px;
-			height: 25px;
-			}
-			
-			.menuSport {
-				height: 30px;
-			}
-			
-			.menuDay {
-				height: 30px;
-			}
-			
-			.headerLogo {
-			height: 50px;
-			}
-			
-			.v-expansion-panel__header {
-			padding: 2px 2px;
-			min-height: 24px;
-			}
-			
-			/* Menu */
-
-			#dock-container {
-			height: 55px;
-			padding: 0;
-			margin: 0;
-			bottom: 0;
-			background-color: rgb(248,147,37);
-			border: none;
-			border-top: 4px solid darkred;
-			}
-
-			#dock-container li#active img {
-			-webkit-transform: scale(1.65);
-			margin: 0 0.5em;
-			}
-
-			#dock-container li {
-			width: 17%;
-			padding: 0;
-			margin: 0;
-			list-style-type: none;
-			display: inline-block;
-			position: relative;
-			padding-top: 3px;
-			}
-
-			#dock-container ul {
-			width: 100%;
-			padding-left: 0px;
-			padding-right: 0px;
-			margin-bottom: 0;
-			}
-
-			#dock-container li img {
-			width: 38px;
-			height: 38px;
-			-webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
-			-webkit-transition: all 0.3s;
-			-webkit-transform-origin: 50% 100%;
-			}
-
-			#dock-container li:hover img { 
-			-webkit-transform: scale(1.65);
-			margin: 0 0.5em;
-			}
-
-			#dock-container li:hover + li img, #dock-container li.prev img {
-			-webkit-transform: scale(1);
-			margin: 0 0;
-			}
-
-			#dock-container li span {
-			display: none;
-			position: absolute;
-			bottom: 0px;
-			left: 0;
-			width: 100%;
-			background-color: rgba(0,0,0,0.5);
-			border-radius: 5px;
-			}
-
-			#dock-container li#active span {
-			display: none;
-			position: absolute;
-			bottom: 0px;
-			left: 0;
-			width: 100%;
-			background-color: rgba(0,0,0,0.5);
-			border-radius: 5px;
-			}
-
-			#dock-container li#active span {
-			display: block;
-			color: #fff;
-			}
-
-			#dock-container li#active .textMenu {
-			font: normal 90%/1 "Acme", Helvetica, sans-serif;
-			padding: 2px;
-			}
-
-			#dock-container li:hover span {
-			display: block;
-			color: #fff;
-			}
-
-			#dock-container .textMenu {
-			font: normal 90%/1 "Acme", Helvetica, sans-serif;
-			padding: 2px;
-			}
-
-		}
+    #dock-container .textMenu {
+    font: normal 120%/1 "Acme", Helvetica, sans-serif;
+    padding: 2px;
+    }
+    
+    /* End Menu */
+    
+    /* End Footer */
 	</style>
