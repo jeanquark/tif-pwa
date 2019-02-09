@@ -1,75 +1,64 @@
 <template>
-    <v-content id="app">
-        <v-container fluid style="padding: 0; max-width: 1000px; color: white; border-bottom: 4px solid rgb(248,147,37)">
-            <v-layout row wrap>
-                <v-flex d-flex xs2 justify-start class="text-xs-left backBlack">
-                    <v-card nuxt to="/scoremode" flat tile class="black boxTif backBlack" style="max-height: 120px; max-width: 120px">
-                        <img src="/images/header-TIF_01.jpg" class="imageLogoTif" />
-                    </v-card>
+    <v-content text-xs-center id="app" class="container">
+        <v-container fluid id="header" class="header">
+            <v-layout row>
+                <v-flex class="barreHeader">
+                    <v-layout row>
+                        <v-flex xs6 sm6 md6>
+                            <span style="margin-left: 100px; float: left; margin-top: 4px;"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
+                        </v-flex>
+                        <v-flex xs6 sm6 md6>
+                            <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Fan de l'équipe de suisse de football (1.34 PF)</span>
+                        </v-flex>
                 </v-flex>
-                <v-flex d-flex xs8 class="backBlack">
-                    <v-layout row wrap>
-                        <v-flex d-flex>
-                            <v-layout row wrap class="headerMenus">
-                                <v-flex d-flex xs12>
-                                    <v-layout row wrap class="headerMenu">
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 2px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <span class="chiffres">1</span><br />
-												<span class="activity">sport</span>
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <span class="chiffres">6</span><br />
-												<span class="activity">pays</span>
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-right: 1px solid rgb(248,147,37); border-left: 1px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <span class="chiffres">130</span><br />
-												<span class="activity">équipes</span>
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs3 justify-center align-center class="text-xs-center elevation-0 headerMenu" style="border-left: 1px solid rgb(248,147,37); border-right: 2px solid rgb(248,147,37)">
-                                            <div class="headerLogo">
-                                                <span class="chiffres">769</span><br />
-												<span class="activity">fans</span>
-                                            </div>
-                                        </v-flex>
-                                    </v-layout>
-                                </v-flex>
-                                <v-flex d-flex xs12>
-                                    <v-layout row wrap :class="classObject">
-                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-left">
-                                            <div class="userText" v-if="!loadedUser">
-                                                Utilisateur Invité
-                                            </div>
-                                            <div class="userText" v-else>
-                                                Bienvenue
-                                            </div>
-                                        </v-flex>
-                                        <v-flex d-flex xs6 justify-center align-center class="text-xs-right">
-                                            <div class="connectText" v-if="loadedUser">
-                                                {{ loadedUser.email }}
-                                            </div>
-                                            <div class="connectText" v-else>
-                                                Se connecter / S'inscrire
-                                            </div>
-                                        </v-flex>
-                                    </v-layout>
-                                </v-flex>
-                            </v-layout>
+            </v-layout>
+            <v-layout row>
+                <nuxt-link to="monavatar">
+                 <v-flex shrink>
+                    <div id="avatar">
+                        <img src="/images/avatar.png" class="imgAvatar" />
+                    </div>
+                </nuxt-link>
+                </v-flex>
+                <v-flex grow>
+                    <v-layout row>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <div style="text-align: center" class="levelHeader">Niv.1</div>
+                            <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; color: white; border-radius: 5px">3 / 10</v-progress-linear>
+                        </v-flex>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
+                            <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
+                            <nuxt-link to="/plus" class="aPlusYellow">
+                            <span class="plusYellow">+</span>
+                            </nuxt-link>
+                        </v-flex>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
+                            <div class="dollarFan">1234 $fans</div>
+                            <nuxt-link to="/plus" class="aPlusGreen">
+                            <span class="plusGreen">+</span>
+                            </nuxt-link>
+                        </v-flex>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
+                            <div class="token">12 tokens</div>
+                            <nuxt-link to="/plus" class="aPlusOrangered">
+                            <span class="plusOrangered">+</span>
+                            </nuxt-link>
                         </v-flex>
                     </v-layout>
                 </v-flex>
-                <v-flex d-flex xs2 justify-end class="text-xs-right backBlack">
-                    <v-card nuxt to="/gamemode" flat tile class="black boxTif backBlack" style="max-height: 120px; max-width: 120px">
-                        <img src="/images/header-TIF_05.jpg" class="imageLogoTif"/>
-                    </v-card>
+                <v-flex shrink>
+                <nuxt-link to="/myteams">
+                <div id="team">
+                    <img src="/images/switzerland.png" class="imgTeam" />
+                </div>
+                </nuxt-link>
                 </v-flex>
             </v-layout>
         </v-container>
+
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
@@ -245,9 +234,10 @@
             </v-card-text>
         </v-container>
 
-
-        <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
-            <v-container fluid style="padding: 0; max-width: 1000px">
+        <v-footer style="position: absolute; bottom: 0; width: 100%; height: auto" class="text-xs-center">
+            <v-container style="padding: 0; margin: 0">
+                <div class="barreOrangered"></div>
+                <div class="barreBlack"></div>
                 <div id="dock-container">
                     <div id="dock">
                         <ul>
@@ -275,7 +265,8 @@
                     </div>
                 </div>
             </v-container>
-        </v-footer>     
+        </v-footer>
+
     </v-content>
 </template>
 
@@ -482,7 +473,228 @@
 </script>
 
 	<style scoped>
-	
+
+    .container {
+    height: 100%;
+    width: 1000px;
+    position: absolute;
+    color: #FFFFFF;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid orangered;
+    border-right: 1px solid orangered;
+    }
+    
+    /* header */
+    
+    #header {
+    height: 162px;
+    padding: 0;
+    margin: 0;
+    top:0px;
+    left:0px;
+    background-color: black;
+    z-index: 0;
+    border-bottom: 3px solid orangered;
+    }
+    .header {
+    position: relative;
+    }
+    .barreHeader {
+    position:absolute;
+    top: 120px;
+    width: 100%;
+    background-color: orangered;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    }
+    #avatar {
+    background-color: black;
+    border-right: 3px solid orangered;
+    border-bottom: 3px solid orangered;
+    box-shadow: 0 7px 5px black;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 0 100% 0;
+    }
+    .imgAvatar {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 100% 0;
+    }
+    #team {
+    background-color: black;
+    border-left: 3px solid orangered;
+    border-bottom: 3px solid orangered;
+    box-shadow: 0 7px 5px black;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 0 0 100%;
+    }
+    .imgTeam {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 0 100%;
+    }
+    .imgTeamSmall {
+    height: 20px;
+    margin-top: 5px;
+    }
+    .imgHeader {
+    height: 50px;
+    width: 50px;
+    color: green;
+    }
+    .dollarFan {
+    margin-top: 14px;
+    width: 100%;
+    text-align: center;
+    color: green;
+    font-weight: 700;
+    box-shadow: 0 0 10px 2px inset;
+    border-radius: 5px;
+    }
+    .token {
+    margin-top: 14px;
+    width: 100%;
+    text-align: center;
+    color: orangered;
+    font-weight: 700;
+    box-shadow: 0 0 10px 2px inset;
+    border-radius: 5px;
+    }
+    .plusOrangered {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
+    background-color: orangered;
+    }
+    .aPlusOrangered :hover {
+    color: orangered;
+    background-color: white;
+    border-bottom: 1px solid orangered;
+    border-left: 1px solid orangered;
+    }
+    .plusYellow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 10px;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2em;
+    background-color: yellow;
+    }
+    .aPlusYellow :hover {
+    color: black;
+    background-color: white;
+    border-bottom: 1px solid yellow;
+    border-left: 1px solid yellow;
+    }
+    .plusGreen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
+    background-color: green;
+    }
+    .aPlusGreen :hover {
+    color: green;
+    background-color: white;
+    border-bottom: 1px solid green;
+    border-left: 1px solid green;
+    }
+    
+    /* Material Icons */
+    
+    .material-icons.md-18 { font-size: 18px; }
+    .material-icons.md-24 { font-size: 24px; }
+    .material-icons.md-36 { font-size: 36px; }
+    .material-icons.md-48 { font-size: 48px; }
+    
+    .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+    }   
+    
+    /* End Material Icons */
+    
+    .levelHeader {
+    font-weight: 700;
+    font-size: 36px;  /* Preferred icon size */
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    }
+    
+    /* End Header */
+    
+    /* Content */
+    
+    #content {
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    }
+    .content {
+    height: 100%;
+    overflow: scroll;
+    padding: 0;
+    margin: 0;
+    }
+    .centerImage {
+    height: 100%;
+    }
+    .imgCarte {
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .image1 {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    height: 50px;
+    width: 50px;
+    }
+        
+    /* End Content */
+    	
 		.menuSport {
 			height: 40px;
 		}
