@@ -1,11 +1,11 @@
 <template>
-    <v-content id="app" class="container">
+    <v-content text-xs-center id="app" class="container">
         <v-container fluid id="header" class="header">
             <v-layout row>
                 <v-flex class="barreHeader">
                     <v-layout row>
                         <v-flex xs6 sm6 md6>
-                            <span style="margin-left: 100px; float: left; margin-top: 4px;"><img src="images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
+                            <span style="margin-left: 100px; float: left; margin-top: 4px;"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
                         </v-flex>
                         <v-flex xs6 sm6 md6>
                             <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Fan de l'équipe de suisse de football (1.34 PF)</span>
@@ -13,12 +13,12 @@
                 </v-flex>
             </v-layout>
             <v-layout row>
-                <a href="images/monavatar.html">
+                <nuxt-link to="monavatar">
                  <v-flex shrink>
                     <div id="avatar">
-                        <img src="images/avatar.png" class="imgAvatar" />
+                        <img src="/images/avatar.png" class="imgAvatar" />
                     </div>
-                </a>
+                </nuxt-link>
                 </v-flex>
                 <v-flex grow>
                     <v-layout row>
@@ -29,32 +29,32 @@
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
                             <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
                             <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
-                            <a href="plus.html" class="aPlusYellow">
+                            <nuxt-link to="/plus" class="aPlusYellow">
                             <span class="plusYellow">+</span>
-                            </a>
+                            </nuxt-link>
                         </v-flex>
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
                             <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
                             <div class="dollarFan">1234 $fans</div>
-                            <a href="plus.html" class="aPlusGreen">
+                            <nuxt-link to="/plus" class="aPlusGreen">
                             <span class="plusGreen">+</span>
-                            </a>
+                            </nuxt-link>
                         </v-flex>
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
                             <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
                             <div class="token">12 tokens</div>
-                            <a href="plus.html" class="aPlusOrangered">
+                            <nuxt-link to="/plus" class="aPlusOrangered">
                             <span class="plusOrangered">+</span>
-                            </a>
+                            </nuxt-link>
                         </v-flex>
                     </v-layout>
                 </v-flex>
                 <v-flex shrink>
-                <a href="myteams.html">
+                <nuxt-link to="/myteams">
                 <div id="team">
-                    <img src="switzerland.png" class="imgTeam" />
+                    <img src="/images/switzerland.png" class="imgTeam" />
                 </div>
-                </a>
+                </nuxt-link>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -78,24 +78,24 @@
                     <div id="dock">
                         <ul>
                             <li>
-                                <a href="equipes.html"><img src="images/menuShop.png">
-                                <span class="textMenu">Inventaire</span></a>
+                                <nuxt-link to="/inventaire"><img src="images/menuShop.png">
+                                <span class="textMenu">Inventaire</span></nuxt-link>
                             </li>
                             <li>
-                                <a href="shop.html"><img src="images/menuShop.png">
-                                <span class="textMenu">Le Shop</span></a>
+                                <nuxt-link to="/shop"><img src="images/menuShop.png">
+                                <span class="textMenu">Le Shop</span></nuxt-link>
                             </li>
                             <li id="active">
                                 <nuxt-link to="/"><img src="images/menuHome.png">
                                 <span class="textMenu">Aujourd'hui</span></nuxt-link>
                             </li>
                             <li>
-                                <a href="joueurs.html"><img src="images/menuSocial.png">
-                                <span class="textMenu">Mes amis</span></a>
+                                <nuxt-link to="/amis"><img src="images/menuSocial.png">
+                                <span class="textMenu">Mes amis</span></nuxt-link>
                             </li>
                             <li>
-                                <a href="scoremode.html"><img src="images/menuResultat.png">
-                                <span class="textMenu">ScoreMode</span></a>
+                                <nuxt-link to="/scoremode"><img src="images/menuResultat.png">
+                                <span class="textMenu">ScoreMode</span></nuxt-link>
                             </li>
                         </ul>
                     </div>
