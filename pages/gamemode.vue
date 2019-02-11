@@ -60,8 +60,8 @@
         </v-container>
 
 		<v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
-            <div class="centreImage">
-                <div class="cadreScore">
+            <div class="centreImage" style="position: relative">
+                <div class="cadreScore" style="position: absolute">
                     Liverpool 2 à 3 Arsenal
                 </div>
                 <div class="content">
