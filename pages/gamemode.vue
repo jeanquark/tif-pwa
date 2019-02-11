@@ -494,9 +494,7 @@
     overflow: scroll;
     padding: 0;
     margin: 0;
-    }
-    .centerImage {
-    height: 100%;
+	height: 655px;
     }
     .imgCarte {
     height: 100%;
