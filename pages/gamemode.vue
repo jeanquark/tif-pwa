@@ -5,10 +5,10 @@
                 <v-flex class="barreHeader">
                     <v-layout row>
                         <v-flex xs6 sm6 md6>
-                            <span style="margin-left: 100px; float: left; margin-top: 4px;"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
+                            <span style="margin-left: 100px; float: left; margin-top: 9px;"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
                         </v-flex>
                         <v-flex xs6 sm6 md6>
-                            <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Fan de l'équipe de suisse de football (1.34 PF)</span>
+                            <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 9px">Fan de l'équipe de suisse de football (1.34 PF)</span>
                         </v-flex>
                 </v-flex>
             </v-layout>
@@ -22,7 +22,7 @@
                 </nuxt-link>
                 <v-flex grow>
                     <v-layout row>
-                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 20px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
                             <div style="text-align: center" class="levelHeader">Niv.1</div>
                             <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; color: white; border-radius: 5px; margin-top: 25px">3 / 10</v-progress-linear>
                         </v-flex>
@@ -59,7 +59,7 @@
             </v-layout>
         </v-container>
 
-        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 90px">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
             <div class="centreImage">
                 <div class="content">
                     <img src="images/carte.png" class="imgCarte" />
@@ -70,7 +70,7 @@
             </div>
         </v-container>
 
-        <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
+        <v-footer style="background-color: black; position: sticky; bottom: 0; width: 100%" height="auto" class="text-xs-center">
             <v-container fluid style="padding: 0; max-width: 1000px">
 				<div class="barreOrangered"></div>
 				<div class="barreBlack"></div>
@@ -315,8 +315,9 @@
     top:0px;
     left:0px;
     background-color: black;
-    z-index: 0;
+    z-index: 1;
     border-bottom: 3px solid orangered;
+	position: sticky;
     }
     .header {
     position: relative;

@@ -67,18 +67,18 @@
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white; style: 30px">
             <v-layout>
                 <v-flex d-flex x2 align-center text-xs-left style="padding-left: 20px;" @click="eventsByDate('substractOne')">
-                    <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" /> Précèdent
+                   << Précèdent
                 </v-flex>
                 <v-flex d-flex x8 justify-center align-center class="text-xs-center menuDay">
                     {{ date | moment('dddd, MMMM Do YYYY') }}
                 </v-flex>
                 <v-flex d-flex x2 align-center text-xs-right style="padding-right: 20px;" @click="eventsByDate('addOne')">
-                    Suivant <fa :icon="['fas', 'angle-double-right']" size="1x" class="icon" style="text-shadow: 0 0 15px #3b5998;"/>
+                    Suivant >>
                 </v-flex>
             </v-layout>             
         </v-container>
 
-        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 90px">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
             <v-card-text class="card-text">
                 <v-expansion-panel class="elevation-0" :value="0" v-if="loadedUser">
                     <v-expansion-panel-content class="orange">
@@ -224,7 +224,7 @@
             </v-card-text>
         </v-container>
 
-        <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
+        <v-footer style="background-color: black; position: sticky; bottom: 0; width: 100%" height="auto" class="text-xs-center">
             <v-container fluid style="padding: 0; max-width: 1000px">
 				<div class="barreOrangered"></div>
 				<div class="barreBlack"></div>
@@ -482,8 +482,9 @@
     top:0px;
     left:0px;
     background-color: black;
-    z-index: 0;
+    z-index: 1;
     border-bottom: 3px solid orangered;
+	position: sticky;
     }
     .header {
     position: relative;
