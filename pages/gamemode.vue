@@ -61,7 +61,7 @@
 
 		<v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
             <div class="centreImage" style="position: relative">
-                <div class="cadreScore" style="position: absolute; top: 30px; left: 100px">
+                <div class="cadreScore" style="position: absolute; top: 20px; left: 100px">
                     <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
                         <v-layout align-start>
                             <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
@@ -542,7 +542,7 @@
     }
     .cadreScore {
     border: 2px solid orangered;
-    padding: 15px;
+    padding: 5px;
     width: 800px;
     background-color: whitesmoke;
     opacity: 0.8;
