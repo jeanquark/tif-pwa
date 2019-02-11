@@ -1,6 +1,6 @@
 <template>
-    <v-content text-xs-center id="app" class="container">
-        <v-container fluid id="header" class="header">
+    <v-content id="app">
+        <v-container fluid id="header" class="header" style="height: 162px">
             <v-layout row>
                 <v-flex class="barreHeader">
                     <v-layout row>
@@ -59,14 +59,14 @@
             </v-layout>
         </v-container>
 
-        <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; style: 30px">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
                     Soccer
                 </v-flex>
             </v-layout>             
         </v-container>
-        <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white; style: 30px">
             <v-layout>
                 <v-flex d-flex x1 justify-end align-center style="padding-left: 20px;" @click="eventsByDate('substractOne')">
                     <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" />
@@ -86,9 +86,7 @@
             </v-layout>             
         </v-container>
 
-
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 80px">
-		
             <v-card-text class="card-text">
                 <v-expansion-panel class="elevation-0" :value="0" v-if="loadedUser">
                     <v-expansion-panel-content class="orange">
@@ -477,7 +475,6 @@
     .container {
     height: 100%;
     width: 1000px;
-    position: absolute;
     color: #FFFFFF;
     background-color: black;
     margin-left: auto;
