@@ -13,36 +13,33 @@
                 </v-flex>
             </v-layout>
             <v-layout row>
-                <nuxt-link to="avatar">
                  <v-flex shrink>
-					<nuxt-link to="/">
                     <div id="avatar">
-						<img src="avatar.png" class="imgAvatar" />
+                        <img src="/images/avatar.png" class="imgAvatar" />
                     </div>
-					</nuxt-link>
-                </nuxt-link>
                 </v-flex>
+                </nuxt-link>
                 <v-flex grow>
                     <v-layout row>
-                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
 							<div class="headerLogo">
 								<span class="chiffres">1</span><br />
 								<span class="activity">sport</span>
 							</div>
                         </v-flex>
-                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
 							<div class="headerLogo">
 								<span class="chiffres">6</span><br />
 								<span class="activity">pays</span>
 							</div>
                         </v-flex>
-                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
 							<div class="headerLogo">
 								<span class="chiffres">130</span><br />
 								<span class="activity">équipes</span>
 							</div>
                         </v-flex>
-                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
 							<div class="headerLogo">
 								<span class="chiffres">769</span><br />
 								<span class="activity">fans</span>
@@ -69,13 +66,13 @@
         </v-container>
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white; style: 30px">
             <v-layout>
-                <v-flex d-flex x3 justify-end align-center style="padding-left: 20px;" @click="eventsByDate('substractOne')">
+                <v-flex d-flex x2 align-center text-xs-left style="padding-left: 20px;" @click="eventsByDate('substractOne')">
                     <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" /> Précèdent
                 </v-flex>
-                <v-flex d-flex x6 justify-center align-center class="text-xs-center menuDay">
+                <v-flex d-flex x8 justify-center align-center class="text-xs-center menuDay">
                     {{ date | moment('dddd, MMMM Do YYYY') }}
                 </v-flex>
-                <v-flex d-flex x3 justify-end align-center style="padding-right: 20px;" @click="eventsByDate('addOne')">
+                <v-flex d-flex x2 align-center text-xs-right style="padding-right: 20px;" @click="eventsByDate('addOne')">
                     Suivant <fa :icon="['fas', 'angle-double-right']" size="1x" class="icon" style="text-shadow: 0 0 15px #3b5998;"/>
                 </v-flex>
             </v-layout>             
@@ -757,7 +754,7 @@
 	
 	.chiffres {
 	font-size: 2.5em;
-	color: orange;
+	color: orangered;
 	font-width: 700;
 	}
 	

@@ -1,6 +1,6 @@
 <template>
-    <v-content text-xs-center id="app" class="container">
-        <v-container fluid id="header" class="header">
+    <v-content id="app">
+        <v-container fluid id="header" class="header" style="height: 162px">
             <v-layout row>
                 <v-flex class="barreHeader">
                     <v-layout row>
@@ -18,8 +18,8 @@
                     <div id="avatar">
                         <img src="/images/avatar.png" class="imgAvatar" />
                     </div>
-                </nuxt-link>
                 </v-flex>
+                </nuxt-link>
                 <v-flex grow>
                     <v-layout row>
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
@@ -59,7 +59,7 @@
             </v-layout>
         </v-container>
 
-        <v-container fluid id="content">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 90px">
             <div class="centreImage">
                 <div class="content">
                     <img src="images/carte.png" class="imgCarte" />
@@ -70,38 +70,38 @@
             </div>
         </v-container>
 
-        <v-footer style="position: absolute; bottom: 0; width: 100%; height: auto" class="text-xs-center">
-            <v-container style="padding: 0; margin: 0">
-                <div class="barreOrangered"></div>
-                <div class="barreBlack"></div>
+        <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
+            <v-container fluid style="padding: 0; max-width: 1000px">
+				<div class="barreOrangered"></div>
+				<div class="barreBlack"></div>
                 <div id="dock-container">
                     <div id="dock">
                         <ul>
                             <li>
-                                <nuxt-link to="/inventaire"><img src="images/menuShop.png">
-                                <span class="textMenu">Inventaire</span></nuxt-link>
+                                <nuxt-link to="/equipes"><img src="/images/menuShop.png">
+                                <span class="textMenu">Equipes</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/shop"><img src="images/menuShop.png">
-                                <span class="textMenu">Le Shop</span></nuxt-link>
+                                <nuxt-link to="/competitions"><img src="/images/menuResultat.png">
+                                <span class="textMenu">Compétitions</span></nuxt-link>
                             </li>
                             <li id="active">
-                                <nuxt-link to="/"><img src="images/menuHome.png">
-                                <span class="textMenu">Aujourd'hui</span></nuxt-link>
+                                <nuxt-link to="/scoremode"><img src="/images/menuHome.png">
+                                <span class="textMenu">Matches du jour</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/amis"><img src="images/menuSocial.png">
-                                <span class="textMenu">Mes amis</span></nuxt-link>
+                                <nuxt-link to="/joueurs"><img src="/images/menuSocial.png">
+                                <span class="textMenu">Joueurs</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/scoremode"><img src="images/menuResultat.png">
-                                <span class="textMenu">ScoreMode</span></nuxt-link>
+                                <nuxt-link to="/tifnews"><img src="/images/menuResultat.png">
+                                <span class="textMenu">TIF News</span></nuxt-link>
                             </li>
                         </ul>
                     </div>
                 </div>
             </v-container>
-        </v-footer>
+        </v-footer>     
     </v-content>
 </template>
 
@@ -295,17 +295,16 @@
 </script>
 
 	<style scoped>
-	    
+
     .container {
-    height: 100%;
     width: 1000px;
-    position: absolute;
     color: #FFFFFF;
     background-color: black;
     margin-left: auto;
     margin-right: auto;
     border-left: 1px solid orangered;
     border-right: 1px solid orangered;
+	font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
     
     /* header */
@@ -313,7 +312,6 @@
     #header {
     height: 162px;
     padding: 0;
-    margin: 0;
     top:0px;
     left:0px;
     background-color: black;
@@ -517,122 +515,429 @@
         
     /* End Content */
 
-    /* Footer */
+	.menuSport {
+		height: 40px;
+	}
+	
+	.menuDay {
+		height: 40px;
+	}
+	
+	.v-expansion-panel__header {
+	padding: 2px 2px;
+	min-height: 24px;
+	}
 
-    #footer {
-    height: 91px;
-    padding: 0;
-    margin: 0;
-    }
-    
-    .barreBlack {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 8px;
-    background-color: black;
-    }
-    .barreOrangered {
-    width: 100%;
-    padding: 0;
-    margin: 0; 
-    height: 3px;
-    background-color: orangered;
-    }
-    
-    /* Menu */
+	.fade-enter-active, .fade-leave-active {
+		transition: opacity 5s;
+		background-color: #000;
+	}
+	
+	.fade-enter, .fade-leave-to {
+		opacity: 0;
+	}
+	
+	.imgLogoEquipe {
+	max-width: 30px;
+	max-height: 30px;
+	}
+	
+	.teamTextSize {
+	font-size: 1.3em;
+	}
 
-    #dock-container {
-    height: 80px;
-    padding: 0;
-    margin: 0;
-    bottom: 0;
-    background-color: orangered;
-    border: none;
-    border-top: 4px solid orangered;
-    }
+	.black {
+	background-color: black;
+	}
+	
+	.imageLogo {
+	width: 30px;
+	height: 30px;
+	}
+	
+	/* ScoreCard */
 
-    #dock-container li#active img {
-    -webkit-transform: scale(1.65);
-    margin: 0 0.5em;
-    }
+	.card {
+	border-radius: 5px;
+	}
+	.card-title {
+	background-color: lightslategray;
+	}
+	.card-text {
+	background-color: whitesmoke;
+	width: auto;
+	border-radius: 8px;
+	padding: 8px;
+	}
+	.card-footer {
+	background-color: lightslategrey;
+	}
+	.fas:hover {
+	cursor: pointer;
+	color: #fff;
+	}
+	
+	.userText {
+	font-size: 1.3em;
+	}
+	
+	.connectText {
+	font-size: 1.3em;
+	}
+	
+	.chiffres {
+	font-size: 2.5em;
+	color: orangered;
+	font-width: 700;
+	}
+	
+	.activity {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	}
+	
+	.levelBox {
+	background-color: #757575;
+	color: black;
+	vertical-align: middle;
+	padding: 2px;
+	border-radius: 3px;
+	width: 95%;
+	margin: auto;
+	}
+	
+	.energyBox {
+	background-color: #757575;
+	color: black;
+	vertical-align: middle;
+	padding: 2px;
+	border-radius: 3px;
+	width: 95%;
+	margin: auto;
+	}
+	
+	.dollarBox {
+	background-color: #757575;
+	color: black;
+	vertical-align: middle;
+	padding: 2px;
+	border-radius: 3px;
+	width: 95%;
+	margin: auto;
+	}
 
-    #dock-container li {
-    width: 17%;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    display: inline-block;
-    position: relative;
-    padding-top: 10px;
-    }
+	.tokenBox {
+	background-color: #757575;
+	color: black;
+	vertical-align: middle;
+	padding: 2px;
+	border-radius: 3px;
+	width: 95%;
+	margin: auto;
+	}
 
-    #dock-container ul {
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-bottom: 0;
-    }
+	/* Menu */
+	
+	.barreBlack {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 8px;
+	background-color: black;
+	}
+	.barreOrangered {
+	width: 100%;
+	padding: 0;
+	margin: 0; 
+	height: 3px;
+	background-color: orangered;
+	}
 
-    #dock-container li img {
-    width: 58px;
-    height: 58px;
-    -webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
-    -webkit-transition: all 0.3s;
-    -webkit-transform-origin: 50% 100%;
-    }
 
-    #dock-container li:hover img { 
-    -webkit-transform: scale(1.65);
-    margin: 0 0.5em;
-    }
+	#dock-container {
+	height: 80px;
+	padding: 0;
+	margin: 0;
+	bottom: 0;
+	background-color: orangered;
+	border: none;
+	border-top: 4px solid orangered;
+	}
 
-    #dock-container li:hover + li img, #dock-container li.prev img {
-    -webkit-transform: scale(1);
-    margin: 0 0;
-    }
+	#dock-container li#active img {
+	-webkit-transform: scale(1.65);
+	margin: 0 0.5em;
+	}
 
-    #dock-container li span {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 5px;
-    }
+	#dock-container li {
+	width: 17%;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	display: inline-block;
+	position: relative;
+	padding-top: 10px;
+	}
 
-    #dock-container li#active span {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 5px;
-    }
+	#dock-container ul {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-bottom: 0;
+	}
 
-    #dock-container li#active span {
-    display: block;
-    color: #fff;
-    }
+	#dock-container li img {
+	width: 58px;
+	height: 58px;
+	-webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
+	-webkit-transition: all 0.3s;
+	-webkit-transform-origin: 50% 100%;
+	}
 
-    #dock-container li#active .textMenu {
-    font: normal 120%/1 "Acme", Helvetica, sans-serif;
-    padding: 2px;
-    }
+	#dock-container li:hover img { 
+	-webkit-transform: scale(1.65);
+	margin: 0 0.5em;
+	}
 
-    #dock-container li:hover span {
-    display: block;
-    color: #fff;
-    }
+	#dock-container li:hover + li img, #dock-container li.prev img {
+	-webkit-transform: scale(1);
+	margin: 0 0;
+	}
 
-    #dock-container .textMenu {
-    font: normal 120%/1 "Acme", Helvetica, sans-serif;
-    padding: 2px;
-    }
-    
-    /* End Menu */
-    
-    /* End Footer */
-	</style>
+	#dock-container li span {
+	display: none;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 5px;
+	}
+
+	#dock-container li#active span {
+	display: none;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 5px;
+	}
+
+	#dock-container li#active span {
+	display: block;
+	color: #fff;
+	}
+
+	#dock-container li#active .textMenu {
+	font: normal 120%/1 "Acme", Helvetica, sans-serif;
+	padding: 2px;
+	}
+
+	#dock-container li:hover span {
+	display: block;
+	color: #fff;
+	}
+
+	#dock-container .textMenu {
+	font: normal 120%/1 "Acme", Helvetica, sans-serif;
+	padding: 2px;
+	}
+	
+	/* End Menu */
+
+		@media only screen and (max-width: 768px) {
+
+		#app {
+		font: normal 90%/1 "Acme", Helvetica, sans-serif;
+		}
+		
+		.pd-right10 {
+		padding-right: 10px;
+		}
+		
+		.pd-left10 {
+		padding-left: 10px;
+		}
+		
+		.imgLogoEquipe {
+		max-width: 35px;
+		}
+		
+		.teamTextSize {
+		font-size: 1.0em;
+		}
+		
+		.headerMenus {
+		padding: 0; 
+		margin: 0; 
+		height: 46px;
+		}
+		
+		.energyBox {
+		background-color: #757575;
+		color: black;
+		vertical-align: middle;
+		padding: 1px;
+		border-radius: 2px;
+		width: 95%;
+		margin: auto;
+		font-size: 0.8em;
+		}
+		
+		.userText {
+		font-size: 0.8em;
+		}
+		
+		.connectText {
+		font-size: 0.8em;
+		}
+
+		/* Header */
+
+		.imageLogoTif {
+		width: 60px;
+		height: 60px;
+		}
+		
+		.backBlack {
+		background-image: url("/images/header-TIF_03.png");
+		background-position: center;
+		background-repeat: repeat-x;
+		background-size: contain;
+		height: 60px;
+		}
+
+		.boxTif {
+		width: 60px;
+		height: 60px;
+		}
+
+		.imageLogo {
+		width: 25px;
+		height: 25px;
+		}
+		
+		.menuSport {
+			height: 30px;
+		}
+		
+		.menuDay {
+			height: 30px;
+		}
+		
+		.headerLogo {
+		height: auto;
+		}
+		
+		.headerMenu {
+		height: 46px;
+		}
+		
+		.v-expansion-panel__header {
+		padding: 2px 2px;
+		min-height: 24px;
+		}
+		
+		.chiffres {
+		font-size: 1.2em;
+		}
+		
+		.activity {
+		font-size: 0.8em;
+		}
+		
+		/* Menu */
+
+		#dock-container {
+		height: 55px;
+		padding: 0;
+		margin: 0;
+		bottom: 0;
+		background-color: rgb(248,147,37);
+		border: none;
+		border-top: 4px solid darkred;
+		}
+
+		#dock-container li#active img {
+		-webkit-transform: scale(1.65);
+		margin: 0 0.5em;
+		}
+
+		#dock-container li {
+		width: 17%;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		display: inline-block;
+		position: relative;
+		padding-top: 3px;
+		}
+
+		#dock-container ul {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-bottom: 0;
+		}
+
+		#dock-container li img {
+		width: 38px;
+		height: 38px;
+		-webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
+		-webkit-transition: all 0.3s;
+		-webkit-transform-origin: 50% 100%;
+		}
+
+		#dock-container li:hover img { 
+		-webkit-transform: scale(1.65);
+		margin: 0 0.5em;
+		}
+
+		#dock-container li:hover + li img, #dock-container li.prev img {
+		-webkit-transform: scale(1);
+		margin: 0 0;
+		}
+
+		#dock-container li span {
+		display: none;
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+		width: 100%;
+		background-color: rgba(0,0,0,0.5);
+		border-radius: 5px;
+		}
+
+		#dock-container li#active span {
+		display: none;
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+		width: 100%;
+		background-color: rgba(0,0,0,0.5);
+		border-radius: 5px;
+		}
+
+		#dock-container li#active span {
+		display: block;
+		color: #fff;
+		}
+
+		#dock-container li#active .textMenu {
+		font: normal 90%/1 "Acme", Helvetica, sans-serif;
+		padding: 2px;
+		}
+
+		#dock-container li:hover span {
+		display: block;
+		color: #fff;
+		}
+
+		#dock-container .textMenu {
+		font: normal 90%/1 "Acme", Helvetica, sans-serif;
+		padding: 2px;
+		}
+
+	}
+</style>
