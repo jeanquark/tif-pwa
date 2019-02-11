@@ -16,8 +16,8 @@
                 <nuxt-link to="avatar">
                  <v-flex shrink>
 					<nuxt-link to="/">
-                    <div id="tifLogo">
-                       ThisIsFan.com
+                    <div id="avatar">
+						<img src="avatar.png" class="imgAvatar" />
                     </div>
 					</nuxt-link>
                 </nuxt-link>
@@ -813,6 +813,22 @@
 	}
 
 	/* Menu */
+	
+	.barreBlack {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 8px;
+	background-color: black;
+	}
+	.barreOrangered {
+	width: 100%;
+	padding: 0;
+	margin: 0; 
+	height: 3px;
+	background-color: orangered;
+	}
+
 
 	#dock-container {
 	height: 80px;
