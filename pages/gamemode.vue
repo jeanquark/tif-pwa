@@ -62,7 +62,10 @@
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
             <div class="centreImage">
                 <div class="content">
-                    <img src="images/carte.png" class="imgCarte" />
+                    <img src="images/carte.png" class="imgCarte" usemap="carte" alt="Carte" />
+					<map name="carte">
+						<area shape="rect" coords="0,0,50,50" alt="cadre1" href="123456.html" style="border: 2px solid red">
+					</map>
                 </div>
                 <div>
                     <img src="images/menuShop.png" class="image1">
