@@ -232,10 +232,8 @@
             </v-card-text>
         </v-container>
 
-        <v-footer style="width: 100%; height: auto; margin-left: auto; margin-right: auto">
-            <v-container style="padding: 0">
-                <div class="barreOrangered"></div>
-                <div class="barreBlack"></div>
+        <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
+            <v-container fluid style="padding: 0; max-width: 1000px">
                 <div id="dock-container">
                     <div id="dock">
                         <ul>
@@ -263,8 +261,7 @@
                     </div>
                 </div>
             </v-container>
-        </v-footer>
-
+        </v-footer>     
     </v-content>
 </template>
 
@@ -818,7 +815,7 @@
 	padding: 0;
 	margin: 0;
 	bottom: 0;
-	background-color: rgb(248,147,37);
+	background-color: orangered;
 	border: none;
 	border-top: 4px solid orangered;
 	}
@@ -902,6 +899,8 @@
 	font: normal 120%/1 "Acme", Helvetica, sans-serif;
 	padding: 2px;
 	}
+	
+	/* End Menu */
 
 		@media only screen and (max-width: 768px) {
 
