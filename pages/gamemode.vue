@@ -490,15 +490,7 @@
     
     /* Content */
     
-    #content {
-    height: 100%;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    }
     .content {
-    height: 100%;
     overflow: scroll;
     padding: 0;
     margin: 0;
