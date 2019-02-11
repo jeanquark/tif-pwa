@@ -69,25 +69,19 @@
         </v-container>
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white; style: 30px">
             <v-layout>
-                <v-flex d-flex x1 justify-end align-center style="padding-left: 20px;" @click="eventsByDate('substractOne')">
-                    <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" />
-                </v-flex>
-                <v-flex d-flex x2 justify-start align-center class="text-xs-center navButton menuDay" @click="eventsByDate('substractOne')">
-                    Hier
+                <v-flex d-flex x3 justify-end align-center style="padding-left: 20px;" @click="eventsByDate('substractOne')">
+                    <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" /> Précèdent
                 </v-flex>
                 <v-flex d-flex x6 justify-center align-center class="text-xs-center menuDay">
                     {{ date | moment('dddd, MMMM Do YYYY') }}
                 </v-flex>
-                <v-flex d-flex x2 justify-end align-center class="text-xs-center navButton menuDay" @click="eventsByDate('addOne')">
-                    Demain
-                </v-flex>
-                <v-flex d-flex x1 justify-end align-center style="padding-right: 20px;" @click="eventsByDate('addOne')">
-                    <fa :icon="['fas', 'angle-double-right']" size="1x" class="icon" style="text-shadow: 0 0 15px #3b5998;"/>
+                <v-flex d-flex x3 justify-end align-center style="padding-right: 20px;" @click="eventsByDate('addOne')">
+                    Suivant <fa :icon="['fas', 'angle-double-right']" size="1x" class="icon" style="text-shadow: 0 0 15px #3b5998;"/>
                 </v-flex>
             </v-layout>             
         </v-container>
 
-        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 80px">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 90px">
             <v-card-text class="card-text">
                 <v-expansion-panel class="elevation-0" :value="0" v-if="loadedUser">
                     <v-expansion-panel-content class="orange">
