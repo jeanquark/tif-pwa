@@ -545,7 +545,7 @@
     padding: 5px;
     width: 800px;
     background-color: whitesmoke;
-    opacity: 0.8;
+    opacity: 0.9;
     color: black;
     text-align: center;
     font-size: 1.1em;
