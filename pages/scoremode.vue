@@ -473,7 +473,6 @@
 	<style scoped>
 
     .container {
-    height: 100%;
     width: 1000px;
     color: #FFFFFF;
     background-color: black;
