@@ -23,29 +23,28 @@
                 <v-flex grow>
                     <v-layout row>
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                            <div style="text-align: center" class="levelHeader">Niv.1</div>
-                            <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; color: white; border-radius: 5px">3 / 10</v-progress-linear>
+							<div class="headerLogo">
+								<span class="chiffres">1</span><br />
+								<span class="activity">sport</span>
+							</div>
                         </v-flex>
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                            <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                            <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
-                            <nuxt-link to="/plus" class="aPlusYellow">
-                            <span class="plusYellow">+</span>
-                            </nuxt-link>
+							<div class="headerLogo">
+								<span class="chiffres">6</span><br />
+								<span class="activity">pays</span>
+							</div>
                         </v-flex>
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                            <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
-                            <div class="dollarFan">1234 $fans</div>
-                            <nuxt-link to="/plus" class="aPlusGreen">
-                            <span class="plusGreen">+</span>
-                            </nuxt-link>
+							<div class="headerLogo">
+								<span class="chiffres">130</span><br />
+								<span class="activity">équipes</span>
+							</div>
                         </v-flex>
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
-                            <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
-                            <div class="token">12 tokens</div>
-                            <nuxt-link to="/plus" class="aPlusOrangered">
-                            <span class="plusOrangered">+</span>
-                            </nuxt-link>
+							<div class="headerLogo">
+								<span class="chiffres">769</span><br />
+								<span class="activity">fans</span>
+							</div>
                         </v-flex>
                     </v-layout>
                 </v-flex>
@@ -234,6 +233,8 @@
 
         <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
             <v-container fluid style="padding: 0; max-width: 1000px">
+				<div class="barreOrangered"></div>
+				<div class="barreBlack"></div>
                 <div id="dock-container">
                     <div id="dock">
                         <ul>
