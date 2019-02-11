@@ -78,24 +78,24 @@
                     <div id="dock">
                         <ul>
                             <li>
-                                <nuxt-link to="/equipes"><img src="/images/menuShop.png">
-                                <span class="textMenu">Equipes</span></nuxt-link>
+                                <nuxt-link to="/myresult"><img src="/images/menuResultat.png">
+                                <span class="textMenu">Mes classements</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/competitions"><img src="/images/menuResultat.png">
-                                <span class="textMenu">Compétitions</span></nuxt-link>
+                                <nuxt-link to="/inventaire"><img src="/images/menuShop.png">
+                                <span class="textMenu">Inventaire</span></nuxt-link>
                             </li>
                             <li id="active">
-                                <nuxt-link to="/scoremode"><img src="/images/menuHome.png">
-                                <span class="textMenu">Matches du jour</span></nuxt-link>
+                                <nuxt-link to="/gamemode"><img src="/images/menuHome.png">
+                                <span class="textMenu">Aujourd'hui</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/joueurs"><img src="/images/menuSocial.png">
-                                <span class="textMenu">Joueurs</span></nuxt-link>
+                                <nuxt-link to="/amis"><img src="/images/menuSocial.png">
+                                <span class="textMenu">Mes amis</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/tifnews"><img src="/images/menuResultat.png">
-                                <span class="textMenu">TIF News</span></nuxt-link>
+                                <nuxt-link to="/scoremode"><img src="/images/menuResultat.png">
+                                <span class="textMenu">ScoreMode</span></nuxt-link>
                             </li>
                         </ul>
                     </div>
