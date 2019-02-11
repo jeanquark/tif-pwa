@@ -5,19 +5,21 @@
                 <v-flex class="barreHeader">
                     <v-layout row>
                         <v-flex xs6 sm6 md6>
-                            <span style="margin-left: 100px; float: left; margin-top: 4px;"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
+                            <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">Utilisateur invité</span>
                         </v-flex>
                         <v-flex xs6 sm6 md6>
-                            <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Fan de l'équipe de suisse de football (1.34 PF)</span>
+                            <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Bienvenue sur TIF - Pour des fans, par des fans !</span>
                         </v-flex>
                 </v-flex>
             </v-layout>
             <v-layout row>
                 <nuxt-link to="monavatar">
                  <v-flex shrink>
-                    <div id="avatar">
-                        <img src="/images/avatar.png" class="imgAvatar" />
+					<nuxt-link to="/">
+                    <div id="tifLogo">
+                       ThisIsFan.com
                     </div>
+					</nuxt-link>
                 </nuxt-link>
                 </v-flex>
                 <v-flex grow>
@@ -49,8 +51,8 @@
                     </v-layout>
                 </v-flex>
                 <v-flex shrink>
-                <nuxt-link to="/myteams">
-                <div id="team">
+                <nuxt-link to="/gamemode">
+                <div id="gamemodeLogo">
                     <img src="/images/switzerland.png" class="imgTeam" />
                 </div>
                 </nuxt-link>
@@ -478,6 +480,7 @@
     margin-right: auto;
     border-left: 1px solid orangered;
     border-right: 1px solid orangered;
+	font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
     
     /* header */
