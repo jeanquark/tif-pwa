@@ -5,7 +5,7 @@
                 <v-flex class="barreHeader">
                     <v-layout row>
                         <v-flex xs6 sm6 md6>
-                            <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">Utilisateur invité</span>
+                            <span style="margin-left: 100px; color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">Utilisateur invité</span>
                         </v-flex>
                         <v-flex xs6 sm6 md6>
                             <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Bienvenue sur TIF - Pour des fans, par des fans !</span>
@@ -13,7 +13,7 @@
                 </v-flex>
             </v-layout>
             <v-layout row>
-                <nuxt-link to="monavatar">
+                <nuxt-link to="avatar">
                  <v-flex shrink>
 					<nuxt-link to="/">
                     <div id="tifLogo">
@@ -52,7 +52,7 @@
                 </v-flex>
                 <v-flex shrink>
                 <nuxt-link to="/gamemode">
-                <div id="gamemodeLogo">
+                <div id="team">
                     <img src="/images/switzerland.png" class="imgTeam" />
                 </div>
                 </nuxt-link>
