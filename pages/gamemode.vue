@@ -1,6 +1,6 @@
 <template>
     <v-content id="app">
-        <v-container fluid id="header" class="header" style="height: 162px">
+        <v-container fluid id="header" class="header" style="height: 162px; position: fixed; top: 0">
             <v-layout row>
                 <v-flex class="barreHeader">
                     <v-layout row>
@@ -22,9 +22,9 @@
                 </nuxt-link>
                 <v-flex grow>
                     <v-layout row>
-                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
                             <div style="text-align: center" class="levelHeader">Niv.1</div>
-                            <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; color: white; border-radius: 5px">3 / 10</v-progress-linear>
+                            <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; color: white; border-radius: 5px; margin-top: 25px">3 / 10</v-progress-linear>
                         </v-flex>
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
                             <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
@@ -59,7 +59,7 @@
             </v-layout>
         </v-container>
 
-        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 90px">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 90px; margin-top: 162px">
             <div class="centreImage">
                 <div class="content">
                     <img src="images/carte.png" class="imgCarte" />
@@ -375,6 +375,7 @@
     font-weight: 700;
     box-shadow: 0 0 10px 2px inset;
     border-radius: 5px;
+	padding: 4px;
     }
     .token {
     margin-top: 14px;
@@ -384,6 +385,7 @@
     font-weight: 700;
     box-shadow: 0 0 10px 2px inset;
     border-radius: 5px;
+	padding: 5px;
     }
     .plusOrangered {
     position: absolute;
