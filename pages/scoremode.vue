@@ -232,8 +232,8 @@
             </v-card-text>
         </v-container>
 
-        <v-footer style="position: absolute; bottom: 0; width: 100%; height: auto" class="text-xs-center">
-            <v-container style="padding: 0; margin: 0">
+        <v-footer style="width: 100%; height: auto; margin-left: auto; margin-right: auto">
+            <v-container style="padding: 0">
                 <div class="barreOrangered"></div>
                 <div class="barreBlack"></div>
                 <div id="dock-container">
@@ -487,7 +487,6 @@
     #header {
     height: 162px;
     padding: 0;
-    margin: 0;
     top:0px;
     left:0px;
     background-color: black;
