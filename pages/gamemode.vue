@@ -1,6 +1,6 @@
 <template>
     <v-content id="app">
-        <v-container fluid id="header" class="header" style="height: 162px; position: fixed; top: 0">
+        <v-container fluid id="header" class="header" style="height: 162px">
             <v-layout row>
                 <v-flex class="barreHeader">
                     <v-layout row>
@@ -59,7 +59,7 @@
             </v-layout>
         </v-container>
 
-        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 90px; margin-top: 162px">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 90px">
             <div class="centreImage">
                 <div class="content">
                     <img src="images/carte.png" class="imgCarte" />
