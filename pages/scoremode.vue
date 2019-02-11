@@ -66,13 +66,13 @@
         </v-container>
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white; style: 30px">
             <v-layout>
-                <v-flex d-flex x2 align-center text-xs-left style="padding-left: 20px;" @click="eventsByDate('substractOne')">
+                <v-flex d-flex x2 align-center text-xs-left style="padding-left: 20px; cursor: default" @click="eventsByDate('substractOne')">
                    << Précèdent
                 </v-flex>
                 <v-flex d-flex x8 justify-center align-center class="text-xs-center menuDay">
                     {{ date | moment('dddd, MMMM Do YYYY') }}
                 </v-flex>
-                <v-flex d-flex x2 align-center text-xs-right style="padding-right: 20px;" @click="eventsByDate('addOne')">
+                <v-flex d-flex x2 align-center justify-end style="padding-right: 20px; cursor: default" @click="eventsByDate('addOne')">
                     Suivant >>
                 </v-flex>
             </v-layout>             
