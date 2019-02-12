@@ -537,15 +537,13 @@
     /* Content */
     
     #main {
-    overflow-y: scroll;
+    overflow: hidden;
 	  -webkit-overflow-scrolling: touch;
     flex: auto;
     }
     .content {
-    overflow: scroll;
     padding: 0;
     margin: 0;
-	  height: 655px;
     }
     .imgCarte {
     height: 100%;
