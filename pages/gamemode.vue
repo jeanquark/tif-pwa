@@ -1,5 +1,5 @@
 <template>
-    <v-content id="app">
+    <v-content id="app" class="bodyTif">
         <v-container fluid id="header" class="header" style="height: 162px">
             <v-layout row>
                 <v-flex class="barreHeader">
@@ -339,7 +339,7 @@
   min-height: 100%;
   }
   
-  body {
+  .bodyTif {
   display: flex;
   flex-direction: column;
   }
