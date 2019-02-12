@@ -60,7 +60,7 @@
             </v-layout>
         </v-container>
 
-		<v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
+		<v-container id="main" fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
             <div class="centreImage" style="position: relative">
                 <div class="cadreScore" style="position: absolute; top: 20px; left: 100px">
                     <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
@@ -107,7 +107,7 @@
             </div>
         </v-container>
 		
-        <v-footer style="background-color: black; position: sticky; bottom: 0; width: 100%" height="auto" class="text-xs-center">
+        <v-footer id="footer" style="background-color: black; position: sticky; bottom: 0; width: 100%" height="auto" class="text-xs-center">
             <v-container fluid style="padding: 0; max-width: 1000px">
 				<div class="barreOrangered"></div>
 				<div class="barreBlack"></div>
@@ -332,6 +332,17 @@
 </script>
 
 	<style scoped>
+  
+  html {
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+  }
+  
+  body {
+  display: flex;
+  flex-direction: column;
+  }
 
     .container {
     width: 1000px;
@@ -354,7 +365,9 @@
     background-color: black;
     z-index: 1;
     border-bottom: 3px solid orangered;
-	position: sticky;
+	  position: sticky;
+    flex: none;
+    text-align: center;
     }
     .header {
     position: relative;
@@ -523,11 +536,16 @@
     
     /* Content */
     
+    #main {
+    overflow-y: scroll;
+	  -webkit-overflow-scrolling: touch;
+    flex: auto;
+    }
     .content {
     overflow: scroll;
     padding: 0;
     margin: 0;
-	height: 655px;
+	  height: 655px;
     }
     .imgCarte {
     height: 100%;
@@ -693,6 +711,10 @@
 	background-color: orangered;
 	}
 
+  #footer {
+  flex: none;
+  text-align: center;
+  }
 
 	#dock-container {
 	height: 80px;
