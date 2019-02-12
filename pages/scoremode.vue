@@ -10,15 +10,15 @@
                         <v-flex xs6 sm6 md6>
                             <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Bienvenue sur TIF - Pour des fans, par des fans !</span>
                         </v-flex>
+                    </v-layout>
                 </v-flex>
             </v-layout>
             <v-layout row>
-                 <v-flex shrink>
+                <v-flex shrink>
                     <div id="avatar">
                         <img src="/images/avatar.png" class="imgAvatar" />
                     </div>
                 </v-flex>
-                </nuxt-link>
                 <v-flex grow>
                     <v-layout row>
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
@@ -48,11 +48,11 @@
                     </v-layout>
                 </v-flex>
                 <v-flex shrink>
-                <nuxt-link to="/gamemode">
-                <div id="team">
-                    <img src="/images/switzerland.png" class="imgTeam" />
-                </div>
-                </nuxt-link>
+                    <nuxt-link to="/gamemode">
+                        <div id="team">
+                            <img src="/images/switzerland.png" class="imgTeam" />
+                        </div>
+                    </nuxt-link>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -67,7 +67,7 @@
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white; style: 30px">
             <v-layout>
                 <v-flex d-flex x2 align-center text-xs-left style="padding-left: 20px; cursor: default" @click="eventsByDate('substractOne')">
-                   << Précèdent
+                Précèdent
                 </v-flex>
                 <v-flex d-flex x8 justify-center align-center class="text-xs-center menuDay">
                     {{ date | moment('dddd, MMMM Do YYYY') }}

@@ -10,15 +10,16 @@
                         <v-flex xs6 sm6 md6>
                             <span style="margin-right: 100px; color: white; padding: 4px; float: right; margin-top: 9px">Fan de l'équipe de suisse de football (1.34 PF)</span>
                         </v-flex>
+                    </v-layout>
                 </v-flex>
             </v-layout>
             <v-layout row>
                 <nuxt-link to="monavatar">
-                 <v-flex shrink>
-                    <div id="avatar">
-                        <img src="/images/avatar.png" class="imgAvatar" />
-                    </div>
-                </v-flex>
+                    <v-flex shrink>
+                        <div id="avatar">
+                            <img src="/images/avatar.png" class="imgAvatar" />
+                        </div>
+                    </v-flex>
                 </nuxt-link>
                 <v-flex grow>
                     <v-layout row>
@@ -50,11 +51,11 @@
                     </v-layout>
                 </v-flex>
                 <v-flex shrink>
-                <nuxt-link to="/myteams">
-                <div id="team">
-                    <img src="/images/switzerland.png" class="imgTeam" />
-                </div>
-                </nuxt-link>
+                    <nuxt-link to="/myteams">
+                        <div id="team">
+                            <img src="/images/switzerland.png" class="imgTeam" />
+                        </div>
+                    </nuxt-link>
                 </v-flex>
             </v-layout>
         </v-container>
