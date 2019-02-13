@@ -5,7 +5,7 @@
                 <v-flex class="barreHeader">
                     <v-layout row>
                         <v-flex xs6 sm6 md6>
-                            <span style="margin-left: 100px; float: left; margin-top: 4px"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; padding: 4px; float: left; margin-top: 9px">G. Manigley (41 ans) - <nuxt-link to="/myteams" style="color: white; text-decoration: none">4 fans</nuxt-link></span>
+                            <span style="margin-left: 100px; float: left; margin-top: 4px"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; padding: 4px; float: left; margin-top: 9px">G. Manigley (41 ans) - <nuxt-link to="/myteams" style="color: white; text-decoration: none">Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }}</nuxt-link></span>
                         </v-flex>
                         <v-flex xs6 sm6 md6>
                             <span style="margin-right: 100px; color: white; padding: 4px; float: right; margin-top: 9px">Fan de l'équipe de suisse de football (1.34 PF)</span>
@@ -141,192 +141,106 @@
 </template>
 
 <script>
-    import moment from 'moment'
-    export default {
-        head: {
-            title: 'Events',
+	export default {
+		head: {
+			title: 'Teams',
             link: [
 				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' },
                 { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
 			]
-        },
-        layout: 'layoutScoreMode',
-        async created() {
-            const today = moment().format('YYYY-MM-DD')
-   //          console.log('today: ', today)
-   //          // if (this.$store.getters("events/loadedEvents").length < 1) {
-   //              await this.$store.dispatch("events/loadedEvents")
-   //          // }
-   //          if (this.$store.getters['users/loadedUserTeams'].length < 1) {
-			// 	await this.$store.dispatch('users/loadedUserTeams')
-			// }
-            await this.$store.commit('events/setEmptyEvents')
-            await this.$store.commit('competitions/setEmptyCompetitions')
-            // if (this.$store.getters('events/loadedEvents').length < 1) {
-                await this.$store.dispatch("events/loadedEventsAndCompetitionsByDay", today)
-            // }
-            // if (this.$store.getters['competitions/loadedCompetitions'].length < 1) {
-            //     this.$store.dispatch('competitions/loadedCompetitions')
-            // }
-        },
-        data() {
-            return {
-                active: "",
-                dayNumber: 0,
-                date: moment(),
-                // competitions: {
-                //     'spanish_la_liga_2018_2019': {
-                //         "name": "La Liga",
-                //         "slug": "spanish_la_liga_2018_2019"
-                //     },
-                //     'english_premier_league_2018_2019': {
-                //         "name": "Premier League",
-                //         "slug": "english_premier_league_2018_2019"
-                //     },
-                //     'italian_serie_a_2018_2019': {
-                //         "name": "Serie A",
-                //         "slug": "italian_serie_a_2018_2019"
-                //     },
-                //     'german_bundesliga_2018_2019': {
-                //         "name": "Bundesliga",
-                //         "slug": "german_bundesliga_2018_2019"
-                //     },
-                //     'french_ligue1_2018_2019': {
-                //         "name": "Ligue 1",
-                //         "slug": "french_ligue1_2018_2019"
-                //     },
-                //     'swiss_super_league_2018_2019': {
-                //         "name": "Super League",
-                //         "slug": "swiss_super_league_2018_2019"
-                //     }
-                // }
+		},
+		layout: "layoutFront",
+		// middleware: ['auth-check'],
+		created () {
+			this.$store.dispatch('competitions/loadedCompetitions')
+			this.$store.dispatch('users/loadedUserTeams')
+			this.$store.dispatch('teams/loadedTeams')
+
+			for (let team of this.loadedUserTeams) {
+                this.selectedTeams.push(team)
             }
-        },
-        computed: {
-            classObject() {
-                if (this.active === "left") {
-                return "activeLeft";
-                } else if (this.active === "right") {
-                return "activeRight";
-                }
-                return "headerInfo";
-            },
-            loadedUser () {
-                return this.$store.getters['users/loadedUser']
-            },
-            userTeams () {
-				return this.$store.getters['users/loadedUserTeams']
+		},
+		data() {
+			return {
+				selectedCompetition: '',
+				selectedTeams: []
+			}
+		},
+		computed: {
+			loadedUser() {
+				return this.$store.getters["users/loadedUser"]
 			},
-			userTeamsIds () {
-				const userTeamsIds = []
-				const userTeams = this.$store.getters['users/loadedUserTeams']
-				userTeams.forEach((team) => {
-					userTeamsIds.push(parseInt(team.livescore_api_id))
-				})
-				return userTeamsIds
+			loadedCompetitions () {
+    			return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.active === true && competition.type === 'main' && competition.geo === 'national')
+    		},
+			loadedUserTeams () {
+            	return this.$store.getters['users/loadedUserTeams']
 			},
-            allEvents () {
-                // return this.$store.getters['events/loadedEvents']
-                const today = moment().format('YYYY-MM-DD')
-                const userTeamsIds = this.userTeamsIds
-                return this.$store.getters['events/loadedEvents']
-                    .filter(event => (event.date === today))
-                    .filter(event => (!userTeamsIds.includes(event.home_team.id) && !userTeamsIds.includes(event.visitor_team.id)))
-                    // .filter(event => (!userTeamsIds.includes(event.visitor_team.id)))
-                    .sort((a, b) => a.timestamp - b.timestamp)
+			loadedTeamsByCompetition () {
+				console.log('Call to loadedTeamsByCompetition')
+				// console.log('competitionId: ', competitionId)
+				// return
+
+                const teams = []
+                const competition_id = this.selectedCompetition.id
+				this.$store.getters['teams/loadedTeams']
+					// .filter(team => team.competitions.incudes(competition_id))
+					.forEach(function (team) {
+						// console.log('team: ', team)
+						if (team.competitions) {
+							if (team['competitions'][competition_id]) {
+								teams.push(team)
+							}
+						}
+					})
+				console.log('teams: ', teams)
+                return teams
             },
-            events () {
-                // const today = moment().format('YYYY-MM-DD')
-                return this.$store.getters['events/loadedEvents']
-                    .filter(event => (event.date === this.date.format('YYYY-MM-DD')))
-                    .sort((a, b) => a.timestamp - b.timestamp)
-            },
-            userEvents () {
-                const today = moment().format('YYYY-MM-DD')
-                const userTeamsIds = this.userTeamsIds
-                console.log('userTeamsIds: ', userTeamsIds)
-				return this.$store.getters['events/loadedEvents']
-					.filter(event => (event.date === today))
-					.filter(event => (userTeamsIds.includes(event.home_team.livescore_api_id) || userTeamsIds.includes(event.visitor_team.livescore_api_id)))
-					.sort((a, b) => a.timestamp - b.timestamp)
-            },
-            competitions () {
-                return this.$store.getters['competitions/loadedCompetitions']
-            }
-        },
-        methods: {
-            convertToLocaltime (timestamp) {
-                const utcDiff = new Date().getTimezoneOffset()
-                // const utcDiff = '60'
-                console.log('utcDiff: ', utcDiff)
-                if (utcDiff > 0) {
-                    return moment.unix(timestamp).add(utcDiff, 'minutes').format("HH:mm")
+		},
+		methods: {
+			selectCompetition(competition) {
+				console.log('competition: ', competition)
+				this.selectedCompetition = competition
+				this.loadedTeamsByCompetition
+			},
+			selectTeam (team) {
+                // this.isActive = !this.isActive
+                console.log('selectTeam')
+                console.log('team.id: ', team.id)
+                // const selectedTeam = {id: team.id, name: team.name}
+                const selectedTeam = team
+                console.log('selectedTeam: ', selectedTeam)
+                // return
+                // console.log(selectedTeam)
+                const index = this.selectedTeams.findIndex(el => el.id === team.id)
+                console.log('index: ' + index)
+                // if (!this.selectedTeams.includes(selectedTeam)) {
+                if (!this.selectedTeams.find(el => el.id === selectedTeam.id)) {
+					this.selectedTeams.push(selectedTeam)
                 } else {
-                    return moment.unix(timestamp).subtract(utcDiff, 'minutes').format("HH:mm")
+                    this.selectedTeams.splice(index, 1)
                 }
-            },
-            eventsByCompetition (competition) {
-                return this.$store.getters['events/loadedEvents']
-                    .filter(event => (event.date === this.date.format('YYYY-MM-DD') && event.competition.slug === competition))
-                    .sort((a, b) => a.timestamp - b.timestamp)
-                // return this.allEvents.filter(event => event.competition.slug === competition)
-            },
-            convertToLocalTime (timestamp) {
-				const utcDiff = new Date().getTimezoneOffset()
-                console.log('utcDiff: ', utcDiff)
-                // console.log('moment.unix(timestamp): ', moment.unix(timestamp))
-                // return moment.unix(timestamp).format("HH:mm")
-				if (utcDiff > 0) {
-					return moment.unix(timestamp).add(utcDiff, 'minutes').format("HH:mm")
-				} else {
-					return moment.unix(timestamp).subtract(utcDiff, 'minutes').format("HH:mm")
-				}
 			},
-            async eventsByDate (setDayNumber) {
-                console.log('setDate: ', setDayNumber)
-                switch(setDayNumber) {
-                    case 'substractOne':
-                        this.dayNumber -= 1
-                        break
-                    case 'yesterday':
-                        this.dayNumber = -1
-                        break
-                    case 'tomorrow': 
-                        this.dayNumber = 1
-                        break
-                    case 'addOne': 
-                        this.dayNumber += 1
-                        break
-                }
-
-                this.date = moment().add(this.dayNumber, 'days')
-                console.log('this.date: ', this.date)
-
-                const events = this.$store.getters['events/loadedEvents'].filter(event => (
-                    event.date === this.date.format('YYYY-MM-DD')
-                ))
-                if (events.length < 1) {
-                    console.log('events.length < 1')
-                    await this.$store.dispatch('events/loadedEventsAndCompetitionsByDay', this.date.format('YYYY-MM-DD'))
-                }
-                console.log('events: ', events)
-                return events
-
-                // return this.$store.getters['events/loadedEvents']
+			async saveTeams () {
+                console.log('saveTeams')
+                console.log(this.selectedTeams)
+				await this.$store.dispatch('users/updateUserTeams', this.selectedTeams)
+                // this.$router.replace('/gamemode')
+			},
+			clear () {
+                this.selectedTeams = []
             },
-            mouseOver(direction) {
-                console.log(direction);
-                if (direction === "left") {
-                    this.active = "left";
-                } else if (direction === "right") {
-                    this.active = "right";
-                }
-            },
-            mouseLeave() {
-                this.active = null;
-            }
-        }
-    }
+			goBack() {
+				this.$router.replace("/gamemode")
+			},
+			logout() {
+				console.log("Clicked logout button")
+				this.$store.dispatch("firebase-auth/signOut").then(() => {
+					this.$router.replace("/")
+				})
+			}
+		}
+	}
 </script>
 
 	<style scoped>
