@@ -1,22 +1,5 @@
 /* Style par défaut (écran de bureau) - Résolution 1400x1050 */
 
-body, html {
-width: 100%;
-color: #ffffff;
-background-color: #000000;
-background-image: url(../images/bg.png);
-font-size: 100%;
-font-family: "bangers", Helvetica, sans-serif;
-line-height: 1.5;
-margin: 0;
-}
-
-.container-fluid {
-max-width: 1000px;
-padding: 0;
-margin: 0 auto;
-}
-
 .boxShadow {
 -moz-box-shadow: inset 0px 0px 5px 2px #FF4500;
 -webkit-box-shadow: inset 0px 0px 5px 2px #FF4500;
@@ -39,25 +22,6 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#D3D3D3, Direction=NaN, St
 border-radius: 5px;
 }
 
-#footer {
-position: fixed;
-max-width: 1000px;
-position: absolute; 
-bottom: 0;
-text-align: center;
-margin: 0;
-padding: 0;
-}
-
-#footer2 {
-position: fixed;
-bottom: 0;
-max-width: 1000px;
-text-align: center;
-margin: 0;
-padding: 0;
-}	
-
 .vertical-align {
 min-height: 100%;
 display: table-cell;
@@ -65,13 +29,6 @@ vertical-align: middle;
 }
 
 /* Header */
-
-#header {
-max-width: 1000px;
-justify-content: center;
-margin-left: -5px;
-z-index: 1;
-}
 
 .columnButton {
 padding: 0;
@@ -1010,98 +967,6 @@ width: auto;
 max-height: 150px;
 width: auto;
 filter: grayscale(100%);
-}
-
-/* Menu */
-
-#dock-container {
-height: 80px;
-padding: 0;
-margin: 0;
-bottom: 0;
-background-color: orangered;
-border: none;
-border-top: 4px solid darkred;
-}
-
-#dock-container li#active img {
--webkit-transform: scale(1.65);
-margin: 0 0.5em;
-}
-
-#dock-container li {
-width: 17%;
-padding: 0;
-margin: 0;
-list-style-type: none;
-display: inline-block;
-position: relative;
-padding-top: 10px;
-}
-
-#dock-container ul {
-width: 100%;
-padding-left: 0px;
-padding-right: 0px;
-margin-bottom: 0;
-}
-
-#dock-container li img {
-width: 58px;
-height: 58px;
--webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
--webkit-transition: all 0.3s;
--webkit-transform-origin: 50% 100%;
-}
-
-#dock-container li:hover img { 
--webkit-transform: scale(1.65);
-margin: 0 0.5em;
-}
-	
-#dock-container li:hover + li img, #dock-container li.prev img {
--webkit-transform: scale(1);
-margin: 0 0;
-}
-
-#dock-container li span {
-display: none;
-position: absolute;
-bottom: 0px;
-left: 0;
-width: 100%;
-background-color: rgba(0,0,0,0.5);
-border-radius: 5px;
-}
-
-#dock-container li#active span {
-display: none;
-position: absolute;
-bottom: 0px;
-left: 0;
-width: 100%;
-background-color: rgba(0,0,0,0.5);
-border-radius: 5px;
-}
-
-#dock-container li#active span {
-display: block;
-color: #fff;
-}
-
-#dock-container li#active .textMenu {
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
-padding: 2px;
-}
-	
-#dock-container li:hover span {
-display: block;
-color: #fff;
-}
-
-#dock-container .textMenu {
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
-padding: 2px;
 }
 
 /* Page des Avatars */
