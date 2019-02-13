@@ -67,7 +67,7 @@
 			  	<div class="modal-content">
 					<!-- Modal Header -->
 					<div class="modal-header">
-					  	<span class="modal-title">Tes équipes</span>
+					  	<span class="modal-title">Tes fans</span>
 						<nuxt-link to="/home">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true" class="white-text"><i class="fa fa-arrow-circle-left"></i></span>
@@ -77,61 +77,29 @@
 					<!-- Modal body -->
 					<div id="modalBoxContent" class="modal-body">
 						<div class="flex-container-modal-box-title">
-							<h1>Tu supportes {{ loadedUserTeams.length }} équipe(s)...</h1>
+							<h1>Tu gèrent actuellement 4 fans</h1>
 						</div>
-						<div v-if="loadedUserTeams.length > 0">
+						<div>
 							<div class="flex-container-modal-Title banner2 text-center">
-								<h2>Tes équipes</h2>
+								<h2>Tes fans</h2>
 							</div>
 							<div class="flex-container-MesEquipes">
-								<div class="OtherTeam" v-for="team in loadedUserTeams">
-									<span v-if="team">
-										<img v-lazy="'/images/teams/' + team.image" class="imgModalFlagTeam" />
-										<nuxt-link :to="'/user/teams/' + team.slug" class="overlay">
+								<div class="OtherTeam">
+									<span>
+										<img src="/images/switzerland.png" class="imgModalFlagTeam" />
+										<nuxt-link to="#" class="overlay">
 											<div class="textActivity">
-												<span v-if="team.category">{{ team.category.name }}</span><br />
-												{{ team.name }}<br /><br />+Infos</div>
+												<span>Football</span><br />
+												Liverpool<br /><br />+Infos</div>
 	 									</nuxt-link>
 									</span>
 								</div>
 							</div>
 						</div>
 					</div>
-					
-					<div id="modalBoxContent" class="modal-body">
-						<div class="flex-container-modal-Title banner text-center">
-							<h2>Supporter une nouvelle équipe, un(e) athlète ?</h2>
-						</div>
-						<div class="flex-container-modal-OtherTeam">
-							<h6>Dans quel sport ?</h6>
-						</div>
-						<div class="flex-container-modal-OtherTeam-Img">
-							<div class="OtherTeam">
-								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
-								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
-								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
-								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
-								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
-								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
-							</div>
-						</div>
-						<div class="flex-container-modal-OtherTeam">
-							<h6>Dans quel pays ?</h6>
-						</div>
-						<div class="flex-container-modal-OtherTeam-Img" v-if="loadedCompetitions != ''">
-							<div class="OtherTeam" v-for="competition in loadedCompetitions">
-								<img :src="'/images/competitions/' + competition.image" class="imgModalFlagTeam"/>
-								<nuxt-link :to="'/user/competitions/' + competition.slug" class="overlayOtherTeam">
-									<div class="textActivity">
-										<span v-if="competition.category">{{ competition.category.name}}</span><br />
-										{{ competition.name}}<br />
-										<span v-for="country in competition.countries" v-if="competition.countries">{{ country.name }}</span><br />+Infos</div>
-								</nuxt-link>
-							</div>
-						</div>
-						
+										
 						<!-- Loading placeholder -->
-						<div class="ph-item" v-else>
+						<div class="ph-item">
 							<div class="col-md-2">
 						        <div class="ph-picture"></div>
 							</div>
@@ -154,7 +122,7 @@
 					</div>
 					<!-- Modal footer -->
 					<div class="modal-footer">
-					  	<nuxt-link to="/home">
+					  	<nuxt-link to="/gamemode">
 					  		<button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
 					  	</nuxt-link>
 					</div>
