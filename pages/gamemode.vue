@@ -1,5 +1,5 @@
 <template>
-    <v-content id="app" class="bodyTif">
+    <v-content id="app">
         <v-container fluid id="header" class="header" style="height: 162px">
             <v-layout row>
                 <v-flex class="barreHeader">
@@ -25,7 +25,7 @@
                     <v-layout row>
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 20px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
                             <div style="text-align: center" class="levelHeader">Niv.1</div>
-                            <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; color: white; border-radius: 5px; margin-top: 25px">3 / 10</v-progress-linear>
+                            <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; border-radius: 5px; margin-top: 25px"><span style="color: white">3 / 10</span></v-progress-linear>
                         </v-flex>
                         <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
                             <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
@@ -107,8 +107,7 @@
             </div>
         </v-container>
 		
-        <v-footer id="footer" style="background-color: black; position: sticky; bottom: 0; width: 100%" height="auto" class="text-xs-center">
-            <v-container fluid style="padding: 0; max-width: 1000px">
+        <v-container fluid id="footer" style="padding: 0; max-width: 1000px; background-color: black; position: sticky; bottom: 0" class="text-xs-center">
 				<div class="barreOrangered"></div>
 				<div class="barreBlack"></div>
                 <div id="dock-container">
@@ -138,7 +137,7 @@
                     </div>
                 </div>
             </v-container>
-        </v-footer>     
+        </v-container>     
     </v-content>
 </template>
 
@@ -332,17 +331,6 @@
 </script>
 
 	<style scoped>
-  
-  html {
-  margin: 0;
-  height: 100%;
-  min-height: 100%;
-  }
-  
-  .bodyTif {
-  display: flex;
-  flex-direction: column;
-  }
 
     .container {
     width: 1000px;
@@ -365,9 +353,7 @@
     background-color: black;
     z-index: 1;
     border-bottom: 3px solid orangered;
-	  position: sticky;
-    flex: none;
-    text-align: center;
+	position: sticky;
     }
     .header {
     position: relative;
@@ -536,14 +522,11 @@
     
     /* Content */
     
-    #main {
-    overflow: hidden;
-	  -webkit-overflow-scrolling: touch;
-    flex: auto;
-    }
     .content {
+    overflow: scroll;
     padding: 0;
     margin: 0;
+	height: 655px;
     }
     .imgCarte {
     height: 100%;
@@ -709,10 +692,6 @@
 	background-color: orangered;
 	}
 
-  #footer {
-  flex: none;
-  text-align: center;
-  }
 
 	#dock-container {
 	height: 80px;
