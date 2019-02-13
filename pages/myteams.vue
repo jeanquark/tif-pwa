@@ -1,48 +1,52 @@
 <template>
-	<v-layout align-center justify-center row fill-height style="background-color: black">
-		<v-flex xs12 sm10 md8 lg6>
-			<v-card class="card">
-				<v-card-title primary-title>
-					<v-flex xs6>
-						<h2 class="white--text text-xs-left">Fan de...</h2>
-					</v-flex>
-					<v-flex xs6 class="text-xs-right">
-						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
-					</v-flex>
-				</v-card-title>
-
-				<v-card-text class="card-text mx-3">
-					<div class="text-xs-center">
-						<h3>Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }} :</h3>
-						<!-- <b>loadedUserTeams:</b> {{ loadedUserTeams }}<br /><br /> -->
-						<!-- <b>loadedCompetitions:</b> {{ loadedCompetitions }}<br /><br /> -->
-						<!-- <b>loadedTeamsByCompetition:</b> {{ loadedTeamsByCompetition }}<br /><br /> -->
-						<!-- <b>selectedCompetition:</b> {{ selectedCompetition }}<br /><br /> -->
-						<!-- <b>selectedTeams:</b> {{ selectedTeams }}<br /><br /> -->
-					</div>
-
-					<v-container fluid>
-						<v-layout row wrap align-center justify-center>
-							<v-flex v-for="team in loadedUserTeams" :key="team.slug" xs4 sm3 md2 lg2 style="margin: 5px; border: 1px solid orangered; border-radius: 5px">
-									<v-card flat tile class="d-flex" style="border-radius: 5px">
-										<v-card-text style="padding-left: 3px; padding-right: 3px">
-											<v-img contain :src="'/images/teams/' + team.image" :lazy-src="'/images/icon.png'" aspect-ratio="1">
-											</v-img>
-										</v-card-text>
-									</v-card>
+    <v-content id="app">
+        <v-container fluid>
+			<v-layout align-center justify-center row fill-height style="background-color: black">
+				<v-flex xs12 sm10 md8 lg6>
+					<v-card class="card">
+						<v-card-title primary-title>
+							<v-flex xs6>
+								<h2 class="white--text text-xs-left">Fan de...</h2>
 							</v-flex>
-						</v-layout>
-					</v-container>
-				</v-card-text>
+							<v-flex xs6 class="text-xs-right">
+								<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
+							</v-flex>
+						</v-card-title>
 
-				<v-card-actions class="card-footer">
-					<v-flex class="text-xs-center">
-						<v-btn nuxt color="error" to="/gamemode" class="elevation-1" style="margin-bottom: 20px">Retour</v-btn>
-					</v-flex>
-				</v-card-actions>
-			</v-card>
-		</v-flex>
-	</v-layout>
+						<v-card-text class="card-text mx-3">
+							<div class="text-xs-center">
+								<h3>Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }} :</h3>
+								<!-- <b>loadedUserTeams:</b> {{ loadedUserTeams }}<br /><br /> -->
+								<!-- <b>loadedCompetitions:</b> {{ loadedCompetitions }}<br /><br /> -->
+								<!-- <b>loadedTeamsByCompetition:</b> {{ loadedTeamsByCompetition }}<br /><br /> -->
+								<!-- <b>selectedCompetition:</b> {{ selectedCompetition }}<br /><br /> -->
+								<!-- <b>selectedTeams:</b> {{ selectedTeams }}<br /><br /> -->
+							</div>
+
+							<v-container fluid>
+								<v-layout row wrap align-center justify-center>
+									<v-flex v-for="team in loadedUserTeams" :key="team.slug" xs4 sm3 md2 lg2 style="margin: 5px; border: 1px solid orangered; border-radius: 5px">
+											<v-card flat tile class="d-flex" style="border-radius: 5px">
+												<v-card-text style="padding-left: 3px; padding-right: 3px">
+													<v-img contain :src="'/images/teams/' + team.image" :lazy-src="'/images/icon.png'" aspect-ratio="1">
+													</v-img>
+												</v-card-text>
+											</v-card>
+									</v-flex>
+								</v-layout>
+							</v-container>
+						</v-card-text>
+
+						<v-card-actions class="card-footer">
+							<v-flex class="text-xs-center">
+								<v-btn nuxt color="error" to="/gamemode" class="elevation-1" style="margin-bottom: 20px">Retour</v-btn>
+							</v-flex>
+						</v-card-actions>
+					</v-card>
+				</v-flex>
+			</v-layout>
+		</v-container>
+	</content>
 </template>
 
 <script>
