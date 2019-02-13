@@ -1,10 +1,10 @@
 <template>
-	<v-layout align-center justify-center row fill-height>
+	<v-layout align-center justify-center row fill-height style="background-color: black">
 		<v-flex xs12 sm10 md8 lg6>
 			<v-card class="card">
 				<v-card-title primary-title>
 					<v-flex xs6>
-						<h2 class="white--text text-xs-left">TES EQUIPES</h2>
+						<h2 class="white--text text-xs-left">Fan de...</h2>
 					</v-flex>
 					<v-flex xs6 class="text-xs-right">
 						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
@@ -13,7 +13,7 @@
 
 				<v-card-text class="card-text mx-3">
 					<div class="text-xs-center">
-						<h3>Tu supportes {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }}:</h3>
+						<h3>Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }} :</h3>
 						<!-- <b>loadedUserTeams:</b> {{ loadedUserTeams }}<br /><br /> -->
 						<!-- <b>loadedCompetitions:</b> {{ loadedCompetitions }}<br /><br /> -->
 						<!-- <b>loadedTeamsByCompetition:</b> {{ loadedTeamsByCompetition }}<br /><br /> -->
@@ -21,9 +21,9 @@
 						<!-- <b>selectedTeams:</b> {{ selectedTeams }}<br /><br /> -->
 					</div>
 
-					<v-container grid-list-md fluid>
-						<v-layout align-center justify-center>
-							<v-flex v-for="team in loadedUserTeams" :key="team.slug" xs4 sm3 md2 d-flex>
+					<v-container fluid>
+						<v-layout row wrap align-center justify-center>
+							<v-flex v-for="team in loadedUserTeams" :key="team.slug" xs4 sm3 md2 lg2 style="padding: 5px">
 									<v-card flat tile class="d-flex">
 										<v-card-text class="px-0">
 											<v-img :src="'/images/teams/' + team.image" :lazy-src="'/images/icon.png'" aspect-ratio="1">
@@ -33,55 +33,6 @@
 							</v-flex>
 						</v-layout>
 					</v-container>
-
-					<v-expansion-panel class="elevation-0" :value="0">
-						<v-expansion-panel-content class="blue">
-							<div slot="header" class="text-xs-center white--text">SELECTIONNE UN CHAMPIONNAT</div>
-							<v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-
-							<v-container grid-list-md fluid>
-								<v-layout row wrap align-center justify-center>
-									<v-flex v-for="competition in loadedCompetitions" :key="competition.slug" xs4 sm3 md2 d-flex>
-										<v-card flat tile class="d-flex card-img" :class="[selectedCompetition.slug === competition.slug ? 'active' : '']" @click="selectCompetition(competition)">
-											<v-card-text class="px-0">
-												<v-img :src="'/images/competitions/' + competition.image" :lazy-src="'/images/icon.png'" aspect-ratio="1">
-												</v-img>
-											</v-card-text>
-										</v-card>
-									</v-flex>
-								</v-layout>
-							</v-container>
-						</v-expansion-panel-content>
-					</v-expansion-panel>
-
-					<br /><br />
-
-					<v-expansion-panel class="elevation-0" v-if="selectedCompetition" :value="0">
-						<v-expansion-panel-content class="blue">
-							<div slot="header" class="text-xs-center white--text">CHOISIS UNE OU PLUSIEURS EQUIPES</div>
-							<v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-
-							<v-container grid-list-md fluid>
-								<v-layout row wrap align-center justify-center v-if="loadedTeamsByCompetition.length > 0">
-									<v-flex v-for="team in loadedTeamsByCompetition" :key="team.slug" xs4 sm3 md2 d-flex>
-										<v-card flat tile class="d-flex card-img" @click="selectTeam(team)" :class="{active: selectedTeams.findIndex(e => e.id === team.id) != -1}">
-											<v-card-text class="px-0">
-												<v-img :src="'/images/teams/' + team.image" :lazy-src="'/images/icon.png'" aspect-ratio="1"></v-img>
-											</v-card-text>
-										</v-card>
-									</v-flex>
-								</v-layout>
-								<v-layout row wrap v-else>
-									<v-alert
-									  :value="true"
-									  type="error"
-									>
-										Il n'y a aucune équipe sélectionnable dans cette compétition
-									</v-alert>
-								</v-layout>
-							</v-container>
-						</v-expansion-panel-content>
-					</v-expansion-panel>
 				</v-card-text>
 
 				<v-card-actions class="card-footer">
@@ -177,13 +128,13 @@
                 console.log('saveTeams')
                 console.log(this.selectedTeams)
 				await this.$store.dispatch('users/updateUserTeams', this.selectedTeams)
-                // this.$router.replace('/home')
+                // this.$router.replace('/gamemode')
 			},
 			clear () {
                 this.selectedTeams = []
             },
 			goBack() {
-				this.$router.replace("/home")
+				this.$router.replace("/gamemode")
 			},
 			logout() {
 				console.log("Clicked logout button")
@@ -196,56 +147,59 @@
 </script>
 
 <style scoped>
-	.card {
-		background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
-		border-radius: 5px;
-	}
-	.card-title {
-		/*background-color: lightslategray;*/
-	}
-	.card-text {
-		background-color: whitesmoke;
-		width: auto;
-		border-radius: 8px;
-	}
-	.card-footer {
-		/* background-color: whitesmoke; */
+html {
+font: normal 100%/1 "Acme", Helvetica, sans-serif;
+}
+.card {
+background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+border-radius: 5px;
+}
+.card-title {
+/*background-color: lightslategray;*/
+}
+.card-text {
+background-color: whitesmoke;
+width: auto;
+border-radius: 8px;
+}
+.card-footer {
+/* background-color: whitesmoke; */
 
-	}
-	.icon:hover {
-		cursor: pointer;
-		color: #fff;
-	}
-	.info {
-		opacity: 0;
-		transition: .5s ease;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		text-align: center;
-		background-color: orangered;
-	}
-	.card-img {
-		cursor: pointer;
-		opacity: 1;
-		transition: .5s ease;
-  		backface-visibility: hidden;
-	}
-	.card-img:hover {
-		/* background-color: orangered; */
-		opacity: 0.3;
-	}
-	.card-img:hover .info{
-		/* background-color: orangered; */
-		opacity: 1;
-	}
-	.v-alert {
-		width: 100%;
-	}
-	.active {
-        background: orangered;
-        border: 6px solid orangered;
-	}
+}
+.icon:hover {
+cursor: pointer;
+color: #fff;
+}
+.info {
+opacity: 0;
+transition: .5s ease;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+text-align: center;
+background-color: orangered;
+}
+.card-img {
+cursor: pointer;
+opacity: 1;
+transition: .5s ease;
+backface-visibility: hidden;
+}
+.card-img:hover {
+/* background-color: orangered; */
+opacity: 0.3;
+}
+.card-img:hover .info{
+/* background-color: orangered; */
+opacity: 1;
+}
+.v-alert {
+width: 100%;
+}
+.active {
+background: orangered;
+border: 6px solid orangered;
+}
 </style>
