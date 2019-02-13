@@ -61,7 +61,106 @@
         </v-container>
 
 		<v-container id="main" fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
-
+		<!-- The Modal Team -->
+		<div id="modalBox">
+			<div class="modal-dialog modal-lg">
+			  	<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+					  	<span class="modal-title">Tes équipes</span>
+						<nuxt-link to="/home">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true" class="white-text"><i class="fa fa-arrow-circle-left"></i></span>
+							</button>
+						</nuxt-link>					
+					</div>
+					<!-- Modal body -->
+					<div id="modalBoxContent" class="modal-body">
+						<div class="flex-container-modal-box-title">
+							<h1>Tu supportes {{ loadedUserTeams.length }} équipe(s)...</h1>
+						</div>
+						<div v-if="loadedUserTeams.length > 0">
+							<div class="flex-container-modal-Title banner2 text-center">
+								<h2>Tes équipes</h2>
+							</div>
+							<div class="flex-container-MesEquipes">
+								<div class="OtherTeam" v-for="team in loadedUserTeams">
+									<span v-if="team">
+										<img v-lazy="'/images/teams/' + team.image" class="imgModalFlagTeam" />
+										<nuxt-link :to="'/user/teams/' + team.slug" class="overlay">
+											<div class="textActivity">
+												<span v-if="team.category">{{ team.category.name }}</span><br />
+												{{ team.name }}<br /><br />+Infos</div>
+	 									</nuxt-link>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="modalBoxContent" class="modal-body">
+						<div class="flex-container-modal-Title banner text-center">
+							<h2>Supporter une nouvelle équipe, un(e) athlète ?</h2>
+						</div>
+						<div class="flex-container-modal-OtherTeam">
+							<h6>Dans quel sport ?</h6>
+						</div>
+						<div class="flex-container-modal-OtherTeam-Img">
+							<div class="OtherTeam">
+								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
+								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
+								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
+								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
+								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
+								<img src="/images/competitions/football.png" class="imgModalFlagTeam"/>
+							</div>
+						</div>
+						<div class="flex-container-modal-OtherTeam">
+							<h6>Dans quel pays ?</h6>
+						</div>
+						<div class="flex-container-modal-OtherTeam-Img" v-if="loadedCompetitions != ''">
+							<div class="OtherTeam" v-for="competition in loadedCompetitions">
+								<img :src="'/images/competitions/' + competition.image" class="imgModalFlagTeam"/>
+								<nuxt-link :to="'/user/competitions/' + competition.slug" class="overlayOtherTeam">
+									<div class="textActivity">
+										<span v-if="competition.category">{{ competition.category.name}}</span><br />
+										{{ competition.name}}<br />
+										<span v-for="country in competition.countries" v-if="competition.countries">{{ country.name }}</span><br />+Infos</div>
+								</nuxt-link>
+							</div>
+						</div>
+						
+						<!-- Loading placeholder -->
+						<div class="ph-item" v-else>
+							<div class="col-md-2">
+						        <div class="ph-picture"></div>
+							</div>
+							<div class="col-md-2">
+						        <div class="ph-picture"></div>
+							</div>
+							<div class="col-md-2">
+						        <div class="ph-picture"></div>
+							</div>
+							<div class="col-md-2">
+						        <div class="ph-picture"></div>
+							</div>
+							<div class="col-md-2">
+						        <div class="ph-picture"></div>
+							</div>
+							<div class="col-md-2">
+						        <div class="ph-picture"></div>
+							</div>
+						</div>
+					</div>
+					<!-- Modal footer -->
+					<div class="modal-footer">
+					  	<nuxt-link to="/home">
+					  		<button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+					  	</nuxt-link>
+					</div>
+			  	</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal-box -->		
         </v-container>
 		
         <v-container fluid id="footer" style="padding: 0; max-width: 1000px; background-color: black; position: sticky; bottom: 0" class="text-xs-center">
