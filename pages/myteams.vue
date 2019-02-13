@@ -37,7 +37,7 @@
 
 				<v-card-actions class="card-footer">
 					<v-flex class="text-xs-center">
-						<v-btn nuxt color="error" to="/gamemode" class="elevation-0">Retour</v-btn>
+						<v-btn nuxt color="error" to="/gamemode" class="elevation-1" style="margin-bottom: 20px">Retour</v-btn>
 					</v-flex>
 				</v-card-actions>
 			</v-card>
@@ -149,6 +149,9 @@
 </script>
 
 <style scoped>
+body {
+font: normal 100%/1 "Acme", Helvetica, sans-serif;
+}
 .card {
 background: linear-gradient(-45deg, #ffb76b 0%, #ffa73d 50%, #FF7C01 51%, #ff7f04 100%);
 border-radius: 5px;
