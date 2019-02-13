@@ -38,6 +38,7 @@
 					<v-btn color="info" @click="registerModal = true">Register</v-btn>
 					<!-- <v-btn color="success">Success</v-btn> -->
 					<v-btn round large color="deep-orange" dark @click="signInWithGoogle">Game Mode</v-btn>
+					<v-btn to="/gamemode_jm">Gamemode JM</v-btn>
 
 					<v-dialog
 					  	v-model="loginModal"
