@@ -15,9 +15,11 @@
             </v-layout>
             <v-layout row>
                 <v-flex shrink>
-                    <div id="avatar">
-                        <img src="/images/avatar.png" class="imgAvatar" />
-                    </div>
+                    <nuxt-link to="/">
+                        <div id="avatar">
+                            <img src="/images/avatar.png" class="imgAvatar" />
+                        </div>
+                    </nuxt-link>
                 </v-flex>
                 <v-flex grow>
                     <v-layout row>
@@ -67,7 +69,7 @@
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white; style: 30px">
             <v-layout>
                 <v-flex d-flex x2 align-center text-xs-left style="padding-left: 20px; cursor: default" @click="eventsByDate('substractOne')">
-                << Précèdent
+                Précèdent
                 </v-flex>
                 <v-flex d-flex x8 justify-center align-center class="text-xs-center menuDay">
                     {{ date | moment('dddd, MMMM Do YYYY') }}

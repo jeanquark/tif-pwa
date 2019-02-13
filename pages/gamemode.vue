@@ -692,7 +692,6 @@
 	background-color: orangered;
 	}
 
-
 	#dock-container {
 	height: 80px;
 	padding: 0;
@@ -787,10 +786,6 @@
 
 		@media only screen and (max-width: 768px) {
 
-		#app {
-		font: normal 90%/1 "Acme", Helvetica, sans-serif;
-		}
-		
 		.pd-right10 {
 		padding-right: 10px;
 		}
