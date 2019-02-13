@@ -61,50 +61,7 @@
         </v-container>
 
 		<v-container id="main" fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
-            <div class="centreImage" style="position: relative">
-                <div class="cadreScore" style="position: absolute; top: 20px; left: 100px">
-                    <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
-                        <v-layout align-start>
-                            <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-                                <div style="background-color: red; height: 100%; width: 2px"></div>
-                            </v-flex>
-                            <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-                                <div style="color: orange;font-size: 80%">
-                                    <span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT - 19:00 (heure local)</span>
-                                </div>
-                            </v-flex>
-                        </v-layout>
-                        <v-layout align-center style="max-width: 100%">
-                            <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-                                <div style="background-color: red; height: 40px; width: 2px"></div>
-                            </v-flex>
-                            <v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
-                                <img src="/images/switzerland.png" class="imgLogoEquipe"/>
-                            </v-flex>
-                            <v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-                                <span class="teamTextSize">Liverpool</span>
-                            </v-flex>
-                            <v-flex sm2 xs2 class="text-xs-center">
-                                <span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">3 - 2</span>
-                            </v-flex>
-                            <v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-                                <span class="teamTextSize">Arsenal</span>
-                            </v-flex>
-                            <v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-right: 15px">
-                                <img src="/images/switzerland.png" class="imgLogoEquipe"/>
-                            </v-flex>
-                        </v-layout>
-                    </v-flex>
-                </div>
-                <div class="content">
-					<img src="/images/carte.png" usemap="#image-map">
 
-					<map name="image-map">
-						<area target="" alt="Stade" title="Stade" href="123456.html" coords="650,390,744,451" shape="rect">
-						<area target="" alt="Montagne" title="Montagne" href="123456.html" coords="223,664,326,756" shape="rect">
-					</map>						
-                </div>
-            </div>
         </v-container>
 		
         <v-container fluid id="footer" style="padding: 0; max-width: 1000px; background-color: black; position: sticky; bottom: 0" class="text-xs-center">
