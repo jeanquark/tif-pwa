@@ -23,10 +23,10 @@
 
 					<v-container fluid>
 						<v-layout row wrap align-center justify-center>
-							<v-flex v-for="team in loadedUserTeams" :key="team.slug" xs4 sm3 md2 lg2 style="padding: 5px">
+							<v-flex v-for="team in loadedUserTeams" :key="team.slug" xs4 sm3 md2 lg2 style="padding: 5px; border: 1px solid orangered; border-radius: 5px">
 									<v-card flat tile class="d-flex">
 										<v-card-text class="px-0">
-											<v-img :src="'/images/teams/' + team.image" :lazy-src="'/images/icon.png'" aspect-ratio="1">
+											<v-img :src="'/images/teams/' + team.image" :lazy-src="'/images/icon.png'" aspect-ratio="1" style="background-size: contain">
 											</v-img>
 										</v-card-text>
 									</v-card>
@@ -37,9 +37,7 @@
 
 				<v-card-actions class="card-footer">
 					<v-flex class="text-xs-center">
-						<v-btn color="success" class="elevation-0" @click="saveTeams">Save</v-btn>
-						<v-btn nuxt color="error" to="/" class="elevation-0">Go back</v-btn>
-						<v-btn class="elevation-0">Clear</v-btn>
+						<v-btn nuxt color="error" to="/gamemode" class="elevation-0">Retour</v-btn>
 					</v-flex>
 				</v-card-actions>
 			</v-card>
@@ -147,11 +145,8 @@
 </script>
 
 <style scoped>
-html {
-font: normal 100%/1 "Acme", Helvetica, sans-serif;
-}
 .card {
-background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+background: linear-gradient((-45deg, #ffb76b 0%, #ffa73d 50%, #FF7C01 51%, #ff7f04 100%));
 border-radius: 5px;
 }
 .card-title {
@@ -163,8 +158,7 @@ width: auto;
 border-radius: 8px;
 }
 .card-footer {
-/* background-color: whitesmoke; */
-
+margin-top: 20px;
 }
 .icon:hover {
 cursor: pointer;
