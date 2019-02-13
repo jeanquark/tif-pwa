@@ -108,36 +108,35 @@
         </v-container>
 		
         <v-container fluid id="footer" style="padding: 0; max-width: 1000px; background-color: black; position: sticky; bottom: 0" class="text-xs-center">
-				<div class="barreOrangered"></div>
-				<div class="barreBlack"></div>
-                <div id="dock-container">
-                    <div id="dock">
-                        <ul>
-                            <li>
-                                <nuxt-link to="/myresult"><img src="/images/menuResultat.png">
-                                <span class="textMenu">Mes classements</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/myinventory"><img src="/images/menuShop.png">
-                                <span class="textMenu">Inventaire</span></nuxt-link>
-                            </li>
-                            <li id="active">
-                                <nuxt-link to="/gamemode"><img src="/images/menuHome.png">
-                                <span class="textMenu">Aujourd'hui</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/myfriends"><img src="/images/menuSocial.png">
-                                <span class="textMenu">Mes amis</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/scoremode"><img src="/images/menuResultat.png">
-                                <span class="textMenu">ScoreMode</span></nuxt-link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </v-container>
-        </v-container>     
+			<div class="barreOrangered"></div>
+			<div class="barreBlack"></div>
+			<div id="dock-container">
+				<div id="dock">
+					<ul>
+						<li>
+							<nuxt-link to="/myresult"><img src="/images/menuResultat.png">
+							<span class="textMenu">Mes classements</span></nuxt-link>
+						</li>
+						<li>
+							<nuxt-link to="/myinventory"><img src="/images/menuShop.png">
+							<span class="textMenu">Inventaire</span></nuxt-link>
+						</li>
+						<li id="active">
+							<nuxt-link to="/gamemode"><img src="/images/menuHome.png">
+							<span class="textMenu">Aujourd'hui</span></nuxt-link>
+						</li>
+						<li>
+							<nuxt-link to="/myfriends"><img src="/images/menuSocial.png">
+							<span class="textMenu">Mes amis</span></nuxt-link>
+						</li>
+						<li>
+							<nuxt-link to="/scoremode"><img src="/images/menuResultat.png">
+							<span class="textMenu">ScoreMode</span></nuxt-link>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</v-container>
     </v-content>
 </template>
 
