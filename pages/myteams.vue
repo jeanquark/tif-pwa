@@ -4,7 +4,7 @@
 			<v-card class="card">
 				<v-card-title primary-title>
 					<v-flex xs6>
-						<h2 class="text-xs-left" style="color: white; font-family: "Acme"">Fan de...</h2>
+						<h2 class="text-xs-left" style="color: white; font-family: Acme">Fan de...</h2>
 					</v-flex>
 					<v-flex xs6 class="text-xs-right">
 						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
@@ -12,7 +12,7 @@
 				</v-card-title>
 
 				<v-card-text class="card-text mx-3">
-					<div class="text-xs-center" style="color: white; font-family: "Acme"">
+					<div class="text-xs-center" style="color: white; font-family: Acme">
 						<h3>Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }} :</h3>
 						<!-- <b>loadedUserTeams:</b> {{ loadedUserTeams }}<br /><br /> -->
 						<!-- <b>loadedCompetitions:</b> {{ loadedCompetitions }}<br /><br /> -->
