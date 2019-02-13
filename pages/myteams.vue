@@ -1,5 +1,5 @@
 <template>
-	<v-layout align-center justify-center row fill-height style="background-color: black">
+	<v-layout align-center justify-center row fill-height style="background-color: black; font: normal 100%/1 "Acme", Helvetica, sans-serif">
 		<v-flex xs12 sm10 md8 lg6>
 			<v-card class="card">
 				<v-card-title primary-title>
@@ -25,8 +25,8 @@
 						<v-layout row wrap align-center justify-center>
 							<v-flex v-for="team in loadedUserTeams" :key="team.slug" xs4 sm3 md2 lg2 style="margin: 5px; border: 1px solid orangered; border-radius: 5px">
 									<v-card flat tile class="d-flex" style="border-radius: 5px">
-										<v-card-text class="px-0">
-											<v-img contain :src="'/images/teams/' + team.image" :lazy-src="'/images/icon.png'" aspect-ratio="1" style="padding: 5px">
+										<v-card-text style="padding-left: 3px; padding-right: 3px">
+											<v-img contain :src="'/images/teams/' + team.image" :lazy-src="'/images/icon.png'" aspect-ratio="1">
 											</v-img>
 										</v-card-text>
 									</v-card>
@@ -145,13 +145,6 @@
 </script>
 
 <style scoped>
-.container {
-font: normal 100%/1 "Acme", Helvetica, sans-serif;
-}
-.imgFlag {
-backgroune-size: coutain;
-padding: 5px;
-}
 .card {
 background: linear-gradient(-45deg, #ffb76b 0%, #ffa73d 50%, #FF7C01 51%, #ff7f04 100%);
 border-radius: 5px;
