@@ -1,5 +1,5 @@
 <template>
-	<v-layout align-center justify-center row fill-height style="background-color: black; font: normal 100%/1 "Acme", Helvetica, sans-serif">
+	<v-layout align-center justify-center row fill-height style="background-color: black">
 		<v-flex xs12 sm10 md8 lg6>
 			<v-card class="card">
 				<v-card-title primary-title>
@@ -49,6 +49,10 @@
 	export default {
 		head: {
 			title: 'Teams',
+            link: [
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' },
+                { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
+			]
 		},
 		layout: "layoutFront",
 		// middleware: ['auth-check'],
