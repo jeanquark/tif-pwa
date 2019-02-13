@@ -1013,7 +1013,7 @@ position: relative;
 height: 30px;
 top: 2px;
 color: #ffffff;
-font: normal 150%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.5em;
 text-shadow: 2px 2px 1px rgba(255,255,255,0.5) ;
 }
 
@@ -1021,7 +1021,7 @@ text-shadow: 2px 2px 1px rgba(255,255,255,0.5) ;
 position: relative;
 height: 30px;
 color: #ffffff;
-font: normal 60%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.6em;
 }
 
 .modal-header .close {
@@ -1095,7 +1095,7 @@ padding-left: 5px;
 .flex-container-modal-box-title h1 {
 text-align: center;
 color: #000000;
-font: normal 150%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.5em;
 text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 margin-top: 10px;
 }
@@ -1213,7 +1213,7 @@ color: black;
 margin-left: 10px;
 margin-right: 10px;
 text-align: center;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 .imgModalAvatar {
@@ -1348,7 +1348,7 @@ width: 100%;
 .textModalMenuAvatar {
 position: relative;
 top: 0;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 /* Modal Mon profil */
@@ -1448,7 +1448,7 @@ width: 50px;
 position: relative;
 top: 8px;
 color: #000000;
-font: normal 200%/1 "bangers", Helvetica, sans-serif;
+font-size: 2.0em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }
 
@@ -1456,7 +1456,7 @@ text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 position: relative;
 top: 8px;
 color: orangered;
-font: normal 200%/1 "bangers", Helvetica, sans-serif;
+font-size: 2.0em;
 text-shadow: 2px 2px 1px rgba(255,69,0,0.5) ;
 }
 
@@ -1464,7 +1464,7 @@ text-shadow: 2px 2px 1px rgba(255,69,0,0.5) ;
 position: relative;
 top: 4px;
 color: #000000;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }
 
@@ -1494,7 +1494,7 @@ margin-top: 0;
 background-color: orangered;
 padding: 5px;
 color: #000000;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }
 
@@ -1544,7 +1544,7 @@ background: #08b;
 background-image: radial-gradient(transparent 30%, rgba(0, 0, 0, 0.2));
 border: 0 solid rgba(0,0,0,0.2);
 color: #ffffff;
-font: normal 140%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.4em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 position: relative;
 }
@@ -1613,11 +1613,11 @@ align-items: center;
 justify-content: center;
 padding: 10px;
 border: none;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 }
 
 .btn {
-font: normal 140%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.4em;
 }
 
 /* Paramètres */
@@ -1642,7 +1642,7 @@ padding-top: 6px;
 padding-left: 10px;
 width: 60%;
 color: #000000;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 .columnParametreButtonYes {
@@ -1654,7 +1654,7 @@ width: 40%;
 text-align: center;
 color: white;
 background-color: green;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 .columnParametreButtonNo {
@@ -1666,7 +1666,7 @@ width: 40%;
 text-align: center;
 color: white;
 background-color: red;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 .columnParametreButton {
@@ -1678,7 +1678,7 @@ width: 40%;
 text-align: center;
 color: white;
 background-color: orangered;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 a:hover {
@@ -1695,7 +1695,7 @@ width: 100%;
 text-align: center;
 color: white;
 background-color: orangered;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 /* Langues */
@@ -1713,7 +1713,7 @@ width: 100%;
 text-align: center;
 color: #000000;
 background-color: white;
-font: normal 140%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.4em;
 }
 
 /* Birth */
@@ -1727,7 +1727,7 @@ width: 100%;
 text-align: center;
 color: #ffffff;
 background-color: orangered;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 .flex-container-modal-Birth {
@@ -1756,7 +1756,7 @@ text-align: center;
 .loginmodal-container h1 {
 text-align: center;
 color: #000000;
-font: normal 140%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.4em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }
 
@@ -1765,7 +1765,7 @@ width: 90%;
 margin-top: 10px;
 height: 44px;
 color: #000000;
-font: normal 140%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.4em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 text-align: center;
 margin-bottom: 10px;
@@ -1789,7 +1789,7 @@ box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 
 .loginmodal {
 text-align: center;
-font: normal 160%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.6em;
 height: 36px;
 padding: 0 8px;
 /* border-radius: 3px; */
@@ -1819,7 +1819,7 @@ border-radius: 0 5px 5px 0;
 text-align: center;
 color: #ffffff;
 background-color: orangered;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 }
 
 /* Country */
@@ -1852,7 +1852,7 @@ width: 100%;
 .flex-container-modal-avatar-title h1 {
 text-align: center;
 color: #000000;
-font: normal 150%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.5em;
 text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 margin-top: 5px;
 }
@@ -1860,7 +1860,7 @@ margin-top: 5px;
 .flex-container-modal-BigTitle h1 {
 text-align: center;
 color: #000000;
-font: normal 200%/1 "bangers", Helvetica, sans-serif;
+font-size: 2.0em;
 text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 margin-top: 10px;
 }
@@ -1868,14 +1868,14 @@ margin-top: 10px;
 .flex-container-modal-OtherTeam h1 {
 text-align: center;
 color: orangered;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 text-shadow: 2px 2px 1px rgba(255,69,0,0.5) ;
 }
 
 .flex-container-modal-TextXPAction h1 {
 text-align: center;
 color: orangered;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 padding: 10px;
 margin-top: 10px;
 }
@@ -1884,7 +1884,7 @@ margin-top: 10px;
 margin-top: 10px;
 text-align: center;
 color: orangered;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 padding: 5px;
 }
 
@@ -1892,7 +1892,7 @@ padding: 5px;
 margin-top: 15px;
 text-align: center;
 color: orangered;
-font: normal 110%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.1em;
 }
 
 .flex-container-modal-OtherTeam-Img {
@@ -2224,7 +2224,7 @@ transform: scale(1)
 
 .textInfo {
 color: #ffffff;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 position: absolute;
 top: 75%;
 left: 50%;
@@ -2235,7 +2235,7 @@ text-align: center;
 
 .textInfoAmi {
 color: #ffffff;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 position: absolute;
 top: 65%;
 left: 50%;
@@ -2246,7 +2246,7 @@ text-align: center;
 
 .textEventCountry {
 color: #ffffff;
-font: normal 150%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.5em;
 position: absolute;
 top: 25%;
 left: 50%;
@@ -2257,7 +2257,7 @@ text-align: center;
 
 .textEventCountry2 {
 color: #ffffff;
-font: normal 90%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.9em;
 position: absolute;
 top: 75%;
 left: 50%;
@@ -2268,7 +2268,7 @@ text-align: center;
 
 .textActivity {
 color: #ffffff;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -2280,7 +2280,7 @@ margin: 0;
 
 .textGoodies {
 color: #ffffff;
-font: normal 140%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.4em;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -2292,7 +2292,7 @@ margin: 0;
 
 .textAction {
 color: #ffffff;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -2303,7 +2303,7 @@ text-align: center;
 
 .textActivityXP {
 color: #ffffff;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 position: absolute;
 top: 40%;
 left: 50%;
@@ -2314,7 +2314,7 @@ text-align: center;
 
 .textEvent3 {
 color: #ffffff;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -2325,7 +2325,7 @@ text-align: center;
 
 .textActivityGoodies {
 color: #ffffff;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 position: absolute;
 top: 30%;
 left: 50%;
@@ -2336,7 +2336,7 @@ text-align: center;
 
 .textActivityGoodiesSmall {
 color: #ffffff;
-font: normal 90%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.9em;
 position: absolute;
 top: 30%;
 left: 50%;
@@ -2347,7 +2347,7 @@ text-align: center;
 
 .textActivityXPNo {
 color: #ffffff;
-font: normal 90%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.9em;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -2358,7 +2358,7 @@ text-align: center;
 
 .textInfoXP {
 color: #ffffff;
-font: normal 70%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.7em;
 position: absolute;
 top: 85%;
 left: 50%;
@@ -2369,7 +2369,7 @@ text-align: center;
 
 .textInfoGoodiesHover {
 color: #ffffff;
-font: normal 75%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.75em;
 position: absolute;
 top: 75%;
 left: 50%;
@@ -2380,7 +2380,7 @@ text-align: center;
 
 .textInfoGoodies {
 color: #ffffff;
-font: normal 60%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.6em;
 text-shadow: 2px 2px 1px rgba(255,255,255,0.5) ;
 position: absolute;
 top: 50%;
@@ -2395,7 +2395,7 @@ justify-content: center;
 position: relative;
 top: 0;
 color: #000000;
-font: normal 200%/1 "bangers", Helvetica, sans-serif;
+font-size: 2.0em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }
 
@@ -2403,7 +2403,7 @@ text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 justify-content: center;
 position: relative;
 color: #000000;
-font: normal 140%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.4em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }
 
@@ -2411,7 +2411,7 @@ text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 position: relative;
 top: -40px;
 color: #000000;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }	
 
@@ -2419,7 +2419,7 @@ text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 position: relative;
 top: 0;
 color: #000000;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }	
 
@@ -2553,7 +2553,7 @@ bottom: 0;
 position: relative;
 top: 75px;
 color: #ffffff;
-font: normal 200%/1 "bangers", Helvetica, sans-serif;
+font-size: 2.0em;
 text-shadow: 2px 2px 1px rgba(255,255,255,0.5) ;
 }
 
@@ -2563,7 +2563,7 @@ background: orangered;
 background-image: radial-gradient(transparent 30%, rgba(0, 0, 0, 0.2));
 border: 0 solid rgba(0,0,0,0.2);
 color: #ffffff;
-font: normal 150%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.5em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 position: relative;
 }	
@@ -2676,7 +2676,7 @@ color: #fff;
 }
 
 #dock-container2 li#active .textMenu {
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 padding-bottom: 5px;
 }
 	
@@ -2686,7 +2686,7 @@ color: #fff;
 }
 
 #dock-container2 .textMenu {
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 padding-bottom: 5px;
 }
 
@@ -2722,7 +2722,7 @@ width: 30%;
 text-align: center;
 color: white;
 background-color: orangered;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 .columnClassementNumber2 {
@@ -2733,7 +2733,7 @@ width: 25%;
 text-align: center;
 color: white;
 background-color: orangered;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 .columnClassement2 {
@@ -2744,7 +2744,7 @@ width: 15%;
 text-align: center;
 color: white;
 background-color: orangered;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 table .thTif, table .tdTif {
@@ -2782,18 +2782,18 @@ border-top: none;
 
 .tableText {
 color: #000000;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 margin: 20px;
 }
 
 .tableTextEvent {
 color: #000000;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 .tableTextClassement {
 color: #000000;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 table .tdEvent {
@@ -2802,7 +2802,7 @@ padding-right: 10px;
 margin: 0;
 font-weight: normal;
 width: 28%;
-font: normal 90%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.9em;
 border: none;
 }
 
@@ -2812,7 +2812,7 @@ padding-right: 10px;
 margin: 0;
 font-weight: normal;
 width: 8%;
-font: normal 90%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.9em;
 border: none;
 }	
 
@@ -2822,7 +2822,7 @@ padding-right: 10px;
 margin: 0;
 font-weight: normal;
 width: 28%;
-font: normal 90%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.9em;
 border: none;
 }
 
@@ -2862,7 +2862,7 @@ padding: 5px;
 .textModalMenuResultats {
 position: relative;
 top: 3px;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }
 
@@ -2883,7 +2883,7 @@ padding-bottom: 5px;
 margin: 0;
 font-weight: normal;
 width: 50%;
-font: normal 90%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.9em;
 border-left: 1px solid lightgray;
 border-top: none;
 }
@@ -2896,7 +2896,7 @@ padding-bottom: 15px;
 margin: 0;
 font-weight: normal;
 width: 50%;
-font: normal 90%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.9em;
 border-top: none;
 }
 
@@ -2911,7 +2911,7 @@ padding-right: 10px;
 margin: 0;
 font-weight: normal;
 width: 20%;
-font: normal 80%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.8em;
 border: none;
 }
 
@@ -2922,7 +2922,7 @@ padding-right: 10px;
 margin: 0;
 font-weight: normal;
 color: #000000;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 border: none;
 }
 
@@ -2934,7 +2934,7 @@ padding-top: 15px;
 margin: 0;
 font-weight: normal;
 color: #000000;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 border: none;
 }
 
@@ -2945,7 +2945,7 @@ padding-top: 6px;
 padding-bottom: 3px;
 margin: 0;
 font-weight: normal;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 background-color: black;
 border: none;
 }
@@ -2969,7 +2969,7 @@ text-align: center;
 margin: 5px;
 width: 35%;
 border-radius: 5px;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 .boxOrangered {
@@ -2979,7 +2979,7 @@ text-align: center;
 margin: 5px;
 width: 35%;
 border-radius: 5px;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 }
 
 .modal-footer-event {
@@ -2993,7 +2993,7 @@ align-items: center;
 -ms-flex-pack: end;
 justify-content: center;
 border: none;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 }
 
 /* Match */
@@ -3056,7 +3056,7 @@ width: 100%;
 margin: 0;
 padding: 0;
 color: #ffffff;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-shadow: 2px 2px 1px rgba(255,255,255,0.25) ;
 }
 
@@ -3108,7 +3108,7 @@ height: 30px;
 flex-grow: 1;
 text-align: center;
 color: #000000;
-font: normal 110%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.1em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.25);
 padding: 5px;
 padding-top: 8px;
@@ -3123,7 +3123,7 @@ margin: 3px;
 padding: 3px;
 flex-grow: 2;
 text-align: center;
-font: normal 80%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.8em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.25);
 }
 
@@ -3135,7 +3135,7 @@ margin: 3px;
 padding: 3px;
 flex-grow: 2;
 text-align: center;
-font: normal 80%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.8em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.25);
 }
 
@@ -3147,7 +3147,7 @@ margin: 3px;
 padding: 6px;
 flex-grow: 2;
 text-align: center;
-font: normal 80%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.8em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.25);
 }
 
@@ -3166,7 +3166,7 @@ width: 75%;
 flex-grow: 1;
 text-align: center;
 color: #000000;
-font: normal 150%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.5em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.25);
 padding: 10px;
 margin: 5px;
@@ -3181,7 +3181,7 @@ flex-grow: 1;
 width: 100%;
 flex-grow: 1;
 color: #000000;
-font: normal 80%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.8em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.25);
 padding: 10px;
 padding-left: 40px;
@@ -3197,7 +3197,7 @@ flex-grow: 1;
 width: 100%;
 flex-grow: 1;
 color: #000000;
-font: normal 80%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.8em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.25);
 padding: 10px;
 padding-right: 40px;
@@ -3216,7 +3216,7 @@ margin: 5px;
 padding: 10px;
 flex-grow: 1;
 text-align: center;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.25);
 background: rgba(1,1,1,0.5) !important;
 color: #fff;
@@ -3236,7 +3236,7 @@ width: 30%;
 border-radius: 5px;
 text-align: center;
 color: #000000;
-font: normal 130%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.3em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.25);
 padding: 10px;
 margin: 5px;
@@ -3257,7 +3257,7 @@ margin-bottom: 10px;
 width: 100%;
 text-align: center;
 margin: 5px;
-font: normal 90%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.9em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.25);
 }
 
@@ -3320,7 +3320,7 @@ padding-top: 3px;
 .textModalSocial {
 position: relative;
 top: 0;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }
 
@@ -3336,14 +3336,14 @@ background: MediumSlateBlue; /* Old browsers */
 
 .textBoxFanshop {
 color: lime;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 }
 
 .textBoxFanshop2 {
 color: black;
 background-color: lime;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 padding: 3px;
 border-radius: 5px;
@@ -3351,7 +3351,7 @@ border-radius: 5px;
 
 .textBoxGoodies {
 color: orangered;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 7px;
 }
@@ -3361,7 +3361,7 @@ color: white;
 background-color: orangered;
 border-radius: 5px;
 padding: 5px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 0;
 margin-top: 5px;
@@ -3372,7 +3372,7 @@ color: white;
 background-color: MediumSlateBlue;
 border-radius: 5px;
 padding: 5px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 0;
 margin-top: 5px;
@@ -3380,7 +3380,7 @@ margin-top: 5px;
 
 .textBoxGoodiesTeam {
 color: orangered;
-font: normal 70%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.7em;
 text-align: center;
 margin-bottom: 0;
 margin-top: 5px;
@@ -3388,7 +3388,7 @@ margin-top: 5px;
 
 .textBoxGoodiesTeamNo {
 color: MediumSlateBlue;
-font: normal 70%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.7em;
 text-align: center;
 margin-bottom: 0;
 margin-top: 5px;
@@ -3396,7 +3396,7 @@ margin-top: 5px;
 
 .textBoxGoodiesNo {
 color: MediumSlateBlue;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 }
 
@@ -3406,32 +3406,32 @@ background-color: lime;
 border-radius: 5px;
 padding-right: 8px;
 padding-left: 8px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 }
 
 .textBoxFanshopToken {
 color: yellow;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 }
 
 .textBoxFanshopAction {
 color: darkred;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 }
 
 .textBoxFanshopGoodies {
 color: orangered;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-top: 5px;
 }
 
 .textBoxFanshopGoodiesNo {
 color: MediumSlateBlue;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-top: 5px;
 }
@@ -3599,7 +3599,7 @@ border: 1px solid MediumSlateBlue;
 text-align: center;
 margin-bottom: 20px;
 height: 10px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 }
 
 .progress-value {
@@ -3615,7 +3615,7 @@ text-decoration: none;
 position: absolute;
 top: 5px;
 right: 5px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }
 
@@ -3747,14 +3747,14 @@ margin: 2px;
 
 .textBoxActionXP {
 color: darkred;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 padding-top: 5px;
 }
 
 .textBoxActionXPNo {
 color: Gainsboro;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-top: 5px;
 }
@@ -3764,7 +3764,7 @@ color: white;
 background-color: darkred;
 border-radius: 5px;
 padding: 5px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 0;
 margin-top: 0;
@@ -3775,7 +3775,7 @@ color: white;
 background-color: orangered;
 border-radius: 5px;
 padding: 5px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 0;
 margin-top: 5px;
@@ -3786,7 +3786,7 @@ color: white;
 background-color: orangered;
 border-radius: 5px;
 padding: 5px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 0;
 }
@@ -3796,7 +3796,7 @@ color: white;
 background-color: Gainsboro;
 border-radius: 5px;
 padding: 5px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 0;
 margin-top: 5px;
@@ -3843,7 +3843,7 @@ filter: grayscale(100%);
 
 .textBoxActionXP2 {
 color: darkred;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 7px;
 }
@@ -3894,14 +3894,14 @@ margin: 2px;
 
 .textBoxActionEvent {
 color: darkturquoise;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-top: 5px;
 }
 
 .textBoxActionXPNo {
 color: Gainsboro;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-top: 5px;
 }
@@ -3911,7 +3911,7 @@ color: white;
 background-color: darkturquoise;
 border-radius: 5px;
 padding: 5px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 0;
 margin-top: 5px;
@@ -3922,7 +3922,7 @@ color: white;
 background-color: orangered;
 border-radius: 5px;
 padding: 5px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 0;
 margin-top: 5px;
@@ -3934,7 +3934,7 @@ color: white;
 background-color: MediumSlateBlue;
 border-radius: 5px;
 padding: 5px;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 0;
 margin-top: 5px;
@@ -3965,7 +3965,7 @@ padding: 7px;
 
 .textBoxActionEvent2 {
 color: darkturquoise;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 text-align: center;
 margin-bottom: 7px;
 }
@@ -4009,7 +4009,7 @@ margin-top: 10px;
 position: absolute;
 z-index: 1070;
 display: block;
-font-family: "bangers", Helvetica, Arial, sans-serif;
+font-family: "Acme", Helvetica, Arial, sans-serif;
 font-size: 100%;
 font-style: normal;
 font-weight: normal;
@@ -4278,7 +4278,7 @@ margin-top: 10px;
     height: 50px;
     z-index: 2;
     text-transform: uppercase;
-	font: normal 80%/1 "bangers", Helvetica, sans-serif;
+	font-size: 0.8em;
     text-align: center;
     width: 100%;
 }
@@ -4291,7 +4291,7 @@ margin-top: 10px;
     height: 50px;
     z-index: 2;
     text-transform: uppercase;
-	font: normal 100%/1 "bangers", Helvetica, sans-serif;
+	font-size: 1.0em;
     text-align: center;
     width: 100%;
 }
@@ -4304,7 +4304,7 @@ margin-top: 10px;
     height: 50px;
     z-index: 2;
     text-transform: uppercase;
-    font: normal 100%/1 "bangers", Helvetica, sans-serif;
+    font-size: 1.0em;
     text-align: center;
     width: 100%;
 }
@@ -4316,7 +4316,7 @@ margin-top: 10px;
     left: 8%;
     z-index: 3;
     text-transform: uppercase;
-	font: normal 80%/1 "bangers", Helvetica, sans-serif;
+	font-size: 0.8em;
     text-align: center;
     width: 84%;
 }
@@ -4328,7 +4328,7 @@ margin-top: 10px;
     left: 8%;
     z-index: 3;
     text-transform: uppercase;
-    font: normal 150%/1 "bangers", Helvetica, sans-serif;
+    font-size: 1.5em;
     text-align: center;
     width: 84%;
 }
@@ -4340,7 +4340,7 @@ margin-top: 10px;
     left: 0;
     z-index: 1;
     text-transform: uppercase;
-	font: normal 400%/1 "bangers", Helvetica, sans-serif;
+	font: normal 400%/1 "Acme", Helvetica, sans-serif;
     text-align: center;
     width: 100%;
 }
@@ -4352,7 +4352,7 @@ margin-top: 10px;
     left: 0;
     z-index: 1;
     text-transform: uppercase;
-    font: normal 400%/1 "bangers", Helvetica, sans-serif;
+    font: normal 400%/1 "Acme", Helvetica, sans-serif;
     text-align: center;
     width: 100%;
 }
@@ -4363,7 +4363,7 @@ margin-top: 10px;
     left: 0;
     z-index: 1;
     text-transform: uppercase;
-	font: normal 400%/1 "bangers", Helvetica, sans-serif;
+	font: normal 400%/1 "Acme", Helvetica, sans-serif;
     text-align: center;
     width: 100%;
 	top: 35px;
@@ -4376,7 +4376,7 @@ margin-top: 10px;
     left: 0;
     z-index: 1;
     text-transform: uppercase;
-	font: normal 400%/1 "bangers", Helvetica, sans-serif;
+	font: normal 400%/1 "Acme", Helvetica, sans-serif;
     text-align: center;
     width: 100%;
 }
@@ -4388,7 +4388,7 @@ margin-top: 10px;
     left: 0;
     z-index: 1;
     text-transform: uppercase;
-    font: normal 200%/1 "bangers", Helvetica, sans-serif;
+    font-size: 2.0em;
     text-align: center;
     width: 100%;
 }
@@ -4399,7 +4399,7 @@ padding-bottom: 5px;
 margin: 5px;
 text-align: center;
 font-weight: normal;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 color: black;
 border: none;
 }
@@ -4409,7 +4409,7 @@ padding-top: 10px;
 margin: 5px;
 text-align: center;
 font-weight: normal;
-font: normal 140%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.4em;
 color: black;
 border: none;
 }
@@ -4418,7 +4418,7 @@ table .tdScore {
 margin: 0;
 font-weight: normal;
 width: 13%;
-font: normal 80%/1 "bangers", Helvetica, sans-serif;
+font-size: 0.8em;
 border: none;
 vertical-align: middle;
 }
@@ -4427,7 +4427,7 @@ table .tdScore1 {
 width: 32%;
 font-weight: normal;
 color: #000000;
-font: normal 100%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.0em;
 border: none;
 vertical-align: middle;
 }
@@ -4436,7 +4436,7 @@ table .tdScore2 {
 width: 10%;
 font-weight: normal;
 color: #000000;
-font: normal 120%/1 "bangers", Helvetica, sans-serif;
+font-size: 1.2em;
 border: none;
 }
 
