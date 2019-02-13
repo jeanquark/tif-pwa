@@ -97,7 +97,7 @@
                     </v-flex>
                 </div>
                 <div class="content">
-					<img src="/images/carte.jpg" usemap="#image-map">
+					<img src="/images/carte.png" usemap="#image-map">
 
 					<map name="image-map">
 						<area target="" alt="Stade" title="Stade" href="123456.html" coords="650,390,744,451" shape="rect">
