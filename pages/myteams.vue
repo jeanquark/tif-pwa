@@ -155,6 +155,7 @@ font: normal 100%/1 "Acme", Helvetica, sans-serif;
 .card {
 background: linear-gradient(-45deg, #ffb76b 0%, #ffa73d 50%, #FF7C01 51%, #ff7f04 100%);
 border-radius: 5px;
+margin: 5px;
 }
 .card-text {
 background-color: whitesmoke;
@@ -163,7 +164,6 @@ border-radius: 8px;
 }
 .card-footer {
 margin-top: 20px;
-margin-bottom: 20px;
 }
 .icon:hover {
 cursor: pointer;
