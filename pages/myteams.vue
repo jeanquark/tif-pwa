@@ -576,6 +576,131 @@
     font-size: 1.1em;
     }
         
+	#modalBox {
+    width: 100%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+    padding-left: 0;
+	}
+	.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: .5rem;
+    pointer-events: none;
+	}
+	.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: LightSlateGray;
+    background-clip: padding-box;
+    border: 2px solid black;
+    border-radius: .3rem;
+    outline: 0;
+    padding: 5px;
+	}
+	.modal-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    border: none;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+	}
+	.modal-title {
+    position: relative;
+    height: 30px;
+    top: 2px;
+    color: #ffffff;
+    font: normal 150%/1 "bangers", Helvetica, sans-serif;
+    text-shadow: 2px 2px 1px rgba(255,255,255,0.5);
+	}
+	.modal-header .close {
+    padding-top: 18px;
+    padding-right: 3px;
+    margin: -1rem -1rem -1rem auto;
+	}
+	.button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+	}
+	.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 1;
+	}
+	.modal-body {
+    width: 100%;
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: 5px;
+    padding: 5px;
+    background-color: WHITESMOKE;
+    border-radius: 5px;
+	}
+	.flex-container-modal-box-title h1 {
+    text-align: center;
+    color: #000000;
+    font: normal 150%/1 "bangers", Helvetica, sans-serif;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    margin-top: 10px;
+	}
+	.flex-container-modal-Title {
+    max-width: 100%;
+    display: flex;
+    margin-bottom: 0;
+	}
+	.banner h2 {
+    width: 100%;
+    border-width: 0 1px 1px 1px;
+    border-color: rgba(0,0,0,0.1);
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    display: inline-block;
+    margin: auto;
+    padding: 4px 28px;
+	}
+	.modal-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    font: normal 100%/1 "bangers", Helvetica, sans-serif;
+	}
+	
+	
     /* End Content */
 
 	.menuSport {
