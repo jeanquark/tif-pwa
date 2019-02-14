@@ -3,14 +3,16 @@
 		<v-content>
 			<v-container grid-list text-xs-center style="background-color: orangered; padding: 0; height: 100%; max-width: 1000px;">
 				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; position: relative" class="text-xs-center">
+					<div class="language" style="position: absolute; top: 0">
+						<nuxt-link v-for="locale in $i18n.locales" v-if="locale.code !== $i18n.locale" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
+					</div>
 					<v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn>
 					<p>{{ $t('pages.index.explanation') }}</p>
-					<nuxt-link v-for="locale in $i18n.locales" v-if="locale.code !== $i18n.locale" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
 					<span class="tif1">TIF</span>
 				</v-layout>
 				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; background-color: #fff; color: orange" class="text-xs-center">
 					<span class="tif2">TIF</span>
-					<p style="margin-bottom: 0">Petit texte explicatif</p>
+					<p style="margin-bottom: 0">{{ $t('pages.index.explanation') }}</p>
 					<!-- <nuxt-link to="/login">Login</nuxt-link> -->
 					<v-btn color="primary" @click="loginModal = true">Login</v-btn>
 					<!-- <nuxt-link to="/register">Register</nuxt-link> -->
