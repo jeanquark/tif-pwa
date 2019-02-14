@@ -7,7 +7,7 @@
 						<nuxt-link v-for="locale in $i18n.locales" v-if="locale.code !== $i18n.locale" :key="locale.code" :to="switchLocalePath(locale.code)" style="color: white; text-decoration: none">{{ locale.name }} </nuxt-link>
 					</v-flex>
 					<v-flex class="register" style="position: absolute; top: 10px; left: 10px">
-						<v-btn color="primary" @click="loginModal = true">Login</v-btn> <v-btn color="info" @click="registerModal = true">Register</v-btn>
+						<v-btn @click="loginModal = true">Login</v-btn> <v-btn @click="registerModal = true">Register</v-btn>
 					</v-flex>
 					<v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn>
 					<p>{{ $t('pages.index.explanation') }}</p>
