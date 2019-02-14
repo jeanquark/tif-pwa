@@ -7,10 +7,8 @@
 					<p>{{ $t('pages.index.explanation') }}</p>
 					<nuxt-link v-for="locale in $i18n.locales" v-if="locale.code !== $i18n.locale" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
 				</v-layout>
-				<v-layout align-center column justify-center fill-height style="height: 20%; margin: auto; background-color: #fff; color: orange" class="text-xs-center">
-					<h1 class="text-reflect">TIF</h1>
-				</v-layout>
-				<v-layout align-center column justify-center fill-height style="height: 40%; margin: auto; background-color: #fff; color: orange" class="text-xs-center">
+				<h1 class="text-reflect">TIF</h1>
+				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; background-color: #fff; color: orange" class="text-xs-center">
 					<p style="margin-bottom: 0">Petit texte explicatif</p>
 					<!-- <nuxt-link to="/login">Login</nuxt-link> -->
 					<v-btn color="primary" @click="loginModal = true">Login</v-btn>
@@ -83,6 +81,7 @@ color: white;
 text-transform: none;
 padding: 0;
 margin: 0;
+top: -190px;
 }
 .text-reflect, .text-reflect:before, .text-reflect span {
 display: block;
@@ -94,7 +93,7 @@ position: relative;
 }
 .text-reflect:before {
 content: 'TIF';
-top: 225px;
+top: 228px;
 transform: scale(1, -1);
 z-index: 1;
 color: orangered;
