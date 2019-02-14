@@ -6,10 +6,10 @@
 					<v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn>
 					<p>{{ $t('pages.index.explanation') }}</p>
 					<nuxt-link v-for="locale in $i18n.locales" v-if="locale.code !== $i18n.locale" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
-					<div class="text-effect" style="position: absotule; bottom: 0">TIF</div>
+					<h1 class="text-effect" style="position: absotule">TIF</h1>
 				</v-layout>
 				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; background-color: #fff; color: orange" class="text-xs-center">
-					<div class="text-effect2" style="position: absotule; bottom: 0">TIF</div>
+					<h1 class="text-effect2" style="position: absotule">TIF</h1>
 					<p style="margin-bottom: 0">Petit texte explicatif</p>
 					<!-- <nuxt-link to="/login">Login</nuxt-link> -->
 					<v-btn color="primary" @click="loginModal = true">Login</v-btn>
@@ -71,7 +71,7 @@ h1, h2 {
 display: inline-block;
 width: 100%;
 font-family: "Acme";
-font-size: 7.5em;
+font-size: 10em;
 font-weight: 700;
 text-transform: uppercase;
 letter-spacing: 3px;  
@@ -91,7 +91,7 @@ padding: 0;
 .text-reflect, .text-reflect:before, .text-reflect:after {
 position: relative;
 }
-.text-reflect2 {
+h1 .text-reflect2 {
 content: 'TIF';
 top: 228px;
 transform: scale(1, -1);
