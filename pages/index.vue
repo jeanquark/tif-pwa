@@ -7,7 +7,6 @@
 					<p>{{ $t('pages.index.explanation') }}</p>
 					<nuxt-link v-for="locale in $i18n.locales" v-if="locale.code !== $i18n.locale" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
 				</v-layout>
-				<h1 class="text-reflect">TIF</h1>
 				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; background-color: #fff; color: orange" class="text-xs-center">
 					<p style="margin-bottom: 0">Petit texte explicatif</p>
 					<!-- <nuxt-link to="/login">Login</nuxt-link> -->
