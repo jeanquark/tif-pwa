@@ -134,10 +134,8 @@
 
         </v-container>
 
-        <v-footer style="background-color: black; position: sticky; bottom: 0; width: 100%" height="auto" class="text-xs-center">
-            <v-container fluid style="padding: 0; max-width: 1000px">
-				<div class="barreOrangered"></div>
-				<div class="barreBlack"></div>
+        <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
+            <v-container fluid style="padding: 0; max-width: 800px">
                 <div id="dock-container">
                     <div id="dock">
                         <ul>
@@ -145,11 +143,11 @@
                                 <nuxt-link to="/equipes"><img src="/images/menuShop.png">
                                 <span class="textMenu">Equipes</span></nuxt-link>
                             </li>
-                            <li>
+                            <li id="active">
                                 <nuxt-link to="/competitions"><img src="/images/menuResultat.png">
                                 <span class="textMenu">Compétitions</span></nuxt-link>
                             </li>
-                            <li id="active">
+                            <li>
                                 <nuxt-link to="/scoremode"><img src="/images/menuHome.png">
                                 <span class="textMenu">Matches du jour</span></nuxt-link>
                             </li>
