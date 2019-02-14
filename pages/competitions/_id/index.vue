@@ -62,7 +62,7 @@
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; style: 30px">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
-                    Football - Compétitions - {{ props.item.name }}
+                    Football - Compétitions - Nom de la compétition
                 </v-flex>
             </v-layout>             
         </v-container>
@@ -72,7 +72,7 @@
                 <v-expansion-panel class="elevation-0" :value="0">
                     <v-expansion-panel-content style="background-color: orangered">
                         <div slot="header" class="white--text">
-                            STANDINGS
+                            CLASSEMENT - SAISON 2018-2019
                         </div>
                         <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                         <v-card>
