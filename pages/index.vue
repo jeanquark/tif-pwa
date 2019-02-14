@@ -2,13 +2,14 @@
 	<v-app style="background-color: #000;">
 		<v-content>
 			<v-container grid-list text-xs-center style="background-color: orangered; padding: 0; height: 100%; max-width: 1000px;">
-				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto" class="text-xs-center">
+				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; position: relative" class="text-xs-center">
 					<v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn>
 					<p>{{ $t('pages.index.explanation') }}</p>
 					<nuxt-link v-for="locale in $i18n.locales" v-if="locale.code !== $i18n.locale" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
 					<div class="text-effect" style="position: absotule; bottom: 0">TIF</div>
 				</v-layout>
 				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; background-color: #fff; color: orange" class="text-xs-center">
+					<div class="text-effect2" style="position: absotule; bottom: 0">TIF</div>
 					<p style="margin-bottom: 0">Petit texte explicatif</p>
 					<!-- <nuxt-link to="/login">Login</nuxt-link> -->
 					<v-btn color="primary" @click="loginModal = true">Login</v-btn>
@@ -79,9 +80,8 @@ text-align: center;
 h1 {
 color: white;
 text-transform: none;
-padding: 0;
-margin: 0;
-top: -190px;
+position: absolute;
+bottom: -58px;
 }
 .text-reflect, .text-reflect:before, .text-reflect span {
 display: block;
@@ -91,7 +91,7 @@ padding: 0;
 .text-reflect, .text-reflect:before, .text-reflect:after {
 position: relative;
 }
-.text-reflect:before {
+.text-reflect2 {
 content: 'TIF';
 top: 228px;
 transform: scale(1, -1);
