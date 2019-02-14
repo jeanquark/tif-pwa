@@ -52,7 +52,12 @@
                 <v-flex shrink>
                     <nuxt-link to="/gamemode">
                         <div id="team">
-                            <img src="/images/switzerland.png" class="imgTeam" />
+							<v-tooltip bottom>
+								<template #activator="data">
+									<img v-on="data.on" src="/images/switzerland.png" class="imgTeam" />
+								</template>
+								<span>Clique ici pour commencer à jouer</span>
+							</v-tooltip>
                         </div>
                     </nuxt-link>
                 </v-flex>
@@ -62,14 +67,14 @@
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; style: 30px">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
-                    Soccer
+                    Football
                 </v-flex>
             </v-layout>             
         </v-container>
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white; style: 30px">
             <v-layout>
                 <v-flex d-flex x2 align-center text-xs-left style="padding-left: 20px; cursor: default" @click="eventsByDate('substractOne')">
-                Précèdent
+                << Précèdent
                 </v-flex>
                 <v-flex d-flex x8 justify-center align-center class="text-xs-center menuDay">
                     {{ date | moment('dddd, MMMM Do YYYY') }}
@@ -83,7 +88,7 @@
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
             <v-card-text class="card-text">
                 <v-expansion-panel class="elevation-0" :value="0" v-if="loadedUser">
-                    <v-expansion-panel-content class="orange">
+                    <v-expansion-panel-content style="background-color: orangered">
                         <div slot="header" class="white--text">
                             FAVORITE TEAMS
                         </div>
@@ -144,7 +149,7 @@
 
             <v-card-text class="card-text">
                 <v-expansion-panel class="elevation-0" :value="0">
-                    <v-expansion-panel-content class="green">
+                    <v-expansion-panel-content style="background-color: green">
                         <div slot="header" class="white--text">
                             ALL EVENTS
                         </div>
@@ -606,6 +611,11 @@
     border-bottom: 1px solid green;
     border-left: 1px solid green;
     }
+	
+	.orangered {
+    background-color: orangered;
+    border-color: orangered;
+	}
     
     /* Material Icons */
     
