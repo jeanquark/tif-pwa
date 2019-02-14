@@ -67,7 +67,7 @@
             </v-layout>             
         </v-container>
 
-        <v-container fluid style="max-width: 800px">
+        <v-container fluid style="max-width: 1000px">
             <v-layout justify-center row fill-height>
 				<v-flex  xs12 align-center class="scrolling-wrapper-flexbox">
 				  <div class="cardMenuCompetition" :class="[continent === '' && type === '' ? 'active' : '']" @click="resetCompetitions"><h2>Tous</h2></div>
@@ -81,11 +81,11 @@
             </v-layout>             
         </v-container>
 
-        <v-container fluid style="padding: 0; max-width: 800px; background-color: whitesmoke; margin-bottom: 80px">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
             <v-card-text class="card-text">
                 <v-data-table :items="competitionsFiltered(this.type, this.continent)" class="elevation-0" hide-actions hide-headers>
-					<template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid orange">
-						<v-layout align-center style="padding: 0; border-right: 1px solid orange; border-left: 1px solid orange; border-bottom: 1px solid orange">
+					<template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border-top: 1px solid black">
+						<v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
 							<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
 								<v-layout align-start v-if="props.item.active">
 									<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
@@ -112,10 +112,10 @@
 										<div :class="[props.item.active ? 'greenBar' : 'redBar']"></div>
 									</v-flex>
 									<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-										<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize">{{ props.item.name }}</nuxt-link>
+										<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black"; text-decoration: none">{{ props.item.name }}</nuxt-link>
 									</v-flex>
 									<v-flex sm3 hidden-xs-only class="text-xs-right">
-										<span style="background-color: orange; black: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">FC Barcelone</span>
+										Fan de : <span style="background-color: orangered; padding: 2px 10px; border-radius: 5px; font-size: 100%">FC Barcelone</span>
 									</v-flex>
 									<v-flex sm4 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
 										<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">12345 fans</span>
