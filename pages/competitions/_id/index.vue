@@ -200,6 +200,8 @@
     }
 </script>
 
+<style scope>
+
 		/* Menu compétitions */
 	
 		.scrolling-wrapper-flexbox {
