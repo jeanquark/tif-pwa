@@ -6,6 +6,9 @@
 					<v-flex class="language" style="position: absolute; top: 10px; right: 10px">
 						<nuxt-link v-for="locale in $i18n.locales" v-if="locale.code !== $i18n.locale" :key="locale.code" :to="switchLocalePath(locale.code)" style="color: white; text-decoration: none">{{ locale.name }} </nuxt-link>
 					</v-flex>
+					<v-flex class="register" style="position: absolute; top: 10px; left: 10px">
+						<v-btn color="primary" @click="loginModal = true">Login</v-btn> <v-btn color="info" @click="registerModal = true">Register</v-btn>
+					</v-flex>
 					<v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn>
 					<p>{{ $t('pages.index.explanation') }}</p>
 					<span class="tif1">TIF</span>
@@ -14,12 +17,10 @@
 					<span class="tif2">TIF</span>
 					<p style="margin-bottom: 0">{{ $t('pages.index.explanation') }}</p>
 					<!-- <nuxt-link to="/login">Login</nuxt-link> -->
-					<v-btn color="primary" @click="loginModal = true">Login</v-btn>
 					<!-- <nuxt-link to="/register">Register</nuxt-link> -->
-					<v-btn color="info" @click="registerModal = true">Register</v-btn>
 					<!-- <v-btn color="success">Success</v-btn> -->
 					<v-btn round large color="deep-orange" dark @click="signInWithGoogle">Game Mode</v-btn>
-					<v-dialog v-model="loginModal" width="500">
+					<v-dialog v-model="loginModal" width="600">
 						<Login v-on:loginChildToParent="switchToRegister" />
 					</v-dialog>
 					<v-dialog v-model="registerModal" width="600">
