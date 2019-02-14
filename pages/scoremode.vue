@@ -254,13 +254,7 @@
                                 <nuxt-link to="/tifnews"><img src="/images/menuResultat.png">
                                 <span class="textMenu">TIF News</span></nuxt-link>
                             </li>
-<v-tooltip left>
-        <template #activator="data">
-          <v-btn color="primary" dark v-on="data.on">Left</v-btn>
-        </template>
-        <span>Left tooltip</span>
-      </v-tooltip>
-	  </ul>
+						</ul>
                     </div>
                 </div>
             </v-container>
