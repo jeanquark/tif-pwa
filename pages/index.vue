@@ -90,9 +90,10 @@ font-weight: 700;
 text-transform: uppercase;
 letter-spacing: 3px;  
 text-align: center;
-top: 228px;
+top: 320px;
 transform: scale(1, -1);
 color: orangered;
+position: absolute;
 }
 </style>
 
