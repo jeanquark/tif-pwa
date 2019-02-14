@@ -52,12 +52,7 @@
                 <v-flex shrink>
                     <nuxt-link to="/gamemode">
                         <div id="team">
-							<v-tooltip bottom>
-								<template #activator="data">
-									<img v-on="data.on" src="/images/switzerland.png" class="imgTeam" />
-								</template>
-								<span>Clique ici pour commencer à jouer</span>
-							</v-tooltip>
+							<img src="/images/switzerland.png" class="imgTeam" />
                         </div>
                     </nuxt-link>
                 </v-flex>
@@ -134,8 +129,10 @@
 
         </v-container>
 
-        <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
-            <v-container fluid style="padding: 0; max-width: 800px">
+        <v-footer style="background-color: black; position: sticky; bottom: 0; width: 100%" height="auto" class="text-xs-center">
+            <v-container fluid style="padding: 0; max-width: 1000px">
+				<div class="barreOrangered"></div>
+				<div class="barreBlack"></div>
                 <div id="dock-container">
                     <div id="dock">
                         <ul>
