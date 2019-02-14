@@ -3,9 +3,9 @@
 		<v-content>
 			<v-container grid-list text-xs-center style="background-color: orangered; padding: 0; height: 100%; max-width: 1000px;">
 				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; position: relative" class="text-xs-center">
-					<div class="language" style="position: absolute; top: 0">
-						<nuxt-link v-for="locale in $i18n.locales" v-if="locale.code !== $i18n.locale" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
-					</div>
+					<v-flex class="language" style="position: absolute; top: 10px; right: 10px">
+						<nuxt-link v-for="locale in $i18n.locales" v-if="locale.code !== $i18n.locale" :key="locale.code" :to="switchLocalePath(locale.code)" style="color: white; text-decoration: none">{{ locale.name }} </nuxt-link>
+					</v-flex>
 					<v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn>
 					<p>{{ $t('pages.index.explanation') }}</p>
 					<span class="tif1">TIF</span>
