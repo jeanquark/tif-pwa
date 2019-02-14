@@ -83,50 +83,61 @@
 
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
             <v-card-text class="card-text">
-                <v-data-table :items="competitionsFiltered(this.type, this.continent)" class="elevation-0" hide-actions hide-headers>
-					<template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border-top: 1px solid black">
-						<v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
-							<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
-								<v-layout align-start v-if="props.item.active">
-									<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-										<div style="background-color: green; height: 100%; width: 2px"></div>
-									</v-flex>
-									<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-										<div style="color: orange;font-size: 80%">
-											<span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >OUVERT</span>
-										</div>
-									</v-flex>
-								</v-layout>
-                                <v-layout align-start v-if="!props.item.active">
-                                    <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-                                        <div style="background-color: red; height: 100%; width: 2px"></div>
-                                    </v-flex>
-                                    <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-                                        <div style="color: orange;font-size: 80%">
-                                            <span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT</span>
-                                        </div>
-                                    </v-flex>
-                                </v-layout>
-								<v-layout align-center style="max-width: 100%">
-									<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-										<div :class="[props.item.active ? 'greenBar' : 'redBar']"></div>
-									</v-flex>
-									<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-										<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black"; text-decoration: none">{{ props.item.name }}</nuxt-link>
-									</v-flex>
-									<v-flex sm3 hidden-xs-only class="text-xs-right">
-										Fan de : <span style="background-color: orangered; padding: 2px 10px; border-radius: 5px; font-size: 100%">FC Barcelone</span>
-									</v-flex>
-									<v-flex sm4 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
-										<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">12345 fans</span>
-									</v-flex>
-								</v-layout>
-							</v-flex>
-						</v-layout>
-                    </template>
-                </v-data-table>
+                <v-expansion-panel class="elevation-0" :value="0" v-if="loadedUser">
+                    <v-expansion-panel-content style="background-color: orangered">
+                        <div slot="header" class="white--text">
+                            FAVORITE TEAMS
+                        </div>
+                        <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
+                        <v-card>
+                            <v-card-text style="padding: 0">
+								<v-data-table :items="competitionsFiltered(this.type, this.continent)" class="elevation-0" hide-actions hide-headers>
+									<template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border-top: 1px solid black">
+										<v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black; border-top: 1px solid black
+											<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
+												<v-layout align-start v-if="props.item.active">
+													<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
+														<div style="background-color: green; height: 100%; width: 2px"></div>
+													</v-flex>
+													<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
+														<div style="color: orange;font-size: 80%">
+															<span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >OUVERT</span>
+														</div>
+													</v-flex>
+												</v-layout>
+												<v-layout align-start v-if="!props.item.active">
+													<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
+														<div style="background-color: red; height: 100%; width: 2px"></div>
+													</v-flex>
+													<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
+														<div style="color: orange;font-size: 80%">
+															<span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT</span>
+														</div>
+													</v-flex>
+												</v-layout>
+												<v-layout align-center style="max-width: 100%">
+													<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
+														<div :class="[props.item.active ? 'greenBar' : 'redBar']"></div>
+													</v-flex>
+													<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
+														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none">{{ props.item.name }}</nuxt-link>
+													</v-flex>
+													<v-flex sm3 hidden-xs-only class="text-xs-right">
+														Fan de : <span style="background-color: orangered; padding: 2px 10px; border-radius: 5px; font-size: 100%">FC Barcelone</span>
+													</v-flex>
+													<v-flex sm4 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
+														<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">12345 fans</span>
+                                                    </v-flex>
+                                                </v-layout>
+                                            </v-flex>
+                                        </v-layout>
+                                    </template>
+                                </v-data-table>
+                            </v-card-text>
+                        </v-card>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
             </v-card-text>
-
         </v-container>
 
         <v-footer style="background-color: black; position: sticky; bottom: 0; width: 100%" height="auto" class="text-xs-center">
