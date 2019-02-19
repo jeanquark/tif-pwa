@@ -13,7 +13,7 @@
 					<p>{{ $t('pages.index.explanation') }}</p>
 					<span class="tif1">TIF</span>
 				</v-layout>
-				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; background-color: #fff; color: orange" class="text-xs-center">
+				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; background-color: #fff; color: orange; position: relative" class="text-xs-center">
 					<span class="tif2">TIF</span>
 					<p style="margin-bottom: 0">{{ $t('pages.index.explanation') }}</p>
 					<!-- <nuxt-link to="/login">Login</nuxt-link> -->
@@ -77,12 +77,15 @@ font-family: "Acme";
 font-size: 10em;
 font-weight: 700;
 text-transform: uppercase;
-letter-spacing: 3px;  
 text-align: center;
 color: white;
 text-transform: none;
 position: absolute;
-bottom: -58px;
+bottom: 0;
+padding: 0;
+margin: 0;
+letter-spacing: 3px;
+height: 152px;
 }
 .tif2 {
 display: inline-block;
@@ -91,12 +94,16 @@ font-family: "Acme";
 font-size: 10em;
 font-weight: 700;
 text-transform: uppercase;
-letter-spacing: 3px;  
 text-align: center;
-top: 320px;
+top: 0;
 transform: scale(1, -1);
 color: orangered;
 position: absolute;
+padding: 0;
+margin: 0;
+position: absolute;
+letter-spacing: 3px;
+height: 152px;
 }
 </style>
 
