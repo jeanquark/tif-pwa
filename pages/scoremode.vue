@@ -17,7 +17,7 @@
                 <v-flex shrink>
                     <nuxt-link to="/">
                         <div id="avatar" style="background-color: orangered">
-                            ThisIsFan.com
+                            <span class="textTif">ThisIsFan.com</span>
                         </div>
                     </nuxt-link>
                 </v-flex>
@@ -52,8 +52,8 @@
                 <v-flex shrink>
                     <nuxt-link to="/gamemode">
                         <div id="team" style="background-color: orangered">
-							ScoreMode</br>
-							C'est parti !
+							<span class="textScoreMode">ScoreMode</br>
+							C'est parti !</span>
                         </div>
                     </nuxt-link>
                 </v-flex>
@@ -466,6 +466,17 @@
 </script>
 
 	<style scoped>
+	
+	.textTif {
+	width: 100%;
+	font-size: 2em;
+	font-weight: 700;
+	text-align: center;
+	color: white;
+	text-transform: none;
+	padding: 0;
+	margin: 0;
+	}
 
     .container {
     width: 1000px;
