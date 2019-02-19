@@ -468,14 +468,24 @@
 	<style scoped>
 	
 	.textTif {
-	width: 100%;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: 700;
-	text-align: center;
 	color: white;
-	text-transform: none;
-	padding: 0;
-	margin: 0;
+	text-decoration: none;
+    position: relative;
+    top: 15px;
+    left: 13px;
+	}
+	
+	.textScoreMode {
+	font-size: 1.5em;
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+    position: relative;
+    top: 15px;
+    right: 13px;
+	float: right;
 	}
 
     .container {
