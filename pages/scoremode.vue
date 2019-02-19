@@ -16,8 +16,8 @@
             <v-layout row>
                 <v-flex shrink>
                     <nuxt-link to="/">
-                        <div id="avatar">
-                            <img src="/images/avatar.png" class="imgAvatar" />
+                        <div id="avatar" style="background-color: orangered">
+                            ThisIsFan.com
                         </div>
                     </nuxt-link>
                 </v-flex>
@@ -51,8 +51,9 @@
                 </v-flex>
                 <v-flex shrink>
                     <nuxt-link to="/gamemode">
-                        <div id="team">
-							<img src="/images/switzerland.png" class="imgTeam" />
+                        <div id="team" style="background-color: orangered">
+							ScoreMode</br>
+							C'est parti !
                         </div>
                     </nuxt-link>
                 </v-flex>
