@@ -19,6 +19,7 @@
 					<!-- <nuxt-link to="/login">Login</nuxt-link> -->
 					<!-- <nuxt-link to="/register">Register</nuxt-link> -->
 					<!-- <v-btn color="success">Success</v-btn> -->
+					<v-btn nuxt to="/gamemode_jm">Game Mode JM</v-btn>
 					<v-btn round large color="deep-orange" dark @click="signInWithGoogle">Game Mode</v-btn>
 					<v-dialog v-model="loginModal" width="600">
 						<Login v-on:loginChildToParent="switchToRegister" />
@@ -33,77 +34,76 @@
 </template>
 
 <script>
-import Login from '~/components/Login.vue'
-import Register from '~/components/Register'
-export default {
-// layout: 'layoutLandingPage',
-// middleware: ['unauth-check'],
-components: { Login, Register },
-layout: 'layoutFront',
-data () {
-return {
-loginModal: false,
-registerModal: false
-}
-},
-computed: {
-},
-methods: {
-switchToRegister () {
-this.loginModal = false
-this.registerModal = true
-},
-switchToLogin () {
-this.registerModal = false
-this.loginModal = true
-},
-async signInWithGoogle() {
-console.log("signInWithGoogle")
-await this.$store.dispatch("firebase-auth/signInWithGooglePopup")
-console.log("done")
-this.$router.replace("/home")
-}
-}
-}
+	import Login from '~/components/Login.vue'
+	import Register from '~/components/Register'
+	export default {
+		// layout: 'layoutLandingPage',
+		// middleware: ['unauth-check'],
+		components: { Login, Register },
+		layout: 'layoutFront',
+		data () {
+			return {
+				loginModal: false,
+				registerModal: false
+			}
+		},
+		computed: {
+		},
+		methods: {
+			switchToRegister () {
+				this.loginModal = false
+				this.registerModal = true
+			},
+			switchToLogin () {
+				this.registerModal = false
+				this.loginModal = true
+			},
+			async signInWithGoogle() {
+				console.log("signInWithGoogle")
+				await this.$store.dispatch("firebase-auth/signInWithGooglePopup")
+				console.log("done")
+				this.$router.replace("/home")
+			}
+		}
+	}
 </script>
 
 <style scoped>
-
-/* TEXT-REFLECT CSS */
-.tif1 {
-display: inline-block;
-width: 100%;
-font-family: "Acme";
-font-size: 10em;
-font-weight: 700;
-text-transform: uppercase;
-text-align: center;
-color: white;
-text-transform: none;
-position: absolute;
-bottom: 0;
-padding: 0;
-margin: 0;
-letter-spacing: 3px;
-height: 152px;
-}
-.tif2 {
-display: inline-block;
-width: 100%;
-font-family: "Acme";
-font-size: 10em;
-font-weight: 700;
-text-transform: uppercase;
-text-align: center;
-top: 0;
-transform: scale(1, -1);
-color: orangered;
-position: absolute;
-padding: 0;
-margin: 0;
-position: absolute;
-letter-spacing: 3px;
-height: 152px;
-}
+	/* TEXT-REFLECT CSS */
+	.tif1 {
+		display: inline-block;
+		width: 100%;
+		font-family: "Acme";
+		font-size: 10em;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+		text-transform: none;
+		position: absolute;
+		bottom: 0;
+		padding: 0;
+		margin: 0;
+		letter-spacing: 3px;
+		height: 152px;
+	}
+	.tif2 {
+		display: inline-block;
+		width: 100%;
+		font-family: "Acme";
+		font-size: 10em;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+		top: 0;
+		transform: scale(1, -1);
+		color: orangered;
+		position: absolute;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		letter-spacing: 3px;
+		height: 152px;
+	}
 </style>
 
