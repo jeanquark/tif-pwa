@@ -1,11 +1,8 @@
 <template>
     <v-content id="app">
-        <v-container class="container">
-            
+        <v-container>
             <!-- Fixed Header -->
             <!-- <v-toolbar dark> -->
-
-
                 <v-container fluid id="header" class="header" style="height: 162px">
                     <v-layout row>
                         <v-flex class="barreHeader">
@@ -18,8 +15,6 @@
                                 </v-flex>
                             </v-layout>
                         </v-flex>
-                    </v-layout>
-                    <v-layout row>
                          <v-flex shrink>
                          <nuxt-link to="/myprofil">
                             <div id="avatar">
