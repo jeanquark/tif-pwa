@@ -1,9 +1,9 @@
 <template>
     <v-content id="app">
-        <v-container>
+        <v-container style="padding: 0">
             <!-- Fixed Header -->
             <!-- <v-toolbar dark> -->
-                <v-container fluid id="header" class="header" style="height: 162px">
+                <v-container fluid id="header" class="header" style="max-height: 162px">
                     <v-layout row>
                         <v-flex class="barreHeader">
                             <v-layout row>
