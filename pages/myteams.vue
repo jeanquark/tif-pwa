@@ -26,7 +26,7 @@
 							<v-flex v-for="team in loadedUserTeams" :key="team.slug" xs4 sm3 md2 lg2 style="margin: 5px; border: 1px solid orangered; border-radius: 5px">
 									<v-card flat tile class="d-flex" style="border-radius: 5px">
 										<v-card-text style="padding-left: 3px; padding-right: 3px">
-											<v-img contain :src="'/images/teams/' + team.image" :lazy-src="'/images/icon.png'" aspect-ratio="1">
+											<v-img contain :src="'/images/teams/' + team.image" :lazy-src="'/images/teams/' + team.image" aspect-ratio="1">
 											</v-img>
 										</v-card-text>
 									</v-card>

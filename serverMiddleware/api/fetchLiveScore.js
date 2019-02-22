@@ -26,7 +26,7 @@ module.exports = app.use(async function(req, res, next) {
       })
     })
     // competitionIdsArray.push('277')
-    // console.log('competitionsArray: ', competitionsArray)
+    console.log('competitionsArray: ', competitionsArray)
     // console.log('competitionIdsArray: ', competitionIdsArray)
     // return
 
@@ -78,7 +78,8 @@ module.exports = app.use(async function(req, res, next) {
       if (competitionIdsArray.includes(match.league_id)) {
         console.log('match: ', match);
 
-        const id = today + "_" + match.home_id + "_vs_" + match.away_id;
+        // const id = today + "_" + match.home_id + "_vs_" + match.away_id;
+        const id = match.id;
 
         updates["/events/" + id + "/livescore_api_id"] = match.id;
         updates["/events/" + id + "/score"] = match.score;
@@ -126,7 +127,7 @@ module.exports = app.use(async function(req, res, next) {
     // const sendNotifications = await axios.get("/");
     // console.log("sendNotifications: ", sendNotifications);
     console.log("DONE!");
-    res.send("GET request succeeded!");
+    res.send("GET request succeeded to fetch live scores!");
 
     // axios
     //   .get(url)
@@ -194,7 +195,7 @@ module.exports = app.use(async function(req, res, next) {
     //     throw new Error(error);
     //   });
   } catch (error) {
-    console.log("error2: ", error);
-    res.send("GET request failed 2...");
+    console.log("error: ", error);
+    res.send("GET request failed to fetch live scores");
   }
 });

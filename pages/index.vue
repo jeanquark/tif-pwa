@@ -10,6 +10,7 @@
 						<v-btn @click="loginModal = true">Login</v-btn> <v-btn @click="registerModal = true">Register</v-btn>
 					</v-flex>
 					<v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn>
+					<v-btn nuxt to="/scoremode_jm" round color="black" dark large>Score Mode JM</v-btn>
 					<p>{{ $t('pages.index.explanation') }}</p>
 					<span class="tif1">TIF</span>
 				</v-layout>

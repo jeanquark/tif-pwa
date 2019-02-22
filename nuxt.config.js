@@ -141,6 +141,10 @@ module.exports = {
         {
             path: "/api/fetch-standings",
             handler: "~/serverMiddleware/api/fetchStandings"
+        },
+        {
+            path: "/api/fetch-next-top5-leagues-matches",
+            handler: "~/serverMiddleware/api/fetchNextTop5LeaguesMatches"
         }
     ],
     css: ["~/assets/style/app.styl"],
