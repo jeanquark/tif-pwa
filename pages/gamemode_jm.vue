@@ -543,9 +543,9 @@
             padding: 0;
             margin: 0;
             bottom: 0;
-            background-color: rgb(248,147,37);
+            background-color: orangered;
             border: none;
-            border-top: 4px solid darkred;
+            border-top: 4px solid orangered;
         }
 
         #dock-container li#active img {
