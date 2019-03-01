@@ -20,7 +20,7 @@
 					<!-- <nuxt-link to="/login">Login</nuxt-link> -->
 					<!-- <nuxt-link to="/register">Register</nuxt-link> -->
 					<!-- <v-btn color="success">Success</v-btn> -->
-					<v-btn nuxt to="/gamemode_jm">Game Mode JM</v-btn>
+					<v-btn color="default" nuxt to="/gamemode_jm">Game Mode JM</v-btn>
 					<v-btn round large color="deep-orange" dark @click="signInWithGoogle">Game Mode</v-btn>
 					<v-dialog v-model="loginModal" width="600">
 						<Login v-on:loginChildToParent="switchToRegister" />
