@@ -58,15 +58,16 @@ export const actions = {
     fetchCompetitionStanding ({commit}, payload) {
         console.log('Call to fetchCompetitionStanding action', payload)
         console.log('payload: ', payload) // spanish_la_liga_2018_2019
-        firebase.database().ref('/standings/' + payload.slug + '/standing').on('value', function (snapshot) {
+        // firebase.database().ref('/standings/' + payload.slug + '/standing').on('value', function (snapshot) {
+        firebase.database().ref('/standings/' + payload + '/standing').on('value', function (snapshot) {
             console.log('snapshot: ', snapshot.val())
             const standingArray = []
             for (const key in snapshot.val()) {
                 standingArray.push({ ...snapshot.val()[key], id: key})
             }
-            const abc = {...payload, standing: standingArray}
-            console.log('abc: ', abc)
-            commit('setStandings', abc)
+            const abc2 = {slug: payload, standing: standingArray}
+            console.log('abc2: ', abc2)
+            commit('setStandings', abc2)
         })
     },
 

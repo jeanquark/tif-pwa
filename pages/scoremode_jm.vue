@@ -62,14 +62,14 @@
                     v-model="activeDay"
                     style="border: 1px dashed orange;"
                     v-if="selectType === 0"
+                    @change="fetchEventsByDay(activeDay)"
                 >
                     <v-tabs-slider color="yellow"></v-tabs-slider>
 
                     <v-tab
                         v-for="day in days"
                         :key="day"
-                        :href="'#tab-' + day"
-                        @click="fetchEventsByDay(day)"
+                        :href="'#' + day"
                     >
                         {{ day | moment('ddd DD MMM') }}
                     </v-tab>
@@ -78,7 +78,7 @@
                         <v-tab-item
                             v-for="day in days"
                             :key="day"
-                            :value="'tab-' + day"
+                            :value="day"
                             lazy
                         >
                             <v-card flat>
@@ -159,14 +159,14 @@
                     v-model="activeCompetition"
                     style="border: 1px dashed orange;"
                     v-if="selectType === 1"
+                    @change="fetchCompetitionStanding(activeCompetition)"
                 >
                     <v-tabs-slider color="yellow"></v-tabs-slider>
 
                     <v-tab
                         v-for="competition in competitions"
                         :key="competition.slug"
-                        :href="'#tab-' + competition.slug"
-                        @click="fetchCompetitionStanding(competition)"
+                        :href="'#' + competition.slug"
                     >
                         {{ competition.name }}
                     </v-tab>
@@ -175,7 +175,7 @@
                         <v-tab-item
                             v-for="competition in competitions"
                             :key="competition.slug"
-                            :value="'tab-' + competition.slug"
+                            :value="competition.slug"
                             lazy
                         >
                             <v-card flat>
@@ -258,17 +258,18 @@
 
             const today = moment().format('YYYY-MM-DD')
             await this.$store.dispatch('events/fetchEventsByDay', today)
-            await this.$store.dispatch('standings/fetchCompetitionStanding', {
-                name: 'English Premier League',
-                slug: 'english_premier_league_2018_2019',
-                info: {
-                    total_teams: 20,
-                    champions_league: 4,
-                    europa_league: 7,
-                    playoff: null,
-                    relegation: 17
-                }
-            })
+            await this.$store.dispatch('standings/fetchCompetitionStanding', 'english_premier_league_2018_2019')
+            // await this.$store.dispatch('standings/fetchCompetitionStanding', {
+            //     name: 'English Premier League',
+            //     slug: 'english_premier_league_2018_2019',
+            //     info: {
+            //         total_teams: 20,
+            //         champions_league: 4,
+            //         europa_league: 7,
+            //         playoff: null,
+            //         relegation: 17
+            //     }
+            // })
         },
         data () {
             return {
@@ -308,8 +309,10 @@
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 // currentKey: 'tab-25',
                 // activeDay: `tab-${moment().format('DD MMM')}`,
-                activeDay: `tab-${moment().format('YYYY-MM-DD')}`,
-                activeCompetition: 'tab-english_premier_league_2018_2019',
+                activeDay: `${moment().format('YYYY-MM-DD')}`,
+                // activeDay2: `${moment().format('YYYY-MM-DD')}`,
+                // activeCompetition: 'tab-english_premier_league_2018_2019',
+                activeCompetition: 'english_premier_league_2018_2019',
                 types: [
                     {
                         name: 'Results',
@@ -412,7 +415,8 @@
         methods: {
             fetchCompetitionStanding(competition) {
                 console.log('fetchCompetitionStanding: ', competition)
-                if (!this.loadedStandings[competition.slug]) {
+                // if (!this.loadedStandings[competition.slug]) {
+                if (!this.loadedStandings[competition]) {
                     this.$store.dispatch('standings/fetchCompetitionStanding', competition)
                 }
             },
@@ -457,6 +461,9 @@
                 } else {
                     return moment.unix(timestamp).subtract(utcDiff, 'minutes').format("HH:mm")
                 }
+            },
+            abc () {
+                console.log('abc')
             }
         }
     }
