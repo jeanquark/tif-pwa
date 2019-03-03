@@ -1,74 +1,88 @@
 <template>
     <v-content id="app">
-        <v-container style="padding: 0">
+        <v-container style="padding: 0; max-width: 1017px;">
             <!-- Fixed Header -->
             <!-- <v-toolbar dark> -->
-                <v-container fluid id="header" class="header" style="max-height: 162px">
-                    <v-layout row>
-                        <v-flex class="barreHeader">
-                            <v-layout row>
-                                <v-flex xs6 sm6 md6>
-                                    <span style="margin-left: 100px; float: left; margin-top: 4px"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; padding: 4px; float: left; margin-top: 9px">G. Manigley (41 ans) - <nuxt-link to="/myteams" style="color: white; text-decoration: none">Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }}</nuxt-link></span>
-                                </v-flex>
-                                <v-flex xs6 sm6 md6>
-                                    <span style="margin-right: 100px; color: white; padding: 4px; float: right; margin-top: 9px">Fan de l'équipe de suisse de football (1.34 PF)</span>
-                                </v-flex>
-                            </v-layout>
-                        </v-flex>
-                         <v-flex shrink>
-                         <nuxt-link to="/myprofil">
-                            <div id="avatar">
-                                <img src="/images/avatar.png" class="imgAvatar" />
-                            </div>
+            <v-container fluid id="header" class="header" style="max-height: 162px">
+                <v-layout row>
+                    <v-flex class="barreHeader">
+                        <v-layout row>
+                            <v-flex xs6 sm6 md6>
+                                <span style="margin-left: 100px; float: left; margin-top: 4px"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; padding: 4px; float: left; margin-top: 9px">G. Manigley (41 ans) - <nuxt-link to="/myteams" style="color: white; text-decoration: none">Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }}</nuxt-link></span>
+                            </v-flex>
+                            <v-flex xs6 sm6 md6>
+                                <span style="margin-right: 100px; color: white; padding: 4px; float: right; margin-top: 9px">Fan de l'équipe de suisse de football (1.34 PF)</span>
+                            </v-flex>
+                        </v-layout>
+                    </v-flex>
+                     <v-flex shrink>
+                     <nuxt-link to="/myprofil">
+                        <div id="avatar">
+                            <img src="/images/avatar.png" class="imgAvatar" />
+                        </div>
+                    </nuxt-link>
+                    </v-flex>
+                    <v-flex grow>
+                        <v-layout row>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 20px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                                <div style="text-align: center" class="levelHeader">Niv.1</div>
+                                <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; border-radius: 5px; margin-top: 25px"><span style="color: white">3 / 10</span></v-progress-linear>
+                            </v-flex>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                                <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
+                                <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
+                                <nuxt-link to="/plus" class="aPlusYellow">
+                                <span class="plusYellow">+</span>
+                                </nuxt-link>
+                            </v-flex>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                                <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
+                                <div class="dollarFan">1234 $fans</div>
+                                <nuxt-link to="/plus" class="aPlusGreen">
+                                <span class="plusGreen">+</span>
+                                </nuxt-link>
+                            </v-flex>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
+                                <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
+                                <div class="token">12 tokens</div>
+                                <nuxt-link to="/plus" class="aPlusOrangered">
+                                <span class="plusOrangered">+</span>
+                                </nuxt-link>
+                            </v-flex>
+                        </v-layout>
+                    </v-flex>
+                    <v-flex shrink>
+                        <nuxt-link to="/myteams">
+                        <div id="team">
+                            <img src="/images/switzerland.png" class="imgTeam" />
+                        </div>
                         </nuxt-link>
-                        </v-flex>
-                        <v-flex grow>
-                            <v-layout row>
-                                <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 20px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                                    <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                    <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; border-radius: 5px; margin-top: 25px"><span style="color: white">3 / 10</span></v-progress-linear>
-                                </v-flex>
-                                <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                                    <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                    <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
-                                    <nuxt-link to="/plus" class="aPlusYellow">
-                                    <span class="plusYellow">+</span>
-                                    </nuxt-link>
-                                </v-flex>
-                                <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                                    <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
-                                    <div class="dollarFan">1234 $fans</div>
-                                    <nuxt-link to="/plus" class="aPlusGreen">
-                                    <span class="plusGreen">+</span>
-                                    </nuxt-link>
-                                </v-flex>
-                                <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
-                                    <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
-                                    <div class="token">12 tokens</div>
-                                    <nuxt-link to="/plus" class="aPlusOrangered">
-                                    <span class="plusOrangered">+</span>
-                                    </nuxt-link>
-                                </v-flex>
-                            </v-layout>
-                        </v-flex>
-                        <v-flex shrink>
-                            <nuxt-link to="/myteams">
-                            <div id="team">
-                                <img src="/images/switzerland.png" class="imgTeam" />
-                            </div>
-                            </nuxt-link>
-                        </v-flex>
-                    </v-layout>
-                </v-container>
+                    </v-flex>
+                </v-layout>
+            </v-container>
 
 
             <!-- </v-toolbar> -->
             
             <!-- Scrollable content -->
             <div class="content">
-                <v-layout>
-                    <img src="/images/barcelona.png" />
-                </v-layout>
+                <!-- <v-layout> -->
+                <!-- <div class="container"> -->
+                    <img src="/images/barcelona_clickable.png" usemap="#map" />
+                    <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
+                    <map name="map">
+                        <area shape="circle" coords="169, 826, 53" alt="Stadium" @click="openActionsDialog('stadium')">
+                        <area shape="circle" coords="786, 357, 44" alt="Museum" @click="openActionsDialog('museum')">
+                    </map>
+
+                    <v-dialog
+                        v-model="actionsModal"
+                        max-width="800"
+                    >
+                        <ActionsCard :action="action" />
+                    </v-dialog>
+                <!-- </div> -->
+                <!-- </v-layout> -->
             </div>
             
             <!-- Fixed Footer -->
@@ -110,7 +124,10 @@
 </template>
 
 <script>
+    import ActionsCard from '~/components/ActionsCard'
     export default {
+        components: { ActionsCard },
+        layout: 'layoutFront',
         data () {
             return {
                 links: [
@@ -120,12 +137,24 @@
                     'Services',
                     'Blog',
                     'Contact Us'
-                ]
+                ],
+                action: '',
+                actionsModal: false
             } 
         },
         computed: {
             loadedUserTeams () {
                 return this.$store.getters['users/loadedUserTeams']
+            }
+        },
+        methods: {
+            async openActionsDialog (item) {
+                console.log('openActionsDialog: ', item)
+                this.action = item
+                this.actionsModal = true
+                const response = await this.$store.dispatch('actionsCards/loadedActions', item)
+                console.log('response: ', response)
+                // return window.location.href = 'https://fr.wikipedia.org/wiki/Camp_Nou'
             }
         }
     }
