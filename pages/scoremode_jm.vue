@@ -94,7 +94,7 @@
                                         </div>
                                     </div> -->
 
-                                    <v-data-table :items="loadedEventsByDay(day) ? loadedEventsByDay(day)['events'] : []" no-data-text="Hem... it seems none of your favorite teams is playing on this beautiful day ;-)" class="elevation-0" hide-actions hide-headers>
+                                    <v-data-table :items="loadedEventsByDay(day) ? loadedEventsByDay(day)['events'] : []" no-data-text="No game found on this day." class="elevation-0" hide-actions hide-headers>
                                         <template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
                                             <v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
                                                 <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
@@ -180,11 +180,11 @@
                         >
                             <v-card flat>
                                 <v-card-text class="card-text">
-                                    <v-card-text>{{ `tab-${competition.slug}` }}</v-card-text>
+                                    <!-- <v-card-text>{{ `tab-${competition.slug}` }}</v-card-text> -->
                                     <v-expansion-panel class="elevation-0" :value="0">
                                         <v-expansion-panel-content style="background-color: orangered">
                                             <div slot="header" class="white--text">
-                                                CLASSEMENT - SAISON 2018-2019 {{ competition.name }}
+                                                {{ competition.name.toUpperCase() }}
                                             </div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                                             <v-card>
@@ -256,28 +256,19 @@
 
             this.$store.dispatch('competitions/loadedCompetitions')
 
-            // this.$store.dispatch('standings/setCompetitionStanding', 'spanish_la_liga_2018_2019')
-            // this.$store.dispatch('standings/setCompetitionStanding', 'english_premier_league_2018_2019')
-            // this.$store.dispatch('standings/setCompetitionStanding', 'italian_serie_a_2018_2019')
-
-            // Load standings
-            // await this.$store.dispatch('standings/loadedStandings', 'english_premier_league_2018_2019')
-            // await this.$store.dispatch('standings/setCompetitionStanding', {
-            //     name: 'English Premier League',
-            //     slug: 'english_premier_league_2018_2019',
-            //     info: {
-            //         total_teams: 20,
-            //         champions_league: 4,
-            //         europa_league: 7,
-            //         playoff: null,
-            //         relegation: 17
-            //     }
-            // })
-            // this.$store.registerModule(['loadedStandings', 'english_championship_2018_2019'], {
-            //     abc: []
-            // })
             const today = moment().format('YYYY-MM-DD')
-            await this.$store.dispatch("events/fetchEventsByDay", today)
+            await this.$store.dispatch('events/fetchEventsByDay', today)
+            await this.$store.dispatch('standings/fetchCompetitionStanding', {
+                name: 'English Premier League',
+                slug: 'english_premier_league_2018_2019',
+                info: {
+                    total_teams: 20,
+                    champions_league: 4,
+                    europa_league: 7,
+                    playoff: null,
+                    relegation: 17
+                }
+            })
         },
         data () {
             return {
@@ -318,6 +309,7 @@
                 // currentKey: 'tab-25',
                 // activeDay: `tab-${moment().format('DD MMM')}`,
                 activeDay: `tab-${moment().format('YYYY-MM-DD')}`,
+                activeCompetition: 'tab-english_premier_league_2018_2019',
                 types: [
                     {
                         name: 'Results',
@@ -390,7 +382,6 @@
                         }
                     }
                 ],
-                activeCompetition: '',
                 selectType: 0,
                 type2: '',
                 

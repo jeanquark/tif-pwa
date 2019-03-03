@@ -9,25 +9,25 @@
 					<v-flex class="register" style="position: absolute; top: 10px; left: 10px">
 						<v-btn @click="loginModal = true">Login</v-btn> <v-btn @click="registerModal = true">Register</v-btn>
 					</v-flex>
-					<v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn>
-					<v-btn nuxt to="/scoremode_jm" round color="black" dark large>Score Mode JM</v-btn>
-					<p>{{ $t('pages.index.explanation') }}</p>
-					<!-- <span class="tif1">TIF</span> -->
+					<!-- <v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn> -->
+					<v-btn nuxt to="/scoremode_jm" round color="black" dark large style="z-index: 10;">Score Mode</v-btn>
+					<!-- <p>{{ $t('pages.index.explanation') }}</p> -->
+					<span class="tif1">TIF</span>
 				</v-layout>
 				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; background-color: #fff; color: orange; position: relative" class="text-xs-center">
 					<span class="tif2">TIF</span>
-					<p style="margin-bottom: 0">{{ $t('pages.index.explanation') }}</p>
+					<!-- <p style="margin-bottom: 0">{{ $t('pages.index.explanation') }}</p> -->
 					<!-- <nuxt-link to="/login">Login</nuxt-link> -->
 					<!-- <nuxt-link to="/register">Register</nuxt-link> -->
 					<!-- <v-btn color="success">Success</v-btn> -->
-					<v-btn color="default" nuxt to="/gamemode_jm">Game Mode JM</v-btn>
-					<v-btn round large color="deep-orange" dark @click="signInWithGoogle">Game Mode</v-btn>
-					<v-dialog v-model="loginModal" width="600">
+					<!-- <v-btn color="default" nuxt to="/gamemode_jm">Game Mode JM</v-btn> -->
+					<!-- <v-btn round large color="deep-orange" dark @click="signInWithGoogle">Game Mode</v-btn> -->
+					<!-- <v-dialog v-model="loginModal" width="600">
 						<Login v-on:loginChildToParent="switchToRegister" />
 					</v-dialog>
 					<v-dialog v-model="registerModal" width="600">
 						<Register v-on:registerChildToParent="switchToLogin" />
-					</v-dialog>
+					</v-dialog> -->
 				</v-layout>
 			</v-container>
 		</v-content>
