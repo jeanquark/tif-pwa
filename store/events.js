@@ -5,7 +5,8 @@ import axios from "axios"
 import moment from "moment"
 
 export const state = () => ({
-    loadedEvents: [],
+    // loadedEvents: [],
+    loadedEvents: {},
     loadedEventUsers: [],
     loadedLiveEvents: [],
     loadedCompetitionEvents: []
@@ -15,8 +16,12 @@ export const mutations = {
     setEmptyEvents(state) {
         state.loadedEvents = []
     },
-    setEvents(state, payload) {
-        state.loadedEvents = payload
+    // setEvents(state, payload) {
+    //     state.loadedEvents = payload
+    // },
+    setEvents (state, payload) {
+        console.log('Call to setEvents mutation', payload)
+        state.loadedEvents = Object.assign({}, state.loadedEvents, { [payload.date]: payload })
     },
     addEvents(state, payload) {
         state.loadedEvents.push(...payload)
@@ -174,6 +179,28 @@ export const actions = {
                 reject(error)
             }
         })
+    },
+    fetchEventsByDay ({ commit }, payload) {
+        // const date = payload
+        const date = payload
+
+        firebase
+            .database()
+            .ref("/events/")
+            .orderByChild('date')
+            .equalTo(date)
+            .on("value", function(snapshot) {
+                // console.log('snapshot: ', snapshot)
+                const eventsArray = []
+                snapshot.forEach((event) => {
+                    eventsArray.push({...event.val(), id: event.key}) 
+                })
+                console.log('eventsArray: ', eventsArray)
+                const abc = {date: date, events: eventsArray}
+                // const abc = {...payload, standing: standingArray}
+                console.log('abc: ', abc)
+                commit('setEvents', abc)
+            })
     },
     async loadedEventsByDay2 ({ commit }, payload) {
         try {

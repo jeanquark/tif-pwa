@@ -12,7 +12,7 @@
 					<v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn>
 					<v-btn nuxt to="/scoremode_jm" round color="black" dark large>Score Mode JM</v-btn>
 					<p>{{ $t('pages.index.explanation') }}</p>
-					<span class="tif1">TIF</span>
+					<!-- <span class="tif1">TIF</span> -->
 				</v-layout>
 				<v-layout align-center column justify-center fill-height style="height: 50%; margin: auto; background-color: #fff; color: orange; position: relative" class="text-xs-center">
 					<span class="tif2">TIF</span>
