@@ -24,25 +24,25 @@
                     </v-flex>
                     <v-flex grow>
                         <v-layout row>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 20px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader" style="padding: 20px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
                                 <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; border-radius: 5px; margin-top: 25px"><span style="color: white">3 / 10</span></v-progress-linear>
                             </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader" style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
                                 <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
                             </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader" style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
                                 <div class="dollarFan">1234 $fans</div>
                                 <nuxt-link to="/plus" class="aPlusGreen">
                                 <span class="plusGreen">+</span>
                                 </nuxt-link>
                             </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader" style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
                                 <div class="token">12 tokens</div>
                                 <nuxt-link to="/plus" class="aPlusOrangered">
@@ -522,13 +522,17 @@
 			margin: 0;
 			padding: 0;
 		}
+		.cadreHeader {
+		height: 70px;
+		padding: 5px;
+		}
 		#avatar {
 			background-color: black;
 			border-right: 2px solid orangered;
 			border-bottom: 2px solid orangered;
-			box-shadow: 0 4px 2px black;
-			height: 150px;
-			width: 150px;
+			box-shadow: 0 2px 2px black;
+			height: 70px;
+			width: 70px;
 			border-radius: 0 0 100% 0;
 		}
 		.imgAvatar {
@@ -540,7 +544,7 @@
 			background-color: black;
 			border-left: 2px solid orangered;
 			border-bottom: 2px solid orangered;
-			box-shadow: 0 4px 2px black;
+			box-shadow: 0 2px 2px black;
 			height: 70px;
 			width: 70px;
 			border-radius: 0 0 0 100%;
