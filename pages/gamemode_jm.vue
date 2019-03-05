@@ -36,7 +36,7 @@
                                 </nuxt-link>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                                <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
+                                <div style="text-align: center"><i class="material-icons sm-12 md-48" style="color: green">attach_money</i></div>
                                 <div class="dollarFan">1234 $fans</div>
                                 <nuxt-link to="/plus" class="aPlusGreen">
                                 <span class="plusGreen">+</span>
@@ -514,7 +514,32 @@
         }
 
         /* Header */
-
+		
+		#avatar {
+		border-right: 2px solid orangered;
+		border-bottom: 2px solid orangered;
+		box-shadow: 0 7px 5px black;
+		height: 50px;
+		width: 50px;
+		border-radius: 0 0 100% 0;
+		}
+		
+		#team {
+		border-left: 2px solid #ff4500;
+		border-bottom: 2px solid #ff4500;
+		box-shadow: 0 7px 5px #000;
+		height: 50px;
+		width: 50px;
+		}
+		
+		.levelHeader[data-v-a2ae5ff6] {
+		font-weight: 700;
+		font-size: 12px;
+		background-color: orange;
+		color: #fff;
+		border-radius: 10px;
+		}
+		
         .imageLogoTif {
             width: 60px;
             height: 60px;
