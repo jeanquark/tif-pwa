@@ -36,7 +36,7 @@
                                 </nuxt-link>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                                <div style="text-align: center"><i class="material-icons sm-12 md-48" style="color: green">attach_money</i></div>
+                                <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
                                 <div class="dollarFan">1234 $fans</div>
                                 <nuxt-link to="/plus" class="aPlusGreen">
                                 <span class="plusGreen">+</span>
@@ -165,7 +165,6 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-		font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
 
     /* Content */
@@ -472,126 +471,214 @@
     
     /* Small screens */
     @media only screen and (max-width: 768px) {
-        .pd-right10 {
-            padding-right: 10px;
-        }
-        
-        .pd-left10 {
-            padding-left: 10px;
-        }
-        
-        .imgLogoEquipe {
-            max-width: 35px;
-        }
-        
-        .teamTextSize {
-            font-size: 1.0em;
-        }
-        
-        .headerMenus {
-            padding: 0; 
-            margin: 0; 
-            height: 46px;
-        }
-        
-        .energyBox {
-            background-color: #757575;
-            color: black;
-            vertical-align: middle;
-            padding: 1px;
-            border-radius: 2px;
-            width: 95%;
-            margin: auto;
-            font-size: 0.8em;
-        }
-        
-        .userText {
-            font-size: 0.8em;
-        }
-        
-        .connectText {
-            font-size: 0.8em;
-        }
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
 
-        /* Header */
-		
+		/* Content */
+		.container {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			font: normal 90%/1 "Acme", Helvetica, sans-serif;
+		}
+		.content {
+			background-color: light-gray;;
+			/*flex-grow: 1;*/
+			overflow-x: auto;
+		}
+		#footer {
+			background-color: red;
+			color: #fff;
+			/*height: 100px;*/
+			height: auto;
+			text-align: center;
+		}	
+		/* End Content */
+
+		/* Header */
+		#header {
+			height: 70px;
+			padding: 0;
+			top:0px;
+			left:0px;
+			background-color: black;
+			z-index: 1;
+			border-bottom: 2px solid orangered;
+			position: sticky;
+		}
+		.header {
+			position: relative;
+		}
+		.barreHeader {
+			position:absolute;
+			top: 60px;
+			width: 100%;
+			background-color: orangered;
+			z-index: -1;
+			margin: 0;
+			padding: 0;
+		}
 		#avatar {
-		border-right: 2px solid orangered;
-		border-bottom: 2px solid orangered;
-		box-shadow: 0 7px 5px black;
-		height: 50px;
-		width: 50px;
-		border-radius: 0 0 100% 0;
+			background-color: black;
+			border-right: 2px solid orangered;
+			border-bottom: 2px solid orangered;
+			box-shadow: 0 4px 2px black;
+			height: 150px;
+			width: 150px;
+			border-radius: 0 0 100% 0;
 		}
-		
+		.imgAvatar {
+			height: 100%;
+			width: 100%;
+			border-radius: 0 0 100% 0;
+		}
 		#team {
-		border-left: 2px solid #ff4500;
-		border-bottom: 2px solid #ff4500;
-		box-shadow: 0 7px 5px #000;
-		height: 50px;
-		width: 50px;
+			background-color: black;
+			border-left: 2px solid orangered;
+			border-bottom: 2px solid orangered;
+			box-shadow: 0 4px 2px black;
+			height: 70px;
+			width: 70px;
+			border-radius: 0 0 0 100%;
+		}
+		.imgTeam {
+			height: 100%;
+			width: 100%;
+			border-radius: 0 0 0 100%;
+		}
+		.imgTeamSmall {
+			height: 20px;
+			margin-top: 5px;
+		}
+		.levelHeader {
+			font-weight: 700;
+			font-size: 12px;  /* Preferred icon size */
+			background-color: orange;
+			color: white;
+			border-radius: 5px;
+		}
+		.plusOrangered {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0 5px;
+			color: white;
+			font-weight: 700;
+			font-size: 0.9em;
+			background-color: orangered;
+		}
+		.aPlusOrangered :hover {
+			color: orangered;
+			background-color: white;
+			border-bottom: 1px solid orangered;
+			border-left: 1px solid orangered;
+		}
+		.plusYellow {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0 5px;
+			color: black;
+			font-weight: 700;
+			font-size: 0.9em;
+			background-color: yellow;
+		}
+		.aPlusYellow :hover {
+			color: black;
+			background-color: white;
+			border-bottom: 1px solid yellow;
+			border-left: 1px solid yellow;
+		}
+		.plusGreen {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0 5px;
+			color: white;
+			font-weight: 700;
+			font-size: 0.9em;
+			background-color: green;
+		}
+		.aPlusGreen :hover {
+			color: green;
+			background-color: white;
+			border-bottom: 1px solid green;
+			border-left: 1px solid green;
+		}
+		.dollarFan {
+			margin-top: 7px;
+			width: 100%;
+			text-align: center;
+			color: green;
+			font-weight: 700;
+			box-shadow: 0 0 5px 1px inset;
+			border-radius: 5px;
+			padding: 2px;
+		}
+		.token {
+			margin-top: 7px;
+			width: 100%;
+			text-align: center;
+			color: orangered;
+			font-weight: 700;
+			box-shadow: 0 0 5px 1px inset;
+			border-radius: 5px;
+			padding: 2px;
 		}
 		
-		.levelHeader[data-v-a2ae5ff6] {
-		font-weight: 700;
-		font-size: 12px;
-		background-color: orange;
-		color: #fff;
-		border-radius: 10px;
-		}
+		.material-icons.md-48 { font-size: 14px; }
 		
-        .imageLogoTif {
-            width: 60px;
-            height: 60px;
-        }
-        
-        .backBlack {
-            background-image: url("/images/header-TIF_03.png");
-            background-position: center;
-            background-repeat: repeat-x;
-            background-size: contain;
-            height: 60px;
-        }
+		.material-icons {
+		font-family: 'Material Icons';
+		font-weight: normal;
+		font-style: normal;
+		font-size: 12px;  /* Preferred icon size */
+		display: inline-block;
+		line-height: 1;
+		text-transform: none;
+		letter-spacing: normal;
+		word-wrap: normal;
+		white-space: nowrap;
+		direction: ltr;
 
-        .boxTif {
-            width: 60px;
-            height: 60px;
-        }
+		/* Support for all WebKit browsers. */
+		-webkit-font-smoothing: antialiased;
+		/* Support for Safari and Chrome. */
+		text-rendering: optimizeLegibility;
 
-        .imageLogo {
-            width: 25px;
-            height: 25px;
-        }
-        
-        .menuSport {
-            height: 30px;
-        }
-        
-        .menuDay {
-            height: 30px;
-        }
-        
-        .headerLogo {
-            height: auto;
-        }
-        
-        .headerMenu {
-            height: 46px;
-        }
-        
-        .v-expansion-panel__header {
-            padding: 2px 2px;
-            min-height: 24px;
-        }
-        
-        .chiffres {
-            font-size: 1.2em;
-        }
-        
-        .activity {
-            font-size: 0.8em;
-        }
-        
+		/* Support for Firefox. */
+		-moz-osx-font-smoothing: grayscale;
+
+		/* Support for IE. */
+		font-feature-settings: 'liga';
+		}   
+		/* End Header */
+		
+		
+
+		/* Footer */
+		.barreOrangered {
+			width: 100%;
+			padding: 0;
+			margin: 0; 
+			height: 2px;
+			background-color: orangered;
+		}
+		.barreBlack {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			height: 4px;
+			background-color: black;
+		}
+			
         /* Menu */
 
         #dock-container {
