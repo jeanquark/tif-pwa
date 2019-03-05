@@ -5,13 +5,23 @@
             <!-- <v-toolbar dark> -->
             <v-container fluid id="header" class="header">
                 <v-layout row>
-                    <v-flex class="barreHeader">
+                    <v-flex hidden-sm-only class="barreHeader">
                         <v-layout row>
                             <v-flex xs6 sm6 md6>
                                 <span class="barreHeaderLeft1"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span class="barreHeaderLeft2">G. Manigley (41 ans) - <nuxt-link to="/myteams" style="color: white; text-decoration: none">Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }}</nuxt-link></span>
                             </v-flex>
                             <v-flex xs6 sm6 md6>
                                 <span class="barreHeaderRight">Fan de l'équipe de suisse de football (1.34 PF)</span>
+                            </v-flex>
+                        </v-layout>
+                    </v-flex>
+                    <v-flex hidden-md-and-up class="barreHeader">
+                        <v-layout row>
+                            <v-flex xs6 sm6 md6>
+                                <span class="barreHeaderLeft1"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span class="barreHeaderLeft2">G. Manigley <nuxt-link to="/myteams" style="color: white; text-decoration: none">(Fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }})</nuxt-link></span>
+                            </v-flex>
+                            <v-flex xs6 sm6 md6>
+                                <span class="barreHeaderRight">1.34 point de ferveur</span>
                             </v-flex>
                         </v-layout>
                     </v-flex>
@@ -26,11 +36,11 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="orange" height="20" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
+                                <v-progress-linear class="progressOrange" color="orange" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75">75 / 100</v-progress-linear>
+                                <v-progress-linear class="progressYellow" color="yellow" value="75">75 / 100</v-progress-linear>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
@@ -256,7 +266,7 @@
 	position: relative;
 	}
     #avatar {
-        background-color: black;
+        background-color: orangered;
         border-right: 3px solid orangered;
         border-bottom: 3px solid orangered;
         box-shadow: 0 7px 5px black;
@@ -270,7 +280,7 @@
         border-radius: 0 0 100% 0;
     }
     #team {
-        background-color: black;
+        background-color: orangered;
         border-left: 3px solid orangered;
         border-bottom: 3px solid orangered;
         box-shadow: 0 7px 5px black;
@@ -612,7 +622,7 @@
 		position: relative;
 		}
 		#avatar {
-			background-color: black;
+			background-color: orangered;
 			border-right: 2px solid orangered;
 			border-bottom: 2px solid orangered;
 			box-shadow: 0 2px 2px black;
@@ -626,7 +636,7 @@
 			border-radius: 0 0 100% 0;
 		}
 		#team {
-			background-color: black;
+			background-color: orangered;
 			border-left: 2px solid orangered;
 			border-bottom: 2px solid orangered;
 			box-shadow: 0 2px 2px black;
