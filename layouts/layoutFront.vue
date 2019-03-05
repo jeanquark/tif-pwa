@@ -65,9 +65,9 @@
 </script>
 
 <style>
-	/* #app {
+	#app {
 		font: normal 100%/1 "Acme", Helvetica, sans-serif;
-	} */
+	}
 	.loader {
 		position: fixed;
 		border: 16px solid orangered;
