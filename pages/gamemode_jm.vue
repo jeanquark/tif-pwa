@@ -24,25 +24,25 @@
                     </v-flex>
                     <v-flex grow>
                         <v-layout row>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader" style="padding: 20px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
                                 <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; border-radius: 5px; margin-top: 25px"><span style="color: white">3 / 10</span></v-progress-linear>
                             </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader" style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
                                 <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
                             </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader" style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
                                 <div class="dollarFan">1234 $fans</div>
                                 <nuxt-link to="/plus" class="aPlusGreen">
                                 <span class="plusGreen">+</span>
                                 </nuxt-link>
                             </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader" style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
                                 <div class="token">12 tokens</div>
                                 <nuxt-link to="/plus" class="aPlusOrangered">
@@ -218,6 +218,15 @@
         margin: 0;
         padding: 0;
     }
+	.cadreHeader {
+	padding: 15px; 
+	background-color: black; 
+	border-bottom: 1px solid orangered; 
+	border-right: 1px solid orangered; 
+	height: 120px; 
+	box-shadow: 0 4px 5px -1px black; 
+	position: relative;
+	}
     #avatar {
         background-color: black;
         border-right: 3px solid orangered;
@@ -516,6 +525,7 @@
 		.barreHeader {
 			position:absolute;
 			top: 60px;
+			height: 18px;
 			width: 100%;
 			background-color: orangered;
 			z-index: -1;
@@ -523,8 +533,13 @@
 			padding: 0;
 		}
 		.cadreHeader {
-		height: 70px;
-		padding: 5px;
+		padding: 3px; 
+		background-color: black; 
+		border-bottom: 1px solid orangered; 
+		border-right: 1px solid orangered; 
+		height: 70px; 
+		box-shadow: 0 2px 3px -1px black; 
+		position: relative;
 		}
 		#avatar {
 			background-color: black;
