@@ -40,7 +40,7 @@
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75">75 / 100</v-progress-linear>
+                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75"><span style="color: black">75 / 100</span></v-progress-linear>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
@@ -332,6 +332,7 @@
 	font-weight: 700; 
 	color: black; 
 	border-radius: 5px;
+	margin-top: 25px;
 	}
 	.plusYellow {
         position: absolute;
