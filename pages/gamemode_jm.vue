@@ -3,7 +3,7 @@
         <v-container style="padding: 0; max-width: 1017px;">
             <!-- Fixed Header -->
             <!-- <v-toolbar dark> -->
-            <v-container fluid id="header" class="header" style="max-height: 162px">
+            <v-container fluid id="header" class="header">
                 <v-layout row>
                     <v-flex class="barreHeader">
                         <v-layout row>
@@ -197,7 +197,7 @@
 
     /* Header */
     #header {
-        height: 162px;
+        max-height: 162px;
         padding: 0;
         top:0px;
         left:0px;
@@ -538,7 +538,7 @@
 
 		/* Header */
 		#header {
-			height: 70px;
+			max-height: 92px;
 			padding: 0;
 			top:0px;
 			left:0px;
@@ -561,17 +561,20 @@
 			padding: 0;
 		}
 		.barreHeaderLeft1 {
-		margin-left: 5px; 
+		margin-left: 25px;
+		margin-top: 0;
 		}
 		.barreHeaderLeft2 {
 		color: white; 
-		padding: 4px; 
+		padding: 4px;
+		margin-top: 0;
 		}
 		.barreHeaderRight {
-		margin-right: 5px; 
+		margin-right: 25px; 
 		color: white; 
 		padding: 4px; 
 		float: right; 
+		margin-top: 0;
 		}
 		.cadreHeader1 {
 		padding: 3px; 
@@ -622,6 +625,7 @@
 		}
 		.imgTeamSmall {
 			height: 12px;
+			margin-top: 0;
 		}
 		.levelHeader {
 			font-weight: 700;
