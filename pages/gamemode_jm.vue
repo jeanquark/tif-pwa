@@ -30,7 +30,7 @@
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
+                                <v-progress-linear class="progressYellow" color="yellow" value="75">75 / 100</v-progress-linear>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
@@ -311,7 +311,14 @@
         border-bottom: 1px solid orangered;
         border-left: 1px solid orangered;
     }
-    .plusYellow {
+	.progressYellow {
+	width: 100%; 
+	font-weight: 700; 
+	color: black; 
+	border-radius: 5px;
+	height: 20px;
+	}
+	.plusYellow {
         position: absolute;
         top: 0;
         right: 0;
@@ -651,6 +658,14 @@
 			border-bottom: 1px solid orangered;
 			border-left: 1px solid orangered;
 		}
+		.progressYellow {
+		width: 100%; 
+		font-weight: 700; 
+		color: black; 
+		border-radius: 5px;
+		height: 12px;
+		margin-top: 8px;
+		}
 		.plusYellow {
 			position: absolute;
 			top: 0;
@@ -694,6 +709,7 @@
 			box-shadow: 0 0 5px 1px inset;
 			border-radius: 5px;
 			padding: 2px;
+			font-size: 0.8em;
 		}
 		.token {
 			margin-top: 7px;
@@ -704,11 +720,14 @@
 			box-shadow: 0 0 5px 1px inset;
 			border-radius: 5px;
 			padding: 2px;
+			font-size: 0.8em;
 		}
 		
-		.material-icons.md-48 { font-size: 14px; }
-		
-		.material-icons {
+		.material-icons.md-48 { 
+		font-size: 30px;
+		margin-top: 5px;
+		}
+				.material-icons {
 		font-family: 'Material Icons';
 		font-weight: normal;
 		font-style: normal;
