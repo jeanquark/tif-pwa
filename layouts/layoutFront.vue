@@ -24,7 +24,7 @@
 			],
 			link: [
 				{ rel: 'manifest', href: '/manifest.json' },
-				// { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }
 			]
 		},
 		// middleware: ['auth-check'],
@@ -66,7 +66,7 @@
 
 <style>
 	#app {
-		font: normal 100%/1 "Acme", Helvetica, sans-serif;
+	font: normal 100%/1 "Acme", Helvetica, sans-serif;
 	}
 	.loader {
 		position: fixed;
