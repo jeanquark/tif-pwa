@@ -32,7 +32,36 @@
                         </div>
                     </nuxt-link>
                     </v-flex>
-                    <v-flex grow>
+                    <v-flex hidden-sm-and-down grow>
+                        <v-layout row>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
+                                <div style="text-align: center" class="levelHeader">Niv.1</div>
+                                <v-progress-linear class="progressOrange" color="orange" height="12" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
+                            </v-flex>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
+                                <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
+                                <v-progress-linear class="progressYellow" color="yellow" height="12" value="75"><span style="color: black">75 / 100</span></v-progress-linear>
+                                <nuxt-link to="/plus" class="aPlusYellow">
+                                <span class="plusYellow">+</span>
+                                </nuxt-link>
+                            </v-flex>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
+                                <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
+                                <div class="dollarFan">1234 $fans</div>
+                                <nuxt-link to="/plus" class="aPlusGreen">
+                                <span class="plusGreen">+</span>
+                                </nuxt-link>
+                            </v-flex>
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
+                                <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
+                                <div class="token">12 tokens</div>
+                                <nuxt-link to="/plus" class="aPlusOrangered">
+                                <span class="plusOrangered">+</span>
+                                </nuxt-link>
+                            </v-flex>
+                        </v-layout>
+                    </v-flex>
+                    <v-flex hidden-md-and-up grow>
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
@@ -60,7 +89,7 @@
                                 </nuxt-link>
                             </v-flex>
                         </v-layout>
-                    </v-flex>
+                    </v-flex>  
                     <v-flex shrink>
                         <nuxt-link to="/myteams">
                         <div id="team">
