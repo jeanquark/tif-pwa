@@ -36,11 +36,11 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="orange" height="12" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
+                                <v-progress-linear class="progressOrange" color="orange" height="20" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="12" value="75"><span style="color: black">75 / 100</span></v-progress-linear>
+                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75"><span style="color: black">75 / 100</span></v-progress-linear>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
@@ -65,11 +65,11 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="orange" height="20" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
+                                <v-progress-linear class="progressOrange" color="orange" height="12" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75"><span style="color: black">75 / 100</span></v-progress-linear>
+                                <v-progress-linear class="progressYellow" color="yellow" height="12" value="75"><span style="color: black">75 / 100</span></v-progress-linear>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
