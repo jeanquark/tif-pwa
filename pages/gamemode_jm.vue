@@ -8,10 +8,10 @@
                     <v-flex class="barreHeader">
                         <v-layout row>
                             <v-flex xs6 sm6 md6>
-                                <span style="margin-left: 100px; float: left; margin-top: 4px"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; padding: 4px; float: left; margin-top: 9px">G. Manigley (41 ans) - <nuxt-link to="/myteams" style="color: white; text-decoration: none">Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }}</nuxt-link></span>
+                                <span class="barreHeaderLeft1"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span class="barreHeaderLeft2">G. Manigley (41 ans) - <nuxt-link to="/myteams" style="color: white; text-decoration: none">Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }}</nuxt-link></span>
                             </v-flex>
                             <v-flex xs6 sm6 md6>
-                                <span style="margin-right: 100px; color: white; padding: 4px; float: right; margin-top: 9px">Fan de l'équipe de suisse de football (1.34 PF)</span>
+                                <span class="barreHeaderRight">Fan de l'équipe de suisse de football (1.34 PF)</span>
                             </v-flex>
                         </v-layout>
                     </v-flex>
@@ -24,7 +24,7 @@
                     </v-flex>
                     <v-flex grow>
                         <v-layout row>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
+                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
                                 <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; border-radius: 5px; margin-top: 25px"><span style="color: white">3 / 10</span></v-progress-linear>
                             </v-flex>
@@ -218,6 +218,34 @@
         margin: 0;
         padding: 0;
     }
+	.barreHeaderLeft1 {
+	margin-left: 100px; 
+	float: left; 
+	margin-top: 4px;
+	}
+	.barreHeaderLeft2 {
+	color: white; 
+	padding: 4px; 
+	float: left; 
+	margin-top: 9px;
+	}
+	.barreHeaderRight {
+	margin-right: 100px; 
+	color: white; 
+	padding: 4px; 
+	float: right; 
+	margin-top: 9px;
+	}
+	.cadreHeader1 {
+	padding: 20px; 
+	background-color: black; 
+	border-bottom: 1px solid orangered; 
+	border-right: 1px solid orangered;
+	border-left: 1px solid orangered;	
+	height: 120px; 
+	box-shadow: 0 4px 5px -1px black; 
+	position: relative;
+	}
 	.cadreHeader {
 	padding: 15px; 
 	background-color: black; 
@@ -524,13 +552,36 @@
 		}
 		.barreHeader {
 			position:absolute;
-			top: 60px;
+			top: 70px;
 			height: 18px;
 			width: 100%;
 			background-color: orangered;
 			z-index: -1;
 			margin: 0;
 			padding: 0;
+		}
+		.barreHeaderLeft1 {
+		margin-left: 5px; 
+		}
+		.barreHeaderLeft2 {
+		color: white; 
+		padding: 4px; 
+		}
+		.barreHeaderRight {
+		margin-right: 5px; 
+		color: white; 
+		padding: 4px; 
+		float: right; 
+		}
+		.cadreHeader1 {
+		padding: 3px; 
+		background-color: black; 
+		border-bottom: 1px solid orangered; 
+		border-right: 1px solid orangered;
+		border-left: 1px solid orangered;	
+		height: 70px; 
+		box-shadow: 0 2px 3px -1px black; 
+		position: relative;
 		}
 		.cadreHeader {
 		padding: 3px; 
@@ -570,8 +621,7 @@
 			border-radius: 0 0 0 100%;
 		}
 		.imgTeamSmall {
-			height: 20px;
-			margin-top: 5px;
+			height: 12px;
 		}
 		.levelHeader {
 			font-weight: 700;
@@ -680,8 +730,6 @@
 		}   
 		/* End Header */
 		
-		
-
 		/* Footer */
 		.barreOrangered {
 			width: 100%;
