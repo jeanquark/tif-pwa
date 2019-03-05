@@ -165,6 +165,7 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
+		font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
 
     /* Content */
@@ -173,6 +174,7 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
+		font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
     .content {
         background-color: light-gray;;
