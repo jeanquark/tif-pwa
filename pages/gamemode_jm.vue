@@ -26,11 +26,11 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; border-radius: 5px; margin-top: 25px"><span style="color: white">3 / 10</span></v-progress-linear>
+                                <v-progress-linear class="progressOrange" color="orange" height="20" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" value="75">75 / 100</v-progress-linear>
+                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75">75 / 100</v-progress-linear>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
@@ -318,6 +318,13 @@
 	border-radius: 5px;
 	height: 20px;
 	}
+	.progressOrange {
+	width: 100%; 
+	font-weight: 700; 
+	color: black; 
+	border-radius: 5px;
+	height: 20px;
+	}
 	.plusYellow {
         position: absolute;
         top: 0;
@@ -569,19 +576,21 @@
 		}
 		.barreHeaderLeft1 {
 		margin-left: 25px;
-		margin-top: 0;
+		margin-top: 3px;
 		}
 		.barreHeaderLeft2 {
 		color: white; 
 		padding: 4px;
-		margin-top: 0;
+		margin-top: 2px;
+		font-size: 0.8em;
 		}
 		.barreHeaderRight {
 		margin-right: 25px; 
 		color: white; 
 		padding: 4px; 
 		float: right; 
-		margin-top: 0;
+		margin-top: 2px;
+		font-size: 0.8em;
 		}
 		.cadreHeader1 {
 		padding: 3px; 
@@ -640,6 +649,7 @@
 			background-color: orange;
 			color: white;
 			border-radius: 5px;
+			margin-top: 15px;
 		}
 		.plusOrangered {
 			position: absolute;
@@ -663,8 +673,16 @@
 		font-weight: 700; 
 		color: black; 
 		border-radius: 5px;
-		height: 12px;
+		height: 11px;
 		margin-top: 8px;
+		}
+		.progressOrange {
+		width: 100%; 
+		font-weight: 700; 
+		color: black; 
+		border-radius: 5px;
+		height: 11px;
+		margin-top: 18px;
 		}
 		.plusYellow {
 			position: absolute;
