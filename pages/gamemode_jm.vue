@@ -5,7 +5,7 @@
             <!-- <v-toolbar dark> -->
             <v-container fluid id="header" class="header">
                 <v-layout row>
-                    <v-flex hidden-sm-only class="barreHeader">
+                    <v-flex hidden-sm-and-down class="barreHeader">
                         <v-layout row>
                             <v-flex xs6 sm6 md6>
                                 <span class="barreHeaderLeft1"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span class="barreHeaderLeft2">G. Manigley (41 ans) - <nuxt-link to="/myteams" style="color: white; text-decoration: none">Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }}</nuxt-link></span>
