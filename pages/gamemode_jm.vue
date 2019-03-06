@@ -41,9 +41,14 @@
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
                                 <v-progress-linear class="progressYellow" color="yellow" height="20" value="75"><span style="color: black">75 / 100</span></v-progress-linear>
-                                <nuxt-link to="/plus" class="aPlusYellow">
-                                <span class="plusYellow">+</span>
-                                </nuxt-link>
+<v-tooltip bottom>
+<template v-slot:activator="{ on }">
+<nuxt-link to="/plus" class="aPlusYellow">
+<span class="plusYellow">+</span>
+</nuxt-link>
+</template>
+<span>Bottom tooltip</span>
+</v-tooltip>								
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
