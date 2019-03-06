@@ -11,7 +11,7 @@
                                 <span class="barreHeaderLeft1"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span class="barreHeaderLeft2">G. Manigley (41 ans) - <nuxt-link to="/myteams" style="color: white; text-decoration: none">Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }}</nuxt-link></span>
                             </v-flex>
                             <v-flex xs6 sm6 md6>
-                                <span class="barreHeaderRight">Fan de l'équipe de suisse de football - 1.34 point de ferveur</span>
+                                <span class="barreHeaderRight">Fan de l'équipe de suisse de football (1.34 PF)</span>
                             </v-flex>
                         </v-layout>
                     </v-flex>
@@ -44,7 +44,6 @@
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
-                            </v-flex>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
