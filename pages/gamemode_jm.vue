@@ -461,6 +461,9 @@
     font-size: 1.1em;
 	margin: 20px 100px;
     }
+	.pd-left10 {
+	padding-left: 10px;
+	}
 	.imgLogoEquipe {
 	max-width: 30px;
 	max-height: 30px;
