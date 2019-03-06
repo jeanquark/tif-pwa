@@ -472,11 +472,11 @@
 	font-size: 1.2em;
 	}
 	.progress-bar-txt {
-	position: relative
-	font-size: 14px
-	top: -22px
-	left: 6px
-	z-index: 1
+	position: relative;
+	font-size: 14px;
+	top: -22px;
+	left: 6px;
+	z-index: 1;
 	}
 	.material-icons.md-18 { font-size: 18px; }
     .material-icons.md-24 { font-size: 24px; }
