@@ -107,7 +107,7 @@
             <div class="content">
                 <!-- <v-layout> -->
                 <!-- <div class="container"> -->
-					<div class="cadreScore" style="position: absolute; margin: 20px 100px">
+					<div class="cadreScore" style="position: absolute">
 						<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
 							<v-layout align-start>
 								<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
@@ -459,6 +459,7 @@
     opacity: 0.9;
     color: black;
     font-size: 1.1em;
+	margin: 20px 100px;
     }
 	.imgLogoEquipe {
 	max-width: 30px;
@@ -824,7 +825,14 @@
 			padding: 2px;
 			font-size: 0.8em;
 		}
-		
+		.cadreScore {
+		border: 2px solid orangered;
+		padding: 5px;
+		width: 90%;
+		background-color: whitesmoke;
+		opacity: 0.9;
+		color: black;
+		}
 		.material-icons.md-48 { 
 		font-size: 30px;
 		margin-top: 5px;
