@@ -828,10 +828,14 @@
 		.cadreScore {
 		border: 2px solid orangered;
 		padding: 5px;
-		width: 90%;
+		width: 95%;
 		background-color: whitesmoke;
 		opacity: 0.9;
 		color: black;
+		margin: 0;
+		top: 105px;
+		left: 10px;
+		right: 10px;
 		}
 		.material-icons.md-48 { 
 		font-size: 30px;
