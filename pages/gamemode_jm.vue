@@ -126,7 +126,7 @@
 								<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
 									<img src="/images/switzerland.png" class="imgLogoEquipe"/>
 								</v-flex>
-								<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
+								<v-flex sm4 xs5 align-center class="text-xs-left pd-left5">
 									<span class="teamTextSize">Liverpool</span>
 								</v-flex>
 								<v-flex sm2 xs2 class="text-xs-center">
@@ -461,13 +461,16 @@
     font-size: 1.1em;
 	margin: 20px 100px;
     }
-	.pd-left10 {
-	padding-left: 10px;
+	.pd-left5 {
+	padding-left: 5px;
 	}
 	.imgLogoEquipe {
 	max-width: 30px;
 	max-height: 30px;
-	}    
+	}
+	.teamTextSize {
+	font-size: 1.2em;
+	}
 	.material-icons.md-18 { font-size: 18px; }
     .material-icons.md-24 { font-size: 24px; }
     .material-icons.md-36 { font-size: 36px; }

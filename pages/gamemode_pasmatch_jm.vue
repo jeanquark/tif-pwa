@@ -453,7 +453,10 @@
 	.imgLogoEquipe {
 	max-width: 30px;
 	max-height: 30px;
-	}    
+	} 
+	.teamTextSize {
+	font-size: 1.2em;
+	}
 	.material-icons.md-18 { font-size: 18px; }
     .material-icons.md-24 { font-size: 24px; }
     .material-icons.md-36 { font-size: 36px; }
