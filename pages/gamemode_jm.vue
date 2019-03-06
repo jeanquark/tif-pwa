@@ -115,7 +115,7 @@
 								</v-flex>
 								<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
 									<div style="color: orange;font-size: 80%">
-										<span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT - 19:00 (heure local)</span>
+										<span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >MATCH TERMINÉ</span>
 									</div>
 								</v-flex>
 							</v-layout>
@@ -127,13 +127,13 @@
 									<img src="/images/switzerland.png" class="imgLogoEquipe"/>
 								</v-flex>
 								<v-flex sm4 xs5 align-center class="text-xs-left pd-left5">
-									<span class="teamTextSize">Liverpool</span>
+									<span class="teamTextSize">FC Barcelone</span>
 								</v-flex>
 								<v-flex sm2 xs2 class="text-xs-center">
 									<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">3 - 2</span>
 								</v-flex>
 								<v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-									<span class="teamTextSize">Arsenal</span>
+									<span class="teamTextSize">Palma de Majorque</span>
 								</v-flex>
 								<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-right: 15px">
 									<img src="/images/switzerland.png" class="imgLogoEquipe"/>
@@ -156,6 +156,11 @@
                     </v-dialog>
                 <!-- </div> -->
                 <!-- </v-layout> -->
+<h1 class="ml4">
+  <span class="letters letters-1">Ready</span>
+  <span class="letters letters-2">Set</span>
+  <span class="letters letters-3">Go!</span>
+</h1>
             </div>
             
             <!-- Fixed Footer -->
@@ -197,6 +202,59 @@
 </template>
 
 <script>
+
+var ml4 = {};
+ml4.opacityIn = [0,1];
+ml4.scaleIn = [0.2, 1];
+ml4.scaleOut = 3;
+ml4.durationIn = 800;
+ml4.durationOut = 600;
+ml4.delay = 500;
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml4 .letters-1',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-1',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4',
+    opacity: 0,
+    duration: 500,
+    delay: 500
+  });
+  
     import ActionsCard from '~/components/ActionsCard'
     export default {
         components: { ActionsCard },
@@ -234,6 +292,21 @@
 </script>
 
 <style scoped>
+
+.ml4 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4.5em;
+}
+.ml4 .letters {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0.3em;
+  right: 0;
+  opacity: 0; 
+}
+
     body {
         margin: 0;
         padding: 0;
