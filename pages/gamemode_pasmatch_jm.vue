@@ -123,10 +123,8 @@
 								<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
 									<div style="background-color: orangered; height: 40px; width: 2px"></div>
 								</v-flex>
-								<v-flex sm2 xs2 align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
+								<v-flex sm12 xs12 align-center style="width: 50px; padding-left: 8px">
 									<img src="/images/switzerland.png" class="imgLogoEquipe"/>
-								</v-flex>
-								<v-flex sm10 xs10 align-center class="text-xs-left pd-left10">
 									<span class="teamTextSize">Le FC Barcelone n'a pas de match aujourd'hui !</span>
 								</v-flex>
 							</v-layout>
