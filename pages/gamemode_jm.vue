@@ -143,11 +143,11 @@
 					</div>                
                     <img src="/images/barcelona_clickable.png" usemap="#map" />
                     <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
-                    <map name="map">
-                        <area shape="circle" coords="169, 826, 53" alt="Stadium" @click="openActionsDialog('stadium')">
-                        <area shape="circle" coords="786, 357, 44" alt="Museum" @click="openActionsDialog('museum')">
-                    </map>
-
+					<map name="map">
+						<area alt="Stadium" title="Stadium" coords="257,276,38" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Stadium" title="Stadium" coords="350,700,33" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Museum" title="Museum" coords="682,351,28" shape="circle" @click="openActionsDialog('museum')">
+					</map>
                     <v-dialog
                         v-model="actionsModal"
                         max-width="800"
