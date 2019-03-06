@@ -124,8 +124,8 @@
 									<div style="background-color: orangered; height: 40px; width: 2px"></div>
 								</v-flex>
 								<v-flex sm12 xs12 align-center style="width: 50px; padding-left: 8px">
-									<img src="/images/switzerland.png" class="imgLogoEquipe"/>
-									<span class="teamTextSize">Le FC Barcelone n'a pas de match aujourd'hui !</span>
+									<img src="/images/switzerland.png" class="imgLogoEquipe" style="float: left" />
+									<span class="teamTextSize" style="float: left; margin-left: 8px; margin-top: 8px">Le FC Barcelone n'a pas de match aujourd'hui !</span>
 								</v-flex>
 							</v-layout>
 						</v-flex>
