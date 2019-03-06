@@ -793,19 +793,19 @@
 		}
 		.progress-bar-txt-black {
 			position: relative;
-			font-size: 10px;
-			top: -31px;
+			font-size: 9px;
+			top: -26px;
 			z-index: 1;
 			color: black;
-			font-weight: 500;
+			font-weight: 600;
 		}
 		.progress-bar-txt-white {
 			position: relative;
-			font-size: 10px;
-			top: -31px;
+			font-size: 9px;
+			top: -26px;
 			z-index: 1;
 			color: white;
-			font-weight: 500;
+			font-weight: 600;
 		}
 		.plusYellow {
 			position: absolute;
