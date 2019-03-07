@@ -140,13 +140,17 @@
 								</v-flex>
 							</v-layout>
 						</v-flex>
-					</div>                
-                    <img src="/images/barcelona_clickable.png" usemap="#map" />
+					</div> 
+					<img src="/images/barcelona_clickable.png" usemap="#map">
                     <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
 					<map name="map">
-						<area alt="Stadium" title="Stadium" coords="257,276,38" shape="circle" @click="openActionsDialog('stadium')">
-						<area alt="Stadium" title="Stadium" coords="350,700,33" shape="circle" @click="openActionsDialog('stadium')">
-						<area alt="Museum" title="Museum" coords="682,351,28" shape="circle" @click="openActionsDialog('museum')">
+						<area alt="Stadium" title="Stadium" href="stadium" coords="339,595,12" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="University" title="University" href="university" coords="294,537,12" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Lunapark" title="Lunapark" href="lunapark" coords="329,275,14" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Sagrada" title="Sagrada" href="sagrada" coords="650,416,11" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Aquarium" title="Aquarium" href="aquarium" coords="707,622,10" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Hospital" title="Hospital" href="hospital" coords="242,871,12" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Museum" title="Museum" href="museum" coords="921,359,10" shape="circle" @click="openActionsDialog('stadium')">
 					</map>
                     <v-dialog
                         v-model="actionsModal"
