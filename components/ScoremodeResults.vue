@@ -45,7 +45,7 @@
                                                     </v-flex>
                                                     <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
                                                         <div style="color: orange;font-size: 80%">
-                                                            <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H'">{{ props.item.time}} (heure local)</span>
+                                                            <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H'">{{ props.item.elapsed }} min</span>
                                                             <span v-if="props.item.statusShort === 'NS'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >{{ props.item.time}} (heure local)</span>
                                                             <span v-if="props.item.statusShort === 'PST'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >Match postponed</span>
                                                         </div>
