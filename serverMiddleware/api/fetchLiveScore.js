@@ -35,13 +35,13 @@ module.exports = app.use(async function(req, res, next) {
                 competitionsArray.push({
                     name: competition.val().name,
                     slug: competition.val().slug,
-                    league_id: competition.val().apifootball_id,
+                    apifootball_id: competition.val().apifootball_id,
                     status: competition.val().status,
                     countries: competition.val().countries
                 });
             }
         });
-        // console.log('competitionsArray: ', competitionsArray);
+        console.log('competitionsArray: ', competitionsArray);
 
         const response = await getLiveScore();
 
@@ -61,7 +61,7 @@ module.exports = app.use(async function(req, res, next) {
                 updates[`/events_new3/${id}/status`] = match.status;
                 updates[`/events_new3/${id}/statusShort`] = match.statusShort;
                 updates[`/events_new3/${id}/goalsHomeTeam`] = match.goalsHomeTeam;
-                updates[`/events_new3/${id}/goalsAwayTeam`] = match.goalsAwayTeam;
+                updates[`/events_new3/${id}/goalsVisitorTeam`] = match.goalsAwayTeam;
                 updates[`/events_new3/${id}/halftime_score`] = match.halftime_score;
                 updates[`/events_new3/${id}/final_score`] = match.final_score;
                 updates[`/events_new3/${id}/penalty`] = match.penalty;
@@ -76,6 +76,7 @@ module.exports = app.use(async function(req, res, next) {
 
         const snapshot = await admin.database().ref().update(updates);
 
+        let updateStandings = {};
         console.log('updateLeagueStanding: ', updateLeagueStanding);
 
         // Udate every league standing related to ended games
@@ -85,12 +86,14 @@ module.exports = app.use(async function(req, res, next) {
             console.log('response: ', response);
             Object.values(response.body.api.standings).forEach(teams => {
                 teams.forEach(team => {
-                    updates[`/standings_new3/${league}/standing/${team.rank}`] = team;
+                    updateStandings[`/standings_new3/${league}/standing/${team.rank}`] = team;
                 });
             });
+            updateStandings[`/standings_new3/${league}/last_updated`] = moment.format('YYYY-MM-DD HH:mm');
         }
+        await admin.database().ref().update(updateStandings);
 
-        console.log('Comes to an end!');
+        console.log('End of request!');
 
         res.status(200).send('GET request to APIFootball to fetch live scores succeeded!');
 

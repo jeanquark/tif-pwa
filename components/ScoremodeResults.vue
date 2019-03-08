@@ -25,82 +25,84 @@
                 lazy
                 style=""
             >
-            <div class="tab-item-wrapper">
-                <v-layout style="border: 4px solid grey;" class="column fill-height">
-                    <v-flex xs12 sm10 offset-sm1>
-                        <v-card flat>
-                            <v-card-text>
-                                <!-- loading: {{ loading }}<br /> -->
-                                <div class="text-xs-center loading" v-if="loading">
-                                    loading
-                                </div>
-                                <v-data-table :items="loadedEventsByDay(day)['events']" no-data-text="No game found on this day." class="elevation-0" hide-actions hide-headers v-if="loadedEventsByDay(day) && !loading">
-                                    <template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
-                                        <v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
-                                            <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
-                                                <v-layout align-start>
-                                                    <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-                                                        <div style="background-color: green; height: 100%; width: 2px" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H'"></div>
-                                                        <div style="background-color: orangered; height: 100%; width: 2px" v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'"></div>
-                                                    </v-flex>
-                                                    <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-                                                        <div style="color: orange;font-size: 80%">
-                                                            <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H'">{{ props.item.elapsed }} min</span>
-                                                            <span v-if="props.item.statusShort === 'NS'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >{{ props.item.time}} (heure local)</span>
-                                                            <span v-if="props.item.statusShort === 'PST'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >Match postponed</span>
-                                                        </div>
-                                                    </v-flex>
-                                                </v-layout>
-                                                <v-layout align-center style="max-width: 100%">
-                                                    <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-                                                        <div style="background-color: green; height: 40px; width: 2px" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H'"></div>
-        												<div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'" style="background-color: orangered; height: 40px; width: 2px"></div>
-        											</v-flex>
-                                                    <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
-                                                        <img :src="'/images/teams/' + props.item.homeTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
-                                                    </v-flex>
-                                                    <v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-                                                        <span class="teamTextSize">{{ props.item.homeTeam_name }}</span>
-                                                    </v-flex>
-                                                    <v-flex sm2 xs2 class="text-xs-center">
-                                                        <span class="scoreBox" style="" v-if="props.item.statusShort === 'FT'">
-                                                            {{ props.item.final_score }}
-                                                        </span>
-                                                        <span class="scoreBox" style="" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H'">
-                                                            <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-                                                                <span :key="props.item.goalsHomeTeam">
-                                                                    {{ props.item.goalsHomeTeam }}
-                                                                </span>
-                                                            </transition> -
-                                                            <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-                                                                <span :key="props.item.goalsVisitorTeam">
-                                                                    {{ props.item.goalsVisitorTeam }}
-                                                                </span>
-                                                            </transition>
-                                                        </span>
-                                                        <span class="scoreBox" style="" v-if="props.item.statusShort === 'NS'">
-                                                            {{ props.item.time }}
-                                                        </span>
-                                                        <span class="scoreBox" style="" v-if="props.item.statusShort === 'PST'">
-                                                            Postponed
-                                                        </span>
-                                                    </v-flex>
-                                                    <v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-                                                        <span class="teamTextSize">{{ props.item.visitorTeam_name }}</span>
-                                                    </v-flex>
-                                                    <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
-                                                        <img :src="'/images/teams/' + props.item.visitorTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
-                                                    </v-flex>
-                                                </v-layout>
-                                            </v-flex>
-                                        </v-layout>
-                                    </template>
-                                </v-data-table>
-                            </v-card-text>
-                        </v-card>
-                    </v-flex>
-                </v-layout>
-            </div>
+                <div class="tab-item-wrapper" v-cloak>
+                    <v-layout class="column fill-height" style="border: 4px solid grey;">
+                        <v-flex xs12>
+                            <v-card flat>
+                                <v-card-text>
+                                    <!-- loading: {{ loading }}<br /> -->
+                                    <div class="text-xs-center loading" v-if="loading">
+                                        loading
+                                    </div>
+                                    <v-data-table :items="loadedEventsByDay(day)['events']" no-data-text="No game found on this day." class="elevation-0" hide-actions hide-headers v-if="loadedEventsByDay(day) && !loading">
+                                        <template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
+                                            <!-- {{ props.item.id }} -->
+                                            <v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
+                                                <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
+                                                    <v-layout align-start>
+                                                        <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
+                                                            <div style="background-color: green; height: 100%; width: 2px" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
+                                                            <div style="background-color: orangered; height: 100%; width: 2px" v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'"></div>
+                                                        </v-flex>
+                                                        <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
+                                                            <div style="color: orange;font-size: 80%">
+                                                                <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H'">{{ props.item.elapsed }} min</span>
+                                                                <span v-if="props.item.statusShort === 'HT'" style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;">Half time</span>
+                                                                <span v-if="props.item.statusShort === 'NS'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >{{ props.item.time}} (heure local)</span>
+                                                                <span v-if="props.item.statusShort === 'PST'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >Match postponed</span>
+                                                            </div>
+                                                        </v-flex>
+                                                    </v-layout>
+                                                    <v-layout align-center style="max-width: 100%">
+                                                        <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
+                                                            <div style="background-color: green; height: 40px; width: 2px" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
+            												<div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'" style="background-color: orangered; height: 40px; width: 2px"></div>
+            											</v-flex>
+                                                        <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
+                                                            <img :src="'/images/teams/' + props.item.homeTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
+                                                        </v-flex>
+                                                        <v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
+                                                            <span class="teamTextSize">{{ props.item.homeTeam_name }}</span>
+                                                        </v-flex>
+                                                        <v-flex sm2 xs2 class="text-xs-center">
+                                                            <span class="scoreBox" style="" v-if="props.item.statusShort === 'FT'">
+                                                                {{ props.item.final_score }}
+                                                            </span>
+                                                            <span class="scoreBox" style="" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'">
+                                                                <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
+                                                                    <span :key="props.item.goalsHomeTeam">
+                                                                        {{ props.item.goalsHomeTeam }}
+                                                                    </span>
+                                                                </transition> -
+                                                                <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
+                                                                    <span :key="props.item.goalsVisitorTeam">
+                                                                        {{ props.item.goalsVisitorTeam }}
+                                                                    </span>
+                                                                </transition>
+                                                            </span>
+                                                            <span class="scoreBox" style="" v-if="props.item.statusShort === 'NS'">
+                                                                {{ props.item.time }}
+                                                            </span>
+                                                            <span class="scoreBox" style="" v-if="props.item.statusShort === 'PST'">
+                                                                Postponed
+                                                            </span>
+                                                        </v-flex>
+                                                        <v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
+                                                            <span class="teamTextSize">{{ props.item.visitorTeam_name }}</span>
+                                                        </v-flex>
+                                                        <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
+                                                            <img :src="'/images/teams/' + props.item.visitorTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
+                                                        </v-flex>
+                                                    </v-layout>
+                                                </v-flex>
+                                            </v-layout>
+                                        </template>
+                                    </v-data-table>
+                                </v-card-text>
+                            </v-card>
+                        </v-flex>
+                    </v-layout>
+                </div>
             </v-tab-item>
         </v-tabs-items>
     </v-tabs>
@@ -165,6 +167,9 @@
 </script>
 
 <style scoped>
+    [v-cloak] {
+        display: none;
+    }
     .tab-item-wrapper {
         /* vuetify sets the v-tabs__container height to 48px */
         /*height: calc(100vh - 330px);*/
