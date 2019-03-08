@@ -33,19 +33,21 @@
                                     <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
                                         <v-layout align-start>
                                             <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-                                                <div style="background-color: red; height: 100%; width: 2px"></div>
+                                                <div style="background-color: green; height: 100%; width: 2px" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'"></div>
+                                                <div v-else style="background-color: orangered; height: 100%; width: 2px"></div>
                                             </v-flex>
                                             <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
                                                 <div style="color: orange;font-size: 80%">
-                                                    <span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'"> - {{ props.item.time}} (heure local)</span>
-                                                    <span v-else style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT - {{ props.item.time}} (heure local)</span>
+                                                    <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'"> - {{ props.item.time}} (heure local)</span>
+                                                    <span v-else style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT - {{ props.item.time}} (heure local)</span>
                                                 </div>
                                             </v-flex>
                                         </v-layout>
                                         <v-layout align-center style="max-width: 100%">
                                             <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-                                                <div style="background-color: red; height: 40px; width: 2px"></div>
-                                            </v-flex>
+                                                <div style="background-color: green; height: 40px; width: 2px" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'"></div>
+												<div v-else style="background-color: orangered; height: 40px; width: 2px">
+											</v-flex>
                                             <v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
                                                 <img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
                                             </v-flex>
