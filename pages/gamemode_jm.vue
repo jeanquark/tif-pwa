@@ -142,7 +142,7 @@
 						</v-flex>
 					</div> 
 
-<img src="barcelona_clickable.png" usemap="#map">
+<img src="/images/barcelona_clickable.png" usemap="#map">
 
 <map name="map">
     <area target="" alt="Museum" title="Museum" href="museum" coords="NaN" shape="circle" style="background-color: red">
