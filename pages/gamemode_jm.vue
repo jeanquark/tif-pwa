@@ -144,7 +144,7 @@
 					<img src="/images/barcelona_clickable.png" usemap="#map">
                     <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
 					<map name="map">
-						<area alt="Stadium" title="Stadium" href="stadium" coords="339,595,12" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Stadium" title="Stadium" href="stadium" coords="339,595,12" shape="circle" @click="openActionsDialog('stadium')" style="border: 1px red solid">
 						<area alt="University" title="University" href="university" coords="294,537,12" shape="circle" @click="openActionsDialog('stadium')">
 						<area alt="Lunapark" title="Lunapark" href="lunapark" coords="329,275,14" shape="circle" @click="openActionsDialog('stadium')">
 						<area alt="Sagrada" title="Sagrada" href="sagrada" coords="650,416,11" shape="circle" @click="openActionsDialog('stadium')">
