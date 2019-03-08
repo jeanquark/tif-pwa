@@ -91,7 +91,9 @@ module.exports = app.use(async function(req, res, next) {
             });
             updateStandings[`/standings_new3/${league}/last_updated`] = moment.format('YYYY-MM-DD HH:mm');
         }
-        await admin.database().ref().update(updateStandings);
+        // await admin.database().ref().update(updateStandings);
+
+        console.log('updateLeagueStanding: ', updateLeagueStanding);
 
         console.log('End of request!');
 
