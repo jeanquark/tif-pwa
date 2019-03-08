@@ -65,12 +65,12 @@ module.exports = app.use(async function(req, res, next) {
                 updates[`/events_new3/${id}/halftime_score`] = match.halftime_score;
                 updates[`/events_new3/${id}/final_score`] = match.final_score;
                 updates[`/events_new3/${id}/penalty`] = match.penalty;
-                updates[`/events_new3/${id}/elapsed`] = match.elapsed;  
-            }
+                updates[`/events_new3/${id}/elapsed`] = match.elapsed;
 
-            // If match has ended, add league id to updateLeagueStanding array
-            if (match.statusShort === 'FT') {
-                updateLeagueStanding[match.league_id] = match.league_id;
+                // If match has ended, add league id to updateLeagueStanding array
+                if (match.statusShort === 'FT') {
+                    updateLeagueStanding[match.league_id] = match.league_id;
+                }
             }
         }
 
