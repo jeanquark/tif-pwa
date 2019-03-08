@@ -66,7 +66,7 @@
 
 <style>
 	#app {
-	font: normal 100%/1 "Acme", Helvetica, sans-serif;
+		font: normal 100%/1 "Acme", Helvetica, sans-serif;
 	}
 	.loader {
 		position: fixed;

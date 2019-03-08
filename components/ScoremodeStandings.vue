@@ -28,11 +28,8 @@
                 <v-layout>
                     <v-flex xs12 sm10 offset-sm1>
                         <v-card flat>
-                        	<!-- loadedActiveCompetitions: {{ loadedActiveCompetitions }}<br /><br /> -->
-                        	<!-- {{ loadedStandings[competition.slug]['standing'] }}<br /><br /> -->
                             <v-card-text class="card-text">
-                                <!-- <v-card-text>{{ `tab-${competition.slug}` }}</v-card-text> -->
-                                <v-expansion-panel class="elevation-0" :value="0">
+                                <v-expansion-panel class="elevation-0" :value="0" :disabled="true">
                                     <v-expansion-panel-content style="background-color: orangered">
                                         <div slot="header" class="white--text">
                                             {{ competition.name.toUpperCase() }}
@@ -53,16 +50,15 @@
                                                     :expand="true"
                                                     v-if="loadedStandings[competition.slug]"
                                                 >
-                                                    <!-- <v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear> -->
                                                     <template slot="items" slot-scope="props">
                                                         <tr :class="rowStyle(props.index, competition.info)">
                                                             <td>{{ props.item.rank }}</td>
-                                                            <td>
+                                                            <td class="lineHeight">
                                                             	<b>{{ props.item.teamName }}</b>
                                                             </td>
                                                             <td class="text-xs-center">
-                                                            	<img :src="`/images/teamsByID/${props.item.team_id}.png`" width="30" />
-                                                            	<!-- <v-img :src="`/images/teamsByID/${props.item.team_id}.png`" aspect-ratio="1"></v-img> -->
+                                                            	<!-- <img :src="`/images/teamsByID/${props.item.team_id}.png`" width="30" /> -->
+                                                            	<v-img :src="`/images/teamsByID/${props.item.team_id}.png`" width="30" aspect-ratio="1"></v-img>
                                                             </td>
                                                             <td class="text-xs-center">{{ props.item.points }}</td>
                                                             <td class="text-xs-center">{{ props.item.matchsPlayed }}</td>
@@ -161,6 +157,9 @@
         background: rgba(52, 152, 219, .3);
     }
     .relegation {
-        border-top: 2px dashed red;
+        border-top: 2px solid red;
+    }
+    .lineHeight {
+        line-height: 1.5;
     }
 </style>

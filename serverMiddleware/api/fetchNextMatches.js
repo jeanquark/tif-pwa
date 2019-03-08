@@ -1,141 +1,51 @@
 const express = require("express"),
       moment = require("moment"),
-      // axios = require("axios"),
       admin = require("firebase-admin"),
       slugifyFunction = require("../../helpers/slugify"),
-      // getRoundData = require("../../helpers/api/rounds"),
-      // getLeagueData = require("../../helpers/api/leagues"),
-      // getTeamData = require("../../helpers/api/teams"),
       unirest = require("unirest");
 
 const app = express();
-// const api_key = process.env.APIFOOTBALL_KEY;
-// axios.defaults.headers.common['X-RapidAPI-Key'] = "V5NyybcqoimshrFl7oR8yKKDMyxhp10zkcfjsnGw3uB6ZeMcDI";
-// axios.defaults.headers.common['X-RapidAPI-Key'] = api_key;
-// const api_key = process.env.LIVESCORE_API_KEY;
-// const api_secret = process.env.LIVESCORE_API_SECRET;
 
-const today = moment().format('YYYY-MM-DD');
-const in1day = moment().add(1, 'days').format('YYYY-MM-DD');
-// const in2days = moment().add(2, 'days').format('YYYY-MM-DD');
-// const in3days = moment().add(3, 'days').format('YYYY-MM-DD');
-// const in4days = moment().add(4, 'days').format('YYYY-MM-DD');
-// const in5days = moment().add(5, 'days').format('YYYY-MM-DD');
-// const in6days = moment().add(6, 'days').format('YYYY-MM-DD');
-// const in7days = moment().add(7, 'days').format('YYYY-MM-DD');
-// const in8days = moment().add(8, 'days').format('YYYY-MM-DD');
-// const in9days = moment().add(9, 'days').format('YYYY-MM-DD');
-// const in10days = moment().add(10, 'days').format('YYYY-MM-DD');
-// const in11days = moment().add(11, 'days').format('YYYY-MM-DD');
-const in12days = moment().add(12, 'days').format('YYYY-MM-DD');
-const in13days = moment().add(13, 'days').format('YYYY-MM-DD');
-const in14days = moment().add(14, 'days').format('YYYY-MM-DD');
+// const today = moment().format('YYYY-MM-DD');
+// const in1day = moment().add(1, 'days').format('YYYY-MM-DD');
+// const in12days = moment().add(12, 'days').format('YYYY-MM-DD');
+// const in13days = moment().add(13, 'days').format('YYYY-MM-DD');
+// const in14days = moment().add(14, 'days').format('YYYY-MM-DD');
 
-// const days = [];
-// for (let i = 0; i < 15; i++) {
-//     days.push(moment().add(i, 'days').format('YYYY-MM-DD'));
-// };
-// console.log('days: ', days);
+// const days = [today, in1day, in12days, in13days, in14days];
 
 
+const days = [];
+for (let i = 0; i < 15; i++) {
+    days.push(moment().add(i, 'days').format('YYYY-MM-DD'));
+};
 
-// const leagues = [2, 87, 8, 94, 4, 119];
-// const days = [today, in1day, in2days, in3days, in4days, in5days, in6days, in7days, in8days, in9days, in10days, in11days, in12days, in13days, in14days];
-const days = [today, in1day, in12days, in13days, in14days];
-// console.log('days: ', days);
-
-function getDailyMatches2 (day) {
-    const url = `https://api-football-v1.p.rapidapi.com/fixtures/date/${day}`;
-    // const url = "https://api-football-v1.p.rapidapi.com/fixtures/date/2019-03-06";
-    return axios.get(url);
-}
 
 function getDailyMatches (day) {
     const url = `https://api-football-v1.p.rapidapi.com/fixtures/date/${day}`;
-    // const url = "https://api-football-v1.p.rapidapi.com/fixtures/date/2019-03-06";
     return unirest.get(url).headers({
         'Accept': 'application/json',
         'X-RapidAPI-Key': 'V5NyybcqoimshrFl7oR8yKKDMyxhp10zkcfjsnGw3uB6ZeMcDI'
     });
 }
 
-// function getPremierLeagueMatches() {
-//   const url =
-//     "http://livescore-api.com/api-client/fixtures/matches.json?key=" +
-//     api_key +
-//     "&secret=" +
-//     api_secret +
-//     "&league=25";
-//   return axios.get(url);
-// }
-
-// function getLaLigaMatches() {
-//   const url =
-//     "http://livescore-api.com/api-client/fixtures/matches.json?key=" +
-//     api_key +
-//     "&secret=" +
-//     api_secret +
-//     "&league=74";
-//   return axios.get(url);
-// }
-
-// function getBundesligaMatches() {
-//   const url =
-//     "http://livescore-api.com/api-client/fixtures/matches.json?key=" +
-//     api_key +
-//     "&secret=" +
-//     api_secret +
-//     "&league=114";
-//   return axios.get(url);
-// }
-
-// function getSerieAMatches() {
-//   const url =
-//     "http://livescore-api.com/api-client/fixtures/matches.json?key=" +
-//     api_key +
-//     "&secret=" +
-//     api_secret +
-//     "&league=73";
-//   return axios.get(url);
-// }
-
-// function getLigue1Matches() {
-//   const url =
-//     "http://livescore-api.com/api-client/fixtures/matches.json?key=" +
-//     api_key +
-//     "&secret=" +
-//     api_secret +
-//     "&league=46";
-//   return axios.get(url);
-// }
-
-// function getSuperLeagueMatches() {
-//   const url =
-//     "http://livescore-api.com/api-client/fixtures/matches.json?key=" +
-//     api_key +
-//     "&secret=" +
-//     api_secret +
-//     "&league=12";
-//   return axios.get(url);
-// }
-
-// To be called once a day
+// To be called once a day to get tomorrow matches as well as matches in 2 weeks time
 module.exports = app.use(async function(req, res, next) {
     try {
         // 1) First, retrieve all teams
-        const teamsArray = []
-        const teams = await admin.database().ref('/teams').once('value')
+        const teamsArray = [];
+        const teams = await admin.database().ref('/teams').once('value');
         teams.forEach(team => {
             teamsArray.push({
                 apifootball_id: team.val().apifootball_id, 
                 name: team.val().name, 
                 slug: team.val().slug
-            })
-        })
+            });
+        });
 
         // 2) Second, fetch all active competitions
-        const competitionsArray = []
-        const competitions = await admin.database().ref('/competitions').once('value')
+        const competitionsArray = [];
+        const competitions = await admin.database().ref('/competitions').once('value');
         competitions.forEach(competition => {
             if (competition.val().status === 'active') {
                 competitionsArray.push({
@@ -153,13 +63,8 @@ module.exports = app.use(async function(req, res, next) {
         // 3) Third, make request
         let updates = {};
         for (let day of days) {
-            console.log('day: ', day);
             const response = await getDailyMatches(day);
-            // // console.log('response: ', response.data.api.fixtures);
-            // Object.values(response.data.api.fixtures).forEach(match => {
             Object.values(response.body.api.fixtures).forEach(match => {
-            // console.log('match: ', match);
-            //     // if (competitionsArray.includes)
                 if (competitionsArray.find(competition => competition.apifootball_id == match.league_id)) {
                     console.log('match: ', match)
 
@@ -184,7 +89,10 @@ module.exports = app.use(async function(req, res, next) {
 
                     const id = match.fixture_id;
                     updates[`/events_new3/${id}/id`] = id;
-                    updates[`/events_new3/${id}/date`] = match.event_date;
+                    updates[`/events_new3/${id}/date_iso8601`] = match.event_date;
+                    updates[`/events_new3/${id}/date`] = moment(match.event_date).format('YYYY-MM-DD');
+                    updates[`/events_new3/${id}/time`] = moment(match.event_date).format('HH:mm');
+                    updates[`/events_new3/${id}/time_utc`] = moment(match.event_date).utc().format('HH:mm');
                     updates[`/events_new3/${id}/timestamp`] = match.event_timestamp;
                     updates[`/events_new3/${id}/league_id`] = match.league_id;
                     updates[`/events_new3/${id}/round`] = match.round;
@@ -227,6 +135,6 @@ module.exports = app.use(async function(req, res, next) {
         
     } catch (error) {
         console.log("APIFootball error: ", error);
-        res.end('GET request to APIFootball to fetch matches failed: ', error.toString());
+        res.end('GET request to APIFootball to fetch daily matches failed: ', error.toString());
     }
 });

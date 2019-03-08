@@ -2,7 +2,7 @@
     <v-toolbar dark color="blue">
         <v-toolbar-side-icon></v-toolbar-side-icon>
 
-        <v-toolbar-title class="white--text">Title ScoreMode</v-toolbar-title>
+        <v-toolbar-title class="white--text">ScoreMode</v-toolbar-title>
 
         <v-spacer></v-spacer>
 

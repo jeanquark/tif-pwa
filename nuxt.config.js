@@ -97,7 +97,10 @@ module.exports = {
     ],
     serverMiddleware: [
         "~/serverMiddleware/validateFirebaseIdToken",
-        { path: "/admin", handler: "~/serverMiddleware/authAdmin" },
+        { 
+            path: "/admin",
+            handler: "~/serverMiddleware/authAdmin"
+        },
         {
             path: "/register-new-user",
             handler: "~/serverMiddleware/registerNewUser"
@@ -130,21 +133,24 @@ module.exports = {
         //     path: "/api/fetch-next-premier-league-matches",
         //     handler: "~/serverMiddleware/api/fetchNextPremierLeagueMatches"
         // },
-        
         {
-            path: "/api/fetch-next-matches",
+            path: "/api/fetch-league-matches", // POST request with league_id as body data
+            handler: "~/serverMiddleware/api/fetchLeagueMatches"
+        },
+        {
+            path: "/api/fetch-next-matches", // GET request
             handler: "~/serverMiddleware/api/fetchNextMatches"
         },
         {
-            path: "/api/fetch-all-standings",
+            path: "/api/fetch-all-standings", // GET request
             handler: "~/serverMiddleware/api/fetchAllStandings"
         },
         {
-            path: "/api/fetch-live-score",
+            path: "/api/fetch-live-score", // GET request
             handler: "~/serverMiddleware/api/fetchLiveScore"
         },
         {
-            path: "/api/fetch-live-events",
+            path: "/api/fetch-live-events", // GET request
             handler: "~/serverMiddleware/api/fetchLiveEvents"
         }
         // {
