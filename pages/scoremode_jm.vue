@@ -1,30 +1,7 @@
 <template>
     <v-content id="app">
         <v-container>
-            <!-- Fixed Header -->
-            <v-toolbar dark color="blue">
-                <v-toolbar-side-icon></v-toolbar-side-icon>
-
-                <v-toolbar-title class="white--text">Title</v-toolbar-title>
-
-                <v-spacer></v-spacer>
-
-                <v-btn icon>
-                  <v-icon>search</v-icon>
-                </v-btn>
-
-                <v-btn icon>
-                  <v-icon>apps</v-icon>
-                </v-btn>
-
-                <v-btn icon>
-                  <v-icon>refresh</v-icon>
-                </v-btn>
-
-                <v-btn icon>
-                  <v-icon>more_vert</v-icon>
-                </v-btn>
-            </v-toolbar>
+            <scoremode-header />
             
             <!-- Scrollable content -->
             <div class="content" style="border: 2px solid green;">
@@ -54,174 +31,13 @@
 
                 </v-tabs>
 
-                <v-tabs
-                    dark
-                    color="cyan"
-                    show-arrows
-                    fixed-tabs
-                    v-model="activeDay"
-                    style="border: 1px dashed orange;"
-                    v-if="selectType === 0"
-                    @change="fetchEventsByDay(activeDay)"
-                >
-                    <v-tabs-slider color="yellow"></v-tabs-slider>
-
-                    <v-tab
-                        v-for="day in days"
-                        :key="day"
-                        :href="'#' + day"
-                    >
-                        {{ day | moment('ddd DD MMM') }}
-                    </v-tab>
-
-                    <v-tabs-items>
-                        <v-tab-item
-                            v-for="day in days"
-                            :key="day"
-                            :value="day"
-                            lazy
-                        >
-                            <v-card flat>
-                                <v-card-text>
-                                    <!-- {{ `tab-${day}` }} -->
-
-
-
-
-                                    <!-- <div v-for="event in loadedEventsByDay(day)" :key="event.id">
-                                        <div v-if="event.home_team && event.visitor_team">
-                                            ID: {{ event.id }} - {{ event.home_team.name }} - {{ event.visitor_team.name }}
-                                        </div>
-                                    </div> -->
-
-                                    <v-data-table :items="loadedEventsByDay(day) ? loadedEventsByDay(day)['events'] : []" no-data-text="No game found on this day." class="elevation-0" hide-actions hide-headers>
-                                        <template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
-                                            <v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
-                                                <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
-                                                    <v-layout align-start>
-                                                        <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-                                                            <div style="background-color: red; height: 100%; width: 2px"></div>
-                                                        </v-flex>
-                                                        <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-                                                            <div style="color: orange;font-size: 80%">
-                                                                <span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'"> - {{ props.item.time}} (heure local)</span>
-                                                                <span v-else style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >BIENTÔT - {{ props.item.time}} (heure local)</span>
-                                                            </div>
-                                                        </v-flex>
-                                                    </v-layout>
-                                                    <v-layout align-center style="max-width: 100%">
-                                                        <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-                                                            <div style="background-color: red; height: 40px; width: 2px"></div>
-                                                        </v-flex>
-                                                        <v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
-                                                            <img :src="'/images/teams/' + props.item.home_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
-                                                        </v-flex>
-                                                        <v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-                                                            <span class="teamTextSize">{{ props.item.home_team.name }}</span>
-                                                        </v-flex>
-                                                        <v-flex sm2 xs2 class="text-xs-center">
-                                                            <span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%" v-if="props.item.status === 'IN PLAY' || props.item.status === 'HALF TIME BREAK' || props.item.status === 'ADDED TIME' || props.item.status === 'FINISHED'">
-                                                                <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-                                                                    <span :key="props.item.score">
-                                                                        {{ props.item.score }}
-                                                                    </span>
-                                                                </transition>
-                                                            </span>
-                                                            <!-- <span v-else style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">{{ convertToLocaltime(props.item.timestamp) }}</span> -->
-                                                        </v-flex>
-                                                        <v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-                                                            <span class="teamTextSize">{{ props.item.visitor_team.name }}</span>
-                                                        </v-flex>
-                                                        <v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-right: 15px">
-                                                            <img :src="'/images/teams/' + props.item.visitor_team.slug + '.png'" :lazy-src="'/images/icon.png'" class="imgLogoEquipe"/>
-                                                        </v-flex>
-                                                    </v-layout>
-                                                </v-flex>
-                                            </v-layout>
-                                        </template>
-                                    </v-data-table>
-
-                                </v-card-text>
-                            </v-card>
-                        </v-tab-item>
-                    </v-tabs-items>
-                </v-tabs>
-
-
-
+                <!-- Results -->
+                <scoremode-results v-if="selectType === 0" />
 
                 <!-- Standings -->
-                <v-tabs
-                    dark
-                    color="indigo"
-                    show-arrows
-                    fixed-tabs
-                    v-model="activeCompetition"
-                    style="border: 1px dashed orange;"
-                    v-if="selectType === 1"
-                    @change="fetchCompetitionStanding(activeCompetition)"
-                >
-                    <v-tabs-slider color="yellow"></v-tabs-slider>
+                <scoremode-standings v-if="selectType === 1" />
 
-                    <v-tab
-                        v-for="competition in competitions"
-                        :key="competition.slug"
-                        :href="'#' + competition.slug"
-                    >
-                        {{ competition.name }}
-                    </v-tab>
-
-                    <v-tabs-items>
-                        <v-tab-item
-                            v-for="competition in competitions"
-                            :key="competition.slug"
-                            :value="competition.slug"
-                            lazy
-                        >
-                            <v-card flat>
-                                <v-card-text class="card-text">
-                                    <!-- <v-card-text>{{ `tab-${competition.slug}` }}</v-card-text> -->
-                                    <v-expansion-panel class="elevation-0" :value="0">
-                                        <v-expansion-panel-content style="background-color: orangered">
-                                            <div slot="header" class="white--text">
-                                                {{ competition.name.toUpperCase() }}
-                                            </div>
-                                            <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                                            <v-card>
-                                                <v-card-text style="padding: 0">
-                                                    <!-- :items="loadedStandings[competition.slug]" -->
-                                                    <!-- :items="loadedCompetitionStanding(competition.slug)" -->
-                                                    <v-data-table
-                                                        :headers="standingHeaders"
-                                                        :items="loadedStandings[competition.slug] ? loadedStandings[competition.slug]['standing'] : []"
-                                                        class="elevation-0"
-                                                        no-data-text="No standing found for this competition"
-                                                        :disable-initial-sort="true"
-                                                        :total-items="20"
-                                                        hide-actions
-                                                    >
-                                                        <!-- <v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear> -->
-                                                        <template slot="items" slot-scope="props">
-                                                            <tr :class="rowStyle(props.index, competition.info)">
-                                                                <td>{{ props.item.rank }}</td>
-                                                                <td>{{ props.item.name }}</td>
-                                                                <td class="text-xs-center">{{ props.item.points }}</td>
-                                                                <td class="text-xs-center">{{ props.item.matches }}</td>
-                                                                <td class="text-xs-center">{{ props.item.won }}</td>
-                                                                <td class="text-xs-center">{{ props.item.drawn }}</td>
-                                                                <td class="text-xs-center">{{ props.item.lost }}</td>
-                                                            </tr>
-                                                        </template>
-                                                    </v-data-table>
-                                                </v-card-text>
-                                            </v-card>
-                                        </v-expansion-panel-content>
-                                    </v-expansion-panel>
-                                </v-card-text>
-                            </v-card>
-                        </v-tab-item>
-                    </v-tabs-items>
-                </v-tabs>
+                
             </div>
             
             <!-- Fixed Footer -->
@@ -237,7 +53,11 @@
 
 <script>
     import moment from 'moment'
+    import ScoremodeHeader from '~/components/ScoremodeHeader'
+    import ScoremodeResults from '~/components/ScoremodeResults'
+    import ScoremodeStandings from '~/components/ScoremodeStandings'
     export default {
+        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings },
         async created () {
             // console.log(moment().format('YYYY-MM-DD'))
             // console.log(moment().add(1, 'days').format('YYYY-MM-DD'))

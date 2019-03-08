@@ -59,7 +59,7 @@ export const actions = {
         console.log('Call to fetchCompetitionStanding action', payload)
         console.log('payload: ', payload) // spanish_la_liga_2018_2019
         // firebase.database().ref('/standings/' + payload.slug + '/standing').on('value', function (snapshot) {
-        firebase.database().ref('/standings/' + payload + '/standing').on('value', function (snapshot) {
+        firebase.database().ref('/standings_new3/' + payload + '/standing').on('value', function (snapshot) {
             console.log('snapshot: ', snapshot.val())
             const standingArray = []
             for (const key in snapshot.val()) {

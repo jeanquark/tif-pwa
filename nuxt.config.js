@@ -122,30 +122,35 @@ module.exports = {
             path: "/subscriptions/send-notifications",
             handler: "~/serverMiddleware/subscriptions/sendNotifications"
         },
+        // {
+        //     path: "/api/fetch-past-premier-league-matches",
+        //     handler: "~/serverMiddleware/api/fetchPastPremierLeagueMatches"
+        // },
+        // {
+        //     path: "/api/fetch-next-premier-league-matches",
+        //     handler: "~/serverMiddleware/api/fetchNextPremierLeagueMatches"
+        // },
+        
         {
-            path: "/api/fetch-past-premier-league-matches",
-            handler: "~/serverMiddleware/api/fetchPastPremierLeagueMatches"
+            path: "/api/fetch-next-matches",
+            handler: "~/serverMiddleware/api/fetchNextMatches"
         },
         {
-            path: "/api/fetch-next-premier-league-matches",
-            handler: "~/serverMiddleware/api/fetchNextPremierLeagueMatches"
+            path: "/api/fetch-all-standings",
+            handler: "~/serverMiddleware/api/fetchAllStandings"
         },
         {
             path: "/api/fetch-live-score",
             handler: "~/serverMiddleware/api/fetchLiveScore"
         },
         {
-            path: "/api/fetch-live-actions",
-            handler: "~/serverMiddleware/api/fetchLiveActions"
-        },
-        {
-            path: "/api/fetch-standings",
-            handler: "~/serverMiddleware/api/fetchStandings"
-        },
-        {
-            path: "/api/fetch-next-top5-leagues-matches",
-            handler: "~/serverMiddleware/api/fetchNextTop5LeaguesMatches"
+            path: "/api/fetch-live-events",
+            handler: "~/serverMiddleware/api/fetchLiveEvents"
         }
+        // {
+        //     path: "/api/fetch-league-standing",
+        //     handler: "~/serverMiddleware/api/fetchLeagueStanding"
+        // }
     ],
     css: ["~/assets/style/app.styl"],
     build: {
