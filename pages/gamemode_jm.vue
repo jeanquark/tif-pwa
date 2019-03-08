@@ -36,11 +36,11 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="orange" height="20" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
+                                <v-progress-linear class="progressOrange" color="orange" height="20" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75"><span style="color: black">75 / 100</span></v-progress-linear>
+                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75"></v-progress-linear><span class="progress-bar-txt-black">75 / 100</span>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
@@ -65,11 +65,11 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="orange" height="12" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
+                                <v-progress-linear class="progressOrange" color="orange" height="12" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="12" value="75"><span style="color: black">75 / 100</span></v-progress-linear>
+                                <v-progress-linear class="progressYellow" color="yellow" height="12" value="75"></v-progress-linear><span class="progress-bar-txt-black">75 / 100</span>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
@@ -140,14 +140,18 @@
 								</v-flex>
 							</v-layout>
 						</v-flex>
-					</div>                
-                    <img src="/images/barcelona_clickable.png" usemap="#map" />
+					</div> 
+					<img src="/images/barcelona_clickable.png" usemap="#map">
                     <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
-                    <map name="map">
-                        <area shape="circle" coords="169, 826, 53" alt="Stadium" @click="openActionsDialog('stadium')">
-                        <area shape="circle" coords="786, 357, 44" alt="Museum" @click="openActionsDialog('museum')">
-                    </map>
-
+					<map name="map">
+						<area alt="Stadium" title="Stadium" href="stadium" coords="339,595,12" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="University" title="University" href="university" coords="294,537,12" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Lunapark" title="Lunapark" href="lunapark" coords="329,275,14" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Sagrada" title="Sagrada" href="sagrada" coords="650,416,11" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Aquarium" title="Aquarium" href="aquarium" coords="707,622,10" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Hospital" title="Hospital" href="hospital" coords="242,871,12" shape="circle" @click="openActionsDialog('stadium')">
+						<area alt="Museum" title="Museum" href="museum" coords="921,359,10" shape="circle" @click="openActionsDialog('stadium')">
+					</map>
                     <v-dialog
                         v-model="actionsModal"
                         max-width="800"
@@ -471,6 +475,22 @@
 	.teamTextSize {
 	font-size: 1.2em;
 	}
+	.progress-bar-txt-black {
+		position: relative;
+		font-size: 15px;
+		top: -31px;
+		z-index: 1;
+		color: black;
+		font-weight: 700;
+	}
+	.progress-bar-txt-white {
+		position: relative;
+		font-size: 15px;
+		top: -31px;
+		z-index: 1;
+		color: white;
+		font-weight: 700;
+	}
 	.material-icons.md-18 { font-size: 18px; }
     .material-icons.md-24 { font-size: 24px; }
     .material-icons.md-36 { font-size: 36px; }
@@ -774,6 +794,22 @@
 		border-radius: 5px;
 		height: 11px;
 		margin-top: 18px;
+		}
+		.progress-bar-txt-black {
+			position: relative;
+			font-size: 9px;
+			top: -26px;
+			z-index: 1;
+			color: black;
+			font-weight: 600;
+		}
+		.progress-bar-txt-white {
+			position: relative;
+			font-size: 9px;
+			top: -26px;
+			z-index: 1;
+			color: white;
+			font-weight: 600;
 		}
 		.plusYellow {
 			position: absolute;
