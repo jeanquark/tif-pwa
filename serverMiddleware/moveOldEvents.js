@@ -8,39 +8,38 @@ const app = express();
 // Fetch all events that are about to start
 const today = moment().format('YYYY-MM-DD');
 const yesterday = moment().subtract(1, 'days').unix().toString();
+const twoWeeksFromNow = moment().add(15, 'days').unix().toString();
 console.log('today: ', today);
 console.log('yesterday: ', yesterday);
 
 // To be run every day
 module.exports = app.use(async function (req, res, next) {
     try {
+        let eventsToRemove = [];
         // 1) Fetch all events that are older than 2 days
-        // const snapshot = await admin.database().ref('events_new2').orderByChild('timestamp').startAt('1').endAt('1538231400').once('value');
-        const snapshot = await admin.database().ref('events_new2').orderByChild('timestamp').startAt('1').endAt(yesterday.toString()).once('value');
-        // console.log('snapshot: ', snapshot);
-        const response = Object.assign({}, snapshot.val());
-        // console.log('response: ', response);
+        const oldEvents = await admin.database().ref('events_new3').orderByChild('timestamp').startAt('1').endAt(yesterday.toString()).once('value');
+        oldEvents.forEach(oldEvent => {
+            eventsToRemove.push(oldEvent.val());
+        });
 
+        // 2) Fetch all events that will happen in more than 2 weeks
+        const futureEvents = await admin.database().ref('events_new3').orderByChild('timestamp').startAt(twoWeeksFromNow.toString()).once('value');
+        futureEvents.forEach(futureEvent => {
+            eventsToRemove.push(futureEvent.val());
+        });
 
         // 2) Add those events to the events_old node
         let updates = {};
-        for (let event in response) {
-            console.log('event: ', event);
-            // console.log(response[event]);
-            updates['/events_old/' + event] = response[event];
-            // Remove those events from events node:
-            updates['/events_new2/' + event] = null;
+        for (let event of eventsToRemove) {
+            updates['/events_old/' + event.id] = event;
+            updates['/events_new3/' + event.id] = null;
         }
         
-        admin.database().ref().update(updates).then((snapshot) => {
-            console.log('Successfully remove old events from database');
-        }).catch((error) => {
-            console.log('Firebase error: ', error);
-        })
-        console.log('results2: ', results)
-        res.send(`GET request succeeded to remove old events`);
-    } catch(error) {
+        await admin.database().ref().update(updates);
+
+        res.send(`GET request to remove old events succeeded!`);
+    } catch (error) {
         console.log(error);
-        res.send('GET request failed...');
+        res.end(`GET request to remove old events failed: ${error}`);
     }
 })

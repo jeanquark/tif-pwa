@@ -65,7 +65,8 @@ module.exports = app.use(async function(req, res, next) {
         for (let day of days) {
             const response = await getDailyMatches(day);
             Object.values(response.body.api.fixtures).forEach(match => {
-                if (competitionsArray.find(competition => competition.apifootball_id == match.league_id)) {
+                const competition = competitionsArray.find(competition => competition.apifootball_id == match.league_id)
+                if (competition) {
                     console.log('match: ', match)
 
                     // Define teams data
@@ -110,6 +111,8 @@ module.exports = app.use(async function(req, res, next) {
                     updates[`/events_new3/${id}/elapsed`] = match.elapsed;
                     updates[`/events_new3/${id}/status`] = match.status;
                     updates[`/events_new3/${id}/statusShort`] = match.statusShort;
+                    updates[`/events_new3/${id}/league_name`] = competition.name;
+                    updates[`/events_new3/${id}/league_slug`] = competition.slug;
                 }
             });
         };

@@ -42,6 +42,9 @@
 		// middleware: ['unauth-check'],
 		components: { Login, Register },
 		layout: 'layoutFront',
+		created () {
+			
+		},
 		data () {
 			return {
 				loginModal: false,

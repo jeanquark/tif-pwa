@@ -14,14 +14,6 @@ function getLiveScore () {
     });
 }
 
-function getLeagueStanding (league) {
-    const url = `https://api-football-v1.p.rapidapi.com/leagueTable/${league}`;
-    return unirest.get(url).headers({
-        'Accept': 'application/json',
-        'X-RapidAPI-Key': 'V5NyybcqoimshrFl7oR8yKKDMyxhp10zkcfjsnGw3uB6ZeMcDI'
-    });
-}
-
 // To be called every minute
 module.exports = app.use(async function(req, res, next) {
     try {
@@ -49,7 +41,6 @@ module.exports = app.use(async function(req, res, next) {
         // console.log('response.body.api.fixtures: ', response.body.api.fixtures);
 
         let updates = {};
-        let updateLeagueStanding = {};
 
         for (let match of Object.values(response.body.api.fixtures)) {
 
@@ -66,34 +57,10 @@ module.exports = app.use(async function(req, res, next) {
                 updates[`/events_new3/${id}/final_score`] = match.final_score;
                 updates[`/events_new3/${id}/penalty`] = match.penalty;
                 updates[`/events_new3/${id}/elapsed`] = match.elapsed;
-
-                // If match has ended, add league id to updateLeagueStanding array
-                if (match.statusShort === 'FT') {
-                    updateLeagueStanding[match.league_id] = match.league_id;
-                }
             }
         }
 
         const snapshot = await admin.database().ref().update(updates);
-
-        let updateStandings = {};
-        console.log('updateLeagueStanding: ', updateLeagueStanding);
-
-        // Udate every league standing related to ended games
-        for (league in updateLeagueStanding) {
-            console.log('league: ', league);
-            const response = await getLeagueStanding(league);
-            console.log('response: ', response);
-            Object.values(response.body.api.standings).forEach(teams => {
-                teams.forEach(team => {
-                    updateStandings[`/standings_new3/${league}/standing/${team.rank}`] = team;
-                });
-            });
-            updateStandings[`/standings_new3/${league}/last_updated`] = moment.format('YYYY-MM-DD HH:mm');
-        }
-        // await admin.database().ref().update(updateStandings);
-
-        console.log('updateLeagueStanding: ', updateLeagueStanding);
 
         console.log('End of request!');
 

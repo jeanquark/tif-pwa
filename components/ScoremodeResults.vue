@@ -25,8 +25,8 @@
                 lazy
                 style=""
             >
-                <div class="tab-item-wrapper" v-cloak>
-                    <v-layout class="column fill-height" style="border: 4px solid grey;">
+                <div class="tab-item-wrapper">
+                    <v-layout class="column fill-height" style="border: 4px solid grey;" v-cloak>
                         <v-flex xs12>
                             <v-card flat>
                                 <v-card-text>
@@ -36,7 +36,7 @@
                                     </div>
                                     <v-data-table :items="loadedEventsByDay(day)['events']" no-data-text="No game found on this day." class="elevation-0" hide-actions hide-headers v-if="loadedEventsByDay(day) && !loading">
                                         <template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
-                                            <!-- {{ props.item.id }} -->
+                                            
                                             <v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
                                                 <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
                                                     <v-layout align-start>
@@ -46,12 +46,15 @@
                                                         </v-flex>
                                                         <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
                                                             <div style="color: orange;font-size: 80%">
-                                                                <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H'">{{ props.item.elapsed }} min</span>
+                                                                <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === 'FT'">Finished</span>
+                                                                <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H'">{{ props.item.elapsed }} min</span>
                                                                 <span v-if="props.item.statusShort === 'HT'" style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;">Half time</span>
-                                                                <span v-if="props.item.statusShort === 'NS'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >{{ props.item.time}} (heure local)</span>
+                                                                <span v-if="props.item.statusShort === 'NS'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >{{ convertToLocalTime(props.item.timestamp) }}</span>
                                                                 <span v-if="props.item.statusShort === 'PST'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >Match postponed</span>
+                                                                ID: {{ props.item.id }}
                                                             </div>
                                                         </v-flex>
+                                                        
                                                     </v-layout>
                                                     <v-layout align-center style="max-width: 100%">
                                                         <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
@@ -81,7 +84,8 @@
                                                                 </transition>
                                                             </span>
                                                             <span class="scoreBox" style="" v-if="props.item.statusShort === 'NS'">
-                                                                {{ props.item.time }}
+                                                                {{ convertToLocalTime(props.item.timestamp) }}
+                                                                <!-- {{ props.item.time }} -->
                                                             </span>
                                                             <span class="scoreBox" style="" v-if="props.item.statusShort === 'PST'">
                                                                 Postponed
@@ -148,19 +152,27 @@
                 if (!this.loadedEvents[date]) {
                     await this.$store.dispatch('events/fetchEventsByDay', date)
                 }
+                // const that = this
+                // setTimeout(() => {
+                //     that.$store.commit('setLoading', false)
+                // }, 1000)
                 this.$store.commit('setLoading', false)
             },
             loadedEventsByDay (date) {
                 return this.$store.getters['events/loadedEvents'][date]
             },
             convertToLocalTime (timestamp) {
-                const utcDiff = new Date().getTimezoneOffset()
-                console.log('utcDiff: ', utcDiff)
-                if (utcDiff > 0) {
-                    return moment.unix(timestamp).add(utcDiff, 'minutes').format("HH:mm")
-                } else {
-                    return moment.unix(timestamp).subtract(utcDiff, 'minutes').format("HH:mm")
-                }
+                return moment.unix(timestamp).format('HH:mm')
+
+                // console.log('timestamp: ', timestamp)
+                // console.log(moment.unix(timestamp).format('HH:mm'))
+                // const utcDiff = new Date().getTimezoneOffset()
+                // console.log('utcDiff: ', utcDiff)
+                // if (utcDiff > 0) {
+                //     return moment.unix(timestamp).add(utcDiff, 'minutes').format("HH:mm")
+                // } else {
+                //     return moment.unix(timestamp).subtract(utcDiff, 'minutes').format("HH:mm")
+                // }
             }
 		}
 	}

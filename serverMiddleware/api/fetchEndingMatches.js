@@ -1,0 +1,97 @@
+const express = require("express"),
+      moment = require("moment"),
+      admin = require("firebase-admin"),
+      bodyParser = require('body-parser'),
+      slugifyFunction = require("../../helpers/slugify"),
+      unirest = require("unirest");
+
+const app = express();
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+function getFixtureById (fixture) {
+    const url = `https://api-football-v1.p.rapidapi.com/fixtures/id/${fixture}`;
+    return unirest.get(url).headers({
+        'Accept': 'application/json',
+        'X-RapidAPI-Key': 'V5NyybcqoimshrFl7oR8yKKDMyxhp10zkcfjsnGw3uB6ZeMcDI'
+    });
+}
+
+function getLeagueStanding (league) {
+    const url = `https://api-football-v1.p.rapidapi.com/leagueTable/${league}`;
+    return unirest.get(url).headers({
+        'Accept': 'application/json',
+        'X-RapidAPI-Key': 'V5NyybcqoimshrFl7oR8yKKDMyxhp10zkcfjsnGw3uB6ZeMcDI'
+    });
+}
+
+// To be called when new competition is added as a POST request with league_id as body data
+module.exports = app.use(async function(req, res, next) {
+    try {
+        // 1) First, retrieve all events that have an elapsed time of above 85 min
+        const matchesArray = [];
+        const endingMatches = await admin.database().ref('/events_new3').orderByChild('statusShort').equalTo('2H').once('value');
+        endingMatches.forEach(match => {
+            // if (match.elapsed > '85') {
+                matchesArray.push({
+                    id: match.val().id, 
+                    league_id: match.val().league_id,
+                    league_slug: match.val().league_slug,
+                    elapse: match.val().elapsed
+                });
+            // }
+        });
+
+        console.log('matchesArray: ', matchesArray);
+
+        // 2) Second, make request to API-football for every ending match
+        let updates = {};
+        let updatesLeagueStanding = {};
+        const updateLeagueStanding = {};
+
+        for (let match of matchesArray) {
+            const response = await getFixtureById(match.id);
+            // console.log('response: ', response);
+            Object.values(response.body.api.fixtures).forEach(fixture => {
+                console.log('match: ', match);
+                const id = fixture.fixture_id;
+                updates[`/events_new3/${id}/status`] = fixture.status;
+                updates[`/events_new3/${id}/statusShort`] = fixture.statusShort;
+                updates[`/events_new3/${id}/goalsHomeTeam`] = fixture.goalsHomeTeam;
+                updates[`/events_new3/${id}/goalsVisitorTeam`] = fixture.goalsAwayTeam;
+                updates[`/events_new3/${id}/final_score`] = fixture.final_score;
+                updates[`/events_new3/${id}/penalty`] = fixture.penalty;
+
+                // If match has ended, add league id to updateLeagueStanding array
+                if (fixture.statusShort === 'FT') {
+                    updateLeagueStanding[fixture.league_id] = {
+                        'id': fixture.league_id,
+                        'slug' : match.league_slug
+                    };
+                }
+            });
+        }
+
+        console.log('updateLeagueStanding: ', updateLeagueStanding);
+
+        for (league in updateLeagueStanding) {
+            console.log('league: ', league);
+            const response = await getLeagueStanding(league.id);
+            // console.log('response2: ', response);
+            Object.values(response.body.api.standings).forEach(teams => {
+                teams.forEach(team => {
+                    updates[`/standings_new3/${league.slug}/standing/${team.rank}`] = team;
+                });
+            });
+            updates[`/standings_new3/${league.slug}/last_updated`] = moment().format('YYYY-MM-DD HH:mm');
+        }
+
+        const snapshot = await admin.database().ref().update(updates);
+
+        console.log('Done!');
+        res.send(`GET request to APIFootball to fetch fixture succeeded!`);
+    } catch (error) {
+        console.log("APIFootball error: ", error);
+        res.end(`GET request to APIFootball to fetch fixture failed: ${error}`);
+    }
+});

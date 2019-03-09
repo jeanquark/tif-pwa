@@ -152,6 +152,10 @@ module.exports = {
         {
             path: "/api/fetch-live-events", // GET request
             handler: "~/serverMiddleware/api/fetchLiveEvents"
+        },
+        {
+            path: "/api/fetch-ending-matches", // GET request
+            handler: "~/serverMiddleware/api/fetchEndingMatches"
         }
         // {
         //     path: "/api/fetch-league-standing",
