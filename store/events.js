@@ -46,6 +46,9 @@ export const mutations = {
     //         1
     //     )
     // }
+    clearEvents (state) {
+        state.loadedEvents = {}
+    }
 }
 
 export const actions = {

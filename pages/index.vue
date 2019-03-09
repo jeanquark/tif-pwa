@@ -43,7 +43,8 @@
 		components: { Login, Register },
 		layout: 'layoutFront',
 		created () {
-			
+			this.$store.commit('events/clearEvents')
+			this.$store.commit('standings/clearStandings')
 		},
 		data () {
 			return {

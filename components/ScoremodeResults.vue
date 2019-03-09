@@ -207,6 +207,16 @@
         font-size: 130%;
     }
 
+    /* Transition effects on score by J-M */
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 5s;
+        background-color: #000;
+    }
+    
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
+    }
+
     @media only screen and (max-width: 768px) {
         .imgLogoEquipe {
             max-width: 35px;

@@ -50,6 +50,9 @@ export const mutations = {
     setStandings (state, payload) {
         console.log('Call to setStanding mutation', payload)
         state.loadedStandings = Object.assign({}, state.loadedStandings, { [payload.slug]: payload })
+    },
+    clearStandings (state) {
+        state.loadedStandings = {}
     }
 }
 

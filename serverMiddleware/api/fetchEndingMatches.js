@@ -32,14 +32,14 @@ module.exports = app.use(async function(req, res, next) {
         const matchesArray = [];
         const endingMatches = await admin.database().ref('/events_new3').orderByChild('statusShort').equalTo('2H').once('value');
         endingMatches.forEach(match => {
-            // if (match.elapsed > '85') {
+            if (match.elapsed > '85') {
                 matchesArray.push({
                     id: match.val().id, 
                     league_id: match.val().league_id,
                     league_slug: match.val().league_slug,
                     elapse: match.val().elapsed
                 });
-            // }
+            }
         });
 
         console.log('matchesArray: ', matchesArray);
@@ -51,7 +51,6 @@ module.exports = app.use(async function(req, res, next) {
 
         for (let match of matchesArray) {
             const response = await getFixtureById(match.id);
-            // console.log('response: ', response);
             Object.values(response.body.api.fixtures).forEach(fixture => {
                 console.log('match: ', match);
                 const id = fixture.fixture_id;
@@ -74,16 +73,17 @@ module.exports = app.use(async function(req, res, next) {
 
         console.log('updateLeagueStanding: ', updateLeagueStanding);
 
-        for (league in updateLeagueStanding) {
-            console.log('league: ', league);
-            const response = await getLeagueStanding(league.id);
-            // console.log('response2: ', response);
+        for (let league in updateLeagueStanding) {
+            const league_id = updateLeagueStanding[league].id;
+            const league_slug = updateLeagueStanding[league].slug;
+
+            const response = await getLeagueStanding(league_id);
             Object.values(response.body.api.standings).forEach(teams => {
                 teams.forEach(team => {
-                    updates[`/standings_new3/${league.slug}/standing/${team.rank}`] = team;
+                    updates[`/standings_new3/${league_slug}/standing/${team.rank}`] = team;
                 });
             });
-            updates[`/standings_new3/${league.slug}/last_updated`] = moment().format('YYYY-MM-DD HH:mm');
+            updates[`/standings_new3/${league_slug}/last_updated`] = moment().format('YYYY-MM-DD HH:mm');
         }
 
         const snapshot = await admin.database().ref().update(updates);
