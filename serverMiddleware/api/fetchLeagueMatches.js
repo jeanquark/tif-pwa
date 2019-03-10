@@ -17,6 +17,17 @@ function getLeagueMatches (league) {
     });
 }
 
+// API-Football league IDs:
+// England Premier League: 2
+// Spain La Liga: 87
+// Germany Bundesliga: 8
+// Italy Serie A: 94
+// France Ligue 1: 4
+// Switzerland Super League: 119
+// UEFA Champions League: 132
+// UEFA Europa League: 137
+// UEFA Nations League: 136
+
 // To be called when new competition is added as a POST request with league_id as body data
 module.exports = app.use(async function(req, res, next) {
     try {
@@ -57,28 +68,33 @@ module.exports = app.use(async function(req, res, next) {
             }
 
             const id = match.fixture_id;
-            updates[`/events_new3/${id}/id`] = id;
-            updates[`/events_new3/${id}/date_iso8601`] = match.event_date;
-            updates[`/events_new3/${id}/date`] = moment(match.event_date).format('YYYY-MM-DD');
-            updates[`/events_new3/${id}/time`] = moment(match.event_date).format('HH:mm');
-            updates[`/events_new3/${id}/time_utc`] = moment(match.event_date).utc().format('HH:mm');
-            updates[`/events_new3/${id}/timestamp`] = match.event_timestamp;
-            updates[`/events_new3/${id}/league_id`] = match.league_id;
-            updates[`/events_new3/${id}/round`] = match.round;
-            updates[`/events_new3/${id}/homeTeam_id`] = match.homeTeam_id;
-            updates[`/events_new3/${id}/homeTeam_name`] = match.homeTeam;
-            updates[`/events_new3/${id}/homeTeam_slug`] = homeTeam_slug;
-            updates[`/events_new3/${id}/homeTeam_score`] = match.goalsHomeTeam;
-            updates[`/events_new3/${id}/visitorTeam_id`] = match.awayTeam_id;
-            updates[`/events_new3/${id}/visitorTeam_name`] = match.awayTeam;
-            updates[`/events_new3/${id}/visitorTeam_slug`] = awayTeam_slug;
-            updates[`/events_new3/${id}/visitorTeam_score`] = match.goalsAwayTeam;
-            updates[`/events_new3/${id}/halftime_score`] = match.halftime_score;
-            updates[`/events_new3/${id}/final_score`] = match.final_score;
-            updates[`/events_new3/${id}/penalty`] = match.penalty;
-            updates[`/events_new3/${id}/elapsed`] = match.elapsed;
-            updates[`/events_new3/${id}/status`] = match.status;
-            updates[`/events_new3/${id}/statusShort`] = match.statusShort;
+            // Only add present and future fixtures to database
+            const yesterday = moment().subtract(1, 'days').unix();
+
+            if (match.event_timestamp > yesterday) {
+                updates[`/events_new3/${id}/id`] = id;
+                updates[`/events_new3/${id}/date_iso8601`] = match.event_date;
+                updates[`/events_new3/${id}/date`] = moment(match.event_date).format('YYYY-MM-DD');
+                updates[`/events_new3/${id}/time`] = moment(match.event_date).format('HH:mm');
+                updates[`/events_new3/${id}/time_utc`] = moment(match.event_date).utc().format('HH:mm');
+                updates[`/events_new3/${id}/timestamp`] = match.event_timestamp;
+                updates[`/events_new3/${id}/league_id`] = match.league_id;
+                updates[`/events_new3/${id}/round`] = match.round;
+                updates[`/events_new3/${id}/homeTeam_id`] = match.homeTeam_id;
+                updates[`/events_new3/${id}/homeTeam_name`] = match.homeTeam;
+                updates[`/events_new3/${id}/homeTeam_slug`] = homeTeam_slug;
+                updates[`/events_new3/${id}/homeTeam_score`] = match.goalsHomeTeam;
+                updates[`/events_new3/${id}/visitorTeam_id`] = match.awayTeam_id;
+                updates[`/events_new3/${id}/visitorTeam_name`] = match.awayTeam;
+                updates[`/events_new3/${id}/visitorTeam_slug`] = awayTeam_slug;
+                updates[`/events_new3/${id}/visitorTeam_score`] = match.goalsAwayTeam;
+                updates[`/events_new3/${id}/halftime_score`] = match.halftime_score;
+                updates[`/events_new3/${id}/final_score`] = match.final_score;
+                updates[`/events_new3/${id}/penalty`] = match.penalty;
+                updates[`/events_new3/${id}/elapsed`] = match.elapsed;
+                updates[`/events_new3/${id}/status`] = match.status;
+                updates[`/events_new3/${id}/statusShort`] = match.statusShort;
+            }
         });
 
         const snapshot = await admin.database().ref().update(updates);

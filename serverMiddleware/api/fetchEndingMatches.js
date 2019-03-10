@@ -32,12 +32,13 @@ module.exports = app.use(async function(req, res, next) {
         const matchesArray = [];
         const endingMatches = await admin.database().ref('/events_new3').orderByChild('statusShort').equalTo('2H').once('value');
         endingMatches.forEach(match => {
-            if (match.elapsed > '85') {
+            console.log('match.elapsed: ', match.val().elapsed);
+            if (parseInt(match.val().elapsed) > 85) {
                 matchesArray.push({
                     id: match.val().id, 
                     league_id: match.val().league_id,
                     league_slug: match.val().league_slug,
-                    elapse: match.val().elapsed
+                    elapsed: match.val().elapsed
                 });
             }
         });
@@ -89,9 +90,9 @@ module.exports = app.use(async function(req, res, next) {
         const snapshot = await admin.database().ref().update(updates);
 
         console.log('Done!');
-        res.send(`GET request to APIFootball to fetch fixture succeeded!`);
+        res.send(`GET request to APIFootball to fetch ending matches succeeded!`);
     } catch (error) {
         console.log("APIFootball error: ", error);
-        res.end(`GET request to APIFootball to fetch fixture failed: ${error}`);
+        res.end(`GET request to APIFootball to fetch ending matches failed: ${error}`);
     }
 });
