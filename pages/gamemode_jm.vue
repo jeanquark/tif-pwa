@@ -109,6 +109,12 @@
                 <!-- <div class="container"> -->
 					<div class="cadreScore" style="position: absolute">
 						<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
+							<-layout align-start>
+								<div class="nameTeam" style="font-size: 30px; color: red; text-decoration: none; text-transform: uppercase">
+									Barcelone
+								</div>
+							</v-layout>
+							<!-- 
 							<v-layout align-start>
 								<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
 									<div style="background-color: red; height: 100%; width: 2px"></div>
@@ -138,7 +144,7 @@
 								<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-right: 15px">
 									<img src="/images/switzerland.png" class="imgLogoEquipe"/>
 								</v-flex>
-							</v-layout>
+							</v-layout> -->
 						</v-flex>
 					</div> 
 
@@ -453,16 +459,17 @@
         border-radius: 5px;
         padding: 5px;
     }
-    .cadreScore {
-    border: 2px solid orangered;
+	.cadreScore {
     padding: 5px;
-    width: 800px;
-    background-color: whitesmoke;
-    opacity: 0.9;
-    color: black;
+    width: 1000px;
+    background-color: white;
+    opacity: .9;
+    color: #000;
     font-size: 1.1em;
-	margin: 20px 100px;
-    }
+    margin-top: 50px;
+    opacity: 0.5;
+	height: 80px;
+	}
 	.pd-left5 {
 	padding-left: 5px;
 	}
