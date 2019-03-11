@@ -142,44 +142,11 @@
 						</v-flex>
 					</div> 
 
-	<div class="containerImg">
-	  <input type="checkbox" class="input" id="input1" name="inputs">
-		<input type="checkbox" class="input" id="input2" name="inputs">
-		<input type="checkbox" class="input" id="input3" name="inputs">
-	  <label for="input1">
-		<div id="b1" class="button">1</div>
-	  </label>
-	  <label for="input2">
-		<div id="b2" class="button">2</div>
-	  </label>
-	  <label for="input3">
-		<div id="b3" class="button">3</div>
-	  </label>
-	  <div id="content1" class="content">
-		<div style="text-align: right;">
-		  <label for="input1" class="cross">X</label>
-		</div>
-		<p class="header">Content one</p>
-		<p class="bodyCopy">Additional content goes here.</p>
-		<a href="#" class="cta">Find out more</a>
-	  </div>
-	  <div id="content2" class="content">
-		<div style="text-align: right;">
-		  <label for="input2" class="cross">X</label>
-		</div>
-		<p class="header">Content two</p>
-		<p class="bodyCopy">Additional content goes here.</p>
-		<a href="#" class="cta">Find out more</a>
-	  </div>
-	  <div id="content3" class="content">
-		<div style="text-align: right;">
-		  <label for="input3" class="cross">X</label>
-		</div>
-		<p class="header">Content three</p>
-		<p class="bodyCopy">Additional content goes here.</p>
-		<a href="#" class="cta">Find out more</a>
-	  </div>
-	</div>
+<img src="/images/barcelona_clickable.png" usemap="#map">
+
+<map name="map">
+    <area target="" alt="Museum" title="Museum" href="museum" coords="462,411,61" shape="circle" style="background-color: red; border: 1px solid black">
+</map>
 
 	
                     <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
@@ -269,38 +236,6 @@
 </script>
 
 <style scoped>
-
-.containerImg { position: relative; display: block !important; overflow: hidden; width: 100vw; height: 60vw; background-image:url(/images/barcelona_clickable.png); background-size: 100vw 100vw; text-align: center; }
-input { display: none; }
-p { margin: 0; }
-.button { display: absolute; color: white; font-weight: bold; font-size: 20px; background-color: #d32f2f; display: block; padding: 8px 16px; border-radius: 100%; cursor: pointer; animation: fadein .5s; animation: pulse 1.5s infinite; }
-.content { background: white; padding: 8px 12px; text-align: center; display: none; position: relative; margin: 0 auto; width: 80%; top: 8vw; height: 40vw; border-radius: 8px; box-shadow: 0 4px 2px -2px rgba(211,47,47,0); }
-.cross { font-weight: bold; }
-.header { font-weight: bold; margin-top: 12px; font-size: 24px; }
-.bodyCopy { margin-top: 18px; }
-#b1 { position: absolute; left: 73vw; top: 12vw; }
-#b2 { position: absolute; left: 42vw; top: 32vw; }
-#b3 { position: absolute; left: 67vw; top: 37vw; }
-#input1:checked ~ #content1 { display: block !important; animation: fadein .5s; }
-#input2:checked ~ #content2 { display: block !important; animation: fadein .5s; }
-#input3:checked ~ #content3 { display: block !important; animation: fadein .5s; }
-input:checked ~ label .button { display: none !important; animation: fadeout .5s; }
-.button:hover { color: #d32f2f; background: white; }
-.cta { display: inline-block; background: #d32f2f; color: white; padding: 12px 24px; margin-top: 48px; border-radius: 24px; text-decoration: none; transition: all .3s ease; }
-.cta:hover { text-decoration: underline !important; box-shadow: 0 0 0 6px rgba(211, 46, 46, 0.4); }
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@keyframes fadeout {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@keyframes pulse {
-  from { box-shadow: 0 0 0 0px rgba(211, 47, 47); }
-  to { box-shadow: 0 0 0 15px rgba(0, 0, 0, 0); }
-}
-
     body {
         margin: 0;
         padding: 0;
