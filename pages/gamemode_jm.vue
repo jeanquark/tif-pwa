@@ -109,7 +109,7 @@
                 <!-- <div class="container"> -->
 					<div class="cadreScore" style="position: absolute">
 						<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
-							<-layout align-start>
+							<v-layout align-start>
 								<div class="nameTeam" style="font-size: 30px; color: red; text-decoration: none; text-transform: uppercase">
 									Barcelone
 								</div>
