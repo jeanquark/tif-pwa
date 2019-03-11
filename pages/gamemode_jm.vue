@@ -142,7 +142,8 @@
 						</v-flex>
 					</div> 
 
-					<img src="/images/barcelona_clickable.png" style="display: block; overflow: hidden; position: relative">
+					<div class="contrainerImg">
+					<img src="/images/barcelona_clickable.png"">
 					<input type="checkbox" class="input" id="input1" name="inputs">
 					<input type="checkbox" class="input" id="input2" name="inputs">
 					<input type="checkbox" class="input" id="input3" name="inputs">
@@ -155,6 +156,7 @@
 					<label for="input3">
 					<div id="b3" class="button">3</div>
 					</label>
+					</div>
                 <!-- </div> -->
                 <!-- </v-layout> -->
             </div>
@@ -236,6 +238,7 @@
 
 <style scoped>
 
+.containerImg { position: relative; display: block !important; overflow: hidden; width: 100vw; height: 60vw; text-align: center; }
 .button { display: absolute; color: white; font-weight: bold; font-size: 20px; background-color: #d32f2f; display: block; padding: 8px 16px; border-radius: 100%; cursor: pointer; animation: fadein .5s; animation: pulse 1.5s infinite; }
 input { display: none; }
 #b1 { position: absolute; left: 73vw; top: 12vw; }
