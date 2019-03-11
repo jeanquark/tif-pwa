@@ -142,7 +142,7 @@
 						</v-flex>
 					</div> 
 
-					<img src="/images/barcelona_clickable.png" usemap="#map">
+					<img src="/images/barcelona_clickable.png" style="display: block; overflow: hidden; position: relative">
 					<input type="checkbox" class="input" id="input1" name="inputs">
 					<input type="checkbox" class="input" id="input2" name="inputs">
 					<input type="checkbox" class="input" id="input3" name="inputs">
@@ -237,7 +237,7 @@
 <style scoped>
 
 .button { display: absolute; color: white; font-weight: bold; font-size: 20px; background-color: #d32f2f; display: block; padding: 8px 16px; border-radius: 100%; cursor: pointer; animation: fadein .5s; animation: pulse 1.5s infinite; }
-
+input { display: none; }
 #b1 { position: absolute; left: 73vw; top: 12vw; }
 #b2 { position: absolute; left: 42vw; top: 32vw; }
 #b3 { position: absolute; left: 67vw; top: 37vw; }
