@@ -3,6 +3,14 @@
 	
 		<scoremode-header />
 		
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; style: 30px">
+            <v-layout>
+                <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
+                    Football
+                </v-flex>
+            </v-layout>             
+        </v-container>
+		
 		<!-- Scrollable content -->
 		<div class="content" style="border: 2px solid green;">
 			<!-- <v-layout> -->
