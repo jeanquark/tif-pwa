@@ -1,6 +1,5 @@
 <template>
     <v-content id="app">
-        <v-container>
             <scoremode-header />
             
             <!-- Scrollable content -->
