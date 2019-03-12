@@ -3,7 +3,7 @@
 	
 		<scoremode-header />
 		
-        <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; height: 30px">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; height: 40px">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
                     Football
@@ -20,7 +20,7 @@
 			<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
 			<!-- Results -->
-			<v-tabs color="green" dark slider-color="yellow" fixed-tabs v-model="selectType" style="color: white; width: 1000px; height: 30px">
+			<v-tabs color="green" dark slider-color="yellow" fixed-tabs v-model="selectType" style="color: white">
 				<v-tab
 					v-for="type in types"
 					:key="type.slug"
@@ -296,7 +296,6 @@
     /* Content */
     .container {
         width: 100vw;
-        height: 100vh;
         flex-direction: column;
 		margin-left: auto;
 		margin-right: auto;
