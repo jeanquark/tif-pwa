@@ -1,5 +1,5 @@
 <template>
-	<v-tabs color="grey" show-arrows fixed-tabs v-model="activeDay" @change="fetchEventsByDay(activeDay)">
+	<v-tabs show-arrows fixed-tabs v-model="activeDay" @change="fetchEventsByDay(activeDay)" style="background-color: grey; height: 30px; color: white">
         <v-tabs-slider color="yellow"></v-tabs-slider>
         <v-tab v-for="day in days" :key="day" :href="'#' + day">
             {{ day | moment('ddd DD MMM') }}
@@ -7,7 +7,7 @@
         <v-tabs-items>
             <v-tab-item v-for="day in days" :key="day" :value="day" lazy style="">
                 <div class="tab-item-wrapper">
-                    <v-layout class="column fill-height" style="border: 4px solid grey;" v-cloak>
+                    <v-layout class="column fill-height" v-cloak>
                         <v-flex xs12>
                             <v-card flat>
                                 <v-card-text>
@@ -16,8 +16,7 @@
                                         loading
                                     </div>
                                     <v-data-table :items="loadedEventsByDay(day)['events']" no-data-text="No game found on this day." class="elevation-0" hide-actions hide-headers v-if="loadedEventsByDay(day) && !loading">
-                                        <template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
-                                            
+                                        <template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">    
                                             <v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
                                                 <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
                                                     <v-layout align-start>
