@@ -53,10 +53,14 @@
     import ScoremodeStandings from '~/components/ScoremodeStandings'
     import ScoremodeFooter from '~/components/ScoremodeFooter'
     export default {
-        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings, ScoremodeFooter },
+    export default {
+        head: {
+            title: 'ScoreMode - ThisIsFan.com',
             link: [
 				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }                
-			],
+			]
+        },
+        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings, ScoremodeFooter },
         async created () {
             // console.log(moment().format('YYYY-MM-DD'))
             // console.log(moment().add(1, 'days').format('YYYY-MM-DD'))
