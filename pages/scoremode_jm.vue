@@ -290,7 +290,7 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-		font: normal 100%/1 "Acme", Helvetica, sans-serif;*/
+		font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
 
     /* Content */
@@ -302,7 +302,7 @@
 		margin-right: auto;
 		border-left: 1px solid orangered;
 		border-right: 1px solid orangered;
-		font: normal 100%/1 "Acme", Helvetica, sans-serif;*/
+		font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
     .content {
         background-color: gray;
