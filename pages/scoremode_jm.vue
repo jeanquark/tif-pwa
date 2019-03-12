@@ -12,7 +12,7 @@
         </v-container>
 		
 		<!-- Scrollable content -->
-		<div class="content" style="border: 2px solid green;">
+		<div class="content">
 			<!-- <v-layout> -->
 			<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
 			<!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
@@ -22,7 +22,6 @@
 			<!-- Results -->
 			<v-tabs
 				color="green"
-				dark
 				slider-color="yellow"
 				fixed-tabs
 				v-model="selectType"
