@@ -53,9 +53,8 @@
     import ScoremodeStandings from '~/components/ScoremodeStandings'
     import ScoremodeFooter from '~/components/ScoremodeFooter'
     export default {
-    export default {
         head: {
-            title: 'ScoreMode - ThisIsFan.com',
+            title: 'ScoreMode',
             link: [
 				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }                
 			]
