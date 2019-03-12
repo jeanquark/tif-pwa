@@ -1,30 +1,11 @@
 <template>
-	<v-tabs
-        dark
-        color="cyan"
-        show-arrows
-        fixed-tabs
-        v-model="activeDay"
-        @change="fetchEventsByDay(activeDay)"
-    >
+	<v-tabs color="grey" show-arrows fixed-tabs v-model="activeDay" @change="fetchEventsByDay(activeDay)">
         <v-tabs-slider color="yellow"></v-tabs-slider>
-
-        <v-tab
-            v-for="day in days"
-            :key="day"
-            :href="'#' + day"
-        >
+        <v-tab v-for="day in days" :key="day" :href="'#' + day">
             {{ day | moment('ddd DD MMM') }}
         </v-tab>
-
         <v-tabs-items>
-            <v-tab-item
-                v-for="day in days"
-                :key="day"
-                :value="day"
-                lazy
-                style=""
-            >
+            <v-tab-item v-for="day in days" :key="day" :value="day" lazy style="">
                 <div class="tab-item-wrapper">
                     <v-layout class="column fill-height" style="border: 4px solid grey;" v-cloak>
                         <v-flex xs12>
