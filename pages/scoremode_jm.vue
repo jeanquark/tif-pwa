@@ -20,22 +20,10 @@
 			<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
 			<!-- Results -->
-			<v-tabs
-				color="green"
-				slider-color="yellow"
-				fixed-tabs
-				v-model="selectType"
-
-			>
-				<v-tab
-					v-for="type in types"
-					:key="type.slug"
-					ripple
-					style="cursor: pointer;"
-				>
+			<v-tabs slider-color="yellow" fixed-tabs v-model="selectType" style="background-color: green; height: 30px; color: white">
+				<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
 					{{ type.name }}
 				</v-tab>
-
 			</v-tabs>
 
 			<!-- Results -->
