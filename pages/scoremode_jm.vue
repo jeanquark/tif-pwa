@@ -40,14 +40,7 @@
 			
 		</div>
 		
-		<!-- Fixed Footer -->
-		<div id="footer" style="border: 2px solid violet;">
-			<br /><br /><br />
-			<h2>Footer</h2>
-			<br /><br /><br />
-		</div>
-            
-    </v-content>
+		<scoremode-footer />
 </template>
 
 <script>
@@ -55,8 +48,9 @@
     import ScoremodeHeader from '~/components/ScoremodeHeader'
     import ScoremodeResults from '~/components/ScoremodeResults'
     import ScoremodeStandings from '~/components/ScoremodeStandings'
+    import ScoremodeFooter from '~/components/ScoremodeFooter'
     export default {
-        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings },
+        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings, ScoremodeFooter },
         async created () {
             // console.log(moment().format('YYYY-MM-DD'))
             // console.log(moment().add(1, 'days').format('YYYY-MM-DD'))
