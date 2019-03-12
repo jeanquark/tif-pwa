@@ -7,7 +7,7 @@
         <v-tabs-items>
             <v-tab-item v-for="day in days" :key="day" :value="day" lazy style="">
                 <div class="tab-item-wrapper">
-                    <v-layout class="column fill-height" style="border: 4px solid grey;" v-cloak>
+                    <v-layout class="column fill-height" v-cloak>
                         <v-flex xs12>
                             <v-card flat>
                                 <v-card-text>
