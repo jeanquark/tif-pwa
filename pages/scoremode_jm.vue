@@ -12,7 +12,7 @@
         </v-container>
 		
 		<!-- Scrollable content -->
-		<div class="content">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
 			<!-- <v-layout> -->
 			<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
 			<!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
@@ -20,14 +20,7 @@
 			<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
 			<!-- Results -->
-			<v-tabs
-				color="green"
-				dark
-				slider-color="yellow"
-				fixed-tabs
-				v-model="selectType" style="color: white; width: 1000px; height: 30px">
-
-			>
+			<v-tabs color="green" dark slider-color="yellow" fixed-tabs v-model="selectType" style="color: white; width: 1000px; height: 30px">
 				<v-tab
 					v-for="type in types"
 					:key="type.slug"
@@ -46,7 +39,7 @@
 			<scoremode-standings v-if="selectType === 1" />
 
 			
-		</div>
+		</container>
 		
 		<scoremode-footer />
             
@@ -297,26 +290,24 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
+		font: normal 100%/1 "Acme", Helvetica, sans-serif;*/
     }
 
     /* Content */
     .container {
         width: 100vw;
         height: 100vh;
-        display: flex;
         flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		border-left: 1px solid orangered;
+		border-right: 1px solid orangered;
+		font: normal 100%/1 "Acme", Helvetica, sans-serif;*/
     }
     .content {
-        background-color: light-gray;;
+        background-color: gray;
         flex-grow: 1;
         overflow-x: auto;
-    }
-    #footer {
-        background-color: red;
-        color: #fff;
-        /*height: 100px;*/
-        height: auto;
-        text-align: center;
     }
     
     @media only screen and (min-width: 1000px) {
