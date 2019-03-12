@@ -12,7 +12,7 @@
         </v-container>
 		
 		<!-- Scrollable content -->
-		<div class="content">
+		<div class="content" style="border: 2px solid green;">
 			<!-- <v-layout> -->
 			<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
 			<!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
@@ -20,10 +20,23 @@
 			<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
 			<!-- Results -->
-			<v-tabs slider-color="yellow" fixed-tabs v-model="selectType" style="background-color: green; height: 30px; color: white">
-				<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
+			<v-tabs
+				color="green"
+				dark
+				slider-color="yellow"
+				fixed-tabs
+				v-model="selectType"
+
+			>
+				<v-tab
+					v-for="type in types"
+					:key="type.slug"
+					ripple
+					style="cursor: pointer;"
+				>
 					{{ type.name }}
 				</v-tab>
+
 			</v-tabs>
 
 			<!-- Results -->
