@@ -3,7 +3,7 @@
 	
 		<scoremode-header />
 		
-        <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; style: 30px">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; height: 30px">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
                     Football
@@ -586,11 +586,11 @@
     /* End Content */
 
     .menuSport {
-        height: 40px;
+        height: 30px;
     }
     
     .menuDay {
-        height: 40px;
+        height: 30px;
     }
     
     .v-expansion-panel__header {
