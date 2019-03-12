@@ -5,56 +5,57 @@
                 <v-flex class="barreHeader">
                     <v-layout row>
                         <v-flex xs6 sm6 md6>
-                            <span style="margin-left: 100px; float: left; margin-top: 4px;"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span style="color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">G. Manigley (41 ans)</span>
+                            <span style="margin-left: 100px; color: white; font-weight: 700; padding: 4px; float: left; margin-top: 4px">Utilisateur invité</span>
                         </v-flex>
                         <v-flex xs6 sm6 md6>
-                            <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Fan de l'équipe de suisse de football (1.34 PF)</span>
+                            <span style="margin-right: 100px; color: white; font-weight: 700; padding: 4px; float: right; margin-top: 4px">Bienvenue sur TIF - Pour des fans, par des fans !</span>
                         </v-flex>
+                    </v-layout>
                 </v-flex>
             </v-layout>
             <v-layout row>
-                <nuxt-link to="monavatar">
-                 <v-flex shrink>
-                    <div id="avatar">
-                        <img src="/images/avatar.png" class="imgAvatar" />
-                    </div>
-                </nuxt-link>
+                <v-flex shrink>
+                    <nuxt-link to="/">
+                        <div id="avatar" style="background-color: orangered">
+                            <span class="textTif">ThisIsFan.com</span>
+                        </div>
+                    </nuxt-link>
                 </v-flex>
                 <v-flex grow>
                     <v-layout row>
-                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                            <div style="text-align: center" class="levelHeader">Niv.1</div>
-                            <v-progress-linear color="orange" height="20" value="30" style="width: 100%; font-weight: 700; color: white; border-radius: 5px">3 / 10</v-progress-linear>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+							<div class="headerLogo">
+								<span class="chiffres">1</span><br />
+								<span class="activity">sport</span>
+							</div>
                         </v-flex>
-                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                            <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                            <v-progress-linear color="yellow" height="20" value="75" style="width: 100%; font-weight: 700; color: black; border-radius: 5px">75 / 100</v-progress-linear>
-                            <nuxt-link to="/plus" class="aPlusYellow">
-                            <span class="plusYellow">+</span>
-                            </nuxt-link>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+							<div class="headerLogo">
+								<span class="chiffres">6</span><br />
+								<span class="activity">pays</span>
+							</div>
                         </v-flex>
-                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
-                            <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
-                            <div class="dollarFan">1234 $fans</div>
-                            <nuxt-link to="/plus" class="aPlusGreen">
-                            <span class="plusGreen">+</span>
-                            </nuxt-link>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+							<div class="headerLogo">
+								<span class="chiffres">130</span><br />
+								<span class="activity">équipes</span>
+							</div>
                         </v-flex>
-                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 15px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
-                            <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
-                            <div class="token">12 tokens</div>
-                            <nuxt-link to="/plus" class="aPlusOrangered">
-                            <span class="plusOrangered">+</span>
-                            </nuxt-link>
+                        <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
+							<div class="headerLogo">
+								<span class="chiffres">769</span><br />
+								<span class="activity">fans</span>
+							</div>
                         </v-flex>
                     </v-layout>
                 </v-flex>
                 <v-flex shrink>
-                <nuxt-link to="/myteams">
-                <div id="team">
-                    <img src="/images/switzerland.png" class="imgTeam" />
-                </div>
-                </nuxt-link>
+                    <nuxt-link to="/gamemode">
+                        <div id="team" style="background-color: orangered">
+							<span class="textScoreMode">ScoreMode<br />
+							C'est parti !</span>
+                        </div>
+                    </nuxt-link>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -62,34 +63,29 @@
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; style: 30px">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
-                    Soccer
+                    Football
                 </v-flex>
             </v-layout>             
         </v-container>
+		
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white; style: 30px">
             <v-layout>
-                <v-flex d-flex x1 justify-end align-center style="padding-left: 20px;" @click="eventsByDate('substractOne')">
-                    <fa :icon="['fas', 'angle-double-left']" size="1x" class="icon" />
+                <v-flex d-flex x2 align-center text-xs-left style="padding-left: 20px; cursor: default" @click="eventsByDate('substractOne')">
+                Précèdent
                 </v-flex>
-                <v-flex d-flex x2 justify-start align-center class="text-xs-center navButton menuDay" @click="eventsByDate('substractOne')">
-                    Hier
-                </v-flex>
-                <v-flex d-flex x6 justify-center align-center class="text-xs-center menuDay">
+                <v-flex d-flex x8 justify-center align-center class="text-xs-center menuDay">
                     {{ date | moment('dddd, MMMM Do YYYY') }}
                 </v-flex>
-                <v-flex d-flex x2 justify-end align-center class="text-xs-center navButton menuDay" @click="eventsByDate('addOne')">
-                    Demain
-                </v-flex>
-                <v-flex d-flex x1 justify-end align-center style="padding-right: 20px;" @click="eventsByDate('addOne')">
-                    <fa :icon="['fas', 'angle-double-right']" size="1x" class="icon" style="text-shadow: 0 0 15px #3b5998;"/>
+                <v-flex d-flex x2 align-center justify-end style="padding-right: 20px; cursor: default" @click="eventsByDate('addOne')">
+                    Suivant
                 </v-flex>
             </v-layout>             
         </v-container>
 
-        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke; margin-bottom: 80px">
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
             <v-card-text class="card-text">
                 <v-expansion-panel class="elevation-0" :value="0" v-if="loadedUser">
-                    <v-expansion-panel-content class="orange">
+                    <v-expansion-panel-content style="background-color: orangered">
                         <div slot="header" class="white--text">
                             FAVORITE TEAMS
                         </div>
@@ -150,7 +146,7 @@
 
             <v-card-text class="card-text">
                 <v-expansion-panel class="elevation-0" :value="0">
-                    <v-expansion-panel-content class="green">
+                    <v-expansion-panel-content style="background-color: green">
                         <div slot="header" class="white--text">
                             ALL EVENTS
                         </div>
@@ -232,7 +228,7 @@
             </v-card-text>
         </v-container>
 
-        <v-footer style="background-color: black; position: fixed; bottom: 0; width: 100%" height="auto" class="text-xs-center">
+        <v-footer style="background-color: black; position: sticky; bottom: 0; width: 100%" height="auto" class="text-xs-center">
             <v-container fluid style="padding: 0; max-width: 1000px">
 				<div class="barreOrangered"></div>
 				<div class="barreBlack"></div>
@@ -240,11 +236,11 @@
                     <div id="dock">
                         <ul>
                             <li>
-                                <nuxt-link to="/equipes"><img src="/images/menuShop.png">
+                                <nuxt-link to="/teams"><img src="/images/menuTeam.png">
                                 <span class="textMenu">Equipes</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/competitions"><img src="/images/menuResultat.png">
+                                <nuxt-link to="/competitions"><img src="/images/menuCompetition.png">
                                 <span class="textMenu">Compétitions</span></nuxt-link>
                             </li>
                             <li id="active">
@@ -252,14 +248,14 @@
                                 <span class="textMenu">Matches du jour</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/joueurs"><img src="/images/menuSocial.png">
+                                <nuxt-link to="/players"><img src="/images/menuPlayer.png">
                                 <span class="textMenu">Joueurs</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/tifnews"><img src="/images/menuResultat.png">
+                                <nuxt-link to="/tifnews"><img src="/images/menuTifnews.png">
                                 <span class="textMenu">TIF News</span></nuxt-link>
                             </li>
-                        </ul>
+						</ul>
                     </div>
                 </div>
             </v-container>
@@ -470,6 +466,27 @@
 </script>
 
 	<style scoped>
+	
+	.textTif {
+	font-size: 1.5em;
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+    position: relative;
+    top: 15px;
+    left: 13px;
+	}
+	
+	.textScoreMode {
+	font-size: 1.5em;
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+    position: relative;
+    top: 15px;
+    right: 13px;
+	float: right;
+	}
 
     .container {
     width: 1000px;
@@ -479,6 +496,7 @@
     margin-right: auto;
     border-left: 1px solid orangered;
     border-right: 1px solid orangered;
+	font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
     
     /* header */
@@ -489,8 +507,9 @@
     top:0px;
     left:0px;
     background-color: black;
-    z-index: 0;
+    z-index: 1;
     border-bottom: 3px solid orangered;
+	position: sticky;
     }
     .header {
     position: relative;
@@ -610,6 +629,11 @@
     border-bottom: 1px solid green;
     border-left: 1px solid green;
     }
+	
+	.orangered {
+    background-color: orangered;
+    border-color: orangered;
+	}
     
     /* Material Icons */
     
@@ -761,7 +785,7 @@
 	
 	.chiffres {
 	font-size: 2.5em;
-	color: orange;
+	color: orangered;
 	font-width: 700;
 	}
 	
@@ -811,6 +835,22 @@
 	}
 
 	/* Menu */
+	
+	.barreBlack {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 8px;
+	background-color: black;
+	}
+	.barreOrangered {
+	width: 100%;
+	padding: 0;
+	margin: 0; 
+	height: 3px;
+	background-color: orangered;
+	}
+
 
 	#dock-container {
 	height: 80px;
