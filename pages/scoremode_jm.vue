@@ -1,42 +1,48 @@
 <template>
-	<scoremode-header />
+    <v-content id="app">
 	
-	<!-- Scrollable content -->
-	<div class="content" style="border: 2px solid green;">
-		<!-- <v-layout> -->
-		<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
-		<!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
-		<!-- loadedEvents: {{ loadedEvents }}<br /><br /> -->
-		<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
+		<scoremode-header />
+		
+		<!-- Scrollable content -->
+		<div class="content" style="border: 2px solid green;">
+			<!-- <v-layout> -->
+			<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
+			<!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
+			<!-- loadedEvents: {{ loadedEvents }}<br /><br /> -->
+			<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
-		<!-- Results -->
-		<v-tabs
-			color="green"
-			dark
-			slider-color="yellow"
-			fixed-tabs
-			v-model="selectType"
+			<!-- Results -->
+			<v-tabs
+				color="green"
+				dark
+				slider-color="yellow"
+				fixed-tabs
+				v-model="selectType"
 
-		>
-			<v-tab
-				v-for="type in types"
-				:key="type.slug"
-				ripple
-				style="cursor: pointer;"
 			>
-				{{ type.name }}
-			</v-tab>
+				<v-tab
+					v-for="type in types"
+					:key="type.slug"
+					ripple
+					style="cursor: pointer;"
+				>
+					{{ type.name }}
+				</v-tab>
 
-		</v-tabs>
+			</v-tabs>
 
-		<!-- Results -->
-		<scoremode-results v-if="selectType === 0" />
+			<!-- Results -->
+			<scoremode-results v-if="selectType === 0" />
 
-		<!-- Standings -->
-		<scoremode-standings v-if="selectType === 1" />
-	</div>
-	
-	<scoremode-footer />
+			<!-- Standings -->
+			<scoremode-standings v-if="selectType === 1" />
+
+			
+		</div>
+		
+		<scoremode-footer />
+            
+    </v-content>
 </template>
 
 <script>
