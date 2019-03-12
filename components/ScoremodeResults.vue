@@ -1,6 +1,4 @@
 <template>
-
-        <v-container fluid style="padding: 0; max-width: 1000px; background-color: grey; color: white; style: 30px" show-arrows fixed-tabs v-model="activeDay" @change="fetchEventsByDay(activeDay)">
 	<v-tabs
         dark
         color="cyan"
@@ -27,8 +25,6 @@
                 lazy
                 style=""
             >
-        </v-container>
-
                 <div class="tab-item-wrapper">
                     <v-layout class="column fill-height" style="border: 4px solid grey;" v-cloak>
                         <v-flex xs12>
