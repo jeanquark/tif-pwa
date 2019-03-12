@@ -300,11 +300,10 @@
 
 <script>
     import moment from 'moment'
-    import ScoremodeHeader from '~/components/ScoremodeHeader'
     import ScoremodeResults from '~/components/ScoremodeResults'
     import ScoremodeStandings from '~/components/ScoremodeStandings'
     export default {
-        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings },
+        components: { ScoremodeResults, ScoremodeStandings },
         async created () {
             // console.log(moment().format('YYYY-MM-DD'))
             // console.log(moment().add(1, 'days').format('YYYY-MM-DD'))
