@@ -90,7 +90,7 @@
 		padding: 0;
 		margin: 0;
 		letter-spacing: 3px;
-		height: 152px;
+		height: 117px;
 	}
 	.tif2 {
 		display: inline-block;
@@ -108,7 +108,7 @@
 		margin: 0;
 		position: absolute;
 		letter-spacing: 3px;
-		height: 152px;
+		height: 117px;
 	}
 </style>
 
