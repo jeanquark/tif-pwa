@@ -54,6 +54,9 @@
     import ScoremodeFooter from '~/components/ScoremodeFooter'
     export default {
         components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings, ScoremodeFooter },
+            link: [
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }                
+			],
         async created () {
             // console.log(moment().format('YYYY-MM-DD'))
             // console.log(moment().add(1, 'days').format('YYYY-MM-DD'))
@@ -286,6 +289,9 @@
 </script>
 
 <style scoped>
+	html {
+	font: normal 100%/1 "Acme", Helvetica, sans-serif;
+	}
     body {
         margin: 0;
         padding: 0;
