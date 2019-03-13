@@ -108,7 +108,7 @@
                 <!-- <v-layout> -->
                 <!-- <div class="container"> -->
 					<div class="cadreScore" style="position: absolute">
-						<v-flex xs12 style="margin: 0; height: 100%>
+						<v-flex xs12 style="margin: 0; height: 100%">
 							<v-layout align-start>
 								<div class="nameTeam" style="position: relative; font-size: 50px; color: orangered; text-decoration: none; text-transform: uppercase; top: 0px; left: 30px; text-shadow: black 3px 3px 2px;">
 									Espagnol Barcelone <span style="font-size: 12px; color: orangered">Pas de match aujourd'hui</span>
