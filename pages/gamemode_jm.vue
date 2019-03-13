@@ -111,7 +111,7 @@
 						<v-flex xs12 style="margin: 0; height: 100%">
 							<v-layout align-start>
 								<div class="nameTeam" style="position: relative; font-size: 50px; color: orangered; text-decoration: none; text-transform: uppercase; top: 0px; left: 30px; text-shadow: black 3px 3px 2px;">
-									Espagnol Barcelone <span style="font-size: 12px; color: orangered">Pas de match aujourd'hui</span>
+									Espagnol Barcelone <span style="position: relative; top: 3px; font-size: 15px; color: orangered; text-shadow: none; margin-left: 10px;">Pas de match aujourd'hui</span>
 								</div>
 							</v-layout>
 							<!-- 
@@ -148,13 +148,12 @@
 						</v-flex>
 					</div> 
 
-<img src="/images/barcelona_clickable.png" usemap="#map">
+					<img src="/images/barcelona_clickable.svg" usemap="#map">
 
-<map name="map">
-    <area target="" alt="Museum" title="Museum" href="museum" coords="462,411,61" shape="circle" style="background-color: red; border: 1px solid black">
-</map>
-
-	
+					<map name="map">
+						<area target="" alt="Museum" title="Museum" href="museum" coords="462,411,61" shape="circle" style="background-color: red; border: 1px solid black">
+					</map>
+					
                     <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
                     <v-dialog
                         v-model="actionsModal"
