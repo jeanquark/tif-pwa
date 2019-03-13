@@ -152,7 +152,7 @@
 					<img src="/images/barcelona_clickable.svg" usemap="#map">
 
 					<map name="map">
-						<area target="" alt="Museum" title="Museum" href="museum" coords="462,411,61" shape="circle" style="background-color: red; border: 1px solid black">
+						<area target="" alt="Museum" title="Museum" href="museum" coords="462,411,61" shape="circle">
 					</map>
 					
                     <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
