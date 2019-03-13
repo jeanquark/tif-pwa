@@ -36,11 +36,11 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="orange" height="20" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
+                                <v-progress-linear class="progressOrange" color="orange" height="20" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75"><span style="color: black">75 / 100</span></v-progress-linear>
+                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75"></v-progress-linear><span class="progress-bar-txt-black">75 / 100</span>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
@@ -65,11 +65,11 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="orange" height="12" value="30"><span style="color: white">3 / 10</span></v-progress-linear>
+                                <v-progress-linear class="progressOrange" color="orange" height="12" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="12" value="75"><span style="color: black">75 / 100</span></v-progress-linear>
+                                <v-progress-linear class="progressYellow" color="yellow" height="12" value="75"></v-progress-linear><span class="progress-bar-txt-black">75 / 100</span>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
@@ -108,35 +108,53 @@
                 <!-- <v-layout> -->
                 <!-- <div class="container"> -->
 					<div class="cadreScore" style="position: absolute">
-						<v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
+						<v-flex xs12 style="margin: 0; height: 100%">
+							<v-layout align-start>
+								<div class="nameTeam" style="position: relative; font-size: 50px; color: orangered; text-decoration: none; text-transform: uppercase; top: 0px; left: 30px; text-shadow: black 3px 3px 2px;">
+									Espagnol Barcelone <span style="position: relative; top: 3px; font-size: 15px; color: orangered; text-shadow: none; margin-left: 10px;">Pas de match aujourd'hui</span>
+								</div>
+							</v-layout>
+							<!-- 
 							<v-layout align-start>
 								<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-									<div style="background-color: orangered; height: 100%; width: 2px"></div>
+									<div style="background-color: red; height: 100%; width: 2px"></div>
 								</v-flex>
 								<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
 									<div style="color: orange;font-size: 80%">
-										<span style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >Prochain match : FC Barcelone - Levante (14.05.2019 - 19:00)</span>
+										<span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >MATCH TERMINÉ</span>
 									</div>
 								</v-flex>
 							</v-layout>
 							<v-layout align-center style="max-width: 100%">
 								<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-									<div style="background-color: orangered; height: 40px; width: 2px"></div>
+									<div style="background-color: red; height: 40px; width: 2px"></div>
 								</v-flex>
-								<v-flex sm12 xs12 align-center style="width: 50px; padding-left: 8px">
-									<img src="/images/switzerland.png" class="imgLogoEquipe" style="float: left" />
-									<span class="teamTextSize" style="float: left; margin-left: 8px; margin-top: 8px">Le FC Barcelone n'a pas de match aujourd'hui !</span>
+								<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
+									<img src="/images/switzerland.png" class="imgLogoEquipe"/>
 								</v-flex>
-							</v-layout>
+								<v-flex sm4 xs5 align-center class="text-xs-left pd-left5">
+									<span class="teamTextSize">FC Barcelone</span>
+								</v-flex>
+								<v-flex sm2 xs2 class="text-xs-center">
+									<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">3 - 2</span>
+								</v-flex>
+								<v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
+									<span class="teamTextSize">Palma de Majorque</span>
+								</v-flex>
+								<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-right: 15px">
+									<img src="/images/switzerland.png" class="imgLogoEquipe"/>
+								</v-flex>
+							</v-layout> -->
 						</v-flex>
-					</div>                
-                    <img src="/images/barcelona_clickable.png" usemap="#map" />
-                    <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
-                    <map name="map">
-                        <area shape="circle" coords="169, 826, 53" alt="Stadium" @click="openActionsDialog('stadium')">
-                        <area shape="circle" coords="786, 357, 44" alt="Museum" @click="openActionsDialog('museum')">
-                    </map>
+					</div> 
 
+					<img src="/images/barcelona_clickable.svg" usemap="#map">
+
+					<map name="map">
+						<area target="" alt="Museum" title="Museum" href="museum" coords="462,411,61" shape="circle" style="background-color: red; border: 1px solid black">
+					</map>
+					
+                    <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
                     <v-dialog
                         v-model="actionsModal"
                         max-width="800"
@@ -162,16 +180,16 @@
                                 <span class="textMenu">Mes classements</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/myinventory"><img src="/images/menuShop.png">
-                                <span class="textMenu">Inventaire</span></nuxt-link>
+                                <nuxt-link to="/myskill"><img src="/images/menuShop.png">
+                                <span class="textMenu">Mes compétences</span></nuxt-link>
                             </li>
                             <li id="active">
-                                <nuxt-link to="/gamemode"><img src="/images/menuHome.png">
+                                <nuxt-link to="/gamemode_jm"><img src="/images/menuHome.png">
                                 <span class="textMenu">Aujourd'hui</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/myfriends"><img src="/images/menuSocial.png">
-                                <span class="textMenu">Mes amis</span></nuxt-link>
+                                <nuxt-link to="/myinventory"><img src="/images/menuSocial.png">
+                                <span class="textMenu">Mon inventaire</span></nuxt-link>
                             </li>
                             <li>
                                 <nuxt-link to="/scoremode"><img src="/images/menuResultat.png">
@@ -440,22 +458,36 @@
         border-radius: 5px;
         padding: 5px;
     }
-    .cadreScore {
-    border: 2px solid orangered;
-    padding: 5px;
-    width: 800px;
-    background-color: whitesmoke;
-    opacity: 0.9;
-    color: black;
-    font-size: 1.1em;
-	margin: 20px 100px;
-    }
+	.cadreScore {
+    width: 1000px;
+    background-color: white;
+    margin-top: 50px;
+	}
+	.pd-left5 {
+	padding-left: 5px;
+	}
 	.imgLogoEquipe {
 	max-width: 30px;
 	max-height: 30px;
-	} 
+	}
 	.teamTextSize {
 	font-size: 1.2em;
+	}
+	.progress-bar-txt-black {
+		position: relative;
+		font-size: 15px;
+		top: -31px;
+		z-index: 1;
+		color: black;
+		font-weight: 700;
+	}
+	.progress-bar-txt-white {
+		position: relative;
+		font-size: 15px;
+		top: -31px;
+		z-index: 1;
+		color: white;
+		font-weight: 700;
 	}
 	.material-icons.md-18 { font-size: 18px; }
     .material-icons.md-24 { font-size: 24px; }
@@ -760,6 +792,22 @@
 		border-radius: 5px;
 		height: 11px;
 		margin-top: 18px;
+		}
+		.progress-bar-txt-black {
+			position: relative;
+			font-size: 9px;
+			top: -26px;
+			z-index: 1;
+			color: black;
+			font-weight: 600;
+		}
+		.progress-bar-txt-white {
+			position: relative;
+			font-size: 9px;
+			top: -26px;
+			z-index: 1;
+			color: white;
+			font-weight: 600;
 		}
 		.plusYellow {
 			position: absolute;
