@@ -13,7 +13,7 @@
 
 				<v-card-text class="card-text mx-3">
 					<div class="text-xs-center" style="color: black; font-family: Acme">
-						<h2>Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }} :</h2>
+						<h2>Tu es fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }} :</h2>
 						<!-- <b>loadedUserTeams:</b> {{ loadedUserTeams }}<br /><br /> -->
 						<!-- <b>loadedCompetitions:</b> {{ loadedCompetitions }}<br /><br /> -->
 						<!-- <b>loadedTeamsByCompetition:</b> {{ loadedTeamsByCompetition }}<br /><br /> -->
