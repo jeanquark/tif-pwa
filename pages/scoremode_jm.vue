@@ -216,6 +216,9 @@
             loading () {
                 return this.$store.getters['loading']
             },
+            loadedUser () {
+                return this.$store.getters['users/loadedUser']
+            },
             loadedUserTeams () {
                 return this.$store.getters['users/loadedUserTeams']
             },
@@ -585,11 +588,11 @@
     /* End Content */
 
     .menuSport {
-        height: 30px;
+        height: 40px;
     }
     
     .menuDay {
-        height: 30px;
+        height: 40px;
     }
     
     .v-expansion-panel__header {
