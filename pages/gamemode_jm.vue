@@ -182,7 +182,7 @@
                             </li>
                             <li>
                                 <nuxt-link to="/myinventory"><img src="/images/menuShop.png">
-                                <span class="textMenu">Inventaire</span></nuxt-link>
+                                <span class="textMenu">Mes compétences</span></nuxt-link>
                             </li>
                             <li id="active">
                                 <nuxt-link to="/gamemode"><img src="/images/menuHome.png">
@@ -190,7 +190,7 @@
                             </li>
                             <li>
                                 <nuxt-link to="/myfriends"><img src="/images/menuSocial.png">
-                                <span class="textMenu">Mes amis</span></nuxt-link>
+                                <span class="textMenu">Mon inventaire</span></nuxt-link>
                             </li>
                             <li>
                                 <nuxt-link to="/scoremode"><img src="/images/menuResultat.png">
