@@ -113,7 +113,7 @@
 								<div class="nameTeam" style="position: relative; font-size: 50px; color: orangered; text-decoration: none; text-transform: uppercase; top: 0px; left: 30px; text-shadow: black 3px 3px 2px;">
 									Espagnol Barcelone <span style="position: relative; top: 3px; font-size: 15px; color: orangered; text-shadow: none; margin-left: 10px;">VS</span> <span style="position: relative; top: 3px; font-size: 25px; color: orangered; text-shadow: none; margin-left: 8px;">Real Madrid</span>
 								</div>
-								<span style="position: relative; top: 3px; font-size: 15px; color: orangered; text-shadow: none; margin-left: 10px;">Mardi, 12 mars 2019 à 19:00</span>
+								<span style="position: absolute; font-size: 15px; color: orangered; text-shadow: none; margin-right: 5px; right: 0">Mardi, 12 mars 2019 à 19:00</span>
 							</v-layout>
 							<!-- 
 							<v-layout align-start>
