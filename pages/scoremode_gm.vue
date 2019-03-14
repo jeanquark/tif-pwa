@@ -1,63 +1,65 @@
 <template>
     <v-content id="app">
-        <v-container>
-            <scoremode-header />
-            
-            <!-- Scrollable content -->
-            <div class="content" style="border: 2px solid green;">
-                <!-- <v-layout> -->
-                <!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
-                <!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
-                <!-- loadedEvents: {{ loadedEvents }}<br /><br /> -->
-                <!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
-
-                <!-- Results -->
-                <v-tabs
-                    color="green"
-                    dark
-                    slider-color="yellow"
-                    fixed-tabs
-                    v-model="selectType"
-
-                >
-                    <v-tab
-                        v-for="type in types"
-                        :key="type.slug"
-                        ripple
-                        style="cursor: pointer;"
-                    >
-                        {{ type.name }}
-                    </v-tab>
-
-                </v-tabs>
-
-                <!-- Results -->
-                <scoremode-results v-if="selectType === 0" />
-
-                <!-- Standings -->
-                <scoremode-standings v-if="selectType === 1" />
-
-                
-            </div>
-            
-            <!-- Fixed Footer -->
-            <div id="footer" style="border: 2px solid violet;">
-                <br /><br /><br />
-                <h2>Footer</h2>
-                <br /><br /><br />
-            </div>
-            
+	
+		<scoremode-header />
+		
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; height: 40px">
+            <v-layout>
+                <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
+                    Football
+                </v-flex>
+            </v-layout>             
         </v-container>
+		
+		<!-- Scrollable content -->
+        <v-container fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
+			<!-- <v-layout> -->
+			<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
+			<!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
+			<!-- loadedEvents: {{ loadedEvents }}<br /><br /> -->
+			<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
+
+			<!-- Results -->
+			<v-tabs color="green" dark slider-color="yellow" fixed-tabs v-model="selectType" style="color: white">
+				<v-tab
+					v-for="type in types"
+					:key="type.slug"
+					ripple
+					style="cursor: pointer;"
+				>
+					{{ type.name }}
+				</v-tab>
+
+			</v-tabs>
+
+			<!-- Results -->
+			<scoremode-results v-if="selectType === 0" />
+
+			<!-- Standings -->
+			<scoremode-standings v-if="selectType === 1" />
+
+			
+		</v-container>
+		
+		<scoremode-footer />
+            
     </v-content>
 </template>
 
 <script>
     import moment from 'moment'
-    import ScoremodeHeader from '~/components/jm/ScoremodeHeader'
-    import ScoremodeResults from '~/components/jm/ScoremodeResults'
-    import ScoremodeStandings from '~/components/jm/ScoremodeStandings'
+    import ScoremodeHeader from '~/components/ScoremodeHeader'
+    import ScoremodeResults from '~/components/ScoremodeResults'
+    import ScoremodeStandings from '~/components/ScoremodeStandings'
+    import ScoremodeFooter from '~/components/ScoremodeFooter'
     export default {
-        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings },
+        head: {
+            title: 'ScoreMode',
+            link: [
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }                
+			]
+        },
+        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings, ScoremodeFooter },
         async created () {
             // console.log(moment().format('YYYY-MM-DD'))
             // console.log(moment().add(1, 'days').format('YYYY-MM-DD'))
@@ -140,9 +142,6 @@
                     }, {
                         name: 'Standings',
                         slug: 'standings'
-                    }, {
-                        name: 'Weekly results',
-                        slug: 'weekly_results'
                     }
                 ],
                 competitions: [
@@ -216,6 +215,9 @@
         computed: {
             loading () {
                 return this.$store.getters['loading']
+            },
+            loadedUser () {
+                return this.$store.getters['users/loadedUser']
             },
             loadedUserTeams () {
                 return this.$store.getters['users/loadedUserTeams']
@@ -293,30 +295,30 @@
 </script>
 
 <style scoped>
+	html {
+	font: normal 100%/1 "Acme", Helvetica, sans-serif;
+	}
     body {
         margin: 0;
         padding: 0;
         overflow: hidden;
+		font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
 
     /* Content */
     .container {
         width: 100vw;
-        height: 100vh;
-        display: flex;
         flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		border-left: 1px solid orangered;
+		border-right: 1px solid orangered;
+		font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
     .content {
-        background-color: light-gray;;
+        background-color: gray;
         flex-grow: 1;
         overflow-x: auto;
-    }
-    #footer {
-        background-color: red;
-        color: #fff;
-        /*height: 100px;*/
-        height: auto;
-        text-align: center;
     }
     
     @media only screen and (min-width: 1000px) {
