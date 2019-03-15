@@ -106,208 +106,208 @@
             <!-- Scrollable content -->
             <div class="content">
 				<v-container fluid style="padding: 0">
-					<v-layout row style="max-height: 50px; width: 100%; text-align: center; background-color: orangered; margin-top: 20px;">
-						<v-flex xs4 sm4 md4 style="padding: 19px; border: 2px solid orangered; background-color: black; color: orangered; font-size: 20px; height: 60px; margin-top: -10px; font-weight: 700;">
+					<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 20px;">
+						<v-flex xs4 sm4 md4 style="padding: 16px; border: 2px solid orangered; background-color: black; color: orangered; font-size: 20px; height: 50px; margin-top: -10px; font-weight: 700;">
 							Attribut
 						</v-flex>
-						<v-flex xs4 sm4 md4 style="padding: 15px; border: 1px solid black; font-size: 20px; font-weight: 700;">
+						<v-flex xs4 sm4 md4 style="padding: 12px; border: 1px solid black; font-size: 20px; font-weight: 700;">
 							Influence
 						</v-flex>
-						<v-flex xs4 sm4 md4 style="padding: 15px; border: 1px solid black; font-size: 20px; font-weight: 700;">
+						<v-flex xs4 sm4 md4 style="padding: 12px; border: 1px solid black; font-size: 20px; font-weight: 700;">
 							Savoir-faire
 						</v-flex>
 					</v-layout>
 					<v-layout row wrap style="margin: 10px;">
 						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
-							<v-layout>
-							<v-flex xs5>
-							<v-img
-							src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-							height="125px"
-							contain
-							></v-img>
-							</v-flex>
-							<v-flex xs7>
-							<v-card-title primary-title>
-							<div>
-							<div class="headline">Supermodel</div>
-							<div>Foster the People</div>
-							<div>(2014)</div>
-							</div>
-							</v-card-title>
-							</v-flex>
-							</v-layout>
-							<v-divider light></v-divider>
-							<v-card-actions class="pa-3">
-							Rate this album
-							<v-spacer></v-spacer>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							</v-card-actions>
+								<v-card-actions class="pa-3">
+									Rate this album
+									<v-spacer></v-spacer>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+								</v-card-actions>
+								<v-divider light></v-divider>
+								<v-layout>
+									<v-flex xs5>
+										<v-img
+										src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+										height="125px"
+										contain
+										></v-img>
+									</v-flex>
+								<v-flex xs7>
+									<v-card-title primary-title>
+										<div>
+											<div class="headline">Supermodel</div>
+											<div>Foster the People</div>
+											<div>(2014)</div>
+										</div>
+									</v-card-title>
+								</v-flex>
+								</v-layout>
 							</v-card>
 						</v-flex>
 						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
-							<v-layout>
-							<v-flex xs5>
-							<v-img
-							src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-							height="125px"
-							contain
-							></v-img>
-							</v-flex>
-							<v-flex xs7>
-							<v-card-title primary-title>
-							<div>
-							<div class="headline">Supermodel</div>
-							<div>Foster the People</div>
-							<div>(2014)</div>
-							</div>
-							</v-card-title>
-							</v-flex>
-							</v-layout>
-							<v-divider light></v-divider>
-							<v-card-actions class="pa-3">
-							Rate this album
-							<v-spacer></v-spacer>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							</v-card-actions>
+								<v-card-actions class="pa-3">
+									Rate this album
+									<v-spacer></v-spacer>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+								</v-card-actions>
+								<v-divider light></v-divider>
+								<v-layout>
+									<v-flex xs5>
+										<v-img
+										src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+										height="125px"
+										contain
+										></v-img>
+									</v-flex>
+								<v-flex xs7>
+									<v-card-title primary-title>
+										<div>
+											<div class="headline">Supermodel</div>
+											<div>Foster the People</div>
+											<div>(2014)</div>
+										</div>
+									</v-card-title>
+								</v-flex>
+								</v-layout>
 							</v-card>
 						</v-flex>
 						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
-							<v-layout>
-							<v-flex xs5>
-							<v-img
-							src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-							height="125px"
-							contain
-							></v-img>
-							</v-flex>
-							<v-flex xs7>
-							<v-card-title primary-title>
-							<div>
-							<div class="headline">Supermodel</div>
-							<div>Foster the People</div>
-							<div>(2014)</div>
-							</div>
-							</v-card-title>
-							</v-flex>
-							</v-layout>
-							<v-divider light></v-divider>
-							<v-card-actions class="pa-3">
-							Rate this album
-							<v-spacer></v-spacer>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							</v-card-actions>
+								<v-card-actions class="pa-3">
+									Rate this album
+									<v-spacer></v-spacer>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+								</v-card-actions>
+								<v-divider light></v-divider>
+								<v-layout>
+									<v-flex xs5>
+										<v-img
+										src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+										height="125px"
+										contain
+										></v-img>
+									</v-flex>
+								<v-flex xs7>
+									<v-card-title primary-title>
+										<div>
+											<div class="headline">Supermodel</div>
+											<div>Foster the People</div>
+											<div>(2014)</div>
+										</div>
+									</v-card-title>
+								</v-flex>
+								</v-layout>
 							</v-card>
 						</v-flex>
 						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
-							<v-layout>
-							<v-flex xs5>
-							<v-img
-							src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-							height="125px"
-							contain
-							></v-img>
-							</v-flex>
-							<v-flex xs7>
-							<v-card-title primary-title>
-							<div>
-							<div class="headline">Supermodel</div>
-							<div>Foster the People</div>
-							<div>(2014)</div>
-							</div>
-							</v-card-title>
-							</v-flex>
-							</v-layout>
-							<v-divider light></v-divider>
-							<v-card-actions class="pa-3">
-							Rate this album
-							<v-spacer></v-spacer>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							</v-card-actions>
+								<v-card-actions class="pa-3">
+									Rate this album
+									<v-spacer></v-spacer>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+								</v-card-actions>
+								<v-divider light></v-divider>
+								<v-layout>
+									<v-flex xs5>
+										<v-img
+										src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+										height="125px"
+										contain
+										></v-img>
+									</v-flex>
+								<v-flex xs7>
+									<v-card-title primary-title>
+										<div>
+											<div class="headline">Supermodel</div>
+											<div>Foster the People</div>
+											<div>(2014)</div>
+										</div>
+									</v-card-title>
+								</v-flex>
+								</v-layout>
 							</v-card>
 						</v-flex>
 						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
-							<v-layout>
-							<v-flex xs5>
-							<v-img
-							src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-							height="125px"
-							contain
-							></v-img>
-							</v-flex>
-							<v-flex xs7>
-							<v-card-title primary-title>
-							<div>
-							<div class="headline">Supermodel</div>
-							<div>Foster the People</div>
-							<div>(2014)</div>
-							</div>
-							</v-card-title>
-							</v-flex>
-							</v-layout>
-							<v-divider light></v-divider>
-							<v-card-actions class="pa-3">
-							Rate this album
-							<v-spacer></v-spacer>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							</v-card-actions>
+								<v-card-actions class="pa-3">
+									Rate this album
+									<v-spacer></v-spacer>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+								</v-card-actions>
+								<v-divider light></v-divider>
+								<v-layout>
+									<v-flex xs5>
+										<v-img
+										src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+										height="125px"
+										contain
+										></v-img>
+									</v-flex>
+								<v-flex xs7>
+									<v-card-title primary-title>
+										<div>
+											<div class="headline">Supermodel</div>
+											<div>Foster the People</div>
+											<div>(2014)</div>
+										</div>
+									</v-card-title>
+								</v-flex>
+								</v-layout>
 							</v-card>
 						</v-flex>
 						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
-							<v-layout>
-							<v-flex xs5>
-							<v-img
-							src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-							height="125px"
-							contain
-							></v-img>
-							</v-flex>
-							<v-flex xs7>
-							<v-card-title primary-title>
-							<div>
-							<div class="headline">Supermodel</div>
-							<div>Foster the People</div>
-							<div>(2014)</div>
-							</div>
-							</v-card-title>
-							</v-flex>
-							</v-layout>
-							<v-divider light></v-divider>
-							<v-card-actions class="pa-3">
-							Rate this album
-							<v-spacer></v-spacer>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							<v-icon>star_border</v-icon>
-							</v-card-actions>
+								<v-card-actions class="pa-3">
+									Rate this album
+									<v-spacer></v-spacer>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+									<v-icon>star_border</v-icon>
+								</v-card-actions>
+								<v-divider light></v-divider>
+								<v-layout>
+									<v-flex xs5>
+										<v-img
+										src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+										height="125px"
+										contain
+										></v-img>
+									</v-flex>
+								<v-flex xs7>
+									<v-card-title primary-title>
+										<div>
+											<div class="headline">Supermodel</div>
+											<div>Foster the People</div>
+											<div>(2014)</div>
+										</div>
+									</v-card-title>
+								</v-flex>
+								</v-layout>
 							</v-card>
 						</v-flex>
 					</v-layout>
