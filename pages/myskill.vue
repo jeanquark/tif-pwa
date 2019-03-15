@@ -107,50 +107,50 @@
             <div class="content">
 				<v-container fluid style="padding: 0">
 					<v-layout row style="max-height: 50px; width: 100%; text-align: center; background-color: orangered; margin-top: 30px;">
-						<v-flex xs4 sm4 md4 style="padding: 20px; border: 1px solid orange;">
-							Menu1
+						<v-flex xs4 sm4 md4 style="padding: 19px; border: 2px solid orange; background-color: black; color: orangered; font-size: 20px; height: 60px; margin-top: -10px; font-weight: 700;">
+							Attribut
 						</v-flex>
 						<v-flex xs4 sm4 md4 style="padding: 20px; border: 1px solid orange;">
-							Menu1
+							Influence
 						</v-flex>
 						<v-flex xs4 sm4 md4 style="padding: 20px; border: 1px solid orange;">
-							Menu1
+							Savoir-faire
 						</v-flex>
 					</v-layout>
-					<v-layout row wrap style="margin-top: 30px;">
-						<v-flex xs12 sm6 md6>
-						<v-card dark tile flat color="red darken-2">
-						<v-card-text>#1</v-card-text>
-						</v-card>
+					<v-layout row wrap style="margin: 10px;">
+						<v-flex xs12 sm6 md6 style="padding: 5px;">
+							<v-card dark tile flat color="red darken-2">
+							<v-card-text>#1</v-card-text>
+							</v-card>
 						</v-flex>
-						<v-flex xs12 sm6 md6>
-						<v-card dark tile flat color="deep-orange lighten-1">
-						<v-card-text>#2</v-card-text>
-						</v-card>
-						</v-flex>
-					</v-layout>
-					<v-layout row wrap>
-						<v-flex xs12 sm6 md6>
-						<v-card dark tile flat color="deep-orange darken-3">
-						<v-card-text>#3</v-card-text>
-						</v-card>
-						</v-flex>
-						<v-flex xs12 sm6 md6>
-						<v-card dark tile flat color="deep-orange">
-						<v-card-text>#4</v-card-text>
-						</v-card>
+						<v-flex xs12 sm6 md6 style="padding: 5px;">
+							<v-card dark tile flat color="deep-orange lighten-1">
+							<v-card-text>#2</v-card-text>
+							</v-card>
 						</v-flex>
 					</v-layout>
-					<v-layout row wrap>
-						<v-flex xs12 sm6 md6>
-						<v-card dark tile flat color="deep-orange">
-						<v-card-text>#6</v-card-text>
-						</v-card>
+					<v-layout row wrap style="margin: 10px;">
+						<v-flex xs12 sm6 md6 style="padding: 5px;">
+							<v-card dark tile flat color="deep-orange darken-3">
+							<v-card-text>#3</v-card-text>
+							</v-card>
 						</v-flex>
-						<v-flex xs12 sm6 md6>
-						<v-card dark tile flat color="deep-orange">
-						<v-card-text>#6</v-card-text>
-						</v-card>
+						<v-flex xs12 sm6 md6 style="padding: 5px;">
+							<v-card dark tile flat color="deep-orange">
+							<v-card-text>#4</v-card-text>
+							</v-card>
+						</v-flex>
+					</v-layout>
+					<v-layout row wrap style="margin: 10px;">
+						<v-flex xs12 sm6 md6 style="padding: 5px;">
+							<v-card dark tile flat color="deep-orange">
+							<v-card-text>#6</v-card-text>
+							</v-card>
+						</v-flex>
+						<v-flex xs12 sm6 md6 style="padding: 5px;">
+							<v-card dark tile flat color="deep-orange">
+							<v-card-text>#6</v-card-text>
+							</v-card>
 						</v-flex>
 					</v-layout>
 				</v-container>
