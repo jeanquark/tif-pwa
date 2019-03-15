@@ -117,7 +117,7 @@
 							Menu1
 						</v-flex>
 					</v-layout>
-					<v-layout row>
+					<v-layout row wrap>
 					<v-flex xs12 sm6 md6>
 					<v-card dark tile flat color="red darken-2">
 					<v-card-text>#1</v-card-text>
