@@ -105,8 +105,8 @@
             
             <!-- Scrollable content -->
             <div class="content">
-				<div style="padding: 0">
-					<v-layout row style="max-height: 50px; width: 100%; text-align: center; background-color: orangered; margin-top: 30px;">
+				<v-container fluid style="padding: 0">
+					<v-layout row style="max-height: 50px; width: 100%; text-align: center; background-color: orangered; margin-top: 20px;">
 						<v-flex xs4 sm4 md4 style="padding: 19px; border: 2px solid orangered; background-color: black; color: orangered; font-size: 20px; height: 60px; margin-top: -10px; font-weight: 700;">
 							Attribut
 						</v-flex>
@@ -311,7 +311,7 @@
 							</v-card>
 						</v-flex>
 					</v-layout>
-				</div>
+				</v-container>
 			</div>
             
             <!-- Fixed Footer -->
