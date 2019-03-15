@@ -105,19 +105,19 @@
             
             <!-- Scrollable content -->
             <div class="content">
-				<v-container fluid>
-					<v-layout row>
-						<v-flex xs4 sm4 md4>
+				<v-container fluid style="padding: 0">
+					<v-layout row style="max-height: 50px; width: 100%; text-align: center; background-color: orangered; margin-top: 30px;">
+						<v-flex xs4 sm4 md4 style="padding: 20px; border: 1px solid orange;">
 							Menu1
 						</v-flex>
-						<v-flex xs4 sm4 md4>
+						<v-flex xs4 sm4 md4 style="padding: 20px; border: 1px solid orange;">
 							Menu1
 						</v-flex>
-						<v-flex xs4 sm4 md4>
+						<v-flex xs4 sm4 md4 style="padding: 20px; border: 1px solid orange;">
 							Menu1
 						</v-flex>
 					</v-layout>
-					<v-layout row wrap>
+					<v-layout row wrap style="margin-top: 30px;">
 					<v-flex xs12 sm6 md6>
 					<v-card dark tile flat color="red darken-2">
 					<v-card-text>#1</v-card-text>
