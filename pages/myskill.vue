@@ -118,36 +118,40 @@
 						</v-flex>
 					</v-layout>
 					<v-layout row wrap style="margin-top: 30px;">
-					<v-flex xs12 sm6 md6>
-					<v-card dark tile flat color="red darken-2">
-					<v-card-text>#1</v-card-text>
-					</v-card>
-					</v-flex>
-					<v-flex xs12 sm6 md6>
-					<v-card dark tile flat color="deep-orange lighten-1">
-					<v-card-text>#2</v-card-text>
-					</v-card>
-					</v-flex>
-					<v-flex xs12 sm6 md6>
-					<v-card dark tile flat color="deep-orange darken-3">
-					<v-card-text>#3</v-card-text>
-					</v-card>
-					</v-flex>
-					<v-flex xs12 sm6 md6>
-					<v-card dark tile flat color="deep-orange">
-					<v-card-text>#4</v-card-text>
-					</v-card>
-					</v-flex>
-					<v-flex xs12 sm6 md6>
-					<v-card dark tile flat color="deep-orange">
-					<v-card-text>#6</v-card-text>
-					</v-card>
-					</v-flex>
-					<v-flex xs12 sm6 md6>
-					<v-card dark tile flat color="deep-orange">
-					<v-card-text>#6</v-card-text>
-					</v-card>
-					</v-flex>
+						<v-flex xs12 sm6 md6>
+						<v-card dark tile flat color="red darken-2">
+						<v-card-text>#1</v-card-text>
+						</v-card>
+						</v-flex>
+						<v-flex xs12 sm6 md6>
+						<v-card dark tile flat color="deep-orange lighten-1">
+						<v-card-text>#2</v-card-text>
+						</v-card>
+						</v-flex>
+					</v-layout>
+					<v-layout row wrap>
+						<v-flex xs12 sm6 md6>
+						<v-card dark tile flat color="deep-orange darken-3">
+						<v-card-text>#3</v-card-text>
+						</v-card>
+						</v-flex>
+						<v-flex xs12 sm6 md6>
+						<v-card dark tile flat color="deep-orange">
+						<v-card-text>#4</v-card-text>
+						</v-card>
+						</v-flex>
+					</v-layout>
+					<v-layout row wrap>
+						<v-flex xs12 sm6 md6>
+						<v-card dark tile flat color="deep-orange">
+						<v-card-text>#6</v-card-text>
+						</v-card>
+						</v-flex>
+						<v-flex xs12 sm6 md6>
+						<v-card dark tile flat color="deep-orange">
+						<v-card-text>#6</v-card-text>
+						</v-card>
+						</v-flex>
 					</v-layout>
 				</v-container>
 			</div>
