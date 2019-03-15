@@ -105,65 +105,60 @@
             
             <!-- Scrollable content -->
             <div class="content">
-                <!-- <v-layout> -->
-                <!-- <div class="container"> -->
-					<div class="cadreScore" style="position: absolute">
-						<v-flex xs12 style="margin: 0; height: 100%">
-							<v-layout align-start>
-								<div class="nameTeam" style="position: relative; font-size: 50px; color: orangered; text-decoration: none; text-transform: uppercase; top: 0px; left: 30px; text-shadow: black 3px 3px 2px;">
-									Espagnol Barcelone <span style="position: relative; top: 3px; font-size: 15px; color: orangered; text-shadow: none; margin-left: 10px;">Pas de match aujourd'hui</span>
-								</div>
-							</v-layout>
-							<!-- 
-							<v-layout align-start>
-								<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-									<div style="background-color: red; height: 100%; width: 2px"></div>
-								</v-flex>
-								<v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-									<div style="color: orange;font-size: 80%">
-										<span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >MATCH TERMINÉ</span>
-									</div>
-								</v-flex>
-							</v-layout>
-							<v-layout align-center style="max-width: 100%">
-								<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-									<div style="background-color: red; height: 40px; width: 2px"></div>
-								</v-flex>
-								<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-left: 15px">
-									<img src="/images/switzerland.png" class="imgLogoEquipe"/>
-								</v-flex>
-								<v-flex sm4 xs5 align-center class="text-xs-left pd-left5">
-									<span class="teamTextSize">FC Barcelone</span>
-								</v-flex>
-								<v-flex sm2 xs2 class="text-xs-center">
-									<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 130%">3 - 2</span>
-								</v-flex>
-								<v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-									<span class="teamTextSize">Palma de Majorque</span>
-								</v-flex>
-								<v-flex sm1 hidden-xs-only align-center class="text-xs-center" style="width: 50px; padding-right: 15px">
-									<img src="/images/switzerland.png" class="imgLogoEquipe"/>
-								</v-flex>
-							</v-layout> -->
-						</v-flex>
-					</div> 
-
-					<img src="/images/barcelona_clickable.svg" usemap="#map">
-
-					<map name="map">
-						<area target="" alt="Museum" title="Museum" href="museum" coords="462,411,61" shape="circle" style="background-color: red; border: 1px solid black">
-					</map>
-					
-                    <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
-                    <v-dialog
-                        v-model="actionsModal"
-                        max-width="800"
-                    >
-                        <ActionsCard :action="action" />
-                    </v-dialog>
-                <!-- </div> -->
-                <!-- </v-layout> -->
-            </div>
+				<v-container fluid>
+				  <v-layout row>
+					<v-flex xs6 order-lg2>
+					  <v-card dark tile flat color="error">
+						<v-card-text>#1</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex xs6>
+					  <v-card dark tile flat color="red darken-4">
+						<v-card-text>#2</v-card-text>
+					  </v-card>
+					</v-flex>
+				  </v-layout>
+				  <v-layout row>
+					<v-flex xs4 order-md2 order-xs1>
+					  <v-card dark tile flat color="red lighten-1">
+						<v-card-text>#1</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex xs4 order-md3 order-xs2>
+					  <v-card dark tile flat color="red lighten-2">
+						<v-card-text>#2</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex xs4 order-md1 order-xs3>
+					  <v-card dark tile flat color="red darken-1">
+						<v-card-text>#3</v-card-text>
+					  </v-card>
+					</v-flex>
+				  </v-layout>
+				  <v-layout row wrap>
+					<v-flex xs12 sm6 md3 order-md4 order-sm2>
+					  <v-card dark tile flat color="red darken-2">
+						<v-card-text>#1</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex xs12 sm6 md3 order-md3 order-sm1>
+					  <v-card dark tile flat color="deep-orange lighten-1">
+						<v-card-text>#2</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex xs12 sm6 md3 order-md2 order-sm4>
+					  <v-card dark tile flat color="deep-orange darken-3">
+						<v-card-text>#3</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex xs12 sm6 md3 order-md1 order-sm3>
+					  <v-card dark tile flat color="deep-orange">
+						<v-card-text>#4</v-card-text>
+					  </v-card>
+					</v-flex>
+				  </v-layout>
+				</v-container>
+			</div>
             
             <!-- Fixed Footer -->
             <div id="footer">
