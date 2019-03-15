@@ -118,7 +118,7 @@
 						</v-flex>
 					</v-layout>
 					<v-layout row wrap style="margin: 10px;">
-						<v-flex xs12 sm6 md6 style="padding: 5px;">
+						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
 							<v-layout>
 							<v-flex xs5>
@@ -150,7 +150,7 @@
 							</v-card-actions>
 							</v-card>
 						</v-flex>
-						<v-flex xs12 sm6 md6 style="padding: 5px;">
+						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
 							<v-layout>
 							<v-flex xs5>
@@ -182,9 +182,7 @@
 							</v-card-actions>
 							</v-card>
 						</v-flex>
-					</v-layout>
-					<v-layout row wrap style="margin: 10px;">
-						<v-flex xs12 sm6 md6 style="padding: 5px;">
+						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
 							<v-layout>
 							<v-flex xs5>
@@ -216,7 +214,7 @@
 							</v-card-actions>
 							</v-card>
 						</v-flex>
-						<v-flex xs12 sm6 md6 style="padding: 5px;">
+						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
 							<v-layout>
 							<v-flex xs5>
@@ -248,9 +246,7 @@
 							</v-card-actions>
 							</v-card>
 						</v-flex>
-					</v-layout>
-					<v-layout row wrap style="margin: 10px;">
-						<v-flex xs12 sm6 md6 style="padding: 5px;">
+						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
 							<v-layout>
 							<v-flex xs5>
@@ -282,7 +278,7 @@
 							</v-card-actions>
 							</v-card>
 						</v-flex>
-						<v-flex xs12 sm6 md6 style="padding: 5px;">
+						<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
 							<v-card color="cyan darken-2" class="white--text">
 							<v-layout>
 							<v-flex xs5>
