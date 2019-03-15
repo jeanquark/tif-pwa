@@ -105,7 +105,6 @@
             
             <!-- Scrollable content -->
             <div class="content">
-				<v-container fluid style="padding: 0">
 					<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 20px;">
 						<v-flex xs4 sm4 md4 style="padding: 16px; border: 2px solid orangered; background-color: black; color: orangered; font-size: 20px; height: 50px; margin-top: -10px; font-weight: 700;">
 							Attribut
@@ -311,7 +310,6 @@
 							</v-card>
 						</v-flex>
 					</v-layout>
-				</v-container>
 			</div>
             
             <!-- Fixed Footer -->
@@ -406,13 +404,11 @@
     }
     .content {
         background-color: light-gray;;
-        /*flex-grow: 1;*/
         overflow-x: auto;
     }
     #footer {
         background-color: red;
         color: #fff;
-        /*height: 100px;*/
         height: auto;
         text-align: center;
     }
