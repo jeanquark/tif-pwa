@@ -25,6 +25,14 @@ function getLeagueStanding (league) {
     });
 }
 
+function getMatchStatistics (fixture) {
+    const url = `https://api-football-v1.p.rapidapi.com/statistics/fixture/${fixture}`;
+    return unirest.get(url).headers({
+        'Accept': 'application/json',
+        'X-RapidAPI-Key': 'V5NyybcqoimshrFl7oR8yKKDMyxhp10zkcfjsnGw3uB6ZeMcDI'
+    });
+}
+
 // To be called when new competition is added as a POST request with league_id as body data
 module.exports = app.use(async function(req, res, next) {
     try {
@@ -49,6 +57,7 @@ module.exports = app.use(async function(req, res, next) {
         let updates = {};
         let updatesLeagueStanding = {};
         const updateLeagueStanding = {};
+        const getStatisticsArray = [];
 
         for (let match of matchesArray) {
             const response = await getFixtureById(match.id);
@@ -63,28 +72,39 @@ module.exports = app.use(async function(req, res, next) {
                 updates[`/events_new3/${id}/penalty`] = fixture.penalty;
 
                 // If match has ended, add league id to updateLeagueStanding array
+                // if (fixture.statusShort === 'FT') {
+                //     updateLeagueStanding[fixture.league_id] = {
+                //         'id': fixture.league_id,
+                //         'slug' : match.league_slug
+                //     };
+                // }
+
+                // If match has ended, add fixture id to getStatisticsArray
                 if (fixture.statusShort === 'FT') {
-                    updateLeagueStanding[fixture.league_id] = {
-                        'id': fixture.league_id,
-                        'slug' : match.league_slug
-                    };
+                    getStatisticsArray.push(id);
                 }
             });
         }
 
         console.log('updateLeagueStanding: ', updateLeagueStanding);
+        console.log('getStatisticsArray: ', getStatisticsArray);
 
-        for (let league in updateLeagueStanding) {
-            const league_id = updateLeagueStanding[league].id;
-            const league_slug = updateLeagueStanding[league].slug;
+        // for (let league in updateLeagueStanding) {
+        //     const league_id = updateLeagueStanding[league].id;
+        //     const league_slug = updateLeagueStanding[league].slug;
 
-            const response = await getLeagueStanding(league_id);
-            Object.values(response.body.api.standings).forEach(teams => {
-                teams.forEach(team => {
-                    updates[`/standings_new3/${league_slug}/standing/${team.rank}`] = team;
-                });
-            });
-            updates[`/standings_new3/${league_slug}/last_updated`] = moment().format('YYYY-MM-DD HH:mm');
+        //     const response = await getLeagueStanding(league_id);
+        //     Object.values(response.body.api.standings).forEach(teams => {
+        //         teams.forEach(team => {
+        //             updates[`/standings_new3/${league_slug}/standing/${team.rank}`] = team;
+        //         });
+        //     });
+        //     updates[`/standings_new3/${league_slug}/last_updated`] = moment().format('YYYY-MM-DD HH:mm');
+        // }
+
+        for (let match of getStatisticsArray) {
+            const response = await getMatchStatistics(match);
+            updates[`/events_new3/${id}/statistics`] = response.body.api.statistics;
         }
 
         const snapshot = await admin.database().ref().update(updates);
