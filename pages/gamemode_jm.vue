@@ -181,7 +181,7 @@
                                 <span class="textMenu">Mes classements</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/myskill"><img src="/images/menuShop.png">
+                                <nuxt-link to="/skillInfluence"><img src="/images/menuShop.png">
                                 <span class="textMenu">Mes compétences</span></nuxt-link>
                             </li>
                             <li id="active">

@@ -108,10 +108,10 @@
 				<v-layout>
 					<div>
 						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 25px">
-							<v-flex xs4 sm4 md4 class="activeskill">
+							<v-flex xs4 sm4 md4 class="noactiveskill">
 								<nuxt-link to="/skillAttribut">Attribut</nuxt-link>
 							</v-flex>
-							<v-flex xs4 sm4 md4 class="noactiveskill">
+							<v-flex xs4 sm4 md4 class="activeskill">
 								<nuxt-link to="/skillInfluence">Influence</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm4 md4 class="noactiveskill">
