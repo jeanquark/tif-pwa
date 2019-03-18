@@ -3,7 +3,7 @@
         <v-container style="padding: 0; max-width: 1017px;">
             <!-- Fixed Header -->
             <!-- <v-toolbar dark> -->
-            <v-container fluid id="header" class="header">
+            <div id="header" class="header">
                 <v-layout row>
                     <v-flex hidden-sm-and-down class="barreHeader">
                         <v-layout row>
@@ -98,16 +98,16 @@
                         </nuxt-link>
                     </v-flex>
                 </v-layout>
-            </v-container>
+            </div>
 
 
             <!-- </v-toolbar> -->
             
             <!-- Scrollable content -->
-            <div class="content">
+            <div class="content" style="height: 100vh">
 				<v-layout>
 					<v-container fluid>
-						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 20px;">
+						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered">
 							<v-flex xs4 sm4 md4 style="padding: 16px; border: 2px solid orangered; background-color: black; color: orangered; font-size: 20px; height: 50px; margin-top: -10px; font-weight: 700;">
 								Attribut
 							</v-flex>
@@ -330,11 +330,11 @@
                                 <nuxt-link to="/myresult"><img src="/images/menuResultat.png">
                                 <span class="textMenu">Mes classements</span></nuxt-link>
                             </li>
-                            <li>
+                            <li id="active">
                                 <nuxt-link to="/myskill"><img src="/images/menuShop.png">
                                 <span class="textMenu">Mes compétences</span></nuxt-link>
                             </li>
-                            <li id="active">
+                            <li>
                                 <nuxt-link to="/gamemode_jm"><img src="/images/menuHome.png">
                                 <span class="textMenu">Aujourd'hui</span></nuxt-link>
                             </li>
