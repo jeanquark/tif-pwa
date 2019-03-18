@@ -120,36 +120,31 @@
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: orangered; opacity: 0.2">
+								<v-card style="background-color: none; border: 2px solid orangered">
 									<v-card-actions style="padding: 5px">
-										Attribut No 1
+										<span style="font-size: 18px">Attribut No 1</span>
 										<v-spacer></v-spacer>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon style="color: black">star_border</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="color: black; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5>
-											<v-img
-											src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-											height="125px"
-											contain
-											></v-img>
+											<v-icon style="font-size: 30px">star</v-icon>
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
 											<div>
-												<div class="headline">Supermodel</div>
-												<div>Foster the People</div>
-												<div>(2014)</div>
+												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
+												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -157,31 +152,31 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card color="cyan darken-2" class="white--text">
-									<v-card-actions class="pa-3">
-										Rate this album
+								<v-card style="background-color: none; border: 2px solid orangered">
+									<v-card-actions style="padding: 5px">
+										<span style="font-size: 18px">Attribut No 1</span>
 										<v-spacer></v-spacer>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="color: black; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5>
-											<v-img
-											src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-											height="125px"
-											contain
-											></v-img>
+											<v-icon style="font-size: 30px">star</v-icon>
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
 											<div>
-												<div class="headline">Supermodel</div>
-												<div>Foster the People</div>
-												<div>(2014)</div>
+												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
+												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -189,31 +184,31 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card color="cyan darken-2" class="white--text">
-									<v-card-actions class="pa-3">
-										Rate this album
+								<v-card style="background-color: none; border: 2px solid orangered">
+									<v-card-actions style="padding: 5px">
+										<span style="font-size: 18px">Attribut No 1</span>
 										<v-spacer></v-spacer>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="color: black; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5>
-											<v-img
-											src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-											height="125px"
-											contain
-											></v-img>
+											<v-icon style="font-size: 30px">star</v-icon>
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
 											<div>
-												<div class="headline">Supermodel</div>
-												<div>Foster the People</div>
-												<div>(2014)</div>
+												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
+												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -221,31 +216,31 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card color="cyan darken-2" class="white--text">
-									<v-card-actions class="pa-3">
-										Rate this album
+								<v-card style="background-color: none; border: 2px solid orangered">
+									<v-card-actions style="padding: 5px">
+										<span style="font-size: 18px">Attribut No 1</span>
 										<v-spacer></v-spacer>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="color: black; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5>
-											<v-img
-											src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-											height="125px"
-											contain
-											></v-img>
+											<v-icon style="font-size: 30px">star</v-icon>
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
 											<div>
-												<div class="headline">Supermodel</div>
-												<div>Foster the People</div>
-												<div>(2014)</div>
+												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
+												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -253,31 +248,31 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card color="cyan darken-2" class="white--text">
-									<v-card-actions class="pa-3">
-										Rate this album
+								<v-card style="background-color: none; border: 2px solid orangered">
+									<v-card-actions style="padding: 5px">
+										<span style="font-size: 18px">Attribut No 1</span>
 										<v-spacer></v-spacer>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="color: black; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5>
-											<v-img
-											src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-											height="125px"
-											contain
-											></v-img>
+											<v-icon style="font-size: 30px">star</v-icon>
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
 											<div>
-												<div class="headline">Supermodel</div>
-												<div>Foster the People</div>
-												<div>(2014)</div>
+												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
+												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -285,31 +280,31 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card color="cyan darken-2" class="white--text">
-									<v-card-actions class="pa-3">
-										Rate this album
+								<v-card style="background-color: none; border: 2px solid orangered">
+									<v-card-actions style="padding: 5px">
+										<span style="font-size: 18px">Attribut No 1</span>
 										<v-spacer></v-spacer>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
-										<v-icon>star_border</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon style="color: black; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5>
-											<v-img
-											src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-											height="125px"
-											contain
-											></v-img>
+											<v-icon style="font-size: 30px">star</v-icon>
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
 											<div>
-												<div class="headline">Supermodel</div>
-												<div>Foster the People</div>
-												<div>(2014)</div>
+												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
+												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
 											</div>
 										</v-card-title>
 									</v-flex>
