@@ -120,15 +120,20 @@
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card color="cyan darken-2" class="white--text">
-									<v-card-actions class="pa-3">
-										Rate this album
+								<v-card style="background-color: orangered; opacity: 0.2">
+									<v-card-actions style="padding: 5px">
+										Attribut No 1
 										<v-spacer></v-spacer>
 										<v-icon>star_border</v-icon>
 										<v-icon>star_border</v-icon>
 										<v-icon>star_border</v-icon>
 										<v-icon>star_border</v-icon>
 										<v-icon>star_border</v-icon>
+										<v-icon>star_border</v-icon>
+										<v-icon>star_border</v-icon>
+										<v-icon>star_border</v-icon>
+										<v-icon>star_border</v-icon>
+										<v-icon style="color: black">star_border</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
