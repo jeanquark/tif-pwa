@@ -812,7 +812,6 @@
 	}
 	
 	.content .imgSkill {
-	height: 85%;
 	width: 85%;
 	}
     
