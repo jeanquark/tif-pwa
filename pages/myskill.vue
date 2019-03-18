@@ -174,7 +174,7 @@
 											<v-icon style="font-size: 50px">star</v-icon>
 										</v-flex>
 									<v-flex xs7>
-										<v-card-title primary-title style="text-align: center; padding: 16px">
+										<v-card-title style="text-align: center; padding: 16px">
 											<div>											
 												<v-progress-linear class="progressOrange orangered" height="20" value="75" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">75%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
