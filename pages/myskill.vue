@@ -107,7 +107,7 @@
             <div class="content" style="height: 100vh">
 				<v-layout>
 					<div>
-						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered">
+						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 25px">
 							<v-flex xs4 sm4 md4 style="padding: 16px; border: 2px solid orangered; background-color: black; color: orangered; font-size: 20px; height: 50px; margin-top: -10px; font-weight: 700;">
 								Attribut
 							</v-flex>
@@ -118,8 +118,8 @@
 								Savoir-faire
 							</v-flex>
 						</v-layout>
-						<v-layout row wrap style="margin: 10px;">
-							<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
+						<v-layout row wrap style="margin-top: 15px; margin: 10px">
+							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card color="cyan darken-2" class="white--text">
 									<v-card-actions class="pa-3">
 										Rate this album
@@ -151,7 +151,7 @@
 									</v-layout>
 								</v-card>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
+							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card color="cyan darken-2" class="white--text">
 									<v-card-actions class="pa-3">
 										Rate this album
@@ -183,7 +183,7 @@
 									</v-layout>
 								</v-card>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
+							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card color="cyan darken-2" class="white--text">
 									<v-card-actions class="pa-3">
 										Rate this album
@@ -215,7 +215,7 @@
 									</v-layout>
 								</v-card>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
+							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card color="cyan darken-2" class="white--text">
 									<v-card-actions class="pa-3">
 										Rate this album
@@ -247,7 +247,7 @@
 									</v-layout>
 								</v-card>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
+							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card color="cyan darken-2" class="white--text">
 									<v-card-actions class="pa-3">
 										Rate this album
@@ -279,7 +279,7 @@
 									</v-layout>
 								</v-card>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px; max-height: 175px;">
+							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card color="cyan darken-2" class="white--text">
 									<v-card-actions class="pa-3">
 										Rate this album
