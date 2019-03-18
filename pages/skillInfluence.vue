@@ -109,13 +109,13 @@
 					<div>
 						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 25px">
 							<v-flex xs4 sm4 md4 class="noactiveskill">
-								<nuxt-link to="/skillAttribut">Attribut</nuxt-link>
+								<nuxt-link to="/skillAttribut" style="text-decoration: none; color: white">Attribut</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm4 md4 class="activeskill">
-								<nuxt-link to="/skillInfluence">Influence</nuxt-link>
+								<nuxt-link to="/skillInfluence" style="text-decoration: none; color: white">Influence</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm4 md4 class="noactiveskill">
-								<nuxt-link to="/skillSavoirfaire">Savoir-faire</nuxt-link>
+								<nuxt-link to="/skillSavoirfaire" style="text-decoration: none; color: white">Savoir-faire</nuxt-link>
 							</v-flex>
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
@@ -141,7 +141,7 @@
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 20px">
+										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
@@ -174,7 +174,7 @@
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 20px">
+										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
@@ -207,7 +207,7 @@
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 20px">
+										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
@@ -240,7 +240,7 @@
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 20px">
+										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
@@ -273,7 +273,7 @@
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 20px">
+										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
@@ -306,7 +306,7 @@
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 20px">
+										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
@@ -807,8 +807,8 @@
 	}
 	
 	.imgSkill {
-	height: 100%;
-	width: 100%;
+	height: 85%;
+	width: 85%;
 	}
     
     /* Small screens */
