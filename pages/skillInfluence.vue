@@ -188,7 +188,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px"Leadership</span>
+										<span style="font-size: 18px">Leadership</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
