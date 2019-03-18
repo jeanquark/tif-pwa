@@ -108,15 +108,21 @@
 				<v-layout>
 					<div>
 						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 25px">
-							<v-flex xs4 sm4 md4 class="noactiveskill">
-								<nuxt-link to="/skillAttribut" style="text-decoration: none; color: white">Attribut</nuxt-link>
-							</v-flex>
-							<v-flex xs4 sm4 md4 class="activeskill">
-								<nuxt-link to="/skillInfluence" style="text-decoration: none; color: white">Influence</nuxt-link>
-							</v-flex>
-							<v-flex xs4 sm4 md4 class="noactiveskill">
-								<nuxt-link to="/skillSavoirfaire" style="text-decoration: none; color: white">Savoir-faire</nuxt-link>
-							</v-flex>
+							<nuxt-link to="/skillAttribut" style="text-decoration: none; color: white">
+								<v-flex xs4 sm4 md4 class="noactiveskill">
+								Attribut
+								</v-flex>
+							</nuxt-link>
+							<nuxt-link to="/skillInfluence" style="text-decoration: none; color: white">
+								<v-flex xs4 sm4 md4 class="activeskill">
+								Influence
+								</v-flex>
+							</nuxt-link>
+							<nuxt-link to="/skillSavoirfaire" style="text-decoration: none; color: white">
+								<v-flex xs4 sm4 md4 class="noactiveskill">
+								Savoir-faire
+								</v-flex>
+							</nuxt-link>
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
