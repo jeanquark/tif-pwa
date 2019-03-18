@@ -122,7 +122,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Résistance au stress</span>
+										<span style="font-size: 18px">Musical</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -155,7 +155,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Résistance au stress</span>
+										<span style="font-size: 18px">Artistique</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -188,7 +188,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Résistance au stress</span>
+										<span style="font-size: 18px">Ingénierie</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -221,7 +221,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Résistance au stress</span>
+										<span style="font-size: 18px">Médical</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -254,7 +254,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Résistance au stress</span>
+										<span style="font-size: 18px">Technologique</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -287,7 +287,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Résistance au stress</span>
+										<span style="font-size: 18px">Débrouillardise</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
