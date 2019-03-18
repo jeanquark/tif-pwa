@@ -109,13 +109,13 @@
 					<div>
 						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 25px">
 							<v-flex xs4 sm4 md4 class="noactiveskill">
-								<nuxt-link to="/skillAttribut">Attribut</nuxt-link>
+								<nuxt-link to="/skillAttribut" style="text-decoration: none; color: white">Attribut</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm4 md4 class="noactiveskill">
-								<nuxt-link to="/skillInfluence">Influence</nuxt-link>
+								<nuxt-link to="/skillInfluence" style="text-decoration: none; color: white">Influence</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm4 md4 class="activeskill">
-								<nuxt-link to="/skillSavoirfaire">Savoir-faire</nuxt-link>
+								<nuxt-link to="/skillSavoirfaire" style="text-decoration: none; color: white">Savoir-faire</nuxt-link>
 							</v-flex>
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
@@ -804,11 +804,6 @@
 	border: 1px solid black; 
 	font-size: 20px; 
 	font-weight: 700;
-	}
-	
-	.imgSkill {
-	height: 85%;
-	width: 85%;
 	}
 	
 	.content .imgSkill {

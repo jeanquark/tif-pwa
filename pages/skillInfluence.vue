@@ -806,11 +806,6 @@
 	font-weight: 700;
 	}
 	
-	.imgSkill {
-	height: 85%;
-	width: 85%;
-	}
-	
 	.content .imgSkill {
 	width: 85%;
 	}
