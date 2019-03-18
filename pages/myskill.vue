@@ -120,9 +120,9 @@
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered">
+								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px">
-										<span style="font-size: 18px">Attribut No 1</span>
+										<span style="font-size: 18px">Résistance au stress</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -133,7 +133,7 @@
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="color: black; font-size: 18px">star</v-icon>
+										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
@@ -142,9 +142,10 @@
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
-											<div>
-												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
-												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
+											<div>											
+												<vue-simple-progress size="huge" :val="90" text="90%"></vue-simple-progress>											
+												<div style="font-size: 14px; margin-top: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div style="background-color: orangered; padding: 5px; text-align: center; margin-top: 10px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -152,9 +153,9 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered">
+								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px">
-										<span style="font-size: 18px">Attribut No 1</span>
+										<span style="font-size: 18px">Résistance au stress</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -165,7 +166,7 @@
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="color: black; font-size: 18px">star</v-icon>
+										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
@@ -174,9 +175,10 @@
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
-											<div>
-												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
-												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
+											<div>											
+												<vue-simple-progress size="huge" :val="90" text="90%"></vue-simple-progress>											
+												<div style="font-size: 14px; margin-top: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div style="background-color: orangered; padding: 5px; text-align: center; margin-top: 10px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -184,9 +186,9 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered">
+								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px">
-										<span style="font-size: 18px">Attribut No 1</span>
+										<span style="font-size: 18px">Résistance au stress</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -197,7 +199,7 @@
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="color: black; font-size: 18px">star</v-icon>
+										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
@@ -206,9 +208,10 @@
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
-											<div>
-												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
-												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
+											<div>											
+												<vue-simple-progress size="huge" :val="90" text="90%"></vue-simple-progress>											
+												<div style="font-size: 14px; margin-top: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div style="background-color: orangered; padding: 5px; text-align: center; margin-top: 10px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -216,9 +219,9 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered">
+								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px">
-										<span style="font-size: 18px">Attribut No 1</span>
+										<span style="font-size: 18px">Résistance au stress</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -229,7 +232,7 @@
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="color: black; font-size: 18px">star</v-icon>
+										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
@@ -238,9 +241,10 @@
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
-											<div>
-												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
-												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
+											<div>											
+												<vue-simple-progress size="huge" :val="90" text="90%"></vue-simple-progress>											
+												<div style="font-size: 14px; margin-top: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div style="background-color: orangered; padding: 5px; text-align: center; margin-top: 10px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -248,9 +252,9 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered">
+								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px">
-										<span style="font-size: 18px">Attribut No 1</span>
+										<span style="font-size: 18px">Résistance au stress</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -261,7 +265,7 @@
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="color: black; font-size: 18px">star</v-icon>
+										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
@@ -270,9 +274,10 @@
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
-											<div>
-												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
-												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
+											<div>											
+												<vue-simple-progress size="huge" :val="90" text="90%"></vue-simple-progress>											
+												<div style="font-size: 14px; margin-top: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div style="background-color: orangered; padding: 5px; text-align: center; margin-top: 10px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -280,9 +285,9 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered">
+								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px">
-										<span style="font-size: 18px">Attribut No 1</span>
+										<span style="font-size: 18px">Résistance au stress</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -293,7 +298,7 @@
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="color: black; font-size: 18px">star</v-icon>
+										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
@@ -302,9 +307,10 @@
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
-											<div>
-												<div class="headline">Petite description de l'attribut en quelques mots, mais pas trop...</div>
-												<div style="background-color: orangered; padding: 2px; text-align: center">3 nouvelles à débloquer</div>
+											<div>											
+												<vue-simple-progress size="huge" :val="90" text="90%"></vue-simple-progress>											
+												<div style="font-size: 14px; margin-top: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div style="background-color: orangered; padding: 5px; text-align: center; margin-top: 10px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
