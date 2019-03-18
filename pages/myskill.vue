@@ -36,7 +36,7 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="orange" height="20" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
+                                <v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
@@ -65,7 +65,7 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="orange" height="12" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
+                                <v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="12" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
@@ -108,13 +108,13 @@
 				<v-layout>
 					<div>
 						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 25px">
-							<v-flex xs4 sm4 md4 style="padding: 16px; border: 2px solid orangered; background-color: black; color: orangered; font-size: 20px; height: 50px; margin-top: -10px; font-weight: 700;">
+							<v-flex xs4 sm4 md4 class="activeskill">
 								Attribut
 							</v-flex>
-							<v-flex xs4 sm4 md4 style="padding: 12px; border: 1px solid black; font-size: 20px; font-weight: 700;">
+							<v-flex xs4 sm4 md4 class="noactiveskill">
 								Influence
 							</v-flex>
-							<v-flex xs4 sm4 md4 style="padding: 12px; border: 1px solid black; font-size: 20px; font-weight: 700;">
+							<v-flex xs4 sm4 md4 class="noactiveskill">
 								Savoir-faire
 							</v-flex>
 						</v-layout>
@@ -138,12 +138,12 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5 style="text-align: center; padding: 20px">
-											<v-icon style="font-size: 50px">star</v-icon>
+											<img src="/images/stress.jpg" height="180px" width="180px" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
 											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="75" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">75%</span>
+												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
@@ -155,7 +155,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Résistance au stress</span>
+										<span style="font-size: 18px">Vitesse</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -171,13 +171,13 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5 style="text-align: center; padding: 20px">
-											<v-icon style="font-size: 50px">star</v-icon>
+											<img src="/images/stress.jpg" height="180px" width="180px" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
 											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="75" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">75%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
+												<div style="font-size: 14px; text-align: center">Le match commence dans 2 mintues et tu es toujours au local… dépêche toi !</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -188,7 +188,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Résistance au stress</span>
+										<span style="font-size: 18px">Agilité</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -204,12 +204,12 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5 style="text-align: center; padding: 20px">
-											<v-icon style="font-size: 50px">star</v-icon>
+											<img src="/images/stress.jpg" height="180px" width="180px" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
 											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="75" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">75%</span>
+												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
@@ -221,7 +221,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Résistance au stress</span>
+										<span style="font-size: 18px">Endurance</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -237,12 +237,12 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5 style="text-align: center; padding: 20px">
-											<v-icon style="font-size: 50px">star</v-icon>
+											<img src="/images/stress.jpg" height="180px" width="180px" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
 											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="75" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">75%</span>
+												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
@@ -254,7 +254,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Résistance au stress</span>
+										<span style="font-size: 18px">Mentale</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -270,12 +270,12 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5 style="text-align: center; padding: 20px">
-											<v-icon style="font-size: 50px">star</v-icon>
+											<img src="/images/stress.jpg" height="180px" width="180px" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
 											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="75" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">75%</span>
+												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
@@ -287,7 +287,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Résistance au stress</span>
+										<span style="font-size: 18px">Puissance</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -303,12 +303,12 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs5 style="text-align: center; padding: 20px">
-											<v-icon style="font-size: 50px">star</v-icon>
+											<img src="/images/stress.jpg" height="180px" width="180px" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
 											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="75" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">75%</span>
+												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
@@ -529,7 +529,7 @@
     .levelHeader {
         font-weight: 700;
         font-size: 36px;  /* Preferred icon size */
-        background-color: orange;
+        background-color: orangered;
         color: white;
         border-radius: 10px;
     }
@@ -787,6 +787,24 @@
         padding: 2px;
     }
     /* End Footer */
+	
+	.activeskill {
+	padding: 16px; 
+	border: 2px solid orangered; 
+	background-color: black; 
+	color: orangered; 
+	font-size: 20px; 
+	height: 50px; 
+	margin-top: -10px; 
+	font-weight: 700;
+	}
+	
+	.noactiveskill {
+	padding: 12px; 
+	border: 1px solid black; 
+	font-size: 20px; 
+	font-weight: 700;
+	}
     
     /* Small screens */
     @media only screen and (max-width: 768px) {
@@ -914,7 +932,7 @@
 		.levelHeader {
 			font-weight: 700;
 			font-size: 12px;  /* Preferred icon size */
-			background-color: orange;
+			background-color: orangered;
 			color: white;
 			border-radius: 5px;
 			margin-top: 15px;
