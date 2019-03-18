@@ -810,6 +810,11 @@
 	height: 85%;
 	width: 85%;
 	}
+	
+	.content .imgSkill {
+	height: 85%;
+	width: 85%;
+	}
     
     /* Small screens */
     @media only screen and (max-width: 768px) {
