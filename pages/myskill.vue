@@ -104,7 +104,7 @@
             <!-- </v-toolbar> -->
             
             <!-- Scrollable content -->
-            <div class="content" style="height: 100vh">
+            <div class="content" style="height: 100vh; background-color: black">
 				<v-layout>
 					<div>
 						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 25px">
@@ -137,8 +137,8 @@
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
-										<v-flex xs5 style="text-align: center; padding: 20px">
-											<img src="/images/stress.jpg" height="180px" width="180px" />
+										<v-flex xs5 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
@@ -170,8 +170,8 @@
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
-										<v-flex xs5 style="text-align: center; padding: 20px">
-											<img src="/images/stress.jpg" height="180px" width="180px" />
+										<v-flex xs5 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
@@ -203,8 +203,8 @@
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
-										<v-flex xs5 style="text-align: center; padding: 20px">
-											<img src="/images/stress.jpg" height="180px" width="180px" />
+										<v-flex xs5 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
@@ -236,8 +236,8 @@
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
-										<v-flex xs5 style="text-align: center; padding: 20px">
-											<img src="/images/stress.jpg" height="180px" width="180px" />
+										<v-flex xs5 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
@@ -269,8 +269,8 @@
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
-										<v-flex xs5 style="text-align: center; padding: 20px">
-											<img src="/images/stress.jpg" height="180px" width="180px" />
+										<v-flex xs5 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
@@ -302,8 +302,8 @@
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
-										<v-flex xs5 style="text-align: center; padding: 20px">
-											<img src="/images/stress.jpg" height="180px" width="180px" />
+										<v-flex xs5 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title style="text-align: center; padding: 16px">
@@ -804,6 +804,11 @@
 	border: 1px solid black; 
 	font-size: 20px; 
 	font-weight: 700;
+	}
+	
+	.imgSkill {
+	height: 100px;
+	width: 100px;
 	}
     
     /* Small screens */
