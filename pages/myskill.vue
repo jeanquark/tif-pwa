@@ -106,7 +106,7 @@
             <!-- Scrollable content -->
             <div class="content" style="height: 100vh">
 				<v-layout>
-					<v-container fluid>
+					<div>
 						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered">
 							<v-flex xs4 sm4 md4 style="padding: 16px; border: 2px solid orangered; background-color: black; color: orangered; font-size: 20px; height: 50px; margin-top: -10px; font-weight: 700;">
 								Attribut
@@ -312,7 +312,7 @@
 								</v-card>
 							</v-flex>
 						</v-layout>
-					</v-container>
+					</div>
 				</v-layout>
 			</div>
             
