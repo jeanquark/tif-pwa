@@ -137,14 +137,14 @@
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
-										<v-flex xs5>
-											<v-icon style="font-size: 30px">star</v-icon>
+										<v-flex xs5 style="text-align: center; padding: 20px">
+											<v-icon style="font-size: 50px">star</v-icon>
 										</v-flex>
 									<v-flex xs7>
 										<v-card-title primary-title>
 											<div>											
-												<vue-simple-progress size="huge" :val="90" text="90%"></vue-simple-progress>											
-												<div style="font-size: 14px; margin-top: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<v-progress-linear height="12" value="75" style="background-color: orangered"></v-progress-linear><span class="progress-bar-txt-black">75%</span>
+												<div style="font-size: 14px; margin-top: 10px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 5px; text-align: center; margin-top: 10px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
