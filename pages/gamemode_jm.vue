@@ -371,7 +371,7 @@
     .levelHeader {
         font-weight: 700;
         font-size: 36px;  /* Preferred icon size */
-        background-color: orange;
+        background-color: orangered;
         color: white;
         border-radius: 10px;
     }
@@ -756,7 +756,7 @@
 		.levelHeader {
 			font-weight: 700;
 			font-size: 12px;  /* Preferred icon size */
-			background-color: orange;
+			background-color: orangered;
 			color: white;
 			border-radius: 5px;
 			margin-top: 15px;

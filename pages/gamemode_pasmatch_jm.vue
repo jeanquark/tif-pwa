@@ -36,7 +36,7 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="orange" height="20" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
+                                <v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
@@ -65,7 +65,7 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="orange" height="12" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
+                                <v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="12" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
@@ -181,7 +181,7 @@
                                 <span class="textMenu">Mes classements</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/myskill"><img src="/images/menuShop.png">
+                                <nuxt-link to="/skillAttribute"><img src="/images/menuShop.png">
                                 <span class="textMenu">Mes compétences</span></nuxt-link>
                             </li>
                             <li id="active">
@@ -371,7 +371,7 @@
     .levelHeader {
         font-weight: 700;
         font-size: 36px;  /* Preferred icon size */
-        background-color: orange;
+        background-color: orangered;
         color: white;
         border-radius: 10px;
     }
@@ -756,7 +756,7 @@
 		.levelHeader {
 			font-weight: 700;
 			font-size: 12px;  /* Preferred icon size */
-			background-color: orange;
+			background-color: orangered;
 			color: white;
 			border-radius: 5px;
 			margin-top: 15px;
