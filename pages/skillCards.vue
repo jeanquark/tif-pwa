@@ -4,7 +4,7 @@
 			<v-card class="card">
 				<v-card-title primary-title>
 					<v-flex xs6>
-						<h1 class="text-xs-left" style="color: white; font-family: Acme">Baratin (Influence)</h1>
+						<h1 class="text-xs-left" style="color: white; font-family: Acme">Mes compétences - Influence</h1>
 					</v-flex>
 					<v-flex xs6 class="text-xs-right">
 						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
