@@ -302,18 +302,19 @@
 	.barreHeaderLeft1 {
 	margin-left: 160px; 
 	float: left; 
-	margin-top: 9px;
+	margin-top: 6px;
 	}
 	.barreHeaderLeft2 {
 	color: white; 
 	float: left; 
-	margin-top: 9px;
+	margin-top: 14px;
+    margin-left: 5px;
 	}
 	.barreHeaderRight {
 	margin-right: 160px; 
 	color: white;  
 	float: right; 
-	margin-top: 9px;
+	margin-top: 14px;
 	}
 	.cadreHeader1 {
 	padding: 20px; 
