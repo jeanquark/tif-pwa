@@ -220,8 +220,6 @@
 	}
     #avatar {
         background-color: orangered;
-        border-right: 3px solid orangered;
-        border-bottom: 3px solid orangered;
         box-shadow: 0 7px 5px black;
         height: 150px;
         width: 150px;
