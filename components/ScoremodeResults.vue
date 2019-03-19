@@ -1,6 +1,6 @@
 <template>
 
-	<v-tabs color="grey" height="30" show-arrows fixed-tabs v-model="activeDay" @change="fetchEventsByDay(activeDay)" class="tabGreyMenu">
+	<v-tabs color="grey" height="30" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
         <v-tabs-slider color="yellow"></v-tabs-slider>
         <v-tab v-for="day in days" :key="day" :href="'#' + day">
             <span style="font-size: 0.9em; color: white">{{ day | moment('ddd DD MMM') }}</span>
@@ -18,10 +18,9 @@
                                     </div>
                                     <v-data-table :items="loadedEventsByDay(day)['events']" no-data-text="No game found on this day." class="elevation-0" hide-actions hide-headers v-if="loadedEventsByDay(day) && !loading">
                                         <template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
-                                            
                                             <v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
                                                 <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
-                                                    <v-layout align-start>
+                                                    <v-layout align-start hidden-xs-only>
                                                         <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
                                                             <div style="background-color: green; height: 100%; width: 2px" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
                                                             <div style="background-color: red; height: 100%; width: 2px" v-if="props.item.statusShort === 'FT'"></div>
@@ -37,12 +36,33 @@
                                                                 ID: {{ props.item.id }}
                                                             </div>
                                                         </v-flex>
-                                                        
+                                                    </v-layout>
+                                                    <v-layout align-start>
+                                                        <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 10px; margin: 0">
+                                                            <div style="background-color: green; height: 100%; width: 2px" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
+                                                            <div style="background-color: red; height: 100%; width: 2px" v-if="props.item.statusShort === 'FT'"></div>
+															<div style="background-color: orangered; height: 100%; width: 2px" v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'"></div>
+                                                        </v-flex>
+                                                        <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
+                                                            <div style="color: orange;font-size: 80%">
+                                                                <span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === 'FT'">Finished</span>
+                                                                <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H'">{{ props.item.elapsed }} min</span>
+                                                                <span v-if="props.item.statusShort === 'HT'" style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;">Half time</span>
+                                                                <span v-if="props.item.statusShort === 'NS'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >{{ convertToLocalTime(props.item.timestamp) }}</span>
+                                                                <span v-if="props.item.statusShort === 'PST'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >Match postponed</span>
+                                                                ID: {{ props.item.id }}
+                                                            </div>
+                                                        </v-flex>
                                                     </v-layout>
                                                     <v-layout align-center style="max-width: 100%">
-                                                        <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
+                                                        <v-flex hidden-xs-only class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
                                                             <div style="background-color: red; height: 40px; width: 2px" v-if="props.item.statusShort === 'FT'"></div>
                                                             <div style="background-color: green; height: 40px; width: 2px" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
+            												<div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'" style="background-color: orangered; height: 40px; width: 2px"></div>
+            											</v-flex>
+                                                        <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 30px; margin: 0">
+                                                            <div style="background-color: red; height: 30px; width: 2px" v-if="props.item.statusShort === 'FT'"></div>
+                                                            <div style="background-color: green; height: 30px; width: 2px" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
             												<div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'" style="background-color: orangered; height: 40px; width: 2px"></div>
             											</v-flex>
                                                         <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
@@ -188,7 +208,7 @@
         color: orange; 
         padding: 2px 10px; 
         border-radius: 5px; 
-        font-size: 130%;
+        font-size: 1.3em;
     }
 
     /* Transition effects on score by J-M */
@@ -206,7 +226,7 @@
             max-width: 35px;
         }
         .teamTextSize {
-            font-size: 1.0em;
+            font-size: 0.9em;
         }
         .pd-right10 {
             padding-right: 10px;
@@ -217,6 +237,13 @@
 		.tabGreyMenu {
 		font-size: 1em;
 		height: 30px;
+		}
+		.scoreBox {
+			background-color: black; 
+			color: orange; 
+			padding: 2px 5px; 
+			border-radius: 5px; 
+			font-size: 1.0em;
 		}
     }
 </style>
