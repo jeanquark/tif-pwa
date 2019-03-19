@@ -99,9 +99,6 @@
                     </v-flex>
                 </v-layout>
             </div>
-
-
-            <!-- </v-toolbar> -->
             
             <!-- Scrollable content -->
             <div class="content" style="height: 100vh; background-color: black">

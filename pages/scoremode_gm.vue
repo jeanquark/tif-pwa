@@ -7,17 +7,15 @@
             <!-- Scrollable content -->
             <div class="content" style="height: 100vh; background-color: black">
 				<v-layout>
-			
-					<div class="container" fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; height: 40px">
-						<v-layout>
+						
+					<!-- Scrollable content -->
+					<div class="container" fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
+						<v-layout style="padding: 0; background-color: green; color: white; height: 40px">
 							<v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
 								Football
 							</v-flex>
-						</v-layout>             
-					</div>
+						</v-layout>
 			
-					<!-- Scrollable content -->
-					<div class="container" fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
 						<!-- <v-layout> -->
 						<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
 						<!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
