@@ -374,6 +374,13 @@
 	float: right; 
 	margin-top: 9px;
 	}
+	.chiffres {
+	font-size: 1.2em;
+	}
+	.activity {
+	font-size: 0.8em;
+	color: white;
+	}
 	.cadreHeader1 {
 	padding: 20px; 
 	background-color: black; 
@@ -528,7 +535,7 @@
         padding: 5px;
     }
 	.headerLogo {
-	height: auto;
+	padding: 20px 0;
 	}
 	.cadreScore {
     width: 1000px;
@@ -994,9 +1001,9 @@
 		.chiffres {
 		font-size: 1.2em;
 		}
-		
 		.activity {
 		font-size: 0.8em;
+		color: white;
 		}
 		.material-icons {
 		font-family: 'Material Icons';
