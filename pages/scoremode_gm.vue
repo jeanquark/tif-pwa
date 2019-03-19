@@ -18,7 +18,7 @@
 						<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
 						<!-- Results -->
-						<v-tabs color="green" slider-color="yellow" fixed-tabs v-model="selectType" style="color: white" class="tabGreenMenu">
+						<v-tabs color="green" slider-color="yellow" fixed-tabs v-model="selectType" style="color: white">
 							<v-tab
 								v-for="type in types"
 								:key="type.slug"
@@ -384,6 +384,17 @@
 	height: 120px; 
 	box-shadow: 0 4px 5px -1px black; 
 	position: relative;
+	}
+	.v-tabs__container {
+    flex: 1 0 auto;
+    display: flex;
+    height: 30px;
+    list-style-type: none;
+    transition: -webkit-transform .6s cubic-bezier(.86,0,.07,1);
+    transition: transform .6s cubic-bezier(.86,0,.07,1);
+    transition: transform .6s cubic-bezier(.86,0,.07,1),-webkit-transform .6s cubic-bezier(.86,0,.07,1);
+    white-space: nowrap;
+    position: relative;
 	}
 	.cadreHeader {
 	padding: 15px; 
