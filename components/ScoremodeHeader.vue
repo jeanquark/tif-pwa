@@ -342,7 +342,17 @@
         padding: 5px;
     }
 	.headerLogo {
-	height: auto;
+	padding: 20px 0;
+	}
+	.chiffres {
+	font-size: 2.5em;
+	color: orangered;
+	font-weight: 700;
+	}
+	.activity {
+	font-size: 1.5em;
+	color: white;
+	text-transform: uppercase;
 	}
 	.cadreScore {
     width: 1000px;
@@ -635,13 +645,17 @@
 		box-shadow: 0 2px 3px -1px black; 
 		position: relative;
 		}
+		.headerLogo {
+		padding: 20px 0;
+		}
 		.chiffres {
-		font-size: 2.5em;
+		font-size: 1.4em;
 		color: orangered;
-		font-width: 700;
+		font-weight: 700;
 		}
 		.activity {
-		font-size: 1.5em;
+		font-size: 1.1em;
+		color: white;
 		text-transform: uppercase;
 		}
 		#avatar {
