@@ -11,7 +11,7 @@
 					</v-flex>
 				</v-card-title>
 
-				<v-card-text class="mx-3">
+				<v-card-text class="card-text mx-3">
 					<v-container fluid style="padding: 5px">
 						<v-layout row wrap style="margin: 5px">
 							<v-flex style="padding: 5px">
@@ -38,9 +38,9 @@
 										<v-flex xs7>
 											<v-card-title primary-title style="text-align: center; padding: 15px">
 												<div>											
-													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 10px; margin-bottom: 10px"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-													<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-													<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px">
+													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 10px; margin-bottom: 10px"></v-progress-linear><span class="progress-bar-txt-white" style="top: -27px">1%</span>
+													<div style="font-size: 14px; text-align: center; margin-bottom: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+													<div style="background-color: green; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px">
 														<b>Actions déjà débloquées :</b></br>
 														Vendeur de voiturette de golf - Niv. 1
 													</div>
