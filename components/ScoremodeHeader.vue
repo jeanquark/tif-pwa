@@ -600,13 +600,13 @@
 		margin-top: 2px;
 		color: white;
 		padding: 4px;
-		font-size: 0.8em;
+		font-size: 0.9em;
 		}
 		.barreHeaderLeft2 {
 		color: white; 
 		padding: 4px;
 		margin-top: 2px;
-		font-size: 0.8em;
+		font-size: 0.9em;
 		}
 		.barreHeaderRight {
 		margin-right: 25px; 
@@ -614,7 +614,7 @@
 		padding: 4px; 
 		float: right; 
 		margin-top: 2px;
-		font-size: 0.8em;
+		font-size: 0.9em;
 		}
 		.cadreHeader1 {
 		padding: 3px; 
