@@ -1,9 +1,9 @@
 <template>
 
-	<v-tabs color="grey" show-arrows fixed-tabs v-model="activeDay" @change="fetchEventsByDay(activeDay)" class="tabGreyMenu">
+	<v-tabs color="grey" height="30" show-arrows fixed-tabs v-model="activeDay" @change="fetchEventsByDay(activeDay)" class="tabGreyMenu">
         <v-tabs-slider color="yellow"></v-tabs-slider>
         <v-tab v-for="day in days" :key="day" :href="'#' + day">
-            {{ day | moment('ddd DD MMM') }}
+            <span style="font-size: 0.9em; color: white">{{ day | moment('ddd DD MMM') }}</span>
         </v-tab>
         <v-tabs-items>
             <v-tab-item v-for="day in days" :key="day" :value="day" lazy style="">
