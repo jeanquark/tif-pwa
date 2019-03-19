@@ -300,20 +300,18 @@
         padding: 0;
     }
 	.barreHeaderLeft1 {
-	margin-left: 100px; 
+	margin-left: 160px; 
 	float: left; 
-	margin-top: 4px;
+	margin-top: 9px;
 	}
 	.barreHeaderLeft2 {
 	color: white; 
-	padding: 4px; 
 	float: left; 
 	margin-top: 9px;
 	}
 	.barreHeaderRight {
-	margin-right: 100px; 
-	color: white; 
-	padding: 4px; 
+	margin-right: 160px; 
+	color: white;  
 	float: right; 
 	margin-top: 9px;
 	}
@@ -338,31 +336,27 @@
 	}
     #avatar {
         background-color: orangered;
-        border-right: 3px solid orangered;
-        border-bottom: 3px solid orangered;
         box-shadow: 0 7px 5px black;
         height: 150px;
         width: 150px;
-        border-radius: 0 0 100% 0;
+        border-radius: 0 0 0 0;
     }
     .imgAvatar {
         height: 100%;
         width: 100%;
-        border-radius: 0 0 100% 0;
+        border-radius: 0 0 0 0;
     }
     #team {
         background-color: orangered;
-        border-left: 3px solid orangered;
-        border-bottom: 3px solid orangered;
         box-shadow: 0 7px 5px black;
         height: 150px;
         width: 150px;
-        border-radius: 0 0 0 100%;
+        border-radius: 0 0 0 0;
     }
     .imgTeam {
         height: 100%;
         width: 100%;
-        border-radius: 0 0 0 100%;
+        border-radius: 0 0 0 0;
     }
     .imgTeamSmall {
         height: 20px;
