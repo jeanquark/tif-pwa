@@ -37,13 +37,13 @@
                                                             </div>
                                                         </v-flex>
                                                     </v-layout>
-                                                    <v-layout align-start>
+                                                    <v-layout align-start hidden-sm-and-up>
                                                         <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 10px; margin: 0">
                                                             <div style="background-color: green; height: 100%; width: 2px" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
                                                             <div style="background-color: red; height: 100%; width: 2px" v-if="props.item.statusShort === 'FT'"></div>
 															<div style="background-color: orangered; height: 100%; width: 2px" v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'"></div>
                                                         </v-flex>
-                                                        <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 10px; margin: 0">
+                                                        <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
                                                             <div style="color: orange;font-size: 80%">
                                                                 <span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === 'FT'">Finished</span>
                                                                 <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H'">{{ props.item.elapsed }} min</span>
@@ -60,7 +60,7 @@
                                                             <div style="background-color: green; height: 40px; width: 2px" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
             												<div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'" style="background-color: orangered; height: 40px; width: 2px"></div>
             											</v-flex>
-                                                        <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 30px; margin: 0">
+                                                        <v-flex hidden-sm-and-up class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 30px; margin: 0">
                                                             <div style="background-color: red; height: 30px; width: 2px" v-if="props.item.statusShort === 'FT'"></div>
                                                             <div style="background-color: green; height: 30px; width: 2px" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
             												<div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'" style="background-color: orangered; height: 40px; width: 2px"></div>
@@ -164,6 +164,13 @@
             },
             loadedEventsByDay (date) {
                 return this.$store.getters['events/loadedEvents'][date]
+            },
+            otherEventsByCompetition (competition) {
+                const userTeamsIds = this.userTeamsIds
+                return this.$store.getters['events/loadedEvents']
+                    .filter(event => (event.date === this.date.format('YYYY-MM-DD') && event.competition.slug === competition))
+                    // .filter(event => (!userTeamsIds.includes(event.home_team.livescore_api_id) || !userTeamsIds.includes(event.visitor_team.livescore_api_id)))
+                    .sort((a, b) => a.timestamp - b.timestamp)
             },
             convertToLocalTime (timestamp) {
                 return moment.unix(timestamp).format('HH:mm')

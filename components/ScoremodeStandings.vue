@@ -1,30 +1,11 @@
 <template>
-	<v-tabs
-        dark
-        color="indigo"
-        show-arrows
-        fixed-tabs
-        v-model="activeCompetition"
-        style="border: 1px dashed orange;"
-        @change="fetchCompetitionStanding(activeCompetition)"
-    >
+	<v-tabs dark color="indigo" height="30" show-arrows fixed-tabs v-model="activeCompetition" @change="fetchCompetitionStanding(activeCompetition)">
         <v-tabs-slider color="yellow"></v-tabs-slider>
-
-        <v-tab
-            v-for="competition in loadedActiveCompetitions"
-            :key="competition.slug"
-            :href="'#' + competition.slug"
-        >
-            {{ competition.name }}
+        <v-tab v-for="competition in loadedActiveCompetitions" :key="competition.slug" :href="'#' + competition.slug">
+            <span style="font-size: 0.9em; color: white">{{ competition.name }}</span>
         </v-tab>
-
         <v-tabs-items>
-            <v-tab-item
-                v-for="competition in loadedActiveCompetitions"
-                :key="competition.slug"
-                :value="competition.slug"
-                lazy
-            >
+            <v-tab-item v-for="competition in loadedActiveCompetitions" :key="competition.slug" :value="competition.slug" lazy>
                 <v-layout>
                     <v-flex xs12 sm10 offset-sm1>
                         <v-card flat>
