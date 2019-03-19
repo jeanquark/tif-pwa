@@ -16,7 +16,7 @@
 			</v-layout>
 			<v-layout row>
 				<v-flex shrink>
-					<nuxt-link to="/">
+					<nuxt-link to="/scoremode_gm">
 						<div id="avatar" style="background-color: orangered">
 							<span class="textTif">ThisIsFan.com</span>
 						</div>
@@ -51,7 +51,7 @@
 					</v-layout>
 				</v-flex>
 				<v-flex shrink>
-					<nuxt-link to="/gamemode">
+					<nuxt-link to="/gamemode_jm">
 						<div id="team" style="background-color: orangered">
 							<span class="textScoreMode">ScoreMode<br />
 							C'est parti !</span>

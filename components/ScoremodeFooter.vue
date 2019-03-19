@@ -10,24 +10,24 @@
 				<div id="dock-container">
 					<ul>
 						<li>
-							<nuxt-link to="/teams"><img src="/images/menuResultat.png">
+							<nuxt-link to="/teams"><img src="/images/menuTeam.png">
 							<span class="textMenu">Equipes</span></nuxt-link>
 						</li>
-						<li id="active">
-							<nuxt-link to="/competitions"><img src="/images/menuShop.png">
+						<li>
+							<nuxt-link to="/competitions"><img src="/images/menuCompetition.png">
 							<span class="textMenu">Compétitions</span></nuxt-link>
 						</li>
-						<li>
+						<li id="active">
 							<nuxt-link to="/scoremode_gm"><img src="/images/menuHome.png">
-							<span class="textMenu">Aujourd'hui</span></nuxt-link>
+							<span class="textMenu">Matches du jour</span></nuxt-link>
 						</li>
 						<li>
-							<nuxt-link to="/players"><img src="/images/menuSocial.png">
+							<nuxt-link to="/players"><img src="/images/menuPlayer.png">
 							<span class="textMenu">Joueurs</span></nuxt-link>
 						</li>
 						<li>
-							<nuxt-link to="/tifnews"><img src="/images/menuResultat.png">
-							<span class="textMenu">Tif News</span></nuxt-link>
+							<nuxt-link to="/tifnews"><img src="/images/menuTifnews.png">
+							<span class="textMenu">TIF News</span></nuxt-link>
 						</li>
 					</ul>
 				</div>
