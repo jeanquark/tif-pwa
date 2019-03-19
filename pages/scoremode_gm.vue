@@ -1,52 +1,58 @@
 <template>
     <v-content id="app">
-	
-		<scoremode-header />
+		<v-container style="padding: 0; max-width: 1017px;">
 		
-		<div class="content" style="height: 100vh; background-color: black">
-			<v-layout>
-				<div class="container" fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; height: 40px">
-					<v-layout>
-						<v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
-							Football
-						</v-flex>
-					</v-layout>             
-				</div>
-		
-				<!-- Scrollable content -->
-				<div class="container" fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
-					<!-- <v-layout> -->
-					<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
-					<!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
-					<!-- loadedEvents: {{ loadedEvents }}<br /><br /> -->
-					<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
+			<scoremode-header />
+			
+            <!-- Scrollable content -->
+            <div class="content" style="height: 100vh; background-color: black">
+				<v-layout>
+			
+					<div class="container" fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; height: 40px">
+						<v-layout>
+							<v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
+								Football
+							</v-flex>
+						</v-layout>             
+					</div>
+			
+					<!-- Scrollable content -->
+					<div class="container" fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
+						<!-- <v-layout> -->
+						<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
+						<!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
+						<!-- loadedEvents: {{ loadedEvents }}<br /><br /> -->
+						<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
-					<!-- Results -->
-					<v-tabs color="green" dark slider-color="yellow" fixed-tabs v-model="selectType" style="color: white">
-						<v-tab
-							v-for="type in types"
-							:key="type.slug"
-							ripple
-							style="cursor: pointer;"
-						>
-							{{ type.name }}
-						</v-tab>
+						<!-- Results -->
+						<v-tabs color="green" dark slider-color="yellow" fixed-tabs v-model="selectType" style="color: white">
+							<v-tab
+								v-for="type in types"
+								:key="type.slug"
+								ripple
+								style="cursor: pointer;"
+							>
+								{{ type.name }}
+							</v-tab>
 
-					</v-tabs>
+						</v-tabs>
 
-					<!-- Results -->
-					<scoremode-results v-if="selectType === 0" />
+						<!-- Results -->
+						<scoremode-results v-if="selectType === 0" />
 
-					<!-- Standings -->
-					<scoremode-standings v-if="selectType === 1" />
+						<!-- Standings -->
+						<scoremode-standings v-if="selectType === 1" />
 
-					
+						
 					</div>
 					
-		</div>
-		
-		<scoremode-footer />
-            
+				</v-layout>
+						
+			</div>
+			
+			<scoremode-footer />
+			
+        </v-container>
     </v-content>
 </template>
 
