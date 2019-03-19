@@ -120,6 +120,7 @@
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
+								<nuxt-link to="/skillCards">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span style="font-size: 18px">Baratin</span>
@@ -151,6 +152,7 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
