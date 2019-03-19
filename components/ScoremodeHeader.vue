@@ -24,7 +24,7 @@
 				<v-flex shrink>
 				<nuxt-link to="/">
 					<div id="avatar">
-						<span class="textTif">ThisIsFan.com</span>
+						<img src="/images/tifLogo.png" class="imgAvatar" />
 					</div>
 				</nuxt-link>
 				</v-flex>
