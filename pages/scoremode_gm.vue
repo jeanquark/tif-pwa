@@ -9,7 +9,7 @@
 				<v-layout>
 						
 					<!-- Scrollable content -->
-					<div class="container" fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
+					<div style="padding: 0; max-width: 100%; background-color: whitesmoke">
 			
 						<!-- <v-layout> -->
 						<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
