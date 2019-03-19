@@ -312,28 +312,30 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-		font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
 
     /* Content */
     .container {
         width: 100vw;
+        height: 100vh;
+        display: flex;
         flex-direction: column;
-		margin-left: auto;
-		margin-right: auto;
-		border-left: 1px solid orangered;
-		border-right: 1px solid orangered;
 		font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
     .content {
-        background-color: gray;
-        flex-grow: 1;
+        background-color: light-gray;;
         overflow-x: auto;
+    }
+    #footer {
+        background-color: red;
+        color: #fff;
+        height: auto;
+        text-align: center;
     }
     
     @media only screen and (min-width: 1000px) {
         .content img {
-            /*width: 100%;*/
+            width: 100%;
         }
     }
     /* End Content */
