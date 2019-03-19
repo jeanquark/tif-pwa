@@ -168,6 +168,7 @@
         z-index: -1;
         margin: 0;
         padding: 0;
+        height: 25px;
     }
 	.barreHeaderLeft1 {
 	margin-left: 160px; 
@@ -219,7 +220,7 @@
 	}
     #avatar {
         background-color: orangered;
-        box-shadow: 0 7px 5px black;
+        box-shadow: 0 3px 5px black;
         height: 150px;
         width: 150px;
         border-radius: 0;
@@ -231,7 +232,7 @@
     }
     #team {
         background-color: orangered;
-        box-shadow: 0 7px 5px black;
+        box-shadow: 0 3px 5px black;
         height: 150px;
         width: 150px;
         border-radius: 0;

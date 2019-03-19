@@ -271,7 +271,7 @@
     
     @media only screen and (min-width: 1000px) {
         .content img {
-            height: 100%;
+            height: 99%;
         }
     }
     /* End Content */
@@ -455,7 +455,7 @@
         padding: 5px;
     }
 	.cadreScore {
-    width: 1000px;
+    width: 1017px;
     background-color: white;
     margin-top: 50px;
 	}
