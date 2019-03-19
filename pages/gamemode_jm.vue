@@ -193,7 +193,7 @@
                                 <span class="textMenu">Mon inventaire</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/scoremode"><img src="/images/menuResultat.png">
+                                <nuxt-link to="/scoremode_gm"><img src="/images/menuResultat.png">
                                 <span class="textMenu">ScoreMode</span></nuxt-link>
                             </li>
                         </ul>

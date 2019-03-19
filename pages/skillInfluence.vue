@@ -25,8 +25,8 @@
                             </v-flex>
                         </v-layout>
                     </v-flex>
-                     <v-flex shrink>
-                     <nuxt-link to="/myprofil">
+                    <v-flex shrink>
+                    <nuxt-link to="/myprofil">
                         <div id="avatar">
                             <img src="/images/avatar.png" class="imgAvatar" />
                         </div>
