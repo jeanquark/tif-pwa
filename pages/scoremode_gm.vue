@@ -297,8 +297,9 @@
 </script>
 
 <style scoped>
-	html {
-	font: normal 100%/1 "Acme", Helvetica, sans-serif;
+	.orangered {
+	background-color: orangered;
+	border-color: orangered;
 	}
     body {
         margin: 0;
@@ -332,19 +333,6 @@
     }
     /* End Content */
 
-    .championsleague {
-        background: rgba(231, 76, 60, .3);
-    }
-    .europaleague {
-        background: rgba(52, 152, 219, .3);
-    }
-    .relegation {
-        border-top: 2px dashed red;
-    }
-
-
-
-    /* CSS Gaël */
     /* Header */
     #header {
         max-height: 162px;
@@ -372,6 +360,7 @@
 	margin-left: 100px; 
 	float: left; 
 	margin-top: 4px;
+	color: white;
 	}
 	.barreHeaderLeft2 {
 	color: white; 
@@ -528,6 +517,9 @@
         border-radius: 5px;
         padding: 5px;
     }
+	.headerLogo {
+	height: auto;
+	}
 	.cadreScore {
     width: 1000px;
     background-color: white;
@@ -777,7 +769,10 @@
 		}
 		.barreHeaderLeft1 {
 		margin-left: 25px;
-		margin-top: 3px;
+		margin-top: 2px;
+		color: white;
+		padding: 4px;
+		font-size: 0.8em;
 		}
 		.barreHeaderLeft2 {
 		color: white; 
@@ -811,6 +806,15 @@
 		height: 70px; 
 		box-shadow: 0 2px 3px -1px black; 
 		position: relative;
+		}
+		.chiffres {
+		font-size: 2.5em;
+		color: orangered;
+		font-width: 700;
+		}
+		.activity {
+		font-size: 1.5em;
+		text-transform: uppercase;
 		}
 		#avatar {
 			background-color: orangered;
@@ -973,7 +977,14 @@
 		font-size: 30px;
 		margin-top: 5px;
 		}
-				.material-icons {
+		.chiffres {
+		font-size: 1.2em;
+		}
+		
+		.activity {
+		font-size: 0.8em;
+		}
+		.material-icons {
 		font-family: 'Material Icons';
 		font-weight: normal;
 		font-style: normal;
