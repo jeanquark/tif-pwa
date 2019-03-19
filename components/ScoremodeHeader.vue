@@ -1,6 +1,4 @@
 <template>
-
-		<!-- Fixed Header -->
 		<div id="header" class="header">
 			<v-layout row>
 				<v-flex hidden-sm-and-down class="barreHeader">
@@ -24,33 +22,33 @@
 					</v-layout>
 				</v-flex>
 				<v-flex shrink>
-					<nuxt-link to="/scoremode_gm">
-						<div id="avatar" style="background-color: orangered">
-							<span class="textTif">ThisIsFan.com</span>
-						</div>
-					</nuxt-link>
+				<nuxt-link to="/">
+					<div id="avatar">
+						<span class="textTif">ThisIsFan.com</span>
+					</div>
+				</nuxt-link>
 				</v-flex>
-				<v-flex grow>
+				<v-flex hidden-sm-and-down grow>
 					<v-layout row>
-						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; border-left: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
 							<div class="headerLogo">
 								<span class="chiffres">1</span><br />
 								<span class="activity">sport</span>
 							</div>
 						</v-flex>
-						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
 							<div class="headerLogo">
 								<span class="chiffres">6</span><br />
 								<span class="activity">pays</span>
 							</div>
 						</v-flex>
-						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black; border-bottom: 1px solid orangered; border-right: 1px solid orangered; height: 120px; box-shadow: 0 4px 5px -1px black; position: relative">
+						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
 							<div class="headerLogo">
 								<span class="chiffres">130</span><br />
 								<span class="activity">équipes</span>
 							</div>
 						</v-flex>
-						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center style="padding: 25px; background-color: black;height: 120px; border-bottom: 1px solid orangered; border-right: 1px solid orangered; box-shadow: 0 4px 5px -1px black; position: relative">
+						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
 							<div class="headerLogo">
 								<span class="chiffres">769</span><br />
 								<span class="activity">fans</span>
@@ -58,12 +56,40 @@
 						</v-flex>
 					</v-layout>
 				</v-flex>
+				<v-flex hidden-md-and-up grow>
+					<v-layout row>
+						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
+							<div class="headerLogo">
+								<span class="chiffres">1</span><br />
+								<span class="activity">sport</span>
+							</div>
+						</v-flex>
+						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
+							<div class="headerLogo">
+								<span class="chiffres">6</span><br />
+								<span class="activity">pays</span>
+							</div>
+						</v-flex>
+						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
+							<div class="headerLogo">
+								<span class="chiffres">130</span><br />
+								<span class="activity">équipes</span>
+							</div>
+						</v-flex>
+						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
+							<div class="headerLogo">
+								<span class="chiffres">769</span><br />
+								<span class="activity">fans</span>
+							</div>
+						</v-flex>
+					</v-layout>
+				</v-flex>  
 				<v-flex shrink>
 					<nuxt-link to="/gamemode_jm">
-						<div id="team" style="background-color: orangered">
-							<span class="textScoreMode">ScoreMode<br />
-							C'est parti !</span>
-						</div>
+					<div id="team">
+						<span class="textScoreMode">ScoreMode<br />
+						C'est parti !</span>
+					</div>
 					</nuxt-link>
 				</v-flex>
 			</v-layout>
@@ -148,6 +174,7 @@
 	margin-left: 100px; 
 	float: left; 
 	margin-top: 4px;
+	color: white;
 	}
 	.barreHeaderLeft2 {
 	color: white; 
@@ -554,6 +581,7 @@
 		.barreHeaderLeft1 {
 		margin-left: 25px;
 		margin-top: 3px;
+		color: white;
 		}
 		.barreHeaderLeft2 {
 		color: white; 
@@ -587,6 +615,15 @@
 		height: 70px; 
 		box-shadow: 0 2px 3px -1px black; 
 		position: relative;
+		}
+		.chiffres {
+		font-size: 2.5em;
+		color: orangered;
+		font-width: 700;
+		}
+		.activity {
+		font-size: 1.5em;
+		text-transform: uppercase;
 		}
 		#avatar {
 			background-color: orangered;
@@ -749,7 +786,14 @@
 		font-size: 30px;
 		margin-top: 5px;
 		}
-				.material-icons {
+		.chiffres {
+		font-size: 1.2em;
+		}
+		
+		.activity {
+		font-size: 0.8em;
+		}
+		.material-icons {
 		font-family: 'Material Icons';
 		font-weight: normal;
 		font-style: normal;
