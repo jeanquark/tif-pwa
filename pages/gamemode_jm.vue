@@ -258,8 +258,8 @@
     }
     .content {
         background-color: light-gray;;
-        /*flex-grow: 1;*/
         overflow-x: auto;
+        height: 100%;
     }
     #footer {
         background-color: red;
@@ -643,9 +643,12 @@
 		}
 		.content {
 			background-color: light-gray;;
-			/*flex-grow: 1;*/
+			height: 100%;
 			overflow-x: auto;
 		}
+        .content img {
+            height: 100%;
+        }
 		#footer {
 			background-color: red;
 			color: #fff;
