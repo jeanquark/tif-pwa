@@ -18,7 +18,7 @@
 						<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
 						<!-- Results -->
-						<v-tabs color="green" dark slider-color="yellow" fixed-tabs v-model="selectType" style="color: white">
+						<v-tabs color="green" slider-color="yellow" fixed-tabs v-model="selectType" style="color: white" class="tabGreenMenu">
 							<v-tab
 								v-for="type in types"
 								:key="type.slug"
@@ -745,7 +745,7 @@
 
 		/* Header */
 		#header {
-			max-height: 92px;
+			height: 114px;
 			padding: 0;
 			top:0px;
 			left:0px;
@@ -766,6 +766,10 @@
 			z-index: -1;
 			margin: 0;
 			padding: 0;
+		}
+		.tabGreenMenu {
+		font-size: 1em;
+		height: 30px;
 		}
 		.barreHeaderLeft1 {
 		margin-left: 25px;
