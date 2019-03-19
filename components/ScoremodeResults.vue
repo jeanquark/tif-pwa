@@ -43,7 +43,7 @@
                                                             <div style="background-color: red; height: 100%; width: 2px" v-if="props.item.statusShort === 'FT'"></div>
 															<div style="background-color: orangered; height: 100%; width: 2px" v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'"></div>
                                                         </v-flex>
-                                                        <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
+                                                        <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 10px; margin: 0">
                                                             <div style="color: orange;font-size: 80%">
                                                                 <span style="float: left; background-color: red; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === 'FT'">Finished</span>
                                                                 <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H'">{{ props.item.elapsed }} min</span>
