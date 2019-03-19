@@ -171,21 +171,20 @@
         padding: 0;
     }
 	.barreHeaderLeft1 {
-	margin-left: 100px; 
+	margin-left: 160px; 
 	float: left; 
-	margin-top: 4px;
+	margin-top: 9px;
 	color: white;
 	}
 	.barreHeaderLeft2 {
 	color: white; 
-	padding: 4px; 
 	float: left; 
 	margin-top: 9px;
+	margin-left: 160px; 
 	}
 	.barreHeaderRight {
-	margin-right: 100px; 
+	margin-right: 160px; 
 	color: white; 
-	padding: 4px; 
 	float: right; 
 	margin-top: 9px;
 	}
@@ -198,6 +197,17 @@
 	height: 120px; 
 	box-shadow: 0 4px 5px -1px black; 
 	position: relative;
+	}
+	.v-tabs__container {
+    flex: 1 0 auto;
+    display: flex;
+    height: 30px;
+    list-style-type: none;
+    transition: -webkit-transform .6s cubic-bezier(.86,0,.07,1);
+    transition: transform .6s cubic-bezier(.86,0,.07,1);
+    transition: transform .6s cubic-bezier(.86,0,.07,1),-webkit-transform .6s cubic-bezier(.86,0,.07,1);
+    white-space: nowrap;
+    position: relative;
 	}
 	.cadreHeader {
 	padding: 15px; 
@@ -215,12 +225,12 @@
         box-shadow: 0 7px 5px black;
         height: 150px;
         width: 150px;
-        border-radius: 0 0 100% 0;
+        border-radius: 0;
     }
     .imgAvatar {
         height: 100%;
         width: 100%;
-        border-radius: 0 0 100% 0;
+        border-radius: 0;
     }
     #team {
         background-color: orangered;
@@ -229,12 +239,12 @@
         box-shadow: 0 7px 5px black;
         height: 150px;
         width: 150px;
-        border-radius: 0 0 0 100%;
+        border-radius: 0;
     }
     .imgTeam {
         height: 100%;
         width: 100%;
-        border-radius: 0 0 0 100%;
+        border-radius: 0;
     }
     .imgTeamSmall {
         height: 20px;
@@ -331,6 +341,9 @@
         border-radius: 5px;
         padding: 5px;
     }
+	.headerLogo {
+	height: auto;
+	}
 	.cadreScore {
     width: 1000px;
     background-color: white;
@@ -531,9 +544,7 @@
 			padding: 0;
 			overflow: hidden;
 		}
-		.headerLogo {
-		padding: 20px 0;
-		}
+
 		/* Content */
 		.container {
 			width: 100vw;
@@ -558,7 +569,7 @@
 
 		/* Header */
 		#header {
-			max-height: 92px;
+			height: 114px;
 			padding: 0;
 			top:0px;
 			left:0px;
@@ -579,6 +590,10 @@
 			z-index: -1;
 			margin: 0;
 			padding: 0;
+		}
+		.tabGreenMenu {
+		font-size: 1em;
+		height: 30px;
 		}
 		.barreHeaderLeft1 {
 		margin-left: 25px;
@@ -636,12 +651,12 @@
 			box-shadow: 0 2px 2px black;
 			height: 70px;
 			width: 70px;
-			border-radius: 0 0 100% 0;
+			border-radius: 0;
 		}
 		.imgAvatar {
 			height: 100%;
 			width: 100%;
-			border-radius: 0 0 100% 0;
+			border-radius: 0;
 		}
 		#team {
 			background-color: orangered;
@@ -650,12 +665,12 @@
 			box-shadow: 0 2px 2px black;
 			height: 70px;
 			width: 70px;
-			border-radius: 0 0 0 100%;
+			border-radius: 0;
 		}
 		.imgTeam {
 			height: 100%;
 			width: 100%;
-			border-radius: 0 0 0 100%;
+			border-radius: 0;
 		}
 		.imgTeamSmall {
 			height: 12px;
@@ -795,8 +810,7 @@
 		}
 		
 		.activity {
-		font-size: 0.9em;
-		color: white;
+		font-size: 0.8em;
 		}
 		.material-icons {
 		font-family: 'Material Icons';
