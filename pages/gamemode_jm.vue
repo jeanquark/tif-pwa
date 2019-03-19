@@ -271,7 +271,7 @@
     
     @media only screen and (min-width: 1000px) {
         .content img {
-            width: 100%;
+            height: 100%;
         }
     }
     /* End Content */
@@ -717,31 +717,27 @@
 		}
 		#avatar {
 			background-color: orangered;
-			border-right: 2px solid orangered;
-			border-bottom: 2px solid orangered;
 			box-shadow: 0 2px 2px black;
 			height: 70px;
 			width: 70px;
-			border-radius: 0 0 100% 0;
+			border-radius: 0 0 0 0;
 		}
 		.imgAvatar {
 			height: 100%;
 			width: 100%;
-			border-radius: 0 0 100% 0;
+			border-radius: 0 0 0 0;
 		}
 		#team {
 			background-color: orangered;
-			border-left: 2px solid orangered;
-			border-bottom: 2px solid orangered;
 			box-shadow: 0 2px 2px black;
 			height: 70px;
 			width: 70px;
-			border-radius: 0 0 0 100%;
+			border-radius: 0 0 0 0;
 		}
 		.imgTeam {
 			height: 100%;
 			width: 100%;
-			border-radius: 0 0 0 100%;
+			border-radius: 0 0 0 0;
 		}
 		.imgTeamSmall {
 			height: 12px;
