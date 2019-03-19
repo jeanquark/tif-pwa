@@ -120,8 +120,8 @@
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<nuxt-link to="/skillCards">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span style="font-size: 18px">Baratin</span>
 										<v-spacer></v-spacer>
@@ -139,7 +139,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs4 style="text-align: center; padding: 5px">
-											<nuxt-link to="/skillCards"><img src="/images/stress.jpg" class="imgSkill" /></nuxt-link>
+											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
 									<v-flex xs8>
 										<v-card-title primary-title style="text-align: center; padding: 15px">
@@ -155,7 +155,8 @@
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span style="font-size: 18px">Travail d'équipe</span>
 										<v-spacer></v-spacer>
@@ -186,9 +187,11 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span style="font-size: 18px">Leadership</span>
 										<v-spacer></v-spacer>
@@ -219,9 +222,11 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span style="font-size: 18px">Savoir-vivre</span>
 										<v-spacer></v-spacer>
@@ -252,9 +257,11 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span style="font-size: 18px">Humour</span>
 										<v-spacer></v-spacer>
@@ -285,9 +292,11 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span style="font-size: 18px">Charisme</span>
 										<v-spacer></v-spacer>
@@ -318,6 +327,7 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 						</v-layout>
 					</div>
