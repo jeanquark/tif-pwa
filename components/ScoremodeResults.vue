@@ -1,4 +1,5 @@
 <template>
+
 	<v-tabs color="grey" show-arrows fixed-tabs v-model="activeDay" @change="fetchEventsByDay(activeDay)">
         <v-tabs-slider color="yellow"></v-tabs-slider>
         <v-tab v-for="day in days" :key="day" :href="'#' + day">

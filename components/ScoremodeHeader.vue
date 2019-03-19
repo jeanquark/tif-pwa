@@ -1,7 +1,6 @@
 <template>
-    <v-container style="padding: 0; max-width: 1017px;">
+
 		<!-- Fixed Header -->
-		<!-- <v-toolbar dark> -->
 		<div id="header" class="header">
 			<v-layout row>
 				<v-flex class="barreHeader">
@@ -61,6 +60,7 @@
 				</v-flex>
 			</v-layout>
 		</div>
+		
 </template>
 
 <script>
