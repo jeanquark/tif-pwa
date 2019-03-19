@@ -1,6 +1,6 @@
 <template>
 
-	<v-tabs color="grey" show-arrows fixed-tabs v-model="activeDay" @change="fetchEventsByDay(activeDay)">
+	<v-tabs color="grey" show-arrows fixed-tabs v-model="activeDay" @change="fetchEventsByDay(activeDay)" class="tabGreyMenu">
         <v-tabs-slider color="yellow"></v-tabs-slider>
         <v-tab v-for="day in days" :key="day" :href="'#' + day">
             {{ day | moment('ddd DD MMM') }}
@@ -214,5 +214,9 @@
         .pd-left10 {
             padding-left: 10px;
         }
+		.tabGreyMenu {
+		font-size: 1em;
+		height: 30px;
+		}
     }
 </style>
