@@ -10,7 +10,7 @@
 						
 					<!-- Scrollable content -->
 					<div class="container" fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
-						<v-layout style="padding: 0; background-color: green; color: white; height: 40px">
+						<v-layout style="padding: 0; background-color: green; color: white; min-height: 40px">
 							<v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
 								Football
 							</v-flex>
