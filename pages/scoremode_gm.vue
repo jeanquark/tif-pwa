@@ -374,11 +374,15 @@
 	float: right; 
 	margin-top: 9px;
 	}
+	.headerLogo {
+	padding: 20px 0;
+	}
 	.chiffres {
-	font-size: 1.2em;
+	font-size: 1.4em;
+	color: orangered;
 	}
 	.activity {
-	font-size: 0.8em;
+	font-size: 1.1em;
 	color: white;
 	}
 	.cadreHeader1 {
@@ -534,9 +538,6 @@
         border-radius: 5px;
         padding: 5px;
     }
-	.headerLogo {
-	padding: 20px 0;
-	}
 	.cadreScore {
     width: 1000px;
     background-color: white;
@@ -828,14 +829,16 @@
 		box-shadow: 0 2px 3px -1px black; 
 		position: relative;
 		}
+		.headerLogo {
+		padding: 20px 0;
+		}
 		.chiffres {
-		font-size: 2.5em;
+		font-size: 1.4em;
 		color: orangered;
-		font-width: 700;
 		}
 		.activity {
-		font-size: 1.5em;
-		text-transform: uppercase;
+		font-size: 1.1em;
+		color: white;
 		}
 		#avatar {
 			background-color: orangered;
@@ -997,13 +1000,6 @@
 		.material-icons.md-48 { 
 		font-size: 30px;
 		margin-top: 5px;
-		}
-		.chiffres {
-		font-size: 1.2em;
-		}
-		.activity {
-		font-size: 0.8em;
-		color: white;
 		}
 		.material-icons {
 		font-family: 'Material Icons';
