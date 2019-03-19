@@ -357,21 +357,20 @@
         padding: 0;
     }
 	.barreHeaderLeft1 {
-	margin-left: 100px; 
+	margin-left: 160px; 
 	float: left; 
-	margin-top: 4px;
+	margin-top: 9px;
 	color: white;
 	}
 	.barreHeaderLeft2 {
 	color: white; 
-	padding: 4px; 
 	float: left; 
 	margin-top: 9px;
+	margin-left: 160px; 
 	}
 	.barreHeaderRight {
-	margin-right: 100px; 
+	margin-right: 160px; 
 	color: white; 
-	padding: 4px; 
 	float: right; 
 	margin-top: 9px;
 	}
@@ -412,12 +411,12 @@
         box-shadow: 0 7px 5px black;
         height: 150px;
         width: 150px;
-        border-radius: 0 0 100% 0;
+        border-radius: 0;
     }
     .imgAvatar {
         height: 100%;
         width: 100%;
-        border-radius: 0 0 100% 0;
+        border-radius: 0;
     }
     #team {
         background-color: orangered;
@@ -426,12 +425,12 @@
         box-shadow: 0 7px 5px black;
         height: 150px;
         width: 150px;
-        border-radius: 0 0 0 100%;
+        border-radius: 0;
     }
     .imgTeam {
         height: 100%;
         width: 100%;
-        border-radius: 0 0 0 100%;
+        border-radius: 0;
     }
     .imgTeamSmall {
         height: 20px;
@@ -838,12 +837,12 @@
 			box-shadow: 0 2px 2px black;
 			height: 70px;
 			width: 70px;
-			border-radius: 0 0 100% 0;
+			border-radius: 0;
 		}
 		.imgAvatar {
 			height: 100%;
 			width: 100%;
-			border-radius: 0 0 100% 0;
+			border-radius: 0;
 		}
 		#team {
 			background-color: orangered;
@@ -852,12 +851,12 @@
 			box-shadow: 0 2px 2px black;
 			height: 70px;
 			width: 70px;
-			border-radius: 0 0 0 100%;
+			border-radius: 0;
 		}
 		.imgTeam {
 			height: 100%;
 			width: 100%;
-			border-radius: 0 0 0 100%;
+			border-radius: 0;
 		}
 		.imgTeamSmall {
 			height: 12px;
