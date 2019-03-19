@@ -331,9 +331,6 @@
         border-radius: 5px;
         padding: 5px;
     }
-	.headerLogo {
-	height: auto;
-	}
 	.cadreScore {
     width: 1000px;
     background-color: white;
@@ -534,7 +531,9 @@
 			padding: 0;
 			overflow: hidden;
 		}
-
+		.headerLogo {
+		padding: 20px 0;
+		}
 		/* Content */
 		.container {
 			width: 100vw;
@@ -796,7 +795,8 @@
 		}
 		
 		.activity {
-		font-size: 0.8em;
+		font-size: 0.9em;
+		color: white;
 		}
 		.material-icons {
 		font-family: 'Material Icons';
