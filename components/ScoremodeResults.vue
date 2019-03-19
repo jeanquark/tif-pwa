@@ -63,7 +63,7 @@
                                                         <v-flex hidden-sm-and-up class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 30px; margin: 0">
                                                             <div style="background-color: red; height: 30px; width: 2px" v-if="props.item.statusShort === 'FT'"></div>
                                                             <div style="background-color: green; height: 30px; width: 2px" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
-            												<div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'" style="background-color: orangered; height: 40px; width: 2px"></div>
+            												<div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST'" style="background-color: orangered; height: 30px; width: 2px"></div>
             											</v-flex>
                                                         <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
                                                             <img :src="'/images/teams/' + props.item.homeTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
