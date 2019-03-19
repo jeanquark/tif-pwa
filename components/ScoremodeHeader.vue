@@ -331,6 +331,9 @@
         border-radius: 5px;
         padding: 5px;
     }
+	.headerLogo {
+	height: auto;
+	}
 	.cadreScore {
     width: 1000px;
     background-color: white;
@@ -580,8 +583,10 @@
 		}
 		.barreHeaderLeft1 {
 		margin-left: 25px;
-		margin-top: 3px;
+		margin-top: 2px;
 		color: white;
+		padding: 4px;
+		font-size: 0.8em;
 		}
 		.barreHeaderLeft2 {
 		color: white; 
