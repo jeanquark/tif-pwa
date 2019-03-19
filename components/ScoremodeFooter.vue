@@ -10,24 +10,24 @@
 				<div id="dock-container">
 					<ul>
 						<li>
-							<nuxt-link to="/myresult"><img src="/images/menuResultat.png">
-							<span class="textMenu">Mes classements</span></nuxt-link>
+							<nuxt-link to="/teams"><img src="/images/menuResultat.png">
+							<span class="textMenu">Equipes</span></nuxt-link>
 						</li>
 						<li id="active">
-							<nuxt-link to="/myskill"><img src="/images/menuShop.png">
-							<span class="textMenu">Mes compétences</span></nuxt-link>
+							<nuxt-link to="/competitions"><img src="/images/menuShop.png">
+							<span class="textMenu">Compétitions</span></nuxt-link>
 						</li>
 						<li>
-							<nuxt-link to="/gamemode_jm"><img src="/images/menuHome.png">
+							<nuxt-link to="/scoremode_gm"><img src="/images/menuHome.png">
 							<span class="textMenu">Aujourd'hui</span></nuxt-link>
 						</li>
 						<li>
-							<nuxt-link to="/myinventory"><img src="/images/menuSocial.png">
-							<span class="textMenu">Mon inventaire</span></nuxt-link>
+							<nuxt-link to="/players"><img src="/images/menuSocial.png">
+							<span class="textMenu">Joueurs</span></nuxt-link>
 						</li>
 						<li>
-							<nuxt-link to="/scoremode"><img src="/images/menuResultat.png">
-							<span class="textMenu">ScoreMode</span></nuxt-link>
+							<nuxt-link to="/tifnews"><img src="/images/menuResultat.png">
+							<span class="textMenu">Tif News</span></nuxt-link>
 						</li>
 					</ul>
 				</div>
@@ -628,97 +628,96 @@
 		font-size: 0.8em;
 		}
 		
-		/* Menu */
+        /* Menu */
 
-		#dock-container {
-		height: 55px;
-		padding: 0;
-		margin: 0;
-		bottom: 0;
-		background-color: rgb(248,147,37);
-		border: none;
-		border-top: 4px solid darkred;
-		}
+        #dock-container {
+            height: 55px;
+            padding: 0;
+            margin: 0;
+            bottom: 0;
+            background-color: orangered;
+            border: none;
+            border-top: 4px solid orangered;
+        }
 
-		#dock-container li#active img {
-		-webkit-transform: scale(1.65);
-		margin: 0 0.5em;
-		}
+        #dock-container li#active img {
+            -webkit-transform: scale(1.65);
+            margin: 0 0.5em;
+        }
 
-		#dock-container li {
-		width: 17%;
-		padding: 0;
-		margin: 0;
-		list-style-type: none;
-		display: inline-block;
-		position: relative;
-		padding-top: 3px;
-		}
+        #dock-container li {
+            width: 17%;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: inline-block;
+            position: relative;
+            padding-top: 3px;
+        }
 
-		#dock-container ul {
-		width: 100%;
-		padding-left: 0px;
-		padding-right: 0px;
-		margin-bottom: 0;
-		}
+        #dock-container ul {
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-bottom: 0;
+        }
 
-		#dock-container li img {
-		width: 38px;
-		height: 38px;
-		-webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
-		-webkit-transition: all 0.3s;
-		-webkit-transform-origin: 50% 100%;
-		}
+        #dock-container li img {
+            width: 38px;
+            height: 38px;
+            -webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
+            -webkit-transition: all 0.3s;
+            -webkit-transform-origin: 50% 100%;
+        }
 
-		#dock-container li:hover img { 
-		-webkit-transform: scale(1.65);
-		margin: 0 0.5em;
-		}
+        #dock-container li:hover img { 
+            -webkit-transform: scale(1.65);
+            margin: 0 0.5em;
+        }
 
-		#dock-container li:hover + li img, #dock-container li.prev img {
-		-webkit-transform: scale(1);
-		margin: 0 0;
-		}
+        #dock-container li:hover + li img, #dock-container li.prev img {
+            -webkit-transform: scale(1);
+            margin: 0 0;
+        }
 
-		#dock-container li span {
-		display: none;
-		position: absolute;
-		bottom: 0px;
-		left: 0;
-		width: 100%;
-		background-color: rgba(0,0,0,0.5);
-		border-radius: 5px;
-		}
+        #dock-container li span {
+            display: none;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 5px;
+        }
 
-		#dock-container li#active span {
-		display: none;
-		position: absolute;
-		bottom: 0px;
-		left: 0;
-		width: 100%;
-		background-color: rgba(0,0,0,0.5);
-		border-radius: 5px;
-		}
+        #dock-container li#active span {
+            display: none;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 5px;
+        }
 
-		#dock-container li#active span {
-		display: block;
-		color: #fff;
-		}
+        #dock-container li#active span {
+            display: block;
+            color: #fff;
+        }
 
-		#dock-container li#active .textMenu {
-		font: normal 90%/1 "Acme", Helvetica, sans-serif;
-		padding: 2px;
-		}
+        #dock-container li#active .textMenu {
+            font: normal 90%/1 "Acme", Helvetica, sans-serif;
+            padding: 2px;
+        }
 
-		#dock-container li:hover span {
-		display: block;
-		color: #fff;
-		}
+        #dock-container li:hover span {
+            display: block;
+            color: #fff;
+        }
 
-		#dock-container .textMenu {
-		font: normal 90%/1 "Acme", Helvetica, sans-serif;
-		padding: 2px;
-		}
-
-	}
+        #dock-container .textMenu {
+            font: normal 90%/1 "Acme", Helvetica, sans-serif;
+            padding: 2px;
+        }
+    }
 </style>
