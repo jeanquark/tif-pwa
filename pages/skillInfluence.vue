@@ -138,7 +138,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs4 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkill" />
+											<nuxt-link to="/skillCards"><img src="/images/stress.jpg" class="imgSkill" /></nuxt-link>
 										</v-flex>
 									<v-flex xs8>
 										<v-card-title primary-title style="text-align: center; padding: 15px">
