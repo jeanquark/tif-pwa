@@ -345,177 +345,221 @@
 
 
     /* CSS Gaël */
-    .textTif {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    top: 15px;
-    left: 13px;
-    }
-    
-    .textScoreMode {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    top: 15px;
-    right: 13px;
-    float: right;
-    }
-
-    .container {
-    /*width: 1000px;
-    color: #FFFFFF;
-    background-color: black;
-    margin-left: auto;
-    margin-right: auto;
-    border-left: 1px solid orangered;
-    border-right: 1px solid orangered;
-    font: normal 100%/1 "Acme", Helvetica, sans-serif;*/
-    }
-    
-    /* header */
-    
+    /* Header */
     #header {
-    height: 162px;
-    padding: 0;
-    top:0px;
-    left:0px;
-    background-color: black;
-    z-index: 1;
-    border-bottom: 3px solid orangered;
-    position: sticky;
+        max-height: 162px;
+        padding: 0;
+        top:0px;
+        left:0px;
+        background-color: black;
+        z-index: 1;
+        border-bottom: 3px solid orangered;
+        position: sticky;
     }
     .header {
-    position: relative;
+        position: relative;
     }
     .barreHeader {
-    position:absolute;
-    top: 120px;
-    width: 100%;
-    background-color: orangered;
-    z-index: -1;
-    margin: 0;
-    padding: 0;
+        position:absolute;
+        top: 120px;
+        width: 100%;
+        background-color: orangered;
+        z-index: -1;
+        margin: 0;
+        padding: 0;
     }
+	.barreHeaderLeft1 {
+	margin-left: 100px; 
+	float: left; 
+	margin-top: 4px;
+	}
+	.barreHeaderLeft2 {
+	color: white; 
+	padding: 4px; 
+	float: left; 
+	margin-top: 9px;
+	}
+	.barreHeaderRight {
+	margin-right: 100px; 
+	color: white; 
+	padding: 4px; 
+	float: right; 
+	margin-top: 9px;
+	}
+	.cadreHeader1 {
+	padding: 20px; 
+	background-color: black; 
+	border-bottom: 1px solid orangered; 
+	border-right: 1px solid orangered;
+	border-left: 1px solid orangered;	
+	height: 120px; 
+	box-shadow: 0 4px 5px -1px black; 
+	position: relative;
+	}
+	.cadreHeader {
+	padding: 15px; 
+	background-color: black; 
+	border-bottom: 1px solid orangered; 
+	border-right: 1px solid orangered; 
+	height: 120px; 
+	box-shadow: 0 4px 5px -1px black; 
+	position: relative;
+	}
     #avatar {
-    background-color: black;
-    border-right: 3px solid orangered;
-    border-bottom: 3px solid orangered;
-    box-shadow: 0 7px 5px black;
-    height: 150px;
-    width: 150px;
-    border-radius: 0 0 100% 0;
+        background-color: orangered;
+        border-right: 3px solid orangered;
+        border-bottom: 3px solid orangered;
+        box-shadow: 0 7px 5px black;
+        height: 150px;
+        width: 150px;
+        border-radius: 0 0 100% 0;
     }
     .imgAvatar {
-    height: 100%;
-    width: 100%;
-    border-radius: 0 0 100% 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0 0 100% 0;
     }
     #team {
-    background-color: black;
-    border-left: 3px solid orangered;
-    border-bottom: 3px solid orangered;
-    box-shadow: 0 7px 5px black;
-    height: 150px;
-    width: 150px;
-    border-radius: 0 0 0 100%;
+        background-color: orangered;
+        border-left: 3px solid orangered;
+        border-bottom: 3px solid orangered;
+        box-shadow: 0 7px 5px black;
+        height: 150px;
+        width: 150px;
+        border-radius: 0 0 0 100%;
     }
     .imgTeam {
-    height: 100%;
-    width: 100%;
-    border-radius: 0 0 0 100%;
+        height: 100%;
+        width: 100%;
+        border-radius: 0 0 0 100%;
     }
     .imgTeamSmall {
-    height: 20px;
-    margin-top: 5px;
+        height: 20px;
+        margin-top: 5px;
     }
-    .imgHeader {
-    height: 50px;
-    width: 50px;
-    color: green;
-    }
-    .dollarFan {
-    margin-top: 14px;
-    width: 100%;
-    text-align: center;
-    color: green;
-    font-weight: 700;
-    box-shadow: 0 0 10px 2px inset;
-    border-radius: 5px;
-    }
-    .token {
-    margin-top: 14px;
-    width: 100%;
-    text-align: center;
-    color: orangered;
-    font-weight: 700;
-    box-shadow: 0 0 10px 2px inset;
-    border-radius: 5px;
+    .levelHeader {
+        font-weight: 700;
+        font-size: 36px;  /* Preferred icon size */
+        background-color: orangered;
+        color: white;
+        border-radius: 10px;
     }
     .plusOrangered {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0 10px;
-    color: white;
-    font-weight: 700;
-    font-size: 1.2em;
-    background-color: orangered;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0 10px;
+        color: white;
+        font-weight: 700;
+        font-size: 1.2em;
+        background-color: orangered;
     }
     .aPlusOrangered :hover {
-    color: orangered;
-    background-color: white;
-    border-bottom: 1px solid orangered;
-    border-left: 1px solid orangered;
+        color: orangered;
+        background-color: white;
+        border-bottom: 1px solid orangered;
+        border-left: 1px solid orangered;
     }
-    .plusYellow {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0 10px;
-    color: black;
-    font-weight: 700;
-    font-size: 1.2em;
-    background-color: yellow;
+	.progressYellow {
+	width: 100%; 
+	font-weight: 700; 
+	color: black; 
+	border-radius: 5px;
+	}
+	.progressOrange {
+	width: 100%; 
+	font-weight: 700; 
+	color: black; 
+	border-radius: 5px;
+	margin-top: 25px;
+	}
+	.plusYellow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0 10px;
+        color: black;
+        font-weight: 700;
+        font-size: 1.2em;
+        background-color: yellow;
     }
     .aPlusYellow :hover {
-    color: black;
-    background-color: white;
-    border-bottom: 1px solid yellow;
-    border-left: 1px solid yellow;
+        color: black;
+        background-color: white;
+        border-bottom: 1px solid yellow;
+        border-left: 1px solid yellow;
     }
     .plusGreen {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0 10px;
-    color: white;
-    font-weight: 700;
-    font-size: 1.2em;
-    background-color: green;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0 10px;
+        color: white;
+        font-weight: 700;
+        font-size: 1.2em;
+        background-color: green;
     }
     .aPlusGreen :hover {
-    color: green;
+        color: green;
+        background-color: white;
+        border-bottom: 1px solid green;
+        border-left: 1px solid green;
+    }
+    .dollarFan {
+        margin-top: 14px;
+        width: 100%;
+        text-align: center;
+        color: green;
+        font-weight: 700;
+        box-shadow: 0 0 10px 2px inset;
+        border-radius: 5px;
+        padding: 4px;
+    }
+    .token {
+        margin-top: 14px;
+        width: 100%;
+        text-align: center;
+        color: orangered;
+        font-weight: 700;
+        box-shadow: 0 0 10px 2px inset;
+        border-radius: 5px;
+        padding: 5px;
+    }
+	.cadreScore {
+    width: 1000px;
     background-color: white;
-    border-bottom: 1px solid green;
-    border-left: 1px solid green;
-    }
-    
-    .orangered {
-    background-color: orangered;
-    border-color: orangered;
-    }
-    
-    /* Material Icons */
-    
-    .material-icons.md-18 { font-size: 18px; }
+    margin-top: 50px;
+	}
+	.pd-left5 {
+	padding-left: 5px;
+	}
+	.imgLogoEquipe {
+	max-width: 30px;
+	max-height: 30px;
+	}
+	.teamTextSize {
+	font-size: 1.2em;
+	}
+	.progress-bar-txt-black {
+		position: relative;
+		font-size: 15px;
+		top: -31px;
+		z-index: 1;
+		color: black;
+		font-weight: 700;
+	}
+	.progress-bar-txt-white {
+		position: relative;
+		font-size: 15px;
+		top: -31px;
+		z-index: 1;
+		color: white;
+		font-weight: 700;
+	}
+	.material-icons.md-18 { font-size: 18px; }
     .material-icons.md-24 { font-size: 24px; }
     .material-icons.md-36 { font-size: 36px; }
     .material-icons.md-48 { font-size: 48px; }
@@ -544,476 +588,523 @@
     /* Support for IE. */
     font-feature-settings: 'liga';
     }   
-    
-    /* End Material Icons */
-    
-    .levelHeader {
-    font-weight: 700;
-    font-size: 36px;  /* Preferred icon size */
-    background-color: orange;
-    color: white;
-    border-radius: 10px;
-    }
-    
     /* End Header */
     
-    /* Content */
     
-    #content {
-    /*height: 100%;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    position: relative;*/
-    }
-    .content {
-    /*height: 100%;
-    overflow: scroll;
-    padding: 0;
-    margin: 0;*/
-    }
-    .centerImage {
-    height: 100%;
-    }
-    .imgCarte {
-    height: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    }
-    .image1 {
-    position: absolute;
-    top: 100px;
-    left: 300px;
-    height: 50px;
-    width: 50px;
-    }
-        
-    /* End Content */
 
-    .menuSport {
-        height: 40px;
-    }
-    
-    .menuDay {
-        height: 40px;
-    }
-    
-    .v-expansion-panel__header {
-    padding: 2px 2px;
-    min-height: 24px;
-    }
-
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity 5s;
-        background-color: #000;
-    }
-    
-    .fade-enter, .fade-leave-to {
-        opacity: 0;
-    }
-    
-    .imgLogoEquipe {
-    max-width: 30px;
-    max-height: 30px;
-    }
-    
-    .teamTextSize {
-    font-size: 1.3em;
-    }
-
-    .black {
-    background-color: black;
-    }
-    
-    .imageLogo {
-    width: 30px;
-    height: 30px;
-    }
-    
-    /* ScoreCard */
-
-    .card {
-    border-radius: 5px;
-    }
-    .card-title {
-    background-color: lightslategray;
-    }
-    .card-text {
-    background-color: whitesmoke;
-    width: auto;
-    border-radius: 8px;
-    padding: 8px;
-    }
-    .card-footer {
-    background-color: lightslategrey;
-    }
-    .fas:hover {
-    cursor: pointer;
-    color: #fff;
-    }
-    
-    .userText {
-    font-size: 1.3em;
-    }
-    
-    .connectText {
-    font-size: 1.3em;
-    }
-    
-    .chiffres {
-    font-size: 2.5em;
-    color: orangered;
-    font-width: 700;
-    }
-    
-    .activity {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    }
-    
-    .levelBox {
-    background-color: #757575;
-    color: black;
-    vertical-align: middle;
-    padding: 2px;
-    border-radius: 3px;
-    width: 95%;
-    margin: auto;
-    }
-    
-    .energyBox {
-    background-color: #757575;
-    color: black;
-    vertical-align: middle;
-    padding: 2px;
-    border-radius: 3px;
-    width: 95%;
-    margin: auto;
-    }
-    
-    .dollarBox {
-    background-color: #757575;
-    color: black;
-    vertical-align: middle;
-    padding: 2px;
-    border-radius: 3px;
-    width: 95%;
-    margin: auto;
-    }
-
-    .tokenBox {
-    background-color: #757575;
-    color: black;
-    vertical-align: middle;
-    padding: 2px;
-    border-radius: 3px;
-    width: 95%;
-    margin: auto;
-    }
-
-    /* Menu */
-    
-    .barreBlack {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 8px;
-    background-color: black;
-    }
+    /* Footer */
     .barreOrangered {
-    width: 100%;
-    padding: 0;
-    margin: 0; 
-    height: 3px;
-    background-color: orangered;
+        width: 100%;
+        padding: 0;
+        margin: 0; 
+        height: 3px;
+        background-color: orangered;
     }
-
-
-    #dock-container {
-    height: 80px;
-    padding: 0;
-    margin: 0;
-    bottom: 0;
-    background-color: orangered;
-    border: none;
-    border-top: 4px solid orangered;
-    }
-
-    #dock-container li#active img {
-    -webkit-transform: scale(1.65);
-    margin: 0 0.5em;
-    }
-
-    #dock-container li {
-    width: 17%;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    display: inline-block;
-    position: relative;
-    padding-top: 10px;
-    }
-
-    #dock-container ul {
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-bottom: 0;
-    }
-
-    #dock-container li img {
-    width: 58px;
-    height: 58px;
-    -webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
-    -webkit-transition: all 0.3s;
-    -webkit-transform-origin: 50% 100%;
-    }
-
-    #dock-container li:hover img { 
-    -webkit-transform: scale(1.65);
-    margin: 0 0.5em;
-    }
-
-    #dock-container li:hover + li img, #dock-container li.prev img {
-    -webkit-transform: scale(1);
-    margin: 0 0;
-    }
-
-    #dock-container li span {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 5px;
-    }
-
-    #dock-container li#active span {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 5px;
-    }
-
-    #dock-container li#active span {
-    display: block;
-    color: #fff;
-    }
-
-    #dock-container li#active .textMenu {
-    font: normal 120%/1 "Acme", Helvetica, sans-serif;
-    padding: 2px;
-    }
-
-    #dock-container li:hover span {
-    display: block;
-    color: #fff;
-    }
-
-    #dock-container .textMenu {
-    font: normal 120%/1 "Acme", Helvetica, sans-serif;
-    padding: 2px;
+    .barreBlack {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        height: 8px;
+        background-color: black;
     }
     
-    /* End Menu */
-
-        @media only screen and (max-width: 768px) {
-
-        #app {
-        font: normal 90%/1 "Acme", Helvetica, sans-serif;
-        }
-        
-        .pd-right10 {
-        padding-right: 10px;
-        }
-        
-        .pd-left10 {
-        padding-left: 10px;
-        }
-        
-        .imgLogoEquipe {
-        max-width: 35px;
-        }
-        
-        .teamTextSize {
-        font-size: 1.0em;
-        }
-        
-        .headerMenus {
-        padding: 0; 
-        margin: 0; 
-        height: 46px;
-        }
-        
-        .energyBox {
-        background-color: #757575;
-        color: black;
-        vertical-align: middle;
-        padding: 1px;
-        border-radius: 2px;
-        width: 95%;
-        margin: auto;
-        font-size: 0.8em;
-        }
-        
-        .userText {
-        font-size: 0.8em;
-        }
-        
-        .connectText {
-        font-size: 0.8em;
-        }
-
-        /* Header */
-
-        .imageLogoTif {
-        width: 60px;
-        height: 60px;
-        }
-        
-        .backBlack {
-        background-image: url("/images/header-TIF_03.png");
-        background-position: center;
-        background-repeat: repeat-x;
-        background-size: contain;
-        height: 60px;
-        }
-
-        .boxTif {
-        width: 60px;
-        height: 60px;
-        }
-
-        .imageLogo {
-        width: 25px;
-        height: 25px;
-        }
-        
-        .menuSport {
-            height: 30px;
-        }
-        
-        .menuDay {
-            height: 30px;
-        }
-        
-        .headerLogo {
-        height: auto;
-        }
-        
-        .headerMenu {
-        height: 46px;
-        }
-        
-        .v-expansion-panel__header {
-        padding: 2px 2px;
-        min-height: 24px;
-        }
-        
-        .chiffres {
-        font-size: 1.2em;
-        }
-        
-        .activity {
-        font-size: 0.8em;
-        }
-        
-        /* Menu */
-
-        #dock-container {
-        height: 55px;
+    #dock-container {
+        height: 80px;
         padding: 0;
         margin: 0;
         bottom: 0;
-        background-color: rgb(248,147,37);
+        background-color: orangered;
         border: none;
-        border-top: 4px solid darkred;
-        }
+        border-top: 4px solid orangered;
+    }
 
-        #dock-container li#active img {
+    #dock-container li#active img {
         -webkit-transform: scale(1.65);
         margin: 0 0.5em;
-        }
+    }
 
-        #dock-container li {
+    #dock-container li {
         width: 17%;
         padding: 0;
         margin: 0;
         list-style-type: none;
         display: inline-block;
         position: relative;
-        padding-top: 3px;
-        }
+        padding-top: 10px;
+    }
 
-        #dock-container ul {
+    #dock-container ul {
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
         margin-bottom: 0;
-        }
+    }
 
-        #dock-container li img {
-        width: 38px;
-        height: 38px;
+    #dock-container li img {
+        width: 58px;
+        height: 58px;
         -webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
         -webkit-transition: all 0.3s;
         -webkit-transform-origin: 50% 100%;
+    }
+
+    #dock-container li:hover img { 
+        -webkit-transform: scale(1.65);
+        margin: 0 0.5em;
+    }
+
+    #dock-container li:hover + li img, #dock-container li.prev img {
+        -webkit-transform: scale(1);
+        margin: 0 0;
+    }
+
+    #dock-container li span {
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 5px;
+    }
+
+    #dock-container li#active span {
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 5px;
+    }
+
+    #dock-container li#active span {
+        display: block;
+        color: #fff;
+    }
+
+    #dock-container li#active .textMenu {
+        font: normal 120%/1 "Acme", Helvetica, sans-serif;
+        padding: 2px;
+    }
+
+    #dock-container li:hover span {
+        display: block;
+        color: #fff;
+    }
+
+    #dock-container .textMenu {
+        font: normal 120%/1 "Acme", Helvetica, sans-serif;
+        padding: 2px;
+    }
+    /* End Footer */
+	
+	.activeskill {
+	padding: 16px; 
+	border: 2px solid orangered; 
+	background-color: black; 
+	color: orangered; 
+	font-size: 20px; 
+	height: 50px; 
+	margin-top: -10px; 
+	font-weight: 700;
+	}
+	
+	.noactiveskill {
+	padding: 12px; 
+	border: 1px solid black; 
+	font-size: 20px; 
+	font-weight: 700;
+	}
+	
+	.content .imgSkill {
+	width: 85%;
+	}
+    
+    /* Small screens */
+    @media only screen and (max-width: 768px) {
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		/* Content */
+		.container {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			font: normal 90%/1 "Acme", Helvetica, sans-serif;
+		}
+		.content {
+			background-color: light-gray;;
+			/*flex-grow: 1;*/
+			overflow-x: auto;
+		}
+		#footer {
+			background-color: red;
+			color: #fff;
+			/*height: 100px;*/
+			height: auto;
+			text-align: center;
+		}	
+		/* End Content */
+
+		/* Header */
+		#header {
+			max-height: 92px;
+			padding: 0;
+			top:0px;
+			left:0px;
+			background-color: black;
+			z-index: 1;
+			border-bottom: 2px solid orangered;
+			position: sticky;
+		}
+		.header {
+			position: relative;
+		}
+		.barreHeader {
+			position:absolute;
+			top: 70px;
+			height: 18px;
+			width: 100%;
+			background-color: orangered;
+			z-index: -1;
+			margin: 0;
+			padding: 0;
+		}
+		.barreHeaderLeft1 {
+		margin-left: 25px;
+		margin-top: 3px;
+		}
+		.barreHeaderLeft2 {
+		color: white; 
+		padding: 4px;
+		margin-top: 2px;
+		font-size: 0.8em;
+		}
+		.barreHeaderRight {
+		margin-right: 25px; 
+		color: white; 
+		padding: 4px; 
+		float: right; 
+		margin-top: 2px;
+		font-size: 0.8em;
+		}
+		.cadreHeader1 {
+		padding: 3px; 
+		background-color: black; 
+		border-bottom: 1px solid orangered; 
+		border-right: 1px solid orangered;
+		border-left: 1px solid orangered;	
+		height: 70px; 
+		box-shadow: 0 2px 3px -1px black; 
+		position: relative;
+		}
+		.cadreHeader {
+		padding: 3px; 
+		background-color: black; 
+		border-bottom: 1px solid orangered; 
+		border-right: 1px solid orangered; 
+		height: 70px; 
+		box-shadow: 0 2px 3px -1px black; 
+		position: relative;
+		}
+		#avatar {
+			background-color: orangered;
+			border-right: 2px solid orangered;
+			border-bottom: 2px solid orangered;
+			box-shadow: 0 2px 2px black;
+			height: 70px;
+			width: 70px;
+			border-radius: 0 0 100% 0;
+		}
+		.imgAvatar {
+			height: 100%;
+			width: 100%;
+			border-radius: 0 0 100% 0;
+		}
+		#team {
+			background-color: orangered;
+			border-left: 2px solid orangered;
+			border-bottom: 2px solid orangered;
+			box-shadow: 0 2px 2px black;
+			height: 70px;
+			width: 70px;
+			border-radius: 0 0 0 100%;
+		}
+		.imgTeam {
+			height: 100%;
+			width: 100%;
+			border-radius: 0 0 0 100%;
+		}
+		.imgTeamSmall {
+			height: 12px;
+			margin-top: 0;
+		}
+		.levelHeader {
+			font-weight: 700;
+			font-size: 12px;  /* Preferred icon size */
+			background-color: orangered;
+			color: white;
+			border-radius: 5px;
+			margin-top: 15px;
+		}
+		.plusOrangered {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0 5px;
+			color: white;
+			font-weight: 700;
+			font-size: 0.9em;
+			background-color: orangered;
+		}
+		.aPlusOrangered :hover {
+			color: orangered;
+			background-color: white;
+			border-bottom: 1px solid orangered;
+			border-left: 1px solid orangered;
+		}
+		.progressYellow {
+		width: 100%; 
+		font-weight: 700; 
+		color: black; 
+		border-radius: 5px;
+		height: 11px;
+		margin-top: 8px;
+		}
+		.progressOrange {
+		width: 100%; 
+		font-weight: 700; 
+		color: black; 
+		border-radius: 5px;
+		height: 11px;
+		margin-top: 18px;
+		}
+		.progress-bar-txt-black {
+			position: relative;
+			font-size: 9px;
+			top: -26px;
+			z-index: 1;
+			color: black;
+			font-weight: 600;
+		}
+		.progress-bar-txt-white {
+			position: relative;
+			font-size: 9px;
+			top: -26px;
+			z-index: 1;
+			color: white;
+			font-weight: 600;
+		}
+		.plusYellow {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0 5px;
+			color: black;
+			font-weight: 700;
+			font-size: 0.9em;
+			background-color: yellow;
+		}
+		.aPlusYellow :hover {
+			color: black;
+			background-color: white;
+			border-bottom: 1px solid yellow;
+			border-left: 1px solid yellow;
+		}
+		.plusGreen {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0 5px;
+			color: white;
+			font-weight: 700;
+			font-size: 0.9em;
+			background-color: green;
+		}
+		.aPlusGreen :hover {
+			color: green;
+			background-color: white;
+			border-bottom: 1px solid green;
+			border-left: 1px solid green;
+		}
+		.dollarFan {
+			margin-top: 7px;
+			width: 100%;
+			text-align: center;
+			color: green;
+			font-weight: 700;
+			box-shadow: 0 0 5px 1px inset;
+			border-radius: 5px;
+			padding: 2px;
+			font-size: 0.8em;
+		}
+		.token {
+			margin-top: 7px;
+			width: 100%;
+			text-align: center;
+			color: orangered;
+			font-weight: 700;
+			box-shadow: 0 0 5px 1px inset;
+			border-radius: 5px;
+			padding: 2px;
+			font-size: 0.8em;
+		}
+		.cadreScore {
+		border: 2px solid orangered;
+		padding: 5px;
+		width: 95%;
+		background-color: whitesmoke;
+		opacity: 0.9;
+		color: black;
+		margin: 0;
+		top: 105px;
+		left: 10px;
+		right: 10px;
+		}
+		.material-icons.md-48 { 
+		font-size: 30px;
+		margin-top: 5px;
+		}
+				.material-icons {
+		font-family: 'Material Icons';
+		font-weight: normal;
+		font-style: normal;
+		font-size: 12px;  /* Preferred icon size */
+		display: inline-block;
+		line-height: 1;
+		text-transform: none;
+		letter-spacing: normal;
+		word-wrap: normal;
+		white-space: nowrap;
+		direction: ltr;
+
+		/* Support for all WebKit browsers. */
+		-webkit-font-smoothing: antialiased;
+		/* Support for Safari and Chrome. */
+		text-rendering: optimizeLegibility;
+
+		/* Support for Firefox. */
+		-moz-osx-font-smoothing: grayscale;
+
+		/* Support for IE. */
+		font-feature-settings: 'liga';
+		}   
+		/* End Header */
+		
+		/* Footer */
+		.barreOrangered {
+			width: 100%;
+			padding: 0;
+			margin: 0; 
+			height: 2px;
+			background-color: orangered;
+		}
+		.barreBlack {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			height: 4px;
+			background-color: black;
+		}
+			
+        /* Menu */
+
+        #dock-container {
+            height: 55px;
+            padding: 0;
+            margin: 0;
+            bottom: 0;
+            background-color: orangered;
+            border: none;
+            border-top: 4px solid orangered;
+        }
+
+        #dock-container li#active img {
+            -webkit-transform: scale(1.65);
+            margin: 0 0.5em;
+        }
+
+        #dock-container li {
+            width: 17%;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: inline-block;
+            position: relative;
+            padding-top: 3px;
+        }
+
+        #dock-container ul {
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-bottom: 0;
+        }
+
+        #dock-container li img {
+            width: 38px;
+            height: 38px;
+            -webkit-gradient: (linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
+            -webkit-transition: all 0.3s;
+            -webkit-transform-origin: 50% 100%;
         }
 
         #dock-container li:hover img { 
-        -webkit-transform: scale(1.65);
-        margin: 0 0.5em;
+            -webkit-transform: scale(1.65);
+            margin: 0 0.5em;
         }
 
         #dock-container li:hover + li img, #dock-container li.prev img {
-        -webkit-transform: scale(1);
-        margin: 0 0;
+            -webkit-transform: scale(1);
+            margin: 0 0;
         }
 
         #dock-container li span {
-        display: none;
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0,0,0,0.5);
-        border-radius: 5px;
+            display: none;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 5px;
         }
 
         #dock-container li#active span {
-        display: none;
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0,0,0,0.5);
-        border-radius: 5px;
+            display: none;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 5px;
         }
 
         #dock-container li#active span {
-        display: block;
-        color: #fff;
+            display: block;
+            color: #fff;
         }
 
         #dock-container li#active .textMenu {
-        font: normal 90%/1 "Acme", Helvetica, sans-serif;
-        padding: 2px;
+            font: normal 90%/1 "Acme", Helvetica, sans-serif;
+            padding: 2px;
         }
 
         #dock-container li:hover span {
-        display: block;
-        color: #fff;
+            display: block;
+            color: #fff;
         }
 
         #dock-container .textMenu {
-        font: normal 90%/1 "Acme", Helvetica, sans-serif;
-        padding: 2px;
+            font: normal 90%/1 "Acme", Helvetica, sans-serif;
+            padding: 2px;
         }
-
     }
 </style>
