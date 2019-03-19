@@ -18,7 +18,7 @@
 						<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
 						<!-- Results -->
-						<v-tabs color="green" slider-color="yellow" fixed-tabs v-model="selectType" style="color: white">
+						<v-tabs color="green" height="30" slider-color="yellow" fixed-tabs v-model="selectType" style="color: white">
 							<v-tab
 								v-for="type in types"
 								:key="type.slug"
