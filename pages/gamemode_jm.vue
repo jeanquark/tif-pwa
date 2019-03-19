@@ -185,7 +185,7 @@
                                 <span class="textMenu">Mes compétences</span></nuxt-link>
                             </li>
                             <li id="active">
-                                <nuxt-link to="/gamemode_jm"><img src="/images/menuHome.png">
+                                <nuxt-link to="/gamemode_jm"><img src="/images/menuAgenda.png">
                                 <span class="textMenu">Aujourd'hui</span></nuxt-link>
                             </li>
                             <li>
