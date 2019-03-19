@@ -10,11 +10,6 @@
 						
 					<!-- Scrollable content -->
 					<div class="container" fluid style="padding: 0; max-width: 1000px; background-color: whitesmoke">
-						<v-layout style="padding: 0; background-color: green; color: white; max-height: 40px">
-							<v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
-								Football
-							</v-flex>
-						</v-layout>
 			
 						<!-- <v-layout> -->
 						<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
@@ -40,7 +35,6 @@
 
 						<!-- Standings -->
 						<scoremode-standings v-if="selectType === 1" />
-
 						
 					</div>
 					
