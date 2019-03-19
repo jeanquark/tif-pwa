@@ -87,8 +87,7 @@
 				<v-flex shrink>
 					<nuxt-link to="/gamemode_jm">
 					<div id="team">
-						<span class="textScoreMode">ScoreMode<br />
-						C'est parti !</span>
+						<img src="/images/scoremodeLogo.png" class="imgTeam" />
 					</div>
 					</nuxt-link>
 				</v-flex>
@@ -232,8 +231,6 @@
     }
     #team {
         background-color: orangered;
-        border-left: 3px solid orangered;
-        border-bottom: 3px solid orangered;
         box-shadow: 0 7px 5px black;
         height: 150px;
         width: 150px;
