@@ -219,7 +219,7 @@ color: white;
 font-family: Acme;
 }
 .fs24 {
-font-size: 24px;
+font-size: 18px;
 }
 .fs24title {
 font-size: 24px;
