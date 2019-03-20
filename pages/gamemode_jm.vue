@@ -636,6 +636,28 @@
         padding: 2px;
     }
     /* End Footer */
+	
+	.activeskill {
+	padding: 16px; 
+	border: 2px solid orangered; 
+	background-color: black; 
+	color: orangered; 
+	font-size: 20px; 
+	height: 50px; 
+	margin-top: -10px; 
+	font-weight: 700;
+	}
+	
+	.noactiveskill {
+	padding: 12px; 
+	border: 1px solid black; 
+	font-size: 20px; 
+	font-weight: 700;
+	}
+	
+	.content .imgSkill {
+	width: 85%;
+	}
     
     /* Small screens */
     @media only screen and (max-width: 768px) {
