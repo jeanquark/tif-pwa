@@ -18,21 +18,16 @@
 						<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
 						<!-- Results -->
-						<div hidden-xs-only>
-						<v-tabs color="rgb(0,128,0)" height="40" slider-color="yellow" fixed-tabs v-model="selectType">
+						<v-tabs class="hidden-xs-only" color="rgb(0,128,0)" height="40" slider-color="yellow" fixed-tabs v-model="selectType">
 							<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
 								<span style="font-size: 1.0em; color: white">{{ type.name }}</span>
 							</v-tab>
 						</v-tabs>
-						</div>
-						<div hidden-sm-and-up>
-						<v-tabs color="rgb(0,128,0)" height="30" slider-color="yellow" fixed-tabs v-model="selectType">
+						<v-tabs class="hidden-sm-and-up" color="rgb(0,128,0)" height="30" slider-color="yellow" fixed-tabs v-model="selectType">
 							<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
 								<span style="font-size: 0.9em; color: white">{{ type.name }}</span>
 							</v-tab>
-						</v-tabs>
-						</div>
-						
+						</v-tabs>						
 
 						<!-- Results -->
 						<scoremode-results v-if="selectType === 0" />
