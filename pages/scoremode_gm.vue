@@ -762,7 +762,7 @@
 
 		/* Header */
 		#header {
-			height: 114px;
+			height: 120px;
 			padding: 0;
 			top:0px;
 			left:0px;
