@@ -16,7 +16,8 @@
 
 				<v-card-text class="card-text mx-2" style="padding: 0">
 					<div class="text-xs-center" style="color: black; font-family: Acme; padding: 10px">
-						<span class="fs24title">Tu es fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }} :</span>
+						<span class="fs24title">Tu es fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }} :</span
+						<span class="fs24">Choisi ton équipe et continuer à faire jouer !</span>
 						<!-- <b>loadedUserTeams:</b> {{ loadedUserTeams }}<br /><br /> -->
 						<!-- <b>loadedCompetitions:</b> {{ loadedCompetitions }}<br /><br /> -->
 						<!-- <b>loadedTeamsByCompetition:</b> {{ loadedTeamsByCompetition }}<br /><br /> -->
