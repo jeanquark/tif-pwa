@@ -3,32 +3,35 @@
 		<v-flex xs12 sm10 md8 lg6>
 			<v-card class="card">
 				<v-card-title primary-title>
-					<v-flex xs6>
-						<h1 class="text-xs-left" style="color: white; font-family: Acme">Mes compétences - Influence</h1>
+					<v-flex xs9>
+						<span class="titleModalCards text-xs-left">Mes compétences - Influence</span>
 					</v-flex>
-					<v-flex xs6 class="text-xs-right">
+					<v-flex xs3 hidden-xs-only class="text-xs-right">
 						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
+					</v-flex>
+					<v-flex xs3 hidden-sm-and-up class="text-xs-right">
+						<fa :icon="['fas', 'arrow-circle-left']" size="1x" class="icon" @click="goBack" />
 					</v-flex>
 				</v-card-title>
 
-				<v-card-text class="card-text mx-3">
-					<v-container fluid style="padding: 5px">
-						<v-layout row wrap style="margin: 5px">
-							<v-flex style="padding: 5px">
+				<v-card-text class="card-text mx-2">
+					<v-container fluid style="padding: 1px">
+						<v-layout row wrap style="margin: 1px">
+							<v-flex style="padding: 1px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 24px">Baratin (Niv.1)</span>
+										<span class="fs24">Baratin (Niv.1)</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="color: orangered; font-size: 24px">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24"">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon style="color: orangered" class="fs24">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout>
@@ -232,4 +235,22 @@ border: 6px solid orangered;
 	color: white;
 	font-weight: 700;
 }
+.titleModalCards {
+font-size: 2.0em; 
+color: white; 
+font-family: Acme;
+}
+.fs24 {
+font-size: 24px;
+}
+
+    @media only screen and (max-width: 768px) {
+	.titleModalCards {
+	font-size: 1.2em; 
+	}
+	.fs24 {
+	font-size: 12px;
+	}
+}
+
 </style>
