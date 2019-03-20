@@ -104,7 +104,7 @@
             <div class="content" style="height: 100vh; background-color: black">
 				<v-layout>
 					<div>
-						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 25px">
+						<v-layout row class="menuSkill">
 							<v-flex xs4 sm4 md4 class="activeskill">
 								<nuxt-link to="/skillAttribut" style="text-decoration: none; color: white">Attribut</nuxt-link>
 							</v-flex>
