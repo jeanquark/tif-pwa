@@ -330,25 +330,26 @@
                     <div id="dock-container">
                         <ul>
                             <li>
-                                <nuxt-link to="/myresult"><img src="/images/menuResultat.png">
+                                <nuxt-link to="/myresult"><img src="/images/menuClassement.png">
                                 <span class="textMenu">Mes classements</span></nuxt-link>
                             </li>
                             <li id="active">
-                                <nuxt-link to="/myskill"><img src="/images/menuShop.png">
+                                <nuxt-link to="/skillInfluence"><img src="/images/menuSkill.png">
                                 <span class="textMenu">Mes compétences</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/gamemode_jm"><img src="/images/menuHome.png">
+                                <nuxt-link to="/gamemode_jm"><img src="/images/menuAgenda.png">
                                 <span class="textMenu">Aujourd'hui</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/myinventory"><img src="/images/menuSocial.png">
+                                <nuxt-link to="/myinventory"><img src="/images/menuInventory.png">
                                 <span class="textMenu">Mon inventaire</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/scoremode"><img src="/images/menuResultat.png">
+                                <nuxt-link to="/scoremode_gm"><img src="/images/menuScoremode.png">
                                 <span class="textMenu">ScoreMode</span></nuxt-link>
                             </li>
+                        </ul>
                         </ul>
                     </div>
             </div>
