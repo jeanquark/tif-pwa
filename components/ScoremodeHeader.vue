@@ -7,7 +7,7 @@
 							<span class="barreHeaderLeft1">Utilisateur invité</span>
 						</v-flex>
 						<v-flex xs6 sm6 md6>
-							<span class="barreHeaderRight">Bienvenue sur TIF - Pour des fans, par des fans !</span>
+							<span class="barreHeaderRight">Supporter vos équipes ! Gérer votre fan !</span>
 						</v-flex>
 					</v-layout>
 				</v-flex>
@@ -17,7 +17,7 @@
 							<span class="barreHeaderLeft1">Utilisateur invité</span>
 						</v-flex>
 						<v-flex xs6 sm6 md6>
-							<span class="barreHeaderRight">Bienvenue sur TIF</span>
+							<span class="barreHeaderRight">Supporter vos équipes !</span>
 						</v-flex>
 					</v-layout>
 				</v-flex>
@@ -560,9 +560,10 @@
 			font: normal 90%/1 "Acme", Helvetica, sans-serif;
 		}
 		.content {
-			background-color: light-gray;;
-			/*flex-grow: 1;*/
 			overflow-x: auto;
+			padding-top: 0;
+			background-color: black;
+			border: 1px solid orangered;			
 		}
 		#footer {
 			background-color: red;
@@ -581,8 +582,8 @@
 			left:0px;
 			background-color: black;
 			z-index: 1;
-			border-bottom: 2px solid orangered;
 			position: sticky;
+			border-bottom: none;
 		}
 		.header {
 			position: relative;
