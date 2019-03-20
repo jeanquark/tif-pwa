@@ -1,10 +1,12 @@
 <template>
 
-	<v-tabs color="grey" height="30" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
-        <v-tabs-slider color="yellow"></v-tabs-slider>
-        <v-tab v-for="day in days" :key="day" :href="'#' + day">
-            <span style="font-size: 0.9em; color: white">{{ day | moment('ddd DD MMM') }}</span>
-        </v-tab>
+	<v-tabs class="hidden-xs-only" color="rgb(128,128,128)" height="30" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
+	<v-tabs class="hidden-sm-and-up" color="rgb(128,128,128)" height="40" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
+	<v-tabs-slider color="white"></v-tabs-slider>
+		<v-tab v-for="day in days" :key="day" :href="'#' + day">
+			<span class="hidden-xs-only" style="font-size: 0.9em; color: white">{{ day | moment('ddd DD MMM') }}</span>
+			<span class="hidden-sm-and-up" style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
+		</v-tab>
         <v-tabs-items>
             <v-tab-item v-for="day in days" :key="day" :value="day" lazy style="">
                 <div class="tab-item-wrapper">
