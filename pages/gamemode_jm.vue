@@ -99,10 +99,7 @@
                     </v-flex>
                 </v-layout>
             </v-container>
-
-
-            <!-- </v-toolbar> -->
-            
+          
             <!-- Scrollable content -->
             <div class="content">
                 <!-- <v-layout> -->
