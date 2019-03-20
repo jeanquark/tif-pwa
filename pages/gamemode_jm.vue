@@ -121,8 +121,8 @@
 						<v-flex xs12 style="margin: 0; height: 100%">
 							<v-layout align-start>
 								<div class="nameTeam">
-									Espagnol Barcelone <span class="vs">VS</span></br>
-									<span class="nameOtherTeam">Real Madrid</span>
+									Espagnol Barcelone</br>
+									<span class="vs">VS</span> <span class="nameOtherTeam">Real Madrid</span>
 								</div>
 								<span class="dateHourMatch">Mardi, 12 mars 2019 à 19:00</span>
 							</v-layout>
@@ -883,11 +883,12 @@
 		opacity: 0.9;
 		color: black;
 		margin: 0;
-		top: 70px;
+		top: 130px;
+		padding: 5px;
 		}
 		.nameTeam {
 		position: relative; 
-		font-size: 18px; 
+		font-size: 22px; 
 		color: orangered; 
 		text-decoration: none; 
 		text-transform: uppercase; 
@@ -902,14 +903,14 @@
 		color: orangered; 
 		text-shadow: none; 
 		margin-left: 3px;
+		float: right;
 		}	
 		.nameOtherTeam {
 		position: relative; 
-		top: 5px; 
-		font-size: 15px; 
+		font-size: 18px; 
 		color: orangered; 
-		text-shadow: none; 
-		margin-left: 5px;
+		text-shadow: none;
+		float: right;
 		}	
 		.dateHourMatch {
 		position: absolute; 
