@@ -120,17 +120,17 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Baratin</span>
+										<span class="fs18">Baratin</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -142,7 +142,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -155,17 +155,17 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Travail d'équipe</span>
+										<span class="fs18"Travail d'équipe</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -177,7 +177,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -190,17 +190,17 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Leadership</span>
+										<span class="fs18"Leadership</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -212,7 +212,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -225,17 +225,17 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Savoir-vivre</span>
+										<span class="fs18"Savoir-vivre</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -247,7 +247,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -260,17 +260,17 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Humour</span>
+										<span class="fs18"Humour</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -282,7 +282,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -295,17 +295,17 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Charisme</span>
+										<span class="fs18"Charisme</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -317,7 +317,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -718,6 +718,13 @@
 	background-color: orangered; 
 	margin-top: 25px
 	}
+	.fs18 {
+	font-size: 18px;
+	}
+	.fs14 {
+	font-size: 14px; 
+	text-align: center
+	}
 
     /* Footer */
     .barreOrangered {
@@ -869,9 +876,6 @@
 			height: 100%;
 			overflow-x: auto;
 		}
-        .content img {
-            height: 100%;
-        }
 		#footer {
 			background-color: red;
 			color: #fff;
@@ -1175,7 +1179,14 @@
 		font-size: 14px; 
 		}
 		.content .imgSkill {
-		width: 85%;
+		width: 100%;
+		}
+		.fs18 {
+		font-size: 14px;
+		}
+		.fs14 {
+		font-size: 10px; 
+		text-align: center
 		}
 		
 		/* Footer */
