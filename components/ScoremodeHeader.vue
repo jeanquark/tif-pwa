@@ -575,7 +575,7 @@
 
 		/* Header */
 		#header {
-			height: 125px;
+			height: 133px;
 			padding: 0;
 			top:0px;
 			left:0px;
