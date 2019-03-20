@@ -575,7 +575,7 @@
 
 		/* Header */
 		#header {
-			height: 114px;
+			height: 125px;
 			padding: 0;
 			top:0px;
 			left:0px;
@@ -590,7 +590,7 @@
 		.barreHeader {
 			position:absolute;
 			top: 70px;
-			height: 18px;
+			height: 25px;
 			width: 100%;
 			background-color: orangered;
 			z-index: -1;
@@ -603,24 +603,24 @@
 		}
 		.barreHeaderLeft1 {
 		margin-left: 25px;
-		margin-top: 2px;
+		margin-top: 4px;
 		color: white;
-		padding: 4px;
-		font-size: 0.9em;
+		padding: 6px;
+		font-size: 1.0em;
 		}
 		.barreHeaderLeft2 {
 		color: white; 
 		padding: 4px;
-		margin-top: 2px;
-		font-size: 0.9em;
+		margin-top: 4px;
+		font-size: 1.0em;
 		}
 		.barreHeaderRight {
 		margin-right: 25px; 
 		color: white; 
 		padding: 4px; 
 		float: right; 
-		margin-top: 2px;
-		font-size: 0.9em;
+		margin-top: 4px;
+		font-size: 1.0em;
 		}
 		.cadreHeader1 {
 		padding: 3px; 
