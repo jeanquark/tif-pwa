@@ -14,13 +14,13 @@
 					</v-flex>
 				</v-card-title>
 
-				<v-card-text class="card-text mx-2">
+				<v-card-text class="card-text mx-2" style="padding: 0">
 					<v-container fluid style="padding: 1px">
 						<v-layout row wrap style="margin: 1px">
 							<v-flex style="padding: 1px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs24">Baratin (Niv.1)</span>
+										<span class="fs24title">Baratin (Niv.1)</span>
 										<v-spacer></v-spacer>
 										<v-icon class="fs24">star</v-icon>
 										<v-icon class="fs24">star</v-icon>
@@ -28,7 +28,7 @@
 										<v-icon class="fs24">star</v-icon>
 										<v-icon class="fs24">star</v-icon>
 										<v-icon class="fs24">star</v-icon>
-										<v-icon class="fs24"">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
 										<v-icon class="fs24">star</v-icon>
 										<v-icon class="fs24">star</v-icon>
 										<v-icon style="color: orangered" class="fs24">star</v-icon>
@@ -48,9 +48,11 @@
 														<b>À débloquer :</b></br>
 														Démineur - Niv.1 (Baratin - Niv.2 + Technologie - Niv.2)
 													</div>
-													<div style="text-align: center; padding: 5px">
-														<img src="/images/stress.jpg" class="imgSkill" width="90%" />
-													</div>
+												</div>
+											</v-card-title>
+											<v-card-title primary-title style="text-align: center; padding: 0">
+												<div style="text-align: center; padding: 5px">
+													<img src="/images/stress.jpg" class="imgSkill" width="90%" />
 												</div>
 											</v-card-title>
 										</v-flex>
@@ -264,6 +266,9 @@ font-family: Acme;
 .fs24 {
 font-size: 24px;
 }
+.fs24title {
+font-size: 24px;
+}
 
     @media only screen and (max-width: 768px) {
 	.titleModalCards {
@@ -271,6 +276,9 @@ font-size: 24px;
 	}
 	.fs24 {
 	font-size: 14px;
+	}
+	.fs24title {
+	font-size: 18px;
 	}
 }
 
