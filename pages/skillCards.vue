@@ -50,9 +50,9 @@
 													</div>
 												</div>
 											</v-card-title>
-											<v-card-title primary-title style="text-align: center; padding: 0">
-												<div style="text-align: center; padding: 5px">
-													<img src="/images/stress.jpg" class="imgSkill" width="90%" />
+											<v-card-title primary-title class="text-xs-right" style="text-align: center; padding: 0">
+												<div>
+													<img src="/images/stress.jpg" class="imgSkill" width="100%" />
 												</div>
 											</v-card-title>
 										</v-flex>
