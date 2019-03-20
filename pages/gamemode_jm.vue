@@ -898,7 +898,7 @@
 		}
 		.vs { 
 		position: relative; 
-		top: 2px; 
+		top: 3px; 
 		font-size: 12px; 
 		color: orangered; 
 		text-shadow: none; 
@@ -911,6 +911,7 @@
 		color: orangered; 
 		text-shadow: none;
 		float: right;
+		margin-left: 5px;
 		}	
 		.dateHourMatch {
 		position: absolute; 
