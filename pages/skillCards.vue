@@ -34,7 +34,25 @@
 										<v-icon style="color: orangered" class="fs24">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
-									<v-layout>
+									<v-layout hidden-xs-only>
+										<v-flex xs12>
+											<v-card-title primary-title style="text-align: center; padding: 15px">
+												<div>											
+													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 10px; margin-bottom: 10px"></v-progress-linear><span class="progress-bar-txt-white" style="top: -27px">1%</span>
+													<div style="font-size: 12px; text-align: center; margin-bottom: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+													<div style="background-color: green; padding: 8px 5px 5px 5px; text-align: center; margin-top: 20px; border-radius: 5px">
+														<b>Dernière action débloquée :</b></br>
+														Vendeur de voiturette de golf - Niv.1
+													</div>
+													<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px">
+														<b>À débloquer :</b></br>
+														Démineur - Niv.1 (Baratin - Niv.2 + Technologie - Niv.2)
+													</div>
+												</div>
+											</v-card-title>
+										</v-flex>
+									</v-layout>
+									<v-layout hidden-sm-and-up>
 										<v-flex xs5 style="text-align: center; padding: 5px">
 											<img src="/images/stress.jpg" class="imgSkill" width="90%" />
 										</v-flex>
@@ -246,10 +264,10 @@ font-size: 24px;
 
     @media only screen and (max-width: 768px) {
 	.titleModalCards {
-	font-size: 1.2em; 
+	font-size: 1.5em; 
 	}
 	.fs24 {
-	font-size: 12px;
+	font-size: 14px;
 	}
 }
 
