@@ -104,7 +104,7 @@
             <div class="content" style="height: 100vh; background-color: black">
 				<v-layout>
 					<div>
-						<v-layout row style="max-height: 40px; width: 100%; text-align: center; background-color: orangered; margin-top: 25px">
+						<v-layout row class="menuSkill">
 							<v-flex xs4 sm4 md4 class="noactiveskill">
 								<nuxt-link to="/skillAttribut" style="text-decoration: none; color: white">Attribut</nuxt-link>
 							</v-flex>
@@ -434,11 +434,6 @@
         text-align: center;
     }
     
-    @media only screen and (min-width: 1000px) {
-        .content img {
-            height: 99%;
-        }
-    }
     /* End Content */
 
     /* Header */
@@ -716,7 +711,13 @@
     }   
     /* End Header */
     
-    
+    .menuSkill {
+	max-height: 40px; 
+	width: 100%; 
+	text-align: center; 
+	background-color: orangered; 
+	margin-top: 25px
+	}
 
     /* Footer */
     .barreOrangered {
@@ -1158,6 +1159,24 @@
 		font-feature-settings: 'liga';
 		}   
 		/* End Header */
+		
+		.menuSkill {
+		max-height: 25px; 
+		margin-top: 15px
+		}
+		.activeskill {
+		padding: 7px; 
+		font-size: 14px; 
+		height: 30px; 
+		margin-top: -6px; 
+		}
+		.noactiveskill {
+		padding: 6px; 
+		font-size: 14px; 
+		}
+		.content .imgSkill {
+		width: 85%;
+		}
 		
 		/* Footer */
 		.barreOrangered {
