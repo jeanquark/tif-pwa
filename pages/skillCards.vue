@@ -34,7 +34,7 @@
 										<v-icon style="color: orangered" class="fs24">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
-									<v-layout hidden-xs-only>
+									<v-layout hidden-sm-and-up>
 										<v-flex xs12>
 											<v-card-title primary-title style="text-align: center; padding: 15px">
 												<div>											
@@ -48,11 +48,14 @@
 														<b>À débloquer :</b></br>
 														Démineur - Niv.1 (Baratin - Niv.2 + Technologie - Niv.2)
 													</div>
+													<div style="text-align: center; padding: 5px">
+														<img src="/images/stress.jpg" class="imgSkill" width="90%" />
+													</div>
 												</div>
 											</v-card-title>
 										</v-flex>
 									</v-layout>
-									<v-layout hidden-sm-and-up>
+									<v-layout hidden-xs-only>
 										<v-flex xs5 style="text-align: center; padding: 5px">
 											<img src="/images/stress.jpg" class="imgSkill" width="90%" />
 										</v-flex>
