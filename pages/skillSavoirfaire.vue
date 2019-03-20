@@ -3,7 +3,7 @@
         <v-container style="padding: 0; max-width: 1017px;">
             <!-- Fixed Header -->
             <!-- <v-toolbar dark> -->
-            <div id="header" class="header">
+            <v-container fluid id="header" class="header">
                 <v-layout row>
                     <v-flex hidden-sm-and-down class="barreHeader">
                         <v-layout row>
@@ -21,7 +21,7 @@
                                 <span class="barreHeaderLeft1"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span class="barreHeaderLeft2">G. Manigley <nuxt-link to="/myteams" style="color: white; text-decoration: none">(Fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }})</nuxt-link></span>
                             </v-flex>
                             <v-flex xs6 sm6 md6>
-                                <span class="barreHeaderRight">1.34 point de ferveur</span>
+                                <span class="barreHeaderRight">Equipe de Suisse (1.34 PF)</span>
                             </v-flex>
                         </v-layout>
                     </v-flex>
@@ -36,11 +36,11 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
+                                <v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="30"></v-progress-linear><span class="progress-bar-txt-white">30%</span>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75"></v-progress-linear><span class="progress-bar-txt-black">75 / 100</span>
+                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75"></v-progress-linear><span class="progress-bar-txt-black">75%</span>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
@@ -65,11 +65,11 @@
                         <v-layout row>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
                                 <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="12" value="30"></v-progress-linear><span class="progress-bar-txt-white">3 / 10</span>
+                                <v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="12" value="30"></v-progress-linear><span class="progress-bar-txt-white">30%</span>
                             </v-flex>
                             <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
                                 <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="12" value="75"></v-progress-linear><span class="progress-bar-txt-black">75 / 100</span>
+                                <v-progress-linear class="progressYellow" color="yellow" height="12" value="75"></v-progress-linear><span class="progress-bar-txt-black">75%</span>
                                 <nuxt-link to="/plus" class="aPlusYellow">
                                 <span class="plusYellow">+</span>
                                 </nuxt-link>
@@ -98,10 +98,7 @@
                         </nuxt-link>
                     </v-flex>
                 </v-layout>
-            </div>
-
-
-            <!-- </v-toolbar> -->
+            </v-container>
             
             <!-- Scrollable content -->
             <div class="content" style="height: 100vh; background-color: black">
@@ -122,7 +119,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Musical</span>
+										<span class="fs18">Musical</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -144,7 +141,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -155,7 +152,7 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Artistique</span>
+										<span class="fs18">Artistique</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -177,7 +174,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -188,17 +185,17 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Ingénierie</span>
+										<span class="fs18">Ingénierie</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -210,7 +207,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -221,17 +218,17 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Médical</span>
+										<span class="fs18">Médical</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -243,7 +240,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -254,17 +251,17 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Technologique</span>
+										<span class="fs18">Technologique</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -276,7 +273,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -287,17 +284,17 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 18px">Débrouillardise</span>
+										<span class="fs18">Débrouillardise</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -309,7 +306,7 @@
 										<v-card-title primary-title style="text-align: center; padding: 15px">
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
@@ -398,10 +395,6 @@
 </script>
 
 <style scoped>
-	.orangered {
-	background-color: orangered;
-	border-color: orangered;
-	}
     body {
         margin: 0;
         padding: 0;
@@ -419,19 +412,16 @@
     .content {
         background-color: light-gray;;
         overflow-x: auto;
+        height: 100%;
     }
     #footer {
         background-color: red;
         color: #fff;
+        /*height: 100px;*/
         height: auto;
         text-align: center;
     }
     
-    @media only screen and (min-width: 1000px) {
-        .content img {
-            width: 100%;
-        }
-    }
     /* End Content */
 
     /* Header */
@@ -458,22 +448,21 @@
         padding: 0;
     }
 	.barreHeaderLeft1 {
-	margin-left: 100px; 
+	margin-left: 160px; 
 	float: left; 
-	margin-top: 4px;
+	margin-top: 6px;
 	}
 	.barreHeaderLeft2 {
 	color: white; 
-	padding: 4px; 
 	float: left; 
-	margin-top: 9px;
+	margin-top: 14px;
+    margin-left: 5px;
 	}
 	.barreHeaderRight {
-	margin-right: 100px; 
-	color: white; 
-	padding: 4px; 
+	margin-right: 160px; 
+	color: white;  
 	float: right; 
-	margin-top: 9px;
+	margin-top: 14px;
 	}
 	.cadreHeader1 {
 	padding: 20px; 
@@ -496,31 +485,27 @@
 	}
     #avatar {
         background-color: orangered;
-        border-right: 3px solid orangered;
-        border-bottom: 3px solid orangered;
-        box-shadow: 0 7px 5px black;
+        box-shadow: 0 3px 5px black;
         height: 150px;
         width: 150px;
-        border-radius: 0 0 100% 0;
+        border-radius: 0 0 0 0;
     }
     .imgAvatar {
         height: 100%;
         width: 100%;
-        border-radius: 0 0 100% 0;
+        border-radius: 0 0 0 0;
     }
     #team {
         background-color: orangered;
-        border-left: 3px solid orangered;
-        border-bottom: 3px solid orangered;
-        box-shadow: 0 7px 5px black;
+        box-shadow: 0 3px 5px black;
         height: 150px;
         width: 150px;
-        border-radius: 0 0 0 100%;
+        border-radius: 0 0 0 0;
     }
     .imgTeam {
         height: 100%;
         width: 100%;
-        border-radius: 0 0 0 100%;
+        border-radius: 0 0 0 0;
     }
     .imgTeamSmall {
         height: 20px;
@@ -618,10 +603,45 @@
         padding: 5px;
     }
 	.cadreScore {
-    width: 1000px;
+    width: 1017px;
     background-color: white;
     margin-top: 50px;
 	}
+	.nameTeam {
+	position: relative; 
+	font-size: 50px; 
+	color: orangered; 
+	text-decoration: none; 
+	text-transform: uppercase; 
+	top: 0px; 
+	left: 30px; 
+	text-shadow: black 3px 3px 2px;
+	}
+	.vs { 
+	position: relative; 
+	top: 3px; 
+	font-size: 15px; 
+	color: orangered; 
+	text-shadow: none; 
+	margin-left: 10px;
+	}
+	.nameOtherTeam {
+	position: relative; 
+	top: 3px; 
+	font-size: 25px; 
+	color: orangered; 
+	text-shadow: none; 
+	margin-left: 8px;
+	}
+	.dateHourMatch {
+	position: absolute; 
+	font-size: 15px; 
+	color: orangered; 
+	text-shadow: none; 
+	margin-right: 3px; 
+	margin-top: 3px; 
+	right: 0
+	}	
 	.pd-left5 {
 	padding-left: 5px;
 	}
@@ -679,7 +699,20 @@
     }   
     /* End Header */
     
-    
+    .menuSkill {
+	max-height: 40px; 
+	width: 100%; 
+	text-align: center; 
+	background-color: orangered; 
+	margin-top: 25px
+	}
+	.fs18 {
+	font-size: 18px;
+	}
+	.fs14 {
+	font-size: 14px; 
+	text-align: center
+	}
 
     /* Footer */
     .barreOrangered {
@@ -828,7 +861,7 @@
 		}
 		.content {
 			background-color: light-gray;;
-			/*flex-grow: 1;*/
+			height: 100%;
 			overflow-x: auto;
 		}
 		#footer {
@@ -842,7 +875,7 @@
 
 		/* Header */
 		#header {
-			max-height: 92px;
+			max-height: 100px;
 			padding: 0;
 			top:0px;
 			left:0px;
@@ -857,7 +890,7 @@
 		.barreHeader {
 			position:absolute;
 			top: 70px;
-			height: 18px;
+			height: 25px;
 			width: 100%;
 			background-color: orangered;
 			z-index: -1;
@@ -866,21 +899,19 @@
 		}
 		.barreHeaderLeft1 {
 		margin-left: 25px;
-		margin-top: 3px;
+		margin-top: 8px;
 		}
 		.barreHeaderLeft2 {
 		color: white; 
-		padding: 4px;
-		margin-top: 2px;
-		font-size: 0.8em;
+		margin-top: 9px;
+		font-size: 0.9em;
 		}
 		.barreHeaderRight {
 		margin-right: 25px; 
 		color: white; 
-		padding: 4px; 
 		float: right; 
-		margin-top: 2px;
-		font-size: 0.8em;
+		margin-top: 9px;
+		font-size: 0.9em;
 		}
 		.cadreHeader1 {
 		padding: 3px; 
@@ -903,31 +934,27 @@
 		}
 		#avatar {
 			background-color: orangered;
-			border-right: 2px solid orangered;
-			border-bottom: 2px solid orangered;
 			box-shadow: 0 2px 2px black;
 			height: 70px;
 			width: 70px;
-			border-radius: 0 0 100% 0;
+			border-radius: 0 0 0 0;
 		}
 		.imgAvatar {
 			height: 100%;
 			width: 100%;
-			border-radius: 0 0 100% 0;
+			border-radius: 0 0 0 0;
 		}
 		#team {
 			background-color: orangered;
-			border-left: 2px solid orangered;
-			border-bottom: 2px solid orangered;
 			box-shadow: 0 2px 2px black;
 			height: 70px;
 			width: 70px;
-			border-radius: 0 0 0 100%;
+			border-radius: 0 0 0 0;
 		}
 		.imgTeam {
 			height: 100%;
 			width: 100%;
-			border-radius: 0 0 0 100%;
+			border-radius: 0 0 0 0;
 		}
 		.imgTeamSmall {
 			height: 12px;
@@ -935,11 +962,15 @@
 		}
 		.levelHeader {
 			font-weight: 700;
-			font-size: 12px;  /* Preferred icon size */
+			font-size: 11px;  /* Preferred icon size */
 			background-color: orangered;
 			color: white;
 			border-radius: 5px;
-			margin-top: 15px;
+			margin-top: 16px;
+			padding: 3px;
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;		
 		}
 		.plusOrangered {
 			position: absolute;
@@ -972,7 +1003,7 @@
 		color: black; 
 		border-radius: 5px;
 		height: 11px;
-		margin-top: 18px;
+		margin-top: 12px;
 		}
 		.progress-bar-txt-black {
 			position: relative;
@@ -1047,22 +1078,55 @@
 			font-size: 0.8em;
 		}
 		.cadreScore {
-		border: 2px solid orangered;
-		padding: 5px;
-		width: 95%;
+		width: 100%;
 		background-color: whitesmoke;
 		opacity: 0.9;
 		color: black;
 		margin: 0;
-		top: 105px;
-		left: 10px;
-		right: 10px;
+		top: 130px;
+		padding: 5px;
 		}
+		.nameTeam {
+		position: relative; 
+		font-size: 22px; 
+		color: orangered; 
+		text-decoration: none; 
+		text-transform: uppercase; 
+		top: 0px; 
+		left: 5px; 
+		text-shadow: black 2px 1px 1px;
+		}
+		.vs { 
+		position: relative; 
+		top: 3px; 
+		font-size: 12px; 
+		color: orangered; 
+		text-shadow: none; 
+		margin-left: 3px;
+		float: right;
+		}	
+		.nameOtherTeam {
+		position: relative; 
+		font-size: 18px; 
+		color: orangered; 
+		text-shadow: none;
+		float: right;
+		margin-left: 5px;
+		}	
+		.dateHourMatch {
+		position: absolute; 
+		font-size: 10px; 
+		color: orangered; 
+		text-shadow: none; 
+		margin-right: 3px; 
+		margin-top: 3px; 
+		right: 0
+		}	
 		.material-icons.md-48 { 
-		font-size: 30px;
-		margin-top: 5px;
+		font-size: 22px;
+		margin-top: 13px;
 		}
-				.material-icons {
+		.material-icons {
 		font-family: 'Material Icons';
 		font-weight: normal;
 		font-style: normal;
@@ -1087,6 +1151,31 @@
 		font-feature-settings: 'liga';
 		}   
 		/* End Header */
+		
+		.menuSkill {
+		max-height: 25px; 
+		margin-top: 15px
+		}
+		.activeskill {
+		padding: 7px; 
+		font-size: 14px; 
+		height: 30px; 
+		margin-top: -6px; 
+		}
+		.noactiveskill {
+		padding: 6px; 
+		font-size: 14px; 
+		}
+		.content .imgSkill {
+		width: 100%;
+		}
+		.fs18 {
+		font-size: 14px;
+		}
+		.fs14 {
+		font-size: 10px; 
+		text-align: center
+		}
 		
 		/* Footer */
 		.barreOrangered {

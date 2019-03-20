@@ -155,7 +155,7 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18"Travail d'équipe</span>
+										<span class="fs18">Travail d'équipe</span>
 										<v-spacer></v-spacer>
 										<v-icon class="fs18">star</v-icon>
 										<v-icon class="fs18">star</v-icon>
@@ -190,7 +190,7 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18"Leadership</span>
+										<span class="fs18">Leadership</span>
 										<v-spacer></v-spacer>
 										<v-icon class="fs18">star</v-icon>
 										<v-icon class="fs18">star</v-icon>
@@ -225,7 +225,7 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18"Savoir-vivre</span>
+										<span class="fs18">Savoir-vivre</span>
 										<v-spacer></v-spacer>
 										<v-icon class="fs18">star</v-icon>
 										<v-icon class="fs18">star</v-icon>
@@ -260,7 +260,7 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18"Humour</span>
+										<span class="fs18">Humour</span>
 										<v-spacer></v-spacer>
 										<v-icon class="fs18">star</v-icon>
 										<v-icon class="fs18">star</v-icon>
@@ -295,7 +295,7 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18"Charisme</span>
+										<span class="fs18">Charisme</span>
 										<v-spacer></v-spacer>
 										<v-icon class="fs18">star</v-icon>
 										<v-icon class="fs18">star</v-icon>
