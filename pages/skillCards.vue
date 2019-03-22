@@ -10,7 +10,7 @@
 						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
 					</v-flex>
 					<v-flex xs3 hidden-sm-and-up class="text-xs-right">
-						<fa :icon="['fas', 'arrow-circle-left']" size="1x" class="icon" @click="goBack" />
+						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
 					</v-flex>
 				</v-card-title>
 
@@ -38,7 +38,7 @@
 										<v-flex xs12>
 											<v-card-title primary-title style="text-align: center; padding: 15px">
 												<div>											
-													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 10px; margin-bottom: 10px"></v-progress-linear><span class="progress-bar-txt-white" style="top: -27px">1%</span>
+													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 													<div style="font-size: 12px; text-align: center; margin-bottom: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 													<div style="background-color: green; padding: 8px 5px 5px 5px; text-align: center; margin-top: 20px; border-radius: 5px">
 														<b>Dernière action débloquée :</b></br>
@@ -50,9 +50,9 @@
 													</div>
 												</div>
 											</v-card-title>
-											<v-card-title primary-title class="text-xs-right" style="justify-content: center; padding: 0">
+											<v-card-title primary-title class="text-xs-center" style="justify-content: center; padding: 0">
 												<div>
-													<img src="/images/stress.jpg" class="imgSkill" width="100%" />
+													<img src="/images/stress.jpg" class="imgSkill" width="80%" />
 												</div>
 											</v-card-title>
 										</v-flex>
