@@ -166,7 +166,7 @@
                                 <span class="textMenu">Aujourd'hui</span></nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link to="/myinventory"><img src="/images/menuInventory.png">
+                                <nuxt-link to="/inventoryCards"><img src="/images/menuInventory.png">
                                 <span class="textMenu">Mon inventaire</span></nuxt-link>
                             </li>
                             <li>

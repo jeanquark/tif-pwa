@@ -106,30 +106,31 @@
 					<div>
 						<v-layout row class="menuSkill">
 							<v-flex xs4 sm4 md4 class="noactiveskill">
-								<nuxt-link to="/skillAttribut" style="text-decoration: none; color: white">Attribut</nuxt-link>
-							</v-flex>
-							<v-flex xs4 sm4 md4 class="noactiveskill">
-								<nuxt-link to="/skillInfluence" style="text-decoration: none; color: white">Influence</nuxt-link>
+								<nuxt-link to="/inventoryAvatar" style="text-decoration: none; color: white">Avatar</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm4 md4 class="activeskill">
-								<nuxt-link to="/skillSavoirfaire" style="text-decoration: none; color: white">Savoir-faire</nuxt-link>
+								<nuxt-link to="/inventoryCards" style="text-decoration: none; color: white">Inventaire</nuxt-link>
+							</v-flex>
+							<v-flex xs4 sm4 md4 class="noactiveskill">
+								<nuxt-link to="/inventoryHome" style="text-decoration: none; color: white">Appartement</nuxt-link>
 							</v-flex>
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18">Musical</span>
+										<span class="fs18">Baratin</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -148,21 +149,23 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18">Artistique</span>
+										<span class="fs18">Travail d'équipe</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
-										<v-icon style="font-size: 18px">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
@@ -181,11 +184,13 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18">Ingénierie</span>
+										<span class="fs18">Leadership</span>
 										<v-spacer></v-spacer>
 										<v-icon class="fs18">star</v-icon>
 										<v-icon class="fs18">star</v-icon>
@@ -214,11 +219,13 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18">Médical</span>
+										<span class="fs18">Savoir-vivre</span>
 										<v-spacer></v-spacer>
 										<v-icon class="fs18">star</v-icon>
 										<v-icon class="fs18">star</v-icon>
@@ -247,11 +254,13 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18">Technologique</span>
+										<span class="fs18">Humour</span>
 										<v-spacer></v-spacer>
 										<v-icon class="fs18">star</v-icon>
 										<v-icon class="fs18">star</v-icon>
@@ -280,11 +289,13 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18">Débrouillardise</span>
+										<span class="fs18">Charisme</span>
 										<v-spacer></v-spacer>
 										<v-icon class="fs18">star</v-icon>
 										<v-icon class="fs18">star</v-icon>
@@ -313,6 +324,7 @@
 									</v-flex>
 									</v-layout>
 								</v-card>
+								</nuxt-link>
 							</v-flex>
 						</v-layout>
 					</div>
@@ -333,7 +345,7 @@
                                 <nuxt-link to="/myresult"><img src="/images/menuClassement.png">
                                 <span class="textMenu">Mes classements</span></nuxt-link>
                             </li>
-                            <li id="active">
+                            <li>
                                 <nuxt-link to="/skillInfluence"><img src="/images/menuSkill.png">
                                 <span class="textMenu">Mes compétences</span></nuxt-link>
                             </li>
@@ -341,7 +353,7 @@
                                 <nuxt-link to="/gamemode_jm"><img src="/images/menuAgenda.png">
                                 <span class="textMenu">Aujourd'hui</span></nuxt-link>
                             </li>
-                            <li>
+                            <li id="active">
                                 <nuxt-link to="/inventoryCards"><img src="/images/menuInventory.png">
                                 <span class="textMenu">Mon inventaire</span></nuxt-link>
                             </li>
@@ -842,7 +854,7 @@
 	.content .imgSkill {
 	width: 85%;
 	}
-    
+	   
     /* Small screens */
     @media only screen and (max-width: 768px) {
 		body {
