@@ -103,7 +103,7 @@
             <!-- Scrollable content -->
             <div class="content" style="height: 100vh; background-color: black">
 				<v-layout>
-					<div>
+					<v-flex xs12 sm12 md12>
 						<v-layout row class="menuInventoryCards">
 							<v-flex xs4 sm4 md4 class="activeinventory">
 								<nuxt-link to="/inventoryAvatar" style="text-decoration: none; color: white">Avatar</nuxt-link>
@@ -115,7 +115,7 @@
 								<nuxt-link to="/inventoryHome" style="text-decoration: none; color: white">Appartement</nuxt-link>
 							</v-flex>
 						</v-layout>
-					</div>
+					</v-flex>
 				</v-layout>
 			</div>
             
