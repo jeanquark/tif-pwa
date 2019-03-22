@@ -105,13 +105,13 @@
 				<v-layout>
 					<div>
 						<v-layout row class="menuSkill">
-							<v-flex xs4 sm4 md4 class="noactiveskill">
+							<v-flex xs4 sm4 md4 class="noactiveinventory">
 								<nuxt-link to="/inventoryAvatar" style="text-decoration: none; color: white">Avatar</nuxt-link>
 							</v-flex>
-							<v-flex xs4 sm4 md4 class="activeskill">
+							<v-flex xs4 sm4 md4 class="activeinventory">
 								<nuxt-link to="/inventoryCards" style="text-decoration: none; color: white">Inventaire</nuxt-link>
 							</v-flex>
-							<v-flex xs4 sm4 md4 class="noactiveskill">
+							<v-flex xs4 sm4 md4 class="noactiveinventory">
 								<nuxt-link to="/inventoryHome" style="text-decoration: none; color: white">Appartement</nuxt-link>
 							</v-flex>
 						</v-layout>
@@ -715,7 +715,7 @@
 	max-height: 40px; 
 	width: 100%; 
 	text-align: center; 
-	background-color: orangered; 
+	background-color: #2956B2; 
 	margin-top: 25px
 	}
 	.fs18 {
@@ -835,9 +835,9 @@
 	
 	.activeskill {
 	padding: 16px; 
-	border: 2px solid orangered; 
+	border: 2px solid #2956B2; 
 	background-color: black; 
-	color: orangered; 
+	color: #2956B2; 
 	font-size: 20px; 
 	height: 50px; 
 	margin-top: -10px; 
