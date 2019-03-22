@@ -41,11 +41,11 @@
 													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 10px; margin-bottom: 10px"></v-progress-linear><span class="progress-bar-txt-white" style="top: -27px">1%</span>
 													<div style="font-size: 14px; text-align: center; margin-bottom: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
 													<div style="background-color: green; padding: 8px 5px 5px 5px; text-align: center; margin-top: 20px; border-radius: 5px">
-														<b>Dernière action débloquée :</b></br>
+														<b>Dernière action débloquée :</b><br />
 														Vendeur de voiturette de golf - Niv.1
 													</div>
 													<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px">
-														<b>À débloquer :</b></br>
+														<b>À débloquer :</b><br />
 														Démineur - Niv.1 (Baratin - Niv.2 + Technologie - Niv.2)
 													</div>
 												</div>

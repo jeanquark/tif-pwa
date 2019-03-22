@@ -42,11 +42,28 @@ module.exports = app.use(async function(req, res, next) {
             });
         });
 
-        // 2) Second, make request
-        let updates = {};
-        const league = req.body.league_id;
+        // 2) Second, fetch all active competitions
+        const competitionsArray = [];
+        const competitions = await admin.database().ref('/competitions').once('value');
+        competitions.forEach(competition => {
+            if (competition.val().status === 'active') {
+                competitionsArray.push({
+                    name: competition.val().name,
+                    slug: competition.val().slug,
+                    apifootball_id: competition.val().apifootball_id,
+                    status: competition.val().status,
+                    countries: competition.val().countries
+                });
+            }
+        });
 
-        const response = await getLeagueMatches(league);
+        // 3) Third, make request
+        let updates = {};
+        const league_id = req.body.league_id;
+        console.log('league_id: ', league_id);
+        const competition = competitionsArray.find(competition => competition.apifootball_id == league_id)
+
+        const response = await getLeagueMatches(league_id);
 
         Object.values(response.body.api.fixtures).forEach(match => {
             const homeTeamData = teamsArray.find(team => parseInt(team.apifootball_id) === parseInt(match.homeTeam_id));
@@ -68,10 +85,11 @@ module.exports = app.use(async function(req, res, next) {
             }
 
             const id = match.fixture_id;
+            const round_short = match.round.substring(match.round.lastIndexOf('-') + 2);
             // Only add present and future fixtures to database
-            const yesterday = moment().subtract(1, 'days').unix();
+            // const yesterday = moment().subtract(1, 'days').unix();
 
-            if (match.event_timestamp > yesterday) {
+            // if (match.event_timestamp > yesterday) {
                 updates[`/events_new3/${id}/id`] = id;
                 updates[`/events_new3/${id}/date_iso8601`] = match.event_date;
                 updates[`/events_new3/${id}/date`] = moment(match.event_date).format('YYYY-MM-DD');
@@ -80,6 +98,7 @@ module.exports = app.use(async function(req, res, next) {
                 updates[`/events_new3/${id}/timestamp`] = match.event_timestamp;
                 updates[`/events_new3/${id}/league_id`] = match.league_id;
                 updates[`/events_new3/${id}/round`] = match.round;
+                updates[`/events_new3/${id}/round_short`] = round_short;
                 updates[`/events_new3/${id}/homeTeam_id`] = match.homeTeam_id;
                 updates[`/events_new3/${id}/homeTeam_name`] = match.homeTeam;
                 updates[`/events_new3/${id}/homeTeam_slug`] = homeTeam_slug;
@@ -94,15 +113,17 @@ module.exports = app.use(async function(req, res, next) {
                 updates[`/events_new3/${id}/elapsed`] = match.elapsed;
                 updates[`/events_new3/${id}/status`] = match.status;
                 updates[`/events_new3/${id}/statusShort`] = match.statusShort;
-            }
+                updates[`/events_new3/${id}/league_name`] = competition.name;
+                updates[`/events_new3/${id}/league_slug`] = competition.slug;
+            // }
         });
 
         const snapshot = await admin.database().ref().update(updates);
 
-        res.send(`GET request to APIFootball to fetch league ${league} matches succeeded!`);
+        res.send(`GET request to APIFootball to fetch league ${league_id} matches succeeded!`);
         
     } catch (error) {
         console.log("APIFootball error: ", error);
-        res.end(`GET request to APIFootball to fetch league ${league} matches failed: ${error}`);
+        res.end(`GET request to APIFootball to fetch league ${league_id} matches failed: ${error}`);
     }
 });

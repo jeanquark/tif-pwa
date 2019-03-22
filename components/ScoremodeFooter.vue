@@ -1,4 +1,5 @@
 <template>
+	<v-container>
 		<!-- Fixed Footer -->
 		<div id="footer">
 			<!-- <br /><br /><br />

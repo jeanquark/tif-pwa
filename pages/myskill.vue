@@ -145,7 +145,7 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
+												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -178,7 +178,7 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Le match commence dans 2 mintues et tu es toujours au local… dépêche toi !</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
+												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -211,7 +211,7 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
+												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -244,7 +244,7 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
+												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -277,7 +277,7 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
+												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -310,7 +310,7 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div style="font-size: 14px; text-align: center">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b></br>Démineur - Niv. 1</div>
+												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>

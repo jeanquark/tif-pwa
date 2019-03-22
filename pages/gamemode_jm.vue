@@ -118,7 +118,7 @@
 						<v-flex xs12 style="margin: 0; height: 100%">
 							<v-layout align-start>
 								<div class="nameTeam">
-									Espagnol Barcelone</br>
+									Espagnol Barcelone<br />
 									<span class="nameOtherTeam">Real Madrid</span> <span class="vs">VS</span> 
 								</div>
 								<span class="dateHourMatch">Mardi, 12 mars 2019 à 19:00</span>

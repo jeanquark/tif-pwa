@@ -134,7 +134,7 @@ module.exports = {
         //     handler: "~/serverMiddleware/api/fetchNextPremierLeagueMatches"
         // },
         {
-            path: "/api/fetch-league-matches", // POST request with league_id as body data
+            path: "/api/fetch-league-matches", // POST request with { league_id = 2 } as body data
             handler: "~/serverMiddleware/api/fetchLeagueMatches"
         },
         {
