@@ -833,7 +833,7 @@
     }
     /* End Footer */
 	
-	.activeskill {
+	.activeinventory {
 	padding: 16px; 
 	border: 2px solid #2956B2; 
 	background-color: black; 
@@ -844,7 +844,7 @@
 	font-weight: 700;
 	}
 	
-	.noactiveskill {
+	.noactiveinventory {
 	padding: 12px; 
 	border: 1px solid black; 
 	font-size: 20px; 
@@ -1168,13 +1168,13 @@
 		max-height: 25px; 
 		margin-top: 15px
 		}
-		.activeskill {
+		.activeinventory {
 		padding: 7px; 
 		font-size: 14px; 
 		height: 30px; 
 		margin-top: -6px; 
 		}
-		.noactiveskill {
+		.noactiveinventory {
 		padding: 6px; 
 		font-size: 14px; 
 		}
