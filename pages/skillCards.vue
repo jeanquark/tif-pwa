@@ -3,35 +3,61 @@
 		<v-flex xs12 sm10 md8 lg6>
 			<v-card class="card">
 				<v-card-title primary-title>
-					<v-flex xs6>
-						<h1 class="text-xs-left" style="color: white; font-family: Acme">Mes compétences - Influence</h1>
+					<v-flex xs9>
+						<span class="titleModalCards text-xs-left">Mes compétences - Influence</span>
 					</v-flex>
-					<v-flex xs6 class="text-xs-right">
+					<v-flex xs3 hidden-xs-only class="text-xs-right">
+						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
+					</v-flex>
+					<v-flex xs3 hidden-sm-and-up class="text-xs-right">
 						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
 					</v-flex>
 				</v-card-title>
 
-				<v-card-text class="card-text mx-3">
-					<v-container fluid style="padding: 5px">
-						<v-layout row wrap style="margin: 5px">
-							<v-flex style="padding: 5px">
+				<v-card-text class="card-text mx-2" style="padding: 0">
+					<v-container fluid style="padding: 1px">
+						<v-layout row wrap style="margin: 1px">
+							<v-flex style="padding: 1px">
 								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span style="font-size: 24px">Baratin (Niv.1)</span>
+										<span class="fs24title">Baratin (Niv.1)</span>
 										<v-spacer></v-spacer>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="font-size: 24px">star</v-icon>
-										<v-icon style="color: orangered; font-size: 24px">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon class="fs24">star</v-icon>
+										<v-icon style="color: orangered" class="fs24">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
-									<v-layout>
+									<v-layout hidden-sm-and-up>
+										<v-flex xs12>
+											<v-card-title primary-title style="text-align: center; padding: 15px">
+												<div>											
+													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
+													<div style="font-size: 12px; text-align: center; margin-bottom: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+													<div style="background-color: green; padding: 8px 5px 5px 5px; text-align: center; margin-top: 20px; border-radius: 5px">
+														<b>Dernière action débloquée :</b><br />
+														Vendeur de voiturette de golf - Niv.1
+													</div>
+													<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px">
+														<b>À débloquer :</b><br />
+														Démineur - Niv.1 (Baratin - Niv.2 + Technologie - Niv.2)
+													</div>
+												</div>
+											</v-card-title>
+											<v-card-title primary-title class="text-xs-center" style="justify-content: center; padding: 0">
+												<div>
+													<img src="/images/stress.jpg" class="imgSkill" width="80%" />
+												</div>
+											</v-card-title>
+										</v-flex>
+									</v-layout>
+									<v-layout hidden-xs-only>
 										<v-flex xs5 style="text-align: center; padding: 5px">
 											<img src="/images/stress.jpg" class="imgSkill" width="90%" />
 										</v-flex>
@@ -232,4 +258,28 @@ border: 6px solid orangered;
 	color: white;
 	font-weight: 700;
 }
+.titleModalCards {
+font-size: 2.0em; 
+color: white; 
+font-family: Acme;
+}
+.fs24 {
+font-size: 24px;
+}
+.fs24title {
+font-size: 24px;
+}
+
+    @media only screen and (max-width: 768px) {
+	.titleModalCards {
+	font-size: 1.5em; 
+	}
+	.fs24 {
+	font-size: 14px;
+	}
+	.fs24title {
+	font-size: 18px;
+	}
+}
+
 </style>

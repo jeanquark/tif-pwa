@@ -747,9 +747,9 @@
 			font: normal 90%/1 "Acme", Helvetica, sans-serif;
 		}
 		.content {
-			background-color: light-gray;;
-			/*flex-grow: 1;*/
 			overflow-x: auto;
+			margin-top: 3px;
+			background-color: black;
 		}
 		#footer {
 			background-color: red;
@@ -762,7 +762,7 @@
 
 		/* Header */
 		#header {
-			height: 114px;
+			height: 120px;
 			padding: 0;
 			top:0px;
 			left:0px;
