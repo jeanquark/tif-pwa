@@ -323,6 +323,7 @@
 								</v-card>
 								</nuxt-link>
 							</v-flex>
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
