@@ -164,7 +164,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkill" />
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -215,7 +215,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkill" />
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -266,7 +266,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkill" />
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -317,7 +317,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkill" />
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -368,7 +368,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkill" />
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -419,7 +419,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkill" />
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -1287,7 +1287,7 @@
 		padding: 6px; 
 		font-size: 14px; 
 		}
-		.content .imgSkill {
+		.content .imgSkillMobile {
 		width: 55%;
 		}
 		.fs18 {
