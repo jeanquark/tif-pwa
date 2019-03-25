@@ -10,7 +10,7 @@
 						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
 					</v-flex>
 					<v-flex xs3 hidden-sm-and-up class="text-xs-right">
-						<fa :icon="['fas', 'arrow-circle-left']" size="1x" class="icon" @click="goBack" />
+						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
 					</v-flex>
 				</v-card-title>
 

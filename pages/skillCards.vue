@@ -52,7 +52,7 @@
 											</v-card-title>
 											<v-card-title primary-title class="text-xs-center" style="justify-content: center; padding: 0">
 												<div>
-													<img src="/images/stress.jpg" class="imgSkill" width="80%" />
+													<img src="/images/stress.jpg" class="imgSkill" width="70%" />
 												</div>
 											</v-card-title>
 										</v-flex>
