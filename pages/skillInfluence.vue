@@ -104,12 +104,9 @@
             <div class="content" style="height: 100vh; background-color: black">
 				<v-layout>
 					<div>
-						<v-layout text-xs-center class="infoSkill">
-							<div>
-								Tu dois développer les compétences de ton fan pour débloquer de nouvelles cartes actions !</br>
-								Mais aussi pour rapporter toujours plus de point de ferveur à tes équipes favorites !
-							</div>
-						</v-layout>
+						<div class="infoSkill">
+							Tu dois développer les compétences de ton fan pour débloquer de nouvelles cartes actions et augmenter tes points de ferveur !
+						</div>
 						<v-layout row class="menuSkill">
 							<v-flex xs4 sm4 md4 class="noactiveskill">
 								<nuxt-link to="/skillAttribut" style="text-decoration: none; color: white">Attribut</nuxt-link>
@@ -122,7 +119,7 @@
 							</v-flex>
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
-							<v-flex xs12 sm6 md6 style="padding: 5px" hidden-xs-only>
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -149,7 +146,6 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -174,7 +170,7 @@
 								</v-card>
 								</nuxt-link>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px" hidden-xs-only>
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -201,7 +197,6 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -226,7 +221,7 @@
 								</v-card>
 								</nuxt-link>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px" hidden-xs-only>
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -253,7 +248,6 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -278,7 +272,7 @@
 								</v-card>
 								</nuxt-link>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px" hidden-xs-only>
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -305,7 +299,6 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -330,7 +323,6 @@
 								</v-card>
 								</nuxt-link>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -357,7 +349,6 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -382,7 +373,7 @@
 								</v-card>
 								</nuxt-link>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px" hidden-xs-only>
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -409,7 +400,6 @@
 											<div>											
 												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
 												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
 											</div>
 										</v-card-title>
 									</v-flex>
@@ -824,7 +814,7 @@
 	width: 100%; 
 	text-align: center; 
 	background-color: orangered; 
-	margin-top: 25px
+	margin-top: 10px
 	}
 	.fs18 {
 	font-size: 18px;
@@ -966,7 +956,7 @@
 	}
 	
 	.content .imgSkill {
-	width: 85%;
+	width: 75%;
 	}
 	   
     /* Small screens */
@@ -1280,7 +1270,7 @@
 		
 		.menuSkill {
 		max-height: 25px; 
-		margin-top: 15px
+		margin-top: 10px
 		}
 		.activeskill {
 		padding: 7px; 
@@ -1293,7 +1283,7 @@
 		font-size: 14px; 
 		}
 		.content .imgSkill {
-		width: 80%;
+		width: 60%;
 		}
 		.fs18 {
 		font-size: 14px;
@@ -1319,8 +1309,9 @@
 			background-color: black;
 		}
 		.infoSkill {
-		font-size: 0.9em;
+		font-size: 0.8em;
 		padding: 5px;
+		padding-bottom: 0;
 		}
 			
         /* Menu */
