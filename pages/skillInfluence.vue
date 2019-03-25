@@ -102,7 +102,7 @@
             
             <!-- Scrollable content -->
             <div class="content" style="height: 100vh; background-color: black">
-				<v-layout>
+				<v-layout hidden-xs-only>
 					<div>
 						<v-layout row class="menuSkill">
 							<v-flex xs4 sm4 md4 class="noactiveskill">
