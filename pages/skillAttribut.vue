@@ -276,7 +276,7 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18">Résistance au stress</span>
+										<span class="fs18">Zenitude</span>
 										<v-spacer></v-spacer>
 										<v-icon style="font-size: 18px">star</v-icon>
 										<v-icon style="font-size: 18px">star</v-icon>
@@ -310,7 +310,7 @@
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs18">Résistance au stress</span>
+										<span class="fs18">Zenitude</span>
 										<v-spacer></v-spacer>
 										<v-icon class="fs18" style="color: orangered">star</v-icon> Niv. 1
 									</v-card-actions>
