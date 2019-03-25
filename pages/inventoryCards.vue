@@ -816,12 +816,12 @@
     }   
     /* End Header */
     
-    .menuInventoryCards {
+    .menuSkill {
 	max-height: 40px; 
 	width: 100%; 
 	text-align: center; 
-	background-color: #2956B2; 
-	margin-top: 25px
+	background-color: orangered; 
+	margin-top: 10px
 	}
 	.fs18 {
 	font-size: 18px;
@@ -846,6 +846,12 @@
         height: 8px;
         background-color: black;
     }
+	.infoSkill {
+	color: white;
+	font-size: 1.0em;
+	text-align: center;
+	padding: 10px;
+	}
     
     #dock-container {
         height: 80px;
@@ -938,18 +944,18 @@
     }
     /* End Footer */
 	
-	.activeinventory {
+	.activeskill {
 	padding: 16px; 
-	border: 2px solid #2956B2; 
+	border: 2px solid orangered; 
 	background-color: black; 
-	color: #2956B2; 
+	color: orangered; 
 	font-size: 20px; 
 	height: 50px; 
 	margin-top: -10px; 
 	font-weight: 700;
 	}
 	
-	.noactiveinventory {
+	.noactiveskill {
 	padding: 12px; 
 	border: 1px solid black; 
 	font-size: 20px; 
@@ -957,16 +963,12 @@
 	}
 	
 	.content .imgSkill {
-	width: 85%;
+	width: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: 0.5;
 	}
-	
-	.infoInventory {
-	color: white;
-	font-size: 1.0em;
-	text-align: center;
-	padding: 10px;
-	}
-	
 	   
     /* Small screens */
     @media only screen and (max-width: 768px) {
@@ -1277,22 +1279,22 @@
 		}   
 		/* End Header */
 		
-		.menuInventoryCards {
+		.menuSkill {
 		max-height: 25px; 
 		margin-top: 15px
 		}
-		.activeinventory {
+		.activeskill {
 		padding: 7px; 
 		font-size: 14px; 
 		height: 30px; 
 		margin-top: -6px; 
 		}
-		.noactiveinventory {
+		.noactiveskill {
 		padding: 6px; 
 		font-size: 14px; 
 		}
-		.content .imgSkill {
-		width: 100%;
+		.content .imgSkillMobile {
+		width: 55%;
 		}
 		.fs18 {
 		font-size: 14px;
@@ -1316,6 +1318,11 @@
 			margin: 0;
 			height: 4px;
 			background-color: black;
+		}
+		.infoSkill {
+		font-size: 0.8em;
+		padding: 5px;
+		padding-bottom: 0;
 		}
 			
         /* Menu */
