@@ -104,9 +104,10 @@
             <div class="content" style="height: 100vh; background-color: black">
 				<v-layout>
 					<div>
-						<v-layout row class="infoSkill" style="color: white">
-							<v-flex xs12 text-xs-center>
-								Tu dois développer les compétences de ton fan pour débloquer de nouvelles cartes actions ! Mais aussi pour rapporter toujours plus de point de ferveur à tes équipes favorites !
+						<v-layout text-xs-center class="infoSkill">
+							<div>
+								Tu dois développer les compétences de ton fan pour débloquer de nouvelles cartes actions !</br>
+								Mais aussi pour rapporter toujours plus de point de ferveur à tes équipes favorites !
 							</div>
 						</v-layout>
 						<v-layout row class="menuSkill">
@@ -848,6 +849,12 @@
         height: 8px;
         background-color: black;
     }
+	.infoSkill {
+	color: white;
+	font-size: 1.0em;
+	text-align: center;
+	padding: 10px;
+	}
     
     #dock-container {
         height: 80px;
@@ -1310,6 +1317,10 @@
 			margin: 0;
 			height: 4px;
 			background-color: black;
+		}
+		.infoSkill {
+		font-size: 0.9em;
+		padding: 5px;
 		}
 			
         /* Menu */
