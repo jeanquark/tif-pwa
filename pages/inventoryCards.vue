@@ -104,6 +104,9 @@
             <div class="content" style="height: 100vh; background-color: black">
 				<v-layout>
 					<div>
+						<div class="infoInventory">
+							Tu dois habiller ton fan et décorer son appartement pour rapporter encore plus de point de ferveur à tes équipes favorites !
+						</div>
 						<v-layout row class="menuInventoryCards">
 							<v-flex xs4 sm4 md4 class="noactiveinventory">
 								<nuxt-link to="/inventoryAvatar" style="text-decoration: none; color: white">Avatar</nuxt-link>
@@ -116,7 +119,7 @@
 							</v-flex>
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
-							<v-flex xs12 sm6 md6 style="padding: 5px">
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -134,24 +137,41 @@
 										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
-									<v-layout>
-										<v-flex xs4 style="text-align: center; padding: 5px">
+									<v-layout style="position: relative">
+										<v-flex xs4 style="text-align: center; padding: 0">
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
-									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 15px">
-											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(16,34,70)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-											</div>
-										</v-card-title>
-									</v-flex>
+										<v-flex xs8 style="position: relative">
+											<v-card-title primary-title style="text-align: center; padding: 15px">
+												<div>											
+													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
+													<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+													<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
+												</div>
+											</v-card-title>
+										</v-flex>
 									</v-layout>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px">
+							<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Baratin</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18" style="color: #2956B2">star</v-icon> Niv. 1
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
+										</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -169,24 +189,41 @@
 										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
-									<v-layout>
-										<v-flex xs4 style="text-align: center; padding: 5px">
+									<v-layout style="position: relative">
+										<v-flex xs4 style="text-align: center; padding: 0">
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
-									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 15px">
-											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(16,34,70)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-											</div>
-										</v-card-title>
-									</v-flex>
+										<v-flex xs8 style="position: relative">
+											<v-card-title primary-title style="text-align: center; padding: 15px">
+												<div>											
+													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
+													<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+													<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
+												</div>
+											</v-card-title>
+										</v-flex>
 									</v-layout>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px">
+							<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Travail d'équipe</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18" style="color: #2956B2">star</v-icon> Niv. 1
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
+										</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -204,24 +241,41 @@
 										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
-									<v-layout>
-										<v-flex xs4 style="text-align: center; padding: 5px">
+									<v-layout style="position: relative">
+										<v-flex xs4 style="text-align: center; padding: 0">
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
-									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 15px">
-											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(16,34,70)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-											</div>
-										</v-card-title>
-									</v-flex>
+										<v-flex xs8 style="position: relative">
+											<v-card-title primary-title style="text-align: center; padding: 15px">
+												<div>											
+													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
+													<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+													<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
+												</div>
+											</v-card-title>
+										</v-flex>
 									</v-layout>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px">
+							<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Leadership</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18" style="color: #2956B2">star</v-icon> Niv. 1
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
+										</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -239,24 +293,41 @@
 										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
-									<v-layout>
-										<v-flex xs4 style="text-align: center; padding: 5px">
+									<v-layout style="position: relative">
+										<v-flex xs4 style="text-align: center; padding: 0">
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
-									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 15px">
-											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(16,34,70)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-											</div>
-										</v-card-title>
-									</v-flex>
+										<v-flex xs8 style="position: relative">
+											<v-card-title primary-title style="text-align: center; padding: 15px">
+												<div>											
+													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
+													<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+													<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
+												</div>
+											</v-card-title>
+										</v-flex>
 									</v-layout>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px">
+							<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Savoir-vivre</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18" style="color: #2956B2">star</v-icon> Niv. 1
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
+										</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -274,24 +345,41 @@
 										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
-									<v-layout>
-										<v-flex xs4 style="text-align: center; padding: 5px">
+									<v-layout style="position: relative">
+										<v-flex xs4 style="text-align: center; padding: 0">
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
-									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 15px">
-											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(16,34,70)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-											</div>
-										</v-card-title>
-									</v-flex>
+										<v-flex xs8 style="position: relative">
+											<v-card-title primary-title style="text-align: center; padding: 15px">
+												<div>											
+													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
+													<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+													<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
+												</div>
+											</v-card-title>
+										</v-flex>
 									</v-layout>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px">
+							<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Humour</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18" style="color: #2956B2">star</v-icon> Niv. 1
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
+										</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 								<nuxt-link to="/skillCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
@@ -309,19 +397,36 @@
 										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-divider light></v-divider>
-									<v-layout>
-										<v-flex xs4 style="text-align: center; padding: 5px">
+									<v-layout style="position: relative">
+										<v-flex xs4 style="text-align: center; padding: 0">
 											<img src="/images/stress.jpg" class="imgSkill" />
 										</v-flex>
-									<v-flex xs8>
-										<v-card-title primary-title style="text-align: center; padding: 15px">
-											<div>											
-												<v-progress-linear class="progressOrange" color="rgb(16,34,70)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-												<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-											</div>
-										</v-card-title>
-									</v-flex>
+										<v-flex xs8 style="position: relative">
+											<v-card-title primary-title style="text-align: center; padding: 15px">
+												<div>											
+													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
+													<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+													<div style="background-color: #2956B2; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
+												</div>
+											</v-card-title>
+										</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Charisme</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18" style="color: #2956B2">star</v-icon> Niv. 1
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkillMobile" />
+										</v-flex>
 									</v-layout>
 								</v-card>
 								</nuxt-link>
@@ -854,6 +959,14 @@
 	.content .imgSkill {
 	width: 85%;
 	}
+	
+	.infoInventory {
+	color: white;
+	font-size: 1.0em;
+	text-align: center;
+	padding: 10px;
+	}
+	
 	   
     /* Small screens */
     @media only screen and (max-width: 768px) {
