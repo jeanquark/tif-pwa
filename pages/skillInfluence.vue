@@ -104,6 +104,11 @@
             <div class="content" style="height: 100vh; background-color: black">
 				<v-layout hidden-xs-only>
 					<div>
+						<v-layout row class="infoSkill">
+							<v-flex xs12 text-xs-center>
+								Tu dois développer les compétences de ton fan pour débloquer de nouvelles cartes actions ! Mais aussi pour rapporter toujours plus de point de ferveur à tes équipes favorites !
+							</div>
+						</v-layout>
 						<v-layout row class="menuSkill">
 							<v-flex xs4 sm4 md4 class="noactiveskill">
 								<nuxt-link to="/skillAttribut" style="text-decoration: none; color: white">Attribut</nuxt-link>
@@ -322,6 +327,149 @@
 											</div>
 										</v-card-title>
 									</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+						</v-layout>
+					</div>
+				</v-layout>
+				
+				<v-layout hidden-sm-and-up>
+					<div>
+						<v-layout row class="infoSkill">
+							<v-flex xs12 text-xs-center>
+								Tu dois développer les compétences de ton fan pour débloquer de nouvelles cartes actions ! Mais aussi pour rapporter toujours plus de point de ferveur à tes équipes favorites !
+							</div>
+						</v-layout>
+						<v-layout row class="menuSkill">
+							<v-flex xs4 sm4 md4 class="noactiveskill">
+								<nuxt-link to="/skillAttribut" style="text-decoration: none; color: white">Attribut</nuxt-link>
+							</v-flex>
+							<v-flex xs4 sm4 md4 class="activeskill">
+								<nuxt-link to="/skillInfluence" style="text-decoration: none; color: white">Influence</nuxt-link>
+							</v-flex>
+							<v-flex xs4 sm4 md4 class="noactiveskill">
+								<nuxt-link to="/skillSavoirfaire" style="text-decoration: none; color: white">Savoir-faire</nuxt-link>
+							</v-flex>
+						</v-layout>
+						<v-layout row wrap style="margin-top: 15px; margin: 10px">
+							<v-flex xs6 style="padding: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Baratin</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18">star</v-icon> Niv. 1
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
+										</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex xs6 style="padding: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Travail d'équipe</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18">star</v-icon> Niv. 1
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
+										</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex xs6 style="padding: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Leadership</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18">star</v-icon> Niv. 1
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
+										</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex xs6 style="padding: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Savoir-vivre</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18">star</v-icon> Niv. 1
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
+										</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex xs6 style="padding: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Humour</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs4 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
+										</v-flex>
+									<v-flex xs8>
+										<v-card-title primary-title style="text-align: center; padding: 15px">
+											<div>											
+												<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
+												<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
+												<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
+											</div>
+										</v-card-title>
+									</v-flex>
+									</v-layout>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex xs6 style="padding: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="fs18">Charisme</span>
+										<v-spacer></v-spacer>
+										<v-icon class="fs18">star</v-icon> Niv. 1
+									</v-card-actions>
+									<v-divider light></v-divider>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 5px">
+											<img src="/images/stress.jpg" class="imgSkill" />
+										</v-flex>
 									</v-layout>
 								</v-card>
 								</nuxt-link>
