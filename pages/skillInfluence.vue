@@ -1290,7 +1290,7 @@
 		font-size: 14px; 
 		}
 		.content .imgSkill {
-		width: 60%;
+		width: 55%;
 		}
 		.fs18 {
 		font-size: 14px;
