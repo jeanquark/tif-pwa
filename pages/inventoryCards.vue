@@ -846,7 +846,7 @@
         height: 8px;
         background-color: black;
     }
-	.infoSkill {
+	.infoInventory {
 	color: white;
 	font-size: 1.0em;
 	text-align: center;
@@ -1319,7 +1319,7 @@
 			height: 4px;
 			background-color: black;
 		}
-		.infoSkill {
+		.infoInventory {
 		font-size: 0.8em;
 		padding: 5px;
 		padding-bottom: 0;
