@@ -131,10 +131,9 @@
 										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
-									<v-divider light></v-divider>
-									<v-layout style="position: relative">
+									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgSkill" />
+											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -152,10 +151,9 @@
 										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
-									<v-divider light></v-divider>
-									<v-layout style="position: relative">
+									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgSkill" />
+											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -173,10 +171,9 @@
 										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
-									<v-divider light></v-divider>
-									<v-layout style="position: relative">
+									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgSkill" />
+											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -194,10 +191,9 @@
 										<v-icon class="fs18">star</v-icon>
 										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
-									<v-divider light></v-divider>
-									<v-layout style="position: relative">
+									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgSkill" />
+											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -741,10 +737,6 @@
 	
 	.content .imgSkill {
 	width: 50%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	opacity: 0.5;
 	}
 	   
     /* Small screens */
