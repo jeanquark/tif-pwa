@@ -107,7 +107,7 @@
 						<div class="infoInventory">
 							Tu dois habiller ton fan et décorer son appartement pour rapporter encore plus de point de ferveur à tes équipes favorites !
 						</div>
-						<v-layout row class="menuInventoryCards">
+						<v-layout row class="menuInventory">
 							<v-flex xs4 sm4 md4 class="noactiveinventory">
 								<nuxt-link to="/inventoryAvatar" style="text-decoration: none; color: white">Avatar</nuxt-link>
 							</v-flex>
@@ -816,7 +816,7 @@
     }   
     /* End Header */
     
-    .menuSkill {
+    .menuInventory {
 	max-height: 40px; 
 	width: 100%; 
 	text-align: center; 
