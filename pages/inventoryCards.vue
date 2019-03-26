@@ -148,189 +148,175 @@
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/skillCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2"/>
+										<img src="/images/switzerland.png" class="imgTeamInventory" />
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; right: 5px; z-index: 3">
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
-										</div>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgInventory" style="position: absolute; z-index: 1; top: 0; left: 0"/>
+											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="inventoryBadge fs18" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Torse</span>
+										<span class="inventoryBadge fs18">Tête</span>
 										<v-spacer></v-spacer>
-										<span class="inventoryCheck fs18" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>cancel</v-icon></span>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/skillCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2"/>
+										<img src="/images/switzerland.png" class="imgTeamInventory" />
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; right: 5px; z-index: 3">
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
-										</div>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgInventory" style="position: absolute; z-index: 1; top: 0; left: 0"/>
+											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="inventoryBadge fs18" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Torse</span>
+										<span class="inventoryBadge fs18">Torse</span>
 										<v-spacer></v-spacer>
-										<span class="inventoryCheck fs18" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>cancel</v-icon></span>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/skillCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2"/>
+										<img src="/images/switzerland.png" class="imgTeamInventory" />
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; right: 5px; z-index: 3">
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
-										</div>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgInventory" style="position: absolute; z-index: 1; top: 0; left: 0"/>
+											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="inventoryBadge fs18" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Torse</span>
+										<span class="inventoryBadge fs18">Tête</span>
 										<v-spacer></v-spacer>
-										<span class="inventoryCheck fs18" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>cancel</v-icon></span>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/skillCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2"/>
+										<img src="/images/switzerland.png" class="imgTeamInventory" />
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; right: 5px; z-index: 3">
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
-										</div>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgInventory" style="position: absolute; z-index: 1; top: 0; left: 0"/>
+											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="inventoryBadge fs18" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Torse</span>
+										<span class="inventoryBadge fs18">Torse</span>
 										<v-spacer></v-spacer>
-										<span class="inventoryCheck fs18" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>cancel</v-icon></span>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/skillCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2"/>
+										<img src="/images/switzerland.png" class="imgTeamInventory" />
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; right: 5px; z-index: 3">
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
-										</div>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgInventory" style="position: absolute; z-index: 1; top: 0; left: 0"/>
+											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="inventoryBadge fs18" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Torse</span>
+										<span class="inventoryBadge fs18">Tête</span>
 										<v-spacer></v-spacer>
-										<span class="inventoryCheck fs18" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>cancel</v-icon></span>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/skillCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2"/>
+										<img src="/images/switzerland.png" class="imgTeamInventory" />
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; right: 5px; z-index: 3">
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
-										</div>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgInventory" style="position: absolute; z-index: 1; top: 0; left: 0"/>
+											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="inventoryBadge fs18" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Torse</span>
+										<span class="inventoryBadge fs18">Torse</span>
 										<v-spacer></v-spacer>
-										<span class="inventoryCheck fs18" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>cancel</v-icon></span>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/skillCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2"/>
+										<img src="/images/switzerland.png" class="imgTeamInventory" />
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; right: 5px; z-index: 3">
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon class="fs18">star</v-icon>
-											<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
-										</div>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgInventory" style="position: absolute; z-index: 1; top: 0; left: 0"/>
+											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="inventoryBadge fs18" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Torse</span>
+										<span class="inventoryBadge fs18">Tête</span>
 										<v-spacer></v-spacer>
-										<span class="inventoryCheck fs18" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>cancel</v-icon></span>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
