@@ -137,9 +137,9 @@
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span>Torse</span>
+										<span class="inventoryBadge fs18">Torse</span>
 										<v-spacer></v-spacer>
-										<span>Mis <v-icon class="fs18">check_circle</v-icon>
+										<v-btn color="primary" dark>Porté<v-icon dark right>cancel</v-icon></v-btn>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
@@ -162,9 +162,9 @@
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span>Tête</span>
+										<span class="inventoryBadge fs18">Tête</span>
 										<v-spacer></v-spacer>
-										<span>Mis <v-icon class="fs18">cancel</v-icon>
+										<v-btn color="primary" dark>Placard<v-icon dark right>check_circle</v-icon></v-btn>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
@@ -186,6 +186,11 @@
 											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="inventoryBadge fs18">Torse</span>
+										<v-spacer></v-spacer>
+										<v-btn color="primary" dark>Porté<v-icon dark right>cancel</v-icon></v-btn>
+									</v-card-actions>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
@@ -206,6 +211,111 @@
 											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="inventoryBadge fs18">Tête</span>
+										<v-spacer></v-spacer>
+										<v-btn color="primary" dark>Placard<v-icon dark right>check_circle</v-icon></v-btn>
+									</v-card-actions>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex xs6 sm3 md3 style="padding: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<img src="/images/switzerland.png" class="imgTeamInventory" />
+										<v-spacer></v-spacer>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
+									</v-card-actions>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 0">
+											<img src="/images/stress.jpg" class="imgInventory" />
+										</v-flex>
+									</v-layout>
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="inventoryBadge fs18">Torse</span>
+										<v-spacer></v-spacer>
+										<v-btn color="primary" dark>Porté<v-icon dark right>cancel</v-icon></v-btn>
+									</v-card-actions>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex xs6 sm3 md3 style="padding: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<img src="/images/switzerland.png" class="imgTeamInventory" />
+										<v-spacer></v-spacer>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
+									</v-card-actions>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 0">
+											<img src="/images/stress.jpg" class="imgInventory" />
+										</v-flex>
+									</v-layout>
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="inventoryBadge fs18">Tête</span>
+										<v-spacer></v-spacer>
+										<v-btn color="primary" dark>Placard<v-icon dark right>check_circle</v-icon></v-btn>
+									</v-card-actions>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex xs6 sm3 md3 style="padding: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<img src="/images/switzerland.png" class="imgTeamInventory" />
+										<v-spacer></v-spacer>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
+									</v-card-actions>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 0">
+											<img src="/images/stress.jpg" class="imgInventory" />
+										</v-flex>
+									</v-layout>
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="inventoryBadge fs18">Torse</span>
+										<v-spacer></v-spacer>
+										<v-btn color="primary" dark>Porté<v-icon dark right>cancel</v-icon></v-btn>
+									</v-card-actions>
+								</v-card>
+								</nuxt-link>
+							</v-flex>
+							<v-flex xs6 sm3 md3 style="padding: 5px">
+								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px">
+									<v-card-actions style="padding: 5px; text-align: center">
+										<img src="/images/switzerland.png" class="imgTeamInventory" />
+										<v-spacer></v-spacer>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon class="fs18">star</v-icon>
+										<v-icon style="color: #2956B2; font-size: 18px">star</v-icon>
+									</v-card-actions>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 0">
+											<img src="/images/stress.jpg" class="imgInventory" />
+										</v-flex>
+									</v-layout>
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="inventoryBadge fs18">Tête</span>
+										<v-spacer></v-spacer>
+										<v-btn color="primary" dark>Placard<v-icon dark right>check_circle</v-icon></v-btn>
+									</v-card-actions>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
@@ -747,6 +857,12 @@
 	
 	.content .imgInventory {
 	width: 75%;
+	}
+	
+	.inventoryBadge {
+	padding: 3px;
+	background-color: red;
+	color: white;
 	}
 	   
     /* Small screens */
