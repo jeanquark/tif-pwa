@@ -136,6 +136,11 @@
 											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span>Torse</span>
+										<v-spacer></v-spacer>
+										<span>Mis <v-icon class="fs18">check_circle</v-icon>
+									</v-card-actions>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
@@ -156,6 +161,11 @@
 											<img src="/images/stress.jpg" class="imgInventory" />
 										</v-flex>
 									</v-layout>
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span>Tête</span>
+										<v-spacer></v-spacer>
+										<span>Mis <v-icon class="fs18">cancel</v-icon>
+									</v-card-actions>
 								</v-card>
 								</nuxt-link>
 							</v-flex>
@@ -735,8 +745,8 @@
 	font-weight: 700;
 	}
 	
-	.content .imgSkill {
-	width: 50%;
+	.content .imgInventory {
+	width: 75%;
 	}
 	   
     /* Small screens */
