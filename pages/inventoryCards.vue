@@ -139,7 +139,7 @@
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span class="inventoryBadge fs18">Torse</span>
 										<v-spacer></v-spacer>
-										<v-btn color="primary" dark>Porté<v-icon dark right>cancel</v-icon></v-btn>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
@@ -164,7 +164,7 @@
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span class="inventoryBadge fs18">Tête</span>
 										<v-spacer></v-spacer>
-										<v-btn color="primary" dark>Placard<v-icon dark right>check_circle</v-icon></v-btn>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
@@ -189,7 +189,7 @@
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span class="inventoryBadge fs18">Torse</span>
 										<v-spacer></v-spacer>
-										<v-btn color="primary" dark>Porté<v-icon dark right>cancel</v-icon></v-btn>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
@@ -214,7 +214,7 @@
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span class="inventoryBadge fs18">Tête</span>
 										<v-spacer></v-spacer>
-										<v-btn color="primary" dark>Placard<v-icon dark right>check_circle</v-icon></v-btn>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
@@ -239,7 +239,7 @@
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span class="inventoryBadge fs18">Torse</span>
 										<v-spacer></v-spacer>
-										<v-btn color="primary" dark>Porté<v-icon dark right>cancel</v-icon></v-btn>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
@@ -264,7 +264,7 @@
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span class="inventoryBadge fs18">Tête</span>
 										<v-spacer></v-spacer>
-										<v-btn color="primary" dark>Placard<v-icon dark right>check_circle</v-icon></v-btn>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
@@ -289,7 +289,7 @@
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span class="inventoryBadge fs18">Torse</span>
 										<v-spacer></v-spacer>
-										<v-btn color="primary" dark>Porté<v-icon dark right>cancel</v-icon></v-btn>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
@@ -314,7 +314,7 @@
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span class="inventoryBadge fs18">Tête</span>
 										<v-spacer></v-spacer>
-										<v-btn color="primary" dark>Placard<v-icon dark right>check_circle</v-icon></v-btn>
+										<span class="inventoryBadge fs18">Porté <v-icon dark right>cancel</v-icon></span>
 									</v-card-actions>
 								</v-card>
 								</nuxt-link>
@@ -713,7 +713,7 @@
 	max-height: 40px; 
 	width: 100%; 
 	text-align: center; 
-	background-color: orangered; 
+	background-color: #2956B2; 
 	margin-top: 10px
 	}
 	.fs18 {
@@ -839,9 +839,9 @@
 	
 	.activeinventory {
 	padding: 16px; 
-	border: 2px solid orangered; 
+	border: 2px solid #2956B2; 
 	background-color: black; 
-	color: orangered; 
+	color: #2956B2; 
 	font-size: 20px; 
 	height: 50px; 
 	margin-top: -10px; 
