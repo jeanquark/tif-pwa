@@ -165,7 +165,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkillMobile" />
+											<img src="/images/stress.jpg" class="imgInventoryMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -217,7 +217,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkillMobile" />
+											<img src="/images/stress.jpg" class="imgInventoryMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -269,7 +269,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkillMobile" />
+											<img src="/images/stress.jpg" class="imgInventoryMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -321,7 +321,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkillMobile" />
+											<img src="/images/stress.jpg" class="imgInventoryMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -373,7 +373,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkillMobile" />
+											<img src="/images/stress.jpg" class="imgInventoryMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -425,7 +425,7 @@
 									<v-divider light></v-divider>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkillMobile" />
+											<img src="/images/stress.jpg" class="imgInventoryMobile" />
 										</v-flex>
 									</v-layout>
 								</v-card>
@@ -1279,21 +1279,21 @@
 		}   
 		/* End Header */
 		
-		.menuSkill {
+		.menuInventory {
 		max-height: 25px; 
 		margin-top: 15px
 		}
-		.activeskill {
+		.activeinventory {
 		padding: 7px; 
 		font-size: 14px; 
 		height: 30px; 
 		margin-top: -6px; 
 		}
-		.noactiveskill {
+		.noactiveinventory {
 		padding: 6px; 
 		font-size: 14px; 
 		}
-		.content .imgSkillMobile {
+		.content .imgInventoryMobile {
 		width: 55%;
 		}
 		.fs18 {
