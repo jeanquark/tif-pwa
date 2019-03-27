@@ -172,7 +172,7 @@
 <style scoped>
 .divtexte {
 padding: 75px 20px; 
-text-align: center
+text-align: center;
 }
 .pftexte {
 font-size: 20px; 
@@ -283,8 +283,8 @@ font-size: 24px;
 
     @media only screen and (max-width: 768px) {
 	.divtexte {
-	padding: 20px; 
-	text-align: center
+	padding: 15px; 
+	text-align: center;
 	}
 	.pftexte {
 	font-size: 14px; 
