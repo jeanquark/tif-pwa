@@ -120,7 +120,7 @@
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
 							<v-flex xs4 sm3 md3 style="padding: 5px">
-								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<nuxt-link to="/inventoryCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
@@ -141,7 +141,7 @@
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
-								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<nuxt-link to="/inventoryCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/42.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
@@ -162,7 +162,7 @@
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
-								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<nuxt-link to="/inventoryCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
@@ -183,7 +183,7 @@
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
-								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<nuxt-link to="/inventoryCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
@@ -204,7 +204,7 @@
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
-								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<nuxt-link to="/inventoryCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/42.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
@@ -225,7 +225,7 @@
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
-								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<nuxt-link to="/inventoryCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
@@ -246,7 +246,7 @@
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
-								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<nuxt-link to="/inventoryCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
@@ -267,7 +267,7 @@
 								</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
-								<nuxt-link to="/skillCards" style="text-decoration: none">
+								<nuxt-link to="/inventoryCards" style="text-decoration: none">
 								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>

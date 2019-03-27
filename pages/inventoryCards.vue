@@ -82,7 +82,7 @@
 
 				<v-card-actions class="card-footer">
 					<v-flex class="text-xs-center">
-						<v-btn nuxt color="error" to="/skillInfluence" class="elevation-1" style="margin-bottom: 20px">Retour</v-btn>
+						<v-btn nuxt color="error" to="/inventoryMain" class="elevation-1" style="margin-bottom: 20px">Retour</v-btn>
 					</v-flex>
 				</v-card-actions>
 			</v-card>
@@ -181,7 +181,7 @@
                 this.selectedTeams = []
             },
 			goBack() {
-				this.$router.replace("/skillInfluence")
+				this.$router.replace("/inventoryMain")
 			},
 			logout() {
 				console.log("Clicked logout button")
