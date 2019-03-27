@@ -174,8 +174,8 @@
 	width: 15%;
 	border-radius: 0 0 0 0;
 }
-.content .imgInventory {
-width: 70%;
+.imgInventory {
+width: 100%;
 }
 .inventoryBadgeAvatar {
 padding: 3px;
@@ -274,6 +274,9 @@ font-size: 24px;
 }
 
     @media only screen and (max-width: 768px) {
+	.imgInventory {
+	width: 80%;
+	}
 	.titleModalCards {
 	font-size: 1.5em; 
 	}
