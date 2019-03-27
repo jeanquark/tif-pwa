@@ -118,27 +118,25 @@
 								<nuxt-link to="/inventoryHome" style="text-decoration: none; color: white">Appartement</nuxt-link>
 							</v-flex>
 						</v-layout>
-						<v-layout row wrap style="margin-top: 15px; margin: 10px">
+						<v-layout row wrap style="margin-top: 15px">
 							<v-flex xs12 sm12 md12 style="padding: 5px">
-								<nuxt-link to="/inventoryCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
-									<v-card-actions style="padding: 5px; text-align: center">
-										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
+								<div style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+									<div style="padding: 5px; text-align: center">
+										<div style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
 										<v-spacer></v-spacer>
-										<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Collector</span>
-									</v-card-actions>
+										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
+									</div>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
 											<img src="/images/stress.jpg" class="imgInventory"/>
 										</v-flex>
 									</v-layout>
-									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="inventoryBadgeAvatar fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Tête</span>
+									<div style="padding: 5px; text-align: center">
+										<div style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
 										<v-spacer></v-spacer>
-										<span class="inventoryCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>check_circle</v-icon></span>
-									</v-card-actions>
-								</v-card>
-								</nuxt-link>
+										<div style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
+									</div>
+								</div>
 							</v-flex>
 						</v-layout>
 					</div>
