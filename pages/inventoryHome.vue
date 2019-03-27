@@ -103,19 +103,22 @@
             <!-- Scrollable content -->
             <div class="content" style="height: 100vh; background-color: black">
 				<v-layout>
-					<v-flex xs12 sm12 md12>
-						<v-layout row class="menuinventoryMain">
-							<v-flex xs4 sm4 md4 class="noactiveinventory">
+					<div style="width: 100%">
+						<div class="infoInventory">
+							Tu dois habiller ton fan et décorer son appartement pour rapporter encore plus de point de ferveur à tes équipes favorites !
+						</div>
+						<v-layout row class="menuInventory">
+							<v-flex xs4 sm4 md4 class="noactiveinventoryavatar">
 								<nuxt-link to="/inventoryAvatar" style="text-decoration: none; color: white">Avatar</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm4 md4 class="noactiveinventory">
 								<nuxt-link to="/inventoryMain" style="text-decoration: none; color: white">Inventaire</nuxt-link>
 							</v-flex>
-							<v-flex xs4 sm4 md4 class="activeinventory">
+							<v-flex xs4 sm4 md4 class="activeinventoryappartement">
 								<nuxt-link to="/inventoryHome" style="text-decoration: none; color: white">Appartement</nuxt-link>
 							</v-flex>
 						</v-layout>
-					</v-flex>
+					</div>
 				</v-layout>
 			</div>
             
@@ -305,6 +308,10 @@
     .imgTeam {
         height: 100%;
         width: 100%;
+        border-radius: 0 0 0 0;
+    }
+    .imgTeamInventory {
+        width: 15%;
         border-radius: 0 0 0 0;
     }
     .imgTeamSmall {
@@ -499,15 +506,15 @@
     }   
     /* End Header */
     
-    .menuinventoryMain {
+    .menuInventory {
 	max-height: 40px; 
 	width: 100%; 
 	text-align: center; 
-	background-color: #2956B2; 
-	margin-top: 25px
+	background-color: orangered; 
+	margin-top: 10px
 	}
-	.fs18 {
-	font-size: 18px;
+	.fs16 {
+	font-size: 16px;
 	}
 	.fs14 {
 	font-size: 14px; 
@@ -529,6 +536,12 @@
         height: 8px;
         background-color: black;
     }
+	.infoInventory {
+	color: white;
+	font-size: 1.0em;
+	text-align: center;
+	padding: 10px;
+	}
     
     #dock-container {
         height: 80px;
@@ -623,9 +636,9 @@
 	
 	.activeinventory {
 	padding: 16px; 
-	border: 2px solid #2956B2; 
+	border: 2px solid orangered; 
 	background-color: black; 
-	color: #2956B2; 
+	color: orangered; 
 	font-size: 20px; 
 	height: 50px; 
 	margin-top: -10px; 
@@ -637,10 +650,74 @@
 	border: 1px solid black; 
 	font-size: 20px; 
 	font-weight: 700;
+	background-color: orangered;
 	}
 	
-	.content .imgSkill {
-	width: 85%;
+	.activeinventoryavatar {
+	padding: 16px; 
+	border: 2px solid #ff950d; 
+	background-color: black; 
+	color: #ff950d; 
+	font-size: 20px; 
+	height: 50px; 
+	margin-top: -10px; 
+	font-weight: 700;
+	}
+	
+	.noactiveinventoryavatar {
+	padding: 12px; 
+	border: 1px solid black; 
+	font-size: 20px; 
+	font-weight: 700;
+	background-color: #ff950d;
+	}
+
+	.activeinventoryappartement {
+	padding: 16px; 
+	border: 2px solid #b23d12; 
+	background-color: black; 
+	color: #b23d12; 
+	font-size: 20px; 
+	height: 50px; 
+	margin-top: -10px; 
+	font-weight: 700;
+	}
+	
+	.noactiveinventoryappartement {
+	padding: 12px; 
+	border: 1px solid black; 
+	font-size: 20px; 
+	font-weight: 700;
+	background-color: #b23d12;
+	}
+	
+	.content .imgInventory {
+	width: 70%;
+	}
+	
+	.inventoryBadgeAvatar {
+	padding: 3px;
+	background-color: #ff950d;
+	color: white;
+	border-radius: 5px;
+	}
+	.inventoryBadgeAppartement {
+	padding: 3px;
+	background-color: #b23d12;
+	color: white;
+	border-radius: 5px;
+	}
+	.inventoryCheck {
+	padding: 2px;
+	background-color: green;
+	color: white;
+	border-radius: 5px;
+	}
+	.inventoryNoCheck {
+	padding: 2px;
+	background-color: red;
+	color: white;
+	border-radius: 5px;
 	}
 	   
     /* Small screens */
@@ -952,7 +1029,7 @@
 		}   
 		/* End Header */
 		
-		.menuinventoryMain {
+		.menuInventory {
 		max-height: 25px; 
 		margin-top: 15px
 		}
@@ -966,10 +1043,10 @@
 		padding: 6px; 
 		font-size: 14px; 
 		}
-		.content .imgSkill {
-		width: 100%;
+		.content .imgInventoryMobile {
+		width: 55%;
 		}
-		.fs18 {
+		.fs16 {
 		font-size: 14px;
 		}
 		.fs14 {
@@ -991,6 +1068,11 @@
 			margin: 0;
 			height: 4px;
 			background-color: black;
+		}
+		.infoInventory {
+		font-size: 0.8em;
+		padding: 5px;
+		padding-bottom: 0;
 		}
 			
         /* Menu */
