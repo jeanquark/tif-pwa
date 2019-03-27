@@ -120,7 +120,7 @@
 						</v-layout>
 						<v-layout row wrap style="margin-top: 15px">
 							<v-flex xs12 sm12 md12 style="padding: 5px">
-								<div style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<div style="position: relative">
 									<div style="padding: 5px; text-align: center">
 										<div style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
 										<v-spacer></v-spacer>
@@ -713,7 +713,8 @@
 	}
 	
 	.content .imgInventory {
-	width: 70%;
+	width: 100%;
+	opacity: 0.5;
 	}
 	
 	.inventoryBadgeAvatar {
