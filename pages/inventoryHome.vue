@@ -104,12 +104,12 @@
             <div class="content" style="height: 100vh; background-color: black">
 				<v-layout>
 					<v-flex xs12 sm12 md12>
-						<v-layout row class="menuInventoryCards">
+						<v-layout row class="menuinventoryMain">
 							<v-flex xs4 sm4 md4 class="noactiveinventory">
 								<nuxt-link to="/inventoryAvatar" style="text-decoration: none; color: white">Avatar</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm4 md4 class="noactiveinventory">
-								<nuxt-link to="/inventoryCards" style="text-decoration: none; color: white">Inventaire</nuxt-link>
+								<nuxt-link to="/inventoryMain" style="text-decoration: none; color: white">Inventaire</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm4 md4 class="activeinventory">
 								<nuxt-link to="/inventoryHome" style="text-decoration: none; color: white">Appartement</nuxt-link>
@@ -142,7 +142,7 @@
                                 <span class="textMenu">Aujourd'hui</span></nuxt-link>
                             </li>
                             <li id="active">
-                                <nuxt-link to="/inventoryCards"><img src="/images/menuInventory.png">
+                                <nuxt-link to="/inventoryMain"><img src="/images/menuInventory.png">
                                 <span class="textMenu">Mon inventaire</span></nuxt-link>
                             </li>
                             <li>
@@ -499,7 +499,7 @@
     }   
     /* End Header */
     
-    .menuInventoryCards {
+    .menuinventoryMain {
 	max-height: 40px; 
 	width: 100%; 
 	text-align: center; 
@@ -952,7 +952,7 @@
 		}   
 		/* End Header */
 		
-		.menuInventoryCards {
+		.menuinventoryMain {
 		max-height: 25px; 
 		margin-top: 15px
 		}
