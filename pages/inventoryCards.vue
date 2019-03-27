@@ -36,15 +36,16 @@
 									</v-card-actions>
 								</v-card>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding: 5px">
+							<v-flex xs12 sm6 md6 style="padding-top: 20px">
 								<v-card style="min-height: 100%">
 									<div style="padding: 5px; text-align: center">
-										<span class="fs16"><b>Point de ferveur que tu apportes à ton équipes favorites en fonction d'où tu regardes le match :</b></span>
-										<div>
+										<span class="fs18" style="font-weight: 700; margin-top: 10px"><b>Point de ferveur que tu apportes à ton équipes favorites en fonction d'où tu regardes le match :</b></span>
+										<div style="font-size: 16px; padding: 10px">
 										Au stade : 0.1 PF</br>
 										Au pub : 0.1 PF</br>
 										Sur le canapé : 0.1 PF
 										</div>
+										<span class="fs18" style="font-weight: 700; margin-top: 10px">Conseil de Mr Fan : Si tu mets ton maillot au match d'une autre équipe, tu risques d'avoir des problèmes !</span>
 									</div>
 								</v-card>
 							</v-flex>
@@ -194,6 +195,9 @@ border-radius: 5px;
 .fs16 {
 font-size: 16px;
 }
+.fs18 {
+font-size: 18px;
+}
 body {
 font: normal 100%/1 "Acme", Helvetica, sans-serif;
 }
@@ -275,6 +279,9 @@ font-size: 24px;
 	}
 	.fs24title {
 	font-size: 18px;
+	}
+	.fs18 {
+	font-size: 14px;
 	}
 	.fs16 {
 	font-size: 12px;
