@@ -16,9 +16,9 @@
 
 				<v-card-text class="card-text mx-2" style="padding: 0">
 					<v-container fluid style="padding: 1px">
-						<v-layout row wrap style="margin: 1px">
+						<v-layout row wrap style="margin: 1px; background-color: white; border: 2px solid #2956B2; border-radius: 5px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 										<v-spacer></v-spacer>
@@ -37,7 +37,7 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 100%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<h6>Point de ferveur en fonction d'où tu regardes le match</h6>
 										Au stade : 0.1 PF</br>
