@@ -1059,6 +1059,10 @@
 		height: 30px; 
 		margin-top: -6px; 
 		}
+		.noactiveinventoryappartement {
+		padding: 6px; 
+		font-size: 14px; 
+		}
 		.content .imgInventoryMobile {
 		width: 55%;
 		}
