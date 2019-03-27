@@ -123,8 +123,10 @@
 								<div style="position: relative">
 									<div style="padding: 5px; text-align: center">
 										<div style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
+										<div style="position: absolute; top: 60px; left: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
 										<v-spacer></v-spacer>
 										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
+										<div style="position: absolute; top: 60px; right: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
 									</div>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -133,8 +135,10 @@
 									</v-layout>
 									<div style="padding: 5px; text-align: center">
 										<div style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
+										<div style="position: absolute; bottom: 60px; left: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
 										<v-spacer></v-spacer>
 										<div style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
+										<div style="position: absolute; bottom: 60px; right: 5px; z-index: 2; border-radius: 5px; border: 1px solid orangered; width: 50px; height: 50px"></div>
 									</div>
 								</div>
 							</v-flex>
