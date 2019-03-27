@@ -38,7 +38,7 @@
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="min-height: 100%">
-									<div style="padding: 20px; text-align: center">
+									<div class="divtexte">
 										<span class="fs18" style="font-weight: 700; margin-top: 10px"><b>Point de ferveur que tu apportes à ton équipes favorites en fonction d'où tu regardes le match :</b></span>
 										<div class="pftexte">
 										Au stade : 0.1 PF</br>
@@ -170,6 +170,10 @@
 </script>
 
 <style scoped>
+.divtexte {
+padding: 75px 20px; 
+text-align: center
+}
 .pftexte {
 font-size: 20px; 
 padding: 10px;
@@ -278,6 +282,10 @@ font-size: 24px;
 }
 
     @media only screen and (max-width: 768px) {
+	.divtexte {
+	padding: 20px; 
+	text-align: center
+	}
 	.pftexte {
 	font-size: 14px; 
 	padding: 10px;
