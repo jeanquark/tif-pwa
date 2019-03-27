@@ -4,7 +4,7 @@
 			<v-card class="card">
 				<v-card-title primary-title>
 					<v-flex xs9>
-						<span class="titleModalCards text-xs-left">Mes compétences - Influence</span>
+						<span class="titleModalCards text-xs-left">Inventaire</span>
 					</v-flex>
 					<v-flex xs3 hidden-xs-only class="text-xs-right">
 						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
@@ -27,23 +27,14 @@
 										<v-icon class="fs24">star</v-icon>
 										<v-icon class="fs24">star</v-icon>
 										<v-icon class="fs24">star</v-icon>
-										<v-icon style="color: orangered" class="fs24">star</v-icon>
+										<v-icon style="color: orangered" class="fs24">star</v-icon> (collector)
 									</v-card-actions>
 									<v-divider light></v-divider>
 									<v-layout hidden-sm-and-up>
 										<v-flex xs12>
 											<v-card-title primary-title style="text-align: center; padding: 15px">
 												<div>											
-													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-													<div style="font-size: 12px; text-align: center; margin-bottom: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-													<div style="background-color: green; padding: 8px 5px 5px 5px; text-align: center; margin-top: 20px; border-radius: 5px">
-														<b>Dernière action débloquée :</b><br />
-														Vendeur de voiturette de golf - Niv.1
-													</div>
-													<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px">
-														<b>À débloquer :</b><br />
-														Démineur - Niv.1 (Baratin - Niv.2 + Technologie - Niv.2)
-													</div>
+													<div style="font-size: 12px; text-align: center; margin-bottom: 10px">Avoir le maillot officiel avec le nom de ton joueur préféré dans le dos, c'est un rêve de gosse !</div>
 												</div>
 											</v-card-title>
 											<v-card-title primary-title class="text-xs-center" style="justify-content: center; padding: 0">
@@ -60,16 +51,7 @@
 										<v-flex xs7>
 											<v-card-title primary-title style="text-align: center; padding: 15px">
 												<div>											
-													<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 10px; margin-bottom: 10px"></v-progress-linear><span class="progress-bar-txt-white" style="top: -27px">1%</span>
-													<div style="font-size: 14px; text-align: center; margin-bottom: 10px">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-													<div style="background-color: green; padding: 8px 5px 5px 5px; text-align: center; margin-top: 20px; border-radius: 5px">
-														<b>Dernière action débloquée :</b><br />
-														Vendeur de voiturette de golf - Niv.1
-													</div>
-													<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px">
-														<b>À débloquer :</b><br />
-														Démineur - Niv.1 (Baratin - Niv.2 + Technologie - Niv.2)
-													</div>
+													<div style="font-size: 14px; text-align: center; margin-bottom: 10px">Avoir le maillot officiel avec le nom de ton joueur préféré dans le dos, c'est un rêve de gosse !</div>
 												</div>
 											</v-card-title>
 										</v-flex>
