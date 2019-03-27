@@ -38,14 +38,14 @@
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="min-height: 100%">
-									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs16"><b>Point de ferveur en fonction d'où tu regardes le match</b></span>
+									<div style="padding: 5px; text-align: center">
+										<span class="fs16"><b>Point de ferveur que tu apportes à ton équipes favorites en fonction d'où tu regardes le match :</b></span>
 										<div>
 										Au stade : 0.1 PF</br>
 										Au pub : 0.1 PF</br>
 										Sur le canapé : 0.1 PF
 										</div>
-									</v-card-actions>
+									</div>
 								</v-card>
 							</v-flex>
 						</v-layout>
@@ -191,6 +191,9 @@ background-color: red;
 color: white;
 border-radius: 5px;
 }
+.fs16 {
+font-size: 16px;
+}
 body {
 font: normal 100%/1 "Acme", Helvetica, sans-serif;
 }
@@ -273,6 +276,10 @@ font-size: 24px;
 	.fs24title {
 	font-size: 18px;
 	}
+	.fs16 {
+	font-size: 12px;
+	}
+	
 }
 
 </style>
