@@ -37,12 +37,14 @@
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 100%">
+								<v-card style="min-height: 100%">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<h6>Point de ferveur en fonction d'où tu regardes le match</h6>
+										<span class="fs16"><b>Point de ferveur en fonction d'où tu regardes le match</b></span>
+										<div>
 										Au stade : 0.1 PF</br>
 										Au pub : 0.1 PF</br>
 										Sur le canapé : 0.1 PF
+										</div>
 									</v-card-actions>
 								</v-card>
 							</v-flex>
