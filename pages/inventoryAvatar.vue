@@ -1043,6 +1043,22 @@
 		padding: 6px; 
 		font-size: 14px; 
 		}
+		.activeinventoryavatar {
+		padding: 7px; 
+		font-size: 14px; 
+		height: 30px; 
+		margin-top: -6px; 
+		}
+		.noactiveinventoryavatar {
+		padding: 6px; 
+		font-size: 14px; 
+		}
+		.activeinventoryappartement {
+		padding: 7px; 
+		font-size: 14px; 
+		height: 30px; 
+		margin-top: -6px; 
+		}
 		.content .imgInventoryMobile {
 		width: 55%;
 		}

@@ -1213,11 +1213,31 @@
 		padding: 6px; 
 		font-size: 14px; 
 		}
+		.activeinventoryavatar {
+		padding: 7px; 
+		font-size: 14px; 
+		height: 30px; 
+		margin-top: -6px; 
+		}
+		.noactiveinventoryavatar {
+		padding: 6px; 
+		font-size: 14px; 
+		}
+		.activeinventoryappartement {
+		padding: 7px; 
+		font-size: 14px; 
+		height: 30px; 
+		margin-top: -6px; 
+		}
+		.noactiveinventoryappartement {
+		padding: 6px; 
+		font-size: 14px; 
+		}
 		.content .imgInventoryMobile {
 		width: 55%;
 		}
 		.fs16 {
-		font-size: 14px;
+		font-size: 8px;
 		}
 		.fs14 {
 		font-size: 10px; 
