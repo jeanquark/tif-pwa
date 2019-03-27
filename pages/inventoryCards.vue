@@ -45,7 +45,10 @@
 										Au pub : 0.1 PF</br>
 										Sur le canapé : 0.1 PF
 										</div>
-										<span class="fs18" style="font-weight: 700; margin-top: 10px">Conseil de Mr Fan : Si tu mets ton maillot au match d'une autre équipe, tu risques d'avoir des problèmes !</span>
+										<span class="fs16" style="margin-top: 20px; color: orangered">
+											<b>Conseil de Mr Fan</b></br>
+											Si tu mets ton maillot au match d'une autre équipe, tu risques d'avoir des problèmes !
+										</span>
 									</div>
 								</v-card>
 							</v-flex>
