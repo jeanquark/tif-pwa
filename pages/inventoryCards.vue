@@ -17,45 +17,23 @@
 				<v-card-text class="card-text mx-2" style="padding: 0">
 					<v-container fluid style="padding: 1px">
 						<v-layout row wrap style="margin: 1px">
-							<v-flex style="padding: 1px">
-								<v-card style="background-color: none; border: 2px solid orangered; border-radius: 5px">
+							<v-flex style="padding: 5px">
+								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="fs24title">Maillot officiel "home"</span>
+										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 										<v-spacer></v-spacer>
-										<v-icon class="fs24">star</v-icon>
-										<v-icon class="fs24">star</v-icon>
-										<v-icon class="fs24">star</v-icon>
-										<v-icon class="fs24">star</v-icon>
-										<v-icon class="fs24">star</v-icon>
-										<v-icon style="color: orangered" class="fs24">star</v-icon> (collector)
+										<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Collector</span>
 									</v-card-actions>
-									<v-divider light></v-divider>
-									<v-layout hidden-sm-and-up>
-										<v-flex xs12>
-											<v-card-title primary-title style="text-align: center; padding: 15px">
-												<div>											
-													<div style="font-size: 12px; text-align: center; margin-bottom: 10px">Avoir le maillot officiel avec le nom de ton joueur préféré dans le dos, c'est un rêve de gosse !</div>
-												</div>
-											</v-card-title>
-											<v-card-title primary-title class="text-xs-center" style="justify-content: center; padding: 0">
-												<div>
-													<img src="/images/stress.jpg" class="imgSkill" width="70%" />
-												</div>
-											</v-card-title>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 0">
+											<img src="/images/stress.jpg" class="imgInventory"/>
 										</v-flex>
 									</v-layout>
-									<v-layout hidden-xs-only>
-										<v-flex xs5 style="text-align: center; padding: 5px">
-											<img src="/images/stress.jpg" class="imgSkill" width="90%" />
-										</v-flex>
-										<v-flex xs7>
-											<v-card-title primary-title style="text-align: center; padding: 15px">
-												<div>											
-													<div style="font-size: 14px; text-align: center; margin-bottom: 10px">Avoir le maillot officiel avec le nom de ton joueur préféré dans le dos, c'est un rêve de gosse !</div>
-												</div>
-											</v-card-title>
-										</v-flex>
-									</v-layout>
+									<v-card-actions style="padding: 5px; text-align: center">
+										<span class="inventoryBadgeAvatar fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Tête</span>
+										<v-spacer></v-spacer>
+										<span class="inventoryCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>check_circle</v-icon></span>
+									</v-card-actions>
 								</v-card>
 							</v-flex>
 						</v-layout>
@@ -176,6 +154,31 @@
 </script>
 
 <style scoped>
+.imgTeamInventory {
+	width: 15%;
+	border-radius: 0 0 0 0;
+}
+.content .imgInventory {
+width: 70%;
+}
+.inventoryBadgeAvatar {
+padding: 3px;
+background-color: #ff950d;
+color: white;
+border-radius: 5px;
+}
+.inventoryCheck {
+padding: 2px;
+background-color: green;
+color: white;
+border-radius: 5px;
+}
+.inventoryNoCheck {
+padding: 2px;
+background-color: red;
+color: white;
+border-radius: 5px;
+}
 body {
 font: normal 100%/1 "Acme", Helvetica, sans-serif;
 }
