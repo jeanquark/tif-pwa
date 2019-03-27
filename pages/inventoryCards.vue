@@ -36,11 +36,11 @@
 									</v-card-actions>
 								</v-card>
 							</v-flex>
-							<v-flex xs12 sm6 md6 style="padding-top: 20px">
+							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="min-height: 100%">
-									<div style="padding: 5px; text-align: center">
+									<div style="padding: 20px; text-align: center">
 										<span class="fs18" style="font-weight: 700; margin-top: 10px"><b>Point de ferveur que tu apportes à ton équipes favorites en fonction d'où tu regardes le match :</b></span>
-										<div style="font-size: 16px; padding: 10px">
+										<div class="pftexte">
 										Au stade : 0.1 PF</br>
 										Au pub : 0.1 PF</br>
 										Sur le canapé : 0.1 PF
@@ -170,6 +170,10 @@
 </script>
 
 <style scoped>
+.pftexte {
+font-size: 20px; 
+padding: 10px;
+}
 .imgTeamInventory {
 	width: 15%;
 	border-radius: 0 0 0 0;
@@ -274,6 +278,10 @@ font-size: 24px;
 }
 
     @media only screen and (max-width: 768px) {
+	.pftexte {
+	font-size: 14px; 
+	padding: 10px;
+	}
 	.imgInventory {
 	width: 80%;
 	}
