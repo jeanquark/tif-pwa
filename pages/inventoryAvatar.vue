@@ -126,7 +126,7 @@
 											<span class="inventoryBadgeAvatar fs16">Tête</span>
 										</div>
 										<div style="position: absolute; top: 70px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
-											<span class="inventoryBadgeAvatar fs16">Cou</span>
+											<span class="inventoryBadgeAvatar fs16"><img src="/images/stress.jpg" class="imgInventory"/></span>
 										</div>
 										<v-spacer></v-spacer>
 										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
@@ -145,14 +145,18 @@
 										<div style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
 											<span class="inventoryBadgeAvatar fs16">Jambes</span>
 										</div>
-										<div style="position: absolute; bottom: 70px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+										<div style="position: absolute; bottom: 120px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
 											<span class="inventoryBadgeAvatar fs16">Acces.</span>
+										</div>
+										<v-spacer></v-spacer>
+										<div style="position: absolute; bottom: 5px; left: 112px; z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 120px; height: 60px">
+											<span class="fs18">0.45 PF</span>
 										</div>
 										<v-spacer></v-spacer>
 										<div style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
 											<span class="inventoryBadgeAvatar fs16">Pieds</span>
 										</div>
-										<div style="position: absolute; bottom: 70px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+										<div style="position: absolute; bottom: 120px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
 											<span class="inventoryBadgeAvatar fs16">Acces.</span>
 										</div>
 									</div>
