@@ -760,8 +760,8 @@
 	}
 	
 	.content .imgInventory {
-	width: 100%;
-	opacity: 0.5;
+	width: 38%;
+	opacity: 1;
 	}
 	.content .imgInventorySmall {
 	width: 100%;
@@ -1150,7 +1150,7 @@
 		font-size: 14px; 
 		}
 		.content .imgInventory {
-		width: 38%;
+		width: 100%;
 		}
 		.fs16 {
 		font-size: 12px;

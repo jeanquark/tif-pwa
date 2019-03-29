@@ -122,10 +122,12 @@
 							<v-flex xs12 sm12 md12 style="padding: 5px">
 								<div style="position: relative">
 									<div style="padding: 5px; text-align: center">
-										<div style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+										<div hidden-sm-and-up style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+										<div hidden-xs-only style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
 											<span class="inventoryBadgeAvatar fs16">Déco</span>
 										</div>
-										<div style="position: absolute; top: 80px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+										<div hidden-sm-and-up style="position: absolute; top: 80px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+										<div hidden-xs-only style="position: absolute; top: 5px; left: 115px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
 											<nuxt-link to="/inventoryCards" style="text-decoration: none">
 												<span class="fs16"><img src="/images/stress.jpg" class="imgInventorySmall"/></span>
 											</nuxt-link>
