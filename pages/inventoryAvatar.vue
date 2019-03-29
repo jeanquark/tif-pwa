@@ -149,6 +149,12 @@
 										<div class="hidden-sm-and-up" style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Torse</span>
 										</div>
+										<div class="hidden-xs-only" style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
+											<span class="inventoryBadgeAvatar fs16">Torse</span>
+										</div>
+										<div class="hidden-sm-and-up" style="position: absolute; top: 80px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Bras</span>
+										</div>
 										<div class="hidden-xs-only" style="position: absolute; top: 5px; right: 115px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
 											<span class="inventoryBadgeAvatar fs16">Bras</span>
 										</div>
