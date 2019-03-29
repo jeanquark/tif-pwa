@@ -708,7 +708,7 @@
 	padding: 16px; 
 	border: 2px solid orangered; 
 	background-color: black; 
-	color: orangered 
+	color: orangered;
 	font-size: 20px; 
 	height: 50px; 
 	margin-top: -10px; 
