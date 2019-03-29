@@ -125,15 +125,12 @@
 										<div style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
 										<div style="position: absolute; top: 70px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; right: auto; left: auto; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
-										<div style="position: absolute; top: 70px; right: auto; left: auto; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
-										<v-spacer></v-spacer>
 										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
 										<div style="position: absolute; top: 70px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
 									</div>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
-											<img src="/images/stress.jpg" class="imgInventory"/>
+											<img src="/images/fan.png" class="imgInventory"/>
 										</v-flex>
 									</v-layout>
 									<div style="padding: 5px; text-align: center">
