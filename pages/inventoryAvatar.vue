@@ -126,7 +126,9 @@
 											<span class="inventoryBadgeAvatar fs16">Tête</span>
 										</div>
 										<div style="position: absolute; top: 70px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
-											<span class="fs16"><img src="/images/stress.jpg" class="imgInventorySmall"/></span>
+											<nuxt-link to="/inventoryCards" style="text-decoration: none">
+												<span class="fs16"><img src="/images/stress.jpg" class="imgInventorySmall"/></span>
+											</nuxt-link>
 										</div>
 										<v-spacer></v-spacer>
 										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
@@ -149,7 +151,7 @@
 											<span class="inventoryBadgeAvatar fs16">Acces.</span>
 										</div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; bottom: 5px; left: 112px; z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 120px; height: 60px">
+										<div style="position: absolute; bottom: 5px; left: 50%; transform: translate(-50%); z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 120px; height: 60px">
 											<span class="inventoryBadgePF fs18">0.45 PF</span>
 										</div>
 										<v-spacer></v-spacer>
@@ -743,6 +745,7 @@
 	.content .imgInventorySmall {
 	width: 100%;
 	opacity: 1;
+	border-radius: 3px;
 	}
 	
 	.inventoryBadgeAvatar {
@@ -765,7 +768,7 @@
 	color: white;
 	border-radius: 5px;
 	position: relative; 
-	top: 15px;
+	top: 18px;
 	font-size: 20px;
 	font-weight: 700;
 	}
