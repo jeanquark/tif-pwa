@@ -108,14 +108,65 @@
 							Tu dois habiller ton fan et décorer son appartement pour rapporter encore plus de point de ferveur à tes équipes favorites !
 						</div>
 						<v-layout row class="menuInventory">
-							<v-flex xs4 sm4 md4 class="noactiveinventoryavatar">
+							<v-flex xs4 sm4 md4 class="activeinventoryavatar">
 								<nuxt-link to="/inventoryAvatar" style="text-decoration: none; color: white">Avatar</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm4 md4 class="noactiveinventory">
 								<nuxt-link to="/inventoryMain" style="text-decoration: none; color: white">Inventaire</nuxt-link>
 							</v-flex>
-							<v-flex xs4 sm4 md4 class="activeinventoryappartement">
+							<v-flex xs4 sm4 md4 class="noactiveinventoryappartement">
 								<nuxt-link to="/inventoryHome" style="text-decoration: none; color: white">Appartement</nuxt-link>
+							</v-flex>
+						</v-layout>
+						<v-layout row wrap style="margin-top: 15px">
+							<v-flex xs12 sm12 md12 style="padding: 5px">
+								<div style="position: relative">
+									<div style="padding: 5px; text-align: center">
+										<div style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Tête</span>
+										</div>
+										<div style="position: absolute; top: 80px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<nuxt-link to="/inventoryCards" style="text-decoration: none">
+												<span class="fs16"><img src="/images/stress.jpg" class="imgInventorySmall"/></span>
+											</nuxt-link>
+										</div>
+										<v-spacer></v-spacer>
+										<div style="position: absolute; bottom: 85px; left: 50%; width:130px; transform: translate(-50%); z-index: 2; color: white; font-size: 14px">
+											<span>Choisi bien ton équipement pour rapporter le plus de point de ferveur à ton équipe favorite !</span>
+										</div>
+										<v-spacer></v-spacer>
+										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Torse</span>
+										</div>
+										<div style="position: absolute; top: 80px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Bras</span>
+										</div>
+									</div>
+									<v-layout>
+										<v-flex xs12 style="text-align: center; padding: 0">
+											<img src="/images/fan.png" class="imgInventory"/>
+										</v-flex>
+									</v-layout>
+									<div style="padding: 5px; text-align: center">
+										<div style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Jambes</span>
+										</div>
+										<div style="position: absolute; bottom: 115px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Acces.</span>
+										</div>
+										<v-spacer></v-spacer>
+										<div style="position: absolute; bottom: 5px; left: 50%; transform: translate(-50%); z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 120px; height: 70px">
+											<span class="inventoryBadgePF fs18">0.45 PF</span>
+										</div>
+										<v-spacer></v-spacer>
+										<div style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Pieds</span>
+										</div>
+										<div style="position: absolute; bottom: 115px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Acces.</span>
+										</div>
+									</div>
+								</div>
 							</v-flex>
 						</v-layout>
 					</div>
@@ -655,9 +706,9 @@
 	
 	.activeinventoryavatar {
 	padding: 16px; 
-	border: 2px solid #ff950d; 
+	border: 2px solid orangered; 
 	background-color: black; 
-	color: #ff950d; 
+	color: orangered 
 	font-size: 20px; 
 	height: 50px; 
 	margin-top: -10px; 
@@ -669,14 +720,14 @@
 	border: 1px solid black; 
 	font-size: 20px; 
 	font-weight: 700;
-	background-color: #ff950d;
+	background-color: orangered;
 	}
 
 	.activeinventoryappartement {
 	padding: 16px; 
-	border: 2px solid #b23d12; 
+	border: 2px solid orangered; 
 	background-color: black; 
-	color: #b23d12; 
+	color: orangered; 
 	font-size: 20px; 
 	height: 50px; 
 	margin-top: -10px; 
@@ -688,11 +739,17 @@
 	border: 1px solid black; 
 	font-size: 20px; 
 	font-weight: 700;
-	background-color: #b23d12;
+	background-color: orangered;
 	}
 	
 	.content .imgInventory {
-	width: 70%;
+	width: 100%;
+	opacity: 0.5;
+	}
+	.content .imgInventorySmall {
+	width: 100%;
+	opacity: 1;
+	border-radius: 3px;
 	}
 	
 	.inventoryBadgeAvatar {
@@ -700,12 +757,24 @@
 	background-color: #ff950d;
 	color: white;
 	border-radius: 5px;
+	position: relative; 
+	top: 26px;
 	}
 	.inventoryBadgeAppartement {
 	padding: 3px;
 	background-color: #b23d12;
 	color: white;
 	border-radius: 5px;
+	}
+	.inventoryBadgePF {
+	padding: 3px;
+	background-color: none;
+	color: white;
+	border-radius: 5px;
+	position: relative; 
+	top: 23px;
+	font-size: 20px;
+	font-weight: 700;
 	}
 	.inventoryCheck {
 	padding: 2px;
@@ -1067,7 +1136,7 @@
 		width: 55%;
 		}
 		.fs16 {
-		font-size: 14px;
+		font-size: 12px;
 		}
 		.fs14 {
 		font-size: 10px; 

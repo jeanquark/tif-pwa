@@ -825,9 +825,9 @@
 	
 	.activeinventoryavatar {
 	padding: 16px; 
-	border: 2px solid #ff950d; 
+	border: 2px solid orangered; 
 	background-color: black; 
-	color: #ff950d; 
+	color: orangered; 
 	font-size: 20px; 
 	height: 50px; 
 	margin-top: -10px; 
@@ -839,14 +839,14 @@
 	border: 1px solid black; 
 	font-size: 20px; 
 	font-weight: 700;
-	background-color: #ff950d;
+	background-color: orangered;
 	}
 
 	.activeinventoryappartement {
 	padding: 16px; 
-	border: 2px solid #b23d12; 
+	border: 2px solid orangered; 
 	background-color: black; 
-	color: #b23d12; 
+	color: orangered; 
 	font-size: 20px; 
 	height: 50px; 
 	margin-top: -10px; 
@@ -858,7 +858,7 @@
 	border: 1px solid black; 
 	font-size: 20px; 
 	font-weight: 700;
-	background-color: #b23d12;
+	background-color: orangered;
 	}
 	
 	.content .imgInventory {

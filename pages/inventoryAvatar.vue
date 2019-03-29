@@ -151,7 +151,7 @@
 										<div style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Jambes</span>
 										</div>
-										<div style="position: absolute; bottom: 120px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+										<div style="position: absolute; bottom: 115px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Acces.</span>
 										</div>
 										<v-spacer></v-spacer>
@@ -162,7 +162,7 @@
 										<div style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Pieds</span>
 										</div>
-										<div style="position: absolute; bottom: 120px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+										<div style="position: absolute; bottom: 115px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Acces.</span>
 										</div>
 									</div>
@@ -706,9 +706,9 @@
 	
 	.activeinventoryavatar {
 	padding: 16px; 
-	border: 2px solid #ff950d; 
+	border: 2px solid orangered; 
 	background-color: black; 
-	color: #ff950d; 
+	color: orangered 
 	font-size: 20px; 
 	height: 50px; 
 	margin-top: -10px; 
@@ -720,14 +720,14 @@
 	border: 1px solid black; 
 	font-size: 20px; 
 	font-weight: 700;
-	background-color: #ff950d;
+	background-color: orangered;
 	}
 
 	.activeinventoryappartement {
 	padding: 16px; 
-	border: 2px solid #b23d12; 
+	border: 2px solid orangered; 
 	background-color: black; 
-	color: #b23d12; 
+	color: orangered; 
 	font-size: 20px; 
 	height: 50px; 
 	margin-top: -10px; 
@@ -739,7 +739,7 @@
 	border: 1px solid black; 
 	font-size: 20px; 
 	font-weight: 700;
-	background-color: #b23d12;
+	background-color: orangered;
 	}
 	
 	.content .imgInventory {
@@ -772,7 +772,7 @@
 	color: white;
 	border-radius: 5px;
 	position: relative; 
-	top: 23x;
+	top: 23px;
 	font-size: 20px;
 	font-weight: 700;
 	}
