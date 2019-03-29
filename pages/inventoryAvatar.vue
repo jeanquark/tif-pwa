@@ -131,6 +131,10 @@
 											</nuxt-link>
 										</div>
 										<v-spacer></v-spacer>
+										<div style="position: absolute; top: 5px; left: 50%; transform: translate(-50%); z-index: 2; color: white">
+											<span class="fs16">Choisi bien ton équipement pour rapporter le plus de point de ferveur à ton équipe favorite !</span>
+										</div>
+										<v-spacer></v-spacer>
 										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
 											<span class="inventoryBadgeAvatar fs16">Torse</span>
 										</div>
