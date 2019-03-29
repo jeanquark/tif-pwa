@@ -122,7 +122,9 @@
 							<v-flex xs12 sm12 md12 style="padding: 5px">
 								<div style="position: relative">
 									<div style="padding: 5px; text-align: center">
-										<div style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
+										<div style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+											<span class="inventoryBadgeAvatar fs16">Tête</span>
+										</div>
 										<div style="position: absolute; top: 70px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
 										<v-spacer></v-spacer>
 										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
