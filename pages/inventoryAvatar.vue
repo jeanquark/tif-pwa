@@ -125,10 +125,16 @@
 										<div style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
 											<span class="inventoryBadgeAvatar fs16">Tête</span>
 										</div>
-										<div style="position: absolute; top: 70px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
+										<div style="position: absolute; top: 70px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+											<span class="inventoryBadgeAvatar fs16">Cou</span>
+										</div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
-										<div style="position: absolute; top: 70px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
+										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+											<span class="inventoryBadgeAvatar fs16">Torse</span>
+										</div>
+										<div style="position: absolute; top: 70px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+											<span class="inventoryBadgeAvatar fs16">Bras</span>
+										</div>
 									</div>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -136,11 +142,19 @@
 										</v-flex>
 									</v-layout>
 									<div style="padding: 5px; text-align: center">
-										<div style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
-										<div style="position: absolute; bottom: 70px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
+										<div style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+											<span class="inventoryBadgeAvatar fs16">Jambes</span>
+										</div>
+										<div style="position: absolute; bottom: 70px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+											<span class="inventoryBadgeAvatar fs16">Acces.</span>
+										</div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
-										<div style="position: absolute; bottom: 70px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px"></div>
+										<div style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+											<span class="inventoryBadgeAvatar fs16">Pieds</span>
+										</div>
+										<div style="position: absolute; bottom: 70px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+											<span class="inventoryBadgeAvatar fs16">Acces.</span>
+										</div>
 									</div>
 								</div>
 							</v-flex>
@@ -728,6 +742,8 @@
 	background-color: #ff950d;
 	color: white;
 	border-radius: 5px;
+	position: relative; 
+	top: 21px;
 	}
 	.inventoryBadgeAppartement {
 	padding: 3px;
@@ -1095,7 +1111,7 @@
 		width: 55%;
 		}
 		.fs16 {
-		font-size: 14px;
+		font-size: 12px;
 		}
 		.fs14 {
 		font-size: 10px; 
