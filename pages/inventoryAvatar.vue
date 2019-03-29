@@ -1149,8 +1149,8 @@
 		padding: 6px; 
 		font-size: 14px; 
 		}
-		.content .imgInventoryMobile {
-		width: 55%;
+		.content .imgInventory {
+		width: 38%;
 		}
 		.fs16 {
 		font-size: 12px;
