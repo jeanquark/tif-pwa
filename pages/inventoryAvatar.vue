@@ -122,23 +122,23 @@
 							<v-flex xs12 sm12 md12 style="padding: 5px">
 								<div style="position: relative">
 									<div style="padding: 5px; text-align: center">
-										<div style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+										<div style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Tête</span>
 										</div>
-										<div style="position: absolute; top: 70px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+										<div style="position: absolute; top: 80px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<nuxt-link to="/inventoryCards" style="text-decoration: none">
 												<span class="fs16"><img src="/images/stress.jpg" class="imgInventorySmall"/></span>
 											</nuxt-link>
 										</div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; left: 50%; transform: translate(-50%); z-index: 2; color: white">
-											<span class="fs16">Choisi bien ton équipement pour rapporter le plus de point de ferveur à ton équipe favorite !</span>
+										<div style="position: absolute; bottom: 85px; left: 50%; width:130px; transform: translate(-50%); z-index: 2; color: white; font-size: 14px">
+											<span>Choisi bien ton équipement pour rapporter le plus de point de ferveur à ton équipe favorite !</span>
 										</div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Torse</span>
 										</div>
-										<div style="position: absolute; top: 70px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+										<div style="position: absolute; top: 80px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Bras</span>
 										</div>
 									</div>
@@ -148,21 +148,21 @@
 										</v-flex>
 									</v-layout>
 									<div style="padding: 5px; text-align: center">
-										<div style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+										<div style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Jambes</span>
 										</div>
-										<div style="position: absolute; bottom: 120px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+										<div style="position: absolute; bottom: 120px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Acces.</span>
 										</div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; bottom: 5px; left: 50%; transform: translate(-50%); z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 120px; height: 60px">
+										<div style="position: absolute; bottom: 5px; left: 50%; transform: translate(-50%); z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 120px; height: 70px">
 											<span class="inventoryBadgePF fs18">0.45 PF</span>
 										</div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+										<div style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Pieds</span>
 										</div>
-										<div style="position: absolute; bottom: 120px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 60px; height: 60px">
+										<div style="position: absolute; bottom: 120px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Acces.</span>
 										</div>
 									</div>
@@ -758,7 +758,7 @@
 	color: white;
 	border-radius: 5px;
 	position: relative; 
-	top: 21px;
+	top: 26px;
 	}
 	.inventoryBadgeAppartement {
 	padding: 3px;
@@ -772,7 +772,7 @@
 	color: white;
 	border-radius: 5px;
 	position: relative; 
-	top: 18px;
+	top: 23x;
 	font-size: 20px;
 	font-weight: 700;
 	}
