@@ -366,6 +366,10 @@
         width: 100%;
         border-radius: 0 0 0 0;
     }
+    .imgTeamInventory {
+        width: 15%;
+        border-radius: 0 0 0 0;
+    }
     .imgTeamSmall {
         height: 20px;
         margin-top: 5px;
@@ -558,7 +562,20 @@
     }   
     /* End Header */
     
-    
+    .menuInventory {
+	max-height: 40px; 
+	width: 100%; 
+	text-align: center; 
+	background-color: orangered; 
+	margin-top: 10px
+	}
+	.fs16 {
+	font-size: 16px;
+	}
+	.fs14 {
+	font-size: 14px; 
+	text-align: center
+	}
 
     /* Footer */
     .barreOrangered {
@@ -575,6 +592,12 @@
         height: 8px;
         background-color: black;
     }
+	.infoInventory {
+	color: white;
+	font-size: 1.0em;
+	text-align: center;
+	padding: 10px;
+	}
     
     #dock-container {
         height: 80px;
@@ -667,7 +690,7 @@
     }
     /* End Footer */
 	
-	.activeskill {
+	.activeinventory {
 	padding: 16px; 
 	border: 2px solid orangered; 
 	background-color: black; 
@@ -678,21 +701,81 @@
 	font-weight: 700;
 	}
 	
-	.noactiveskill {
+	.noactiveinventory {
 	padding: 12px; 
 	border: 1px solid black; 
 	font-size: 20px; 
 	font-weight: 700;
+	background-color: orangered;
 	}
 	
-	.content .imgSkill {
-	width: 85%;
+	.activeinventoryavatar {
+	padding: 16px; 
+	border: 2px solid orangered; 
+	background-color: black; 
+	color: orangered; 
+	font-size: 20px; 
+	height: 50px; 
+	margin-top: -10px; 
+	font-weight: 700;
 	}
 	
-	.fs18 {
-	font-size: 18px;
+	.noactiveinventoryavatar {
+	padding: 12px; 
+	border: 1px solid black; 
+	font-size: 20px; 
+	font-weight: 700;
+	background-color: orangered;
 	}
-    
+
+	.activeinventoryappartement {
+	padding: 16px; 
+	border: 2px solid orangered; 
+	background-color: black; 
+	color: orangered; 
+	font-size: 20px; 
+	height: 50px; 
+	margin-top: -10px; 
+	font-weight: 700;
+	}
+	
+	.noactiveinventoryappartement {
+	padding: 12px; 
+	border: 1px solid black; 
+	font-size: 20px; 
+	font-weight: 700;
+	background-color: orangered;
+	}
+	
+	.content .imgInventory {
+	width: 70%;
+	}
+	
+	.inventoryBadgeAvatar {
+	padding: 3px;
+	background-color: #ff950d;
+	color: white;
+	border-radius: 5px;
+	}
+	.inventoryBadgeAppartement {
+	padding: 3px;
+	background-color: #b23d12;
+	color: white;
+	border-radius: 5px;
+	}
+	.inventoryCheck {
+	padding: 2px;
+	background-color: green;
+	color: white;
+	border-radius: 5px;
+	}
+	.inventoryNoCheck {
+	padding: 2px;
+	background-color: red;
+	color: white;
+	border-radius: 5px;
+	}
+	   
     /* Small screens */
     @media only screen and (max-width: 768px) {
 		body {
@@ -714,9 +797,6 @@
 			height: 100%;
 			overflow-x: auto;
 		}
-        .content img {
-            height: 100%;
-        }
 		#footer {
 			background-color: red;
 			color: #fff;
@@ -936,9 +1016,8 @@
 		opacity: 0.9;
 		color: black;
 		margin: 0;
-		top: 30px;
+		top: 130px;
 		padding: 5px;
-		height: 46px;
 		}
 		.nameTeam {
 		position: relative; 
@@ -960,9 +1039,12 @@
 		float: right;
 		}	
 		.nameOtherTeam {
-		font-size: 12px; 
-		margin-left: 0;
-		top: -6px;
+		position: relative; 
+		font-size: 18px; 
+		color: orangered; 
+		text-shadow: none;
+		float: right;
+		margin-left: 5px;
 		}	
 		.dateHourMatch {
 		position: absolute; 
@@ -1003,6 +1085,51 @@
 		}   
 		/* End Header */
 		
+		.menuInventory {
+		max-height: 25px; 
+		margin-top: 15px
+		}
+		.activeinventory {
+		padding: 7px; 
+		font-size: 14px; 
+		height: 30px; 
+		margin-top: -6px; 
+		}
+		.noactiveinventory {
+		padding: 6px; 
+		font-size: 14px; 
+		}
+		.activeinventoryavatar {
+		padding: 7px; 
+		font-size: 14px; 
+		height: 30px; 
+		margin-top: -6px; 
+		}
+		.noactiveinventoryavatar {
+		padding: 6px; 
+		font-size: 14px; 
+		}
+		.activeinventoryappartement {
+		padding: 7px; 
+		font-size: 14px; 
+		height: 30px; 
+		margin-top: -6px; 
+		}
+		.noactiveinventoryappartement {
+		padding: 6px; 
+		font-size: 14px; 
+		}
+		.content .imgInventoryMobile {
+		width: 55%;
+		}
+		.fs16 {
+		font-size: 8px;
+		}
+		.fs14 {
+		font-size: 10px; 
+		text-align: center
+		}
+		
 		/* Footer */
 		.barreOrangered {
 			width: 100%;
@@ -1017,6 +1144,11 @@
 			margin: 0;
 			height: 4px;
 			background-color: black;
+		}
+		.infoInventory {
+		font-size: 0.8em;
+		padding: 5px;
+		padding-bottom: 0;
 		}
 			
         /* Menu */
