@@ -108,13 +108,13 @@
 							Tu dois habiller ton fan et décorer son appartement pour rapporter encore plus de point de ferveur à tes équipes favorites !
 						</div>
 						<v-layout row class="menuInventory">
-							<v-flex xs4 sm4 md4 class="noactiveinventoryavatar">
+							<v-flex xs4 sm4 md4 class="activeinventoryavatar">
 								<nuxt-link to="/inventoryAvatar" style="text-decoration: none; color: white">Avatar</nuxt-link>
 							</v-flex>
 							<v-flex xs4 sm4 md4 class="noactiveinventory">
 								<nuxt-link to="/inventoryMain" style="text-decoration: none; color: white">Inventaire</nuxt-link>
 							</v-flex>
-							<v-flex xs4 sm4 md4 class="activeinventoryappartement">
+							<v-flex xs4 sm4 md4 class="noactiveinventoryappartement">
 								<nuxt-link to="/inventoryHome" style="text-decoration: none; color: white">Appartement</nuxt-link>
 							</v-flex>
 						</v-layout>
@@ -122,26 +122,41 @@
 							<v-flex xs12 sm12 md12 style="padding: 5px">
 								<div style="position: relative">
 									<div style="padding: 5px; text-align: center">
-										<div hidden-sm-and-up style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
-										<div hidden-xs-only style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
-											<span class="inventoryBadgeAvatar fs16">Déco</span>
+										<div class="hidden-sm-and-up" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Tête</span>
 										</div>
-										<div hidden-sm-and-up style="position: absolute; top: 80px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
-										<div hidden-xs-only style="position: absolute; top: 5px; left: 115px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
+										<div class="hidden-xs-only" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
+											<span class="inventoryBadgeAvatar fs16">Tête</span>
+										</div>
+										<div class="hidden-sm-and-up" style="position: absolute; top: 80px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<nuxt-link to="/inventoryCards" style="text-decoration: none">
+												<span class="fs16"><img src="/images/stress.jpg" class="imgInventorySmall"/></span>
+											</nuxt-link>
+										</div>
+										<div class="hidden-xs-only" style="position: absolute; top: 5px; left: 115px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
 											<nuxt-link to="/inventoryCards" style="text-decoration: none">
 												<span class="fs16"><img src="/images/stress.jpg" class="imgInventorySmall"/></span>
 											</nuxt-link>
 										</div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; bottom: 85px; left: 50%; width:130px; transform: translate(-50%); z-index: 2; color: white; font-size: 14px">
-											<span>Une belle déco dans ton appartement pourrait rapporter des points de ferveur lorsque tu regardes le match sur ton canapé !</span>
+										<div class="hidden-sm-and-up" style="position: absolute; bottom: 85px; left: 50%; width:130px; transform: translate(-50%); z-index: 2; color: white; font-size: 14px">
+											<span>Choisi bien ton équipement pour rapporter le plus de point de ferveur à ton équipe favorite !</span>
+										</div>
+										<div class="hidden-xs-only" style="position: absolute; bottom: 85px; left: 50%; width:150px; transform: translate(-50%); z-index: 2; color: white; font-size: 16px">
+											<span>Choisi bien ton équipement pour rapporter le plus de point de ferveur à ton équipe favorite !</span>
 										</div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
-											<span class="inventoryBadgeAvatar fs16">Déco</span>
+										<div class="hidden-sm-and-up" style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Torse</span>
 										</div>
-										<div style="position: absolute; top: 80px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
-											<span class="inventoryBadgeAvatar fs16">Déco</span>
+										<div class="hidden-xs-only" style="position: absolute; top: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
+											<span class="inventoryBadgeAvatar fs16">Torse</span>
+										</div>
+										<div class="hidden-sm-and-up" style="position: absolute; top: 80px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Bras</span>
+										</div>
+										<div class="hidden-xs-only" style="position: absolute; top: 5px; right: 115px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
+											<span class="inventoryBadgeAvatar fs16">Bras</span>
 										</div>
 									</div>
 									<v-layout>
@@ -150,8 +165,22 @@
 										</v-flex>
 									</v-layout>
 									<div style="padding: 5px; text-align: center">
+										<div style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Jambes</span>
+										</div>
+										<div style="position: absolute; bottom: 115px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Acces.</span>
+										</div>
+										<v-spacer></v-spacer>
 										<div style="position: absolute; bottom: 5px; left: 50%; transform: translate(-50%); z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 120px; height: 70px">
 											<span class="inventoryBadgePF fs18">0.45 PF</span>
+										</div>
+										<v-spacer></v-spacer>
+										<div style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Pieds</span>
+										</div>
+										<div style="position: absolute; bottom: 115px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Acces.</span>
 										</div>
 									</div>
 								</div>
@@ -731,8 +760,8 @@
 	}
 	
 	.content .imgInventory {
-	width: 100%;
-	opacity: 0.5;
+	width: 38%;
+	opacity: 1;
 	}
 	.content .imgInventorySmall {
 	width: 100%;
@@ -1120,8 +1149,8 @@
 		padding: 6px; 
 		font-size: 14px; 
 		}
-		.content .imgInventoryMobile {
-		width: 55%;
+		.content .imgInventory {
+		width: 100%;
 		}
 		.fs16 {
 		font-size: 12px;
