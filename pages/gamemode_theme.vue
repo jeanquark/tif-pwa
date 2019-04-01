@@ -1,6 +1,6 @@
 <template>
     <v-content id="app">
-        <v-container style="padding: 0; max-width: 1017px; background-image: url("/images/plage.svg"); width: height: 100%">
+        <v-container style="padding: 0; max-width: 1017px">
           
             <!-- Scrollable content -->
             <div class="content" style="position: relative">
