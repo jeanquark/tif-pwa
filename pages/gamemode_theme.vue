@@ -30,315 +30,171 @@
 				</div> 
 				
 				<v-layout row wrap style="margin-top: 15px; margin: 10px; position: absolute; top: 115px">
-					<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+					<v-flex xs4 sm3 md3 style="padding: 5px">
+						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Baratin</span>
+								<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Collector</span>
 							</v-card-actions>
-							<v-divider light></v-divider>
-							<v-layout style="position: relative">
-								<v-flex xs4 style="text-align: center; padding: 0">
-									<img src="/images/stress.jpg" class="imgSkill" />
-								</v-flex>
-								<v-flex xs8 style="position: relative">
-									<v-card-title primary-title style="text-align: center; padding: 15px">
-										<div>											
-											<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-											<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-											<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-										</div>
-									</v-card-title>
-								</v-flex>
-							</v-layout>
-						</v-card>
-						</nuxt-link>
-					</v-flex>
-					<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
-							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Baratin</span>
-								<v-spacer></v-spacer>
-								<v-icon class="fs18" style="color: orangered">star</v-icon> Niv. 1
-							</v-card-actions>
-							<v-divider light></v-divider>
 							<v-layout>
-								<v-flex xs12 style="text-align: center; padding: 5px">
-									<img src="/images/stress.jpg" class="imgSkillMobile" />
+								<v-flex xs12 style="text-align: center; padding: 0">
+									<img src="/images/stress.jpg" class="imgInventory"/>
 								</v-flex>
 							</v-layout>
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="inventoryBadgeAvatar fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Tête</span>
+								<v-spacer></v-spacer>
+								<span class="inventoryCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>check_circle</v-icon></span>
+							</v-card-actions>
 						</v-card>
 						</nuxt-link>
 					</v-flex>
-					<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+					<v-flex xs4 sm3 md3 style="padding: 5px">
+						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Travail d'équipe</span>
+								<img src="/images/42.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Neuf</span>
 							</v-card-actions>
-							<v-divider light></v-divider>
-							<v-layout style="position: relative">
-								<v-flex xs4 style="text-align: center; padding: 0">
-									<img src="/images/stress.jpg" class="imgSkill" />
-								</v-flex>
-								<v-flex xs8 style="position: relative">
-									<v-card-title primary-title style="text-align: center; padding: 15px">
-										<div>											
-											<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-											<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-											<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-										</div>
-									</v-card-title>
-								</v-flex>
-							</v-layout>
-						</v-card>
-						</nuxt-link>
-					</v-flex>
-					<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
-							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Travail d'équipe</span>
-								<v-spacer></v-spacer>
-								<v-icon class="fs18" style="color: orangered">star</v-icon> Niv. 1
-							</v-card-actions>
-							<v-divider light></v-divider>
 							<v-layout>
-								<v-flex xs12 style="text-align: center; padding: 5px">
-									<img src="/images/stress.jpg" class="imgSkillMobile" />
+								<v-flex xs12 style="text-align: center; padding: 0">
+									<img src="/images/stress.jpg" class="imgInventory"/>
 								</v-flex>
 							</v-layout>
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="inventoryBadgeAvatar fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Torse</span>
+								<v-spacer></v-spacer>
+								<span class="inventoryCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>check_circle</v-icon></span>
+							</v-card-actions>
 						</v-card>
 						</nuxt-link>
 					</v-flex>
-					<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+					<v-flex xs4 sm3 md3 style="padding: 5px">
+						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Leadership</span>
+								<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Bon état</span>
 							</v-card-actions>
-							<v-divider light></v-divider>
-							<v-layout style="position: relative">
-								<v-flex xs4 style="text-align: center; padding: 0">
-									<img src="/images/stress.jpg" class="imgSkill" />
-								</v-flex>
-								<v-flex xs8 style="position: relative">
-									<v-card-title primary-title style="text-align: center; padding: 15px">
-										<div>											
-											<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-											<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-											<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-										</div>
-									</v-card-title>
-								</v-flex>
-							</v-layout>
-						</v-card>
-						</nuxt-link>
-					</v-flex>
-					<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
-							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Leadership</span>
-								<v-spacer></v-spacer>
-								<v-icon class="fs18" style="color: orangered">star</v-icon> Niv. 1
-							</v-card-actions>
-							<v-divider light></v-divider>
 							<v-layout>
-								<v-flex xs12 style="text-align: center; padding: 5px">
-									<img src="/images/stress.jpg" class="imgSkillMobile" />
+								<v-flex xs12 style="text-align: center; padding: 0">
+									<img src="/images/stress.jpg" class="imgInventory"/>
 								</v-flex>
 							</v-layout>
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="inventoryBadgeAvatar fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Torse</span>
+								<v-spacer></v-spacer>
+								<span class="inventoryNoCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Penderie <v-icon dark right>cancel</v-icon></span>
+							</v-card-actions>
 						</v-card>
 						</nuxt-link>
 					</v-flex>
-					<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+					<v-flex xs4 sm3 md3 style="padding: 5px">
+						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Savoir-vivre</span>
+								<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Usé</span>
 							</v-card-actions>
-							<v-divider light></v-divider>
-							<v-layout style="position: relative">
-								<v-flex xs4 style="text-align: center; padding: 0">
-									<img src="/images/stress.jpg" class="imgSkill" />
-								</v-flex>
-								<v-flex xs8 style="position: relative">
-									<v-card-title primary-title style="text-align: center; padding: 15px">
-										<div>											
-											<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-											<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-											<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-										</div>
-									</v-card-title>
-								</v-flex>
-							</v-layout>
-						</v-card>
-						</nuxt-link>
-					</v-flex>
-					<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
-							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Savoir-vivre</span>
-								<v-spacer></v-spacer>
-								<v-icon class="fs18" style="color: orangered">star</v-icon> Niv. 1
-							</v-card-actions>
-							<v-divider light></v-divider>
 							<v-layout>
-								<v-flex xs12 style="text-align: center; padding: 5px">
-									<img src="/images/stress.jpg" class="imgSkillMobile" />
+								<v-flex xs12 style="text-align: center; padding: 0">
+									<img src="/images/stress.jpg" class="imgInventory"/>
 								</v-flex>
 							</v-layout>
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="inventoryBadgeAvatar fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Pied</span>
+								<v-spacer></v-spacer>
+								<span class="inventoryNoCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Vestiaire <v-icon dark right>cancel</v-icon></span>
+							</v-card-actions>
 						</v-card>
 						</nuxt-link>
 					</v-flex>
-					<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+					<v-flex xs4 sm3 md3 style="padding: 5px">
+						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Humour</span>
+								<img src="/images/42.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Très usé</span>
 							</v-card-actions>
-							<v-divider light></v-divider>
-							<v-layout style="position: relative">
-								<v-flex xs4 style="text-align: center; padding: 0">
-									<img src="/images/stress.jpg" class="imgSkill" />
-								</v-flex>
-								<v-flex xs8 style="position: relative">
-									<v-card-title primary-title style="text-align: center; padding: 15px">
-										<div>											
-											<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-											<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-											<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-										</div>
-									</v-card-title>
-								</v-flex>
-							</v-layout>
-						</v-card>
-						</nuxt-link>
-					</v-flex>
-					<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
-							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Humour</span>
-								<v-spacer></v-spacer>
-								<v-icon class="fs18" style="color: orangered">star</v-icon> Niv. 1
-							</v-card-actions>
-							<v-divider light></v-divider>
 							<v-layout>
-								<v-flex xs12 style="text-align: center; padding: 5px">
-									<img src="/images/stress.jpg" class="imgSkillMobile" />
+								<v-flex xs12 style="text-align: center; padding: 0">
+									<img src="/images/stress.jpg" class="imgInventory"/>
 								</v-flex>
 							</v-layout>
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="inventoryBadgeAvatar fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Accessoires</span>
+								<v-spacer></v-spacer>
+								<span class="inventoryNoCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Armoire <v-icon dark right>cancel</v-icon></span>
+							</v-card-actions>
 						</v-card>
 						</nuxt-link>
 					</v-flex>
-					<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
+					<v-flex xs4 sm3 md3 style="padding: 5px">
+						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Charisme</span>
+								<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Foutu</span>
 							</v-card-actions>
-							<v-divider light></v-divider>
-							<v-layout style="position: relative">
-								<v-flex xs4 style="text-align: center; padding: 0">
-									<img src="/images/stress.jpg" class="imgSkill" />
-								</v-flex>
-								<v-flex xs8 style="position: relative">
-									<v-card-title primary-title style="text-align: center; padding: 15px">
-										<div>											
-											<v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="1" style="margin-top: 0; margin-bottom: 0"></v-progress-linear><span class="progress-bar-txt-white" style="top: -17px">1%</span>
-											<div class="fs14">Pénalty à la 93e de la finale de la coupe du monde… est-ce que tu oses regarder ?</div>
-											<div style="background-color: orangered; padding: 8px 5px 5px 5px; text-align: center; margin-top: 10px; border-radius: 5px"><b>À débloquer :</b><br />Démineur - Niv. 1</div>
-										</div>
-									</v-card-title>
-								</v-flex>
-							</v-layout>
-						</v-card>
-						</nuxt-link>
-					</v-flex>
-					<v-flex xs6 style="padding: 5px" hidden-sm-and-up>
-						<nuxt-link to="/skillCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
-							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18">Charisme</span>
-								<v-spacer></v-spacer>
-								<v-icon class="fs18" style="color: orangered">star</v-icon> Niv. 1
-							</v-card-actions>
-							<v-divider light></v-divider>
 							<v-layout>
-								<v-flex xs12 style="text-align: center; padding: 5px">
-									<img src="/images/stress.jpg" class="imgSkillMobile" />
+								<v-flex xs12 style="text-align: center; padding: 0">
+									<img src="/images/stress.jpg" class="imgInventory"/>
 								</v-flex>
 							</v-layout>
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="inventoryBadgeAvatar fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Jambes</span>
+								<v-spacer></v-spacer>
+								<span class="inventoryNoCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Penderie <v-icon dark right>cancel</v-icon></span>
+							</v-card-actions>
+						</v-card>
+						</nuxt-link>
+					</v-flex>
+					<v-flex xs4 sm3 md3 style="padding: 5px">
+						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+							<v-card-actions style="padding: 5px; text-align: center">
+								<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
+								<v-spacer></v-spacer>
+								<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Neuf</span>
+							</v-card-actions>
+							<v-layout>
+								<v-flex xs12 style="text-align: center; padding: 0">
+									<img src="/images/stress.jpg" class="imgInventory"/>
+								</v-flex>
+							</v-layout>
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="inventoryBadgeAppartement fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Déco</span>
+								<v-spacer></v-spacer>
+								<span class="inventoryCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Exposé <v-icon dark right>check_circle</v-icon></span>
+							</v-card-actions>
+						</v-card>
+						</nuxt-link>
+					</v-flex>
+					<v-flex xs4 sm3 md3 style="padding: 5px">
+						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+							<v-card-actions style="padding: 5px; text-align: center">
+								<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
+								<v-spacer></v-spacer>
+								<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Neuf</span>
+							</v-card-actions>
+							<v-layout>
+								<v-flex xs12 style="text-align: center; padding: 0">
+									<img src="/images/stress.jpg" class="imgInventory"/>
+								</v-flex>
+							</v-layout>
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="inventoryBadgeAppartement fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Déco</span>
+								<v-spacer></v-spacer>
+								<span class="inventoryNoCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Cave <v-icon dark right>cancel</v-icon></span>
+							</v-card-actions>
 						</v-card>
 						</nuxt-link>
 					</v-flex>
@@ -382,7 +238,16 @@
                 const response = await this.$store.dispatch('actionsCards/loadedActions', item)
                 console.log('response: ', response)
                 // return window.location.href = 'https://fr.wikipedia.org/wiki/Camp_Nou'
-            }
+            },
+			goBack() {
+				this.$router.replace("/gamemode_jm")
+			},
+			logout() {
+				console.log("Clicked logout button")
+				this.$store.dispatch("firebase-auth/signOut").then(() => {
+					this.$router.replace("/")
+				})
+			}
         }
     }
 </script>
