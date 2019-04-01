@@ -10,7 +10,7 @@
 								<div class="nameTeam">
 									A la plage <span class="nameOtherTeam">Choisis une activité !</span>
 								</div>
-								<span style="position: absolute; font-size: 15px; color: orangered; text-shadow: none; margin-right: 3px; margin-top: 3px; right: 0">Mardi, 12 mars 2019</span>
+								<span style="position: absolute; font-size: 15px; color: orangered; text-shadow: none; margin-right: 3px; margin-top: 5px; right: 30px">Mardi, 12 mars 2019</span>
 							</v-layout>
 						</v-flex>
 					</div> 
@@ -754,8 +754,9 @@
 		opacity: 0.9;
 		color: black;
 		margin: 0;
-		top: 130px;
+		top: 30px;
 		padding: 5px;
+		height: 46px;
 		}
 		.nameTeam {
 		position: relative; 
@@ -777,8 +778,9 @@
 		float: right;
 		}	
 		.nameOtherTeam {
-		font-size: 9px; 
+		font-size: 12px; 
 		margin-left: 0;
+		top: -6px;
 		}	
 		.dateHourMatch {
 		position: absolute; 
