@@ -1,10 +1,10 @@
 <template>
     <v-content id="app">
-        <v-container style="padding: 0; max-width: 1017px;">
+        <v-container style="padding: 0; max-width: 1017px; background-image: url("/images/plage.svg"); width: height: 100%">
           
             <!-- Scrollable content -->
-            <div class="content">
-				<div class="text-xs-right">
+            <div class="content" style="position: relative">
+				<div class="text-xs-right" style="position: absolute; top: 11px; right: 11px">
 					<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
 				</div>
 				<div class="cadreScore hidden-xs-only" style="position: absolute">
@@ -28,10 +28,8 @@
 						</v-layout>
 					</v-flex>
 				</div> 
-
-				<img src="/images/plage.svg" usemap="#map">
 				
-				<v-layout row wrap style="margin-top: 15px; margin: 10px">
+				<v-layout row wrap style="margin-top: 15px; margin: 10px; position: absolute; top: 100px">
 					<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 						<nuxt-link to="/skillCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
@@ -408,13 +406,7 @@
         background-color: light-gray;;
         overflow-x: auto;
         height: 100%;
-    }
-    #footer {
-        background-color: red;
-        color: #fff;
-        /*height: 100px;*/
-        height: auto;
-        text-align: center;
+		position: relative;
     }
     
     @media only screen and (min-width: 1000px) {
