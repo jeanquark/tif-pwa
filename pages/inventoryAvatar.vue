@@ -165,21 +165,36 @@
 										</v-flex>
 									</v-layout>
 									<div style="padding: 5px; text-align: center">
-										<div style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+										<div class="hidden-sm-and-up" style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Jambes</span>
 										</div>
-										<div style="position: absolute; bottom: 115px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+										<div class="hidden-xs-only" style="position: absolute; bottom: 5px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
+											<span class="inventoryBadgeAvatar fs16">Jambes</span>
+										</div>
+										<div class="hidden-sm-and-up" style="position: absolute; bottom: 115px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Acces.</span>
+										</div>
+										<div class="hidden-xs-only" style="position: absolute; bottom: 115px; left: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
 											<span class="inventoryBadgeAvatar fs16">Acces.</span>
 										</div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; bottom: 5px; left: 50%; transform: translate(-50%); z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 120px; height: 70px">
+										<div class="hidden-sm-and-up" style="position: absolute; bottom: 5px; left: 50%; transform: translate(-50%); z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 120px; height: 70px">
+											<span class="inventoryBadgePF fs18">0.45 PF</span>
+										</div>
+										<div class="hidden-xs-only" style="position: absolute; bottom: 5px; left: 50%; transform: translate(-50%); z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 180px; height: 100px">
 											<span class="inventoryBadgePF fs18">0.45 PF</span>
 										</div>
 										<v-spacer></v-spacer>
-										<div style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+										<div class="hidden-sm-and-up" style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
 											<span class="inventoryBadgeAvatar fs16">Pieds</span>
 										</div>
-										<div style="position: absolute; bottom: 115px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+										<div class="hidden-xs-only" style="position: absolute; bottom: 5px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
+											<span class="inventoryBadgeAvatar fs16">Pieds</span>
+										</div>
+										<div class="hidden-sm-and-up" style="position: absolute; bottom: 115px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 70px; height: 70px">
+											<span class="inventoryBadgeAvatar fs16">Acces.</span>
+										</div>
+										<div class="hidden-xs-only" style="position: absolute; bottom: 115px; right: 5px; z-index: 2; border-radius: 5px; border: 2px solid orangered; width: 100px; height: 100px">
 											<span class="inventoryBadgeAvatar fs16">Acces.</span>
 										</div>
 									</div>
