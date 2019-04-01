@@ -34,9 +34,9 @@
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
+								<i class="material-icons md-48" style="color: yellow">flash_on</i>
 								<v-spacer></v-spacer>
-								<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Collector</span>
+								<i class="material-icons md-48" style="color: green">attach_money</i>
 							</v-card-actions>
 							<v-layout>
 								<v-flex xs12 style="text-align: center; padding: 0">
@@ -44,9 +44,9 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="inventoryBadgeAvatar fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Tête</span>
+								<i class="material-icons md-48" style="color: orangered">title</i>
 								<v-spacer></v-spacer>
-								<span class="inventoryCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>check_circle</v-icon></span>
+								<i class="material-icons md-48" style="color: orangered">title</i>
 							</v-card-actions>
 						</v-card>
 						</nuxt-link>
@@ -273,14 +273,9 @@
         height: 100%;
 		position: relative;
 		background-image: url(/images/plage.svg);
-		background-size: contain;
+		background-size: cover;
     }
     
-    @media only screen and (min-width: 1000px) {
-        .content img {
-            height: 99%;
-        }
-    }
     /* End Content */
 
     /* Header */
@@ -748,7 +743,7 @@
 	}
 	
 	.content .imgInventory {
-	width: 70%;
+	width: 100%;
 	}
 	
 	.inventoryBadgeAvatar {
