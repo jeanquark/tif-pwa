@@ -1,104 +1,6 @@
 <template>
     <v-content id="app">
         <v-container style="padding: 0; max-width: 1017px;">
-            <!-- Fixed Header -->
-            <!-- <v-toolbar dark> -->
-            <v-container fluid id="header" class="header">
-                <v-layout row>
-                    <v-flex hidden-sm-and-down class="barreHeader">
-                        <v-layout row>
-                            <v-flex xs6 sm6 md6>
-                                <span class="barreHeaderLeft1"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span class="barreHeaderLeft2">G. Manigley (41 ans) - <nuxt-link to="/myteams" style="color: white; text-decoration: none">Tu gères des fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }}</nuxt-link></span>
-                            </v-flex>
-                            <v-flex xs6 sm6 md6>
-                                <span class="barreHeaderRight">Fan de l'équipe de suisse de football (1.34 PF)</span>
-                            </v-flex>
-                        </v-layout>
-                    </v-flex>
-                    <v-flex hidden-md-and-up class="barreHeader">
-                        <v-layout row>
-                            <v-flex xs6 sm6 md6>
-                                <span class="barreHeaderLeft1"><img src="/images/switzerland.png" class="imgTeamSmall" /></span> <span class="barreHeaderLeft2">G. Manigley <nuxt-link to="/myteams" style="color: white; text-decoration: none">(Fans de {{ loadedUserTeams.length > 1 ? loadedUserTeams.length + ' équipes' : loadedUserTeams.length + ' équipe' }})</nuxt-link></span>
-                            </v-flex>
-                            <v-flex xs6 sm6 md6>
-                                <span class="barreHeaderRight">Equipe de Suisse (1.34 PF)</span>
-                            </v-flex>
-                        </v-layout>
-                    </v-flex>
-                     <v-flex shrink>
-                     <nuxt-link to="/myprofil">
-                        <div id="avatar">
-                            <img src="/images/avatar.png" class="imgAvatar" />
-                        </div>
-                    </nuxt-link>
-                    </v-flex>
-                    <v-flex hidden-sm-and-down grow>
-                        <v-layout row>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
-                                <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="20" value="30"></v-progress-linear><span class="progress-bar-txt-white">30%</span>
-                            </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
-                                <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="20" value="75"></v-progress-linear><span class="progress-bar-txt-black">75%</span>
-                                <nuxt-link to="/plus" class="aPlusYellow">
-                                <span class="plusYellow">+</span>
-                                </nuxt-link>
-                            </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
-                                <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
-                                <div class="dollarFan">1234 $fans</div>
-                                <nuxt-link to="/plus" class="aPlusGreen">
-                                <span class="plusGreen">+</span>
-                                </nuxt-link>
-                            </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
-                                <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
-                                <div class="token">12 tokens</div>
-                                <nuxt-link to="/plus" class="aPlusOrangered">
-                                <span class="plusOrangered">+</span>
-                                </nuxt-link>
-                            </v-flex>
-                        </v-layout>
-                    </v-flex>
-                    <v-flex hidden-md-and-up grow>
-                        <v-layout row>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader1">
-                                <div style="text-align: center" class="levelHeader">Niv.1</div>
-                                <v-progress-linear class="progressOrange" color="rgb(255,69,0)" height="12" value="30"></v-progress-linear><span class="progress-bar-txt-white">30%</span>
-                            </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
-                                <div style="text-align: center"><i class="material-icons md-48" style="color: yellow">flash_on</i></div>
-                                <v-progress-linear class="progressYellow" color="yellow" height="12" value="75"></v-progress-linear><span class="progress-bar-txt-black">75%</span>
-                                <nuxt-link to="/plus" class="aPlusYellow">
-                                <span class="plusYellow">+</span>
-                                </nuxt-link>
-                            </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
-                                <div style="text-align: center"><i class="material-icons md-48" style="color: green">attach_money</i></div>
-                                <div class="dollarFan">1234 $fans</div>
-                                <nuxt-link to="/plus" class="aPlusGreen">
-                                <span class="plusGreen">+</span>
-                                </nuxt-link>
-                            </v-flex>
-                            <v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
-                                <div style="text-align: center"><i class="material-icons md-48" style="color: orangered">title</i></div>
-                                <div class="token">12 tokens</div>
-                                <nuxt-link to="/plus" class="aPlusOrangered">
-                                <span class="plusOrangered">+</span>
-                                </nuxt-link>
-                            </v-flex>
-                        </v-layout>
-                    </v-flex>  
-                    <v-flex shrink>
-                        <nuxt-link to="/myteams">
-                        <div id="team">
-                            <img src="/images/switzerland.png" class="imgTeam" />
-                        </div>
-                        </nuxt-link>
-                    </v-flex>
-                </v-layout>
-            </v-container>
           
             <!-- Scrollable content -->
             <div class="content">
@@ -126,41 +28,7 @@
 
 					<img src="/images/barcelona_clickable.svg" usemap="#map">
             </div>
-            
-            <!-- Fixed Footer -->
-            <div id="footer">
-                <!-- <br /><br /><br />
-                <h2>Footer</h2>
-                <br /><br /><br /> -->
-
-                    <div class="barreOrangered"></div>
-                    <div class="barreBlack"></div>
-                    <div id="dock-container">
-                        <ul>
-                            <li>
-                                <nuxt-link to="/myresult"><img src="/images/menuClassement.png">
-                                <span class="textMenu">Mes classements</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/skillInfluence"><img src="/images/menuSkill.png">
-                                <span class="textMenu">Mes compétences</span></nuxt-link>
-                            </li>
-                            <li id="active">
-                                <nuxt-link to="/gamemode_jm"><img src="/images/menuAgenda.png">
-                                <span class="textMenu">Aujourd'hui</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/inventoryMain"><img src="/images/menuInventory.png">
-                                <span class="textMenu">Mon inventaire</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/scoremode_gm"><img src="/images/menuScoremode.png">
-                                <span class="textMenu">ScoreMode</span></nuxt-link>
-                            </li>
-                        </ul>
-                    </div>
-            </div>
-            
+                      
         </v-container>
   </v-content>
 </template>
@@ -909,12 +777,8 @@
 		float: right;
 		}	
 		.nameOtherTeam {
-		position: relative; 
-		font-size: 18px; 
-		color: orangered; 
-		text-shadow: none;
-		float: right;
-		margin-left: 5px;
+		font-size: 9px; 
+		margin-left: 0;
 		}	
 		.dateHourMatch {
 		position: absolute; 
