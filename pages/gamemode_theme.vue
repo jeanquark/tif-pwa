@@ -34,14 +34,13 @@
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 3px; background-color: grey; color: white; position: absolute: top: 5px; left: 5px; z-index: 2; border-radius: 5px">
-									<i class="material-icons" style="color: yellow">flash_on</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%">
+									<i class="material-icons" style="color: yellow; margin-top: 3px">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 3px; background-color: grey; color: white; position: absolute: top: 5px; right: 5px; z-index: 2; border-radius: 5px">
-									<i class="material-icons md-48" style="color: green">attach_money</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+									<i class="material-icons" style="color: green">attach_money</i>
 								</span>
-								
 							</v-card-actions>
 							<v-layout>
 								<v-flex xs12 style="text-align: center; padding: 0">
@@ -49,9 +48,13 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<i class="material-icons md-48" style="color: orangered">title</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
+									<i class="material-icons" style="color: orangered">title</i>
+								</span>
 								<v-spacer></v-spacer>
-								<i class="material-icons md-48" style="color: orangered">title</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px; border-radius: 50%">
+									<i class="material-icons" style="color: orangered">title</i>
+								</span>
 							</v-card-actions>
 						</v-card>
 						</nuxt-link>
