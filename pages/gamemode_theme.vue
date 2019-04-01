@@ -29,7 +29,7 @@
 					</v-flex>
 				</div> 
 				
-				<v-layout row wrap style="margin-top: 15px; margin: 10px; position: absolute; top: 100px">
+				<v-layout row wrap style="margin-top: 15px; margin: 10px; position: absolute; top: 115px">
 					<v-flex sm4 md4 style="padding: 5px" hidden-xs-only>
 						<nuxt-link to="/skillCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px">
@@ -407,6 +407,8 @@
         overflow-x: auto;
         height: 100%;
 		position: relative;
+		background-image: url(/images/plage.svg);
+		background-size: contain;
     }
     
     @media only screen and (min-width: 1000px) {
@@ -820,6 +822,10 @@
 	
 	.content .imgSkill {
 	width: 85%;
+	}
+	
+	.fs18 {
+	font-size: 18px;
 	}
     
     /* Small screens */
