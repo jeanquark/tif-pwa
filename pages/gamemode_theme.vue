@@ -40,12 +40,12 @@
 								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
-								<span class="gommetteToken orengered">
+								<span class="gommetteToken orangered">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau darkred">
-									<v-icon style="color: orangered; font-size: 18px">star</v-icon> Niv. 1
+									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -64,7 +64,6 @@
 					<v-flex xs4 sm3 md3 style="padding: 5px">
 						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkblue; border-radius: 5px; position: relative; min-height: 73%">
-						<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy yellow">
 									<i class="material-icons gommetteIcone">flash_on</i>
@@ -72,20 +71,13 @@
 								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
-								<span class="gommetteToken orengered">
+								<span class="gommetteToken orangered">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>	
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon></br>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="gommetteNiveau darkblue">
+									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+								</span>
 							</v-card-actions>
 							<v-layout>
 								<v-flex xs12 style="text-align: center; padding: 0">
@@ -103,7 +95,6 @@
 					<v-flex xs4 sm3 md3 style="padding: 5px">
 						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
-						<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy yellow">
 									<i class="material-icons gommetteIcone">flash_on</i>
@@ -111,20 +102,9 @@
 								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
-								<span class="gommetteToken orengered">
+								<span class="gommetteToken orangered">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
-								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>	
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon></br>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 							</v-card-actions>
 							<v-layout>
 								<v-flex xs12 style="text-align: center; padding: 0">
@@ -142,7 +122,6 @@
 					<v-flex xs4 sm3 md3 style="padding: 5px">
 						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkviolet; border-radius: 5px; position: relative; min-height: 73%">
-						<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy yellow">
 									<i class="material-icons gommetteIcone">flash_on</i>
@@ -150,20 +129,13 @@
 								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
-								<span class="gommetteToken orengered">
+								<span class="gommetteToken orangered">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>	
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon></br>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="gommetteNiveau darkviolet">
+									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+								</span>
 							</v-card-actions>
 							<v-layout>
 								<v-flex xs12 style="text-align: center; padding: 0">
@@ -181,7 +153,6 @@
 					<v-flex xs4 sm3 md3 style="padding: 5px">
 						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkslategray; border-radius: 5px; position: relative; min-height: 73%">
-						<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy yellow">
 									<i class="material-icons gommetteIcone">flash_on</i>
@@ -189,20 +160,13 @@
 								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
-								<span class="gommetteToken orengered">
+								<span class="gommetteToken orangered">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>	
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon></br>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="gommetteNiveau darkslategray">
+									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+								</span>
 							</v-card-actions>
 							<v-layout>
 								<v-flex xs12 style="text-align: center; padding: 0">
@@ -220,7 +184,6 @@
 					<v-flex xs4 sm3 md3 style="padding: 5px">
 						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkslategray; border-radius: 5px; position: relative; min-height: 73%">
-						<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy yellow">
 									<i class="material-icons gommetteIcone">flash_on</i>
@@ -228,20 +191,13 @@
 								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
-								<span class="gommetteToken orengered">
+								<span class="gommetteToken orangered">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>	
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon></br>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="gommetteNiveau darkslategray">
+									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+								</span>
 							</v-card-actions>
 							<v-layout>
 								<v-flex xs12 style="text-align: center; padding: 0">
@@ -259,7 +215,6 @@
 					<v-flex xs4 sm3 md3 style="padding: 5px">
 						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid teal; border-radius: 5px; position: relative; min-height: 73%">
-						<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy yellow">
 									<i class="material-icons gommetteIcone">flash_on</i>
@@ -267,20 +222,13 @@
 								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
-								<span class="gommetteToken orengered">
+								<span class="gommetteToken orangered">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>	
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon></br>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="gommetteNiveau teal">
+									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+								</span>
 							</v-card-actions>
 							<v-layout>
 								<v-flex xs12 style="text-align: center; padding: 0">
@@ -298,7 +246,6 @@
 					<v-flex xs4 sm3 md3 style="padding: 5px">
 						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid SaddleBrown ; border-radius: 5px; position: relative; min-height: 73%">
-						<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy yellow">
 									<i class="material-icons gommetteIcone">flash_on</i>
@@ -306,20 +253,13 @@
 								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
-								<span class="gommetteToken orengered">
+								<span class="gommetteToken orangered">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>	
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon></br>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="gommetteNiveau SaddleBrown">
+									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+								</span>
 							</v-card-actions>
 							<v-layout>
 								<v-flex xs12 style="text-align: center; padding: 0">
@@ -964,7 +904,7 @@
 	position: absolute; 
 	top: 10px; 
 	right: 10px; 
-	font-size: 25px; 
+	font-size: 20px; 
 	padding: 5px; 
 	border-radius: 5px; 
 	color: white;
@@ -973,7 +913,7 @@
 	position: absolute; 
 	bottom: 10px; 
 	right: 10px; 
-	font-size: 25px; 
+	font-size: 20px; 
 	padding: 5px; 
 	border-radius: 5px; 
 	color: white;
@@ -1060,6 +1000,12 @@
 		top: 90px;
 		justify-content: center;
 		}
+		.gommetteNiveau {
+		top: 3px; 
+		right: 3px; 
+		font-size: 11px; 
+		padding: 3px; 
+		}
 		.gommetteStyle {
 		bottom: 3px; 
 		right: 3px; 
@@ -1074,12 +1020,12 @@
 		.gommetteDollar {
 		padding: 3px; 
 		top: 3px; 
-		right: 3px; 
+		right: 23px; 
 		}	
 		.gommetteToken {
 		padding: 3px; 
-		bottom: 3px; 
-		left: 3px; 
+		top: 3px; 
+		left: 43px; 
 		}
 		.gommetteIcone {
 		font-size: 12px;
