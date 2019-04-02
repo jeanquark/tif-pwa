@@ -31,7 +31,7 @@
 				
 				<v-layout row wrap class="layoutTheme puff-in-center">
 					<v-flex xs4 sm3 md3 style="padding: 5px">
-						<nuxt-link to="/actionCards" style="text-decoration: none">
+						<nuxt-link to="/actionCardsJob" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy yellow">
