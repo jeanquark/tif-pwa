@@ -4,7 +4,7 @@
           
             <!-- Scrollable content -->
             <div class="content" style="position: relative">
-				<div class="text-xs-right" style="position: absolute; top: 11px; right: 11px">
+				<div class="text-xs-right retour">
 					<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
 				</div>
 				<div class="cadreScore hidden-xs-only" style="position: absolute">
@@ -29,17 +29,17 @@
 					</v-flex>
 				</div> 
 				
-				<v-layout row wrap style="margin-top: 15px; margin: 10px; position: absolute; top: 140px" class="puff-in-center">
+				<v-layout row wrap class="layoutTheme puff-in-center">
 					<v-flex xs4 sm3 md3 style="padding: 5px">
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
+								<span class="gommetteEnergy red">
+									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
+									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -49,10 +49,10 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
+									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span style="position: absolute; bottom: 10px; right: 10px; z-index: 2; font-size: 25px; padding: 5px; background-color: darkred; border-radius: 5px; color: white">
+								<span class="gommetteStyle darkred">
 									Job
 								</span>
 							</v-card-actions>
@@ -63,12 +63,12 @@
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkblue; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
+								<span class="gommetteEnergy green">
+									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
+								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -77,11 +77,11 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
+									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span style="position: absolute; bottom: 10px; right: 10px; z-index: 2; font-size: 25px; padding: 5px; background-color: darkblue; border-radius: 5px; color: white">
+								<span class="gommetteStyle darkblue">
 									Hobby
 								</span>
 							</v-card-actions>
@@ -92,12 +92,12 @@
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
+								<span class="gommetteEnergy red">
+									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
+									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -107,10 +107,10 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
+									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span style="position: absolute; bottom: 10px; right: 10px; z-index: 2; font-size: 25px; padding: 5px; background-color: orangered; border-radius: 5px; color: white">
+								<span class="gommetteStyle orangered">
 									Voir le match !
 								</span>
 							</v-card-actions>
@@ -121,12 +121,12 @@
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkviolet; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
+								<span class="gommetteEnergy red">
+									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
+									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -136,10 +136,10 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
+									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span style="position: absolute; bottom: 10px; right: 10px; z-index: 2; font-size: 25px; padding: 5px; background-color: darkviolet; border-radius: 5px; color: white">
+								<span class="gommetteStyle darkviolet">
 									Sport
 								</span>
 							</v-card-actions>
@@ -150,12 +150,12 @@
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkslategray; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
+								<span class="gommetteEnergy blackOpacity">
+									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; right: 10px; border-radius: 50%; opacity: 0.25">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
+									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -165,10 +165,10 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
+									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span style="position: absolute; bottom: 10px; right: 10px; z-index: 2; font-size: 25px; padding: 5px; background-color: darkslategray; border-radius: 5px; color: white">
+								<span class="gommetteStyle darkslategray">
 									Formation
 								</span>
 							</v-card-actions>
@@ -179,12 +179,12 @@
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkslategray; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
+								<span class="gommetteEnergy blackOpacity">
+									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
+									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -194,10 +194,10 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
+									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span style="position: absolute; bottom: 10px; right: 10px; z-index: 2; font-size: 25px; padding: 5px; background-color: darkslategray; border-radius: 5px; color: white">
+								<span class="gommetteStyle darkslategray">
 									Formation
 								</span>
 							</v-card-actions>
@@ -208,12 +208,12 @@
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid teal; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
+								<span class="gommetteEnergy red">
+									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
+									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -223,10 +223,10 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
+									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span style="position: absolute; bottom: 10px; right: 10px; z-index: 2; font-size: 25px; padding: 5px; background-color: teal; border-radius: 5px; color: white">
+								<span class="gommetteStyle teal">
 									Temps libre
 								</span>
 							</v-card-actions>
@@ -237,12 +237,12 @@
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid SaddleBrown ; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
+								<span class="gommetteEnergy blackOpacity">
+									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
+									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -252,10 +252,10 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
+									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span style="position: absolute; bottom: 10px; right: 10px; z-index: 2; font-size: 25px; padding: 5px; background-color: SaddleBrown ; border-radius: 5px; color: white">
+								<span class="gommetteStyle SaddleBrown">
 									Quotidien
 								</span>
 							</v-card-actions>
@@ -876,9 +876,72 @@
 	opacity: 1;
 	}
 	}
-
-    /* Small screens */
+	
+	.retour {
+	position: absolute; 
+	top: 11px; 
+	right: 11px;
+	}
+	.layoutTheme {
+	margin-top: 15px;
+	margin: 10px; 
+	position: absolute; 
+	top: 140px;
+	}
+	.gommetteStyle {
+	position: absolute; 
+	bottom: 10px; 
+	right: 10px; 
+	z-index: 2; 
+	font-size: 25px; 
+	padding: 5px; 
+	border-radius: 5px; 
+	olor: white;
+	}
+	.gommetteEnergy {
+	padding: 5px; 
+	position: absolute; 
+	top: 10px; 
+	left: 10px; 
+	border-radius: 50%;
+	color: white;
+	}
+	.gommetteIcone {
+	margin-top: 3px; 
+	font-size: 25px;
+	}
+	.blackOpacity {
+	background-color: black;
+	opacity: 0.25;
+	}
+	
+	/* Small screens */
     @media only screen and (max-width: 768px) {
+		.retour {
+		position: absolute; 
+		top: 7px; 
+		right: 7px;
+		}
+		.layoutTheme {
+		margin: 5px; 
+		position: absolute; 
+		top: 90px;
+		}
+		.gommetteStyle {
+		bottom: 3px; 
+		right: 3px; 
+		font-size: 11px; 
+		padding: 3px; 
+		}
+		.gommetteEnergy {
+		padding: 3px; 
+		top: 3px; 
+		left: 3px; 
+		}
+		.gommetteIcone {
+		font-size: 12px;
+		}
+		
 		body {
 			margin: 0;
 			padding: 0;
@@ -1117,8 +1180,9 @@
 		opacity: 0.9;
 		color: black;
 		margin: 0;
-		top: 130px;
+		top: 40px;
 		padding: 5px;
+		height: 45px;
 		}
 		.nameTeam {
 		position: relative; 
@@ -1141,19 +1205,19 @@
 		}	
 		.nameOtherTeam {
 		position: relative; 
-		font-size: 18px; 
+		font-size: 12px; 
 		color: orangered; 
 		text-shadow: none;
-		float: right;
-		margin-left: 5px;
+		margin-left: 0;
+		top: -6px;
 		}	
 		.dateHourMatch {
 		position: absolute; 
 		font-size: 10px; 
 		color: orangered; 
 		text-shadow: none; 
-		margin-right: 3px; 
-		margin-top: 3px; 
+		margin-right: 5px; 
+		margin-top: 1px; 
 		right: 0
 		}	
 		.material-icons.md-48 { 
