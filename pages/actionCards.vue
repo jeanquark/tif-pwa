@@ -4,7 +4,7 @@
 			<v-card class="card">
 				<v-card-title primary-title>
 					<v-flex xs9>
-						<span class="titleModalCards text-xs-left">Maillot officiel "home"</span>
+						<span class="titleModalCards text-xs-left">Vendeur de beignet</span>
 					</v-flex>
 					<v-flex xs3 hidden-xs-only class="text-xs-right">
 						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
@@ -16,13 +16,17 @@
 
 				<v-card-text class="card-text mx-2" style="padding: 0">
 					<v-container fluid style="padding: 1px">
-						<v-layout row wrap style="margin: 1px; background-color: white; border: 2px solid #2956B2; border-radius: 5px">
+						<v-layout row wrap style="margin: 1px; background-color: white; border: 2px solid darkred; border-radius: 5px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
+										<span class="gommetteEnergy red">
+											<i class="material-icons gommetteIcone">flash_on</i>
+										</span>
 										<v-spacer></v-spacer>
-										<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Collector</span>
+										<span class="gommetteDollar green">
+											<i class="material-icons gommetteIcone">attach_money</i>
+										</span>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -30,16 +34,20 @@
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="inventoryBadgeAvatar fs16" style="position: absolute; bottom: 5px; left: 5px; z-index: 4">Tête</span>
+										<span class="gommetteToken blackOpacity">
+											<i class="material-icons gommetteIcone">title</i>
+										</span>
 										<v-spacer></v-spacer>
-										<span class="inventoryCheck fs16" style="position: absolute; bottom: 5px; right: 5px; z-index: 5">Porté <v-icon dark right>check_circle</v-icon></span>
+										<span class="gommetteStyle darkred">
+											Job
+										</span>
 									</v-card-actions>
 								</v-card>
 							</v-flex>
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="min-height: 100%">
 									<div class="divtexte">
-										<span class="fs18" style="font-weight: 700; margin-top: 10px"><b>Point de ferveur que tu apportes à ton équipes favorites en fonction d'où tu regardes le match :</b></span>
+										<span class="fs18" style="font-weight: 700; margin-top: 10px"><b>Ils sont beaux, ils sont chaud mes beignets ! Qui veut des beignets !?</b></span>
 										<div class="pftexte">
 										Au stade : 0.1 PF</br>
 										Au pub : 0.1 PF</br>
@@ -47,7 +55,7 @@
 										</div>
 										<span class="fs16" style="margin-top: 20px; color: orangered">
 											<b>Conseil de Mr Fan</b></br>
-											Si tu mets ton maillot au match d'une autre équipe, tu risques d'avoir des problèmes !
+											Pour vendre des beignets sous un soleil de plomb, il faut être endurant et avoir un sacré baratin !
 										</span>
 									</div>
 								</v-card>
@@ -179,8 +187,8 @@ font-size: 20px;
 padding: 10px;
 }
 .imgTeamInventory {
-	width: 15%;
-	border-radius: 0 0 0 0;
+width: 15%;
+border-radius: 0 0 0 0;
 }
 .imgInventory {
 width: 100%;
@@ -262,12 +270,12 @@ background: orangered;
 border: 6px solid orangered;
 }
 .progress-bar-txt-white {
-	position: relative;
-	font-size: 15px;
-	top: -31px;
-	z-index: 1;
-	color: white;
-	font-weight: 700;
+position: relative;
+font-size: 15px;
+top: -31px;
+z-index: 1;
+color: white;
+font-weight: 700;
 }
 .titleModalCards {
 font-size: 2.0em; 
@@ -280,8 +288,114 @@ font-size: 24px;
 .fs24title {
 font-size: 24px;
 }
-
+.gommetteStyle {
+position: absolute; 
+bottom: 10px; 
+right: 10px; 
+z-index: 2; 
+font-size: 25px; 
+padding: 5px; 
+border-radius: 5px; 
+olor: white;
+}
+.gommetteEnergy {
+padding: 5px; 
+position: absolute; 
+top: 10px; 
+left: 10px; 
+border-radius: 50%;
+color: white;
+}
+.gommetteDollar {
+padding: 5px; 
+position: absolute; 
+top: 10px; 
+right: 10px; 
+border-radius: 50%;
+color: white;
+}	
+.gommetteToken {
+padding: 5px; 
+position: absolute; 
+bottom: 10px; 
+left: 10px; 
+border-radius: 50%; 
+color: white;
+}
+.gommetteIcone {
+margin-top: 3px; 
+font-size: 25px;
+}
+.blackOpacity {
+background-color: black;
+opacity: 0.25;
+}
+.orangered {
+background-color: orangered;
+color: white;
+}
+.darkblue {
+background-color: darkblue;
+color: white;
+}
+.darkred {
+background-color: darkred;
+color: white;
+}
+.darkslategray {
+background-color: darkslategray;
+color: white;
+}
+.darkviolet {
+background-color: darkviolet;
+color: white;
+}
+.SaddleBrown {
+background-color: SaddleBrown;
+color: white;
+}
+.teal {
+background-color: teal;
+color: white;
+}
+	
+	/* Small screens */
     @media only screen and (max-width: 768px) {
+	.retour {
+	position: absolute; 
+	top: 7px; 
+	right: 7px;
+	}
+	.layoutTheme {
+	margin: 5px; 
+	position: absolute; 
+	top: 90px;
+	justify-content: center;
+	}
+	.gommetteStyle {
+	bottom: 3px; 
+	right: 3px; 
+	font-size: 11px; 
+	padding: 3px; 
+	}
+	.gommetteEnergy {
+	padding: 3px; 
+	top: 3px; 
+	left: 3px; 
+	}
+	.gommetteDollar {
+	padding: 3px; 
+	top: 3px; 
+	right: 3px; 
+	}	
+	.gommetteToken {
+	padding: 3px; 
+	bottom: 3px; 
+	left: 3px; 
+	}
+	.gommetteIcone {
+	font-size: 12px;
+	}
 	.divtexte {
 	padding: 15px; 
 	text-align: center;
