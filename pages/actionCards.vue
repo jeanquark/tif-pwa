@@ -31,7 +31,7 @@
 										</span>
 										<v-spacer></v-spacer>
 										<span class="gommetteNiveau darkblue">
-											<v-icon>star</v-icon> N1
+											<v-icon style="color: white">star</v-icon> N1
 										</span>
 									</v-card-actions>
 									<v-layout>
@@ -290,147 +290,106 @@ font-size: 24px;
 .fs24title {
 font-size: 24px;
 }
-	.retour {
-	position: absolute; 
-	top: 11px; 
-	right: 11px;
-	}
-	.layoutTheme {
-	margin-top: 15px;
-	margin: 10px; 
-	position: absolute; 
-	top: 140px;
-	}
-	.gommetteNiveau {
-	position: absolute; 
-	top: 10px; 
-	right: 10px; 
-	font-size: 20px; 
-	padding: 5px; 
-	border-radius: 5px; 
-	color: white;
-	}
-	.gommetteStyle {
-	position: absolute; 
-	bottom: 10px; 
-	right: 10px; 
-	font-size: 20px; 
-	padding: 5px; 
-	border-radius: 5px; 
-	color: white;
-	}
-	.gommetteEnergy {
-	padding: 5px; 
-	position: absolute; 
-	top: 10px; 
-	left: 5px; 
-	border-radius: 50%;
-	color: white;
-	z-index: 3;
-	}
-	.gommetteDollar {
-	padding: 5px; 
-	position: absolute; 
-	top: 10px; 
-	left: 25px; 
-	border-radius: 50%;
-	color: white;
-	z-index: 2;
-	}	
-	.gommetteToken {
-	padding: 5px; 
-	position: absolute; 
-	top: 10px; 
-	left: 45px; 
-	border-radius: 50%; 
-	color: white;
-	z-index: 1;
-	}
-	.gommetteIcone {
-	margin-top: 3px; 
-	font-size: 25px;
-	}
-	.blackOpacity {
-	background-color: black;
-	opacity: 0.25;
-	}
-	.orangered {
-	background-color: orangered;
-	color: white;
-	}
-	.darkblue {
-	background-color: darkblue;
-	color: white;
-	}
-	.darkred {
-	background-color: darkred;
-	color: white;
-	}
-	.darkslategray {
-	background-color: darkslategray;
-	color: white;
-	}
-	.darkviolet {
-	background-color: darkviolet;
-	color: white;
-	}
-	.SaddleBrown {
-	background-color: SaddleBrown;
-	color: white;
-	}
-	.teal {
-	background-color: teal;
-	color: white;
-	}
-	.orangered {
-	background-color: orangered;
-	border-color: orangered;
-	color: white;
-	}
+.retour {
+position: absolute; 
+top: 11px; 
+right: 11px;
+}
+.layoutTheme {
+margin-top: 15px;
+margin: 10px; 
+position: absolute; 
+top: 140px;
+}
+.gommetteNiveau {
+position: absolute; 
+top: 10px; 
+right: 10px; 
+font-size: 20px; 
+padding: 5px; 
+border-radius: 5px; 
+color: white;
+}
+.gommetteStyle {
+position: absolute; 
+bottom: 10px; 
+right: 10px; 
+font-size: 20px; 
+padding: 5px; 
+border-radius: 5px; 
+color: white;
+}
+.gommetteEnergy {
+padding: 5px; 
+position: absolute; 
+top: 10px; 
+left: 5px; 
+border-radius: 50%;
+color: white;
+z-index: 3;
+}
+.gommetteDollar {
+padding: 5px; 
+position: absolute; 
+top: 10px; 
+left: 25px; 
+border-radius: 50%;
+color: white;
+z-index: 2;
+}	
+.gommetteToken {
+padding: 5px; 
+position: absolute; 
+top: 10px; 
+left: 45px; 
+border-radius: 50%; 
+color: white;
+z-index: 1;
+}
+.gommetteIcone {
+margin-top: 3px; 
+font-size: 25px;
+}
+.blackOpacity {
+background-color: black;
+opacity: 0.25;
+}
+.orangered {
+background-color: orangered;
+color: white;
+}
+.darkblue {
+background-color: darkblue;
+color: white;
+}
+.darkred {
+background-color: darkred;
+color: white;
+}
+.darkslategray {
+background-color: darkslategray;
+color: white;
+}
+.darkviolet {
+background-color: darkviolet;
+color: white;
+}
+.SaddleBrown {
+background-color: SaddleBrown;
+color: white;
+}
+.teal {
+background-color: teal;
+color: white;
+}
+.orangered {
+background-color: orangered;
+border-color: orangered;
+color: white;
+}
 	
 	/* Small screens */
     @media only screen and (max-width: 768px) {
-		.retour {
-		position: absolute; 
-		top: 7px; 
-		right: 7px;
-		}
-		.layoutTheme {
-		margin: 5px; 
-		position: absolute; 
-		top: 110px;
-		justify-content: center;
-		}
-		.gommetteNiveau {
-		top: 3px; 
-		right: 3px; 
-		font-size: 11px; 
-		padding: 3px; 
-		}
-		.gommetteStyle {
-		bottom: 3px; 
-		right: 3px; 
-		font-size: 11px; 
-		padding: 3px; 
-		}
-		.gommetteEnergy {
-		padding: 3px; 
-		top: 3px; 
-		left: 3px; 
-		}
-		.gommetteDollar {
-		padding: 3px; 
-		top: 3px; 
-		left: 15px; 
-		}	
-		.gommetteToken {
-		padding: 3px; 
-		top: 3px; 
-		left: 27px; 
-		}
-		.gommetteIcone {
-		font-size: 12px;
-		}
 	.divtexte {
 	padding: 15px; 
 	text-align: center;
