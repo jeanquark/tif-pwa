@@ -849,8 +849,8 @@
 	}
 	
 	.puff-in-center {
-	-webkit-animation: puff-in-center 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2s both;
-	animation: puff-in-center 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2s both;
+	-webkit-animation: puff-in-center 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1s both;
+	animation: puff-in-center 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1s both;
 	}
 	/**
 	* ----------------------------------------

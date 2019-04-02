@@ -4,7 +4,7 @@
 			<v-card class="card">
 				<v-card-title primary-title>
 					<v-flex xs9>
-						<span class="titleModalCards text-xs-left">Vendeur de beignet</span>
+						<span class="titleModalCards text-xs-left">Jouer au beach-soccer</span>
 					</v-flex>
 					<v-flex xs3 hidden-xs-only class="text-xs-right">
 						<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
@@ -16,9 +16,9 @@
 
 				<v-card-text class="card-text mx-2" style="padding: 0">
 					<v-container fluid style="padding: 1px">
-						<v-layout row wrap style="margin: 1px; background-color: white; border: 2px solid orangered; border-radius: 5px">
+						<v-layout row wrap style="margin: 1px; background-color: white; border: 2px solid darkslategray; border-radius: 5px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid darkslategray; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span class="gommetteEnergy yellow">
 											<i class="material-icons gommetteIcone">flash_on</i>
@@ -30,6 +30,9 @@
 											<i class="material-icons gommetteIcone">title</i>
 										</span>
 										<v-spacer></v-spacer>
+										<span class="gommetteNiveau darkslategray">
+											<v-icon style="color: white">star</v-icon> N1
+										</span>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -37,8 +40,8 @@
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="gommetteStyle orangered">
-											Voir le match !
+										<span class="gommetteStyle darkslategray">
+											Formation
 										</span>
 									</v-card-actions>
 								</v-card>
@@ -221,7 +224,7 @@ body {
 font: normal 100%/1 "Acme", Helvetica, sans-serif;
 }
 .card {
-background: linear-gradient(-45deg, #ffb76b 0%, #ffa73d 50%, #FF7C01 51%, #ff7f04 100%);
+background: linear-gradient(135deg, rgba(76,127,127,1) 0%, rgba(47,79,79,1) 50%, rgba(37,63,63,1) 51%, rgba(18,31,31,1) 100%);
 border-radius: 5px;
 margin: 5px;
 }
