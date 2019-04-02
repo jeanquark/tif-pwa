@@ -45,7 +45,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau darkred">
-									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+									<v-icon>star</v-icon> Niv. 1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -76,7 +76,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau darkblue">
-									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+									<v-icon>star</v-icon> Niv. 1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -134,7 +134,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau darkviolet">
-									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+									<v-icon>star</v-icon> Niv. 1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -165,7 +165,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau darkslategray">
-									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+									<v-icon>star</v-icon> Niv. 1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -196,7 +196,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau darkslategray">
-									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+									<v-icon>star</v-icon> Niv. 1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -227,7 +227,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau teal">
-									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+									<v-icon>star</v-icon> Niv. 1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -258,7 +258,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau SaddleBrown">
-									<v-icon style="color: white; font-size: 24px">star</v-icon> Niv. 1
+									<v-icon>star</v-icon> Niv. 1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -619,6 +619,7 @@
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
+	color: white;
 
     /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
@@ -1020,12 +1021,12 @@
 		.gommetteDollar {
 		padding: 3px; 
 		top: 3px; 
-		right: 23px; 
+		left: 15px; 
 		}	
 		.gommetteToken {
 		padding: 3px; 
 		top: 3px; 
-		left: 43px; 
+		left: 27px; 
 		}
 		.gommetteIcone {
 		font-size: 12px;
