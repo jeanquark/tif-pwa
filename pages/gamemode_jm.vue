@@ -129,7 +129,7 @@
 					<img src="/images/barcelona_clickable.svg" usemap="#map">
 
 					<map name="map">
-						<area target="" alt="Museum" title="Museum" href="museum" coords="462,411,61" shape="circle">
+						<area target="" alt="Thème Plage" title="Museum" href="gamemode_theme" coords="462,411,61" shape="circle">
 					</map>
 					
                     <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
