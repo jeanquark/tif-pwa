@@ -987,6 +987,10 @@
 	border-color: orangered;
 	color: white;
 	}
+	.icon:hover {
+	cursor: pointer;
+	color: #fff;
+	}
 	
 	/* Small screens */
     @media only screen and (max-width: 768px) {
