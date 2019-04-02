@@ -30,7 +30,7 @@
 											<i class="material-icons gommetteIcone">title</i>
 										</span>
 										<v-spacer></v-spacer>
-										<span class="gommetteNiveau darkblue">
+										<span class="gommetteNiveau darkred">
 											<v-icon style="color: white">star</v-icon> N1
 										</span>
 									</v-card-actions>
@@ -40,7 +40,7 @@
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="gommetteStyle darkblue">
+										<span class="gommetteStyle darkred">
 											Hobby
 										</span>
 									</v-card-actions>
@@ -223,7 +223,7 @@ body {
 font: normal 100%/1 "Acme", Helvetica, sans-serif;
 }
 .card {
-background: linear-gradient(-45deg, #ffb76b 0%, #ffa73d 50%, #FF7C01 51%, #ff7f04 100%);
+background: linear-gradient(135deg, rgba(216,0,0,1) 0%, rgba(165,0,0,1) 50%, rgba(114,0,0,1) 51%, rgba(63,0,0,1) 100%);
 border-radius: 5px;
 margin: 5px;
 }
@@ -390,6 +390,42 @@ color: white;
 	
 	/* Small screens */
     @media only screen and (max-width: 768px) {
+	.gommetteNiveau {
+	font-size: 16px; 
+	}
+	.gommetteStyle {
+	font-size: 16px; 
+	}
+	.gommetteEnergy {
+	padding: 5px; 
+	position: absolute; 
+	top: 10px; 
+	left: 5px; 
+	border-radius: 50%;
+	color: white;
+	z-index: 3;
+	}
+	.gommetteDollar {
+	padding: 5px; 
+	position: absolute; 
+	top: 10px; 
+	left: 25px; 
+	border-radius: 50%;
+	color: white;
+	z-index: 2;
+	}	
+	.gommetteToken {
+	padding: 5px; 
+	position: absolute; 
+	top: 10px; 
+	left: 45px; 
+	border-radius: 50%; 
+	color: white;
+	z-index: 1;
+	}
+	.gommetteIcone {
+	font-size: 20px;
+	}
 	.divtexte {
 	padding: 15px; 
 	text-align: center;
