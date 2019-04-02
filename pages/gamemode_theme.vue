@@ -31,7 +31,7 @@
 				
 				<v-layout row wrap class="layoutTheme puff-in-center">
 					<v-flex xs4 sm3 md3 style="padding: 5px">
-						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy red">
@@ -60,7 +60,7 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex xs4 sm3 md3 style="padding: 5px">
-						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkblue; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy green">
@@ -89,7 +89,7 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex xs4 sm3 md3 style="padding: 5px">
-						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy red">
@@ -118,7 +118,7 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex xs4 sm3 md3 style="padding: 5px">
-						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkviolet; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy red">
@@ -147,7 +147,7 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex xs4 sm3 md3 style="padding: 5px">
-						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkslategray; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy blackOpacity">
@@ -176,7 +176,7 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex xs4 sm3 md3 style="padding: 5px">
-						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkslategray; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy blackOpacity">
@@ -205,7 +205,7 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex xs4 sm3 md3 style="padding: 5px">
-						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid teal; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy red">
@@ -234,7 +234,7 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex xs4 sm3 md3 style="padding: 5px">
-						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid SaddleBrown ; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="gommetteEnergy blackOpacity">
