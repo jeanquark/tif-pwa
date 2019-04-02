@@ -29,10 +29,10 @@
 					</v-flex>
 				</div> 
 				
-				<v-layout row wrap style="margin-top: 15px; margin: 10px; position: absolute; top: 115px">
+				<v-layout row wrap style="margin-top: 15px; margin: 10px; position: absolute; top: 115px" class="transitionLente">
 					<v-flex xs4 sm3 md3 style="padding: 5px">
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%" class="transitionLente">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; left: 10px; border-radius: 50%">
 									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
@@ -52,8 +52,8 @@
 									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span style="position: absolute; bottom: 10px; right: 10px; z-index: 2; font-size: 20px; padding: 3px; background-color: blue">
-									Job <v-icon dark right>check_circle</v-icon>
+								<span style="position: absolute; bottom: 10px; right: 10px; z-index: 2; font-size: 25px; padding: 5px; background-color: blue; border-radius: 5px; color: white">
+									Job
 								</span>
 							</v-card-actions>
 						</v-card>
