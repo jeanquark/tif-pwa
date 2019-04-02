@@ -32,7 +32,7 @@
 				<v-layout row wrap style="margin-top: 15px; margin: 10px; position: absolute; top: 115px">
 					<v-flex xs4 sm3 md3 style="padding: 5px">
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%" class="transitionLente">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; left: 10px; border-radius: 50%">
 									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
@@ -52,8 +52,8 @@
 									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px">
-									<img src="/images/menuSkill.png" style="width: 30px; height: 30px">
+								<span style="position: absolute; bottom: 10px; right: 10px; z-index: 2; font-size: 20px; padding: 3px; background-color: blue">
+									Job <v-icon dark right>check_circle</v-icon>
 								</span>
 							</v-card-actions>
 						</v-card>
@@ -833,6 +833,21 @@
 	background-color: red;
 	color: white;
 	border-radius: 5px;
+	}
+	
+	.transitionLente {
+	-webkit-animation:appear 1s ease 1s 1 normal;
+	-moz-animation:appear 1s ease 1s 1 normal;
+	-ms-animation:appear 1s ease 1s 1 normal;
+	animation:appear 1s ease 1s 1 normal;
+	}
+	@-webkit-keyframes appear {
+	0%{ opacity: 0; -webkit-transform: scale3d(0.3, 0.3, 0.3); transform: scale3d(0.3, 0.3, 0.3); }
+	60%{ opacity: 1; -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1); }
+	}
+	@keyframes appear {
+	0%{ opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+	60%{ opacity: 1; transform: scale3d(1,1,1); }
 	}
 	   
     /* Small screens */
