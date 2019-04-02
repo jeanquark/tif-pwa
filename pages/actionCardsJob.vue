@@ -436,7 +436,7 @@ color: white;
 	padding: 10px;
 	}
 	.imgInventory {
-	width: 80%;
+	width: 70%;
 	}
 	.titleModalCards {
 	font-size: 1.5em; 

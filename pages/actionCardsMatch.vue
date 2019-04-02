@@ -16,9 +16,9 @@
 
 				<v-card-text class="card-text mx-2" style="padding: 0">
 					<v-container fluid style="padding: 1px">
-						<v-layout row wrap style="margin: 1px; background-color: white; border: 2px solid darkred; border-radius: 5px">
+						<v-layout row wrap style="margin: 1px; background-color: white; border: 2px solid orangered; border-radius: 5px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span class="gommetteEnergy yellow">
 											<i class="material-icons gommetteIcone">flash_on</i>
@@ -30,9 +30,6 @@
 											<i class="material-icons gommetteIcone">title</i>
 										</span>
 										<v-spacer></v-spacer>
-										<span class="gommetteNiveau darkred">
-											<v-icon style="color: white">star</v-icon> N1
-										</span>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -40,8 +37,8 @@
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="gommetteStyle darkred">
-											Job
+										<span class="gommetteStyle orangered">
+											Voir le match !
 										</span>
 									</v-card-actions>
 								</v-card>

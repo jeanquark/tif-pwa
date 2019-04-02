@@ -16,9 +16,9 @@
 
 				<v-card-text class="card-text mx-2" style="padding: 0">
 					<v-container fluid style="padding: 1px">
-						<v-layout row wrap style="margin: 1px; background-color: white; border: 2px solid darkred; border-radius: 5px">
+						<v-layout row wrap style="margin: 1px; background-color: white; border: 2px solid darkblue; border-radius: 5px">
 							<v-flex xs12 sm6 md6 style="padding: 5px">
-								<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid darkblue; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<span class="gommetteEnergy yellow">
 											<i class="material-icons gommetteIcone">flash_on</i>
@@ -436,7 +436,7 @@ color: white;
 	padding: 10px;
 	}
 	.imgInventory {
-	width: 80%;
+	width: 70%;
 	}
 	.titleModalCards {
 	font-size: 1.5em; 
