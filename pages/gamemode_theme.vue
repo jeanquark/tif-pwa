@@ -912,6 +912,7 @@
 	top: 10px; 
 	right: 10px; 
 	border-radius: 50%;
+	color: white;
 	}	
 	.gommetteToken {
 	padding: 5px; 
@@ -919,6 +920,7 @@
 	bottom: 10px; 
 	left: 10px; 
 	border-radius: 50%; 
+	color: white;
 	}
 	.gommetteIcone {
 	margin-top: 3px; 
