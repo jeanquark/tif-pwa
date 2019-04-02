@@ -34,12 +34,12 @@
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">flash_on</i>
+								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; left: 10px; border-radius: 50%">
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">attach_money</i>
+								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -48,12 +48,70 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px">
+									<img src="/images/menuSkill.png" style="width: 30px; height: 30px">
+								</span>
+							</v-card-actions>
+						</v-card>
+						</nuxt-link>
+					</v-flex>
+					<v-flex xs4 sm3 md3 style="padding: 5px">
+						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; left: 10px; border-radius: 50%">
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
+								</span>
+								<v-spacer></v-spacer>
+								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
+								</span>
+							</v-card-actions>
+							<v-layout>
+								<v-flex xs12 style="text-align: center; padding: 0">
+									<img src="/images/stress.jpg" class="imgInventory"/>
+								</v-flex>
+							</v-layout>
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
+								</span>
+								<v-spacer></v-spacer>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px">
+									<img src="/images/menuSkill.png" style="width: 30px; height: 30px">
+								</span>
+							</v-card-actions>
+						</v-card>
+						</nuxt-link>
+					</v-flex>
+					<v-flex xs4 sm3 md3 style="padding: 5px">
+						<nuxt-link to="/inventoryCards" style="text-decoration: none">
+						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
+								</span>
+								<v-spacer></v-spacer>
+								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
+								</span>
+							</v-card-actions>
+							<v-layout>
+								<v-flex xs12 style="text-align: center; padding: 0">
+									<img src="/images/stress.jpg" class="imgInventory"/>
+								</v-flex>
+							</v-layout>
+							<v-card-actions style="padding: 5px; text-align: center">
+								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
+								</span>
+								<v-spacer></v-spacer>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px">
+									<img src="/images/menuSkill.png" style="width: 30px; height: 30px">
 								</span>
 							</v-card-actions>
 						</v-card>
@@ -64,11 +122,11 @@
 						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">flash_on</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">attach_money</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -78,11 +136,11 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px">
+									<img src="/images/menuSkill.png" style="width: 30px; height: 30px">
 								</span>
 							</v-card-actions>
 						</v-card>
@@ -93,11 +151,11 @@
 						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">flash_on</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">attach_money</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -107,11 +165,11 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px">
+									<img src="/images/menuSkill.png" style="width: 30px; height: 30px">
 								</span>
 							</v-card-actions>
 						</v-card>
@@ -122,11 +180,11 @@
 						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">flash_on</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">attach_money</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -136,11 +194,11 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px">
+									<img src="/images/menuSkill.png" style="width: 30px; height: 30px">
 								</span>
 							</v-card-actions>
 						</v-card>
@@ -151,11 +209,11 @@
 						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">flash_on</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">attach_money</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -165,11 +223,11 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px">
+									<img src="/images/menuSkill.png" style="width: 30px; height: 30px">
 								</span>
 							</v-card-actions>
 						</v-card>
@@ -180,11 +238,11 @@
 						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">flash_on</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">attach_money</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">attach_money</i>
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -194,69 +252,11 @@
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
 								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 25px">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
-								</span>
-							</v-card-actions>
-						</v-card>
-						</nuxt-link>
-					</v-flex>
-					<v-flex xs4 sm3 md3 style="padding: 5px">
-						<nuxt-link to="/inventoryCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
-							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">flash_on</i>
-								</span>
-								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">attach_money</i>
-								</span>
-							</v-card-actions>
-							<v-layout>
-								<v-flex xs12 style="text-align: center; padding: 0">
-									<img src="/images/stress.jpg" class="imgInventory"/>
-								</v-flex>
-							</v-layout>
-							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
-								</span>
-								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
-								</span>
-							</v-card-actions>
-						</v-card>
-						</nuxt-link>
-					</v-flex>
-					<v-flex xs4 sm3 md3 style="padding: 5px">
-						<nuxt-link to="/inventoryCards" style="text-decoration: none">
-						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
-							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">flash_on</i>
-								</span>
-								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">attach_money</i>
-								</span>
-							</v-card-actions>
-							<v-layout>
-								<v-flex xs12 style="text-align: center; padding: 0">
-									<img src="/images/stress.jpg" class="imgInventory"/>
-								</v-flex>
-							</v-layout>
-							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
-								</span>
-								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px; border-radius: 50%">
-									<i class="material-icons" style="color: white; margin-top: 3px; font-size: 30px">title</i>
+								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; right: 10px">
+									<img src="/images/menuSkill.png" style="width: 30px; height: 30px">
 								</span>
 							</v-card-actions>
 						</v-card>
