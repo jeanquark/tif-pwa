@@ -20,12 +20,18 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="gommetteEnergy red">
+										<span class="gommetteEnergy yellow">
 											<i class="material-icons gommetteIcone">flash_on</i>
 										</span>
-										<v-spacer></v-spacer>
 										<span class="gommetteDollar green">
 											<i class="material-icons gommetteIcone">attach_money</i>
+										</span>
+										<span class="gommetteToken orangered">
+											<i class="material-icons gommetteIcone">title</i>
+										</span>
+										<v-spacer></v-spacer>
+										<span class="gommetteNiveau darkblue">
+											<v-icon>star</v-icon> N1
 										</span>
 									</v-card-actions>
 									<v-layout>
@@ -34,12 +40,8 @@
 										</v-flex>
 									</v-layout>
 									<v-card-actions style="padding: 5px; text-align: center">
-										<span class="gommetteToken blackOpacity">
-											<i class="material-icons gommetteIcone">title</i>
-										</span>
-										<v-spacer></v-spacer>
-										<span class="gommetteStyle darkred">
-											Job
+										<span class="gommetteStyle darkblue">
+											Hobby
 										</span>
 									</v-card-actions>
 								</v-card>
@@ -288,114 +290,147 @@ font-size: 24px;
 .fs24title {
 font-size: 24px;
 }
-.gommetteStyle {
-position: absolute; 
-bottom: 10px; 
-right: 10px; 
-z-index: 2; 
-font-size: 25px; 
-padding: 5px; 
-border-radius: 5px; 
-olor: white;
-}
-.gommetteEnergy {
-padding: 5px; 
-position: absolute; 
-top: 10px; 
-left: 10px; 
-border-radius: 50%;
-color: white;
-}
-.gommetteDollar {
-padding: 5px; 
-position: absolute; 
-top: 10px; 
-right: 10px; 
-border-radius: 50%;
-color: white;
-}	
-.gommetteToken {
-padding: 5px; 
-position: absolute; 
-bottom: 10px; 
-left: 10px; 
-border-radius: 50%; 
-color: white;
-}
-.gommetteIcone {
-margin-top: 3px; 
-font-size: 25px;
-}
-.blackOpacity {
-background-color: black;
-opacity: 0.25;
-}
-.orangered {
-background-color: orangered;
-color: white;
-}
-.darkblue {
-background-color: darkblue;
-color: white;
-}
-.darkred {
-background-color: darkred;
-color: white;
-}
-.darkslategray {
-background-color: darkslategray;
-color: white;
-}
-.darkviolet {
-background-color: darkviolet;
-color: white;
-}
-.SaddleBrown {
-background-color: SaddleBrown;
-color: white;
-}
-.teal {
-background-color: teal;
-color: white;
-}
+	.retour {
+	position: absolute; 
+	top: 11px; 
+	right: 11px;
+	}
+	.layoutTheme {
+	margin-top: 15px;
+	margin: 10px; 
+	position: absolute; 
+	top: 140px;
+	}
+	.gommetteNiveau {
+	position: absolute; 
+	top: 10px; 
+	right: 10px; 
+	font-size: 20px; 
+	padding: 5px; 
+	border-radius: 5px; 
+	color: white;
+	}
+	.gommetteStyle {
+	position: absolute; 
+	bottom: 10px; 
+	right: 10px; 
+	font-size: 20px; 
+	padding: 5px; 
+	border-radius: 5px; 
+	color: white;
+	}
+	.gommetteEnergy {
+	padding: 5px; 
+	position: absolute; 
+	top: 10px; 
+	left: 5px; 
+	border-radius: 50%;
+	color: white;
+	z-index: 3;
+	}
+	.gommetteDollar {
+	padding: 5px; 
+	position: absolute; 
+	top: 10px; 
+	left: 25px; 
+	border-radius: 50%;
+	color: white;
+	z-index: 2;
+	}	
+	.gommetteToken {
+	padding: 5px; 
+	position: absolute; 
+	top: 10px; 
+	left: 45px; 
+	border-radius: 50%; 
+	color: white;
+	z-index: 1;
+	}
+	.gommetteIcone {
+	margin-top: 3px; 
+	font-size: 25px;
+	}
+	.blackOpacity {
+	background-color: black;
+	opacity: 0.25;
+	}
+	.orangered {
+	background-color: orangered;
+	color: white;
+	}
+	.darkblue {
+	background-color: darkblue;
+	color: white;
+	}
+	.darkred {
+	background-color: darkred;
+	color: white;
+	}
+	.darkslategray {
+	background-color: darkslategray;
+	color: white;
+	}
+	.darkviolet {
+	background-color: darkviolet;
+	color: white;
+	}
+	.SaddleBrown {
+	background-color: SaddleBrown;
+	color: white;
+	}
+	.teal {
+	background-color: teal;
+	color: white;
+	}
+	.orangered {
+	background-color: orangered;
+	border-color: orangered;
+	color: white;
+	}
 	
 	/* Small screens */
     @media only screen and (max-width: 768px) {
-	.retour {
-	position: absolute; 
-	top: 7px; 
-	right: 7px;
-	}
-	.layoutTheme {
-	margin: 5px; 
-	position: absolute; 
-	top: 90px;
-	justify-content: center;
-	}
-	.gommetteStyle {
-	bottom: 3px; 
-	right: 3px; 
-	font-size: 11px; 
-	padding: 3px; 
-	}
-	.gommetteEnergy {
-	padding: 3px; 
-	top: 3px; 
-	left: 3px; 
-	}
-	.gommetteDollar {
-	padding: 3px; 
-	top: 3px; 
-	right: 3px; 
-	}	
-	.gommetteToken {
-	padding: 3px; 
-	bottom: 3px; 
-	left: 3px; 
-	}
-	.gommetteIcone {
-	font-size: 12px;
-	}
+		.retour {
+		position: absolute; 
+		top: 7px; 
+		right: 7px;
+		}
+		.layoutTheme {
+		margin: 5px; 
+		position: absolute; 
+		top: 110px;
+		justify-content: center;
+		}
+		.gommetteNiveau {
+		top: 3px; 
+		right: 3px; 
+		font-size: 11px; 
+		padding: 3px; 
+		}
+		.gommetteStyle {
+		bottom: 3px; 
+		right: 3px; 
+		font-size: 11px; 
+		padding: 3px; 
+		}
+		.gommetteEnergy {
+		padding: 3px; 
+		top: 3px; 
+		left: 3px; 
+		}
+		.gommetteDollar {
+		padding: 3px; 
+		top: 3px; 
+		left: 15px; 
+		}	
+		.gommetteToken {
+		padding: 3px; 
+		top: 3px; 
+		left: 27px; 
+		}
+		.gommetteIcone {
+		font-size: 12px;
+		}
 	.divtexte {
 	padding: 15px; 
 	text-align: center;
