@@ -37,10 +37,23 @@
 								<span class="gommetteEnergy red">
 									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
-								<v-spacer></v-spacer>
 								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
+								<span class="gommetteToken blackOpacity">
+									<i class="material-icons gommetteIcone">title</i>
+								</span>
+								<v-spacer></v-spacer>
+								<v-icon class="fs18">star</v-icon>
+								<v-icon class="fs18">star</v-icon>
+								<v-icon class="fs18">star</v-icon>
+								<v-icon class="fs18">star</v-icon>
+								<v-icon class="fs18">star</v-icon>
+								<v-icon class="fs18">star</v-icon>
+								<v-icon class="fs18">star</v-icon>
+								<v-icon class="fs18">star</v-icon>
+								<v-icon class="fs18">star</v-icon>
+								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
 							</v-card-actions>
 							<v-layout>
 								<v-flex xs12 style="text-align: center; padding: 0">
@@ -48,10 +61,6 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="gommetteToken blackOpacity">
-									<i class="material-icons gommetteIcone">title</i>
-								</span>
-								<v-spacer></v-spacer>
 								<span class="gommetteStyle darkred">
 									Job
 								</span>
