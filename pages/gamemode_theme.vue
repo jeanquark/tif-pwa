@@ -38,7 +38,7 @@
 									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
@@ -48,7 +48,7 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
+								<span class="gommetteToken blackOpacity">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
@@ -67,7 +67,7 @@
 									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
@@ -77,7 +77,7 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
+								<span class="gommetteToken blackOpacity">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
@@ -96,7 +96,7 @@
 									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
@@ -106,7 +106,7 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
+								<span class="gommetteToken blackOpacity">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
@@ -125,7 +125,7 @@
 									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
@@ -135,7 +135,7 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
+								<span class="gommetteToken blackOpacity">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
@@ -154,7 +154,7 @@
 									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; top: 10px; right: 10px; border-radius: 50%; opacity: 0.25">
+								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
@@ -164,7 +164,7 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
+								<span class="gommetteToken blackOpacity">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
@@ -183,7 +183,7 @@
 									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
@@ -193,7 +193,7 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; bottom: 10px; left: 10px; border-radius: 50%">
+								<span class="gommetteToken blackOpacity">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
@@ -212,7 +212,7 @@
 									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: green; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
@@ -222,7 +222,7 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
+								<span class="gommetteToken blackOpacity">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
@@ -241,7 +241,7 @@
 									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<v-spacer></v-spacer>
-								<span class="fs18" style="padding: 5px; background-color: red; position: absolute; top: 10px; right: 10px; border-radius: 50%">
+								<span class="gommetteDollar green">
 									<i class="material-icons gommetteIcone">attach_money</i>
 								</span>
 							</v-card-actions>
@@ -251,7 +251,7 @@
 								</v-flex>
 							</v-layout>
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="fs18" style="padding: 5px; background-color: black; position: absolute; bottom: 10px; left: 10px; border-radius: 50%; opacity: 0.25">
+								<span class="gommetteToken blackOpacity">
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
@@ -906,6 +906,20 @@
 	border-radius: 50%;
 	color: white;
 	}
+	.gommetteDollar {
+	padding: 5px; 
+	position: absolute; 
+	top: 10px; 
+	right: 10px; 
+	border-radius: 50%;
+	}	
+	.gommetteToken {
+	padding: 5px; 
+	position: absolute; 
+	bottom: 10px; 
+	left: 10px; 
+	border-radius: 50%; 
+	}
 	.gommetteIcone {
 	margin-top: 3px; 
 	font-size: 25px;
@@ -913,6 +927,34 @@
 	.blackOpacity {
 	background-color: black;
 	opacity: 0.25;
+	}
+	.orangered {
+	background-color: orangered;
+	color: white;
+	}
+	.darkblue {
+	background-color: darkblue;
+	color: white;
+	}
+	.darkred {
+	background-color: darkred;
+	color: white;
+	}
+	.darkslategray {
+	background-color: darkslategray;
+	color: white;
+	}
+	.darkviolet {
+	background-color: darkviolet;
+	color: white;
+	}
+	.SaddleBrown {
+	background-color: SaddleBrown;
+	color: white;
+	}
+	.teal {
+	background-color: teal;
+	color: white;
 	}
 	
 	/* Small screens */
@@ -926,6 +968,7 @@
 		margin: 5px; 
 		position: absolute; 
 		top: 90px;
+		justify-content: center;
 		}
 		.gommetteStyle {
 		bottom: 3px; 
@@ -936,6 +979,16 @@
 		.gommetteEnergy {
 		padding: 3px; 
 		top: 3px; 
+		left: 3px; 
+		}
+		.gommetteDollar {
+		padding: 3px; 
+		top: 3px; 
+		right: 3px; 
+		}	
+		.gommetteToken {
+		padding: 3px; 
+		bottom: 3px; 
 		left: 3px; 
 		}
 		.gommetteIcone {
