@@ -45,7 +45,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau darkred">
-									<v-icon>star</v-icon> Niv. 1
+									<v-icon>star</v-icon> N1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -76,7 +76,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau darkblue">
-									<v-icon>star</v-icon> Niv. 1
+									<v-icon>star</v-icon> N1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -134,7 +134,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau darkviolet">
-									<v-icon>star</v-icon> Niv. 1
+									<v-icon>star</v-icon> N1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -165,7 +165,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau darkslategray">
-									<v-icon>star</v-icon> Niv. 1
+									<v-icon>star</v-icon> N1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -196,7 +196,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau darkslategray">
-									<v-icon>star</v-icon> Niv. 1
+									<v-icon>star</v-icon> N1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -227,7 +227,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau teal">
-									<v-icon>star</v-icon> Niv. 1
+									<v-icon>star</v-icon> N1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -258,7 +258,7 @@
 								</span>
 								<v-spacer></v-spacer>
 								<span class="gommetteNiveau SaddleBrown">
-									<v-icon>star</v-icon> Niv. 1
+									<v-icon>star</v-icon> N1
 								</span>
 							</v-card-actions>
 							<v-layout>
@@ -998,7 +998,7 @@
 		.layoutTheme {
 		margin: 5px; 
 		position: absolute; 
-		top: 90px;
+		top: 110px;
 		justify-content: center;
 		}
 		.gommetteNiveau {
