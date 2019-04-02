@@ -29,7 +29,7 @@
 					</v-flex>
 				</div> 
 				
-				<v-layout row wrap style="margin-top: 15px; margin: 10px; position: absolute; top: 115px" class="transitionLente">
+				<v-layout row wrap style="margin-top: 15px; margin: 10px; position: absolute; top: 115px" class="puff-in-center">
 					<v-flex xs4 sm3 md3 style="padding: 5px">
 						<nuxt-link to="/inventoryCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
@@ -835,21 +835,48 @@
 	border-radius: 5px;
 	}
 	
-	.transitionLente {
-	-webkit-animation:appear 1s ease 1s 1 normal;
-	-moz-animation:appear 1s ease 1s 1 normal;
-	-ms-animation:appear 1s ease 1s 1 normal;
-	animation:appear 1s ease 1s 1 normal;
+	.puff-in-center {
+	-webkit-animation: puff-in-center 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2s both;
+	animation: puff-in-center 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2s both;
 	}
-	@-webkit-keyframes appear {
-	0%{ opacity: 0; -webkit-transform: scale3d(0.3, 0.3, 0.3); transform: scale3d(0.3, 0.3, 0.3); }
-	60%{ opacity: 1; -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1); }
+	/**
+	* ----------------------------------------
+	* animation puff-in-center
+	* ----------------------------------------
+	*/
+	@-webkit-keyframes puff-in-center {
+	0% {
+	-webkit-transform: scale(2);
+	transform: scale(2);
+	-webkit-filter: blur(2px);
+	filter: blur(2px);
+	opacity: 0;
 	}
-	@keyframes appear {
-	0%{ opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
-	60%{ opacity: 1; transform: scale3d(1,1,1); }
+	100% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	opacity: 1;
 	}
-	   
+	}
+	@keyframes puff-in-center {
+	0% {
+	-webkit-transform: scale(2);
+	transform: scale(2);
+	-webkit-filter: blur(2px);
+	filter: blur(2px);
+	opacity: 0;
+	}
+	100% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	opacity: 1;
+	}
+	}
+
     /* Small screens */
     @media only screen and (max-width: 768px) {
 		body {
