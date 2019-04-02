@@ -34,7 +34,7 @@
 						<nuxt-link to="/actionCards" style="text-decoration: none">
 						<v-card style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
 							<v-card-actions style="padding: 5px; text-align: center">
-								<span class="gommetteEnergy red">
+								<span class="gommetteEnergy yellow">
 									<i class="material-icons gommetteIcone">flash_on</i>
 								</span>
 								<span class="gommetteDollar green">
@@ -48,7 +48,7 @@
 								<v-icon class="fs18">star</v-icon>
 								<v-icon class="fs18">star</v-icon>
 								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
+								<v-icon class="fs18">star</v-icon><br />
 								<v-icon class="fs18">star</v-icon>
 								<v-icon class="fs18">star</v-icon>
 								<v-icon class="fs18">star</v-icon>
@@ -901,7 +901,6 @@
 	position: absolute; 
 	bottom: 10px; 
 	right: 10px; 
-	z-index: 2; 
 	font-size: 25px; 
 	padding: 5px; 
 	border-radius: 5px; 
@@ -911,25 +910,28 @@
 	padding: 5px; 
 	position: absolute; 
 	top: 10px; 
-	left: 10px; 
+	left: 5px; 
 	border-radius: 50%;
 	color: white;
+	z-index: 3;
 	}
 	.gommetteDollar {
 	padding: 5px; 
 	position: absolute; 
 	top: 10px; 
-	right: 10px; 
+	left: 25px; 
 	border-radius: 50%;
 	color: white;
+	z-index: 2;
 	}	
 	.gommetteToken {
 	padding: 5px; 
 	position: absolute; 
-	bottom: 10px; 
-	left: 10px; 
+	top: 10px; 
+	left: 45px; 
 	border-radius: 50%; 
 	color: white;
+	z-index: 1;
 	}
 	.gommetteIcone {
 	margin-top: 3px; 
