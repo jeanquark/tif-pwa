@@ -44,16 +44,9 @@
 									<i class="material-icons gommetteIcone">title</i>
 								</span>
 								<v-spacer></v-spacer>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>	
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon></br>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon class="fs18">star</v-icon>
-								<v-icon style="color: orangered; font-size: 18px">star</v-icon>
+								<span class="gommetteNiveau darkred">
+									<v-icon style="color: orangered; font-size: 18px">star</v-icon> Niv. 1
+								</span>
 							</v-card-actions>
 							<v-layout>
 								<v-flex xs12 style="text-align: center; padding: 0">
@@ -967,6 +960,15 @@
 	position: absolute; 
 	top: 140px;
 	}
+	.gommetteNiveau {
+	position: absolute; 
+	top: 10px; 
+	right: 10px; 
+	font-size: 25px; 
+	padding: 5px; 
+	border-radius: 5px; 
+	color: white;
+	}
 	.gommetteStyle {
 	position: absolute; 
 	bottom: 10px; 
@@ -974,7 +976,7 @@
 	font-size: 25px; 
 	padding: 5px; 
 	border-radius: 5px; 
-	olor: white;
+	color: white;
 	}
 	.gommetteEnergy {
 	padding: 5px; 
@@ -1037,6 +1039,11 @@
 	}
 	.teal {
 	background-color: teal;
+	color: white;
+	}
+	.orangered {
+	background-color: orangered;
+	border-color: orangered;
 	color: white;
 	}
 	
