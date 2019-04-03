@@ -829,7 +829,7 @@
 			overflow: hidden;
 		}
         .content svg {
-            height: 99%;
+            height: 100%;
         }
 		/* Content */
 		.container {
