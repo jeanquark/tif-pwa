@@ -126,19 +126,8 @@
 						</v-flex>
 					</div> 
 
-					<img src="/images/barcelona_clickable.svg" usemap="#map">
+					<img src="/images/barcelona_clickable.svg">
 
-					<map name="map">
-						<area target="" alt="Thème Plage" title="Museum" href="gamemode_theme" coords="462,411,61" shape="circle">
-					</map>
-					
-                    <!-- <img src="/images/barcelona_clickable.png" usemap="#map" /> -->
-                    <v-dialog
-                        v-model="actionsModal"
-                        max-width="800"
-                    >
-                        <ActionsCard :action="action" />
-                    </v-dialog>
                 <!-- </div> -->
                 <!-- </v-layout> -->
             </div>
