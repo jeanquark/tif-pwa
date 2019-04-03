@@ -121,11 +121,11 @@
 						<v-layout row wrap style="margin-top: 15px; margin: 10px">
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/inventoryCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 										<v-spacer></v-spacer>
-										<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Collector</span>
+										<span class="fs16" style="padding: 3px; background-color: orangered; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Collector</span>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -142,11 +142,11 @@
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/inventoryCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/42.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 										<v-spacer></v-spacer>
-										<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Neuf</span>
+										<span class="fs16" style="padding: 3px; background-color: orangered; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Neuf</span>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -163,11 +163,11 @@
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/inventoryCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 										<v-spacer></v-spacer>
-										<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Bon état</span>
+										<span class="fs16" style="padding: 3px; background-color: orangered; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Bon état</span>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -184,11 +184,11 @@
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/inventoryCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 										<v-spacer></v-spacer>
-										<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Usé</span>
+										<span class="fs16" style="padding: 3px; background-color: orangered; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Usé</span>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -205,11 +205,11 @@
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/inventoryCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/42.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 										<v-spacer></v-spacer>
-										<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Très usé</span>
+										<span class="fs16" style="padding: 3px; background-color: orangered; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Très usé</span>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -226,11 +226,11 @@
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/inventoryCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 										<v-spacer></v-spacer>
-										<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Foutu</span>
+										<span class="fs16" style="padding: 3px; background-color: orangered; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Foutu</span>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -247,11 +247,11 @@
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/inventoryCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 										<v-spacer></v-spacer>
-										<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Neuf</span>
+										<span class="fs16" style="padding: 3px; background-color: orangered; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Neuf</span>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
@@ -268,11 +268,11 @@
 							</v-flex>
 							<v-flex xs4 sm3 md3 style="padding: 5px">
 								<nuxt-link to="/inventoryCards" style="text-decoration: none">
-								<v-card style="background-color: white; border: 2px solid #2956B2; border-radius: 5px; position: relative; min-height: 73%">
+								<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 									<v-card-actions style="padding: 5px; text-align: center">
 										<img src="/images/switzerland.png" class="imgTeamInventory" style="position: absolute; top: 5px; left: 5px; z-index: 2; border-radius: 5px"/>
 										<v-spacer></v-spacer>
-										<span class="fs16" style="padding: 3px; background-color: #2956B2; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Neuf</span>
+										<span class="fs16" style="padding: 3px; background-color: orangered; color: white; position: absolute; top: 5px; right: 5px; z-index: 3; border-radius: 5px">Neuf</span>
 									</v-card-actions>
 									<v-layout>
 										<v-flex xs12 style="text-align: center; padding: 0">
