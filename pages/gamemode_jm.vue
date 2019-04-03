@@ -828,7 +828,9 @@
 			padding: 0;
 			overflow: hidden;
 		}
-
+        .content svg {
+            height: 99%;
+        }
 		/* Content */
 		.container {
 			width: 100vw;
