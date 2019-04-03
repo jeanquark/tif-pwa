@@ -7,8 +7,7 @@
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FAE4B9;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FCECCD;}
 	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#EDD29C;}
-	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:black;}
-	.st4:hover{fill:red;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#d3b372;}
 	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#A6884C;}
 	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#806838;}
 </style>
@@ -77,9 +76,15 @@
 			c11.8,1,19.6,3,31.3-4.1c7.8-4.7,30-6.2,37.6-2.2c7.8,4.2,36.7,3.1,40.9-2.7c7.1-9.7,35.1-4.7,45.1-8.4c4.9-1.8,55.3-3.1,61.1-2.6
 			C900.4,275.7,912.6,269.8,907.8,268.8z"/>
 	</g>
-	<path class="st4" d="M330.9,477.6c-2.3,6.7-20.4,4.3-27,4.3c-11.2,0-61.5-4.8-57.4,10.5c1.4,5.2,27.4,2.1,32.4,4.7l11.2,5.8
+	<a xlink:href="/gamemode_theme">
+		<path id="plane" class="st4" d="M330.9,477.6c-2.3,6.7-20.4,4.3-27,4.3c-11.2,0-61.5-4.8-57.4,10.5c1.4,5.2,27.4,2.1,32.4,4.7l11.2,5.8
 		c6.1,3.2,13.2,1.9,19.8,1.4c1.2-0.1,6-0.9,1.2-2.6c-3.3-1.2-6.9-4-11.7-6.3l21.2,0.1c13,0.1,16.5-3.3,16.5-15.3
-		C337.2,473.6,333.1,471.4,330.9,477.6z"/>
+		C337.2,473.6,333.1,471.4,330.9,477.6z" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','1)');" />
+	</a>
+	<text font-size="100" x="300" y="450" display="none" style="font-size:30px;font-weight:bold;fill:#000000">LA PLAGE
+	<animate fill="freeze" dur="0.1s" begin="plane.mouseover" from="none" to="block" attributeName="display"></animate>
+	<animate fill="freeze" dur="0.1s" begin="plane.mouseout" from="block" to="none" attributeName="display"></animate>
+	</text>
 	<path class="st6" d="M1180.6,597.8c-3.3-0.4-2.9,0.4-2.7-3.7c0-0.9-3.9-1-4.1-0.4c-0.6,1.4,2,3.7-1.6,3.8c-0.3,0-0.5-0.2-0.9-0.3
 		c-1.7-0.7-6.1-2.3-7.2,0.9c-2.3,0.8,4.4,0.8,4.9,1.4c0.2,0.2,1.4,1.2,1.5,1.2c0.2,0.5,0.8,0.7,1.4,2.5c0.2,0.7-0.7,1.2-0.7,2.7
 		c0.6,0,1-1.9,2.7-1.9c0.1,0,1.8-0.2,2-0.4c1.9-2.2,4.8-1.1,7.4-0.8c0.8,0.1,3.8,2.4,2.5-1.3
