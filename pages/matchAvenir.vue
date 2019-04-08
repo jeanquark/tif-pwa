@@ -12,7 +12,7 @@
 							Europe, Champion's League 2018-2019<br />
 							Journée 1
 						</v-flex>
-						<v-flex xs2 sm2 md8 text-xs-right>
+						<v-flex xs2 sm2 md2 text-xs-right>
 							<div class="retour">
 								<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
 							</div>
@@ -27,7 +27,7 @@
 						</v-flex>
 						<v-flex text-xs-center>
 							Date et heure
-						</flex>
+						</v-flex>
 						<v-flex text-xs-right>
 							Score PF
 						</v-flex>
