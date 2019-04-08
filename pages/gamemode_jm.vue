@@ -111,7 +111,7 @@
 									<div class="nameTeam">
 										Espagnol Barcelone <span class="vs">VS</span> <span class="nameOtherTeam">Real Madrid</span>
 									</div>
-									<span style="position: absolute; font-size: 15px; color: orangered; text-shadow: none; margin-right: 3px; margin-top: 3px; right: 0">Mardi, 12 mars 2019 à 19:00</span>
+									<span class="dateMatch">Mardi, 12 mars 2019 à 19:00</span>
 								</v-layout>
 							</v-flex>
 						</div>
@@ -611,7 +611,7 @@
 	}
 	.nameOtherTeam {
 	position: relative; 
-	top: 3px; 
+	top: 1px; 
 	font-size: 25px; 
 	text-shadow: none; 
 	margin-left: 8px;
@@ -833,6 +833,17 @@
 	}
 	.vs :hover {
 	color: white;	
+	}
+	.dateMatch :hover {
+	color: white;
+	}
+	.dateMatch {
+	position: absolute; 
+	font-size: 15px; 
+	text-shadow: none; 
+	margin-right: 3px; 
+	margin-top: 3px; 
+	right: 0;
 	}
 
 		
