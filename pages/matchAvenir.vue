@@ -1,77 +1,77 @@
 <template>
     <v-content id="app">      
-		<v-container grid-list-md text-xs-center style="padding: 0; max-width: 1017px">
-			<v-layout row wrap style="background-color: black; opacity: 0.5">
-				<v-flex d-flex xs2 sm2 md2>
-				</v-flex>
-				<v-flex d-flex xs8 sm8 md8>
-				  <v-card>
-					<v-card-text class="px-0">
+		<v-container text-xs-center style="padding: 0; max-width: 1017px">
+			<div style="background-color: black">
+				<v-layout row wrap style="background-color: black; opacity: 0.5">
+					<v-flex d-flex xs2 sm2 md2>
+					</v-flex>
+					<v-flex d-flex xs8 sm8 md8 style="color: white">
 						Monde, Coupe du monde de football<br/>
 						Journée 1
-					</v-card-text>
-				  </v-card>
-				</v-flex>
-				<v-flex d-flex xs2 sm2 md2>
-					<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />			
-				</v-flex>
-			</v-layout>	
-			<v-layout row wrap>
-				<v-flex d-flex xs2 sm2 md2>
-				  <v-card dark color="secondary">
-					<v-card-text class="px-0">Drapeau</v-card-text>
-				  </v-card>
-				</v-flex>
-				<v-flex d-flex xs3 sm3 md3>
-				  <v-card dark color="secondary">
-					<v-card-text class="px-0">Score PF</v-card-text>
-				  </v-card>
-				</v-flex>
-				<v-flex d-flex xs2 sm2 md2>
-				  <v-card dark color="secondary">
-					<v-card-text class="px-0">
-						date<br />
-						Heure
-					</v-card-text>
-				  </v-card>
-				</v-flex>
-				<v-flex d-flex xs3 sm3 md3>
-				  <v-card dark color="secondary">
-					<v-card-text class="px-0">Score PF</v-card-text>
-				  </v-card>
-				</v-flex>
-				<v-flex d-flex xs2 sm2 md2>
-				  <v-card dark color="secondary">
-					<v-card-text class="px-0">Drapeau</v-card-text>
-				  </v-card>
-				</v-flex>
-				<v-flex d-flex xs4 sm4 md4>
-				  <v-card dark color="primary">
-					<v-card-text class="px-0">Equipe 1</v-card-text>
-				  </v-card>
-				</v-flex>
-				<v-flex d-flex xs4 sm4 md4>
-				  <v-card dark color="primary">
-					<v-card-text class="px-0">
-						Score réel<br />
-						2 à 1
-					</v-card-text>
-				  </v-card>
-				</v-flex>
-				<v-flex d-flex xs4 sm4 md4>
-				  <v-card dark color="primary">
-					<v-card-text class="px-0">Equipe 2</v-card-text>
-				  </v-card>
-				</v-flex>
-				<v-flex d-flex xs12>
-				  <v-card dark color="secondary">
-					<v-card-text class="px-0">
-						Ton score<br />
-						1.45 PF
-					</v-card-text>
-				  </v-card>
-				</v-flex>
-			</v-layout>
+					</v-flex>
+					<v-flex d-flex xs2 sm2 md2>
+						<div class="text-xs-right retour">
+							<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
+						</div>			
+					</v-flex>
+				</v-layout>	
+				<v-layout row wrap>
+					<v-flex d-flex xs2 sm2 md2>
+					  <v-card dark color="secondary">
+						<v-card-text class="px-0">Drapeau</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex d-flex xs3 sm3 md3>
+					  <v-card dark color="secondary">
+						<v-card-text class="px-0">Score PF</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex d-flex xs2 sm2 md2>
+					  <v-card dark color="secondary">
+						<v-card-text class="px-0">
+							date<br />
+							Heure
+						</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex d-flex xs3 sm3 md3>
+					  <v-card dark color="secondary">
+						<v-card-text class="px-0">Score PF</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex d-flex xs2 sm2 md2>
+					  <v-card dark color="secondary">
+						<v-card-text class="px-0">Drapeau</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex d-flex xs4 sm4 md4>
+					  <v-card dark color="primary">
+						<v-card-text class="px-0">Equipe 1</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex d-flex xs4 sm4 md4>
+					  <v-card dark color="primary">
+						<v-card-text class="px-0">
+							Score réel<br />
+							2 à 1
+						</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex d-flex xs4 sm4 md4>
+					  <v-card dark color="primary">
+						<v-card-text class="px-0">Equipe 2</v-card-text>
+					  </v-card>
+					</v-flex>
+					<v-flex d-flex xs12>
+					  <v-card dark color="secondary">
+						<v-card-text class="px-0">
+							Ton score<br />
+							1.45 PF
+						</v-card-text>
+					  </v-card>
+					</v-flex>
+				</v-layout>
+			</div>
 		</v-container>					 
   </v-content>
 </template>
