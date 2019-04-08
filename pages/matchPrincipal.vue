@@ -163,9 +163,6 @@
     flex: 1 1 auto;
     margin: 0;
     padding: 0;
-    background-image: url(../images/stade_gd.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .resumeMatch {
     width: 100%;
