@@ -1,56 +1,39 @@
 <template>
-    <v-content id="app">
-        <v-container style="padding: 0; max-width: 1017px">
-          
-			<v-layout>
-				<v-flex>
-					<v-layout align-center justify-center row fill-height/>
-						<v-flex xs2 sm2 md2>
-						
-						</v-flex>
-						<v-flex xs8 sm8 md8 text-xs-center>
-							Europe, Champion's League 2018-2019<br />
-							Journée 1
-						</v-flex>
-						<v-flex xs2 sm2 md2 text-xs-right>
-							<div class="retour">
-								<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
-							</div>
-						</v-flex>
-					</v-layout>
-					<v-layout align-center justify-center row fill-height/>
-						<v-flex text-xs-left>
-							Drapeau
-						</v-flex>
-						<v-flex text-xs-left>
-							Score PF
-						</v-flex>
-						<v-flex text-xs-center>
-							Date et heure
-						</v-flex>
-						<v-flex text-xs-right>
-							Score PF
-						</v-flex>
-						<v-flex text-xs-right>
-							Drapeau
-						</v-flex>						
-					</v-layout>
-					<v-layout align-center justify-center row fill-height/>
-						<v-flex text-xs-left>
-							Equipe 1
-						</v-flex>
-						<v-flex text-xs-center>
-							Score réel< br/>
-							2 - 1
-						</v-flex>
-						<v-flex text-xs-right>
-							Equipe 2
-						</v-flex>
-					</v-layout>
-				</v-flex>
-			</v-layout>
-					 
-        </v-container>
+    <v-content id="app">      
+		<v-container grid-list-md text-xs-center style="padding: 0; max-width: 1017px">
+		  <v-layout row wrap>
+			<v-flex xs12>
+			  <v-card dark color="primary">
+				<v-card-text class="px-0">12</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex v-for="i in 2" :key="`6${i}`" xs6>
+			  <v-card dark color="secondary">
+				<v-card-text class="px-0">6</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex v-for="i in 3" :key="`4${i}`" xs4>
+			  <v-card dark color="primary">
+				<v-card-text class="px-0">4</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex v-for="i in 4" :key="`3${i}`" xs3>
+			  <v-card dark color="secondary">
+				<v-card-text class="px-0">3</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex v-for="i in 6" :key="`2${i}`" xs2>
+			  <v-card dark color="primary">
+				<v-card-text class="px-0">2</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex v-for="i in 12" :key="`1${i}`" xs1>
+			  <v-card dark color="secondary">
+				<v-card-text class="px-0">1</v-card-text>
+			  </v-card>
+			</v-flex>
+		  </v-layout>
+		</v-container>					 
   </v-content>
 </template>
 
