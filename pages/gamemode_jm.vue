@@ -104,6 +104,7 @@
             <div class="content">
                 <!-- <v-layout> -->
                 <!-- <div class="container"> -->
+					<nuxt-link to="/matchPrincipal" class="matchPrincipal">
 					<div class="cadreScore hidden-xs-only" style="position: absolute">
 						<v-flex xs12 style="margin: 0; height: 100%">
 							<v-layout align-start>
@@ -113,7 +114,8 @@
 								<span style="position: absolute; font-size: 15px; color: orangered; text-shadow: none; margin-right: 3px; margin-top: 3px; right: 0">Mardi, 12 mars 2019 à 19:00</span>
 							</v-layout>
 						</v-flex>
-					</div> 
+					</div>
+					</nuxt-link>
 					<div class="cadreScore hidden-sm-and-up" style="position: absolute">
 						<v-flex xs12 style="margin: 0; height: 100%">
 							<v-layout align-start>
