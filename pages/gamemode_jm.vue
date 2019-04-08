@@ -825,20 +825,9 @@
 	
 	.cadreScore :hover {
 	background-color: orangered;
-	}
-	
-	.nameTeam :hover {
 	color: white;
 	}
-    
-	.nameOtherTeam :hover {
-	color: white;
-	}
-	
-	.vs :hover {
-	color: white;
-	}
-	
+		
     /* Small screens */
     @media only screen and (max-width: 768px) {
 		body {
