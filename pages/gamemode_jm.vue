@@ -105,16 +105,16 @@
                 <!-- <v-layout> -->
                 <!-- <div class="container"> -->
 					<nuxt-link to="/matchPrincipal" class="matchPrincipal">
-					<div class="cadreScore hidden-xs-only" style="position: absolute">
-						<v-flex xs12 style="margin: 0; height: 100%">
-							<v-layout align-start>
-								<div class="nameTeam">
-									Espagnol Barcelone <span class="vs">VS</span> <span class="nameOtherTeam">Real Madrid</span>
-								</div>
-								<span style="position: absolute; font-size: 15px; color: orangered; text-shadow: none; margin-right: 3px; margin-top: 3px; right: 0">Mardi, 12 mars 2019 à 19:00</span>
-							</v-layout>
-						</v-flex>
-					</div>
+						<div class="cadreScore hidden-xs-only" style="position: absolute">
+							<v-flex xs12 style="margin: 0; height: 100%">
+								<v-layout align-start>
+									<div class="nameTeam">
+										Espagnol Barcelone <span class="vs">VS</span> <span class="nameOtherTeam">Real Madrid</span>
+									</div>
+									<span style="position: absolute; font-size: 15px; color: orangered; text-shadow: none; margin-right: 3px; margin-top: 3px; right: 0">Mardi, 12 mars 2019 à 19:00</span>
+								</v-layout>
+							</v-flex>
+						</div>
 					</nuxt-link>
 					<div class="cadreScore hidden-sm-and-up" style="position: absolute">
 						<v-flex xs12 style="margin: 0; height: 100%">
@@ -591,11 +591,11 @@
     width: 1017px;
     background-color: white;
     margin-top: 50px;
+	color: orangered;
 	}
 	.nameTeam {
 	position: relative; 
 	font-size: 50px; 
-	color: orangered; 
 	text-decoration: none; 
 	text-transform: uppercase; 
 	top: 0px; 
@@ -606,7 +606,6 @@
 	position: relative; 
 	top: 3px; 
 	font-size: 15px; 
-	color: orangered; 
 	text-shadow: none; 
 	margin-left: 10px;
 	}
@@ -614,7 +613,6 @@
 	position: relative; 
 	top: 3px; 
 	font-size: 25px; 
-	color: orangered; 
 	text-shadow: none; 
 	margin-left: 8px;
 	}
@@ -823,9 +821,9 @@
 	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#A6884C;}
 	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#806838;}
 	
-	.cadreScore :hover {
+	.cadreScore, .nameOtherTeam, .nameTeam, .vs :hover {
 	background-color: orangered;
-	color: white;
+	color: white;	
 	}
 		
     /* Small screens */
