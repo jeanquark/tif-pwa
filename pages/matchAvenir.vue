@@ -1,13 +1,15 @@
 <template>
     <v-content id="app">      
 		<v-container text-xs-center style="padding: 0; max-width: 1017px">
-			<div style="background-color: black">
-				<v-layout row wrap style="background-color: black; opacity: 0.5">
+			<div style="background-color: yellow">
+				<v-layout grid-list-xs row wrap style="background-color: black; opacity: 0.5">
 					<v-flex d-flex xs2 sm2 md2>
 					</v-flex>
 					<v-flex d-flex xs8 sm8 md8 style="color: white">
+						<div class="text-xs-center" style="height: 40px">
 						Monde, Coupe du monde de football<br/>
 						Journée 1
+						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2>
 						<div class="text-xs-right retour">
@@ -17,58 +19,52 @@
 				</v-layout>	
 				<v-layout row wrap>
 					<v-flex d-flex xs2 sm2 md2>
-					  <v-card dark color="secondary">
-						<v-card-text class="px-0">Drapeau</v-card-text>
-					  </v-card>
+						<div class="drapeau">
+							<img src="/images/switzerland.png" class="imgTeamSmall" />
+						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3>
-					  <v-card dark color="secondary">
-						<v-card-text class="px-0">Score PF</v-card-text>
-					  </v-card>
+						<div class="scorePF">
+							Score PF
+						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2>
-					  <v-card dark color="secondary">
-						<v-card-text class="px-0">
+						<div class="time">
 							date<br />
 							Heure
-						</v-card-text>
-					  </v-card>
+						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3>
-					  <v-card dark color="secondary">
-						<v-card-text class="px-0">Score PF</v-card-text>
-					  </v-card>
+						<div class="scorePF">
+							Score PF
+						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2>
-					  <v-card dark color="secondary">
-						<v-card-text class="px-0">Drapeau</v-card-text>
-					  </v-card>
+						<div class="drapeau">
+							<img src="/images/switzerland.png" class="imgTeamSmall" />
+						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4>
-					  <v-card dark color="primary">
-						<v-card-text class="px-0">Equipe 1</v-card-text>
-					  </v-card>
+						<div class="nameTeam">
+							Equipe 1
+						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4>
-					  <v-card dark color="primary">
-						<v-card-text class="px-0">
+						<div class="scoreReel">
 							Score réel<br />
 							2 à 1
-						</v-card-text>
-					  </v-card>
+						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4>
-					  <v-card dark color="primary">
-						<v-card-text class="px-0">Equipe 2</v-card-text>
-					  </v-card>
+						<div class="nameTeam">
+							Equipe 2
+						</div>
 					</v-flex>
 					<v-flex d-flex xs12>
-					  <v-card dark color="secondary">
-						<v-card-text class="px-0">
+						<div class="scorePlayer">
 							Ton score<br />
 							1.45 PF
-						</v-card-text>
-					  </v-card>
+						</div>
 					</v-flex>
 				</v-layout>
 			</div>
