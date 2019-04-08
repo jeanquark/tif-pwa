@@ -821,10 +821,20 @@
 	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#A6884C;}
 	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#806838;}
 	
-	.cadreScore, .nameOtherTeam, .nameTeam, .vs :hover {
+	.cadreScore :hover {
 	background-color: orangered;
 	color: white;	
 	}
+	.nameOtherTeam :hover {
+	color: white;	
+	}
+	.nameTeam :hover {
+	color: white;	
+	}
+	.vs :hover {
+	color: white;	
+	}
+
 		
     /* Small screens */
     @media only screen and (max-width: 768px) {
