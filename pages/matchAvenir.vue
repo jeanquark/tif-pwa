@@ -2,34 +2,67 @@
     <v-content id="app">      
 		<v-container grid-list-md text-xs-center style="padding: 0; max-width: 1017px">
 		  <v-layout row wrap>
-			<v-flex xs12>
-			  <v-card dark color="primary">
-				<v-card-text class="px-0">12</v-card-text>
-			  </v-card>
-			</v-flex>
-			<v-flex v-for="i in 2" :key="`6${i}`" xs6>
-			  <v-card dark color="secondary">
-				<v-card-text class="px-0">6</v-card-text>
-			  </v-card>
-			</v-flex>
-			<v-flex v-for="i in 3" :key="`4${i}`" xs4>
-			  <v-card dark color="primary">
-				<v-card-text class="px-0">4</v-card-text>
-			  </v-card>
-			</v-flex>
-			<v-flex v-for="i in 4" :key="`3${i}`" xs3>
-			  <v-card dark color="secondary">
-				<v-card-text class="px-0">3</v-card-text>
-			  </v-card>
-			</v-flex>
-			<v-flex v-for="i in 6" :key="`2${i}`" xs2>
+			<v-flex xs2 sm2 md2>
 			  <v-card dark color="primary">
 				<v-card-text class="px-0">2</v-card-text>
 			  </v-card>
 			</v-flex>
-			<v-flex v-for="i in 12" :key="`1${i}`" xs1>
+			<v-flex xs8 sm8 md8>
+			  <v-card dark color="primary">
+				<v-card-text class="px-0">
+					Monde, Coupe du monde de football<br/>
+					Journée 1
+				</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex xs2 sm2 md2>
+			  <v-card dark color="primary">
+				<v-card-text class="px-0">2</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex xs2 sm2 md2>
 			  <v-card dark color="secondary">
-				<v-card-text class="px-0">1</v-card-text>
+				<v-card-text class="px-0">6</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex xs3 sm3 md3>
+			  <v-card dark color="secondary">
+				<v-card-text class="px-0">6</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex xs2 sm2 md2>
+			  <v-card dark color="secondary">
+				<v-card-text class="px-0">6</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex xs3 sm3 md3>
+			  <v-card dark color="secondary">
+				<v-card-text class="px-0">6</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex xs2 sm2 md2>
+			  <v-card dark color="secondary">
+				<v-card-text class="px-0">6</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex xs4 sm4 md4>
+			  <v-card dark color="primary">
+				<v-card-text class="px-0">4</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex xs4 sm4 md4>
+			  <v-card dark color="primary">
+				<v-card-text class="px-0">4</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex xs4 sm4 md4>
+			  <v-card dark color="primary">
+				<v-card-text class="px-0">4</v-card-text>
+			  </v-card>
+			</v-flex>
+			<v-flex xs12>
+			  <v-card dark color="secondary">
+				<v-card-text class="px-0">3</v-card-text>
 			  </v-card>
 			</v-flex>
 		  </v-layout>
@@ -75,7 +108,6 @@
     .container {
         width: 100vw;
         height: 100vh;
-        display: flex;
         flex-direction: column;
 		font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
@@ -100,7 +132,6 @@
 		.container {
 			width: 100vw;
 			height: 100vh;
-			display: flex;
 			flex-direction: column;
 			font: normal 90%/1 "Acme", Helvetica, sans-serif;
 		}
