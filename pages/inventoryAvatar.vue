@@ -179,9 +179,9 @@
 										</div>
 										<v-spacer></v-spacer>
 										<div class="hidden-sm-and-up" style="position: absolute; bottom: 5px; left: 50%; transform: translate(-50%); z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 120px; height: 70px">
-											<span class="inventoryBadgePF fs18"><span class="fs14">Minimum</span><br /><br />0.45 PF</span>
+											<span class="inventoryBadgePF fs18"><span class="fs14">Minimum</span><br />0.45 PF</span>
 										</div>
-										<div class="hidden-xs-only" style="position: absolute; bottom: 5px; left: 50%; transform: translate(-50%); z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 180px; height: 100px">
+										<div class="hidden-xs-only" style="position: absolute; bottom: 5px; left: 50%; transform: translate(-50%); z-index: 2; border-radius: 5px; border: 2px solid white; background-color: orangered; width: 180px; height: 70px">
 											<span class="inventoryBadgePF fs18"><span class="fs14">Minimum</span><br />0.45 PF</span>
 										</div>
 										<v-spacer></v-spacer>
@@ -804,7 +804,7 @@
 	color: white;
 	border-radius: 5px;
 	position: relative; 
-	top: 23px;
+	top: 10px;
 	font-size: 20px;
 	font-weight: 700;
 	}
