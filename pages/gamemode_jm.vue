@@ -116,6 +116,7 @@
 							</v-flex>
 						</div>
 					</nuxt-link>
+					<nuxt-link to="/matchPrincipal" class="matchPrincipal">
 					<div class="cadreScore hidden-sm-and-up" style="position: absolute">
 						<v-flex xs12 style="margin: 0; height: 100%">
 							<v-layout align-start>
@@ -123,10 +124,11 @@
 									Espagnol Barcelone<br />
 									<span class="nameOtherTeam">Real Madrid</span> <span class="vs">VS</span> 
 								</div>
-								<span class="dateHourMatch">Mardi, 12 mars 2019 à 19:00</span>
+								<span class="dateHourMatch dateMatch">Mardi, 12 mars 2019 à 19:00</span>
 							</v-layout>
 						</v-flex>
 					</div> 
+					</nuxt-link>
 					
 					<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						 viewBox="0 0 2800 980" style="enable-background:new 0 0 2800 980;" xml:space="preserve">
@@ -845,7 +847,6 @@
 	margin-top: 3px; 
 	right: 0;
 	}
-
 		
     /* Small screens */
     @media only screen and (max-width: 768px) {
