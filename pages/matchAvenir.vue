@@ -18,28 +18,28 @@
 					</v-flex>
 				</v-layout>	
 				<v-layout row wrap>
-					<v-flex d-flex xs2 sm2 md2>
+					<v-flex d-flex xs2 sm2 md2 justify-center>
 						<div class="drapeau">
 							<img src="/images/switzerland.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
-					<v-flex d-flex xs3 sm3 md3>
+					<v-flex d-flex xs3 sm3 md3 justify-center>
 						<div class="scorePF">
 							Score PF
 						</div>
 					</v-flex>
-					<v-flex d-flex xs2 sm2 md2>
+					<v-flex d-flex xs2 sm2 md2 justify-center>
 						<div class="time">
 							date<br />
 							Heure
 						</div>
 					</v-flex>
-					<v-flex d-flex xs3 sm3 md3>
+					<v-flex d-flex xs3 sm3 md3 justify-center>
 						<div class="scorePF">
 							Score PF
 						</div>
 					</v-flex>
-					<v-flex d-flex xs2 sm2 md2>
+					<v-flex d-flex xs2 sm2 md2 justify-center>
 						<div class="drapeau">
 							<img src="/images/switzerland.png" class="imgTeamSmall" />
 						</div>
@@ -105,8 +105,6 @@
         padding: 0;
         overflow: hidden;
     }
-
-    /* Content */
     .container {
         width: 100vw;
         height: 100vh;
@@ -119,8 +117,26 @@
         height: 100%;
 		position: relative;
     }
-
-    /* End Content */
+	.imgTeamSmall {
+	width: 80%;
+	}
+	.drapeau {
+	padding: 10px;
+	}
+	.scorePF {
+	background-color: white;
+    max-width: 80%;
+    max-height: 40px;
+    align-content: center;
+    align-items: center;
+	}
+	.time {
+	background-color: white;
+    max-width: 80%;
+    max-height: 40px;
+    align-content: center;
+    align-items: center;
+	}
 
 	/* Small screens */
     @media only screen and (max-width: 768px) {	
@@ -129,8 +145,6 @@
 			padding: 0;
 			overflow: hidden;
 		}
-
-		/* Content */
 		.container {
 			width: 100vw;
 			height: 100vh;
