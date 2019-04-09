@@ -44,6 +44,8 @@
 							<img src="/images/switzerland.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
+				</v-layout>	
+				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
 						<div class="nameTeam">
 							Equipe 1
@@ -60,6 +62,8 @@
 							Equipe 2
 						</div>
 					</v-flex>
+				</v-layout>	
+				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
 							Ton score<br />
@@ -69,7 +73,7 @@
 				</v-layout>
 			</div>
 			<div>
-				<v-layout grid-list-xs row wrap>
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0)">
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="menuMatch">
 							Match 
@@ -83,7 +87,7 @@
 				</v-layout>	
 			</div>
 			<div>
-				<v-layout grid-list-xs row wrap>
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0)">
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<div class="menuMatch">
 							Score 
@@ -175,6 +179,7 @@
     padding: 10px;
     border-radius: 5px;
     font-size: 1em;	
+	color: white;
 	}
 	.nameTeam {
     background-color: rgb(255,255,255,0.9);
@@ -190,8 +195,10 @@
     padding: 5px;
     border-radius: 5px;
     font-size: 1.3em;
-	margin: 30px 10px 20px 10px;
+	font-weight: 700;
+	margin: 20px 10px;
 	border: 2px solid orangered;
+	color: orangered;
 	}
 	.scoreReel {
 	background-color: rgb(0,0,0,0.9);
@@ -200,7 +207,6 @@
     padding: 10px;
     border-radius: 5px;
     font-size: 1.1em;
-	margin-top: 20px;
 	}
 	.retour {
 	position: absolute;
