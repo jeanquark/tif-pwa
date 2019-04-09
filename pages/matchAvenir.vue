@@ -1,8 +1,8 @@
 <template>
     <v-content id="app">      
 		<v-container text-xs-center style="padding: 0; max-width: 1017px">
-			<div class="backgroundImage" style="position: relative">
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25)">
+			<div class="backgroundImage" style="position: relative; padding-bottom: 1px">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25); width: 1015px">
 					<v-flex d-flex xs2 sm2 md2>
 					</v-flex>
 					<v-flex d-flex xs8 sm8 md8 justify-center align-center>
@@ -71,11 +71,11 @@
 						</div>
 					</v-flex>
 				</v-layout>
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 10px">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 10px; width: 1015px">
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center >
-						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: orangered; width: 100%">
 							<div class="menuMatch" style="border-right: 1px solid darkgrey; padding: 15px; color: white; font-size: 1.2em; text-decoration: uppercase">
-								Match 
+								Le match
 							</div>
 						</nuxt-link>
 					</v-flex>
@@ -87,25 +87,25 @@
 						</nuxt-link>
 					</v-flex>
 				</v-layout>	
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 10px; margin-bottom: 10px">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 10px; margin-bottom: 10px; width: 1015px">
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center >
 						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-							<div class="menuMatch" style="border-right: 1px solid darkgrey; padding: 15px; color: white; font-size: 1.2em; text-decoration: uppercase">
-								Score 
+							<div class="menuMatch" style="border-right: 1px solid darkgrey; padding: 15px; color: orangered; font-size: 1.2em; text-decoration: uppercase">
+								Résumé du match 
 							</div>
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center >
 						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey; padding: 15px; color: white; font-size: 1.2em; text-decoration: uppercase">
-								Joue avec TIF
+								Compositions
 							</div>	
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif" style="padding: 15px; color: white; font-size: 1.2em; text-decoration: uppercase">
-								Joue avec TIF
+								Statistiques
 							</div>
 						</nuxt-link>
 					</v-flex>
