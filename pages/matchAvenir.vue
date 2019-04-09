@@ -44,18 +44,18 @@
 							<img src="/images/switzerland.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
-					<v-flex d-flex xs5 sm5 md5 justify-end align-center>
+					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
 						<div class="nameTeam">
 							Equipe 1
 						</div>
 					</v-flex>
-					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
+					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<div class="scoreReel">
 							Score réel<br />
 							2 à 1
 						</div>
 					</v-flex>
-					<v-flex d-flex xs5 sm5 md5 justify-start align-center>
+					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
 						<div class="nameTeam">
 							Equipe 2
 						</div>
@@ -67,6 +67,39 @@
 						</div>
 					</v-flex>
 				</v-layout>
+			</div>
+			<div>
+				<v-layout grid-list-xs row wrap>
+					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
+						<div class="menuMatch">
+							Match 
+						</div>
+					</v-flex>
+					<v-flex d-flex xs6 sm6 md6>
+						<div class="menuTif">
+							Joue avec TIF
+						</div>			
+					</v-flex>
+				</v-layout>	
+			</div>
+			<div>
+				<v-layout grid-list-xs row wrap>
+					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
+						<div class="menuMatch">
+							Score 
+						</div>
+					</v-flex>
+					<v-flex d-flex xs4 sm4 md4>
+						<div class="menuTif">
+							Joue avec TIF
+						</div>			
+					</v-flex>
+					<v-flex d-flex xs4 sm4 md4>
+						<div class="menuTif">
+							Joue avec TIF
+						</div>			
+					</v-flex>
+				</v-layout>	
 			</div>
 		</v-container>					 
   </v-content>
@@ -161,7 +194,7 @@
 	border: 2px solid orangered;
 	}
 	.scoreReel {
-	background-color: rbg(0,0,0,0.9);
+	background-color: rgb(0,0,0,0.9);
 	color: white;
     max-width: 40%;
     padding: 10px;
