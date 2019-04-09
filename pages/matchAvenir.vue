@@ -71,7 +71,7 @@
 						</div>
 					</v-flex>
 				</v-layout>
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 10px; width: 1015px">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; width: 1015px">
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="menuMatch" style="border-right: 1px solid darkgrey; padding: 15px; color: orangered; font-size: 1.2em; text-decoration: uppercase">
 							Le match
@@ -85,7 +85,7 @@
 						</nuxt-link>
 					</v-flex>
 				</v-layout>	
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 10px; margin-bottom: 10px; width: 1015px">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px; width: 1015px">
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<div class="menuMatch" style="border-right: 1px solid darkgrey; padding: 15px; color: orangered; font-size: 1.2em; text-decoration: uppercase">
 							Résumé du match 
@@ -108,42 +108,42 @@
 				</v-layout>
 			</div>
 			<div class="resumeMatch">
-				<v-layout grid-list-xs row wrap style="background-color: whitesmoke; margin-top: 10px; width: 1015px">
-					<v-flex d-flex xs12 sm12 md12 justify-center align-center>
+				<v-layout grid-list-xs row wrap style="background-color: lightgrey; margin-top: 20px; width: 1015px">
+					<v-flex d-flex xs12 sm12 md12 justify-center align-center style="margin-bottom: 5px">
 						<div class="titleResume">
 							Temps forts du match
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
-						<div class="tempsFortGauche" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase; text-align: right">
+						<div class="tempsFortGauche" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: right">
 							Nom Prénom buteur<br />
-							<span style="font-size: 1.0em">Nom Prénom passeur</span>
+							<span style="font-size: 0.9em">Nom Prénom passeur</span>
 						</div>
 					</v-flex>
 					<v-flex d-flex xs1 sm1 md1 justify-end align-center>
-						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase">
+						<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 							But
 						</div>			
 					</v-flex>
 					<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
-						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase">
+						<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 							26'
 						</div>			
 					</v-flex>
 					<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase">
+						<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 							26'
 						</div>			
 					</v-flex>					
 					<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase">
+						<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 							But
 						</div>			
 					</v-flex>					
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
-						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase; text-align: left">
+						<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: left">
 							Nom Prénom buteur<br />
-							<span style="font-size: 1.0em">Nom Prénom passeur</span>
+							<span style="font-size: 0.9em">Nom Prénom passeur</span>
 						</div>			
 					</v-flex>
 				</v-layout>				
@@ -270,8 +270,11 @@
 	background-color: orangered;
 	color: white;
 	}
-	.titleResume {
+	.resumeMatch {
 	background-color: white;
+	}
+	.titleResume {
+	background-color: #fafafa;
 	font-size: 1.1em;
 	font-weight: 700;
 	}
