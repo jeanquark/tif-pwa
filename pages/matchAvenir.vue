@@ -2,7 +2,7 @@
     <v-content id="app">      
 		<v-container text-xs-center style="padding: 0; max-width: 1017px">
 			<div class="backgroundImage" style="position: relative">
-				<v-layout grid-list-xs row wrap>
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25)">
 					<v-flex d-flex xs2 sm2 md2>
 					</v-flex>
 					<v-flex d-flex xs8 sm8 md8 justify-center align-center>
@@ -17,7 +17,7 @@
 						</div>			
 					</v-flex>
 				</v-layout>	
-				<v-layout row wrap>
+				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
 							<img src="/images/switzerland.png" class="imgTeamSmall" />
@@ -44,18 +44,18 @@
 							<img src="/images/switzerland.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
-					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
+					<v-flex d-flex xs5 sm5 md5 justify-end align-center>
 						<div class="nameTeam">
 							Equipe 1
 						</div>
 					</v-flex>
-					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
+					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="scoreReel">
 							Score réel<br />
 							2 à 1
 						</div>
 					</v-flex>
-					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
+					<v-flex d-flex xs5 sm5 md5 justify-start align-center>
 						<div class="nameTeam">
 							Equipe 2
 						</div>
@@ -122,35 +122,37 @@
 	background-size: cover;
 	}
 	.imgTeamSmall {
-	width: 80%;
+	width: 75%;
 	border-radius: 10px;
 	}
 	.drapeau {
 	padding: 10px;
 	}
 	.scorePF {
-	background-color: whitesmoke;
+    background-color: rgb(255,255,255,0.9);
     max-width: 80%;
     padding: 15px;
-    border-radius: 5px;
-    font-size: 1.2em;	
+    font-size: 1.2em;
+    font-weight: 700;
+	border-radius: 5px;
 	}
 	.time {
-	background-color: orangered;
+	background-color: rgb(255,69,0,0.9);
     max-width: 70%;
     padding: 10px;
     border-radius: 5px;
     font-size: 1em;	
 	}
 	.nameTeam {
-	background-color: whitesmoke;
+    background-color: rgb(255,255,255,0.9);
     max-width: 75%;
     padding: 15px;
-    border-radius: 5px;
-    font-size: 1.5em;	
+    font-size: 1.5em;
+    font-weight: 700;
+	border-radius: 5px;
 	}
 	.scorePlayer {
-	background-color: whitesmoke;
+	background-color: rgb(255,255,255,0.9);
     max-width: 15%;
     padding: 5px;
     border-radius: 5px;
@@ -159,7 +161,7 @@
 	border: 2px solid orangered;
 	}
 	.scoreReel {
-	background-color: black;
+	background-color: rbg(0,0,0,0.9);
 	color: white;
     max-width: 40%;
     padding: 10px;
@@ -169,7 +171,7 @@
 	}
 	.retour {
 	position: absolute;
-	top: 11px;
+	top: 7px;
 	right: 11px;
 	color: white;
 	}
@@ -180,8 +182,7 @@
 	.infoMatch {
 	color: white;
 	font-size: 0.9em;
-	padding: 5px;
-	margin-bottom: 20px;
+	margin: 10px 0;
 	}
 
 	/* Small screens */
