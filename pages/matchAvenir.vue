@@ -221,7 +221,7 @@
 	font-size: 0.9em;
 	margin: 10px 0;
 	}
-	.hoverMatchStats {
+	.hoverMatchStats :hover {
 	background-color: orangered;
 	color: white;
 	}
