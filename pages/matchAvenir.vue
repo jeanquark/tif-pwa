@@ -115,35 +115,35 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
-						<div class="tempsFortGauche" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase; text-align: right">
+						<div class="tempsFortGauche" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase; text-align: right">
 							Nom Prénom buteur<br />
-							Nom Prénom passeur
+							<span style="font-size: 1.0em">Nom Prénom passeur</span>
 						</div>
 					</v-flex>
 					<v-flex d-flex xs1 sm1 md1 justify-end align-center>
-						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase">
+						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase">
 							But
 						</div>			
 					</v-flex>
-					<v-flex d-flex xs1 sm1 md1 justify-end align-center>
-						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase">
+					<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase">
 							26'
 						</div>			
 					</v-flex>
 					<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase">
+						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase">
 							26'
 						</div>			
 					</v-flex>					
 					<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase">
+						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase">
 							But
 						</div>			
 					</v-flex>					
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
-						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase; text-align: left">
+						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.1em; text-decoration: uppercase; text-align: left">
 							Nom Prénom buteur<br />
-							Nom Prénom passeur
+							<span style="font-size: 1.0em">Nom Prénom passeur</span>
 						</div>			
 					</v-flex>
 				</v-layout>				
@@ -269,6 +269,11 @@
 	.hoverMatchStats :hover {
 	background-color: orangered;
 	color: white;
+	}
+	.titleResume {
+	background-color: white;
+	font-size: 1.1em;
+	font-weight: 700;
 	}
 
 	/* Small screens */
