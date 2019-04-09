@@ -1,12 +1,12 @@
 <template>
     <v-content id="app">      
 		<v-container text-xs-center style="padding: 0; max-width: 1017px">
-			<div class="backgroundImage">
+			<div class="backgroundImage" style="position: relative">
 				<v-layout grid-list-xs row wrap>
 					<v-flex d-flex xs2 sm2 md2>
 					</v-flex>
 					<v-flex d-flex xs8 sm8 md8 justify-center align-center>
-						<div class="text-xs-center">
+						<div class="infoMatch">
 						Monde, Coupe du monde de football<br/>
 						Journée 1
 						</div>
@@ -123,6 +123,7 @@
 	}
 	.imgTeamSmall {
 	width: 80%;
+	border-radius: 10px;
 	}
 	.drapeau {
 	padding: 10px;
@@ -136,31 +137,44 @@
 	}
 	.time {
 	background-color: orangered;
-    max-width: 80%;
-    padding: 15px;
+    max-width: 70%;
+    padding: 10px;
     border-radius: 5px;
-    font-size: 1.2em;	
+    font-size: 1em;	
 	}
 	.nameTeam {
 	background-color: whitesmoke;
     max-width: 75%;
     padding: 15px;
     border-radius: 5px;
-    font-size: 1.2em;	
+    font-size: 1.5em;	
 	}
 	.scorePlayer {
 	background-color: whitesmoke;
-    max-width: 40%;
-    padding: 15px;
+    max-width: 15%;
+    padding: 5px;
     border-radius: 5px;
-    font-size: 1.2em;	
+    font-size: 1.3em;
+	margin: 30px 10px 20px 10px;
 	}
 	.scoreReel {
-	background-color: white;
-    max-width: 80%;
+	background-color: black;
+	color: white;
+    max-width: 40%;
     padding: 10px;
     border-radius: 5px;
-    font-size: 1.0em;	
+    font-size: 1.1em;
+	margin-top: 20px;
+	}
+	.retour {
+	position: absolute;
+	top: 11px;
+	right: 11px;
+	}
+	.infoMatch {
+	color: white;
+	font-size: 0.9em;
+	padding: 5px;
 	}
 
 	/* Small screens */
