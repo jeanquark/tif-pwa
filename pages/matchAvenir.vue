@@ -156,6 +156,7 @@
     border-radius: 5px;
     font-size: 1.3em;
 	margin: 30px 10px 20px 10px;
+	border: 2px solid orangered;
 	}
 	.scoreReel {
 	background-color: black;
@@ -170,11 +171,17 @@
 	position: absolute;
 	top: 11px;
 	right: 11px;
+	color: white;
+	}
+	.icon:hover {
+	cursor: pointer;
+	color: orangered;
 	}
 	.infoMatch {
 	color: white;
 	font-size: 0.9em;
 	padding: 5px;
+	margin-bottom: 20px;
 	}
 
 	/* Small screens */
