@@ -71,7 +71,7 @@
 						</div>
 					</v-flex>
 				</v-layout>
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 10px">
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center >
 						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuMatch" style="border-right: 1px solid darkgrey; padding: 15px; color: white; font-size: 1.2em; text-decoration: uppercase">
@@ -87,7 +87,7 @@
 						</nuxt-link>
 					</v-flex>
 				</v-layout>	
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 10px; margin-bottom: 10px">
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center >
 						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuMatch" style="border-right: 1px solid darkgrey; padding: 15px; color: white; font-size: 1.2em; text-decoration: uppercase">
