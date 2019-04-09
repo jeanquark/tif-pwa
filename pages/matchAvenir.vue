@@ -2,11 +2,11 @@
     <v-content id="app">      
 		<v-container text-xs-center style="padding: 0; max-width: 1017px">
 			<div class="backgroundImage">
-				<v-layout grid-list-xs row wrap style="background-color: black; opacity: 0.5">
+				<v-layout grid-list-xs row wrap>
 					<v-flex d-flex xs2 sm2 md2>
 					</v-flex>
-					<v-flex d-flex xs8 sm8 md8 style="color: white" justify-center align-center>
-						<div class="text-xs-center" style="height: 40px">
+					<v-flex d-flex xs8 sm8 md8 justify-center align-center>
+						<div class="text-xs-center">
 						Monde, Coupe du monde de football<br/>
 						Journée 1
 						</div>
@@ -30,8 +30,8 @@
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="time">
-							date<br />
-							Heure
+							04.04.2019<br />
+							20:45
 						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
@@ -118,7 +118,8 @@
 	position: relative;
     }
 	.backgroundImage {
-	background-color: black;
+	background-image: url(/images/stade.svg);
+	background-size: cover;
 	}
 	.imgTeamSmall {
 	width: 80%;
@@ -139,6 +140,27 @@
     padding: 15px;
     border-radius: 5px;
     font-size: 1.2em;	
+	}
+	.nameTeam {
+	background-color: whitesmoke;
+    max-width: 75%;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2em;	
+	}
+	.scorePlayer {
+	background-color: whitesmoke;
+    max-width: 40%;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2em;	
+	}
+	.scoreReel {
+	background-color: white;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.0em;	
 	}
 
 	/* Small screens */
