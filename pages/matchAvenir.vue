@@ -106,20 +106,44 @@
 						</nuxt-link>
 					</v-flex>
 				</v-layout>
+			</div>
+			<div class="resumeMatch">
 				<v-layout grid-list-xs row wrap style="background-color: whitesmoke; margin-top: 10px; width: 1015px">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center>
 						<div class="titleResume">
 							Temps forts du match
 						</div>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-end align-center>
-						<div class="tempsFortGauche" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase">
-							Le match
+					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+						<div class="tempsFortGauche" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase; text-align: right">
+							Nom Prénom buteur<br />
+							Nom Prénom passeur
 						</div>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-start align-center>
+					<v-flex d-flex xs1 sm1 md1 justify-end align-center>
 						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase">
-							Joue avec TIF
+							But
+						</div>			
+					</v-flex>
+					<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase">
+							26'
+						</div>			
+					</v-flex>
+					<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase">
+							26'
+						</div>			
+					</v-flex>					
+					<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase">
+							But
+						</div>			
+					</v-flex>					
+					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+						<div class="tempsFortDroite" style="padding: 15px; color: black; font-size: 1.2em; text-decoration: uppercase; text-align: left">
+							Nom Prénom buteur<br />
+							Nom Prénom passeur
 						</div>			
 					</v-flex>
 				</v-layout>				
