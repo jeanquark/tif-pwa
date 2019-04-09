@@ -1,11 +1,11 @@
 <template>
     <v-content id="app">      
 		<v-container text-xs-center style="padding: 0; max-width: 1017px">
-			<div style="background-color: yellow">
+			<div class="backgroundImage">
 				<v-layout grid-list-xs row wrap style="background-color: black; opacity: 0.5">
 					<v-flex d-flex xs2 sm2 md2>
 					</v-flex>
-					<v-flex d-flex xs8 sm8 md8 style="color: white">
+					<v-flex d-flex xs8 sm8 md8 style="color: white" justify-center align-center>
 						<div class="text-xs-center" style="height: 40px">
 						Monde, Coupe du monde de football<br/>
 						Journée 1
@@ -18,49 +18,49 @@
 					</v-flex>
 				</v-layout>	
 				<v-layout row wrap>
-					<v-flex d-flex xs2 sm2 md2 justify-center>
+					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
 							<img src="/images/switzerland.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
-					<v-flex d-flex xs3 sm3 md3 justify-center>
+					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
 							Score PF
 						</div>
 					</v-flex>
-					<v-flex d-flex xs2 sm2 md2 justify-center>
+					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="time">
 							date<br />
 							Heure
 						</div>
 					</v-flex>
-					<v-flex d-flex xs3 sm3 md3 justify-center>
+					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
 							Score PF
 						</div>
 					</v-flex>
-					<v-flex d-flex xs2 sm2 md2 justify-center>
+					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
 							<img src="/images/switzerland.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
-					<v-flex d-flex xs4 sm4 md4>
+					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<div class="nameTeam">
 							Equipe 1
 						</div>
 					</v-flex>
-					<v-flex d-flex xs4 sm4 md4>
+					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<div class="scoreReel">
 							Score réel<br />
 							2 à 1
 						</div>
 					</v-flex>
-					<v-flex d-flex xs4 sm4 md4>
+					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<div class="nameTeam">
 							Equipe 2
 						</div>
 					</v-flex>
-					<v-flex d-flex xs12>
+					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
 							Ton score<br />
 							1.45 PF
@@ -101,22 +101,25 @@
 
 <style scoped>
     body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     }
     .container {
-        width: 100vw;
-        height: 100vh;
-        flex-direction: column;
-		font: normal 100%/1 "Acme", Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+	font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
     .content {
-        background-color: light-gray;;
-        overflow-x: auto;
-        height: 100%;
-		position: relative;
+    background-color: light-gray;;
+    overflow-x: auto;
+    height: 100%;
+	position: relative;
     }
+	.backgroundImage {
+	background-color: black;
+	}
 	.imgTeamSmall {
 	width: 80%;
 	}
@@ -124,37 +127,37 @@
 	padding: 10px;
 	}
 	.scorePF {
-	background-color: white;
+	background-color: whitesmoke;
     max-width: 80%;
-    max-height: 40px;
-    align-content: center;
-    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2em;	
 	}
 	.time {
-	background-color: white;
+	background-color: orangered;
     max-width: 80%;
-    max-height: 40px;
-    align-content: center;
-    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2em;	
 	}
 
 	/* Small screens */
     @media only screen and (max-width: 768px) {	
 		body {
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
 		}
 		.container {
-			width: 100vw;
-			height: 100vh;
-			flex-direction: column;
-			font: normal 90%/1 "Acme", Helvetica, sans-serif;
+		width: 100vw;
+		height: 100vh;
+		flex-direction: column;
+		font: normal 90%/1 "Acme", Helvetica, sans-serif;
 		}
 		.content {
-			background-color: light-gray;;
-			height: 100%;
-			overflow-x: auto;
+		background-color: light-gray;;
+		height: 100%;
+		overflow-x: auto;
 		}
     }
 </style>
