@@ -71,8 +71,8 @@
 						</div>
 					</v-flex>
 				</v-layout>
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.25); padding: 15px; color: white; font-size: 1.2em; text-decoration: uppercase">
-					<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px solid white">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.25); padding: 15px; color: white; font-size: 1.2em; text-decoration: uppercase; border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey">
+					<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px solid darkgrey">
 						<div class="menuMatch">
 							Match 
 						</div>
@@ -83,18 +83,18 @@
 						</div>			
 					</v-flex>
 				</v-layout>	
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.25); padding: 15px; color: white; font-size: 1.2em; margin-top: 10px; text-decoration: uppercase">
-					<v-flex d-flex xs4 sm4 md4 justify-center align-center style="border-right: 1px solid white">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.25); padding: 15px; color: white; font-size: 1.2em; margin-top: 10px; text-decoration: uppercase; border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey">
+					<v-flex d-flex xs4 sm4 md4 justify-center align-center style="border-right: 1px solid darkgrey">
 						<div class="menuMatch">
 							Score 
 						</div>
 					</v-flex>
-					<v-flex d-flex xs4 sm4 md4 justify-center align-center style="border-right: 1px solid white">
+					<v-flex d-flex xs4 sm4 md4 justify-center align-center style="border-right: 1px solid darkgrey">
 						<div class="menuTif">
 							Joue avec TIF
 						</div>			
 					</v-flex>
-					<v-flex d-flex xs4 sm4 md4 justify-center align-center style="border-right: 1px solid white">
+					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<div class="menuTif">
 							Joue avec TIF
 						</div>			
