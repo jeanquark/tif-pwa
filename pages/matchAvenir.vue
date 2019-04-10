@@ -124,7 +124,7 @@
 								<div style="padding: 10px; text-align: right">
 								</div>			
 							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
 								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 								</div>			
 							</v-flex>
@@ -377,7 +377,7 @@
 							Informations du match
 						</div>
 					</v-flex>
-					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px">
+					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
 						<div>
 							Stade : Le nom du stade (ville) - Spectateurs : Nb de spectateurs - Arbitre : Prénom Nom (nationalité)
 						</div>
