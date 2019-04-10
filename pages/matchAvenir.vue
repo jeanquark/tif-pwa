@@ -1,6 +1,6 @@
 <template>
     <v-content id="app">      
-		<v-container text-xs-center style="padding: 0; max-width: 1017px">
+		<v-container text-xs-center style="padding: 0; max-width: 1017px; border-left: 1px solid orangered; border-right: 1px solid orangered">
 			<div class="backgroundImage" style="position: relative; padding-bottom: 1px">
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25); width: 1015px">
 					<v-flex d-flex xs2 sm2 md2>
@@ -377,7 +377,7 @@
 							Informations du match
 						</div>
 					</v-flex>
-					<v-flex d-flex xs12 sm12 md12>
+					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px">
 						<div>
 							Stade : Le nom du stade (ville) - Spectateurs : Nb de spectateurs - Arbitre : Prénom Nom (nationalité)
 						</div>
@@ -423,7 +423,6 @@
     }
     .container {
     width: 100vw;
-    height: 100vh;
     flex-direction: column;
 	font: normal 100%/1 "Acme", Helvetica, sans-serif;
     }
