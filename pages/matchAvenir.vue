@@ -73,13 +73,13 @@
 				</v-layout>
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px">
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
-						<div class="menuMatch" style="border-right: 1px solid darkgrey; padding: 15px; color: orangered; font-size: 1.2em; text-decoration: uppercase">
+						<div class="menuMatch" style="border-right: 1px solid darkgrey">
 							Le match
 						</div>
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-							<div class="menuTif" style="padding: 15px; color: white; font-size: 1.2em; text-decoration: uppercase">
+							<div class="menuTif">
 								Joue avec TIF
 							</div>			
 						</nuxt-link>
@@ -87,20 +87,20 @@
 				</v-layout>	
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<div class="menuMatch" style="border-right: 1px solid darkgrey; padding: 15px; color: orangered; font-size: 1.2em; text-decoration: uppercase">
+						<div class="menuMatch" style="border-right: 1px solid darkgrey">
 							Résumé du match 
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
-							<div class="menuTif" style="border-right: 1px solid darkgrey; padding: 15px; color: white; font-size: 1.2em; text-decoration: uppercase">
+							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Compositions
 							</div>	
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-							<div class="menuTif" style="padding: 15px; color: white; font-size: 1.2em; text-decoration: uppercase">
+							<div class="menuTif">
 								Statistiques
 							</div>
 						</nuxt-link>
@@ -524,7 +524,7 @@
 	padding: 10px; 
 	color: black; 
 	font-size: 1.0em; 
-	text-decoration: uppercase; 
+	text-transform: uppercase; 
 	text-align: right;
 	font-weight: 700;
 	}
@@ -532,9 +532,22 @@
 	padding: 10px; 
 	color: black; 
 	font-size: 1.0em; 
-	text-decoration: uppercase; 
+	text-transform: uppercase; 
 	text-align: left;
 	font-weight: 700;
+	}
+	.menuMatch {
+	border-right: 1px solid darkgrey; 
+	padding: 15px; 
+	color: orangered; 
+	font-size: 1.2em; 
+	text-transform: uppercase;
+	}
+	.menuTif {
+	padding: 15px; 
+	color: white; 
+	font-size: 1.2em; 
+	text-transform: uppercase;
 	}
 
 	/* Small screens */
@@ -554,6 +567,60 @@
 		background-color: light-gray;;
 		height: 100%;
 		overflow-x: auto;
+		}
+		.scorePF {
+		max-width: 90%;
+		padding: 5px;
+		font-size: 0.8em;
+		font-weight: 600;
+		}
+		.infoMatch {
+		margin: 5px 0;
+		}
+		.retour {
+		top: 3px;
+		right: 11px;
+		}
+		.time {
+		max-width: 95%;
+		padding: 5px;
+		font-size: 0.8em;	
+		}
+		.drapeau {
+		padding: 0;
+		}
+		.imgTeamSmall {
+		width: 75%;
+		border-radius: 5px;
+		}
+		.nameTeam {
+		max-width: 90%;
+		padding: 5px;
+		font-size: 1.1em;
+		font-weight: 700;
+		}
+		.scorePlayer {
+		max-width: 20%;
+		padding: 5px;
+		border-radius: 5px;
+		font-size: 1.0em;
+		font-weight: 700;
+		margin: 5px 5px;
+		border: 1px solid orangered;
+		}
+		.scoreReel {
+		max-width: 60%;
+		padding: 5px;
+		border-radius: 5px;
+		font-size: 0.9em;
+		}
+		.menuMatch {
+		padding: 5px; 
+		font-size: 1.1em; 
+		}
+		.menuTif {
+		padding: 5px; 
+		font-size: 1.1em; 
 		}
     }
 </style>
