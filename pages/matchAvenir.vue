@@ -29,7 +29,7 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
-						<div class="time">
+						<div class="timeAvenir">
 							20.04.2019<br />
 							20:45
 						</div>
@@ -65,8 +65,8 @@
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
-							Ton score<br />
-							0 PF
+							Tu ne peux pas encore<br />
+							jouer à TIF !
 						</div>
 					</v-flex>
 				</v-layout>
@@ -77,11 +77,9 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
-						<nuxt-link to="/joueTif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-							<div class="menuTif">
-								Joue avec TIF
-							</div>			
-						</nuxt-link>
+						<div class="menuTif">
+							Joue avec TIF - Bientôt
+						</div>			
 					</v-flex>
 				</v-layout>	
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
@@ -91,9 +89,9 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchComposition" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+						<nuxt-link to="/matchEquipes" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
-								Compositions
+								Equipes
 							</div>	
 						</nuxt-link>
 					</v-flex>
@@ -113,7 +111,7 @@
 							Temps forts du match
 						</div>
 					</v-flex>
-					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
+					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 10px; padding: 10px; background-color: lightgrey">
 						<div class="infosMatch">
 							Aucune information de score en direct n'est disponible maintenant, le match n'a pas encore commencé.
 						</div>
@@ -121,7 +119,7 @@
 				</v-layout>
 			</div>
 			<div class="resumeMatch">
-				<v-layout grid-list-xs row wrap style="margin-top: 20px">
+				<v-layout grid-list-xs row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div>
 							Informations du match
@@ -204,7 +202,7 @@
     font-weight: 700;
 	border-radius: 5px;
 	}
-	.time {
+	.timeAvenir {
 	background-color: rgb(255,69,0,0.9);
     max-width: 70%;
     padding: 10px;
@@ -361,7 +359,7 @@
 		top: 3px;
 		right: 11px;
 		}
-		.time {
+		.timeAvenir {
 		max-width: 95%;
 		padding: 5px;
 		font-size: 0.8em;	

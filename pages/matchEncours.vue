@@ -29,7 +29,7 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
-						<div class="time">
+						<div class="timeEncours">
 							en cours...<br />
 							14 minutes
 						</div>
@@ -66,10 +66,9 @@
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
-							Ton score<br />
-							0 PF<br />
-							Tu n'as pas participé<br />
-							à ce match !
+							Ton score :<br />
+							<span style="martin-top: 5px">Tu n'as pas participé<br />
+							à ce match !</span>
 						</div>
 					</v-flex>
 				</v-layout>
@@ -373,7 +372,7 @@
 				</v-layout>				
 			</div>
 			<div class="resumeMatch">
-				<v-layout grid-list-xs row wrap style="margin-top: 20px">
+				<v-layout grid-list-xs row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div>
 							Informations du match
@@ -456,8 +455,8 @@
     font-weight: 700;
 	border-radius: 5px;
 	}
-	.time {
-	background-color: rgb(255,69,0,0.9);
+	.timeEncours {
+	background-color: rgb(0,128,0,0.9);
     max-width: 70%;
     padding: 10px;
     border-radius: 5px;
@@ -613,7 +612,7 @@
 		top: 3px;
 		right: 11px;
 		}
-		.time {
+		.timeEncours {
 		max-width: 95%;
 		padding: 5px;
 		font-size: 0.8em;	
