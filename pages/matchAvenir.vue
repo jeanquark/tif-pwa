@@ -114,40 +114,42 @@
 							Temps forts du match
 						</div>
 					</v-flex>
-					<div class="eventMatch">
-						<v-flex d-flex xs4 sm4 md4 justify-end align-center>
-							<div class="tempsFortGauche" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: right">
-								Nom Prénom buteur<br />
-								<span style="font-size: 0.9em">Nom Prénom passeur</span>
-							</div>
-						</v-flex>
-						<v-flex d-flex xs1 sm1 md1 justify-end align-center>
-							<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
-								<img src="/images/soccer.png" class="imgIconSmall" />
-							</div>			
-						</v-flex>
-						<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
-							<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
-								26'
-							</div>			
-						</v-flex>
-						<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-							<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
-								26'
-							</div>			
-						</v-flex>					
-						<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-							<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
-								<img src="/images/soccer.png" class="imgIconSmall" />
-							</div>			
-						</v-flex>					
-						<v-flex d-flex xs4 sm4 md4 justify-start align-center>
-							<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: left">
-								Nom Prénom buteur<br />
-								<span style="font-size: 0.9em">Nom Prénom passeur</span>
-							</div>			
-						</v-flex>
-					</div>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+								<div class="tempsFortGauche" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: right">
+									Nom Prénom buteur<br />
+									<span style="font-size: 0.9em">Nom Prénom passeur</span>
+								</div>
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+								<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+									<img src="/images/soccer.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+									26'
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+									26'
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+									<img src="/images/soccer.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+								<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: left">
+									Nom Prénom buteur<br />
+									<span style="font-size: 0.9em">Nom Prénom passeur</span>
+								</div>			
+							</v-flex>
+						</v-layout>
+					</v-flex>
 				</v-layout>				
 			</div>
 		</v-container>					 
