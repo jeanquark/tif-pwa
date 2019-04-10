@@ -25,18 +25,18 @@
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
-							Score PF
+							10.456 PF
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="time">
-							20.04.2019<br />
-							20:45
+							en cours...<br />
+							14 minutes
 						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
-							Score PF
+							12.456 PF
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
@@ -53,7 +53,8 @@
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<div class="scoreReel">
-							Bientôt
+							Score réel<br />
+							0 à 0
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
@@ -66,7 +67,9 @@
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
 							Ton score<br />
-							0 PF
+							0 PF<br />
+							Tu n'as pas participé<br />
+							à ce match !
 						</div>
 					</v-flex>
 				</v-layout>
@@ -113,12 +116,261 @@
 							Temps forts du match
 						</div>
 					</v-flex>
-					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
-						<div class="infosMatch">
-							Aucune information de score en direct n'est disponible maintenant, le match n'a pas encore commencé.
-						</div>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+								<div class="tempsFortGaucheTexte">
+								</div>
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+								<div class="tempsfortGaucheImage">
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
+								<div class="tempsFortGaucheTime">
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteTime">
+									26'
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/soccer.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom buteur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nom Prénom passeur</span>
+								</div>			
+							</v-flex>
+						</v-layout>
 					</v-flex>
-				</v-layout>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom buteur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nom Prénom passeur</span>
+								</div>
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+								<div class="tempsfortGaucheImage">
+									<img src="/images/soccer.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
+								<div class="tempsFortGaucheTime">
+									26'
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteTime">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteImage">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+								<div class="tempsFortDroiteTexte">
+								</div>			
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+								<div class="tempsFortGaucheTexte">
+									Carton jaune<br />
+								</div>
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+								<div class="tempsfortGaucheImage">
+									<img src="/images/jaune.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
+								<div class="tempsFortGaucheTime">
+									26'
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteTime">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteImage">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+								<div class="tempsFortDroiteTexte">
+								</div>			
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+								<div class="tempsFortGaucheTexte">
+								</div>
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+								<div class="tempsfortGaucheImage">
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
+								<div class="tempsFortGaucheTime">
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteTime">
+									26'
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/rouge.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+								<div class="tempsFortDroiteTexte">
+									Carton rouge<br />
+								</div>			
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom qui entre<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nom Prénom qui sort</span>
+								</div>
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+								<div class="tempsfortGaucheImage">
+									<img src="/images/fleche.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
+								<div class="tempsFortGaucheTime">
+									26'
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteTime">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteImage">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+								<div class="tempsFortDroiteTexte">
+								</div>			
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+								<div class="tempsFortGaucheTexte">
+								</div>
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+								<div class="tempsfortGaucheImage">
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
+								<div class="tempsFortGaucheTime">
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteTime">
+									26'
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/fleche.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom qui entre<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nom Prénom qui sort</span>
+								</div>			
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+								<div class="tempsFortGaucheTexte">
+								</div>
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+								<div class="tempsfortGaucheImage">
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
+								<div class="tempsFortGaucheTime">
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteTime">
+									26'
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/soccer.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom buteur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nom Prénom passeur</span>
+								</div>			
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom buteur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nom Prénom passeur</span>
+								</div>
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+								<div class="tempsfortGaucheImage">
+									<img src="/images/soccer.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
+								<div class="tempsFortGaucheTime">
+									26'
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteTime">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteImage">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+								<div class="tempsFortDroiteTexte">
+								</div>			
+							</v-flex>
+						</v-layout>
+					</v-flex>
+				</v-layout>				
 			</div>
 			<div class="resumeMatch">
 				<v-layout grid-list-xs row wrap style="margin-top: 20px">
@@ -129,7 +381,7 @@
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
 						<div class="infosMatch">
-							Stade : Le nom du stade (ville)
+							Stade : Le nom du stade (ville) - Spectateurs : Nb de spectateurs - Arbitre : Prénom Nom (nationalité)
 						</div>
 					</v-flex>
 				</v-layout>

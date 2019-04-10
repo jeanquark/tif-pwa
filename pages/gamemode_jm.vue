@@ -104,7 +104,7 @@
             <div class="content">
                 <!-- <v-layout> -->
                 <!-- <div class="container"> -->
-					<nuxt-link to="/matchAvenir" class="matchPrincipal">
+					<nuxt-link to="/matchEncours" class="matchPrincipal">
 						<div class="cadreScore hidden-xs-only" style="position: absolute">
 							<v-flex xs12 style="margin: 0; height: 100%">
 								<v-layout align-start>
@@ -116,7 +116,7 @@
 							</v-flex>
 						</div>
 					</nuxt-link>
-					<nuxt-link to="/matchPrincipal" class="matchPrincipal">
+					<nuxt-link to="/matchEncours" class="matchPrincipal">
 					<div class="cadreScore hidden-sm-and-up" style="position: absolute">
 						<v-flex xs12 style="margin: 0; height: 100%">
 							<v-layout align-start>
