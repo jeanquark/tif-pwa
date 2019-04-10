@@ -117,35 +117,71 @@
 					<v-flex d-flex xs12 sm12 md12>
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
-								<div class="tempsFortGauche" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: right">
+								<div class="tempsFortGauche">
 									Nom Prénom buteur<br />
 									<span style="font-size: 0.9em">Nom Prénom passeur</span>
 								</div>
 							</v-flex>
 							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
-								<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+								<div style="padding: 10px; text-align: right">
 									<img src="/images/soccer.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
-								<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 									26'
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-								<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 									26'
 								</div>			
 							</v-flex>					
 							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-								<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+								<div style="padding: 10px; text-align: left">
 									<img src="/images/soccer.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>					
 							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
-								<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: left">
+								<div class="tempsFortDroite">
 									Nom Prénom buteur<br />
 									<span style="font-size: 0.9em">Nom Prénom passeur</span>
+								</div>			
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+								<div class="tempsFortGauche">
+									Nom Prénom buteur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nom Prénom passeur</span>
+								</div>
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+								<div style="padding: 10px; text-align: right">
+									<img src="/images/soccer.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+									26'
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+									26'
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div style="padding: 10px; text-align: left">
+									<img src="/images/soccer.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+								<div class="tempsFortDroite">
+									Nom Prénom buteur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nom Prénom passeur</span>
 								</div>			
 							</v-flex>
 						</v-layout>
@@ -287,7 +323,23 @@
 	background-color: lightgrey;
 	}
 	.imgIconSmall {
-	width: 50px;
+	width: 25px;
+	}
+	.tempsFortGauche {
+	padding: 10px; 
+	color: black; 
+	font-size: 1.0em; 
+	text-decoration: uppercase; 
+	text-align: right;
+	font-weight: 700;
+	}
+	.tempsFortDroite {
+	padding: 10px; 
+	color: black; 
+	font-size: 1.0em; 
+	text-decoration: uppercase; 
+	text-align: left;
+	font-weight: 700;
 	}
 
 	/* Small screens */
