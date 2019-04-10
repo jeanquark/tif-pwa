@@ -159,7 +159,7 @@
 									<img src="/images/soccer.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
 								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 									26'
 								</div>			
@@ -187,10 +187,10 @@
 							</v-flex>
 							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
 								<div style="padding: 10px; text-align: right">
-									<img src="/images/soccer.png" class="imgIconSmall" />
+									<img src="/images/jaune.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
 								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 									26'
 								</div>			
@@ -219,7 +219,7 @@
 								<div style="padding: 10px; text-align: right">
 								</div>			
 							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
 								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 								</div>			
 							</v-flex>
@@ -230,7 +230,7 @@
 							</v-flex>					
 							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
 								<div style="padding: 10px; text-align: left">
-									<img src="/images/soccer.png" class="imgIconSmall" />
+									<img src="/images/rouge.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>					
 							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
@@ -250,10 +250,10 @@
 							</v-flex>
 							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
 								<div style="padding: 10px; text-align: right">
-									<img src="/images/soccer.png" class="imgIconSmall" />
+									<img src="/images/fleche.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
 								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 									26'
 								</div>			
@@ -282,7 +282,7 @@
 								<div style="padding: 10px; text-align: right">
 								</div>			
 							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
 								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 								</div>			
 							</v-flex>
@@ -293,7 +293,7 @@
 							</v-flex>					
 							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
 								<div style="padding: 10px; text-align: left">
-									<img src="/images/soccer.png" class="imgIconSmall" />
+									<img src="/images/fleche.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>					
 							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
@@ -314,7 +314,7 @@
 								<div style="padding: 10px; text-align: right">
 								</div>			
 							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
 								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 								</div>			
 							</v-flex>
@@ -349,7 +349,7 @@
 									<img src="/images/soccer.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
 								<div style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
 									26'
 								</div>			
@@ -369,6 +369,20 @@
 						</v-layout>
 					</v-flex>
 				</v-layout>				
+			</div>
+			<div class="resumeMatch">
+				<v-layout grid-list-xs row wrap style="margin-top: 20px">
+					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
+						<div>
+							Informations du match
+						</div>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<div>
+							Stade : Le nom du stade (ville) - Spectateurs : Nb de spectateurs - Arbitre : Prénom Nom (nationalité)
+						</div>
+					</v-flex>
+				</v-layout>
 			</div>
 		</v-container>					 
   </v-content>
