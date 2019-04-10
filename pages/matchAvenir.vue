@@ -435,6 +435,7 @@
 	.backgroundImage {
 	background-image: url(/images/stade.svg);
 	background-size: cover;
+	background-color: black;
 	}
 	.imgTeamSmall {
 	width: 70%;
