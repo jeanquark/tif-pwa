@@ -66,9 +66,9 @@
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
-							Ton score :<br />
-							<span style="martin-top: 5px">Tu n'as pas participé<br />
-							à ce match !</span>
+							Ton score :<br /><br />
+							Ton fan ne participe pas<br />
+							à ce match !
 						</div>
 					</v-flex>
 				</v-layout>
@@ -81,7 +81,7 @@
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<nuxt-link to="/joueTif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif">
-								Joue avec TIF
+								Joue avec ton fan !
 							</div>			
 						</nuxt-link>
 					</v-flex>
@@ -473,7 +473,7 @@
 	}
 	.scorePlayer {
 	background-color: rgb(255,255,255,0.9);
-    max-width: 15%;
+    max-width: 25%;
     padding: 5px;
     border-radius: 5px;
     font-size: 1.3em;
@@ -632,7 +632,7 @@
 		font-weight: 700;
 		}
 		.scorePlayer {
-		max-width: 20%;
+		max-width: 25%;
 		padding: 5px;
 		border-radius: 5px;
 		font-size: 1.0em;

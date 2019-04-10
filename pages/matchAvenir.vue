@@ -66,7 +66,7 @@
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
 							Tu ne peux pas encore<br />
-							jouer à TIF !
+							jouer avec ton fan !
 						</div>
 					</v-flex>
 				</v-layout>
@@ -78,7 +78,7 @@
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="menuTif">
-							Joue avec TIF - Bientôt
+							Joue avec ton fan - Bientôt
 						</div>			
 					</v-flex>
 				</v-layout>	
@@ -220,7 +220,7 @@
 	}
 	.scorePlayer {
 	background-color: rgb(255,255,255,0.9);
-    max-width: 15%;
+    max-width: 25%;
     padding: 5px;
     border-radius: 5px;
     font-size: 1.3em;
@@ -379,7 +379,7 @@
 		font-weight: 700;
 		}
 		.scorePlayer {
-		max-width: 20%;
+		max-width: 25%;
 		padding: 5px;
 		border-radius: 5px;
 		font-size: 1.0em;
