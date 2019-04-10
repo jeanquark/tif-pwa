@@ -378,7 +378,7 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
-						<div>
+						<div class="infosMatch">
 							Stade : Le nom du stade (ville) - Spectateurs : Nb de spectateurs - Arbitre : Prénom Nom (nationalité)
 						</div>
 					</v-flex>
@@ -500,6 +500,10 @@
 	color: white;
 	font-size: 0.9em;
 	margin: 10px 0;
+	}
+	.infosMatch {
+	color: black;
+	font-size: 1.0em;
 	}
 	.hoverMatchStats :hover {
 	background-color: orangered;
@@ -677,6 +681,10 @@
 		}
 		.imgIconSmall {
 		width: 15px;
+		}
+		.infosMatch {
+		color: black;
+		font-size: 0.9em;
 		}
     }
 </style>
