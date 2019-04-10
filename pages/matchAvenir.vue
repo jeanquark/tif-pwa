@@ -108,44 +108,46 @@
 				</v-layout>
 			</div>
 			<div class="resumeMatch">
-				<v-layout grid-list-xs row wrap style="background-color: lightgrey; margin-top: 20px; width: 1015px">
-					<v-flex d-flex xs12 sm12 md12 justify-center align-center style="margin-bottom: 5px">
+				<v-layout grid-list-xs row wrap style="margin-top: 20px">
+					<v-flex d-flex xs12 sm12 md12 justify-center align-center>
 						<div class="titleResume">
 							Temps forts du match
 						</div>
 					</v-flex>
-					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
-						<div class="tempsFortGauche" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: right">
-							Nom Prénom buteur<br />
-							<span style="font-size: 0.9em">Nom Prénom passeur</span>
-						</div>
-					</v-flex>
-					<v-flex d-flex xs1 sm1 md1 justify-end align-center>
-						<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
-							But
-						</div>			
-					</v-flex>
-					<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
-						<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
-							26'
-						</div>			
-					</v-flex>
-					<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-						<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
-							26'
-						</div>			
-					</v-flex>					
-					<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-						<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
-							But
-						</div>			
-					</v-flex>					
-					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
-						<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: left">
-							Nom Prénom buteur<br />
-							<span style="font-size: 0.9em">Nom Prénom passeur</span>
-						</div>			
-					</v-flex>
+					<div class="eventMatch">
+						<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+							<div class="tempsFortGauche" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: right">
+								Nom Prénom buteur<br />
+								<span style="font-size: 0.9em">Nom Prénom passeur</span>
+							</div>
+						</v-flex>
+						<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+							<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+								<img src="/images/soccer.png" class="imgIconSmall" />
+							</div>			
+						</v-flex>
+						<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px solid black">
+							<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+								26'
+							</div>			
+						</v-flex>
+						<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+							<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+								26'
+							</div>			
+						</v-flex>					
+						<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+							<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase">
+								<img src="/images/soccer.png" class="imgIconSmall" />
+							</div>			
+						</v-flex>					
+						<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+							<div class="tempsFortDroite" style="padding: 10px; color: black; font-size: 1.0em; text-decoration: uppercase; text-align: left">
+								Nom Prénom buteur<br />
+								<span style="font-size: 0.9em">Nom Prénom passeur</span>
+							</div>			
+						</v-flex>
+					</div>
 				</v-layout>				
 			</div>
 		</v-container>					 
@@ -202,7 +204,7 @@
 	background-size: cover;
 	}
 	.imgTeamSmall {
-	width: 75%;
+	width: 70%;
 	border-radius: 10px;
 	}
 	.drapeau {
@@ -211,7 +213,7 @@
 	.scorePF {
     background-color: rgb(255,255,255,0.9);
     max-width: 80%;
-    padding: 15px;
+    padding: 10px;
     font-size: 1.2em;
     font-weight: 700;
 	border-radius: 5px;
@@ -227,7 +229,7 @@
 	.nameTeam {
     background-color: rgb(255,255,255,0.9);
     max-width: 75%;
-    padding: 15px;
+    padding: 10px;
     font-size: 1.5em;
     font-weight: 700;
 	border-radius: 5px;
@@ -277,6 +279,13 @@
 	background-color: #fafafa;
 	font-size: 1.1em;
 	font-weight: 700;
+	}
+	.eventMatch {
+	margin-top: 5px;
+	background-color: lightgrey;
+	}
+	.imgIconSmall {
+	width: 50px;
 	}
 
 	/* Small screens */
