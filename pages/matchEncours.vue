@@ -93,9 +93,9 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchComposition" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+						<nuxt-link to="/matchEquipes" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
-								Compositions
+								Equipes
 							</div>	
 						</nuxt-link>
 					</v-flex>
@@ -607,6 +607,7 @@
 		}
 		.infoMatch {
 		margin: 5px 0;
+		font-size: 0.8em;
 		}
 		.retour {
 		top: 3px;

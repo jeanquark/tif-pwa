@@ -354,6 +354,7 @@
 		}
 		.infoMatch {
 		margin: 5px 0;
+		font-size: 0.8em;
 		}
 		.retour {
 		top: 3px;
