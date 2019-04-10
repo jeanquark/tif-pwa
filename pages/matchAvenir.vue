@@ -2,7 +2,7 @@
     <v-content id="app">      
 		<v-container text-xs-center style="padding: 0; max-width: 1017px; border-left: 1px solid orangered; border-right: 1px solid orangered">
 			<div class="backgroundImage" style="position: relative; padding-bottom: 1px">
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25); width: 1015px">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25)">
 					<v-flex d-flex xs2 sm2 md2>
 					</v-flex>
 					<v-flex d-flex xs8 sm8 md8 justify-center align-center>
@@ -71,7 +71,7 @@
 						</div>
 					</v-flex>
 				</v-layout>
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; width: 1015px">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px">
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="menuMatch" style="border-right: 1px solid darkgrey; padding: 15px; color: orangered; font-size: 1.2em; text-decoration: uppercase">
 							Le match
@@ -85,7 +85,7 @@
 						</nuxt-link>
 					</v-flex>
 				</v-layout>	
-				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px; width: 1015px">
+				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<div class="menuMatch" style="border-right: 1px solid darkgrey; padding: 15px; color: orangered; font-size: 1.2em; text-decoration: uppercase">
 							Résumé du match 
