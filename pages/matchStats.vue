@@ -124,7 +124,8 @@
 								</div>
 							</v-flex>
 							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
-								<v-progress-linear color="warning" height="15" value="45"></v-progress-linear>
+								<v-progress-linear hidden-xs-only color="warning" height="15" value="45"></v-progress-linear>
+								<v-progress-linear hidden-sm-and-up color="warning" height="10" value="45"></v-progress-linear>
 							</v-flex>
 							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
 								<div>
@@ -678,12 +679,14 @@
 		}
 		.titleResumeGauche {
 		font-size: 1em;
+		padding: 6px 5px 5px;
 		}
 		.titleResumeCentre {
 		font-size: 1em;
 		}
 		.titleResumeDroite {
 		font-size: 1em;
+		padding: 6px 5px 5px;
 		}
 		.tempsFortGaucheTexte {
 		padding: 5px; 
