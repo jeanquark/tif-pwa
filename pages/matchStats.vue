@@ -593,9 +593,13 @@
 	.tempsFortMargin {
 	margin-top: 20px
 	}
-	.cadreGeneral {
-	padding: 5px; 
-	margin-bottom: 20px;
+	.cadreGeneralGauche {
+	padding: 5px 5px 5px 10px; 
+	margin-bottom: 10px;
+	}
+	.cadreGeneralDroite {
+	padding: 5px 10px 5px 5px;
+	margin-bottom: 10px;
 	}
 
 	/* Small screens */
@@ -607,7 +611,7 @@
 		}
 		.container {
 		width: 100vw;
-		height: 100vh;
+		min-height: 100vh;
 		flex-direction: column;
 		font: normal 90%/1 "Acme", Helvetica, sans-serif;
 		}
@@ -690,10 +694,10 @@
 		}
 		.tempsFortGaucheTexte {
 		padding: 5px; 
-		font-size: 0.8em; 
+		font-size: 0.7em; 
 		}
-		.tempsfortGaucheImage {
-		padding: 4px; 
+		.tempsFortGaucheImage {
+		padding: 5px; 
 		text-align: right;
 		}
 		.tempsFortGaucheTime {
@@ -710,10 +714,7 @@
 		}
 		.tempsFortDroiteTexte {
 		padding: 5px; 
-		font-size: 0.8em; 
-		}
-		.imgIconSmall {
-		width: 15px;
+		font-size: 0.7em; 
 		}
 		.infosMatch {
 		color: black;
@@ -722,8 +723,12 @@
 		.imgIconSmall {
 		width: 20px;
 		}
-		.cadreGeneral {
-		padding: 2px; 
+		.cadreGeneralGauche {
+		padding: 2px 2px 2px 4px; 
+		margin-bottom: 10px;
+		}
+		.cadreGeneralDroite {
+		padding: 2px 4px 2px 2px; 
 		margin-bottom: 10px;
 		}
 
