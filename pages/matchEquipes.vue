@@ -111,7 +111,7 @@
 							Les effectifs des équipes
 						</div>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-start align-start class="cadreGeneral">
+					<v-flex d-flex xs6 sm6 md6 justify-start align-start class="cadreGeneralGauche">
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeGauche">
 								<div>
@@ -371,7 +371,7 @@
 							</v-flex>
 						</v-layout>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-end align-start class="cadreGeneral">
+					<v-flex d-flex xs6 sm6 md6 justify-end align-start class="cadreGeneralDroite">
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs12 sm12 md12 justify-end align-center class="titleResumeDroite">
 								<div>
@@ -931,8 +931,8 @@
 		padding: 5px; 
 		font-size: 0.7em; 
 		}
-		.tempsfortGaucheImage {
-		padding: 4px; 
+		.tempsFortGaucheImage {
+		padding: 5px; 
 		text-align: right;
 		}
 		.tempsFortGaucheTime {
@@ -944,7 +944,7 @@
 		font-size: 0.9em; 
 		}
 		.tempsFortDroiteImage {
-		padding: 4px; 
+		padding: 5px; 
 		text-align: left;
 		}
 		.tempsFortDroiteTexte {
