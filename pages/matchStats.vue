@@ -124,7 +124,7 @@
 								</div>
 							</v-flex>
 							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
-								<v-progress-linear color="warning" height="15" value="45" style="margin: 5px"></v-progress-linear>
+								<v-progress-linear color="warning" height="15" value="45"></v-progress-linear>
 							</v-flex>
 							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
 								<div>
@@ -276,8 +276,8 @@
 	font-size: 1.1em;
 	font-weight: 700;
 	margin-bottom: 5px;
-	text-align: left;
-	padding: 5px;	
+	text-align: right;
+	padding: 10px 5px 5px 5px;	
 	background-color: white;
 	}
 	.titleResumeCentre {
@@ -292,8 +292,8 @@
 	font-size: 1.1em;
 	font-weight: 700;
 	margin-bottom: 5px;
-	text-align: right;
-	padding: 5px;
+	text-align: left;
+	padding: 10px 5px 5px 5px;
 	background-color: white;
 	}
 	.eventMatch {
