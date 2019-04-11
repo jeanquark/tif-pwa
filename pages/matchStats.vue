@@ -108,7 +108,7 @@
 				<v-layout grid-list-xs row wrap class="tempsFortMargin">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div>
-							Possession
+							Possessions
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12 justify-start align-start class="cadreGeneral">
@@ -129,6 +129,249 @@
 							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
 								<div>
 									55%
+								</div>
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
+						<div>
+							Attaques
+						</div>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12 justify-start align-start class="cadreGeneral">
+						<v-layout grid-list-xs row wrap>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Tirs au total
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Tirs cadrés
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Tirs non cadrés
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Corners
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Hors-jeu
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Coups-francs
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
+								</div>
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
+						<div>
+							Défenses
+						</div>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12 justify-start align-start class="cadreGeneral">
+						<v-layout grid-list-xs row wrap>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Tirs bloqués
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Touches
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Dégagements
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
+								</div>
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
+						<div>
+							Cartons
+						</div>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12 justify-start align-start class="cadreGeneral">
+						<v-layout grid-list-xs row wrap>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Fautes
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Cartons jaunes
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
+								<div>
+									Cartons rouges
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									3
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="70"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
+								<div>
+									7
 								</div>
 							</v-flex>
 						</v-layout>
@@ -275,26 +518,21 @@
 	.titleResumeGauche {
 	font-size: 1.1em;
 	font-weight: 700;
-	margin-bottom: 5px;
 	text-align: right;
 	padding: 10px 5px 5px 5px;	
-	background-color: white;
 	}
 	.titleResumeCentre {
 	font-size: 1.1em;
-	font-weight: 700;
-	margin-bottom: 5px;
+	font-weight: 500;
 	text-align: center;
-	padding: 5px;	
-	background-color: white;
+	padding: 5px;
+	color: orangered;
 	}
 	.titleResumeDroite {
 	font-size: 1.1em;
 	font-weight: 700;
-	margin-bottom: 5px;
 	text-align: left;
 	padding: 10px 5px 5px 5px;
-	background-color: white;
 	}
 	.eventMatch {
 	background-color: lightgrey;
