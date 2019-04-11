@@ -113,7 +113,7 @@
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-start align-center style="border-right: 1px solid black">
 						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResume">
+							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeGauche">
 								<div>
 									Les gardiens de but
 								</div>
@@ -133,21 +133,21 @@
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-start align-center style="border-right: 1px solid black">
 						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResume">
+							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeDroite">
 								<div>
 									Les gardiens de but
 								</div>
 							</v-flex>
-							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
-								<div class="tempsFortGaucheImage">
-									<img src="/images/soccer.png" class="imgIconSmall" />								
-								</div>
-							</v-flex>
-							<v-flex d-flex xs8 sm8 md8 justify-end align-center>
-								<div class="tempsfortGaucheTexte">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsfortDroiteTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
 								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
 							</v-flex>
 						</v-layout>
 					</v-flex>
@@ -283,6 +283,12 @@
 	}
 	.resumeMatch {
 	background-color: white;
+	}
+	.titleResume {
+	font-size: 1.1em;
+	font-weight: 700;
+	margin-bottom: 5px;
+	text-align: center;
 	}
 	.titleResumeGauche {
 	font-size: 1.1em;
@@ -430,6 +436,9 @@
 		}
 		.tempsFortMargin {
 		margin-top: 10px
+		}
+		.titleResume {
+		font-size: 1em;
 		}
 		.titleResumeGauche {
 		font-size: 1em;
