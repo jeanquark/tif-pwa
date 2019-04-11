@@ -111,7 +111,7 @@
 							Les effectifs des équipes
 						</div>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-start align-start style="padding: 5px">
+					<v-flex d-flex xs6 sm6 md6 justify-start align-start style="padding: 5px; margin-bottom: 20px">
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeGauche">
 								<div>
@@ -371,7 +371,7 @@
 							</v-flex>
 						</v-layout>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-end align-start style="padding: 5px">
+					<v-flex d-flex xs6 sm6 md6 justify-end align-start style="padding: 5px; margin-bottom: 20px">
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs12 sm12 md12 justify-end align-center class="titleResumeDroite">
 								<div>
@@ -752,7 +752,6 @@
 	}
 	.resumeMatch {
 	background-color: white;
-	margin-bottom: 20px;
 	}
 	.titleResume {
 	font-size: 1.1em;
