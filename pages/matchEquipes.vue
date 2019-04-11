@@ -111,7 +111,7 @@
 							Les effectifs des équipes
 						</div>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-start align-start>
+					<v-flex d-flex xs6 sm6 md6 justify-start align-start style="padding: 5px">
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeGauche">
 								<div>
@@ -123,7 +123,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du coach<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du coach</span>
@@ -139,7 +139,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -150,7 +150,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -166,7 +166,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -177,7 +177,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -188,7 +188,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -199,7 +199,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -210,7 +210,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -221,7 +221,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -237,7 +237,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -248,7 +248,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -259,7 +259,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -270,7 +270,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -281,7 +281,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -292,7 +292,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -308,7 +308,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -319,7 +319,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -330,7 +330,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -341,7 +341,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -352,7 +352,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -363,7 +363,7 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -371,23 +371,23 @@
 							</v-flex>
 						</v-layout>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-end align-start>
+					<v-flex d-flex xs6 sm6 md6 justify-end align-start style="padding: 5px">
 						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeDroite">
+							<v-flex d-flex xs12 sm12 md12 justify-end align-center class="titleResumeDroite">
 								<div>
 									Le coach
 								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
 							</v-flex>
 							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
 								<div class="tempsFortDroiteImage">
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
-							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
-								<div class="tempsFortDroiteTexte">
-									Nom Prénom du coach<br />
-									<span style="font-size: 0.9em; font-weight: 500">Nationalité du coach</span>
-								</div>			
 							</v-flex>
 							<v-flex d-flex xs12 sm12 md12 justify-end align-center class="titleResumeDroite">
 								<div>
