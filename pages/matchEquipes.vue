@@ -111,7 +111,7 @@
 							Les effectifs des équipes
 						</div>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-start align-center style="border-right: 1px solid black">
+					<v-flex d-flex xs6 sm6 md6 justify-start align-center>
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeGauche">
 								<div>
@@ -123,23 +123,23 @@
 									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
-								<div class="tempsfortGaucheTexte">
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
 								</div>			
 							</v-flex>
 						</v-layout>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-start align-center style="border-right: 1px solid black">
+					<v-flex d-flex xs6 sm6 md6 justify-end align-center>
 						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeDroite">
+							<v-flex d-flex xs12 sm12 md12 justify-end align-center class="titleResumeDroite">
 								<div>
 									Les gardiens de but
 								</div>
 							</v-flex>
 							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
-								<div class="tempsfortDroiteTexte">
+								<div class="tempsFortDroiteTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
 								</div>			
@@ -295,12 +295,16 @@
 	font-weight: 700;
 	margin-bottom: 5px;
 	text-align: left;
+	padding: 5px;	
+	background-color: white;
 	}
 	.titleResumeDroite {
 	font-size: 1.1em;
 	font-weight: 700;
 	margin-bottom: 5px;
 	text-align: right;
+	padding: 5px;
+	background-color: white;
 	}
 	.eventMatch {
 	background-color: lightgrey;
