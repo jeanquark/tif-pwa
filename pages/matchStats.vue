@@ -92,13 +92,13 @@
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-							<div class="menuMatch" style="border-right: 1px solid darkgrey">
+							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Equipes
 							</div>	
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<div class="menuTif">
+						<div class="menuMatch">
 							Statistiques
 						</div>
 					</v-flex>
@@ -108,35 +108,28 @@
 				<v-layout grid-list-xs row wrap class="tempsFortMargin">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div>
-							Pleins de statistiques !
-						</div>
-					</v-flex>
-					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
-						<div>
-							Attaques
+							Possession
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12 justify-start align-start class="cadreGeneral">
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs4 sm4 md4 justify-start align-center class="titleResumeGauche">
 								<div>
-									Le coach
+									45%
 								</div>
 							</v-flex>
 							<v-flex d-flex xs4 sm4 md4 justify-center align-center class="titleResumeCentre">
 								<div>
-									Le coach
+									Possession de balle
 								</div>
 							</v-flex>
 							<v-flex d-flex xs4 sm4 md4 justify-end align-center class="titleResumeGauche">
 								<div>
-									Le coach
+									55%
 								</div>
 							</v-flex>
 							<v-flex d-flex xs12 sm12 md12 justify-center align-center>
-								<div>
-									barre de progression
-								</div>
+								<v-progress-linear color="warning" height="15" value="45"></v-progress-linear>
 							</v-flex>
 						</v-layout>
 					</v-flex>
@@ -284,6 +277,14 @@
 	font-weight: 700;
 	margin-bottom: 5px;
 	text-align: left;
+	padding: 5px;	
+	background-color: white;
+	}
+	.titleResumeCentre {
+	font-size: 1.1em;
+	font-weight: 700;
+	margin-bottom: 5px;
+	text-align: center;
 	padding: 5px;	
 	background-color: white;
 	}
@@ -438,6 +439,9 @@
 		font-size: 1em;
 		}
 		.titleResumeGauche {
+		font-size: 1em;
+		}
+		.titleResumeCentre {
 		font-size: 1em;
 		}
 		.titleResumeDroite {
