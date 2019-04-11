@@ -91,16 +91,16 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<div class="menuMatch" style="border-right: 1px solid darkgrey">
-							Equipes
-						</div>	
+						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+							<div class="menuMatch" style="border-right: 1px solid darkgrey">
+								Equipes
+							</div>	
+						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-							<div class="menuTif">
-								Statistiques
-							</div>
-						</nuxt-link>
+						<div class="menuTif">
+							Statistiques
+						</div>
 					</v-flex>
 				</v-layout>
 			</div>
@@ -108,7 +108,7 @@
 				<v-layout grid-list-xs row wrap class="tempsFortMargin">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div>
-							Les effectifs des équipes
+							Pleins de statistiques !
 						</div>
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-start align-start class="cadreGeneral">
