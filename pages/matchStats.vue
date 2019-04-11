@@ -112,24 +112,24 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12 justify-start align-start class="cadreGeneral">
-						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs4 sm4 md4 justify-start align-center class="titleResumeGauche">
-								<div>
-									45%
-								</div>
-							</v-flex>
-							<v-flex d-flex xs4 sm4 md4 justify-center align-center class="titleResumeCentre">
+						<v-layout grid-list-xs row wrap>
+							<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResumeCentre">
 								<div>
 									Possession de balle
 								</div>
 							</v-flex>
-							<v-flex d-flex xs4 sm4 md4 justify-end align-center class="titleResumeGauche">
+							<v-flex d-flex xs2 sm1 md1 justify-start align-center class="titleResumeGauche">
+								<div>
+									45%
+								</div>
+							</v-flex>
+							<v-flex d-flex xs8 sm10 md10 justify-center align-center>
+								<v-progress-linear color="warning" height="15" value="45" style="margin: 5px"></v-progress-linear>
+							</v-flex>
+							<v-flex d-flex xs2 sm1 md1 justify-end align-center class="titleResumeDroite">
 								<div>
 									55%
 								</div>
-							</v-flex>
-							<v-flex d-flex xs12 sm12 md12 justify-center align-center>
-								<v-progress-linear color="warning" height="15" value="45"></v-progress-linear>
 							</v-flex>
 						</v-layout>
 					</v-flex>
