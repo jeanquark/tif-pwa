@@ -111,8 +111,24 @@
 							Les effectifs des équipes
 						</div>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-start align-center>
+					<v-flex d-flex xs6 sm6 md6 justify-start align-start>
 						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeGauche">
+								<div>
+									Le coach
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du coach<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du coach</span>
+								</div>			
+							</v-flex>
 							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeGauche">
 								<div>
 									Les gardiens de but
@@ -167,13 +183,428 @@
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
 								</div>			
 							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeGauche">
+								<div>
+									Les milieux de terrain
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeGauche">
+								<div>
+									Les attaquants
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortGaucheImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortGaucheTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
 						</v-layout>
 					</v-flex>
-					<v-flex d-flex xs6 sm6 md6 justify-end align-center>
+					<v-flex d-flex xs6 sm6 md6 justify-end align-start>
 						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs12 sm12 md12 justify-start align-center class="titleResumeDroite">
+								<div>
+									Le coach
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center style="border-right: 1px solid black">
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du coach<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du coach</span>
+								</div>			
+							</v-flex>
 							<v-flex d-flex xs12 sm12 md12 justify-end align-center class="titleResumeDroite">
 								<div>
 									Les gardiens de but
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-end align-center class="titleResumeDroite">
+								<div>
+									Les défenseurs
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-end align-center class="titleResumeDroite">
+								<div>
+									Les milieux de terrain
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs12 sm12 md12 justify-end align-center class="titleResumeDroite">
+								<div>
+									Les attaquants
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
+								</div>
+							</v-flex>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom Prénom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
 							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
