@@ -66,7 +66,7 @@
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
 							Tu ne peux pas encore<br />
-							jouer à TIF !
+							jouer avec ton fan !
 						</div>
 					</v-flex>
 				</v-layout>
@@ -118,12 +118,12 @@
 									Les gardiens de but
 								</div>
 							</v-flex>
-							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
 								<div class="tempsFortGaucheImage">
-									<img src="/images/soccer.png" class="imgIconSmall" />								
+									<img src="/images/icon.png" class="imgIconSmall" />								
 								</div>
 							</v-flex>
-							<v-flex d-flex xs8 sm8 md8 justify-end align-center>
+							<v-flex d-flex xs10 sm10 md10 justify-end align-center>
 								<div class="tempsfortGaucheTexte">
 									Nom Prénom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">Nationalité du joueur</span>
@@ -241,7 +241,7 @@
 	}
 	.scorePlayer {
 	background-color: rgb(255,255,255,0.9);
-    max-width: 15%;
+    max-width: 25%;
     padding: 5px;
     border-radius: 5px;
     font-size: 1.3em;
@@ -284,22 +284,28 @@
 	.resumeMatch {
 	background-color: white;
 	}
-	.titleResume {
-	background-color: #fafafa;
+	.titleResumeGauche {
 	font-size: 1.1em;
 	font-weight: 700;
 	margin-bottom: 5px;
+	text-align: left;
+	}
+	.titleResumeDroite {
+	font-size: 1.1em;
+	font-weight: 700;
+	margin-bottom: 5px;
+	text-align: right;
 	}
 	.eventMatch {
 	background-color: lightgrey;
 	}
 	.imgIconSmall {
-	width: 25px;
+	width: 40px;
 	}
 	.tempsFortGaucheTexte {
-	padding: 10px; 
+	padding: 15px; 
 	color: black; 
-	font-size: 1.0em; 
+	font-size: 1.1em; 
 	text-transform: uppercase; 
 	text-align: right;
 	font-weight: 700;
@@ -325,9 +331,9 @@
 	text-align: left;
 	}
 	.tempsFortDroiteTexte {
-	padding: 10px; 
+	padding: 15px; 
 	color: black; 
-	font-size: 1.0em; 
+	font-size: 1.1em; 
 	text-transform: uppercase; 
 	text-align: left;
 	font-weight: 700;
@@ -400,7 +406,7 @@
 		font-weight: 700;
 		}
 		.scorePlayer {
-		max-width: 20%;
+		max-width: 25%;
 		padding: 5px;
 		border-radius: 5px;
 		font-size: 1.0em;
@@ -425,7 +431,10 @@
 		.tempsFortMargin {
 		margin-top: 10px
 		}
-		.titleResume {
+		.titleResumeGauche {
+		font-size: 1em;
+		}
+		.titleResumeDroite {
 		font-size: 1em;
 		}
 		.tempsFortGaucheTexte {
