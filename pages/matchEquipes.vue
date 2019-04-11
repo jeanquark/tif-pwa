@@ -752,6 +752,7 @@
 	}
 	.resumeMatch {
 	background-color: white;
+	margin-bottom: 20px;
 	}
 	.titleResume {
 	font-size: 1.1em;
@@ -786,7 +787,7 @@
 	color: black; 
 	font-size: 1.1em; 
 	text-transform: uppercase; 
-	text-align: right;
+	text-align: left;
 	font-weight: 700;
 	}
 	.tempsFortGaucheImage {
@@ -814,7 +815,7 @@
 	color: black; 
 	font-size: 1.1em; 
 	text-transform: uppercase; 
-	text-align: left;
+	text-align: right;
 	font-weight: 700;
 	}
 	.menuMatch {
