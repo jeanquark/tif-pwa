@@ -379,7 +379,7 @@
 		font-weight: 700;
 		}
 		.scorePlayer {
-		max-width: 25%;
+		max-width: 40%;
 		padding: 5px;
 		border-radius: 5px;
 		font-size: 1.0em;
