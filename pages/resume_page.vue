@@ -334,6 +334,27 @@
 							</ul>
 						</li>
 						<li>
+							<nuxt-link to="/matchTermineJoueur">Page de match - Terminé (le joueur n'a pas participé)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/matchTermineEquipeJoueur">Page des effectifs des 2 équipes + lins-up si on peut avoir l'information - Terminé (le joueur n'a pas participé)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/matchTermineStatsJoueur">Page des stats du match - Terminé (le joueur n'a pas participé)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
 							<nuxt-link to="/matchTermineJoueurAparticpe">Page de match - Terminé (le joueur a participé)</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
