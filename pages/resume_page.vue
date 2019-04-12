@@ -292,21 +292,21 @@
 							</ul>
 						</li>
 						<li>
-							<nuxt-link to="/matchEncours">Page de match - En cours (le joueur n'a pas encore participé)</nuxt-link>
+							<nuxt-link to="/matchEncoursJoueur">Page de match - En cours (le joueur n'a pas encore participé)</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
 								<li>Création d'une image de fond (sous le score).</li>
 							</ul>
 						</li>
 						<li>
-							<nuxt-link to="/matchEncoursEquipe">Page des effectifs des 2 équipes + lins-up si on peut avoir l'information - En cours (le joueur n'a pas encore participé)</nuxt-link>
+							<nuxt-link to="/matchEncoursEquipeJoueur">Page des effectifs des 2 équipes + lins-up si on peut avoir l'information - En cours (le joueur n'a pas encore participé)</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
 								<li>Création d'une image de fond (sous le score).</li>
 							</ul>
 						</li>
 						<li>
-							<nuxt-link to="/matchEncoursStats">Page des stats du match - En cours (le joueur n'a pas encore participé)</nuxt-link>
+							<nuxt-link to="/matchEncoursStatsJoueur">Page des stats du match - En cours (le joueur n'a pas encore participé)</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
 								<li>Création d'une image de fond (sous le score).</li>
