@@ -57,7 +57,10 @@
 							<nuxt-link to="/actionCardsActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
-								<li>Tout, cette page n'existe pas</li>
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
 							</ul>
 						</li>
 						<li>
@@ -74,7 +77,10 @@
 							<nuxt-link to="/actionCardsJobActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
-								<li>Tout, cette page n'existe pas</li>
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
 							</ul>
 						</li>
 						<li>
@@ -91,7 +97,10 @@
 							<nuxt-link to="/actionCardsFormationActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
-								<li>Tout, cette page n'existe pas</li>
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
 							</ul>
 						</li>
 						<li>
@@ -108,7 +117,10 @@
 							<nuxt-link to="/actionCardsHobbyActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
-								<li>Tout, cette page n'existe pas</li>
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
 							</ul>
 						</li>
 						<li>
@@ -125,7 +137,10 @@
 							<nuxt-link to="/actionCardsMatchActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
-								<li>Tout, cette page n'existe pas</li>
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
 							</ul>
 						</li>
 						<li>
@@ -142,7 +157,10 @@
 							<nuxt-link to="/actionCardsQuotidienActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
-								<li>Tout, cette page n'existe pas</li>
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
 							</ul>
 						</li>
 						<li>
@@ -159,7 +177,10 @@
 							<nuxt-link to="/actionCardsSportActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
-								<li>Tout, cette page n'existe pas</li>
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
 							</ul>
 						</li>
 						<li>
@@ -176,7 +197,42 @@
 							<nuxt-link to="/actionCardsTempsActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
-								<li>Tout, cette page n'existe pas</li>
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/skillInfluence">La page d'accueil des compétences (s'ouvre sur la page des compétences "Influence")</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/skillAttribut">Page sur les compétences "Attribut"</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/skillSavoirfaire">Page sur les compétences "Savoir-faire"</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/skillCards">Page détaillée sur une compétence particulière</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
 							</ul>
 						</li>
 					</ul>
