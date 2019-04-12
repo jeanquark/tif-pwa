@@ -12,6 +12,7 @@
 					<!-- <v-btn nuxt to="/scoremode" round color="black" dark large>Score Mode</v-btn> -->
 					<v-btn nuxt to="/scoremode_gm" round color="black" dark large style="z-index: 10;">Score Mode GM</v-btn>
 					<v-btn nuxt to="/scoremode_jm" round color="black" dark large style="z-index: 10;">Score Mode JM</v-btn>
+					<v-btn nuxt to="/resume_page" round color="black" dark large style="z-index: 10;">Résumé des pages (en cours)</v-btn>
 					<p>{{ $t('pages.index.explanation') }}</p>
 					<span class="tif1">TIF</span>
 				</v-layout>

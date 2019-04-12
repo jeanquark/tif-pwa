@@ -124,7 +124,7 @@
 									Espagnol Barcelone<br />
 									<span class="nameOtherTeam">Real Madrid</span> <span class="vs">VS</span> 
 								</div>
-								<span class="dateHourMatch dateMatch">12.032019 - 19:00</span>
+								<span class="dateHourMatch dateMatch">12.03.2019 - 19:00</span>
 							</v-layout>
 						</v-flex>
 					</div> 
