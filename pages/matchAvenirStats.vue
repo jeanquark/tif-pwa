@@ -78,29 +78,29 @@
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="menuTif">
-							Joue avec ton fan - Bientôt
+							Joue avec TIF - Bientôt
 						</div>			
 					</v-flex>
 				</v-layout>	
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<div class="menuMatch" style="border-right: 1px solid darkgrey">
-							Résumé du match 
-						</div>
+						<nuxt-link to="/matchAvenir" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+							<div class="menuTif" style="border-right: 1px solid darkgrey">
+								Résumé du match 
+							</div>
+						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchAvenirEquipes" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+						<nuxt-link to="/matchAvenirEquipes" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Equipes
 							</div>	
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchAvenirStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-							<div class="menuTif">
-								Statistiques
-							</div>
-						</nuxt-link>
+						<div class="menuMatch">
+							Statistiques
+						</div>
 					</v-flex>
 				</v-layout>
 			</div>
@@ -108,26 +108,12 @@
 				<v-layout grid-list-xs row wrap class="tempsFortMargin">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div >
-							Temps forts du match
+							Statistiques
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 10px; padding: 10px; background-color: lightgrey">
 						<div class="infosMatch">
-							Aucune information de score en direct n'est disponible maintenant, le match n'a pas encore commencé.
-						</div>
-					</v-flex>
-				</v-layout>
-			</div>
-			<div class="resumeMatch">
-				<v-layout grid-list-xs row wrap style="margin-top: 10px">
-					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
-						<div>
-							Informations du match
-						</div>
-					</v-flex>
-					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
-						<div class="infosMatch">
-							Stade : Le nom du stade (ville)
+							Aucune information de statistiques en direct n'est disponible maintenant, le match n'a pas encore commencé.
 						</div>
 					</v-flex>
 				</v-layout>
@@ -264,26 +250,45 @@
 	background-color: white;
 	}
 	.titleResume {
-	background-color: #fafafa;
 	font-size: 1.1em;
 	font-weight: 700;
 	margin-bottom: 5px;
+	text-align: center;
+	}
+	.titleResumeGauche {
+	font-size: 1.1em;
+	font-weight: 700;
+	text-align: right;
+	padding: 10px 5px 5px 5px;	
+	}
+	.titleResumeCentre {
+	font-size: 1.1em;
+	font-weight: 500;
+	text-align: center;
+	padding: 5px;
+	color: orangered;
+	}
+	.titleResumeDroite {
+	font-size: 1.1em;
+	font-weight: 700;
+	text-align: left;
+	padding: 10px 5px 5px 5px;
 	}
 	.eventMatch {
 	background-color: lightgrey;
 	}
 	.imgIconSmall {
-	width: 25px;
+	width: 40px;
 	}
 	.tempsFortGaucheTexte {
-	padding: 10px; 
+	padding: 15px; 
 	color: black; 
-	font-size: 1.0em; 
+	font-size: 1.1em; 
 	text-transform: uppercase; 
-	text-align: right;
+	text-align: left;
 	font-weight: 700;
 	}
-	.tempsfortGaucheImage {
+	.tempsFortGaucheImage {
 	padding: 10px; 
 	text-align: right;
 	}
@@ -304,11 +309,11 @@
 	text-align: left;
 	}
 	.tempsFortDroiteTexte {
-	padding: 10px; 
+	padding: 15px; 
 	color: black; 
-	font-size: 1.0em; 
+	font-size: 1.1em; 
 	text-transform: uppercase; 
-	text-align: left;
+	text-align: right;
 	font-weight: 700;
 	}
 	.menuMatch {
@@ -327,6 +332,14 @@
 	.tempsFortMargin {
 	margin-top: 20px
 	}
+	.cadreGeneralGauche {
+	padding: 5px 5px 5px 10px; 
+	margin-bottom: 10px;
+	}
+	.cadreGeneralDroite {
+	padding: 5px 10px 5px 5px;
+	margin-bottom: 10px;
+	}
 
 	/* Small screens */
     @media only screen and (max-width: 768px) {	
@@ -337,7 +350,7 @@
 		}
 		.container {
 		width: 100vw;
-		height: 100vh;
+		min-height: 100vh;
 		flex-direction: column;
 		font: normal 90%/1 "Acme", Helvetica, sans-serif;
 		}
@@ -407,11 +420,22 @@
 		.titleResume {
 		font-size: 1em;
 		}
+		.titleResumeGauche {
+		font-size: 1em;
+		padding: 6px 5px 5px;
+		}
+		.titleResumeCentre {
+		font-size: 1em;
+		}
+		.titleResumeDroite {
+		font-size: 1em;
+		padding: 6px 5px 5px;
+		}
 		.tempsFortGaucheTexte {
 		padding: 5px; 
-		font-size: 0.8em; 
+		font-size: 0.7em; 
 		}
-		.tempsfortGaucheImage {
+		.tempsFortGaucheImage {
 		padding: 5px; 
 		text-align: right;
 		}
@@ -424,19 +448,28 @@
 		font-size: 0.9em; 
 		}
 		.tempsFortDroiteImage {
-		padding: 5px; 
+		padding: 4px; 
 		text-align: left;
 		}
 		.tempsFortDroiteTexte {
 		padding: 5px; 
-		font-size: 0.8em; 
-		}
-		.imgIconSmall {
-		width: 15px;
+		font-size: 0.7em; 
 		}
 		.infosMatch {
 		color: black;
 		font-size: 0.9em;
 		}
+		.imgIconSmall {
+		width: 20px;
+		}
+		.cadreGeneralGauche {
+		padding: 2px 2px 2px 4px; 
+		margin-bottom: 10px;
+		}
+		.cadreGeneralDroite {
+		padding: 2px 4px 2px 2px; 
+		margin-bottom: 10px;
+		}
+
     }
 </style>
