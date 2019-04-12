@@ -25,7 +25,7 @@
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
-							Score PF
+							10.456 PF
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
@@ -36,7 +36,7 @@
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
-							Score PF
+							12.456 PF
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
@@ -53,7 +53,8 @@
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
 						<div class="scoreReel">
-							Bientôt
+							Score réel<br />
+							0 à 0
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>

@@ -80,7 +80,7 @@
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<nuxt-link to="/joueTif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif">
-								Gagne encore des PF !
+								Tu as participé à ce match !
 							</div>			
 						</nuxt-link>
 					</v-flex>
@@ -92,14 +92,14 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchEncoursEquipesJoueurAparticpe" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+						<nuxt-link to="/matchTermineEquipesJoueurAparticpe" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Equipes
 							</div>	
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchEncoursStatsJoueurAparticpe" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/matchTermineStatsJoueurAparticpe" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif">
 								Statistiques
 							</div>

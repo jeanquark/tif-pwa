@@ -25,7 +25,7 @@
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
-							Score PF
+							10.456 PF
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
@@ -36,7 +36,7 @@
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
-							Score PF
+							12.456 PF
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
