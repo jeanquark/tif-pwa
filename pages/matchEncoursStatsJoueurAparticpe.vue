@@ -66,8 +66,7 @@
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
 							Ton score :<br /><br />
-							Ton fan ne participe pas<br />
-							à ce match !
+							<span style="font-size: 1.5em">1.456 PF</span>
 						</div>
 					</v-flex>
 				</v-layout>
@@ -80,21 +79,21 @@
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<nuxt-link to="/joueTif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif">
-								Joue avec ton fan !
+								Gagne encore des PF !
 							</div>			
 						</nuxt-link>
 					</v-flex>
 				</v-layout>	
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchEncours" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/matchEncoursJoueurAparticpe" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Résumé du match 
 							</div>
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchEncoursEquipes" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/matchEncoursEquipesJoueurAparticpe" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Equipes
 							</div>	
