@@ -662,7 +662,8 @@
 		.timeTermine {
 		max-width: 95%;
 		padding: 5px;
-		font-size: 0.8em;	
+		font-size: 0.8em;
+		}
 		.drapeau {
 		padding: 0;
 		}
