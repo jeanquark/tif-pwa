@@ -235,6 +235,41 @@
 								<li>Définir les couleurs liés aux thèmes</li>
 							</ul>
 						</li>
+						<li>
+							<nuxt-link to="/myteams">Page d'accueil des équipes liées à un joueur</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création des liens sur la page des équipes</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/inventoryMain">Page d'accueil de l'inventaire d'un joueur. Il a accès à tout son équipement (acheter dans les shops), vêtements et décorations pour son appartement.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création des illlustrations (avec le format d'image svg, nous pourrons facilement (je pense) créer un fichier "t-shirt", par exemple, et lui donner des couleurs grâce à l'encodage de l'image.</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/inventoryAvatar">Page qui concerne le personnage du joueur et comment il est habillé et quels accessoires il a sur lui.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création des illlustrations (avec le format d'image svg, nous pourrons facilement (je pense) créer un fichier "t-shirt", par exemple, et lui donner des couleurs grâce à l'encodage de l'image.</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/inventoryHome">Page qui concerne l'appartement du joueur. Quelles décorations il a installé pour rapporter plus de Ferveur s'il regarde la match chez lui.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création des illlustrations (avec le format d'image svg, nous pourrons facilement (je pense) créer un fichier "t-shirt", par exemple, et lui donner des couleurs grâce à l'encodage de l'image.</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/inventoryCards">Page qui détaille une Card de l'inventaire.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création des illlustrations (avec le format d'image svg, nous pourrons facilement (je pense) créer un fichier "t-shirt", par exemple, et lui donner des couleurs grâce à l'encodage de l'image.</li>
+							</ul>
+						</li>
 					</ul>
 				</div>
             </div>
