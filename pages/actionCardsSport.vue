@@ -69,7 +69,7 @@
 
 				<v-card-actions class="card-footer">
 					<v-flex class="text-xs-center">
-						<v-btn nuxt color="orangered" to="/actionCardsSportActivee" class="elevation-1" style="margin-bottom: 20px">Utiliser cette action !</v-btn>
+						<v-btn nuxt color="orangered" to="/actionCardsSportActivee" class="elevation-1" style="margin-bottom: 20px; background-color: orangered">Utiliser cette action !</v-btn>
 					</v-flex>
 				</v-card-actions>
 			</v-card>
