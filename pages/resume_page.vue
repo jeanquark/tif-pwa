@@ -271,21 +271,21 @@
 							</ul>
 						</li>
 						<li>
-							<nuxt-link to="/matchAvenir">Page de match - A venir (pas encore jouable par le joueur)</nuxt-link>
+							<nuxt-link to="/matchAvenirJoueur">Page de match - A venir (pas encore jouable par le joueur)</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
 								<li>Création d'une image de fond (sous le score).</li>
 							</ul>
 						</li>
 						<li>
-							<nuxt-link to="/matchAvenirEquipe">Page de l'effectif des 2 équipes - A venir (pas encore jouable par le joueur)</nuxt-link>
+							<nuxt-link to="/matchAvenirEquipeJoueur">Page de l'effectif des 2 équipes - A venir (pas encore jouable par le joueur)</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
 								<li>Création d'une image de fond (sous le score).</li>
 							</ul>
 						</li>
 						<li>
-							<nuxt-link to="/matchAvenirStats">Page des stats du match - A venir (pas encore jouable par le joueur)</nuxt-link>
+							<nuxt-link to="/matchAvenirStatsJoueur">Page des stats du match - A venir (pas encore jouable par le joueur)</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
 								<li>Création d'une image de fond (sous le score).</li>
