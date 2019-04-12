@@ -29,13 +29,13 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
-						<div class="timeEncours">
-							en cours...<br />
-							14 minutes
+						<div class="timeTermine">
+							Match terminé !<br />
+							12.04.2019
 						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
-						<div class="scorePF">
+						<div class="scorePF win">
 							12.456 PF
 						</div>
 					</v-flex>
@@ -47,7 +47,7 @@
 				</v-layout>	
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
-						<div class="nameTeam">
+						<div class="nameTeam win">
 							Deportivo Alavés
 						</div>
 					</v-flex>
@@ -87,7 +87,7 @@
 				</v-layout>	
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchEncours" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/matchTermine" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Résumé du match 
 							</div>
@@ -99,7 +99,7 @@
 						</div>	
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchEncoursStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/matchTermineStats" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif">
 								Statistiques
 							</div>
@@ -703,6 +703,25 @@
     font-size: 1em;	
 	color: white;
 	}
+	.timeTermine {
+	background-color: rgb(255,0,0,0.9);
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;	
+	color: white;
+	}
+	.win {
+	color: orangered;
+	}
+	.timeEncours {
+	background-color: rgb(0,128,0,0.9);
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;	
+	color: white;
+	}
 	.nameTeam {
     background-color: rgb(255,255,255,0.9);
     max-width: 75%;
@@ -734,14 +753,6 @@
 	position: absolute;
 	top: 7px;
 	right: 11px;
-	color: white;
-	}
-	.timeEncours {
-	background-color: rgb(0,128,0,0.9);
-    max-width: 70%;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1em;	
 	color: white;
 	}
 	.icon:hover {
@@ -881,6 +892,11 @@
 		margin: 5px 0;
 		font-size: 0.8em;
 		}
+		.timeEncours {
+		max-width: 95%;
+		padding: 5px;
+		font-size: 0.8em;	
+		}
 		.retour {
 		top: 3px;
 		right: 11px;
@@ -890,17 +906,17 @@
 		padding: 5px;
 		font-size: 0.8em;	
 		}
+		.timeTermine {
+		max-width: 95%;
+		padding: 5px;
+		font-size: 0.8em;
+		}		
 		.drapeau {
 		padding: 0;
 		}
 		.imgTeamSmall {
 		width: 75%;
 		border-radius: 5px;
-		}
-		.timeEncours {
-		max-width: 95%;
-		padding: 5px;
-		font-size: 0.8em;	
 		}
 		.nameTeam {
 		max-width: 90%;

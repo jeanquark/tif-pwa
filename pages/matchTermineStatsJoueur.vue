@@ -67,7 +67,7 @@
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
 							Ton score :<br /><br />
-							Tu as participé à ce match !
+							Tu n'as pas participé à ce match !
 						</div>
 					</v-flex>
 				</v-layout>
@@ -80,7 +80,7 @@
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<nuxt-link to="/joueTif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif">
-								Tu as participé à ce match !
+								Va voir le résumé de TIF !
 							</div>			
 						</nuxt-link>
 					</v-flex>

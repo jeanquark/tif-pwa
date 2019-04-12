@@ -29,13 +29,13 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
-						<div class="timeEncours">
-							en cours...<br />
-							14 minutes
+						<div class="timeTermine">
+							Match terminé !<br />
+							12.04.2019
 						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
-						<div class="scorePF">
+						<div class="scorePF win">
 							12.456 PF
 						</div>
 					</v-flex>
@@ -47,7 +47,7 @@
 				</v-layout>	
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
-						<div class="nameTeam">
+						<div class="nameTeam win">
 							Deportivo Alavés
 						</div>
 					</v-flex>
@@ -66,9 +66,8 @@
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
-							Ton score :<br /><br />
-							Ton fan ne participe pas<br />
-							à ce match !
+							Tu n'es pas encore inscrit<br />
+							à ThisIsFan.com !
 						</div>
 					</v-flex>
 				</v-layout>
@@ -81,21 +80,21 @@
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<nuxt-link to="/joueTif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif">
-								Joue avec ton fan !
+								Inscris-toi vite !
 							</div>			
 						</nuxt-link>
 					</v-flex>
 				</v-layout>	
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchEncoursJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/matchTermine" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Résumé du match 
 							</div>
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
-						<nuxt-link to="/matchEncoursEquipesJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/matchTermineEquipes" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Equipes
 							</div>	
@@ -502,6 +501,14 @@
 	font-size: 0.9em;
 	margin: 10px 0;
 	}
+	.timeTermine {
+	background-color: rgb(255,0,0,0.9);
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;	
+	color: white;
+	}
 	.infosMatch {
 	color: black;
 	font-size: 1.0em;
@@ -519,6 +526,14 @@
 	margin-bottom: 5px;
 	text-align: center;
 	}
+	.timeEncours {
+	background-color: rgb(0,128,0,0.9);
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;	
+	color: white;
+	}
 	.titleResumeGauche {
 	font-size: 1.1em;
 	font-weight: 700;
@@ -532,6 +547,9 @@
 	padding: 5px;
 	color: orangered;
 	}
+	.win {
+	color: orangered;
+	}
 	.titleResumeDroite {
 	font-size: 1.1em;
 	font-weight: 700;
@@ -543,14 +561,6 @@
 	}
 	.imgIconSmall {
 	width: 40px;
-	}
-	.timeEncours {
-	background-color: rgb(0,128,0,0.9);
-    max-width: 70%;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1em;	
-	color: white;
 	}
 	.tempsFortGaucheTexte {
 	padding: 15px; 
@@ -650,10 +660,10 @@
 		padding: 5px;
 		font-size: 0.8em;	
 		}
-		.timeEncours {
+		.timeTermine {
 		max-width: 95%;
 		padding: 5px;
-		font-size: 0.8em;	
+		font-size: 0.8em;
 		}
 		.drapeau {
 		padding: 0;
@@ -661,6 +671,11 @@
 		.imgTeamSmall {
 		width: 75%;
 		border-radius: 5px;
+		}
+		.timeEncours {
+		max-width: 95%;
+		padding: 5px;
+		font-size: 0.8em;	
 		}
 		.nameTeam {
 		max-width: 90%;

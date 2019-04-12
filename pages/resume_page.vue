@@ -271,6 +271,27 @@
 							</ul>
 						</li>
 						<li>
+							<nuxt-link to="/matchAvenir">Page de match - A venir</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/matchAvenirEquipe">Page de l'effectif des 2 équipes - A venir</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/matchAvenirStats">Page des stats du match - A venir</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
 							<nuxt-link to="/matchAvenirJoueur">Page de match - A venir (pas encore jouable par le joueur)</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
@@ -286,6 +307,27 @@
 						</li>
 						<li>
 							<nuxt-link to="/matchAvenirStatsJoueur">Page des stats du match - A venir (pas encore jouable par le joueur)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/matchEncours">Page de match - En cours</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/matchEncoursEquipe">Page des effectifs des 2 équipes + lins-up si on peut avoir l'information - En cours</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/matchEncoursStats">Page des stats du match - En cours</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
 								<li>Création d'une image de fond (sous le score).</li>
@@ -328,6 +370,27 @@
 						</li>
 						<li>
 							<nuxt-link to="/matchEncoursStatsJoueurAparticpe">Page des stats du match - En cours (le joueur a participé)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/matchTermine">Page de match - Terminé</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/matchTermineEquipe">Page des effectifs des 2 équipes + lins-up si on peut avoir l'information - Terminé</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Création d'une image de fond (sous le score).</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/matchTermineStats">Page des stats du match - Terminé</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
 								<li>Création d'une image de fond (sous le score).</li>

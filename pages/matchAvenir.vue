@@ -78,7 +78,7 @@
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="menuTif">
-							Joue avec ton fan - Bientôt
+							Inscris-toi vite !
 						</div>			
 					</v-flex>
 				</v-layout>	
