@@ -1,6 +1,6 @@
 <template>
 	<v-layout align-center justify-center row fill-height style="background-color: black">
-		<v-flex xs12 sm10 md8 lg6>
+		<v-flex xs12 sm10 md8 lg6 class="flip-horizontal-bottom">
 			<v-card class="card">
 				<v-card-title primary-title>
 					<v-flex xs9>
@@ -69,7 +69,7 @@
 
 				<v-card-actions class="card-footer">
 					<v-flex class="text-xs-center">
-						<v-btn nuxt color="error" to="/gamemode_theme" class="elevation-1" style="margin-bottom: 20px">Retour en ville !</v-btn>
+						<v-btn nuxt color="error" to="/gamemode_jm" class="elevation-1" style="margin-bottom: 20px">Retour en ville !</v-btn>
 					</v-flex>
 				</v-card-actions>
 			</v-card>
@@ -181,6 +181,36 @@
 </script>
 
 <style scoped>
+.flip-horizontal-bottom {
+-webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+/**
+* ----------------------------------------
+* animation flip-horizontal-bottom
+* ----------------------------------------
+*/
+@-webkit-keyframes flip-horizontal-bottom {
+0% {
+-webkit-transform: rotateX(0);
+transform: rotateX(0);
+}
+100% {
+-webkit-transform: rotateX(-180deg);
+transform: rotateX(-180deg);
+}
+}
+@keyframes flip-horizontal-bottom {
+0% {
+-webkit-transform: rotateX(0);
+transform: rotateX(0);
+}
+100% {
+-webkit-transform: rotateX(-180deg);
+transform: rotateX(-180deg);
+}
+}
+
 .divtexte {
 padding: 75px 20px; 
 text-align: center;

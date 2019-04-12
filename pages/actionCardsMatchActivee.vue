@@ -66,7 +66,7 @@
 
 				<v-card-actions class="card-footer">
 					<v-flex class="text-xs-center">
-						<v-btn nuxt color="error" to="/gamemode_theme" class="elevation-1" style="margin-bottom: 20px">Retour en ville !</v-btn>
+						<v-btn nuxt color="error" to="/gamemode_jm" class="elevation-1" style="margin-bottom: 20px">Retour en ville !</v-btn>
 					</v-flex>
 				</v-card-actions>
 			</v-card>
