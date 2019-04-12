@@ -111,20 +111,22 @@
 									<div class="nameTeam">
 										Espagnol Barcelone <span class="nameOtherTeam">Pas de match aujourd'hui</span>
 									</div>
-									<span class="dateMatch">Prochain match vs Real Madrid, le 12 mars 2019 à 19:00</span>
+									<span class="vs">Prochain match vs Real Madrid, le 12 mars 2019 à 19:00</span>
 								</v-layout>
 							</v-flex>
 						</div>
 					</nuxt-link>
-					<nuxt-link to="/matchAvenir" class="matchPrincipal">
+					<nuxt-link to="/matchEquipePrincipal" class="matchPrincipal">
 					<div class="cadreScore hidden-sm-and-up" style="position: absolute">
 						<v-flex xs12 style="margin: 0; height: 100%">
 							<v-layout align-start>
 								<div class="nameTeam">
 									Espagnol Barcelone<br />
-									<span class="nameOtherTeam">Pas de match aujourd'hui</span> 
+									<span class="vs">Pas de match aujourd'hui</span> 
 								</div>
-								<span class="dateHourMatch dateMatch">Next vs Real Madrid</span>
+								<nuxt-link to="/matchAvenir">
+									<span class="dateHourMatch dateMatch">Next vs Real Madrid</span>
+								</nuxt-link>
 							</v-layout>
 						</v-flex>
 					</div> 
