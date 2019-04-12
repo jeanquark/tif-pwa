@@ -702,6 +702,14 @@
     font-size: 1em;	
 	color: white;
 	}
+	.timeEncours {
+	background-color: rgb(0,128,0,0.9);
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;	
+	color: white;
+	}
 	.nameTeam {
     background-color: rgb(255,255,255,0.9);
     max-width: 75%;
@@ -871,6 +879,11 @@
 		.infoMatch {
 		margin: 5px 0;
 		font-size: 0.8em;
+		}
+		.timeEncours {
+		max-width: 95%;
+		padding: 5px;
+		font-size: 0.8em;	
 		}
 		.retour {
 		top: 3px;

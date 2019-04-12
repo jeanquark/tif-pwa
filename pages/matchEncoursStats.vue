@@ -543,6 +543,14 @@
 	.imgIconSmall {
 	width: 40px;
 	}
+	.timeEncours {
+	background-color: rgb(0,128,0,0.9);
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;	
+	color: white;
+	}
 	.tempsFortGaucheTexte {
 	padding: 15px; 
 	color: black; 
@@ -637,6 +645,11 @@
 		right: 11px;
 		}
 		.timeAvenir {
+		max-width: 95%;
+		padding: 5px;
+		font-size: 0.8em;	
+		}
+		.timeEncours {
 		max-width: 95%;
 		padding: 5px;
 		font-size: 0.8em;	

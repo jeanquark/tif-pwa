@@ -517,6 +517,14 @@
 	margin-bottom: 5px;
 	text-align: center;
 	}
+	.timeEncours {
+	background-color: rgb(0,128,0,0.9);
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;	
+	color: white;
+	}
 	.titleResumeGauche {
 	font-size: 1.1em;
 	font-weight: 700;
@@ -646,6 +654,11 @@
 		.imgTeamSmall {
 		width: 75%;
 		border-radius: 5px;
+		}
+		.timeEncours {
+		max-width: 95%;
+		padding: 5px;
+		font-size: 0.8em;	
 		}
 		.nameTeam {
 		max-width: 90%;
