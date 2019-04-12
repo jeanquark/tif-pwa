@@ -46,16 +46,16 @@
 							<v-flex xs12 sm6 md6 style="padding: 5px">
 								<v-card style="min-height: 100%">
 									<div class="divtexte">
-										<span class="fs18" style="font-weight: 700; margin-top: 10px"><b>Ils sont beaux, ils sont chaud mes beignets ! Qui veut des beignets !?</b></span>
+										<span class="fs18" style="font-weight: 700; margin-top: 10px"><b>Tu as bien vendu aujourd'hui ! Tu as mérité ton salaire !</b></span>
 										<div class="pftexte">
 										Energy : 5<br />
-										$fans : ???<br />
-										Endurance : ???<br />
-										Baratin : ???
+										$fans : 20<br />
+										Endurance : 1PC<br />
+										Baratin : 1PC
 										</div>
 										<span class="fs16" style="margin-top: 20px; color: orangered">
 											<b>Conseil de Mr Fan</b></br>
-											Pour vendre des beignets sous un soleil de plomb, il faut être endurant et avoir un sacré baratin !
+											Retourne vite en ville pour continuer à profiter de cette belle journée !
 										</span>
 									</div>
 								</v-card>
@@ -66,7 +66,7 @@
 
 				<v-card-actions class="card-footer">
 					<v-flex class="text-xs-center">
-						<v-btn nuxt color="orangered" to="/actionCardsMatchActivee" class="elevation-1" style="margin-bottom: 20px">Utiliser cette action !</v-btn>
+						<v-btn nuxt color="error" to="/gamemode_theme" class="elevation-1" style="margin-bottom: 20px">Retour en ville !</v-btn>
 					</v-flex>
 				</v-card-actions>
 			</v-card>
