@@ -25,7 +25,7 @@
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
-							Score PF
+							Choisis ton camp !
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
@@ -36,7 +36,7 @@
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
-							Score PF
+							Choisis ton camp !
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
@@ -65,8 +65,8 @@
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
-							Tu ne peux pas encore<br />
-							jouer avec ton fan !
+							Tu n'es pas encore inscrit<br />
+							à ThisIsFan.com !
 						</div>
 					</v-flex>
 				</v-layout>
@@ -78,7 +78,7 @@
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="menuTif">
-							Joue avec TIF - Bientôt
+							Inscris-toi vite !
 						</div>			
 					</v-flex>
 				</v-layout>	
