@@ -17,7 +17,7 @@
 							</ul>
 						</li>
 						<li>
-							<nuxt-link to="/gamemode_pasmatch_jm">Page d'accueil d'un joueur en mode "Gamemode" avec un match de son équipe favorite.</nuxt-link>
+							<nuxt-link to="/gamemode_pasmatch_jm">Page d'accueil d'un joueur en mode "Gamemode" si son équipe favorite ne joue pas aujourd'hui.</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
 								<li>Illustration d'une ville (même style que le modèle). Cette ville doit être paramétrable facilement. Il faut pouvoir ajouter et supprimer les divers thèmes facilement.</li>
@@ -26,12 +26,157 @@
 							</ul>
 						</li>
 						<li>
-							<nuxt-link to="/pageEquipePrincipale"></nuxt-link>
+							<nuxt-link to="/pageEquipePrincipale">Page d'accueil d'une équipe. Sur cette page d'accueil les derniers résultats et le prochain match de l'équipe.</nuxt-link>
 							<ul>
 								Ce qu'il reste à faire :
-								<li></li>
-								<li></li>
-								<li></li>
+								<li>Tout, cette page n'existe pas encore</li>
+								<li>Page selon le modèle "sans header et footer"</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/gamemode_theme">Page qui contiendra toutes les actions réalisables par le joueur dans le thème choisis.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Toutes les illustration de background pour tous les thèmes</li>
+								<li>Définir tous les thèmes (ex: plage, montagne, pub, stade, gare, etc...)</li>
+								<li>Créer toutes les actions liés aux thèmes</li>
+								<li>Créer les illustrations liés aux actions</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCards">Détail d'une action avec petite descritpion, résumé des gains/pertes et petit conseil de Mr Fan. (faire un modal ???)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Tout, cette page n'existe pas</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsJob">Détail d'une action avec petite descritpion, résumé des gains/pertes et petit conseil de Mr Fan. (faire un modal ???)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsJobActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Tout, cette page n'existe pas</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsFormation">Détail d'une action avec petite descritpion, résumé des gains/pertes et petit conseil de Mr Fan. (faire un modal ???)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsFormationActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Tout, cette page n'existe pas</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsHobby">Détail d'une action avec petite descritpion, résumé des gains/pertes et petit conseil de Mr Fan. (faire un modal ???)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsHobbyActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Tout, cette page n'existe pas</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsMatch">Détail d'une action avec petite descritpion, résumé des gains/pertes et petit conseil de Mr Fan. (faire un modal ???)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsMatchActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Tout, cette page n'existe pas</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsQuotidien">Détail d'une action avec petite descritpion, résumé des gains/pertes et petit conseil de Mr Fan. (faire un modal ???)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsQuotidienActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Tout, cette page n'existe pas</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsSport">Détail d'une action avec petite descritpion, résumé des gains/pertes et petit conseil de Mr Fan. (faire un modal ???)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsSportActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Tout, cette page n'existe pas</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsTemps">Détail d'une action avec petite descritpion, résumé des gains/pertes et petit conseil de Mr Fan. (faire un modal ???)</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Illustrer les actions</li>
+								<li>Définir les couleurs liés aux thèmes</li>
+								<li>Création des actions et de ses attributs (gain, perte, $fans, etc...)</li>
+								<li>Créer une animation lors que le joueur utilise l'action</li>
+							</ul>
+						</li>
+						<li>
+							<nuxt-link to="/actionCardsTempsActivee">Lorsque le joueur active la carte, il faut montrer ce qu'il a gagné et animer la carte.</nuxt-link>
+							<ul>
+								Ce qu'il reste à faire :
+								<li>Tout, cette page n'existe pas</li>
 							</ul>
 						</li>
 					</ul>
