@@ -149,7 +149,6 @@
                 Register
             </v-btn>
             <v-btn
-                :disabled="errors.items.length > 0 || !form.email.length > 0"
                 color="success"
                 @click="step++"
                 v-if="step === 1"
