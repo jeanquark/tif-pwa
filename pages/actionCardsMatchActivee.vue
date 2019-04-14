@@ -54,7 +54,7 @@
 										Baratin : 1PC
 										</div>
 										<span class="fs16" style="margin-top: 20px; color: orangered">
-											<b>Conseil de Mr Fan</b></br>
+											<b>Conseil de Mr Fan</b><br />
 											Retourne vite en ville pour continuer à profiter de cette belle journée !
 										</span>
 									</div>

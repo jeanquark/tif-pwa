@@ -54,7 +54,7 @@
 										Baratin : ???
 										</div>
 										<span class="fs16" style="margin-top: 20px; color: orangered">
-											<b>Conseil de Mr Fan</b></br>
+											<b>Conseil de Mr Fan</b><br />
 											Pour vendre des beignets sous un soleil de plomb, il faut être endurant et avoir un sacré baratin !
 										</span>
 									</div>

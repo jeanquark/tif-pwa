@@ -41,12 +41,12 @@
 									<div class="divtexte">
 										<span class="fs18" style="font-weight: 700; margin-top: 10px"><b>Point de ferveur que tu apportes à ton équipes favorites en fonction d'où tu regardes le match :</b></span>
 										<div class="pftexte">
-										Au stade : 0.1 PF</br>
-										Au pub : 0.1 PF</br>
+										Au stade : 0.1 PF<br />
+										Au pub : 0.1 PF<br />
 										Sur le canapé : 0.1 PF
 										</div>
 										<span class="fs16" style="margin-top: 20px; color: orangered">
-											<b>Conseil de Mr Fan</b></br>
+											<b>Conseil de Mr Fan</b><br />
 											Si tu mets ton maillot au match d'une autre équipe, tu risques d'avoir des problèmes !
 										</span>
 									</div>
