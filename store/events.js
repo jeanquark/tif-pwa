@@ -10,6 +10,7 @@ export const state = () => ({
     // loadedEventUsers: [],
     // loadedLiveEvents: [],
     // loadedCompetitionEvents: []
+    eventsByCompetitionByRound: {}
 })
 
 export const mutations = {
@@ -22,6 +23,15 @@ export const mutations = {
     setEvents (state, payload) {
         // console.log('Call to setEvents mutation', payload)
         state.loadedEvents = Object.assign({}, state.loadedEvents, { [payload.date]: payload })
+    },
+    setEventsByCompetitionByRound (state, payload) {
+        console.log('payload2: ', payload)
+        // console.log('competitionId: ', payload.competition)
+        const competition = payload.competition
+        console.log('competition: ', competition)
+        const round = payload.round
+        console.log('round: ', round)
+        state.eventsByCompetitionByRound = Object.assign({}, state.eventsByCompetitionByRound, { [competition]: Object.assign({}, state.eventsByCompetitionByRound[competition], { [round]: payload.eventsArray }) })
     },
     // addEvents(state, payload) {
     //     state.loadedEvents.push(...payload)
@@ -288,6 +298,45 @@ export const actions = {
         // })
     },
 
+    fetchEventsByCompetitionByRound ({ commit }, payload) {
+        const competition = payload.competition.toString()
+        const round = payload.round
+        console.log('competition: ', competition)
+        console.log('round: ', round)
+        try {
+            firebase
+                .database()
+                .ref('/events_new3/')
+                .orderByChild('league_slug')
+                .equalTo(competition)
+                .on('value', function(snapshot) {
+                    const eventsArray = []
+                    snapshot.forEach((event) => {
+                        // console.log('event.val().round_short: ', event.val().round_short)
+                        if (event.val().round_short == round) {
+                            eventsArray.push({...event.val(), id: event.key})
+                        }
+                        
+                    })
+                    eventsArray.sort((a, b) => a.timestamp - b.timestamp)
+                    console.log('eventsArray: ', eventsArray)
+                    commit("setEventsByCompetitionByRound", { competition, round, eventsArray })
+                    // return eventsArray
+                })
+        } catch (error) {
+            console.log(error)
+            new Noty({
+                type: 'error',
+                text: 'Events not found',
+                timeout: 5000,
+                theme: 'metroui'
+            }).show()
+            commit('setError', error, { root: true })
+            commit('setLoading', false, { root: true })
+            return error
+        }
+    },
+
     loadedEventUsers({ commit }, payload) {
         // try {
         //     // console.log('payload: ', payload)
@@ -439,7 +488,7 @@ export const actions = {
 }
 
 export const getters = {
-    loadedEvents(state) {
+    loadedEvents (state) {
         return state.loadedEvents
     },
     // loadedCompetitionEvents(state) {
@@ -451,4 +500,8 @@ export const getters = {
     // loadedLiveEvents(state) {
     //     return state.loadedLiveEvents
     // }
+    loadedEventsByCompetitionByRound (state) {
+        return state.eventsByCompetitionByRound
+        // return state.loadedCompetitions
+    }
 }

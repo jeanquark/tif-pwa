@@ -45,7 +45,7 @@ module.exports = app.use(async function(req, res, next) {
 
 		// 2) Then for each active competition, parse current standing
 		for (let competition of competitionsArray) {
-			console.log(competition.slug);
+			// console.log(competition.slug);
 			const response = await getLeagueStanding(competition.league_id);
 
 			// Object.values(response.data.api.standings).forEach(teams => {

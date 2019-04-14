@@ -89,6 +89,7 @@ module.exports = app.use(async function(req, res, next) {
                     }
 
                     const id = match.fixture_id;
+                    const round_short = match.round.substring(match.round.lastIndexOf('-') + 2);
                     updates[`/events_new3/${id}/id`] = id;
                     updates[`/events_new3/${id}/date_iso8601`] = match.event_date;
                     updates[`/events_new3/${id}/date`] = moment(match.event_date).format('YYYY-MM-DD');
@@ -97,6 +98,7 @@ module.exports = app.use(async function(req, res, next) {
                     updates[`/events_new3/${id}/timestamp`] = match.event_timestamp;
                     updates[`/events_new3/${id}/league_id`] = match.league_id;
                     updates[`/events_new3/${id}/round`] = match.round;
+                    updates[`/events_new3/${id}/round_short`] = round_short;
                     updates[`/events_new3/${id}/homeTeam_id`] = match.homeTeam_id;
                     updates[`/events_new3/${id}/homeTeam_name`] = match.homeTeam;
                     updates[`/events_new3/${id}/homeTeam_slug`] = homeTeam_slug;

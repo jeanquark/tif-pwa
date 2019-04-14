@@ -10,6 +10,7 @@
                 <!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
                 <!-- loadedEvents: {{ loadedEvents }}<br /><br /> -->
                 <!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
+                <!-- selectedType: {{ selectedType }} -->
 
                 <!-- Results -->
                 <v-tabs
@@ -17,7 +18,7 @@
                     dark
                     slider-color="yellow"
                     fixed-tabs
-                    v-model="selectType"
+                    v-model="selectedType"
 
                 >
                     <v-tab
@@ -32,10 +33,13 @@
                 </v-tabs>
 
                 <!-- Results -->
-                <scoremode-results v-if="selectType === 0" />
+                <scoremode-results v-if="selectedType === 0" />
 
                 <!-- Standings -->
-                <scoremode-standings v-if="selectType === 1" />
+                <scoremode-standings v-if="selectedType === 1" />
+
+                <!-- Results by round -->
+                <scoremode-round-results v-if="selectedType === 2" />
 
                 
             </div>
@@ -53,11 +57,12 @@
 
 <script>
     import moment from 'moment'
-    import ScoremodeHeader from '~/components/ScoremodeHeader'
-    import ScoremodeResults from '~/components/ScoremodeResults'
-    import ScoremodeStandings from '~/components/ScoremodeStandings'
+    import ScoremodeHeader from '~/components/jm/ScoremodeHeader'
+    import ScoremodeResults from '~/components/jm/ScoremodeResults'
+    import ScoremodeStandings from '~/components/jm/ScoremodeStandings'
+    import ScoremodeRoundResults from '~/components/jm/ScoremodeResultsByRound'
     export default {
-        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings },
+        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings, ScoremodeRoundResults },
         async created () {
             // console.log(moment().format('YYYY-MM-DD'))
             // console.log(moment().add(1, 'days').format('YYYY-MM-DD'))
@@ -140,72 +145,75 @@
                     }, {
                         name: 'Standings',
                         slug: 'standings'
+                    }, {
+                        name: 'Results by round',
+                        slug: 'results_by_round'
                     }
                 ],
-                competitions: [
-                    {
-                        name: 'English Premier League',
-                        slug: 'english_premier_league_2018_2019',
-                        info: {
-                            total_teams: 20,
-                            champions_league: 4,
-                            europa_league: 7,
-                            playoff: null,
-                            relegation: 17
-                        }
-                    }, {
-                        name: 'Spanish La Liga',
-                        slug: 'spanish_la_liga_2018_2019',
-                        info: {
-                            total_teams: 20,
-                            champions_league: 4,
-                            europa_league: 7,
-                            playoff: null,
-                            relegation: 17
-                        }
-                    }, {
-                        name: 'Italian Serie A',
-                        slug: 'italian_serie_a_2018_2019',
-                        info: {
-                            total_teams: 20,
-                            champions_league: 4,
-                            europa_league: 7,
-                            playoff: null,
-                            relegation: 17
-                        }
-                    }, {
-                        name: 'German Bundesliga',
-                        slug: 'german_bundesliga_2018_2019',
-                        info: {
-                            total_teams: 18,
-                            champions_league: 4,
-                            europa_league: 7,
-                            playoff: null,
-                            relegation: 16
-                        }
-                    }, {
-                        name: 'French Ligue 1',
-                        slug: 'french_league1_2018_2019',
-                        info: {
-                            total_teams: 20,
-                            champions_league: 3,
-                            europa_league: 6,
-                            playoff: null,
-                            relegation: 18
-                        }
-                    }, {
-                        name: 'Swiss Superleague',
-                        slug: 'swiss_super_league_2018_2019',
-                        info: {
-                            total_teams: 10,
-                            champions_league: 1,
-                            europa_league: 4,
-                            playoff: null,
-                            relegation: 9
-                        }
-                    }
-                ],
-                selectType: 0,
+                // competitions: [
+                //     {
+                //         name: 'English Premier League',
+                //         slug: 'english_premier_league_2018_2019',
+                //         info: {
+                //             total_teams: 20,
+                //             champions_league: 4,
+                //             europa_league: 7,
+                //             playoff: null,
+                //             relegation: 17
+                //         }
+                //     }, {
+                //         name: 'Spanish La Liga',
+                //         slug: 'spanish_la_liga_2018_2019',
+                //         info: {
+                //             total_teams: 20,
+                //             champions_league: 4,
+                //             europa_league: 7,
+                //             playoff: null,
+                //             relegation: 17
+                //         }
+                //     }, {
+                //         name: 'Italian Serie A',
+                //         slug: 'italian_serie_a_2018_2019',
+                //         info: {
+                //             total_teams: 20,
+                //             champions_league: 4,
+                //             europa_league: 7,
+                //             playoff: null,
+                //             relegation: 17
+                //         }
+                //     }, {
+                //         name: 'German Bundesliga',
+                //         slug: 'german_bundesliga_2018_2019',
+                //         info: {
+                //             total_teams: 18,
+                //             champions_league: 4,
+                //             europa_league: 7,
+                //             playoff: null,
+                //             relegation: 16
+                //         }
+                //     }, {
+                //         name: 'French Ligue 1',
+                //         slug: 'french_league1_2018_2019',
+                //         info: {
+                //             total_teams: 20,
+                //             champions_league: 3,
+                //             europa_league: 6,
+                //             playoff: null,
+                //             relegation: 18
+                //         }
+                //     }, {
+                //         name: 'Swiss Superleague',
+                //         slug: 'swiss_super_league_2018_2019',
+                //         info: {
+                //             total_teams: 10,
+                //             champions_league: 1,
+                //             europa_league: 4,
+                //             playoff: null,
+                //             relegation: 9
+                //         }
+                //     }
+                // ],
+                selectedType: 0,
                 type2: '',
                 
             } 

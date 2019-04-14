@@ -203,28 +203,28 @@
 				<div class="barreBlack"></div>
                 <div id="dock-container">
                     <div id="dock">
-                        <ul>
-                            <li>
-                                <nuxt-link to="/teams"><img src="/images/menuShop.png">
-                                <span class="textMenu">Equipes</span></nuxt-link>
-                            </li>
-                            <li id="active">
-                                <nuxt-link to="/competitions"><img src="/images/menuResultat.png">
-                                <span class="textMenu">Compétitions</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/scoremode"><img src="/images/menuHome.png">
-                                <span class="textMenu">Matches du jour</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/players"><img src="/images/menuSocial.png">
-                                <span class="textMenu">Joueurs</span></nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/tifnews"><img src="/images/menuResultat.png">
-                                <span class="textMenu">TIF News</span></nuxt-link>
-                            </li>
-                        </ul>
+						<ul>
+							<li>
+								<nuxt-link to="/teams"><img src="/images/menuTeam.png">
+								<span class="textMenu">Equipes</span></nuxt-link>
+							</li>
+							<li>
+								<nuxt-link to="/competitions"><img src="/images/menuCompetition.png">
+								<span class="textMenu">Compétitions</span></nuxt-link>
+							</li>
+							<li id="active">
+								<nuxt-link to="/scoremode_gm"><img src="/images/menuHome.png">
+								<span class="textMenu">Matches du jour</span></nuxt-link>
+							</li>
+							<li>
+								<nuxt-link to="/players"><img src="/images/menuPlayer.png">
+								<span class="textMenu">Joueurs</span></nuxt-link>
+							</li>
+							<li>
+								<nuxt-link to="/tifnews"><img src="/images/menuTifnews.png">
+								<span class="textMenu">TIF News</span></nuxt-link>
+							</li>
+						</ul>
                     </div>
                 </div>
             </v-container>
