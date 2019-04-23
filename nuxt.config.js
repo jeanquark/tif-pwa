@@ -79,21 +79,25 @@ module.exports = {
                 }
             ],
             // loadLanguagesAsync: true,
+            parsePages: false,
             lazy: true,
             langDir: 'lang/',
             defaultLocale: 'en',
             seo: false
-        }]
+        }],
+        'nuxt-client-init-module'
     ],
     plugins: [
-        { src: "~/plugins/vuetify.js", ssr: true },
-        { src: "~/plugins/firebase-client-init.js", ssr: false },
-        { src: "~/plugins/auth-cookie.js", ssr: false },
-        { src: "~/plugins/vuex-persist", ssr: false },
-        { src: "~/plugins/vue-moment", ssr: false },
-        { src: "~/plugins/async-computed.js", ssr: false },
+        { src: '~/plugins/vuetify.js', ssr: true },
+        { src: '~/plugins/firebase-client-init.js', ssr: false },
+        { src: '~/plugins/auth-cookie.js', ssr: false },
+        { src: '~/plugins/vuex-persist', ssr: false },
+        { src: '~/plugins/vue-moment', ssr: false },
+        { src: '~/plugins/async-computed.js', ssr: false },
         { src: '~/plugins/vue-notifications.js', ssr: false },
-        { src: '~/plugins/vue-swal.js', ssr: false }
+        { src: '~/plugins/vue-swal.js', ssr: false },
+        { src: '~/plugins/vue-carousel-3d', ssr: false },
+        { src: '~/plugins/vue-lazyload', ssr: false }
     ],
     serverMiddleware: [
         "~/serverMiddleware/validateFirebaseIdToken",

@@ -25,13 +25,14 @@
 					<!-- <nuxt-link to="/register">Register</nuxt-link> -->
 					<!-- <v-btn color="success">Success</v-btn> -->
 					<v-btn color="default" nuxt to="/gamemode_gm">Game Mode GM</v-btn>
-					<v-btn color="default" nuxt to="/gamemode_jm2">Game Mode JM</v-btn>
+					<v-btn color="default" nuxt to="/gamemode_jm">Game Mode JM</v-btn>
+					loadedUser: {{ loadedUser }}<br />
 					<!-- <v-btn round large color="deep-orange" dark @click="signInWithGoogle">Game Mode</v-btn> -->
 					<v-dialog v-model="loginModal" width="600">
-						<Login v-on:loginChildToParent="switchToRegister" />
+						<Login v-on:loginChildToParent="switchToRegister" v-if="loginModal" />
 					</v-dialog>
 					<v-dialog v-model="registerModal" width="600">
-						<Register v-on:registerChildToParent="switchToLogin" />
+						<Register v-on:registerChildToParent="switchToLogin" v-if="registerModal" />
 					</v-dialog>
 				</v-layout>
 			</v-container>
@@ -40,13 +41,17 @@
 </template>
 
 <script>
-	import Login from '~/components/Login.vue'
-	import Register from '~/components/Register'
+	// import Login from '~/components/Login.vue'
+	// import Register from '~/components/Register'
 	export default {
 		// layout: 'layoutLandingPage',
 		// middleware: ['unauth-check'],
-		components: { Login, Register },
-		layout: 'layoutFront',
+		// components: { Login, Register },
+		components: { 
+			Login: () => import('~/components/Login'), 
+			Register: () => import('~/components/Register') 
+		},
+		layout: 'layoutLandingPage',
 		created () {
 			this.$store.commit('events/clearEvents')
 			this.$store.commit('standings/clearStandings')
@@ -75,10 +80,10 @@
 				this.loginModal = true
 			},
 			async signInWithGoogle() {
-				console.log("signInWithGoogle")
-				await this.$store.dispatch("firebase-auth/signInWithGooglePopup")
-				console.log("done")
-				this.$router.replace("/home")
+				console.log('signInWithGoogle')
+				await this.$store.dispatch('firebase-auth/signInWithGooglePopup')
+				console.log('done')
+				this.$router.replace('/gamemode_jm')
 			}
 		}
 	}

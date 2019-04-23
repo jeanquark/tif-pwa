@@ -19,7 +19,7 @@
 				{ name: "robots", content: "noindex" }
 			]
 		},
-		middleware: ['unauth-check']
+		// middleware: ['unauth-check']
 	}
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <v-toolbar dark color="blue">
-        <v-toolbar-side-icon></v-toolbar-side-icon>
+        <v-toolbar-side-icon to="/"></v-toolbar-side-icon>
 
         <v-toolbar-title class="white--text">Gamemode</v-toolbar-title>
 

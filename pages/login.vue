@@ -3,9 +3,11 @@
         <v-layout align-center justify-center>
             <v-flex xs12 sm8 md4>
                 <v-card class="elevation-12">
-                    <v-toolbar dark color="deep-orange">
-                        <v-toolbar-title>Login</v-toolbar-title>
-                    </v-toolbar>
+                    <v-card-title class="white--text" style="background: orangered;">
+                        <v-layout justify-center>
+                            <h2>Login</h2>
+                        </v-layout>
+                    </v-card-title>
                     <v-card-text>
                         <v-form>
                             <v-text-field prepend-icon="person" name="login" label="Login" type="text"></v-text-field>
@@ -31,7 +33,8 @@
 
 <script>
     export default {
-        layout: 'layoutFront',
+        layout: 'layoutLandingPage',
+        middleware: ['unauth-check'],
         data: () => ({
             drawer: null
         }),

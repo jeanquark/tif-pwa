@@ -343,7 +343,7 @@
     import ActionsCard from '~/components/ActionsCard'
     export default {
         components: { ActionsCard },
-        layout: 'layoutFront',
+        layout: 'layoutLandingPage',
         data () {
             return {
                 links: [

@@ -1,4 +1,7 @@
 import moment from "moment"
+import * as firebase from "firebase/app"
+import "firebase/database"
+
 export const strict = false
 
 export const state = () => ({
@@ -36,18 +39,55 @@ export const actions = {
 
     async nuxtServerInit({ commit, dispatch }, { req }) {
         console.log(
-            "Entering nuxtServerInit",
-            moment().format("DD-MM-YYYY HH:mm:ss")
+            'Entering nuxtServerInit',
+            moment().format('DD-MM-YYYY HH:mm:ss')
         )
         if (req.user) {
-            console.log("User is logged in from nuxtServerInit")
+            console.log('User is logged in from nuxtServerInit')
             const userId = req.user.uid
-            console.log("userId: ", userId)
-            // dispatch('users/loadedUser', userId, { root: true})
-            commit("users/setLoadedUser", req.user, { root: true })
-            this.$router.push({ path: "home" })
+            console.log('userId: ', userId)
+            // await dispatch('users/loadedUser2', userId, { root: true})
+            // commit('users/setLoadedUser', req.user, { root: true })
+            await dispatch('users/fetchAuthenticatedUser2', req.user)
+            // this.$router.push({ path: '/gamemode_jm' })
+
+            // firebase.auth().onAuthStateChanged(user => {
+            //     if (user) {
+            //         const userId = user.uid
+
+            //         firebase
+            //             .database()
+            //             .ref("users/" + userId)
+            //             .on("value", function(snapshot) {
+            //                 console.log("Call to firebase user node")
+            //                 const userArray = []
+            //                 for (const key in snapshot.val()) {
+            //                     userArray.push({
+            //                         ...snapshot.val()[key],
+            //                         id: key
+            //                     })
+            //                 }
+            //                 commit("setLoadedUser", snapshot.val())
+            //             })
+            //     } else {
+            //         console.log("No user is signed in")
+            //     }
+            // })
         } else {
-            console.log("User is not logged in from nuxtServerInit")
+            console.log('User is not logged in from nuxtServerInit')
+        }
+    },
+    nuxtClientInit({ commit, rootState }, context) { // Added package (not present in default nuxt)
+        try {
+            console.log('nuxtClientInit')
+            const userId = rootState.users.loadedUser.id
+            console.log('userId: ', userId)
+            firebase.database().ref(`/users/${userId}`).on('value', function(snapshot) {
+                console.log('snapshot.val(): ', snapshot.val())
+                commit('users/setLoadedUser', snapshot.val(), { root: true })
+            })
+        } catch (error) {
+            console.log('nuxtClientInit error: ', error)
         }
     },
     clearError({ commit }) {

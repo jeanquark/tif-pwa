@@ -22,7 +22,6 @@ export const state = () => ({
     loadedAvatarImages: [],
     loadedUserTeams: [],
     updateUser: null,
-    loadedUserActions: []
 })
 
 export const mutations = {
@@ -43,9 +42,6 @@ export const mutations = {
     setUpdateUser(state, payload) {
         // console.log('entering setUpdatedUser mutation')
         state.updateUser = payload
-    },
-    setUserActions(state, payload) {
-        state.loadedUserActions = payload
     }
 }
 
@@ -121,9 +117,39 @@ export const actions = {
             throw new Error(error)
         }
     },
-
-    loadedUser({ commit }, payload) {
-        // console.log('Entering loadedUser action')
+    fetchUser ({ commit }, payload) {
+        console.log('Entering fetchUser action: ')
+        // const userId = payload.userId
+        const userId = 'zoKAPbbEQ5Q0ENXBzarjQw2WyEZ2'
+        // const userId = firebase.auth().currentUser.uid
+        firebase.database().ref(`/users/${userId}`).on('value', function(snapshot) {
+            commit('setLoadedUser', snapshot.val())
+        })
+    },
+    fetchAuthenticatedUser ({ commit }, payload) {
+        console.log('Call to fetchAuthenticatedUser action: ', payload)        
+        firebase.database().ref(`/users/zoKAPbbEQ5Q0ENXBzarjQw2WyEZ2`).on('value', function(snapshot) {
+            console.log('snapshot.val(): ', snapshot.val())
+            commit('setLoadedUser', snapshot.val())
+        })
+    },
+    fetchAuthenticatedUser2 ({ commit }, payload) {
+        console.log('Call to fetchAuthenticatedUser action: ', payload)
+        return new Promise((resolve, reject) => {
+            try {
+                firebase.database().ref(`/users/${payload.uid}`).on('value', function(snapshot) {
+                    console.log('snapshot.val(): ', snapshot.val())
+                    commit('setLoadedUser', snapshot.val())
+                    resolve()
+                })
+            } catch (error) {
+                console.log(error)
+                reject(error)
+            }
+        }) 
+	},
+    loadedUser2 ({ commit }, payload) {
+        console.log('Entering loadedUser action: ', payload)
         return new Promise((resolve, reject) => {
             try {
                 firebase.auth().onAuthStateChanged(user => {
@@ -579,157 +605,6 @@ export const actions = {
                 return error
             })
     },
-	fetchUserActions({ commit }) {
-		// const userId = firebase.auth().currentUser.uid
-		const userId = 'zoKAPbbEQ5Q0ENXBzarjQw2WyEZ2'
-		firebase
-			.database()
-			.ref(`/userActions/${userId}`)
-			.on('value', function(snapshot) {
-				const userActions = []
-				for (const key in snapshot.val()) {
-					userActions.push({
-						...snapshot.val()[key],
-						id: key
-					})
-				}
-				console.log('userActions: ', userActions)
-				// const userActions = snapshot.val()
-				commit('setUserActions', userActions)
-			})
-	},
-    async loadedUserActions2({ commit, state, dispatch }, payload) {
-        return new Promise((resolve, reject) => {
-            try {
-                const userId = firebase.auth().currentUser.uid
-                firebase
-                    .database()
-                    .ref(`/userActions/${userId}`)
-                    .on('value', function(snapshot) {
-                        const userActions = []
-                        for (const key in snapshot.val()) {
-                            userActions.push({
-                                ...snapshot.val()[key],
-                                id: key
-                            })
-                        }
-                        console.log('userActions: ', userActions)
-                        // const userActions = snapshot.val()
-                        commit('setUserActions', userActions)
-                        resolve(userActions)
-                    })
-            } catch (error) {
-                console.log(error)
-                new Noty({
-                    type: 'error',
-                    text: 'User actions not found',
-                    timeout: 5000,
-                    theme: 'metroui'
-                }).show()
-                commit('setError', error, { root: true })
-                commit('setLoading', false, { root: true })
-                reject(error)
-            }
-        })
-	},
-	
-	async updateUserActions({ commit }, payload) {
-		console.log('payload: ', payload)
-		const actionSlug = payload
-        // const userId = firebase.auth().currentUser.uid
-        const userId = 'zoKAPbbEQ5Q0ENXBzarjQw2WyEZ2'
-		console.log('userId: ', userId)
-
-		// Update card occurences
-		const ref = firebase
-			.database()
-			.ref(`userActions/${userId}/${actionSlug}/occurences`)
-		ref.transaction(count => {
-			return (count || 0) + 1
-		})
-	},
-
-    async updateUserActions2({ commit }, payload) {
-        try {
-            // console.log('Entering updateUserActions')
-            // console.log('payload: ', payload)
-            const userId = firebase.auth().currentUser.uid
-
-            // Format data
-            let array = []
-            for (let slot of payload.array) {
-                console.log("slot2: ", slot)
-                const name = slot.name
-                console.log("name: ", name)
-
-                const object = array.find(slot => {
-                    return slot.name === name
-                })
-                if (!object) {
-                    const object = {
-                        id: slot.id,
-                        name: slot.name,
-                        slug: slot.slug,
-                        physical_gain: slot.physical_gain,
-                        // social_gain: data.gain_social,
-                        // special_gain: data.gain_special,
-                        occurences: 1
-                    }
-                    array.push(object)
-                } else {
-                    object.occurences += 1
-                    object.physical_gain += slot.physical_gain
-                }
-            }
-
-            // Update card occurences
-            for (let action of array) {
-                console.log(action.id)
-                console.log("action: ", action)
-                console.log("occurences: ", action.occurences)
-                var ref = firebase
-                    .database()
-                    .ref("userActions/" + userId + "/cards/" + action.id)
-                ref.transaction(function(count) {
-                    return (count || 0) + action.occurences
-                })
-            }
-
-            // Update userActions node in database
-            try {
-                await firebase
-                    .database()
-                    .ref("/userActions/" + userId + "/" + payload.today)
-                    .set(payload.array)
-                new Noty({
-                    type: "success",
-                    text: "Daily actions successfully updated!",
-                    timeout: 5000,
-                    theme: "metroui"
-                }).show()
-                console.log("array: ", array)
-                return array
-            } catch (error) {
-                new Noty({
-                    type: "error",
-                    text:
-                        "Sorry, your actions for the day could not be updated. ",
-                    timeout: 5000,
-                    theme: "metroui"
-                }).show()
-                console.log(error)
-            }
-        } catch (error) {
-            new Noty({
-                type: "error",
-                text: "Sorry, your actions for the day could not be updated",
-                timeout: 5000,
-                theme: "metroui"
-            }).show()
-            console.log(error)
-        }
-    },
-
     async updateUserEvents({ commit, getters }, payload) {
         const userId = firebase.auth().currentUser.uid
         console.log("payload: ", payload)
@@ -787,8 +662,5 @@ export const getters = {
     },
     loadedUserTeams(state) {
         return state.loadedUserTeams
-    },
-    loadedUserActions(state) {
-        return state.loadedUserActions
     }
 }
