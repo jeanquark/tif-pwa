@@ -16,6 +16,13 @@ export const mutations = {
 }
 
 export const actions = {
+    async getUserEnergy ({ rootState }) {
+        try {
+            return rootState.users.loadedUser.energy.value
+        } catch {
+            return 0
+        }
+    },
 	fetchUserActions({ commit, rootState }) {
 		// const userId = firebase.auth().currentUser.uid
 		// const userId = 'zoKAPbbEQ5Q0ENXBzarjQw2WyEZ2'
@@ -39,7 +46,7 @@ export const actions = {
 		})
 	},
 	
-	async updateUserActions({ commit, rootState }, payload) {
+	async updateUserActions({ commit, dispatch, rootState }, payload) {
 		console.log('payload3: ', payload)
 		// const actionSlug = payload
         // const userId = firebase.auth().currentUser.uid
@@ -69,43 +76,54 @@ export const actions = {
         })
         
         const energyCost = payload.actionCosts['cost_energy']
+        console.log('energyCost: ', energyCost)
+        const userEnergyStock = await dispatch('getUserEnergy')
+        console.log('userEnergyStock: ', userEnergyStock)
+        
         firebase.database().ref(`userActions/${userId}/${today}/energy`).transaction(count => {
-            return (count || 0) - energyCost.value
+            return (count || userEnergyStock) - energyCost.value
         })
+
+        for (let key in payload.actionCosts) {
+            console.log('key: ', key)
+            console.log(payload.actionCosts[key])
+            const name = payload.actionCosts[key].name
+            const value = payload.actionCosts[key].value
+            const property = payload.actionCosts[key].property
+            console.log('name: ', name)
+            console.log('value: ', value)
+            console.log('property: ', property)
+            if (property != 'energy') { // User energy is a stock that is fixed for the day
+                firebase.database().ref(`users/${userId}/${property}`).transaction(count => {
+                    if (count) {
+                        return {
+                            value: (count.value || 0) - value,
+                            _updated_at: moment().unix()
+                        }
+                    }
+                })
+            }
+        }
 
         // for (let cost in Object.entries(payload.actionCosts)) {
         for (let key in payload.actionGains) {
             console.log('key: ', key)
             console.log(payload.actionGains[key])
-            const skillName = payload.actionGains[key].name
-            const skillValue = payload.actionGains[key].value
-            const skill = payload.actionGains[key].skill
-            console.log('skillName: ', skillName)
-            console.log('skillValue: ', skillValue)
-            console.log('skill: ', skill)
-            firebase.database().ref(`users/${userId}/${skill}`).transaction(count => {
+            const name = payload.actionGains[key].name
+            const value = payload.actionGains[key].value
+            const property = payload.actionGains[key].property
+            console.log('name: ', name)
+            console.log('value: ', value)
+            console.log('property: ', property)
+            firebase.database().ref(`users/${userId}/${property}`).transaction(count => {
                 if (count) {
                     return {
-                        value: (count.value || 0) + skillValue,
+                        value: (count.value || 0) + value,
                         _updated_at: moment().unix()
                     }
                 }
             })
         }
-
-        // payload.skillChanges.forEach((skill) => {
-        // for (let skill in payload.skillChanges) {
-        //     console.log('skill: ', skill)
-        //     firebase.database().ref(`users/${userId}/skill${skill}`).transaction(count => {
-        //         if (count) {
-        //             return {
-        //                 value: (count.value || 0) + payload.skillChanges[skill],
-        //                 _updated_at: moment().unix()
-        //             }
-        //         }
-        //     })
-        // }
-
 	},
 
     async updateUserActions2({ commit }, payload) {

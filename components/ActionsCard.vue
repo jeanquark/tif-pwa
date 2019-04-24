@@ -44,23 +44,16 @@
                                 <div class="flip-card-back" v-if="isFlipped[index]">
                                     <h2>{{ action.name }}</h2><br />
                                     <b>{{ action.description }}</b><br /><br />
-                                    <!-- action.cost_energy: {{ action.cost_energy.value }}<br /> -->
-                                    <!-- getActionCosts: {{ getActionCosts(action) }}<br /> -->
-                                    <!-- getActionGains: {{ getActionGains(action) }}<br /> -->
-                                    getUserEnergy: {{ getUserEnergy }}<br />
-                                    getUserEndurance: {{ getUserEndurance }}<br />
-                                    getUserSmoothTalk: {{ getUserSmoothTalk }}<br />
+                                    <!-- getUserEnergy: {{ getUserEnergy }}<br /> -->
+                                    <!-- getUserEndurance: {{ getUserEndurance }}<br /> -->
+                                    <!-- getUserSmoothTalk: {{ getUserSmoothTalk }}<br /> -->
 
-                                    Remaining energy for the day: {{ getTodayEnergy() }}<br />
-                                    <!-- <div v-for="actionCost of getActionCosts(action)" :key="actionCost.slug">
-                                        {{ actionCost.name }}: <span class="red--text">-{{ actionCostFunction(actionCost, playedToday(action.slug)) }}</span>
-                                    </div> -->
+                                    Remaining energy for the day: {{ getTodayEnergy }}<br />
+
                                     <div v-for="actionCost of actionCosts[action.slug]" :key="actionCost.slug">
                                         {{ actionCost.name }}: <span class="red--text">-{{ actionCost.value }}</span>
                                     </div>
-                                    <!-- <div v-for="(actionGain) of getActionGains(action)" :key="actionGain.slug">
-                                        {{ actionGain.name }}: <span class="green--text">+{{ actionGainFunction(actionGain, playedToday(action.slug)) }}</span>
-                                    </div> -->
+
                                     <div v-for="actionGain of actionGains[action.slug]" :key="actionGain.slug">
                                         {{ actionGain.name }}: <span class="green--text">+{{ actionGain.value }}</span>
                                     </div>
@@ -69,7 +62,7 @@
                                     <span style="color: orangered;">Conseil de Mr Fan<br />
                                     {{ action.mr_fan_advice }}</span>
                                     
-                                    <v-btn @click.stop="selectCard(action, index)" :disabled="false">Select card</v-btn><br />
+                                    <v-btn @click.stop="selectCard(action, index)" :disabled="disabled(action.slug)">Select card</v-btn><br />
                                 </div>
                             </v-card>
                         </div>
@@ -82,7 +75,6 @@
             <v-flex class="text-xs-center">
                 <v-btn color="success" style="margin-bottom: 20px" @click="closeModal">Retour</v-btn>
             </v-flex>
-            
         </v-card-actions>
     </v-card>
 </template>
@@ -114,21 +106,11 @@
         async mounted () {
             console.log('component mounted!')
             console.log('this.theme: ', this.theme)
-            // const response = await this.$store.dispatch('actionsCards/fetchActions', this.theme)
-            // const length = this.$store.getters['actionsCards/loadedActions'].filter(action => action.theme === 'beach').length
-            // console.log('length: ', length)
-            // this.length = length
         },
         data () {
             return {
-                // isFlipped: new Array(this.length),
-                // isFlipped: [false, false, false, false],
-                // length: this.actionsLength
-                // length: this.loadedActions.length
                 length: 1,
                 isAnimated: new Array(this.length),
-                // energyCost: 0,
-                // energyCost2: {},
                 actionCosts: {
                     donuts_seller: {
                         // name: 'Donuts seller',
@@ -151,9 +133,7 @@
                         // value: 0
                     }
                 },
-                // actionGains: {},
                 actionGains: {
-                    // energyCost: 0{}
                     donuts_seller: {},
                     go_swimming: {},
                     ice_creams_seller: {},
@@ -164,9 +144,6 @@
             }
         },
         computed: {
-            disabled () {
-                return this.getTodayEnergy() < Math.abs(this.energyCost) + 30
-            },
             loadedUser () {
                 return this.$store.getters['users/loadedUser']
             },
@@ -175,7 +152,15 @@
                 // return this.$store.getters['actionsCards/loadedActions'].filter(action => action.theme === 'beach')
             },
             loadedUserActions () {
-                return this.$store.getters['users/userActions/loadedUserActions']
+                return this.$store.getters['userActions/loadedUserActions']
+            },
+            getTodayEnergy () {
+                try {
+                    return this.loadedUserActions.energy
+                } catch {
+                    // return 100
+                    return this.getUserEnergy
+                }
             },
             getUserLevel () {
                 try {
@@ -221,23 +206,23 @@
             }
         },
         methods: {
+            disabled (actionSlug) {
+                console.log('actionSlug: ', actionSlug)
+                // console.log('disabled: ', this.actionCosts[actionSlug]['cost_energy']['value'])
+                if (this.actionCosts[actionSlug] && this.actionCosts[actionSlug]['cost_energy']) {
+                    return this.getTodayEnergy < Math.abs(this.actionCosts[actionSlug]['cost_energy']['value'])
+                } else {
+                    return true
+                }
+            },
             closeModal() {
                 console.log('Close modal')
                 this.$emit('closeModal', true)
             },
             toggleFlip (index, action) {
                 console.log('toggleFlip: ', index)
-                // this.isFlipped = !this.isFlipped
-                // this.isFlipped[0] = true
-                // if (this.isFlipped === index) {
-                //  this.isFlipped = ''
-                // } else {
-                //  this.isFlipped = index
-                // }
-                // this.isFlipped.push('abc')
                 if (this.isFlipped[index]) {
                     this.isFlipped.splice(index, 1, false)
-                    // this.isFlipped[index] = false
                 } else {
                     this.isFlipped.splice(index, 1, true)
                     // console.log('action: ', action)
@@ -250,18 +235,19 @@
                                 {
                                     slug: actionCost.slug,
                                     name: actionCost.name,
-                                    skill: actionCost.skill,
+                                    property: actionCost.property,
                                     value: parseInt(costFunctions(actionCost.slug, actionCost.value, this.playedToday(action.slug)))
                                 }
                         // }
                     }
                     for (let actionGain of this.getActionGains(action)) {
-                        this.actionGains[action.slug][actionGain.slug] = {
-                            slug: actionGain.slug,
-                            name: actionGain.name,
-                            skill: actionGain.skill,
-                            value: parseInt(gainFunctions(actionGain.slug, actionGain.value, this.playedToday(action.slug)))
-                        }
+                        this.actionGains[action.slug][actionGain.slug] = 
+                            {
+                                slug: actionGain.slug,
+                                name: actionGain.name,
+                                property: actionGain.property,
+                                value: parseInt(gainFunctions(actionGain.slug, actionGain.value, this.playedToday(action.slug)))
+                            }
                     }
                 }
             },
@@ -275,18 +261,26 @@
                 console.log('actionCosts: ', this.actionCosts[action.slug])
                 console.log('actionGains: ', this.actionGains[action.slug])
                 // console.log('this.skillChanges: ', this.skillChanges)
-                await this.$store.dispatch('users/userActions/updateUserActions', { 
+                await this.$store.dispatch('userActions/updateUserActions', { 
                     name: action.name,
                     slug: action.slug,
-                    skill: action.skill,
+                    property: action.property,
                     actionCosts: this.actionCosts[action.slug],
                     actionGains: this.actionGains[action.slug]
                 })
+                for (let actionCost of this.getActionCosts(action)) {
+                    this.actionCosts[action.slug][actionCost.slug] = {
+                        slug: actionCost.slug,
+                        name: actionCost.name,
+                        property: actionCost.property,
+                        value: parseInt(costFunctions(actionCost.slug, actionCost.value, this.playedToday(action.slug)))
+                    }
+                }
                 for (let actionGain of this.getActionGains(action)) {
                     this.actionGains[action.slug][actionGain.slug] = {
                         slug: actionGain.slug,
                         name: actionGain.name,
-                        skill: actionGain.skill,
+                        property: actionGain.property,
                         value: parseInt(gainFunctions(actionGain.slug, actionGain.value, this.playedToday(action.slug)))
                     }
                 }
@@ -299,15 +293,6 @@
                 } catch {
                     return 0
                     // return 'No value found for played today'
-                }
-            },
-            getTodayEnergy () {
-                try {
-                    // return this.loadedUserActions.find(userAction => userAction.id === 'energy').value
-                    return this.loadedUserActions.energy
-                } catch {
-                    // return this.loadedUserActions['energy']
-                    return 200
                 }
             },
             getActionGains (action) {

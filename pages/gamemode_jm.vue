@@ -53,7 +53,7 @@
         created () {
             // this.$store.dispatch('users/fetchUser')
             // this.$store.dispatch('users/fetchUserActions')
-            this.$store.dispatch('users/userActions/fetchUserActions')
+            this.$store.dispatch('userActions/fetchUserActions')
         },
         mounted () {
             clearInterval(this.interval)

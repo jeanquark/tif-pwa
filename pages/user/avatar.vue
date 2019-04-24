@@ -6,9 +6,10 @@
             <!-- Scrollable content -->
             <div class="content">
                 loadedUser: {{ loadedUser }}<br />
-                <v-btn class="abc">Button</v-btn>
-                <v-layout justify-center>
-                    <h1 class="text-xs-center">Create your avatar</h1>
+                <!-- <v-btn class="success">Button</v-btn> -->
+                <v-layout justify-center style="margin-bottom: 20px;">
+                    <h1 class="text-xs-center">Change your avatar</h1>
+                    <!-- <br /><br /> -->
 				</v-layout>
 				<v-layout>
 					<v-flex xs12 sm2 class="left-column">
@@ -110,7 +111,23 @@
 						<clothes-color v-if="this.type === 'clothes'" :gender="this.gender" :clothes="clothes" @addToMergeEmitter="addToMerge"></clothes-color>
 					</v-flex>
 				</v-layout>
-			</div>
+                <v-layout row wrap class="justify-center">
+                    <v-flex xs12 sm6>
+                        <!-- <div class="modal-footer">
+                            <div class="progress" style="width: 50%; margin: 0 auto;" v-if="arrayOfImagesToMerge.length > 0">
+                                <div class="progress-bar bg-success" role="progressbar" :style="{width: progress + '%'}" :aria-valuenow="progress" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div> -->
+                        <v-progress-linear height="20" :value="progress" color="warning"></v-progress-linear>
+                    </v-flex>
+
+                    <v-flex xs12 sm6 offset-sm3>
+                        <v-btn class="success" @click="saveImage">{{ $t('pages.user-avatar.go_and_validate') }}</v-btn>
+                        <v-btn class="error" nuxt to="/gamemode_jm">{{ $t('pages.user-avatar.cancel_all') }}</v-btn>
+                        <br /><br />
+                    </v-flex>
+                </v-layout>
+			</div><!-- /.content -->
 			
 			<!-- Fixed Footer -->
 			<div id="footer">
@@ -124,7 +141,8 @@
 </template>
 
 <script>
-    import firebase from '~/plugins/firebase-client-init'
+    // import firebase from '~/plugins/firebase-client-init'
+    import firebase from 'firebase'
     import moment from 'moment'
     import Noty from 'noty'
     // import { Carousel3d, Slide } from 'vue-carousel-3d'
@@ -418,6 +436,7 @@
             // Save the image in Firebase Cloud Storage and the image name in Firebase database at the user node location
             saveImage () {
                 const userId = firebase.auth().currentUser.uid
+                console.log('userId: ', userId)
                 const now = moment().unix()
 
                 let imageName = ''
@@ -427,17 +446,18 @@
                 if (this.gender === 'male') {
                     imageName = userId + '_male_' + this.background + '_' + this.skin + '_' + this.tattoo + '_' + this.eyes + '_' + this.eyebrows + '_' + this.mouth + '_' + this.hair + '_' + this.beard + '_' + this.accessories + '_' + this.clothes
                 }
-
                 const storageRef = firebase.storage().ref('/images/avatars/' + imageName)
+                // const storageRef = storage.ref('/images/avatars/' + imageName)
 
                 // const image = this.$refs.mergedImage.src
 
                 let image = ''
                 if (this.$refs.mergedImage) {
                     image = this.$refs.mergedImage.src
-                } else if (this.$refs.mergedImage2) {
-                    image = this.$refs.mergedImage2.src
-                }
+                } 
+                // else if (this.$refs.mergedImage2) {
+                //     image = this.$refs.mergedImage2.src
+                // }
 
                 let uploadTask = storageRef.putString(image, 'data_url')
 
@@ -459,14 +479,13 @@
                 }, () => {
                     // console.log('imageName: ', imageName)
                     console.log('uploadTask: ', uploadTask)
+
                     return this.$store.dispatch('users/updateAvatarImage', uploadTask).then(() => {
                         new Noty({type: 'success', text: 'Successfully uploaded image!', timeout: 5000, theme: 'metroui'}).show()
                     }).catch((error) => {
                         console.log('error: ', error)
                         // new Noty({type: 'error', text: 'Image could not be save on database...', timeout: 5000, theme: 'metroui'}).show()
                     })
-
-
 
                     // Delete old avatar if it exists
                     if (this.loadedUser && this.loadedUser.avatar) {
@@ -480,11 +499,11 @@
                     }
 
                     // Handle successful uploads on complete
-                    firebase.database().ref('/users/' + userId + '/avatar').set({
-                        name: uploadTask.snapshot.metadata.name,
-                        url: uploadTask.snapshot.downloadURL,
-                        updated_at: now,
-                    })
+                    // firebase.database().ref('/users/' + userId + '/avatar').set({
+                    //     name: uploadTask.snapshot.metadata.name,
+                    //     url: uploadTask.snapshot.downloadURL,
+                    //     updated_at: now,
+                    // })
                     // Update avatar image in eventUsers node
 
                     // 1) First retrive all user events
@@ -496,7 +515,7 @@
                     //     .then(
                     //         )
 
-                    new Noty({type: 'success', text: 'Successfully uploaded image!', timeout: 5000, theme: 'metroui'}).show()
+                    new Noty({type: 'success', text: 'Successfully uploaded new avatar!', timeout: 5000, theme: 'metroui'}).show()
                     // return this.$router.push('/')
                 })
             }
@@ -545,7 +564,7 @@
         cursor: pointer;
     }
     .right-column-item.active {
-        background: orange;
+        background: orangered;
     }
     #footer {
         background-color: red;

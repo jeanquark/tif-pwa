@@ -272,32 +272,38 @@ export const actions = {
         }
     },
     async updateAvatarImage({ commit, getters }, payload) {
-        console.log("updateAvatarImage")
-        console.log("payload: ", payload.snapshot.metadata)
-        console.log("loadedUser: ", getters.loadedUser)
-        const avatarObj = {
-            name: payload.snapshot.metadata.name,
-            url: payload.snapshot.metadata.downloadURLs[0],
-            updated_at: moment().unix()
-        }
-        console.log("avatarObj: ", avatarObj)
+        console.log('updateAvatarImage')
+        console.log('payload: ', payload.snapshot.metadata)
+        console.log('loadedUser: ', getters.loadedUser)
+        
         // return
 
         // return new Promise((resolve, reject) => {
         try {
+
+            const downloadURL = await payload.snapshot.ref.getDownloadURL()
+            // console.log('File available at', downloadURL)
+            
+            const avatarObj = {
+                name: payload.snapshot.metadata.name,
+                url: downloadURL,
+                _updated_at: moment().unix()
+            }
+            console.log('avatarObj: ', avatarObj)
+
             // 1) First delete old avatar image if it exists
             if (getters.loadedUser && getters.loadedUser.avatar) {
                 var oldImageRef = firebase
                     .storage()
-                    .ref("/images/avatars/" + getters.loadedUser.avatar.name)
+                    .ref(`/images/avatars/${getters.loadedUser.avatar.name}`)
                 oldImageRef
                     .delete()
                     .then(function() {
-                        console.log("Successfully deleted old image")
+                        console.log('Successfully deleted old image')
                     })
                     .catch(function(error) {
                         console.log(
-                            "An error occured and the old image could not be deleted:"
+                            'An error occured and the old image could not be deleted:'
                         )
                         console.log(error)
                     })
@@ -308,30 +314,31 @@ export const actions = {
             let userEvents = []
             const snapshot = await firebase
                 .database()
-                .ref("/userEvents/" + userId)
-                .once("value")
-            console.log("snapshot.val(): ", snapshot.val())
+                .ref(`/userEvents/${userId}`)
+                .once('value')
+            console.log('snapshot.val(): ', snapshot.val())
             for (let event in snapshot.val()) {
                 console.log(event)
                 userEvents.push(event)
             }
-            // 3) For each event the user takes part, change the avatar name
+
+            // 3) For each event the user takes part in, change the avatar name
             let updates = {}
             for (let event of userEvents) {
-                console.log("event: ", event)
-                updates["/eventUsers/" + event + "/" + userId + "/avatar"] =
+                console.log('event: ', event)
+                updates[`/eventUsers/${event}/${userId}/avatar`] =
                     avatarObj.url
             }
 
             // 4) Finally, update user node
-            updates["/users/" + userId + "/avatar"] = avatarObj
+            updates[`/users/${userId}/avatar`] = avatarObj
 
             await firebase
                 .database()
                 .ref()
                 .update(updates)
         } catch (error) {
-            console.log("error: ", error)
+            console.log('error: ', error)
             throw error
         }
         // }
