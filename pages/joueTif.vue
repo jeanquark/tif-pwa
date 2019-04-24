@@ -66,7 +66,7 @@
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
-							Ton score provisoir :<br /><br />
+							Ton score provisoire :<br /><br />
 							0.45 point de ferveur !
 						</div>
 					</v-flex>
@@ -151,7 +151,11 @@
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
 						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+							<v-flex d-flex sm1 md1 justify-end align-center>
+								<div class="tempsFortGaucheTexte">
+								</div>
+							</v-flex>
+							<v-flex d-flex xs4 sm3 md3 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 								</div>
 							</v-flex>
@@ -173,13 +177,18 @@
 									<img src="/images/icon.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>					
-							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+							<v-flex d-flex xs4 sm3 md3 justify-start align-center>
 								<div class="tempsFortDroiteTexte">
 									Nom fan adverse<br />
 									<span style="font-size: 0.9em; font-weight: 500">
 									Action collectives<br />
 									Chant "Popolopololo"
 									</span>
+								</div>			
+							</v-flex>
+							<v-flex d-flex sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteImage">
+									<img src="/images/avatar.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>
 						</v-layout>
@@ -551,7 +560,7 @@
 	background-color: lightgrey;
 	}
 	.imgIconSmall {
-	width: 35px;
+	width: 45px;
 	}
 	.tempsFortGaucheTexte {
 	padding: 10px; 
