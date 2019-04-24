@@ -142,13 +142,16 @@
 							</v-flex>					
 							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
 								<div class="tempsFortDroiteImage">
-									<img src="/images/soccer.png" class="imgIconSmall" />
+									<img src="/images/icon.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>					
 							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
 								<div class="tempsFortDroiteTexte">
-									Nom Prénom buteur<br />
-									<span style="font-size: 0.9em; font-weight: 500">Nom Prénom passeur</span>
+									Nom fan adverse<br />
+									<span style="font-size: 0.9em; font-weight: 500">
+									Action collectives<br />
+									Chant "Popolopololo"
+									</span>
 								</div>			
 							</v-flex>
 						</v-layout>
@@ -157,13 +160,15 @@
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
-									Nom Prénom buteur<br />
-									<span style="font-size: 0.9em; font-weight: 500">Nom Prénom passeur</span>
+									Nom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">
+									Action individuelle<br />
+									Aller boire une bière</span>
 								</div>
 							</v-flex>
 							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
 								<div class="tempsfortGaucheImage">
-									<img src="/images/soccer.png" class="imgIconSmall" />
+									<img src="/images/icon.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
@@ -518,7 +523,7 @@
 	background-color: lightgrey;
 	}
 	.imgIconSmall {
-	width: 25px;
+	width: 35px;
 	}
 	.tempsFortGaucheTexte {
 	padding: 10px; 
@@ -677,7 +682,7 @@
 		font-size: 0.8em; 
 		}
 		.imgIconSmall {
-		width: 15px;
+		width: 20px;
 		}
 		.infosMatch {
 		color: black;
