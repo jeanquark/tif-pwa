@@ -74,7 +74,7 @@
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px">
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<nuxt-link to="/joueTif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-							<div class="menuTif">
+							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Le match
 							</div>
 						</nuxt-link>
@@ -118,7 +118,7 @@
 				<v-layout grid-list-xs row wrap class="tempsFortMargin">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div >
-							Temps forts du match
+							Les commentaires des joueurs !
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
@@ -376,20 +376,6 @@
 						</v-layout>
 					</v-flex>
 				</v-layout>				
-			</div>
-			<div class="resumeMatch">
-				<v-layout grid-list-xs row wrap style="margin-top: 10px">
-					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
-						<div>
-							Informations du match
-						</div>
-					</v-flex>
-					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
-						<div class="infosMatch">
-							Stade : Le nom du stade (ville) - Spectateurs : Nb de spectateurs - Arbitre : Prénom Nom (nationalité)
-						</div>
-					</v-flex>
-				</v-layout>
 			</div>
 		</v-container>					 
   </v-content>
