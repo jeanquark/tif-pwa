@@ -153,19 +153,19 @@
 					<v-flex d-flex xs12 sm12 md12>
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
-								<div class="tempsfortGaucheImage">
+								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/stress.png" class="imgIconSmall" />
+										<img src="/images/stress.jpg" class="imgIconSmall" />
 									</nuxt-link>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/stress.png" class="imgIconSmall" />
+										<img src="/images/stress.jpg" class="imgIconSmall" />
 									</nuxt-link>
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
-								<div class="tempsfortGaucheImage">
+								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/stress.png" class="imgIconSmall" />
+										<img src="/images/stress.jpg" class="imgIconSmall" />
 									</nuxt-link>
 								</div>			
 							</v-flex>					
