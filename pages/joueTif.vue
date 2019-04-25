@@ -155,10 +155,12 @@
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
 								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br />(100/1000)
+										<img src="/images/soccer.png" class="imgActionColl" /><br />(75%)
 									</nuxt-link>
+								</div>
+								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" />(100/1000)
+										<img src="/images/soccer.png" class="imgActionColl" />(75%)
 									</nuxt-link>
 								</div>			
 							</v-flex>
