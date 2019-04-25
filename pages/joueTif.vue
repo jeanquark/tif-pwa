@@ -151,38 +151,18 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
-						<v-layout grid-list-xs row wrap class="eventMatch">
+						<v-layout grid-list-xs row wrap>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
 								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+										4 actions collectives en cours
 									</nuxt-link>
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									<nuxt-link to="/listeActionCollective" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										11 actions collectives en cours
 									</nuxt-link>
 								</div>			
 							</v-flex>					
