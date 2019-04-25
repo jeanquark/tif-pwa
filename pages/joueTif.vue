@@ -152,16 +152,16 @@
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
 						<v-layout grid-list-xs row wrap>
-							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
+							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black; padding: 15px">
 								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%; background-color: orangered; padding: 10px; font-size: 1.1em; border-radius: 10px">
 										4 actions collectives en cours
 									</nuxt-link>
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 								<div>
-									<nuxt-link to="/listeActionCollective" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: black; width: 100%; background-color: orangered; padding: 10px; font-size: 1.1em; border-radius: 10px">
 										11 actions collectives en cours
 									</nuxt-link>
 								</div>			
