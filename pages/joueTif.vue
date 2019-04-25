@@ -174,11 +174,11 @@
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
 						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+							<v-flex d-flex xs3 sm3 md3 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 								</div>
 							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
 								<div class="tempsfortGaucheImage">
 								</div>			
 							</v-flex>
@@ -191,12 +191,12 @@
 									26'
 								</div>			
 							</v-flex>					
-							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-								<div class="tempsFortDroiteImage" style="background-color: orangered; color: white; padding: 5px">
-									+ 10 PF
+							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
+								<div class="tempsFortDroiteImage" style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%; font-size: 0.9em">
+									+ 10.000 PF
 								</div>			
 							</v-flex>					
-							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+							<v-flex d-flex xs3 sm3 md3 justify-start align-center>
 								<div class="tempsFortDroiteTexte">
 									Nom fan adverse<br />
 									<span style="font-size: 0.9em; font-weight: 500">
@@ -209,7 +209,7 @@
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
 						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
+							<v-flex d-flex xs3 sm3 md3 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 									Nom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">
@@ -217,9 +217,9 @@
 									Aller boire une bière</span>
 								</div>
 							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
-								<div class="tempsfortGaucheImage" style="background-color: orangered; color: white; padding: 5px">
-									+ 0.1 PF
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsfortGaucheImage" style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%; font-size: 0.9em">
+									+ 0.145 PF
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
@@ -231,11 +231,11 @@
 								<div class="tempsFortDroiteTime">
 								</div>			
 							</v-flex>					
-							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+							<v-flex d-flex xs2 sm2 md3 justify-start align-center>
 								<div class="tempsFortDroiteImage">
 								</div>			
 							</v-flex>					
-							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
+							<v-flex d-flex xs3 sm3 md3 justify-start align-center>
 								<div class="tempsFortDroiteTexte">
 								</div>			
 							</v-flex>
