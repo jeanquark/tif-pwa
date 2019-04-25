@@ -153,56 +153,60 @@
 					<v-flex d-flex xs12 sm12 md12>
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</nuxt-link>
-								</div>			
+								<carousel-3d :width="200" :height="200">
+									<slide>
+										<div>
+											<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+												<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+											</nuxt-link>
+										</div>
+										<div>
+											<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+												<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+											</nuxt-link>
+										</div>
+										<div>
+											<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+												<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+											</nuxt-link>
+										</div>			
+										<div>
+											<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+												<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+											</nuxt-link>
+										</div>			
+										<div>
+											<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+												<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+											</nuxt-link>
+										</div>			
+										<div>
+											<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+												<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+											</nuxt-link>
+										</div>			
+										<div>
+											<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+												<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+											</nuxt-link>
+										</div>			
+										<div>
+											<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+												<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+											</nuxt-link>
+										</div>			
+										<div>
+											<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+												<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+											</nuxt-link>
+										</div>			
+										<div>
+											<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+												<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+											</nuxt-link>
+										</div>			
+									</slide>
+								</carousel-3d>
 							</v-flex>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 								<div>
@@ -532,6 +536,23 @@
 </script>
 
 <style scoped>
+    .carousel-3d-slide {
+    	position: absolute;
+        opacity: 0;
+        top: 0;
+        border: none;
+        background-size: cover;
+        background-color: #fff;
+        display: block;
+        margin: 0;
+    }
+    .carousel-3d-slide img {
+        background-color: #fff;
+    }
+	.active {
+        background-color: orangered;
+        border: 2px solid orangered;
+    }
     body {
     margin: 0;
     padding: 0;
