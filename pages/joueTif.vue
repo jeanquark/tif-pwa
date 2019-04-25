@@ -154,14 +154,12 @@
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
 								<div class="tempsfortGaucheImage">
-									<v-tooltip top>
-										<template v-slot:activator="{ on }">
-											<nuxt-link to="/actionCollectiveAutreJoueur" v-on="on" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-												<img src="/images/stress.png" class="imgIconSmall" />
-											</nuxt-link>
-										</template>
-										<span>Top tooltip</span>
-									  </v-tooltip>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/stress.png" class="imgIconSmall" />
+									</nuxt-link>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/stress.png" class="imgIconSmall" />
+									</nuxt-link>
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
