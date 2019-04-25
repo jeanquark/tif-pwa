@@ -153,24 +153,31 @@
 					<v-flex d-flex xs12 sm12 md12>
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
-								<carousel-3d :width="200" :height="200">
-									<slide>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
-									</slide>
-								</carousel-3d>
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
 							</v-flex>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 								<div>
