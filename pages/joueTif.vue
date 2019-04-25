@@ -162,6 +162,46 @@
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
 										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
 									</nuxt-link>
+								</div>
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
+								</div>			
+								<div>
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
+									</nuxt-link>
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
@@ -263,7 +303,7 @@
 								</div>
 							</v-flex>
 							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
-								<div class="tempsfortGaucheImage style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%">
+								<div class="tempsfortGaucheImage" style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%">
 									+ 10.000 PF
 								</div>			
 							</v-flex>
