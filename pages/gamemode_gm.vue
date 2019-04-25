@@ -26,11 +26,12 @@
                         </v-layout>
                     </v-flex>
                      <v-flex shrink>
-                     <nuxt-link to="/myprofil">
-                        <div id="avatar">
-                            <img src="/images/avatar.png" class="imgAvatar" />
-                        </div>
-                    </nuxt-link>
+						<nuxt-link to="/user/avatar" class="boxShadow" v-if="loadedUser && loadedUser.avatar">
+							<span v-tooltip="'Salut Gaël!'">
+								<!-- <img :src="loadedUser.avatar.url" class="imgAvatar"/> -->
+								<img v-lazy="loadedUser.avatar.url" class="imgAvatar"/>
+							</span>
+						</nuxt-link>
                     </v-flex>
                     <v-flex hidden-sm-and-down grow>
                         <v-layout row>
@@ -361,7 +362,10 @@
         computed: {
             loadedUserTeams () {
                 return this.$store.getters['users/loadedUserTeams']
-            }
+            },
+			loadedUser () {
+				return this.$store.getters['users/loadedUser']
+			}
         },
         methods: {
             async openActionsDialog (item) {
