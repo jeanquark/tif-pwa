@@ -146,17 +146,18 @@
 				<v-layout grid-list-xs row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div>
-							Les actions collectives en cours...
+							Les actions collectives en cours...<br />
+							<span style="font-size: 0.9em">Clique vite sur une îcone pour participer !</span>
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
 						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs6 sm6 md6 justify-end align-center style="border-right: 1px dashed black">
+							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
 								<div class="tempsfortGaucheImage">
 									<img src="/images/avatar.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>
-							<v-flex d-flex xs6 sm6 md6 justify-start align-center>
+							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 								<div class="tempsfortGaucheImage">
 									<img src="/images/avatar.png" class="imgIconSmall" />
 								</div>			
@@ -231,7 +232,7 @@
 								<div class="tempsFortDroiteTime">
 								</div>			
 							</v-flex>					
-							<v-flex d-flex xs2 sm2 md3 justify-start align-center>
+							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
 								<div class="tempsFortDroiteImage">
 								</div>			
 							</v-flex>					
@@ -300,7 +301,7 @@
 								<div class="tempsFortDroiteTime">
 								</div>			
 							</v-flex>					
-							<v-flex d-flex xs2 sm2 md3 justify-start align-center>
+							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
 								<div class="tempsFortDroiteImage">
 								</div>			
 							</v-flex>					
@@ -369,7 +370,7 @@
 								<div class="tempsFortDroiteTime">
 								</div>			
 							</v-flex>					
-							<v-flex d-flex xs2 sm2 md3 justify-start align-center>
+							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
 								<div class="tempsFortDroiteImage">
 								</div>			
 							</v-flex>					
@@ -438,7 +439,7 @@
 								<div class="tempsFortDroiteTime">
 								</div>			
 							</v-flex>					
-							<v-flex d-flex xs2 sm2 md3 justify-start align-center>
+							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
 								<div class="tempsFortDroiteImage">
 								</div>			
 							</v-flex>					
