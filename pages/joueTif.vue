@@ -155,19 +155,19 @@
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
 								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" /><br />(75%)
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
 									</nuxt-link>
 								</div>
 								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" />(75%)
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
 									</nuxt-link>
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" />
+										<img src="/images/soccer.png" class="imgActionColl" /><br /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
 									</nuxt-link>
 								</div>			
 							</v-flex>					
