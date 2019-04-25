@@ -155,10 +155,10 @@
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
 								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" />
+										<img src="/images/soccer.png" class="imgActionColl" /><br />(100/1000)
 									</nuxt-link>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/soccer.png" class="imgActionColl" />
+										<img src="/images/soccer.png" class="imgActionColl" />(100/1000)
 									</nuxt-link>
 								</div>			
 							</v-flex>
@@ -253,33 +253,33 @@
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs3 sm3 md3 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
-								</div>
-							</v-flex>
-							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
-								<div class="tempsfortGaucheImage">
-								</div>			
-							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
-								<div class="tempsFortGaucheTime">
-								</div>			
-							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-center align-center>
-								<div class="tempsFortDroiteTime" style="background-color: green; max-width: 30px; text-align: center; border-radius: 50%; padding: 5px; color: white; font-size: 0.8em;">
-									26'
-								</div>			
-							</v-flex>					
-							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
-								<div class="tempsFortDroiteImage" style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%">
-									+ 10.000 PF
-								</div>			
-							</v-flex>					
-							<v-flex d-flex xs3 sm3 md3 justify-start align-center>
-								<div class="tempsFortDroiteTexte">
 									Nom fan adverse<br />
 									<span style="font-size: 0.9em; font-weight: 500">
 									Action collectives<br />
 									Chant "Popolopololo"
 									</span>
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsfortGaucheImage style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%">
+									+ 10.000 PF
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
+								<div class="tempsFortGaucheTime" style="background-color: green; max-width: 30px; text-align: center; border-radius: 50%; padding: 5px; color: white; font-size: 0.8em;">
+									26'
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-center align-center>
+								<div class="tempsFortDroiteTime">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
+								<div class="tempsFortDroiteImage">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs3 sm3 md3 justify-start align-center>
+								<div class="tempsFortDroiteTexte">
 								</div>			
 							</v-flex>
 						</v-layout>
