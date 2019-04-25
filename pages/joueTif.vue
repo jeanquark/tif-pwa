@@ -154,7 +154,7 @@
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
 								<carousel-3d :width="200" :height="200">
-									<slide v-for="(index, i) in total_background_colors" :index="i" :key="i">
+									<slide>
 										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
 										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
 										<img src="/images/soccer.png" class="imgActionColl" style="cursor: pointer;" /><span style="position: relative; top: -5px; margin-bottom: 10px; padding: 3px">(75%)</span>
@@ -275,7 +275,7 @@
 									+ 10.000 PF
 								</div>			
 							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
+							<v-flex d-flex xs1 sm1 md1 justify-center align-center style="border-right: 1px dashed black">
 								<div class="tempsFortGaucheTime" style="background-color: green; max-width: 30px; text-align: center; border-radius: 50%; padding: 5px; color: white; font-size: 0.8em;">
 									26'
 								</div>			
