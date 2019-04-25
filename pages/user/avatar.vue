@@ -1,15 +1,11 @@
 <template>
 	<v-content id="app">
         <v-container style="padding: 0px; max-width: 1017px;">
-            <gamemode-header />
 
             <!-- Scrollable content -->
             <div class="content">
-                loadedUser: {{ loadedUser }}<br />
-                <!-- <v-btn class="success">Button</v-btn> -->
                 <v-layout justify-center style="margin-bottom: 20px;">
                     <h1 class="text-xs-center">Change your avatar</h1>
-                    <!-- <br /><br /> -->
 				</v-layout>
 				<v-layout>
 					<v-flex xs12 sm2 class="left-column">
@@ -127,15 +123,7 @@
                         <br /><br />
                     </v-flex>
                 </v-layout>
-			</div><!-- /.content -->
-			
-			<!-- Fixed Footer -->
-			<div id="footer">
-				<br /><br /><br />
-				<h2>Footer</h2>
-				<br /><br /><br />
-			</div>
-		
+			</div><!-- /.content -->		
 		</v-container>
   	</v-content>
 </template>
@@ -145,7 +133,6 @@
     import firebase from 'firebase'
     import moment from 'moment'
     import Noty from 'noty'
-    // import { Carousel3d, Slide } from 'vue-carousel-3d'
 	import mergeImages from 'merge-images'
     import GamemodeHeader from '~/components/GamemodeHeader2'	
     import BackgroundShape from '~/components/avatar/BackgroundShape.vue'
@@ -173,8 +160,6 @@
     export default {
         layout: 'layoutFront',
         components: {
-            // Carousel3d,
-			// Slide,
 			GamemodeHeader,
             BackgroundShape,
             BackgroundColor,
