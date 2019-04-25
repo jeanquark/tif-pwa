@@ -154,17 +154,17 @@
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
 								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
 										<img src="/images/soccer.png" class="imgActionColl" />
 									</nuxt-link>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
 										<img src="/images/soccer.png" class="imgActionColl" />
 									</nuxt-link>
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%">
 										<img src="/images/soccer.png" class="imgActionColl" />
 									</nuxt-link>
 								</div>			
@@ -583,9 +583,11 @@
 	font-size: 1.0em;
 	}
 	.hoverMatchStats :hover {
-	border: 1px solid orangered;
+	background-color: orangered;
 	color: white;
-	opacity: 0.8;
+	}
+	.imgActionCollHover :hover {
+	opacity: 0.5;
 	}
 	.resumeMatch {
 	background-color: white;
