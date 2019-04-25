@@ -73,7 +73,7 @@
 				</v-layout>
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px">
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
-						<nuxt-link to="/joueTif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/matchEncours" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Le match
 							</div>
@@ -143,6 +143,29 @@
 				</v-layout>
 			</div>
 			<div class="resumeMatch">
+				<v-layout grid-list-xs row wrap style="margin-top: 10px">
+					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
+						<div>
+							Les actions collectives en cours...
+						</div>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs6 sm6 md6 justify-end align-center style="border-right: 1px dashed black">
+								<div class="tempsfortGaucheImage">
+									<img src="/images/avatar.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs6 sm6 md6 justify-start align-center>
+								<div class="tempsfortGaucheImage">
+									<img src="/images/avatar.png" class="imgIconSmall" />
+								</div>			
+							</v-flex>					
+						</v-layout>
+					</v-flex>
+				</v-layout>
+			</div>
+			<div class="resumeMatch">
 				<v-layout grid-list-xs row wrap class="tempsFortMargin">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div >
@@ -151,11 +174,7 @@
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
 						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex sm1 md1 justify-end align-center>
-								<div class="tempsFortGaucheTexte">
-								</div>
-							</v-flex>
-							<v-flex d-flex xs4 sm3 md3 justify-end align-center>
+							<v-flex d-flex xs4 sm4 md4 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
 								</div>
 							</v-flex>
@@ -173,22 +192,17 @@
 								</div>			
 							</v-flex>					
 							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-								<div class="tempsFortDroiteImage">
-									<img src="/images/icon.png" class="imgIconSmall" />
+								<div class="tempsFortDroiteImage" style="background-color: orangered; color: white; padding: 5px">
+									+ 10 PF
 								</div>			
 							</v-flex>					
-							<v-flex d-flex xs4 sm3 md3 justify-start align-center>
+							<v-flex d-flex xs4 sm4 md4 justify-start align-center>
 								<div class="tempsFortDroiteTexte">
 									Nom fan adverse<br />
 									<span style="font-size: 0.9em; font-weight: 500">
 									Action collectives<br />
 									Chant "Popolopololo"
 									</span>
-								</div>			
-							</v-flex>
-							<v-flex d-flex sm1 md1 justify-start align-center>
-								<div class="tempsFortDroiteImage">
-									<img src="/images/avatar.png" class="imgIconSmall" />
 								</div>			
 							</v-flex>
 						</v-layout>
@@ -204,8 +218,8 @@
 								</div>
 							</v-flex>
 							<v-flex d-flex xs1 sm1 md1 justify-end align-center>
-								<div class="tempsfortGaucheImage">
-									<img src="/images/icon.png" class="imgIconSmall" />
+								<div class="tempsfortGaucheImage" style="background-color: orangered; color: white; padding: 5px">
+									+ 0.1 PF
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
