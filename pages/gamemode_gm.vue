@@ -25,13 +25,12 @@
                             </v-flex>
                         </v-layout>
                     </v-flex>
-                     <v-flex shrink>
-						<nuxt-link to="/user/avatar" class="boxShadow" v-if="loadedUser && loadedUser.avatar">
-							<span v-tooltip="'Salut Gaël!'">
-								<!-- <img :src="loadedUser.avatar.url" class="imgAvatar"/> -->
-								<img v-lazy="loadedUser.avatar.url" class="imgAvatar"/>
-							</span>
-						</nuxt-link>
+                    <v-flex shrink>
+					<nuxt-link to="/user/avatar" class="boxShadow" v-if="loadedUser && loadedUser.avatar">
+						<div id="avatar" v-tooltip="'Salut Gaël!'">
+							<img v-lazy="loadedUser.avatar.url" class="imgAvatar" />
+						</div>
+					</nuxt-link>
                     </v-flex>
                     <v-flex hidden-sm-and-down grow>
                         <v-layout row>
