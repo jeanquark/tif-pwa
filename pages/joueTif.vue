@@ -155,17 +155,17 @@
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black">
 								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/stress.jpg" class="imgIconSmall" />
+										<img src="/images/soccer.png" class="imgActionColl" />
 									</nuxt-link>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/stress.jpg" class="imgIconSmall" />
+										<img src="/images/soccer.png" class="imgActionColl" />
 									</nuxt-link>
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-										<img src="/images/stress.jpg" class="imgIconSmall" />
+										<img src="/images/soccer.png" class="imgActionColl" />
 									</nuxt-link>
 								</div>			
 							</v-flex>					
@@ -583,8 +583,9 @@
 	font-size: 1.0em;
 	}
 	.hoverMatchStats :hover {
-	background-color: orangered;
+	border: 1px solid orangered;
 	color: white;
+	opacity: 0.8;
 	}
 	.resumeMatch {
 	background-color: white;
@@ -600,6 +601,10 @@
 	}
 	.imgIconSmall {
 	width: 45px;
+	}
+	.imgActionColl {
+	width: 60px;
+	margin: 10px;
 	}
 	.tempsFortGaucheTexte {
 	padding: 10px; 
