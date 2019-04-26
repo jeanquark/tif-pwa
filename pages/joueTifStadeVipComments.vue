@@ -1,6 +1,9 @@
 <template>
     <v-content id="app">      
 		<v-container text-xs-center style="padding: 0; max-width: 1017px; border-left: 1px solid orangered; border-right: 1px solid orangered">
+<template>
+    <v-content id="app">      
+		<v-container text-xs-center style="padding: 0; max-width: 1017px; border-left: 1px solid orangered; border-right: 1px solid orangered">
 			<div class="backgroundImage" style="position: relative; padding-bottom: 1px">
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25)">
 					<v-flex d-flex xs2 sm2 md2>
@@ -20,7 +23,7 @@
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
-							<img src="/images/switzerland.png" class="imgTeamSmall" />
+							<img src="/images/teams/fc_barcelona.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
@@ -41,14 +44,14 @@
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
-							<img src="/images/switzerland.png" class="imgTeamSmall" />
+							<img src="/images/teams/real_madrid_cf.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
 				</v-layout>	
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
 						<div class="nameTeam">
-							Deportivo Alavés
+							<v-icon class="yourTeam">star</v-icon> Espanyol Barcelone
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
@@ -59,14 +62,14 @@
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
 						<div class="nameTeam">
-							Espanyol Barcelone
+							Real Madrid <v-icon class="notYourTeam">star</v-icon>
 						</div>
 					</v-flex>
 				</v-layout>	
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
-							Ton score provisoir :<br /><br />
+							Ton score provisoire :<br /><br />
 							0.45 point de ferveur !
 						</div>
 					</v-flex>
