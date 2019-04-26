@@ -66,9 +66,9 @@
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 justify-center align-center>
 						<div class="scorePlayer">
-							Ton score :<br /><br />
+							Ton score :<br />
 							Ton fan ne participe pas<br />
-							à ce match !
+							encore à ce match !
 						</div>
 					</v-flex>
 				</v-layout>
@@ -79,7 +79,7 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
-						<nuxt-link to="/joueTif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/joueTifChoix" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif">
 								Joue avec ton fan !
 							</div>			

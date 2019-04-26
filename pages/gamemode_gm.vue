@@ -1,5 +1,5 @@
 <template>
-    <v-content id="app">
+    <v-content id="app" style="font: normal 100%/1 "Acme", Helvetica, sans-serif">
         <v-container style="padding: 0; max-width: 1017px;">
             <!-- Fixed Header -->
             <!-- <v-toolbar dark> -->
@@ -104,7 +104,7 @@
             <div class="content">
                 <!-- <v-layout> -->
                 <!-- <div class="container"> -->
-					<nuxt-link to="/matchEncours" class="matchPrincipal">
+					<nuxt-link to="/matchEncoursJoueur" class="matchPrincipal">
 						<div class="cadreScore hidden-xs-only" style="position: absolute">
 							<v-flex xs12 style="margin: 0; height: 100%">
 								<v-layout align-start>
