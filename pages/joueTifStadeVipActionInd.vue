@@ -87,14 +87,14 @@
 				</v-layout>
 				<v-layout grid-list-xs row wrap hidden-xs-only style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex sm3 md3 justify-center align-center>
-						<nuxt-link to="/joueTif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+						<nuxt-link to="/joueTifStadeVip" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Résumé du match 
 							</div>
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex sm3 md3 justify-center align-center>
-						<nuxt-link to="/joueTifComments" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+						<nuxt-link to="/joueTifStadeVipComments" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Commentaires
 							</div>	
@@ -106,7 +106,7 @@
 						</div>	
 					</v-flex>
 					<v-flex d-flex sm3 md3 justify-center align-center>
-						<nuxt-link to="/joueTifActionCol" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/joueTifStadeVipActionCol" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif">
 								Actions collectives
 							</div>
@@ -202,7 +202,7 @@
 	position: relative;
     }
 	.backgroundImage {
-	background-image: url(/images/stade.svg);
+	background-image: url(/images/stadeVip.jpg);
 	background-size: cover;
 	background-color: black;
 	}

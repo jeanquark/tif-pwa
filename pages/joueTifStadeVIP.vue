@@ -120,21 +120,21 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex sm3 md3 justify-center align-center>
-						<nuxt-link to="/joueTifComments" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+						<nuxt-link to="/joueTifStadeVipComments" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Commentaires
 							</div>	
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex sm3 md3 justify-center align-center>
-						<nuxt-link to="/joueTifActionInd" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+						<nuxt-link to="/joueTifStadeVipActionInd" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
 								Actions individuelles
 							</div>	
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex sm3 md3 justify-center align-center>
-						<nuxt-link to="/joueTifActionCol" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
+						<nuxt-link to="/joueTifStadeVipActionCol" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
 							<div class="menuTif">
 								Actions collectives
 							</div>
@@ -523,7 +523,7 @@
 	position: relative;
     }
 	.backgroundImage {
-	background-image: url(/images/stade.svg);
+	background-image: url(/images/stadeVip.jpg);
 	background-size: cover;
 	background-color: black;
 	}
