@@ -20,7 +20,7 @@
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
-							<img src="/images/fc_barcelona.png" class="imgTeamSmall" />
+							<img src="/images/teams/fc_barcelona.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
@@ -48,7 +48,7 @@
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
 						<div class="nameTeam">
-							<v-icon class="orangered">star</v-icon> Espanyol Barcelone
+							<v-icon class="yourTeam">star</v-icon> Espanyol Barcelone
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
@@ -59,7 +59,7 @@
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
 						<div class="nameTeam">
-							Real Madrid
+							Real Madrid <v-icon class="notYourTeam">star</v-icon>
 						</div>
 					</v-flex>
 				</v-layout>	
@@ -152,16 +152,16 @@
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
 						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black; padding: 15px">
+							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black; padding: 20px">
 								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%; background-color: orangered; padding: 10px; font-size: 1.1em; border-radius: 10px">
 										4 actions collectives en cours
 									</nuxt-link>
 								</div>			
 							</v-flex>
-							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
+							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="padding: 20px">
 								<div>
-									<nuxt-link to="/actionCollectiveAutreEquipe" class="imgActionCollHover" style="text-decoration: none; border: 1px solid orangered; color: orangered; width: 100%; background-color: white; padding: 10px; font-size: 1.1em; border-radius: 10px">
+									<nuxt-link to="/actionCollectiveAutreEquipe" class="imgActionCollHover" style="text-decoration: none; border: 1px solid grey; color: grey; width: 100%; background-color: white; padding: 10px; font-size: 1.1em; border-radius: 10px">
 										11 actions collectives en cours
 									</nuxt-link>
 								</div>			
@@ -197,7 +197,7 @@
 								</div>			
 							</v-flex>					
 							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
-								<div class="tempsFortDroiteImage" style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%">
+								<div class="tempsFortDroiteImage" style="background-color: white; color: grey; border: 1px solid grey; border-radius: 10px; text-align: center; max-width: 75%">
 									+ 10.000 PF
 								</div>			
 							</v-flex>					
@@ -250,7 +250,7 @@
 						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs3 sm3 md3 justify-end align-center>
 								<div class="tempsFortGaucheTexte">
-									Nom fan adverse<br />
+									Nom du fan<br />
 									<span style="font-size: 0.9em; font-weight: 500">
 									Action collectives<br />
 									Chant "Popolopololo"
@@ -287,77 +287,9 @@
 								<div class="tempsFortGaucheTexte">
 									Nom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">
-									Action individuelle<br />
-									Aller boire une bière</span>
-								</div>
-							</v-flex>
-							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
-								<div class="tempsfortGaucheImage" style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%">
-									+ 0.145 PF
-								</div>			
-							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-center align-center style="border-right: 1px dashed black">
-								<div class="tempsFortGaucheTime" style="background-color: green; max-width: 30px; text-align: center; border-radius: 50%; padding: 5px; color: white; font-size: 0.8em;">
-									26'
-								</div>			
-							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
-								<div class="tempsFortDroiteTime">
-								</div>			
-							</v-flex>					
-							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
-								<div class="tempsFortDroiteImage">
-								</div>			
-							</v-flex>					
-							<v-flex d-flex xs3 sm3 md3 justify-start align-center>
-								<div class="tempsFortDroiteTexte">
-								</div>			
-							</v-flex>
-						</v-layout>
-					</v-flex>
-					<v-flex d-flex xs12 sm12 md12>
-						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs3 sm3 md3 justify-end align-center>
-								<div class="tempsFortGaucheTexte">
-								</div>
-							</v-flex>
-							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
-								<div class="tempsfortGaucheImage">
-								</div>			
-							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
-								<div class="tempsFortGaucheTime">
-								</div>			
-							</v-flex>
-							<v-flex d-flex xs1 sm1 md1 justify-center align-center>
-								<div class="tempsFortDroiteTime" style="background-color: green; max-width: 30px; text-align: center; border-radius: 50%; padding: 5px; color: white; font-size: 0.8em;">
-									26'
-								</div>			
-							</v-flex>					
-							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
-								<div class="tempsFortDroiteImage" style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%">
-									+ 10.000 PF
-								</div>			
-							</v-flex>					
-							<v-flex d-flex xs3 sm3 md3 justify-start align-center>
-								<div class="tempsFortDroiteTexte">
-									Nom fan adverse<br />
-									<span style="font-size: 0.9em; font-weight: 500">
-									Action collectives<br />
-									Chant "Popolopololo"
-									</span>
-								</div>			
-							</v-flex>
-						</v-layout>
-					</v-flex>
-					<v-flex d-flex xs12 sm12 md12>
-						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs3 sm3 md3 justify-end align-center>
-								<div class="tempsFortGaucheTexte">
-									Nom du joueur<br />
-									<span style="font-size: 0.9em; font-weight: 500">
-									Action individuelle<br />
-									Aller boire une bière</span>
+									Action collective<br />
+									Vous avez participé à :<br />
+									Chant "Popolopololo"</span>
 								</div>
 							</v-flex>
 							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
@@ -404,7 +336,7 @@
 								</div>			
 							</v-flex>					
 							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
-								<div class="tempsFortDroiteImage" style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%">
+								<div class="tempsFortDroiteImage" style="background-color: white; color: grey; border: 1px solid grey; border-radius: 10px; text-align: center; max-width: 75%">
 									+ 10.000 PF
 								</div>			
 							</v-flex>					
@@ -425,13 +357,84 @@
 								<div class="tempsFortGaucheTexte">
 									Nom du joueur<br />
 									<span style="font-size: 0.9em; font-weight: 500">
-									Action individuelle<br />
-									Aller boire une bière</span>
+									Action collective<br />
+									Vous avez lancé :<br />
+									Chant "Popolopololo"</span>
 								</div>
 							</v-flex>
 							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
 								<div class="tempsfortGaucheImage" style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%">
-									+ 0.145 PF
+									+ 1.000 PF
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-center align-center style="border-right: 1px dashed black">
+								<div class="tempsFortGaucheTime" style="background-color: green; max-width: 30px; text-align: center; border-radius: 50%; padding: 5px; color: white; font-size: 0.8em;">
+									26'
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-start align-center>
+								<div class="tempsFortDroiteTime">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
+								<div class="tempsFortDroiteImage">
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs3 sm3 md3 justify-start align-center>
+								<div class="tempsFortDroiteTexte">
+								</div>			
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs3 sm3 md3 justify-end align-center>
+								<div class="tempsFortGaucheTexte">
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsfortGaucheImage">
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-end align-center style="border-right: 1px dashed black">
+								<div class="tempsFortGaucheTime">
+								</div>			
+							</v-flex>
+							<v-flex d-flex xs1 sm1 md1 justify-center align-center>
+								<div class="tempsFortDroiteTime" style="background-color: green; max-width: 30px; text-align: center; border-radius: 50%; padding: 5px; color: white; font-size: 0.8em;">
+									26'
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs2 sm2 md2 justify-start align-center>
+								<div class="tempsFortDroiteImage" style="background-color: white; color: grey; border: 1px solid grey; border-radius: 10px; text-align: center; max-width: 75%">
+									+ 10.000 PF
+								</div>			
+							</v-flex>					
+							<v-flex d-flex xs3 sm3 md3 justify-start align-center>
+								<div class="tempsFortDroiteTexte">
+									Nom fan adverse<br />
+									<span style="font-size: 0.9em; font-weight: 500">
+									Action collectives<br />
+									Chant "Popolopololo"
+									</span>
+								</div>			
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<v-layout grid-list-xs row wrap class="eventMatch">
+							<v-flex d-flex xs3 sm3 md3 justify-end align-center>
+								<div class="tempsFortGaucheTexte">
+									Nom du joueur<br />
+									<span style="font-size: 0.9em; font-weight: 500">
+									Action collective<br />
+									Vous avez lancé et réussi :<br />
+									Chant "Popolopololo"</span>
+								</div>
+							</v-flex>
+							<v-flex d-flex xs2 sm2 md2 justify-end align-center>
+								<div class="tempsfortGaucheImage" style="background-color: orangered; color: white; border-radius: 10px; text-align: center; max-width: 75%">
+									+ 1.000 PF
 								</div>			
 							</v-flex>
 							<v-flex d-flex xs1 sm1 md1 justify-center align-center style="border-right: 1px dashed black">
@@ -487,23 +490,6 @@
 </script>
 
 <style scoped>
-    .carousel-3d-slide {
-    	position: absolute;
-        opacity: 0;
-        top: 0;
-        border: none;
-        background-size: cover;
-        background-color: #fff;
-        display: block;
-        margin: 0;
-    }
-    .carousel-3d-slide img {
-        background-color: #fff;
-    }
-	.active {
-        background-color: orangered;
-        border: 2px solid orangered;
-    }
     body {
     margin: 0;
     padding: 0;
@@ -673,6 +659,14 @@
 	}
 	.tempsFortMargin {
 	margin-top: 20px
+	}
+	.yourTeam {
+	color: orangered;
+	font-size: 30px;
+	}
+	.notYourTeam {
+	color: grey;
+	font-size: 30px;
 	}
 
 	/* Small screens */
