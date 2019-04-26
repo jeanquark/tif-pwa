@@ -21,8 +21,8 @@
 					<v-flex xs12 style="margin: 0; height: 100%">
 						<v-layout align-start>
 							<div class="nameTeam">
-								A la plage<br />
-								<span class="nameOtherTeam">Choisis une activité !</span>
+								Au match<br />
+								<span class="nameOtherTeam">Choisis où tu vas voir le match !</span>
 							</div>
 							<span class="dateHourMatch">Mardi, 12 mars 2019</span>
 						</v-layout>
@@ -762,7 +762,7 @@
 	}
 	
 	.content .imgInventory {
-	width: 100%;
+	width: 85%;
 	}
 	
 	.inventoryBadgeAvatar {
@@ -841,7 +841,7 @@
 	margin-top: 15px;
 	margin: 10px; 
 	position: absolute; 
-	top: 140px;
+	top: 115px;
 	}
 	.gommetteNiveau {
 	position: absolute; 
@@ -944,7 +944,7 @@
 		.layoutTheme {
 		margin: 5px; 
 		position: absolute; 
-		top: 110px;
+		top: 95px;
 		justify-content: center;
 		}
 		.gommetteNiveau {
