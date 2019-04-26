@@ -202,7 +202,7 @@
 	position: relative;
     }
 	.backgroundImage {
-	background-image: url(/images/devantTv.jpg);
+	background-image: url(/images/devantTv.png);
 	background-size: cover;
 	background-color: black;
 	}
