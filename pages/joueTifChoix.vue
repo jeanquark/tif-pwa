@@ -155,7 +155,7 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex xs6 sm4 md4 style="padding: 5px">
-						<nuxt-link to="/joueTifPub" style="text-decoration: none">
+						<nuxt-link to="/joueTifAuPub" style="text-decoration: none">
 							<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 								<v-card-actions style="padding: 5px; text-align: center">
 									<span class="gommetteEnergy yellow">
@@ -186,7 +186,7 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex xs6 sm4 md4 style="padding: 5px">
-						<nuxt-link to="/joueTifTv" style="text-decoration: none">
+						<nuxt-link to="/joueTifDevantTv" style="text-decoration: none">
 							<v-card style="background-color: white; border: 2px solid orangered; border-radius: 5px; position: relative; min-height: 73%">
 								<v-card-actions style="padding: 5px; text-align: center">
 									<span class="gommetteEnergy yellow">
