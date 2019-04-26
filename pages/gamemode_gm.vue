@@ -1,5 +1,6 @@
 <template>
-    <v-content id="app" style="font: normal 100%/1 "Acme", Helvetica, sans-serif">
+    <!-- <v-content id="app" style="font: normal 100%/1 "Acme", Helvetica, sans-serif"> Cette ligne contient une erreur au niveau de "Acme" JM -->
+    <v-content id="app" style="font: normal 100%/1, Helvetica, sans-serif">
         <v-container style="padding: 0; max-width: 1017px;">
             <!-- Fixed Header -->
             <!-- <v-toolbar dark> -->

@@ -447,7 +447,7 @@
 
 <script>
     export default {
-        layout: 'layoutFront',
+        layout: 'layoutLandingPage',
         data () {
             return {
                 links: [
