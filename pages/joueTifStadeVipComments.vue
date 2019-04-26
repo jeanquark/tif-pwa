@@ -1,9 +1,6 @@
 <template>
     <v-content id="app">      
 		<v-container text-xs-center style="padding: 0; max-width: 1017px; border-left: 1px solid orangered; border-right: 1px solid orangered">
-<template>
-    <v-content id="app">      
-		<v-container text-xs-center style="padding: 0; max-width: 1017px; border-left: 1px solid orangered; border-right: 1px solid orangered">
 			<div class="backgroundImage" style="position: relative; padding-bottom: 1px">
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25)">
 					<v-flex d-flex xs2 sm2 md2>
