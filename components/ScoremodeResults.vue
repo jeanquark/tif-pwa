@@ -72,28 +72,36 @@
                                                             <span class="teamTextSize">{{ props.item.homeTeam_name }}</span>
                                                         </v-flex>
                                                         <v-flex sm2 xs2 class="text-xs-center">
-                                                            <span class="scoreBox" style="" v-if="props.item.statusShort === 'FT'">
-                                                                {{ props.item.final_score }}
-                                                            </span>
-                                                            <span class="scoreBox" style="" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'">
-                                                                <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-                                                                    <span :key="props.item.goalsHomeTeam">
-                                                                        {{ props.item.goalsHomeTeam }}
-                                                                    </span>
-                                                                </transition> -
-                                                                <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-                                                                    <span :key="props.item.goalsVisitorTeam">
-                                                                        {{ props.item.goalsVisitorTeam }}
-                                                                    </span>
-                                                                </transition>
-                                                            </span>
-                                                            <span class="scoreBox" style="" v-if="props.item.statusShort === 'NS'">
-                                                                {{ convertToLocalTime(props.item.timestamp) }}
-                                                                <!-- {{ props.item.time }} -->
-                                                            </span>
-                                                            <span class="scoreBox" style="" v-if="props.item.statusShort === 'PST'">
-                                                                Postponed
-                                                            </span>
+															<nuxt-link to="/matchTermine">
+																<span class="scoreBox" style="" v-if="props.item.statusShort === 'FT'">
+																	{{ props.item.final_score }}
+																</span>
+															</nuxt-link>
+															<nuxt-link to="/matchEncours">
+																<span class="scoreBox" style="" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'">
+																	<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
+																		<span :key="props.item.goalsHomeTeam">
+																			{{ props.item.goalsHomeTeam }}
+																		</span>
+																	</transition> -
+																	<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
+																		<span :key="props.item.goalsVisitorTeam">
+																			{{ props.item.goalsVisitorTeam }}
+																		</span>
+																	</transition>
+																</span>
+															</nuxt-link>
+															<nuxt-link to="/matchAvenir">
+																<span class="scoreBox" style="" v-if="props.item.statusShort === 'NS'">
+																	{{ convertToLocalTime(props.item.timestamp) }}
+																	<!-- {{ props.item.time }} -->
+																</span>
+															</nuxt-link>
+															<nuxt-link to="/matchAvenir">
+																<span class="scoreBox" style="" v-if="props.item.statusShort === 'PST'">
+																	Postponed
+																</span>
+															</nuxt-link>
                                                         </v-flex>
                                                         <v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
                                                             <span class="teamTextSize">{{ props.item.visitorTeam_name }}</span>
