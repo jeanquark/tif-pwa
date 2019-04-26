@@ -169,7 +169,7 @@
 									</span>
 									<v-spacer></v-spacer>
 									<span class="gommetteNiveau green">
-										15 <i class="material-icons gommetteIcone">attach_money</i>
+										15 <v-icon>attach_money</v-icon>
 									</span>
 								</v-card-actions>
 								<v-layout>
