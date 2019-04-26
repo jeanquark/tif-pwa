@@ -45,7 +45,7 @@
 									</span>
 									<v-spacer></v-spacer>
 									<span class="gommetteNiveau green">
-										100 <i class="material-icons gommetteIcone">attach_money</i>
+										100 <v-icon>attach_money</v-icon>
 									</span>
 								</v-card-actions>
 								<v-layout>
@@ -76,7 +76,7 @@
 									</span>
 									<v-spacer></v-spacer>
 									<span class="gommetteNiveau green">
-										50 <i class="material-icons gommetteIcone">attach_money</i>
+										50 <v-icon>attach_money</v-icon>
 									</span>
 								</v-card-actions>
 								<v-layout>
@@ -107,7 +107,7 @@
 									</span>
 									<v-spacer></v-spacer>
 									<span class="gommetteNiveau green">
-										30 <i class="material-icons gommetteIcone">attach_money</i>
+										30 <v-icon>attach_money</v-icon>
 									</span>
 								</v-card-actions>
 								<v-layout>
@@ -138,7 +138,7 @@
 									</span>
 									<v-spacer></v-spacer>
 									<span class="gommetteNiveau green">
-										20 <i class="material-icons gommetteIcone">attach_money</i>
+										20 <v-icon>attach_money</v-icon>
 									</span>
 								</v-card-actions>
 								<v-layout>
@@ -200,7 +200,7 @@
 									</span>
 									<v-spacer></v-spacer>
 									<span class="gommetteNiveau green">
-										5 <i class="material-icons gommetteIcone">attach_money</i>
+										5 <v-icon>attach_money</v-icon>
 									</span>
 								</v-card-actions>
 								<v-layout>
@@ -848,7 +848,7 @@
 	top: 10px; 
 	right: 10px; 
 	font-size: 20px; 
-	padding: 5px; 
+	padding: 5px 5px 5px 10px; 
 	border-radius: 5px; 
 	color: white;
 	}
