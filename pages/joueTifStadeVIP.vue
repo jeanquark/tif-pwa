@@ -20,7 +20,7 @@
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
-							<img src="/images/switzerland.png" class="imgTeamSmall" />
+							<img src="/images/fc_barcelona.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
@@ -41,14 +41,14 @@
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
-							<img src="/images/switzerland.png" class="imgTeamSmall" />
+							<img src="/images/teams/real_madrid_cf.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
 				</v-layout>	
 				<v-layout row wrap style="margin-top: 10px">
 					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
 						<div class="nameTeam">
-							Deportivo Alavés
+							<v-icon class="orangered">star</v-icon> Espanyol Barcelone
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-center align-center>
@@ -59,7 +59,7 @@
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
 						<div class="nameTeam">
-							Espanyol Barcelone
+							Real Madrid
 						</div>
 					</v-flex>
 				</v-layout>	
@@ -147,11 +147,11 @@
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div>
 							Les actions collectives en cours...<br />
-							<span style="font-size: 0.9em">Clique vite sur une îcone pour participer !</span>
+							<span style="font-size: 0.9em">Clique vite pour participer à une action collective !</span>
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
-						<v-layout grid-list-xs row wrap>
+						<v-layout grid-list-xs row wrap class="eventMatch">
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black; padding: 15px">
 								<div>
 									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%; background-color: orangered; padding: 10px; font-size: 1.1em; border-radius: 10px">
@@ -161,7 +161,7 @@
 							</v-flex>
 							<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: black; width: 100%; background-color: orangered; padding: 10px; font-size: 1.1em; border-radius: 10px">
+									<nuxt-link to="/actionCollectiveAutreEquipe" class="imgActionCollHover" style="text-decoration: none; border: 1px solid orangered; color: orangered; width: 100%; background-color: white; padding: 10px; font-size: 1.1em; border-radius: 10px">
 										11 actions collectives en cours
 									</nuxt-link>
 								</div>			
