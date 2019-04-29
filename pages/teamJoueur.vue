@@ -58,7 +58,7 @@
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px">
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="menuMatch" style="border-right: 1px solid darkgrey">
-							La vie du club !
+							Infos/Résultats
 						</div>
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
@@ -71,9 +71,11 @@
 				</v-layout>
 				<v-layout grid-list-xs row wrap hidden-sm-and-up style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex xs6 justify-center align-center>
-						<div class="menuMatch" style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey">
-							Infos/Résultats
-						</div>
+						<nuxt-link to="/team" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+							<div class="menuTif" style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey">
+								Matchs
+							</div>
+						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs6 justify-center align-center>
 						<nuxt-link to="/teamClassement" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
@@ -153,148 +155,7 @@
 					</v-flex>
 				</v-layout>
 			</div>
-			<div class="resumeMatch">
-				<v-layout grid-list-xs row wrap style="margin-top: 10px">
-					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
-						<div>
-							Tous les matchs de la saison
-						</div>
-					</v-flex>
-					<v-flex d-flex xs12 sm12 md12>
-	<v-tabs color="rgb(128,128,128)" height="30" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
-	<v-tabs-slider color="white"></v-tabs-slider>
-		<v-tab v-for="day in days" :key="day" :href="'#' + day">
-			<span style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
-		</v-tab>
-        <v-tabs-items>
-            <v-tab-item v-for="day in days" :key="day" :value="day" lazy style="">
-                <div class="tab-item-wrapper">
-                    <v-layout class="column fill-height" v-cloak>
-                        <v-flex xs12>
-                            <v-card flat>
-                                <v-card-text style="padding: 8px">							
-                                    <v-expansion-panel class="elevation-0" :value="0">
-                                        <v-expansion-panel-content style="background-color: green">
-											<div slot="header" class="white--text">
-												ALL EVENTS
-											</div>
-                                            <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                                            <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedActiveCompetitions" :key="competition.slug">
-                                                <v-expansion-panel-content class="black">
-													<div slot="header" class="white--text">
-														<div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
-															<img :src="'/images/countries/' + country.slug + '.png'" style="width: 18px; height: 18px" />&nbsp;&nbsp;{{ competition.name }}
-														</div>
-													</div>
-                                                    <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                                                    <v-card>
-									                    <v-card-text style="padding: 0">
-                                                            <v-data-table :items="loadedEventsByDay(day)['events'].filter(event => event.league_slug === competition.slug)" no-data-text="No game found on this day." class="elevation-0" hide-actions hide-headers v-if="loadedEventsByDay(day)">
-                                                                <template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
-                                                                    <v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
-                                                                        <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
-                                                                            <v-layout align-start>
-                                                                                <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-                                                                                    <div style="background-color: green; height: 100%; width: 2px" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
-                                                                                    <div style="background-color: orangered; height: 100%; width: 2px" v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST' || props.item.statusShort === 'Abd' || props.item.statusShort === 'AET'"></div>
-                                                                                </v-flex>
-                                                                                <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-                                                                                    <div style="color: orange;font-size: 80%">
-                                                                                        <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === 'FT' || props.item.statusShort === 'AET'">Finished</span>
-                                                                                        <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H'">{{ props.item.elapsed }} min</span>
-                                                                                        <span v-if="props.item.statusShort === 'HT'" style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;">Half time</span>
-                                                                                        <span v-if="props.item.statusShort === 'NS'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >{{ convertToLocalTime(props.item.timestamp) }}</span>
-                                                                                        <span v-if="props.item.statusShort === 'PST'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >Match postponed</span>
-                                                                                        <span v-if="props.item.statusShort === 'Abd'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >Match abandonned</span>
-                                                                                        ID: {{ props.item.id }}
-                                                                                    </div>
-                                                                                </v-flex>
 
-                                                                            </v-layout>
-
-                                                                            <v-layout align-center style="max-width: 100%">
-                                                                                <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-                                                                                    <div style="background-color: green; height: 40px; width: 2px" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
-                                                                                    <div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST' || props.item.statusShort === 'Abd' || props.item.statusShort === 'AET'" style="background-color: orangered; height: 40px; width: 2px"></div>
-                                                                                </v-flex>
-                                                                                <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
-																					<nuxt-link to="/team" style="text-decoration: none; color: black">
-																						<img :src="'/images/teams/' + props.item.homeTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
-																					</nuxt-link>
-                                                                                </v-flex>
-                                                                                <v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-																					<nuxt-link to="/team" style="text-decoration: none; color: black">
-																						<span class="teamTextSize"><v-icon class="notYourTeam">star</v-icon> {{ props.item.homeTeam_name }}</span>
-																					</nuxt-link>
-                                                                                </v-flex>
-                                                                                <v-flex sm2 xs2 class="text-xs-center">
-																					<nuxt-link to="/matchTermine">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'FT' || props.item.statusShort === 'AET'">
-																							{{ props.item.final_score }}
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchEncours">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'">
-																							<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-																								<span :key="props.item.goalsHomeTeam">
-																									{{ props.item.goalsHomeTeam }}
-																								</span>
-																							</transition> -
-																							<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-																								<span :key="props.item.goalsVisitorTeam">
-																									{{ props.item.goalsVisitorTeam }}
-																								</span>
-																							</transition>
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchAvenir">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'NS'">
-																							{{ convertToLocalTime(props.item.timestamp) }}
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchAvenir">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'PST'">
-																							Postponed
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchAvenir">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'Abd'">
-																							Abandonned
-																						</span>
-																					</nuxt-link
-                                                                                </v-flex>
-                                                                                <v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-																					<nuxt-link to="/team" style="text-decoration: none; color: black">
-																						<span class="teamTextSize">{{ props.item.visitorTeam_name }} <v-icon class="notYourTeam">star</v-icon></span>
-																					</nuxt-link>
-                                                                                </v-flex>
-                                                                                <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
-																					<nuxt-link to="/team" style="text-decoration: none; color: black">
-																						<img :src="'/images/teams/' + props.item.visitorTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
-																					</nuxt-link>
-                                                                                </v-flex>
-                                                                            </v-layout>
-                                                                        </v-flex>
-                                                                    </v-layout>
-                                                                </template>
-                                                            </v-data-table>
-                                                        </v-card-text>
-                                                    </v-card>
-                                                </v-expansion-panel-content>
-                                            </v-expansion-panel>
-                                        </v-expansion-panel-content>
-                                    </v-expansion-panel>
-                                </v-card-text>
-                            </v-card>
-                        </v-flex>
-                    </v-layout>
-                </div>
-            </v-tab-item>
-        </v-tabs-items>
-    </v-tabs>
-					</v-flex>
-				</v-layout>
-			</div>
 			<div class="resumeMatch">
 				<v-layout grid-list-xs row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
