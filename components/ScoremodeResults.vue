@@ -57,7 +57,7 @@
                                                                                     <div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST' || props.item.statusShort === 'Abd' || props.item.statusShort === 'AET'" style="background-color: orangered; height: 40px; width: 2px"></div>
                                                                                 </v-flex>
                                                                                 <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
-																					<nuxt-link to="/team" style="text-decoration: none; color: black">
+																					<nuxt-link to="/team">
 																						<img :src="'/images/teams/' + props.item.homeTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
 																					</nuxt-link>
                                                                                 </v-flex>
@@ -67,40 +67,30 @@
 																					</nuxt-link>
                                                                                 </v-flex>
                                                                                 <v-flex sm2 xs2 class="text-xs-center">
-																					<nuxt-link to="/matchTermine">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'FT' || props.item.statusShort === 'AET'">
-																							{{ props.item.final_score }}
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchEncours">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'">
-																							<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-																								<span :key="props.item.goalsHomeTeam">
-																									{{ props.item.goalsHomeTeam }}
-																								</span>
-																							</transition> -
-																							<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-																								<span :key="props.item.goalsVisitorTeam">
-																									{{ props.item.goalsVisitorTeam }}
-																								</span>
-																							</transition>
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchAvenir">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'NS'">
-																							{{ convertToLocalTime(props.item.timestamp) }}
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchAvenir">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'PST'">
-																							Postponed
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchAvenir">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'Abd'">
-																							Abandonned
-																						</span>
-																					</nuxt-link
+                                                                                    <span class="scoreBox" style="" v-if="props.item.statusShort === 'FT' || props.item.statusShort === 'AET'">
+                                                                                        {{ props.item.final_score }}
+                                                                                    </span>
+                                                                                    <span class="scoreBox" style="" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'">
+                                                                                        <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
+                                                                                            <span :key="props.item.goalsHomeTeam">
+                                                                                                {{ props.item.goalsHomeTeam }}
+                                                                                            </span>
+                                                                                        </transition> -
+                                                                                        <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
+                                                                                            <span :key="props.item.goalsVisitorTeam">
+                                                                                                {{ props.item.goalsVisitorTeam }}
+                                                                                            </span>
+                                                                                        </transition>
+                                                                                    </span>
+                                                                                    <span class="scoreBox" style="" v-if="props.item.statusShort === 'NS'">
+                                                                                        {{ convertToLocalTime(props.item.timestamp) }}
+                                                                                    </span>
+                                                                                    <span class="scoreBox" style="" v-if="props.item.statusShort === 'PST'">
+                                                                                        Postponed
+                                                                                    </span>
+                                                                                    <span class="scoreBox" style="" v-if="props.item.statusShort === 'Abd'">
+                                                                                        Abandonned
+                                                                                    </span>
                                                                                 </v-flex>
                                                                                 <v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
 																					<nuxt-link to="/team" style="text-decoration: none; color: black">
@@ -108,7 +98,7 @@
 																					</nuxt-link>
                                                                                 </v-flex>
                                                                                 <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
-																					<nuxt-link to="/team" style="text-decoration: none; color: black">
+																					<nuxt-link to="/team">
 																						<img :src="'/images/teams/' + props.item.visitorTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
 																					</nuxt-link>
                                                                                 </v-flex>
