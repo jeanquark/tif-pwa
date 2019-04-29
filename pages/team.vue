@@ -33,7 +33,7 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
-						<v-btn @click="loginModal = true" v-if="!loadedUser" style="text-decoration: none; color: orangered">Suivre ? Inscris-toi !</v-btn>
+						<v-btn @click="loginModal = true" v-if="!loadedUser" style="text-decoration: none; color: orangered; border-radius: 5px; max-width: max-content">Suivre ? Inscris-toi !</v-btn>
 					</v-flex>
 					<v-flex d-flex xs1 sm1 md1 justify-center align-center>
 						<div>
@@ -131,9 +131,9 @@
 							Les compétitions
 						</div>
 					</v-flex>
-					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
-						<v-card height="80px" flat>
-							<v-bottom-nav :active.sync="bottomNav" :value="true" absolute color="transparent">
+					<v-flex d-flex xs12 sm12 md12>
+						<v-card height="60px" flat>
+							<v-bottom-nav :active.sync="bottomNav" :value="true" absolute color="transparent" style="height: 75px">
 								<v-btn class="orangered" flat value="la_liga_18_19">
 									<span>La Liga</span>
 									<img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
@@ -470,7 +470,7 @@
 			return {
 				loginModal: false,
 				registerModal: false,
-				bottomNav: 'recent'
+				bottomNav: 'la_liga_18_19'
 			}
 		},
 		computed: {
