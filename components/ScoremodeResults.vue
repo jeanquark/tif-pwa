@@ -14,19 +14,15 @@
                                 <v-card-text style="padding: 8px">							
                                     <v-expansion-panel class="elevation-0" :value="0">
                                         <v-expansion-panel-content style="background-color: green">
-                                            <div style="max-height: 30px; padding: 6px 12px">
-												<div slot="header" class="white--text">
-													ALL EVENTS
-												</div>
+											<div slot="header" class="white--text">
+												ALL EVENTS
 											</div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                                             <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedActiveCompetitions" :key="competition.slug">
                                                 <v-expansion-panel-content class="black">
-                                                    <div style="max-height: 30px; padding: 6px 12px">
-														<div slot="header" class="white--text">
-															<div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
-																<img :src="'/images/countries/' + country.slug + '.png'" style="width: 18px; height: 18px" />&nbsp;&nbsp;{{ competition.name }}
-															</div>
+													<div slot="header" class="white--text">
+														<div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
+															<img :src="'/images/countries/' + country.slug + '.png'" style="width: 18px; height: 18px" />&nbsp;&nbsp;{{ competition.name }}
 														</div>
 													</div>
                                                     <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
@@ -260,6 +256,14 @@
 			padding: 2px 5px; 
 			border-radius: 5px; 
 			font-size: 1.0em;
+		}
+		.yourTeam {
+		color: orangered;
+		font-size: 15px;
+		}
+		.notYourTeam {
+		color: grey;
+		font-size: 15px;
 		}
     }
 </style>
