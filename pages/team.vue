@@ -24,7 +24,7 @@
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
-							10.456 PF
+							123'465 fans
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
@@ -34,7 +34,7 @@
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
-							1'234 fans
+							Suivre ? 5 <i class="material-icons" style="color: yellow; font-size: 25px">flash_on</i>
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
@@ -49,7 +49,7 @@
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="nameTeam">
-							<v-icon class="yourTeam">star</v-icon> Barcelona
+							<v-icon class="notYourTeam">star</v-icon> FC Barcelona
 						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-start align-center>
@@ -57,18 +57,10 @@
 						</div>
 					</v-flex>
 				</v-layout>	
-				<v-layout row wrap style="margin-top: 10px">
-					<v-flex d-flex xs12 justify-center align-center>
-						<div class="scorePlayer">
-							Ton score provisoire :<br /><br />
-							0.45 point de ferveur !
-						</div>
-					</v-flex>
-				</v-layout>
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px">
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="menuMatch" style="border-right: 1px solid darkgrey">
-							Résultats
+							Infos/Résultats
 						</div>
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
@@ -82,20 +74,20 @@
 				<v-layout grid-list-xs row wrap hidden-sm-and-up style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex xs6 justify-center align-center>
 						<div class="menuMatch" style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey">
-							Les matches
+							Matchs
 						</div>
 					</v-flex>
 					<v-flex d-flex xs6 justify-center align-center>
 						<nuxt-link to="/teamClassement" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey">
-								Classement
+								Classements
 							</div>	
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs6 justify-center align-center>
-						<nuxt-link to="/teamEffectif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+						<nuxt-link to="/teamJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
-								Effectif
+								Joueurs
 							</div>	
 						</nuxt-link>
 					</v-flex>
@@ -110,20 +102,20 @@
 				<v-layout grid-list-xs row wrap hidden-xs-only style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex sm3 md3 justify-center align-center>
 						<div class="menuMatch" style="border-right: 1px solid darkgrey">
-							Les matches 
+							Infos/Résultats
 						</div>
 					</v-flex>
 					<v-flex d-flex sm3 md3 justify-center align-center>
 						<nuxt-link to="/teamClassement" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
-								Classement
+								Classements
 							</div>	
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex sm3 md3 justify-center align-center>
-						<nuxt-link to="/teamEffectif" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+						<nuxt-link to="/teamJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey">
-								Effectif
+								Joueurs
 							</div>	
 						</nuxt-link>
 					</v-flex>
@@ -530,7 +522,7 @@
 	}
 	.nameTeam {
     background-color: rgb(255,255,255,0.9);
-    max-width: 75%;
+    max-width: max-content;
     padding: 10px;
     font-size: 1.5em;
     font-weight: 700;
