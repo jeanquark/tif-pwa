@@ -161,137 +161,42 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
-	<v-tabs color="rgb(128,128,128)" height="30" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
-	<v-tabs-slider color="white"></v-tabs-slider>
-		<v-tab v-for="day in days" :key="day" :href="'#' + day">
-			<span style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
-		</v-tab>
-        <v-tabs-items>
-            <v-tab-item v-for="day in days" :key="day" :value="day" lazy style="">
-                <div class="tab-item-wrapper">
-                    <v-layout class="column fill-height" v-cloak>
-                        <v-flex xs12>
-                            <v-card flat>
-                                <v-card-text style="padding: 8px">							
-                                    <v-expansion-panel class="elevation-0" :value="0">
-                                        <v-expansion-panel-content style="background-color: green">
-											<div slot="header" class="white--text">
-												ALL EVENTS
-											</div>
-                                            <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                                            <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedActiveCompetitions" :key="competition.slug">
-                                                <v-expansion-panel-content class="black">
-													<div slot="header" class="white--text">
-														<div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
-															<img :src="'/images/countries/' + country.slug + '.png'" style="width: 18px; height: 18px" />&nbsp;&nbsp;{{ competition.name }}
-														</div>
-													</div>
-                                                    <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                                                    <v-card>
-									                    <v-card-text style="padding: 0">
-                                                            <v-data-table :items="loadedEventsByDay(day)['events'].filter(event => event.league_slug === competition.slug)" no-data-text="No game found on this day." class="elevation-0" hide-actions hide-headers v-if="loadedEventsByDay(day)">
-                                                                <template slot="items" slot-scope="props" style="height: 15px; border-spacing: 0; padding: 2px; border: 1px solid black">
-                                                                    <v-layout align-center style="padding: 0; border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black">
-                                                                        <v-flex xs12 style="margin: 0; padding-top: 2px; padding-bottom: 2px; height: 100%">
-                                                                            <v-layout align-start>
-                                                                                <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 15px; margin: 0">
-                                                                                    <div style="background-color: green; height: 100%; width: 2px" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
-                                                                                    <div style="background-color: orangered; height: 100%; width: 2px" v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST' || props.item.statusShort === 'Abd' || props.item.statusShort === 'AET'"></div>
-                                                                                </v-flex>
-                                                                                <v-flex class="text-xs-left" style="width: 100%; padding: 0; height: 15px; margin: 0">
-                                                                                    <div style="color: orange;font-size: 80%">
-                                                                                        <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === 'FT' || props.item.statusShort === 'AET'">Finished</span>
-                                                                                        <span style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H'">{{ props.item.elapsed }} min</span>
-                                                                                        <span v-if="props.item.statusShort === 'HT'" style="float: left; background-color: green; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px;">Half time</span>
-                                                                                        <span v-if="props.item.statusShort === 'NS'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >{{ convertToLocalTime(props.item.timestamp) }}</span>
-                                                                                        <span v-if="props.item.statusShort === 'PST'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >Match postponed</span>
-                                                                                        <span v-if="props.item.statusShort === 'Abd'" style="float: left; background-color: orangered; color: white; text-align: center; padding-left: 5px; padding-right: 5px; margin-right: 5px" >Match abandonned</span>
-                                                                                        ID: {{ props.item.id }}
-                                                                                    </div>
-                                                                                </v-flex>
+						<!-- Scrollable content -->
+						<div class="content" style="height: 100vh; border-right: 1px solid orangered; border-left: 1px solid orangered">
+							<v-layout>
+									
+								<!-- Scrollable content -->
+								<div style="padding: 0; max-width: 100%; height: 100%; background-color: whitesmoke">
+						
+									<!-- <v-layout> -->
+									<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
+									<!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
+									<!-- loadedEvents: {{ loadedEvents }}<br /><br /> -->
+									<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
-                                                                            </v-layout>
+									<!-- Results -->
+									<v-tabs class="hidden-xs-only" color="rgb(0,128,0)" height="40" slider-color="white" fixed-tabs v-model="selectType">
+										<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
+											<span style="font-size: 1.0em; color: white">{{ type.name }}</span>
+										</v-tab>
+									</v-tabs>
+									<v-tabs class="hidden-sm-and-up" color="rgb(0,128,0)" height="30" slider-color="white" fixed-tabs v-model="selectType">
+										<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
+											<span style="font-size: 0.9em; color: white">{{ type.name }}</span>
+										</v-tab>
+									</v-tabs>						
 
-                                                                            <v-layout align-center style="max-width: 100%">
-                                                                                <v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
-                                                                                    <div style="background-color: green; height: 40px; width: 2px" v-if="props.item.statusShort === 'FT' || props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'"></div>
-                                                                                    <div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST' || props.item.statusShort === 'Abd' || props.item.statusShort === 'AET'" style="background-color: orangered; height: 40px; width: 2px"></div>
-                                                                                </v-flex>
-                                                                                <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
-																					<nuxt-link to="/team" style="text-decoration: none; color: black">
-																						<img :src="'/images/teams/' + props.item.homeTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
-																					</nuxt-link>
-                                                                                </v-flex>
-                                                                                <v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-																					<nuxt-link to="/team" style="text-decoration: none; color: black">
-																						<span class="teamTextSize"><v-icon class="notYourTeam">star</v-icon> {{ props.item.homeTeam_name }}</span>
-																					</nuxt-link>
-                                                                                </v-flex>
-                                                                                <v-flex sm2 xs2 class="text-xs-center">
-																					<nuxt-link to="/matchTermine">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'FT' || props.item.statusShort === 'AET'">
-																							{{ props.item.final_score }}
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchEncours">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'">
-																							<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-																								<span :key="props.item.goalsHomeTeam">
-																									{{ props.item.goalsHomeTeam }}
-																								</span>
-																							</transition> -
-																							<transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
-																								<span :key="props.item.goalsVisitorTeam">
-																									{{ props.item.goalsVisitorTeam }}
-																								</span>
-																							</transition>
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchAvenir">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'NS'">
-																							{{ convertToLocalTime(props.item.timestamp) }}
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchAvenir">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'PST'">
-																							Postponed
-																						</span>
-																					</nuxt-link>
-																					<nuxt-link to="/matchAvenir">
-																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'Abd'">
-																							Abandonned
-																						</span>
-																					</nuxt-link
-                                                                                </v-flex>
-                                                                                <v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-																					<nuxt-link to="/team" style="text-decoration: none; color: black">
-																						<span class="teamTextSize">{{ props.item.visitorTeam_name }} <v-icon class="notYourTeam">star</v-icon></span>
-																					</nuxt-link>
-                                                                                </v-flex>
-                                                                                <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
-																					<nuxt-link to="/team" style="text-decoration: none; color: black">
-																						<img :src="'/images/teams/' + props.item.visitorTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
-																					</nuxt-link>
-                                                                                </v-flex>
-                                                                            </v-layout>
-                                                                        </v-flex>
-                                                                    </v-layout>
-                                                                </template>
-                                                            </v-data-table>
-                                                        </v-card-text>
-                                                    </v-card>
-                                                </v-expansion-panel-content>
-                                            </v-expansion-panel>
-                                        </v-expansion-panel-content>
-                                    </v-expansion-panel>
-                                </v-card-text>
-                            </v-card>
-                        </v-flex>
-                    </v-layout>
-                </div>
-            </v-tab-item>
-        </v-tabs-items>
-    </v-tabs>
+									<!-- Results -->
+									<scoremode-results v-if="selectType === 0" />
+
+									<!-- Standings -->
+									<scoremode-standings v-if="selectType === 1" />
+									
+								</div>
+								
+							</v-layout>
+									
+						</div>
 					</v-flex>
 				</v-layout>
 			</div>
@@ -315,76 +220,252 @@
 </template>
 
 <script>
-	import moment from 'moment'
-    import axios from 'axios'
-	export default {
-		async created () {
-            this.$store.commit('setLoading', true)
-			for (let i = 15; i >= 1; i--) {
+    import moment from 'moment'
+    import ScoremodeHeader from '~/components/ScoremodeHeader'
+    import ScoremodeResults from '~/components/ScoremodeResults'
+    import ScoremodeStandings from '~/components/ScoremodeStandings'
+    import ScoremodeFooter from '~/components/ScoremodeFooter'
+    export default {
+        head: {
+            title: 'ScoreMode',
+            link: [
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }                
+			]
+        },
+        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings, ScoremodeFooter },
+        async created () {
+            // console.log(moment().format('YYYY-MM-DD'))
+            // console.log(moment().add(1, 'days').format('YYYY-MM-DD'))
+            // console.log(moment().subtract(1, 'days').format('YYYY-MM-DD'))
+            for (let i = 15; i >= 1; i--) {
+                // this.days.push(moment().subtract(i, 'days').format('DD MMM'))
                 this.days.push(moment().subtract(i, 'days').format('YYYY-MM-DD'))
             }
+            // this.days.push(moment().format('DD MMM'))
             this.days.push(moment().format('YYYY-MM-DD'))
             for (let i = 1; i <= 15; i++) {
+                // this.days.push(moment().add(i, 'days').format('DD MMM'))
                 this.days.push(moment().add(i, 'days').format('YYYY-MM-DD'))
             }
+            this.$store.commit('setLoading', false)
+
+            this.$store.dispatch('competitions/loadedCompetitions')
 
             const today = moment().format('YYYY-MM-DD')
             await this.$store.dispatch('events/fetchEventsByDay', today)
-            this.$store.commit('setLoading', false)
+            await this.$store.dispatch('standings/fetchCompetitionStanding', 'english_premier_league_2018_2019')
+            // await this.$store.dispatch('standings/fetchCompetitionStanding', {
+            //     name: 'English Premier League',
+            //     slug: 'english_premier_league_2018_2019',
+            //     info: {
+            //         total_teams: 20,
+            //         champions_league: 4,
+            //         europa_league: 7,
+            //         playoff: null,
+            //         relegation: 17
+            //     }
+            // })
         },
-		data () {
-			return {
-				activeDay: `${moment().format('YYYY-MM-DD')}`,
-				days: [],
+        data () {
+            return {
 				bottomNav: 'la_liga_18_19',
-                // loading: false
-			}
-		},
-		computed: {
+                links: [
+                    'Home',
+                    'About Us',
+                    'Team',
+                    'Services',
+                    'Blog',
+                    'Contact Us'
+                ],
+                standingHeaders: [
+                    {
+                        text: 'Rank',
+                        align: 'left',
+                        sortable: false,
+                        value: 'rank'
+                    },
+                    {
+                        text: 'Team',
+                        align: 'left',
+                        sortable: false,
+                        value: 'name'
+                    },
+                    { text: 'Points', value: 'points', align: 'center' },
+                    { text: 'Played', value: 'matches', align: 'center' },
+                    { text: 'Won', value: 'won', align: 'center' },
+                    { text: 'Drawn', value: 'drawn', align: 'center' },
+                    { text: 'Lost', value: 'lost', align: 'center' }
+                ],
+                days: [
+                    // '2019-02-21',
+                    // '2019-02-22',
+                    // '2019-02-23'
+                ],
+                active: null,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                // currentKey: 'tab-25',
+                // activeDay: `tab-${moment().format('DD MMM')}`,
+                activeDay: `${moment().format('YYYY-MM-DD')}`,
+                // activeDay2: `${moment().format('YYYY-MM-DD')}`,
+                // activeCompetition: 'tab-english_premier_league_2018_2019',
+                activeCompetition: 'english_premier_league_2018_2019',
+                types: [
+                    {
+                        name: 'Results',
+                        slug: 'results'
+                    }, {
+                        name: 'Standings',
+                        slug: 'standings'
+                    }
+                ],
+                competitions: [
+                    {
+                        name: 'English Premier League',
+                        slug: 'english_premier_league_2018_2019',
+                        info: {
+                            total_teams: 20,
+                            champions_league: 4,
+                            europa_league: 7,
+                            playoff: null,
+                            relegation: 17
+                        }
+                    }, {
+                        name: 'Spanish La Liga',
+                        slug: 'spanish_la_liga_2018_2019',
+                        info: {
+                            total_teams: 20,
+                            champions_league: 4,
+                            europa_league: 7,
+                            playoff: null,
+                            relegation: 17
+                        }
+                    }, {
+                        name: 'Italian Serie A',
+                        slug: 'italian_serie_a_2018_2019',
+                        info: {
+                            total_teams: 20,
+                            champions_league: 4,
+                            europa_league: 7,
+                            playoff: null,
+                            relegation: 17
+                        }
+                    }, {
+                        name: 'German Bundesliga',
+                        slug: 'german_bundesliga_2018_2019',
+                        info: {
+                            total_teams: 18,
+                            champions_league: 4,
+                            europa_league: 7,
+                            playoff: null,
+                            relegation: 16
+                        }
+                    }, {
+                        name: 'French Ligue 1',
+                        slug: 'french_league1_2018_2019',
+                        info: {
+                            total_teams: 20,
+                            champions_league: 3,
+                            europa_league: 6,
+                            playoff: null,
+                            relegation: 18
+                        }
+                    }, {
+                        name: 'Swiss Superleague',
+                        slug: 'swiss_super_league_2018_2019',
+                        info: {
+                            total_teams: 10,
+                            champions_league: 1,
+                            europa_league: 4,
+                            playoff: null,
+                            relegation: 9
+                        }
+                    }
+                ],
+                selectType: 0,
+                type2: '',
+                
+            } 
+        },
+        computed: {
             loading () {
                 return this.$store.getters['loading']
             },
-			loadedEvents () {
+            loadedUser () {
+                return this.$store.getters['users/loadedUser']
+            },
+            loadedUserTeams () {
+                return this.$store.getters['users/loadedUserTeams']
+            },
+            loadedStandings () {
+                return this.$store.getters['standings/loadedStandings']
+                // return [...this.$store.getters['standings/loadedStandings']]
+                //     .sort((a, b) => a.rank - b.rank)
+            },
+            loadedEvents () {
                 return this.$store.getters['events/loadedEvents']
             },
-            loadedActiveCompetitions () {
-                return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.status === 'active')
+            competitions2 () {
+                return this.$store.getters['competitions/loadedCompetitions']
             },
-		},
-		methods: {
-			async fetchEventsByDay(date) {
-                this.$store.commit('setLoading', true)
+            loadedEventsByDay2 () {
+                return this.$store.getters['events/loadedEvents']['2019-03-02']
+            }
+        },
+        methods: {
+            fetchCompetitionStanding(competition) {
+                console.log('fetchCompetitionStanding: ', competition)
+                // if (!this.loadedStandings[competition.slug]) {
+                if (!this.loadedStandings[competition]) {
+                    this.$store.dispatch('standings/fetchCompetitionStanding', competition)
+                }
+            },
+            fetchEventsByDay(date) {
                 console.log('fetchEventsByDay: ', date)
                 if (!this.loadedEvents[date]) {
-                    await this.$store.dispatch('events/fetchEventsByDay', date)
+                    this.$store.dispatch('events/fetchEventsByDay', date)
                 }
-                // const that = this
-                // setTimeout(() => {
-                //     that.$store.commit('setLoading', false)
-                // }, 1000)
-                this.$store.commit('setLoading', false)
             },
-            // otherEventsByDayByCompetition (date, competition) {
-            //     console.log('date: ', date)
-            //     console.log('competition: ', competition)
-            //     // return
-            //     // const userTeamsIds = this.userTeamsIds
-            //     return this.$store.getters['events/loadedEvents'][date]['events'].filter(event => event.league_slug === competition)
-            //         // .filter(event => (event.date === this.date.format('YYYY-MM-DD') && event.competition.slug === competition))
-            //         // .filter(event => (!userTeamsIds.includes(event.home_team.livescore_api_id) || !userTeamsIds.includes(event.visitor_team.livescore_api_id)))
-            //         // .sort((a, b) => a.timestamp - b.timestamp)
-            // },
+            rowStyle (rowIndex, info) {
+                // console.log('rowIndex: ', rowIndex)
+                // console.log('standing: ', standing)
+                if (rowIndex < info.champions_league) {
+                    return 'championsleague'
+                } else if (rowIndex < info.europa_league) {
+                    return 'europaleague'
+                } else if (rowIndex === info.relegation) {
+                    return 'relegation'
+                }
+            },
             loadedEventsByDay (date) {
+                // console.log('date: ', date)
+                // const array = []
                 return this.$store.getters['events/loadedEvents'][date]
+                // console.log('events: ', events)
+                // if (events) {
+                //     for (let i = 0; i < events.length; i++) {
+                //         // console.log(events(i))
+                //     }
+                // }
+                
+                // // events.forEach(event => array.push(event))
+                // // return array
             },
-			goBack() {
-				this.$router.replace("/gamemode_gm")
-			},
             convertToLocalTime (timestamp) {
-                return moment.unix(timestamp).format('HH:mm')
+                const utcDiff = new Date().getTimezoneOffset()
+                console.log('utcDiff: ', utcDiff)
+                // console.log('moment.unix(timestamp): ', moment.unix(timestamp))
+                // return moment.unix(timestamp).format("HH:mm")
+                if (utcDiff > 0) {
+                    return moment.unix(timestamp).add(utcDiff, 'minutes').format("HH:mm")
+                } else {
+                    return moment.unix(timestamp).subtract(utcDiff, 'minutes').format("HH:mm")
+                }
+            },
+            abc () {
+                console.log('abc')
             }
-		}
-	}
+        }
+    }
 </script>
 
 <style scoped>
