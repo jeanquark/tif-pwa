@@ -288,7 +288,7 @@
 
 <script>
     import ActionsCard from '~/components/ActionsCard'
-    export default default {
+    export default {
 		async created () {
             this.$store.commit('setLoading', true)
 			for (let i = 15; i >= 1; i--) {
