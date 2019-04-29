@@ -147,6 +147,9 @@
 							</v-expansion-panel>
 						</v-card-text>
 					</v-container>
+					</v-layout>
+					
+				</div>
 
 			<scoremode-footer />
 			
