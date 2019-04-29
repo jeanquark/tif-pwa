@@ -74,7 +74,7 @@
                                                                                         </transition> -
                                                                                         <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
                                                                                             <span :key="props.item.goalsVisitorTeam">
-                                                                                                {{ props.item.goalsVisitorTeam }} <v-icon class="notYourTeam">star</v-icon>
+                                                                                                {{ props.item.goalsVisitorTeam }}
                                                                                             </span>
                                                                                         </transition>
                                                                                     </span>
@@ -89,7 +89,7 @@
                                                                                     </span>
                                                                                 </v-flex>
                                                                                 <v-flex sm4 xs5 align-center class="text-xs-right pd-right10">
-                                                                                    <span class="teamTextSize">{{ props.item.visitorTeam_name }}</span>
+                                                                                    <span class="teamTextSize">{{ props.item.visitorTeam_name }} <v-icon class="notYourTeam">star</v-icon></span>
                                                                                 </v-flex>
                                                                                 <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
                                                                                     <img :src="'/images/teams/' + props.item.visitorTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
@@ -226,11 +226,11 @@
 	
 	.yourTeam {
 	color: orangered;
-	font-size: 20px;
+	font-size: 25px;
 	}
 	.notYourTeam {
 	color: grey;
-	font-size: 20px;
+	font-size: 25px;
 	}
 	
 	.v-expansion-panel__header {
