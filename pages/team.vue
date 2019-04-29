@@ -315,8 +315,9 @@
 </template>
 
 <script>
-    import ActionsCard from '~/components/ActionsCard'
-    export default {
+	import moment from 'moment'
+    import axios from 'axios'
+	export default {
 		async created () {
             this.$store.commit('setLoading', true)
 			for (let i = 15; i >= 1; i--) {
@@ -331,28 +332,26 @@
             await this.$store.dispatch('events/fetchEventsByDay', today)
             this.$store.commit('setLoading', false)
         },
-        layout: 'layoutFront',
 		data () {
 			return {
 				activeDay: `${moment().format('YYYY-MM-DD')}`,
 				days: [],
-				loginModal: false,
-				registerModal: false,
-				bottomNav: 'la_liga_18_19'
+				bottomNav: 'la_liga_18_19',
+                // loading: false
 			}
 		},
 		computed: {
-			loadedUser () {
-				return this.$store.getters['users/loadedUser']
-			},
+            loading () {
+                return this.$store.getters['loading']
+            },
 			loadedEvents () {
                 return this.$store.getters['events/loadedEvents']
             },
             loadedActiveCompetitions () {
                 return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.status === 'active')
-            }
+            },
 		},
-        methods: {
+		methods: {
 			async fetchEventsByDay(date) {
                 this.$store.commit('setLoading', true)
                 console.log('fetchEventsByDay: ', date)
@@ -365,34 +364,27 @@
                 // }, 1000)
                 this.$store.commit('setLoading', false)
             },
-			async logout () {
-				await this.$store.dispatch('firebase-auth/signOut')
-			},
-			switchToRegister () {
-				this.loginModal = false
-				this.registerModal = true
-			},
-			switchToLogin () {
-				this.registerModal = false
-				this.loginModal = true
-			},
-			async signInWithGoogle() {
-				console.log('signInWithGoogle')
-				await this.$store.dispatch('firebase-auth/signInWithGooglePopup')
-				console.log('done')
-				this.$router.replace('/gamemode_jm')
-			},
-			goBack() {
-				this.$router.replace("/gamemode_gm")
-			},
+            // otherEventsByDayByCompetition (date, competition) {
+            //     console.log('date: ', date)
+            //     console.log('competition: ', competition)
+            //     // return
+            //     // const userTeamsIds = this.userTeamsIds
+            //     return this.$store.getters['events/loadedEvents'][date]['events'].filter(event => event.league_slug === competition)
+            //         // .filter(event => (event.date === this.date.format('YYYY-MM-DD') && event.competition.slug === competition))
+            //         // .filter(event => (!userTeamsIds.includes(event.home_team.livescore_api_id) || !userTeamsIds.includes(event.visitor_team.livescore_api_id)))
+            //         // .sort((a, b) => a.timestamp - b.timestamp)
+            // },
             loadedEventsByDay (date) {
                 return this.$store.getters['events/loadedEvents'][date]
             },
+			goBack() {
+				this.$router.replace("/gamemode_gm")
+			},
             convertToLocalTime (timestamp) {
                 return moment.unix(timestamp).format('HH:mm')
             }
-        }
-    }
+		}
+	}
 </script>
 
 <style scoped>

@@ -58,7 +58,7 @@
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px">
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="menuMatch" style="border-right: 1px solid darkgrey">
-							Infos/Résultats
+							La vie du club !
 						</div>
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
@@ -71,9 +71,11 @@
 				</v-layout>
 				<v-layout grid-list-xs row wrap hidden-sm-and-up style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex xs6 justify-center align-center>
-						<div class="menuMatch" style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey">
-							Matchs
-						</div>
+						<nuxt-link to="/team" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
+							<div class="menuTif" style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey">
+								Infos/Résultats
+							</div>
+						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs6 justify-center align-center>
 						<nuxt-link to="/teamClassement" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
@@ -90,18 +92,16 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex xs6 justify-center align-center>
-						<nuxt-link to="/teamStatistique" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-							<div class="menuTif">
-								Statistiques
-							</div>
-						</nuxt-link>
+						<div class="menuMatch">
+							Statistiques
+						</div>
 					</v-flex>
 				</v-layout>
 				<v-layout grid-list-xs row wrap hidden-xs-only style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
 					<v-flex d-flex sm3 md3 justify-center align-center>
 						<nuxt-link to="/team" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">	
 							<div class="menuTif" style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey">
-								Matchs
+								Infos/Résultats
 							</div>
 						</nuxt-link>
 					</v-flex>
@@ -120,11 +120,9 @@
 						</nuxt-link>
 					</v-flex>
 					<v-flex d-flex sm3 md3 justify-center align-center>
-						<nuxt-link to="/teamStatistique" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-							<div class="menuTif">
-								Statistiques
-							</div>
-						</nuxt-link>
+						<div class="menuMatch">
+							Statistiques
+						</div>
 					</v-flex>
 				</v-layout>
 			</div>
