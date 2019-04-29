@@ -240,7 +240,7 @@
 	position: relative;
     }
 	.backgroundImage {
-	background-color: black;
+	background-color: #004C99;
 	}
 	.imgTeamSmall {
 	width: 70%;
