@@ -107,6 +107,8 @@
                                     </v-expansion-panel>
                                 </v-card-text>
                             </v-card>
+                        </v-flex>
+                        <v-flex xs12>
                             <v-card flat>
                                 <v-card-text style="padding: 8px">
                                     <v-expansion-panel class="elevation-0" :value="0">
