@@ -160,24 +160,16 @@
 							Le classement
 						</div>
 					</v-flex>
-					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
-						<div>
-						
-						</div>
-					</v-flex>
-				</v-layout>
-			</div>
-			<div class="resumeMatch">
-				<v-layout grid-list-xs row wrap style="margin-top: 10px">
-					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
-						<div>
-							Informations sur le FC Barcelona
-						</div>
-					</v-flex>
-					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
-						<div class="infosMatch">
-							Pays : Espagne - Date de fondation : 1907 - Couleur : rouge et bleu<br />
-							Stade : Le nom du stade (ville) - Capacité : Nb de spectateurs
+					<v-flex d-flex xs12 sm12 md12>
+						<!-- Scrollable content -->
+						<div class="content" style="max-height: 100vh; border-right: 1px solid orangered; border-left: 1px solid orangered">
+							<v-layout>	
+								<!-- Scrollable content -->
+								<div style="padding: 0; max-width: 100%; height: 100%; background-color: whitesmoke">
+									<!-- Standings -->
+									<scoremode-standings v-if="selectType === 1" />
+								</div>
+							</v-layout>
 						</div>
 					</v-flex>
 				</v-layout>
@@ -187,81 +179,249 @@
 </template>
 
 <script>
-    import ActionsCard from '~/components/ActionsCard'
+    import moment from 'moment'
+    import ScoremodeHeader from '~/components/ScoremodeHeader'
+    import ScoremodeResults from '~/components/ScoremodeResults'
+    import ScoremodeStandings from '~/components/ScoremodeStandings'
+    import ScoremodeFooter from '~/components/ScoremodeFooter'
     export default {
-		async created () {
-            this.$store.commit('setLoading', true)
-			for (let i = 15; i >= 1; i--) {
+        head: {
+            title: 'ScoreMode',
+            link: [
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }                
+			]
+        },
+        components: { ScoremodeHeader, ScoremodeResults, ScoremodeStandings, ScoremodeFooter },
+        async created () {
+            // console.log(moment().format('YYYY-MM-DD'))
+            // console.log(moment().add(1, 'days').format('YYYY-MM-DD'))
+            // console.log(moment().subtract(1, 'days').format('YYYY-MM-DD'))
+            for (let i = 15; i >= 1; i--) {
+                // this.days.push(moment().subtract(i, 'days').format('DD MMM'))
                 this.days.push(moment().subtract(i, 'days').format('YYYY-MM-DD'))
             }
+            // this.days.push(moment().format('DD MMM'))
             this.days.push(moment().format('YYYY-MM-DD'))
             for (let i = 1; i <= 15; i++) {
+                // this.days.push(moment().add(i, 'days').format('DD MMM'))
                 this.days.push(moment().add(i, 'days').format('YYYY-MM-DD'))
             }
+            this.$store.commit('setLoading', false)
+
+            this.$store.dispatch('competitions/loadedCompetitions')
 
             const today = moment().format('YYYY-MM-DD')
             await this.$store.dispatch('events/fetchEventsByDay', today)
-            this.$store.commit('setLoading', false)
+            await this.$store.dispatch('standings/fetchCompetitionStanding', 'english_premier_league_2018_2019')
+            // await this.$store.dispatch('standings/fetchCompetitionStanding', {
+            //     name: 'English Premier League',
+            //     slug: 'english_premier_league_2018_2019',
+            //     info: {
+            //         total_teams: 20,
+            //         champions_league: 4,
+            //         europa_league: 7,
+            //         playoff: null,
+            //         relegation: 17
+            //     }
+            // })
         },
-        layout: 'layoutFront',
-		data () {
-			return {
-				activeDay: `${moment().format('YYYY-MM-DD')}`,
-				days: [],
-				loginModal: false,
-				registerModal: false,
-				bottomNav: 'la_liga_18_19'
-			}
-		},
-		computed: {
-			loadedUser () {
-				return this.$store.getters['users/loadedUser']
-			},
-			loadedEvents () {
+        data () {
+            return {
+				bottomNav: 'la_liga_18_19',
+                links: [
+                    'Home',
+                    'About Us',
+                    'Team',
+                    'Services',
+                    'Blog',
+                    'Contact Us'
+                ],
+                standingHeaders: [
+                    {
+                        text: 'Rank',
+                        align: 'left',
+                        sortable: false,
+                        value: 'rank'
+                    },
+                    {
+                        text: 'Team',
+                        align: 'left',
+                        sortable: false,
+                        value: 'name'
+                    },
+                    { text: 'Points', value: 'points', align: 'center' },
+                    { text: 'Played', value: 'matches', align: 'center' },
+                    { text: 'Won', value: 'won', align: 'center' },
+                    { text: 'Drawn', value: 'drawn', align: 'center' },
+                    { text: 'Lost', value: 'lost', align: 'center' }
+                ],
+                days: [
+                    // '2019-02-21',
+                    // '2019-02-22',
+                    // '2019-02-23'
+                ],
+                active: null,
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                // currentKey: 'tab-25',
+                // activeDay: `tab-${moment().format('DD MMM')}`,
+                activeDay: `${moment().format('YYYY-MM-DD')}`,
+                // activeDay2: `${moment().format('YYYY-MM-DD')}`,
+                // activeCompetition: 'tab-english_premier_league_2018_2019',
+                activeCompetition: 'english_premier_league_2018_2019',
+                types: [
+                    {
+                        name: 'Results',
+                        slug: 'results'
+                    }, {
+                        name: 'Standings',
+                        slug: 'standings'
+                    }
+                ],
+                competitions: [
+                    {
+                        name: 'English Premier League',
+                        slug: 'english_premier_league_2018_2019',
+                        info: {
+                            total_teams: 20,
+                            champions_league: 4,
+                            europa_league: 7,
+                            playoff: null,
+                            relegation: 17
+                        }
+                    }, {
+                        name: 'Spanish La Liga',
+                        slug: 'spanish_la_liga_2018_2019',
+                        info: {
+                            total_teams: 20,
+                            champions_league: 4,
+                            europa_league: 7,
+                            playoff: null,
+                            relegation: 17
+                        }
+                    }, {
+                        name: 'Italian Serie A',
+                        slug: 'italian_serie_a_2018_2019',
+                        info: {
+                            total_teams: 20,
+                            champions_league: 4,
+                            europa_league: 7,
+                            playoff: null,
+                            relegation: 17
+                        }
+                    }, {
+                        name: 'German Bundesliga',
+                        slug: 'german_bundesliga_2018_2019',
+                        info: {
+                            total_teams: 18,
+                            champions_league: 4,
+                            europa_league: 7,
+                            playoff: null,
+                            relegation: 16
+                        }
+                    }, {
+                        name: 'French Ligue 1',
+                        slug: 'french_league1_2018_2019',
+                        info: {
+                            total_teams: 20,
+                            champions_league: 3,
+                            europa_league: 6,
+                            playoff: null,
+                            relegation: 18
+                        }
+                    }, {
+                        name: 'Swiss Superleague',
+                        slug: 'swiss_super_league_2018_2019',
+                        info: {
+                            total_teams: 10,
+                            champions_league: 1,
+                            europa_league: 4,
+                            playoff: null,
+                            relegation: 9
+                        }
+                    }
+                ],
+                selectType: 0,
+                type2: '',
+                
+            } 
+        },
+        computed: {
+            loading () {
+                return this.$store.getters['loading']
+            },
+            loadedUser () {
+                return this.$store.getters['users/loadedUser']
+            },
+            loadedUserTeams () {
+                return this.$store.getters['users/loadedUserTeams']
+            },
+            loadedStandings () {
+                return this.$store.getters['standings/loadedStandings']
+                // return [...this.$store.getters['standings/loadedStandings']]
+                //     .sort((a, b) => a.rank - b.rank)
+            },
+            loadedEvents () {
                 return this.$store.getters['events/loadedEvents']
             },
-            loadedActiveCompetitions () {
-                return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.status === 'active')
+            competitions2 () {
+                return this.$store.getters['competitions/loadedCompetitions']
+            },
+            loadedEventsByDay2 () {
+                return this.$store.getters['events/loadedEvents']['2019-03-02']
             }
-		},
+        },
         methods: {
-			async fetchEventsByDay(date) {
-                this.$store.commit('setLoading', true)
+            fetchCompetitionStanding(competition) {
+                console.log('fetchCompetitionStanding: ', competition)
+                // if (!this.loadedStandings[competition.slug]) {
+                if (!this.loadedStandings[competition]) {
+                    this.$store.dispatch('standings/fetchCompetitionStanding', competition)
+                }
+            },
+            fetchEventsByDay(date) {
                 console.log('fetchEventsByDay: ', date)
                 if (!this.loadedEvents[date]) {
-                    await this.$store.dispatch('events/fetchEventsByDay', date)
+                    this.$store.dispatch('events/fetchEventsByDay', date)
                 }
-                // const that = this
-                // setTimeout(() => {
-                //     that.$store.commit('setLoading', false)
-                // }, 1000)
-                this.$store.commit('setLoading', false)
             },
-			async logout () {
-				await this.$store.dispatch('firebase-auth/signOut')
-			},
-			switchToRegister () {
-				this.loginModal = false
-				this.registerModal = true
-			},
-			switchToLogin () {
-				this.registerModal = false
-				this.loginModal = true
-			},
-			async signInWithGoogle() {
-				console.log('signInWithGoogle')
-				await this.$store.dispatch('firebase-auth/signInWithGooglePopup')
-				console.log('done')
-				this.$router.replace('/gamemode_jm')
-			},
-			goBack() {
-				this.$router.replace("/gamemode_gm")
-			},
+            rowStyle (rowIndex, info) {
+                // console.log('rowIndex: ', rowIndex)
+                // console.log('standing: ', standing)
+                if (rowIndex < info.champions_league) {
+                    return 'championsleague'
+                } else if (rowIndex < info.europa_league) {
+                    return 'europaleague'
+                } else if (rowIndex === info.relegation) {
+                    return 'relegation'
+                }
+            },
             loadedEventsByDay (date) {
+                // console.log('date: ', date)
+                // const array = []
                 return this.$store.getters['events/loadedEvents'][date]
+                // console.log('events: ', events)
+                // if (events) {
+                //     for (let i = 0; i < events.length; i++) {
+                //         // console.log(events(i))
+                //     }
+                // }
+                
+                // // events.forEach(event => array.push(event))
+                // // return array
             },
             convertToLocalTime (timestamp) {
-                return moment.unix(timestamp).format('HH:mm')
+                const utcDiff = new Date().getTimezoneOffset()
+                console.log('utcDiff: ', utcDiff)
+                // console.log('moment.unix(timestamp): ', moment.unix(timestamp))
+                // return moment.unix(timestamp).format("HH:mm")
+                if (utcDiff > 0) {
+                    return moment.unix(timestamp).add(utcDiff, 'minutes').format("HH:mm")
+                } else {
+                    return moment.unix(timestamp).subtract(utcDiff, 'minutes').format("HH:mm")
+                }
+            },
+            abc () {
+                console.log('abc')
             }
         }
     }
