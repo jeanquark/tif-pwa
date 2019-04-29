@@ -13,7 +13,7 @@
                             <v-card flat>
                                 <v-card-text style="padding: 8px">
                                     <v-expansion-panel class="elevation-0" :value="0">
-                                        <v-expansion-panel-content style="background-color: green; padding: 6px 12px; max-height: 40px">
+                                        <v-expansion-panel-content style="background-color: green">
                                             <div slot="header" class="white--text">
                                                 ALL EVENTS
                                             </div>
@@ -232,7 +232,16 @@
 	color: grey;
 	font-size: 20px;
 	}
-
+	
+	.v-expansion-panel__header {
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	position: relative;
+	padding: 6px 12px;
+	min-height: 30px;
+	}
+	
     @media only screen and (max-width: 768px) {
         .imgLogoEquipe {
             max-width: 35px;
