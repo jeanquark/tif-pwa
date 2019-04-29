@@ -33,9 +33,7 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
-						<div class="scorePF">
-							<v-btn @click="loginModal = true" v-if="!loadedUser" style="text-decoration: none; color: orangered">Suivre ? Vous devez être inscrits !</v-btn>
-						</div>
+						<v-btn @click="loginModal = true" v-if="!loadedUser" style="text-decoration: none; color: orangered">Suivre ? Inscris-toi !</v-btn>
 					</v-flex>
 					<v-flex d-flex xs1 sm1 md1 justify-center align-center>
 						<div>
@@ -134,20 +132,19 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
-						<v-card height="200px" flat>
-							<div class="headline text-xs-center pa-5">Active: {{ bottomNav }}</div>
+						<v-card height="80px" flat>
 							<v-bottom-nav :active.sync="bottomNav" :value="true" absolute color="transparent">
-								<v-btn color="orangered" flat value="recent">
+								<v-btn class="orangered" flat value="la_liga_18_19">
 									<span>La Liga</span>
-									<v-icon>history</v-icon>
+									<img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
 								</v-btn>
-								<v-btn color="orangered" flat value="favorites">	
+								<v-btn class="orangered" flat value="la_copa_del_rey_18_19">	
 									<span>La Copa del Rey</span>
-									<v-icon>favorite</v-icon>
+									<img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
 								</v-btn>
-								<v-btn color="orangered" flat value="nearby">
+								<v-btn class="orangered" flat value="uefa_champions_league_18_19">
 									<span>UEFA Champions League</span>
-									<v-icon>place</v-icon>
+									<img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
 								</v-btn>
 								</v-bottom-nav>
 						</v-card>					
@@ -532,6 +529,10 @@
 	width: 70%;
 	border-radius: 10px;
 	}
+	.imgCompetition {
+	width: 50px;
+	border-radius: 10px;
+	}
 	.drapeau {
 	padding: 10px;
 	}
@@ -595,7 +596,7 @@
 	}
 	.infosMatch {
 	color: black;
-	font-size: 1.0em;
+	font-size: 1.1em;
 	}
 	.hoverMatchStats :hover {
 	background-color: orangered;
