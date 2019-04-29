@@ -11,16 +11,16 @@
                     <v-layout class="column fill-height" v-cloak>
                         <v-flex xs12>
                             <v-card flat>
-                                <v-card-text style="padding: 8px">
+                                <v-card-text style="padding: 8px">							
                                     <v-expansion-panel class="elevation-0" :value="0">
                                         <v-expansion-panel-content style="background-color: green">
-                                            <div slot="header" class="white--text">
+                                            <div slot="header" class="white--text" style="padding: 6px 12px; min-height: 30px">
                                                 ALL EVENTS
                                             </div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                                             <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedActiveCompetitions" :key="competition.slug">
                                                 <v-expansion-panel-content class="black">
-                                                    <div slot="header" class="white--text">
+                                                    <div slot="header" class="white--text" style="padding: 6px 12px; min-height: 30px">
                                                         <div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
                                                             <img :src="'/images/countries/' + country.slug + '.png'" style="width: 18px; height: 18px" />&nbsp;&nbsp;{{ competition.name }}
                                                         </div>
@@ -232,16 +232,7 @@
 	color: grey;
 	font-size: 25px;
 	}
-	
-	.v-expansion-panel__header {
-	display: flex;
-	cursor: pointer;
-	align-items: center;
-	position: relative;
-	padding: 6px 12px;
-	min-height: 30px;
-	}
-	
+		
     @media only screen and (max-width: 768px) {
         .imgLogoEquipe {
             max-width: 35px;

@@ -67,7 +67,7 @@
 						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
 							<div class="headerLogo">
 								<span class="chiffres">6</span><br />
-								<span class="activity">compétitions</span>
+								<span class="activity">compét'</span>
 							</div>
 						</v-flex>
 						<v-flex xs12 sm6 md3 order-md3 order-sm1 text-xs-center class="cadreHeader">
