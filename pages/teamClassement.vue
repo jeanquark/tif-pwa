@@ -153,7 +153,20 @@
 					</v-flex>
 				</v-layout>
 			</div>
-
+			<div class="resumeMatch">
+				<v-layout grid-list-xs row wrap style="margin-top: 10px">
+					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
+						<div>
+							Le classement
+						</div>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
+						<div>
+						
+						</div>
+					</v-flex>
+				</v-layout>
+			</div>
 			<div class="resumeMatch">
 				<v-layout grid-list-xs row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">

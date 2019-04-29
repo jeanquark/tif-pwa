@@ -131,10 +131,10 @@
 				<v-layout grid-list-xs row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div>
-							Les compétitions
+							L'effectif de l'équipe
 						</div>
 					</v-flex>
-					<v-flex d-flex xs12 sm12 md12>
+					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px">
 						<v-card height="80px" flat>
 							<v-bottom-nav :active.sync="bottomNav" :value="true" absolute color="transparent" style="height: 75px">
 								<v-btn class="orangered" flat value="la_liga_18_19">
@@ -151,22 +151,6 @@
 								</v-btn>
 								</v-bottom-nav>
 						</v-card>					
-					</v-flex>
-				</v-layout>
-			</div>
-
-			<div class="resumeMatch">
-				<v-layout grid-list-xs row wrap style="margin-top: 10px">
-					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
-						<div>
-							Informations sur le FC Barcelona
-						</div>
-					</v-flex>
-					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
-						<div class="infosMatch">
-							Pays : Espagne - Date de fondation : 1907 - Couleur : rouge et bleu<br />
-							Stade : Le nom du stade (ville) - Capacité : Nb de spectateurs
-						</div>
 					</v-flex>
 				</v-layout>
 			</div>

@@ -162,40 +162,14 @@
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
 						<!-- Scrollable content -->
-						<div class="content" style="height: 100vh; border-right: 1px solid orangered; border-left: 1px solid orangered">
-							<v-layout>
-									
+						<div class="content" style="max-height: 100vh; border-right: 1px solid orangered; border-left: 1px solid orangered">
+							<v-layout>	
 								<!-- Scrollable content -->
 								<div style="padding: 0; max-width: 100%; height: 100%; background-color: whitesmoke">
-						
-									<!-- <v-layout> -->
-									<!-- <a href="/api/fetch-next-top5-leagues-matches">Fetch next Top 5 leagues matches</a><br /> -->
-									<!-- <a href="/api/fetch-live-score">Fetch Live Score</a><br /> -->
-									<!-- loadedEvents: {{ loadedEvents }}<br /><br /> -->
-									<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
-
 									<!-- Results -->
-									<v-tabs class="hidden-xs-only" color="rgb(0,128,0)" height="40" slider-color="white" fixed-tabs v-model="selectType">
-										<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
-											<span style="font-size: 1.0em; color: white">{{ type.name }}</span>
-										</v-tab>
-									</v-tabs>
-									<v-tabs class="hidden-sm-and-up" color="rgb(0,128,0)" height="30" slider-color="white" fixed-tabs v-model="selectType">
-										<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
-											<span style="font-size: 0.9em; color: white">{{ type.name }}</span>
-										</v-tab>
-									</v-tabs>						
-
-									<!-- Results -->
-									<scoremode-results v-if="selectType === 0" />
-
-									<!-- Standings -->
-									<scoremode-standings v-if="selectType === 1" />
-									
+									<scoremode-results v-if="selectType === 0" />					
 								</div>
-								
 							</v-layout>
-									
 						</div>
 					</v-flex>
 				</v-layout>
@@ -469,6 +443,17 @@
 </script>
 
 <style scoped>
+	.v-tabs__container {
+    flex: 1 0 auto;
+    display: flex;
+    height: 30px;
+    list-style-type: none;
+    transition: -webkit-transform .6s cubic-bezier(.86,0,.07,1);
+    transition: transform .6s cubic-bezier(.86,0,.07,1);
+    transition: transform .6s cubic-bezier(.86,0,.07,1),-webkit-transform .6s cubic-bezier(.86,0,.07,1);
+    white-space: nowrap;
+    position: relative;
+	}
     body {
     margin: 0;
     padding: 0;
