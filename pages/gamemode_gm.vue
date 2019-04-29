@@ -27,11 +27,16 @@
                         </v-layout>
                     </v-flex>
                     <v-flex shrink>
-					<nuxt-link to="/user/avatar" class="boxShadow" v-if="loadedUser && loadedUser.avatar">
+					<nuxt-link to="/user/avatar" class="boxShadow">
+						<div id="avatar" v-tooltip="'Salut Gaël!'">
+							<img src="images/avatar.png" class="imgAvatar" />
+						</div>
+					</nuxt-link>
+					<!-- <nuxt-link to="/user/avatar" class="boxShadow" v-if="loadedUser && loadedUser.avatar">
 						<div id="avatar" v-tooltip="'Salut Gaël!'">
 							<img v-lazy="loadedUser.avatar.url" class="imgAvatar" />
 						</div>
-					</nuxt-link>
+					</nuxt-link> -->
                     </v-flex>
                     <v-flex hidden-sm-and-down grow>
                         <v-layout row>
@@ -343,6 +348,11 @@
 <script>
     import ActionsCard from '~/components/ActionsCard'
     export default {
+        head: {
+            link: [
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }                
+			]
+        },
         components: { ActionsCard },
         layout: 'layoutLandingPage',
         data () {
