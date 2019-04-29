@@ -134,10 +134,23 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
-						<div class="drapeau">
-							<img src="/images/teams/fc_barcelona.png" class="imgTeamSmall" />
-							<img src="/images/teams/fc_barcelona.png" class="imgTeamSmall" />
-						</div>
+						<v-card height="200px" flat>
+							<div class="headline text-xs-center pa-5">Active: {{ bottomNav }}</div>
+							<v-bottom-nav :active.sync="bottomNav" :value="true" absolute color="transparent">
+								<v-btn color="orangered" flat value="recent">
+									<span>La Liga</span>
+									<v-icon>history</v-icon>
+								</v-btn>
+								<v-btn color="orangered" flat value="favorites">	
+									<span>La Copa del Rey</span>
+									<v-icon>favorite</v-icon>
+								</v-btn>
+								<v-btn color="orangered" flat value="nearby">
+									<span>UEFA Champions League</span>
+									<v-icon>place</v-icon>
+								</v-btn>
+								</v-bottom-nav>
+						</v-card>					
 					</v-flex>
 				</v-layout>
 			</div>
@@ -438,7 +451,7 @@
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
 						<div class="infosMatch">
-							Pays : Espagne - Date de fondation : 1907 - Couleur : rouge et bleu
+							Pays : Espagne - Date de fondation : 1907 - Couleur : rouge et bleu<br />
 							Stade : Le nom du stade (ville) - Capacité : Nb de spectateurs
 						</div>
 					</v-flex>
@@ -459,7 +472,8 @@
 		data () {
 			return {
 				loginModal: false,
-				registerModal: false
+				registerModal: false,
+				bottomNav: 'recent'
 			}
 		},
 		computed: {
