@@ -18,11 +18,11 @@
 					</v-flex>
 				</v-layout>	
 				<v-layout row wrap style="margin-top: 10px">
-					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
+					<v-flex d-flex xs1 sm1 md1 justify-center align-center>
 						<div>
 						</div>
 					</v-flex>
-					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
+					<v-flex d-flex xs4 sm4 md4 justify-end align-center>
 						<div class="scorePF">
 							123'465 fans
 						</div>
@@ -32,17 +32,17 @@
 							<img src="/images/teams/fc_barcelona.png" class="imgTeamSmall" />
 						</div>
 					</v-flex>
-					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
+					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
 						<div class="scorePF">
-							Suivre ? <span @click="loginModal = true" v-if="!loadedUser" style="text-decoration: none; color: white; width: 100%">Vous devez être inscris !</span>
+							<v-btn @click="loginModal = true" v-if="!loadedUser" style="text-decoration: none; color: orangered">Suivre ? Vous devez être inscrits !</v-btn>
 						</div>
 					</v-flex>
-					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
+					<v-flex d-flex xs1 sm1 md1 justify-center align-center>
 						<div>
 						</div>
 					</v-flex>
 				</v-layout>	
-				<v-layout row wrap style="margin-top: 10px">
+				<v-layout row wrap style="margin-top: 10px; margin-bottom: 20px">
 					<v-flex d-flex xs3 sm3 md3 justify-end align-center>
 						<div>
 						</div>
@@ -130,27 +130,14 @@
 				<v-layout grid-list-xs row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div>
-							Les actions collectives en cours...<br />
-							<span style="font-size: 0.9em">Clique vite pour participer à une action collective !</span>
+							Les compétitions
 						</div>
 					</v-flex>
-					<v-flex d-flex xs12 sm12 md12>
-						<v-layout grid-list-xs row wrap class="eventMatch">
-							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="border-right: 1px dashed black; padding: 20px">
-								<div>
-									<nuxt-link to="/actionCollectiveAutreJoueur" class="imgActionCollHover" style="text-decoration: none; color: white; width: 100%; background-color: orangered; padding: 10px; font-size: 1.1em; border-radius: 10px">
-										4 actions collectives en cours
-									</nuxt-link>
-								</div>			
-							</v-flex>
-							<v-flex d-flex xs6 sm6 md6 justify-center align-center style="padding: 20px">
-								<div>
-									<nuxt-link to="/actionCollectiveAutreEquipe" class="imgActionCollHover" style="text-decoration: none; border: 1px solid grey; color: grey; width: 100%; background-color: white; padding: 10px; font-size: 1.1em; border-radius: 10px">
-										11 actions collectives en cours
-									</nuxt-link>
-								</div>			
-							</v-flex>					
-						</v-layout>
+					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
+						<div class="drapeau">
+							<img src="/images/teams/fc_barcelona.png" class="imgTeamSmall" />
+							<img src="/images/teams/fc_barcelona.png" class="imgTeamSmall" />
+						</div>
 					</v-flex>
 				</v-layout>
 			</div>
@@ -158,7 +145,7 @@
 				<v-layout grid-list-xs row wrap class="tempsFortMargin">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div >
-							Les événements durant le match !
+							Tous les matchs de la saison 2018-2019
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
@@ -442,6 +429,21 @@
 					</v-flex>
 				</v-layout>				
 			</div>
+			<div class="resumeMatch">
+				<v-layout grid-list-xs row wrap style="margin-top: 10px">
+					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
+						<div>
+							Informations sur le FC Barcelona
+						</div>
+					</v-flex>
+					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
+						<div class="infosMatch">
+							Pays : Espagne - Date de fondation : 1907 - Couleur : rouge et bleu
+							Stade : Le nom du stade (ville) - Capacité : Nb de spectateurs
+						</div>
+					</v-flex>
+				</v-layout>
+			</div>
 		</v-container>					 
   </v-content>
 </template>
@@ -454,21 +456,35 @@
 			Register: () => import('~/components/Register')
 		},
         layout: 'layoutFront',
-        data () {
-            return {
-                links: [
-                    'Home',
-                    'About Us',
-                    'Team',
-                    'Services',
-                    'Blog',
-                    'Contact Us'
-                ],
-                action: '',
-                actionsModal: false
-            } 
-        },
+		data () {
+			return {
+				loginModal: false,
+				registerModal: false
+			}
+		},
+		computed: {
+			loadedUser () {
+				return this.$store.getters['users/loadedUser']
+			}
+		},
         methods: {
+			async logout () {
+				await this.$store.dispatch('firebase-auth/signOut')
+			},
+			switchToRegister () {
+				this.loginModal = false
+				this.registerModal = true
+			},
+			switchToLogin () {
+				this.registerModal = false
+				this.loginModal = true
+			},
+			async signInWithGoogle() {
+				console.log('signInWithGoogle')
+				await this.$store.dispatch('firebase-auth/signInWithGooglePopup')
+				console.log('done')
+				this.$router.replace('/gamemode_jm')
+			},
 			goBack() {
 				this.$router.replace("/gamemode_gm")
 			}
