@@ -64,11 +64,9 @@
 						</div>
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
-						<nuxt-link to="/teamJoueur" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
-							<div class="menuTif">
+							<div class="menuTif hoverMatchStats" @click="loginModal = true" v-if="!loadedUser" style="text-decoration: none; color: white; width: 100%">
 								Inscris-toi vite sur TIF !
 							</div>
-						</nuxt-link>
 					</v-flex>
 				</v-layout>
 				<v-layout grid-list-xs row wrap hidden-sm-and-up style="background-color: rgb(0, 0, 0, 0.9); border-top: 1px solid darkgrey; border-bottom: 1px solid darkgrey; margin-top: 5px; margin-bottom: 5px">
@@ -763,5 +761,14 @@
 		color: black;
 		font-size: 0.9em;
 		}
+		.yourTeam {
+		color: orangered;
+		font-size: 18px;
+		}
+		.notYourTeam {
+		color: grey;
+		font-size: 18px;
+		}
+
     }
 </style>
