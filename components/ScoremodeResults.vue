@@ -57,15 +57,21 @@
                                                                                     <div v-if="props.item.statusShort === 'NS' || props.item.statusShort === 'PST' || props.item.statusShort === 'Abd' || props.item.statusShort === 'AET'" style="background-color: orangered; height: 40px; width: 2px"></div>
                                                                                 </v-flex>
                                                                                 <v-flex sm1 hidden-xs-only align-center class="text-xs-center imgTeamLogoWrapper" style="">
-                                                                                    <img :src="'/images/teams/' + props.item.homeTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
+																					<nuxt-link to="/team">
+																						<img :src="'/images/teams/' + props.item.homeTeam_slug + '.png'" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/>
+																					</nuxt-link>
                                                                                 </v-flex>
                                                                                 <v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-                                                                                    <span class="teamTextSize"><v-icon class="notYourTeam">star</v-icon> {{ props.item.homeTeam_name }}</span>
+																					<nuxt-link to="/team">
+																						<span class="teamTextSize"><v-icon class="notYourTeam">star</v-icon> {{ props.item.homeTeam_name }}</span>
+																					</nuxt-link>
                                                                                 </v-flex>
                                                                                 <v-flex sm2 xs2 class="text-xs-center">
-                                                                                    <span class="scoreBox" style="" v-if="props.item.statusShort === 'FT' || props.item.statusShort === 'AET'">
-                                                                                        {{ props.item.final_score }}
-                                                                                    </span>
+																					<nuxt-link to="/matchTermine">
+																						<span class="scoreBox" style="" v-if="props.item.statusShort === 'FT' || props.item.statusShort === 'AET'">
+																							{{ props.item.final_score }}
+																						</span>
+																					</nuxt-link>
                                                                                     <span class="scoreBox" style="" v-if="props.item.statusShort === '1H' || props.item.statusShort === '2H' || props.item.statusShort === 'HT'">
                                                                                         <transition name="fade" mode="out-in" :duration="{ enter: 3000, leave: 2000 }">
                                                                                             <span :key="props.item.goalsHomeTeam">
