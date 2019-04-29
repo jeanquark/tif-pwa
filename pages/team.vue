@@ -34,7 +34,7 @@
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-center align-center>
 						<div class="scorePF">
-							Suivre ? 5 <i class="material-icons" style="color: yellow; font-size: 25px">flash_on</i>
+							Suivre ? <span @click="loginModal = true" v-if="!loadedUser" style="text-decoration: none; color: white; width: 100%">Vous devez être inscris !</span>
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
@@ -449,7 +449,10 @@
 <script>
     import ActionsCard from '~/components/ActionsCard'
     export default {
-        components: { ActionsCard },
+		components: { 
+			Login: () => import('~/components/Login'), 
+			Register: () => import('~/components/Register')
+		},
         layout: 'layoutFront',
         data () {
             return {
@@ -504,7 +507,7 @@
 	}
 	.scorePF {
     background-color: rgb(255,255,255,0.9);
-    max-width: 80%;
+    max-width: max-content;
     padding: 10px;
     font-size: 1.2em;
     font-weight: 700;
@@ -670,7 +673,7 @@
 		overflow-x: auto;
 		}
 		.scorePF {
-		max-width: 90%;
+		max-width: max-content;
 		padding: 5px;
 		font-size: 0.8em;
 		font-weight: 600;
