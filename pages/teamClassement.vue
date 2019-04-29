@@ -167,7 +167,7 @@
 								<!-- Scrollable content -->
 								<div style="padding: 0; max-width: 100%; height: 100%; background-color: whitesmoke">
 									<!-- Standings -->
-									<scoremode-standings v-if="selectType === 1" />
+									<scoremode-standings v-if="selectType === 0" />
 								</div>
 							</v-layout>
 						</div>
