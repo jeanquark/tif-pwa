@@ -177,7 +177,7 @@
 														<div :class="[props.item.active ? 'greenBar' : 'redBar']"></div>
 													</v-flex>
 													<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none"><img :src="'/images/countries/' + country.slug + '.png'" style="width: 18px; height: 18px" />&nbsp;&nbsp;{{ props.item.name }}</nuxt-link>
+														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none">{{ props.item.name }}</nuxt-link>
 													</v-flex>
 													<v-flex sm3 hidden-xs-only class="text-xs-right">
 														<span style="background-color: green; color: white; padding: 2px 10px; border-radius: 5px; font-size: 100%">{{ props.item.nb_teams }}</span>
