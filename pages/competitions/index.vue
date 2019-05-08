@@ -759,6 +759,14 @@
 	font: normal 120%/1 "Acme", Helvetica, sans-serif;
 	padding: 2px;
 	}
+    .imgTeamLogoWrapper {
+        width: 50px; 
+        padding-right: 15px;
+    }
+    .imgTeamLogo {
+        max-width: 30px;
+        max-height: 30px;
+    }
 	
 	/* End Menu */
 
