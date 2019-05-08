@@ -123,7 +123,7 @@
 														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none">{{ props.item.name }}</nuxt-link>
 													</v-flex>
 													<v-flex sm3 hidden-xs-only class="text-xs-right">
-														Fan de : <span style="background-color: orangered; padding: 2px 10px; border-radius: 5px; font-size: 100%">FC Barcelone</span>
+														Fan de : <span style="background-color: orangered; padding: 2px 10px; border-radius: 5px; font-size: 100%">{{ props.item.nb_teams }} équipes - Fan de : FC Barcelone</span>
 													</v-flex>
 													<v-flex sm4 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
 														<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">Nb fans liés à la compétition</span>
