@@ -204,11 +204,11 @@
                 <div id="dock-container">
                     <div id="dock">
                         <ul>
-                            <li id="active">
+                            <li>
                                 <nuxt-link to="/teams"><img src="/images/menuShop.png">
                                 <span class="textMenu">Equipes</span></nuxt-link>
                             </li>
-                            <li>
+                            <li id="active">
                                 <nuxt-link to="/competitions"><img src="/images/menuResultat.png">
                                 <span class="textMenu">Compétitions</span></nuxt-link>
                             </li>
