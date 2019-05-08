@@ -180,7 +180,7 @@
 														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none">{{ props.item.name }}</nuxt-link>
 													</v-flex>
 													<v-flex sm3 hidden-xs-only class="text-xs-right">
-														<span style="background-color: green; color: white; padding: 2px 10px; border-radius: 5px; font-size: 100%">{{ props.item.nb_teams }}</span>
+														<span style="background-color: green; color: white; padding: 2px 10px; border-radius: 5px; font-size: 100%">{{ props.item.nb_teams }} équipes</span>
 													</v-flex>
 													<v-flex sm4 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
 														<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">Nb fans liés à la compétition</span>
