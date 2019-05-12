@@ -62,7 +62,7 @@
         <v-container fluid style="padding: 0; max-width: 1000px; background-color: green; color: white; style: 30px">
             <v-layout>
                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
-                    Football - Compétitions
+                    Football - Equipes
                 </v-flex>
             </v-layout>             
         </v-container>
@@ -86,7 +86,7 @@
                 <v-expansion-panel class="elevation-0" :value="0" v-if="loadedUser">
                     <v-expansion-panel-content style="background-color: orangered">
                         <div slot="header" class="white--text">
-                            MES COMPETITIONS FAVORITES
+                            MES EQUIPES FAVORITES
                         </div>
                         <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                         <v-card>
@@ -123,7 +123,7 @@
 														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none">{{ props.item.name }}</nuxt-link>
 													</v-flex>
 													<v-flex sm3 hidden-xs-only class="text-xs-right">
-														Fan de : <span style="background-color: orangered; padding: 2px 10px; border-radius: 5px; font-size: 100%">FC Barcelone</span>
+														Fan de : <span style="background-color: orangered; padding: 2px 10px; border-radius: 5px; font-size: 100%">{{ props.item.nb_teams }} équipes - Fan de : FC Barcelone</span>
 													</v-flex>
 													<v-flex sm4 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
 														<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">Nb fans liés à la compétition</span>
@@ -143,7 +143,7 @@
                 <v-expansion-panel class="elevation-0" :value="0">
                     <v-expansion-panel-content style="background-color: green">
                         <div slot="header" class="white--text">
-                           TOUTES LES COMPETITIONS
+                           TOUTES LES EQUIPES
                         </div>
                         <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                         <v-card>
@@ -177,10 +177,10 @@
 														<div :class="[props.item.active ? 'greenBar' : 'redBar']"></div>
 													</v-flex>
 													<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none">{{ props.item.name }}</nuxt-link>
+														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none"><img :src="'/images/competitions/' + props.item.image" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/> {{ props.item.name }}</nuxt-link>
 													</v-flex>
 													<v-flex sm3 hidden-xs-only class="text-xs-right">
-														<span style="background-color: green; color: white; padding: 2px 10px; border-radius: 5px; font-size: 100%">Nb équipe dans la compétition</span>
+														<span style="background-color: green; color: white; padding: 2px 10px; border-radius: 5px; font-size: 100%">{{ props.item.nb_teams }} équipes</span>
 													</v-flex>
 													<v-flex sm4 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
 														<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">Nb fans liés à la compétition</span>
@@ -203,28 +203,28 @@
 				<div class="barreBlack"></div>
                 <div id="dock-container">
                     <div id="dock">
-						<ul>
-							<li>
-								<nuxt-link to="/teams"><img src="/images/menuTeam.png">
-								<span class="textMenu">Equipes</span></nuxt-link>
-							</li>
-							<li>
-								<nuxt-link to="/competitions"><img src="/images/menuCompetition.png">
-								<span class="textMenu">Compétitions</span></nuxt-link>
-							</li>
-							<li id="active">
-								<nuxt-link to="/scoremode_gm"><img src="/images/menuHome.png">
-								<span class="textMenu">Matches du jour</span></nuxt-link>
-							</li>
-							<li>
-								<nuxt-link to="/players"><img src="/images/menuPlayer.png">
-								<span class="textMenu">Joueurs</span></nuxt-link>
-							</li>
-							<li>
-								<nuxt-link to="/tifnews"><img src="/images/menuTifnews.png">
-								<span class="textMenu">TIF News</span></nuxt-link>
-							</li>
-						</ul>
+                        <ul>
+                            <li>
+                                <nuxt-link to="/teams"><img src="/images/menuShop.png">
+                                <span class="textMenu">Equipes</span></nuxt-link>
+                            </li>
+                            <li id="active">
+                                <nuxt-link to="/competitions"><img src="/images/menuResultat.png">
+                                <span class="textMenu">Compétitions</span></nuxt-link>
+                            </li>
+                            <li>
+                                <nuxt-link to="/scoremode"><img src="/images/menuHome.png">
+                                <span class="textMenu">Matches du jour</span></nuxt-link>
+                            </li>
+                            <li>
+                                <nuxt-link to="/players"><img src="/images/menuSocial.png">
+                                <span class="textMenu">Joueurs</span></nuxt-link>
+                            </li>
+                            <li>
+                                <nuxt-link to="/tifnews"><img src="/images/menuResultat.png">
+                                <span class="textMenu">TIF News</span></nuxt-link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </v-container>
@@ -759,6 +759,14 @@
 	font: normal 120%/1 "Acme", Helvetica, sans-serif;
 	padding: 2px;
 	}
+    .imgTeamLogoWrapper {
+        width: 50px; 
+        padding-right: 15px;
+    }
+    .imgTeamLogo {
+        max-width: 30px;
+        max-height: 30px;
+    }
 	
 	/* End Menu */
 
