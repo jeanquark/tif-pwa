@@ -1,6 +1,6 @@
 const express = require("express"),
-    admin = require("firebase-admin"),
-    cookieParser = require("cookie-parser")()
+      admin = require("firebase-admin"),
+      cookieParser = require("cookie-parser")()
 
 const app = express()
 global.XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest
@@ -17,20 +17,17 @@ module.exports = app.use(function(req, res, next) {
                 .verifyIdToken(idToken)
                 .then(decodedIdToken => {
                     if (decodedIdToken.admin != true) {
-                        console.log("User 2 does not have admin privileges")
+                        console.log("User does not have admin privileges")
                         res.redirect("/")
                         // res.end('Unauthorized');
                         // res.end();
                     } else {
-                        console.log("User 2 has admin privileges")
+                        console.log("User has admin privileges")
                         next()
                     }
                 })
                 .catch(error => {
-                    console.log(
-                        "Error while verifying Firebase ID token:",
-                        error
-                    )
+                    console.log("Error while verifying Firebase ID token:", error)
                 })
         } else {
             res.redirect("/")

@@ -19,7 +19,7 @@ export default function({ store, redirect, error }) {
                         console.log(
                             "Authenticated but no admin priviledges, redirect to homepage"
                         )
-                        return redirect("/home")
+                        return redirect("/gamemode_jm")
                     }
                 })
                 .catch(error => {

@@ -4,6 +4,7 @@ const connect = require('connect'),
       url = require('url'),
       bodyParser = require('body-parser'),
       moment = require('moment'),
+    //   admin = require('../services/firebase-admin-init.js');
       admin = require('firebase-admin');
 
 // const app = connect();
@@ -156,7 +157,7 @@ function buildUserObjectOAuth (payload) {
     return user
 }
 
-module.exports = app.use(function (req, res, next) {
+module.exports = app.use(async function (req, res, next) {
     try {
         console.log('REGISTER NEW USER');
         console.log('req.body.type: ', req.body.type);
@@ -184,6 +185,7 @@ module.exports = app.use(function (req, res, next) {
             }
         });
         
+        // await admin.database().ref('users').child(userId).set(newUser);
         // res.end('Hello from RegisterNewUser!\n');
         // res.end('Successfully registered new user');
         res.send(newUser);
@@ -191,6 +193,6 @@ module.exports = app.use(function (req, res, next) {
     } 
     catch (error) {
         // res.end('Server error');
-        res.status(500).send('Server error, user could not be registered. ' + error);
+        res.status(500).send(`Server error, user could not be registered, ${error}`);
     }
 });

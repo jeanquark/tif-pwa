@@ -3,10 +3,18 @@ import {
     GoogleAuthProvider,
     FacebookAuthProvider
 } from "~/plugins/firebase-client-init.js"
-import * as firebase from "firebase/app";
-import "firebase/database";
-import axios from "axios"
-import Noty from "noty"
+import * as firebase from 'firebase/app'
+import 'firebase/database'
+
+// import * as firebase from '~/plugins/firebase-client-init.js'
+
+// import * as firebase from 'firebase/app'
+// import 'firebase/database'
+// import 'firebase/auth'
+
+import axios from 'axios'
+import Noty from 'noty'
+import { createCipher } from "crypto";
 // import moment from "moment"
 
 // Some actions require manually building promises (new Promise) because calling the listener function (on) returns a callback, not a promise.
@@ -16,40 +24,67 @@ export const state = () => ({})
 export const mutations = {}
 
 export const actions = {
-    async signUserIn({ commit }, payload) {
+    async signUserIn ({ commit }, payload) {
+        try {
+            commit('setLoading', true, { root: true })
+            let authData = await Auth.signInWithEmailAndPassword(payload.email, payload.password)
+            console.log('authData: ', authData)
+            console.log('authData.user.uid: ', authData.user.uid)
+            let userId = authData.user.uid
+            
+            let that = this
+            firebase.database().ref(`users/${userId}`).on('value', function(snapshot) {
+                console.log('snapshot.val(): ', snapshot.val())
+                // return snapshot.val()
+                commit('users/setLoadedUser', snapshot.val(), { root: true })
+                console.log('Redirect now!')
+                commit('setLoading', false, { root: true })
+                that.$router.push('/gamemode_jm')
+            })
+        } catch(error) {
+            commit('setLoading', false, { root: true })
+            commit('setError', error, { root: true })
+            console.log('error: ', error)
+            throw new Error(error)
+        }
+    },
+    async signUserIn2 ({ commit }, payload) {
         console.log(payload)
         try {
-            commit("setLoading", true, { root: true })
+            commit('setLoading', true, { root: true })
             let authData = await Auth.signInWithEmailAndPassword(
                 payload.email,
                 payload.password
             )
-            // console.log(authData)
-            const userId = authData.uid
+            console.log(authData)
+            const userId = authData.user.uid
+            console.log('userId: ', userId)
             const snapshot = await firebase
                 .database()
-                .ref("/users/" + userId)
-                .once("value")
-            commit("users/setLoadedUser", snapshot.val(), { root: true })
-            commit("setLoading", false, { root: true })
+                .ref(`/users/${userId}`)
+                .once('value')
+            commit('users/setLoadedUser', snapshot.val(), { root: true })
+            commit('setLoading', false, { root: true })
+            this.$router.push('/gamemode_jm')
         } catch (error) {
             console.log(error)
-            commit("setLoading", false, { root: true })
-            commit("setError", error, { root: true })
+            commit('setLoading', false, { root: true })
+            commit('setError', error, { root: true })
             throw new Error(error)
         }
     },
 
-    async signUserUp({ commit }, payload) {
+    async signUserUp ({ commit }, payload) {
         commit('setLoading', true, { root: true })
         try {
             let authData = await Auth.createUserWithEmailAndPassword(
+            // let authData = await firebase.auth().createUserWithEmailAndPassword(
                 payload.email,
                 payload.password
             )
             console.log('authData: ', authData)
-            console.log('authData.uid: ', authData.uid)
-            const userId = authData.uid
+            console.log('authData.uid: ', authData.user.uid)
+            const userId = authData.user ? authData.user.uid : null
             
             // Add user id to payload
             payload['id'] = userId
@@ -71,6 +106,7 @@ export const actions = {
                         timeout: 5000,
                         theme: 'metroui'
                     }).show()
+                    this.$router.push('/gamemode_jm')
                 })
                 .catch(function(error) {
                     console.log('error: ', error)
@@ -81,23 +117,55 @@ export const actions = {
                         timeout: 5000,
                         theme: 'metroui'
                     }).show()
+                    throw new Error(error)
                 })
         } catch (error) {
             console.log(error)
-            if (error.code === 'auth/email-already-in-use') {
-                new Noty({
-                    type: 'error',
-                    text: error.message,
-                    timeout: 5000,
-                    theme: 'metroui'
-                }).show()
-            }
+            commit('setError', error, { root: true })
             commit('setLoading', false, { root: true })
             throw new Error(error)
         }
     },
-    signInWithGooglePopup ({ commit, dispatch }) {
+    async signInWithGooglePopup ({ commit, dispatch }) {
+        try {
+            commit('setLoading', true, { root: true })
+            let authData = await Auth.signInWithPopup(GoogleAuthProvider)
+            console.log('authData: ', authData)
+            console.log('authData.user.uid: ', authData.user.uid)
+            let userId = authData.user ? authData.user.uid : null
+            
+            const snapshot = await firebase.database().ref(`users/${userId}`).once('value')
+            const registeredUser = snapshot.val()
+            console.log('registeredUser: ', registeredUser)
+            if (!registeredUser) {
+                console.log('User is not registered.')
+                const registeredNewUser = await axios.post('/register-new-user', {
+                    type: 'oauth',
+                    data: authData.user
+                })
+                console.log('registeredNewUser: ', registeredNewUser)
+                userId = registeredNewUser.data.id
+            }
+
+            let that = this
+            firebase.database().ref(`users/${userId}`).on('value', function(snapshot) {
+                console.log('snapshot.val(): ', snapshot.val())
+                // return snapshot.val()
+                commit('users/setLoadedUser', snapshot.val(), { root: true })
+                console.log('Redirect now!')
+                commit('setLoading', false, { root: true })
+                that.$router.push('/gamemode_jm')
+            })
+        } catch (error) {
+            console.log('error2: ', error)
+            commit('setError', error, { root: true })
+            commit('setLoading', false, { root: true })
+            throw new Error(error)
+        }
+    },
+    signInWithGooglePopup2 ({ commit, dispatch }) {
         return new Promise((resolve, reject) => {
+            commit('setLoading', true, { root: true })
             // 1) First sign in with Google
             let userId = ''
             Auth.signInWithPopup(GoogleAuthProvider).then(authData => {
@@ -108,8 +176,45 @@ export const actions = {
             }).then(() => { // 2) Then update users state
                 console.log('userId: ', userId)
                 firebase.database().ref(`users/${userId}`).on('value', function(snapshot) {
-                    console.log('snaspshot.val(): ', snapshot.val())
+                    const registeredUser = snapshot.val()
+                    console.log('registeredUser: ', registeredUser)
+
+                    // If user does not exists, save user data in database at the users node
+                    if (!registeredUser) {
+                        return axios
+                            .post('/register-new-user', {
+                                type: 'oauth',
+                                data: authData.user
+                            })
+                            .then(response => {
+                                // Load newly registered user in store
+                                commit('users/setLoadedUser', response.data, { root: true })
+                                // commit('setLoading', false, { root: true })
+                                new Noty({
+                                    type: 'success',
+                                    text: 'Successful registration',
+                                    timeout: 10000,
+                                    theme: 'metroui'
+                                }).show()
+                            })
+                            .catch(function(error) {
+                                commit('setLoading', false, { root: true })
+                                new Noty({
+                                    type: 'error',
+                                    text: 'Sorry, an error occured during your registration process.',
+                                    timeout: 5000,
+                                    theme: 'metroui'
+                                }).show()
+                            })
+                    } else {
+                        // Load user in store
+                        commit('users/setLoadedUser', registeredUser, { root: true })
+                        commit('setLoading', false, { root: true })
+                        // new Noty({type: 'success', text: this.app.i18n.t('messages.login.success'), timeout: 5000, theme: 'metroui'}).show()
+                    }
+
                     commit('users/setLoadedUser', snapshot.val(), { root: true })
+                    commit('setLoading', false, { root: true })
                     resolve()
                 })
             }).catch(error => {
@@ -118,13 +223,13 @@ export const actions = {
             }) 
         })
     },
-    async signInWithGooglePopup2({ commit, dispatch }) {
+    async signInWithGooglePopup3({ commit, dispatch }) {
         try {
             commit('setLoading', true, { root: true })
             let authData = await Auth.signInWithPopup(GoogleAuthProvider)
             console.log('authData: ', authData)
             console.log('authData.user: ', authData.user)
-            const userId = authData.user.uid
+            const userId = authData.user ? authData.user.uid : null
             console.log('userId: ', userId)
 
             // Set authenticated user

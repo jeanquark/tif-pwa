@@ -41,9 +41,16 @@ module.exports = {
         [
             "nuxt-fontawesome",
             {
-                component: "fa",
+                // component: "fa",
+                // imports: [
+                //     // import whole set
+                //     {
+                //         set: "@fortawesome/free-solid-svg-icons",
+                //         icons: ["fas"]
+                //     }
+                // ]
                 imports: [
-                    // import whole set
+                    // import whole set of free icons
                     {
                         set: "@fortawesome/free-solid-svg-icons",
                         icons: ["fas"]
@@ -97,7 +104,8 @@ module.exports = {
         { src: '~/plugins/vue-notifications.js', ssr: false },
         { src: '~/plugins/vue-swal.js', ssr: false },
         { src: '~/plugins/vue-carousel-3d', ssr: false },
-        { src: '~/plugins/vue-lazyload', ssr: false }
+        { src: '~/plugins/vue-lazyload', ssr: false },
+        { src: '~/plugins/vue2-jsoneditor', ssr: false },
     ],
     serverMiddleware: [
         "~/serverMiddleware/validateFirebaseIdToken",
@@ -160,11 +168,21 @@ module.exports = {
         {
             path: "/api/fetch-ending-matches", // GET request
             handler: "~/serverMiddleware/api/fetchEndingMatches"
-        }
+        },
         // {
         //     path: "/api/fetch-league-standing",
         //     handler: "~/serverMiddleware/api/fetchLeagueStanding"
         // }
+        { 
+            path: '/update-user-status',
+            handler: '~/serverMiddleware/updateUserStatus'
+        },
+        { 
+            path: '/set-custom-claims',
+            handler: '~/serverMiddleware/setCustomClaims'
+        },
+
+
     ],
     css: ["~/assets/style/app.styl"],
     build: {

@@ -79,7 +79,7 @@
                         	>
                           		<v-avatar>
                             		<!-- <img :src="data.item.avatar"> -->
-	                            	<img :src="`/images/countries/${data.item.flags}`">
+	                            	<img :src="`/images/countries/${data.item.flag}`">
                           		</v-avatar>
                           		{{ data.item.name }}
                         	</v-chip>
@@ -94,7 +94,7 @@
                         	<template v-else>
 	                          	<v-list-tile-avatar>
 	                            	<!-- <img :src="data.item.avatar"> -->
-                            		<img :src="`/images/countries/${data.item.flags}`">
+                            		<img :src="`/images/countries/${data.item.flag}`">
                           		</v-list-tile-avatar>
                           		<v-list-tile-content>
 		                            <v-list-tile-title v-html="data.item.name"></v-list-tile-title>
@@ -199,9 +199,9 @@
 
                 await this.$store.dispatch('firebase-auth/signUserUp', this.form)
                 if (this.$i18n.locale != 'en') {
-                    this.$router.replace('/' + this.$i18n.locale + '/home')
+                    this.$router.replace('/' + this.$i18n.locale + '/gamemode_jm')
                 } else {
-                    this.$router.replace('/home')
+                    this.$router.replace('/gamemode_jm')
                 }
             }
         }

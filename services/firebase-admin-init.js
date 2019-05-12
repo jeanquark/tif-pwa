@@ -6,3 +6,7 @@ module.exports = admin.initializeApp({
   credential: admin.credential.cert(key),
   databaseURL: `https://${key.project_id}.firebaseio.com`
 });
+
+// module.exports = (!admin.apps.length
+//   ? admin.initializeApp(config)
+//   : admin.app());

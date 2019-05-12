@@ -46,9 +46,10 @@ export const actions = {
             console.log('User is logged in from nuxtServerInit')
             const userId = req.user.uid
             console.log('userId: ', userId)
+            commit('users/setLoadedUser', req.user, { root: true })
+
             // await dispatch('users/loadedUser2', userId, { root: true})
-            // commit('users/setLoadedUser', req.user, { root: true })
-            await dispatch('users/fetchAuthenticatedUser2', req.user)
+            // await dispatch('users/fetchAuthenticatedUser2', req.user)
             // this.$router.push({ path: '/gamemode_jm' })
 
             // firebase.auth().onAuthStateChanged(user => {
@@ -77,15 +78,19 @@ export const actions = {
             console.log('User is not logged in from nuxtServerInit')
         }
     },
-    nuxtClientInit({ commit, rootState }, context) { // Added package (not present in default nuxt)
+    nuxtClientInit({ commit, rootState, rootGetters }, context) { // Added package (not present in default nuxt)
         try {
             console.log('nuxtClientInit')
-            const userId = rootState.users.loadedUser.id
-            console.log('userId: ', userId)
-            firebase.database().ref(`/users/${userId}`).on('value', function(snapshot) {
-                console.log('snapshot.val(): ', snapshot.val())
-                commit('users/setLoadedUser', snapshot.val(), { root: true })
-            })
+            // const userId2 = rootState.users.loadedUser ? rootState.users.loadedUser.id : null
+            const userId = rootGetters['users/loadedUser'] ? rootGetters['users/loadedUser'].uid : null
+            console.log('userId from nuxtClientInit: ', userId)
+            // const userId = 'AdGWmQi4aadNeVgQxkfRKZHQzvb2'
+            if (userId) {
+                firebase.database().ref(`/users/${userId}`).on('value', function(snapshot) {
+                    console.log('snapshot.val() from nuxtClientInit: ', snapshot.val())
+                    commit('users/setLoadedUser', snapshot.val(), { root: true })
+                })
+            }
         } catch (error) {
             console.log('nuxtClientInit error: ', error)
         }

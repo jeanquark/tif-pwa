@@ -26,7 +26,7 @@ export const state = () => ({
 
 export const mutations = {
     setLoadedUser(state, payload) {
-        // console.log('entering setLoadedUser mutation')
+        console.log('entering setLoadedUser mutation')
         state.loadedUser = payload
     },
     setAllUsers(state, payload) {
@@ -66,50 +66,50 @@ export const actions = {
     },
     async updateUserAccount({ commit, state, dispatch }, payload) {
         // We have to update user custom claims in token and user status in database
-        console.log("async updateUserAccount")
+        console.log('async updateUserAccount')
         try {
             const userId = payload.user.id
             const userEmail = payload.user.email
             const action = payload.action
             let status = {}
-            if (action == "userToAdmin") {
+            if (action == 'userToAdmin') {
                 status = {
-                    value: "admin",
-                    updated_at: moment().unix()
+                    value: 'admin',
+                    _updated_at: moment().unix()
                 }
-            } else if (action == "adminToUser") {
+            } else if (action == 'adminToUser') {
                 status = {
-                    value: "user",
-                    updated_at: moment().unix()
+                    value: 'user',
+                    _updated_at: moment().unix()
                 }
             }
-            console.log("status: ", status)
+            console.log('status: ', status)
 
             let promises = []
-            promises.push(axios.post("/setCustomClaims", { userEmail, action }))
-            promises.push(axios.post("/update-user-status", { userId, status }))
+            promises.push(axios.post('/set-custom-claims', { userEmail, action }))
+            promises.push(axios.post('/update-user-status', { userId, status }))
 
             axios
                 .all(promises)
                 .then(
                     axios.spread(function(claims, status) {
-                        console.log("claims: ", claims)
-                        console.log("status: ", status)
+                        console.log('claims: ', claims)
+                        console.log('status: ', status)
                         new Noty({
-                            type: "success",
-                            text: "Successfully updated user status.",
+                            type: 'success',
+                            text: 'Successfully updated user status.',
                             timeout: 5000,
-                            theme: "metroui"
+                            theme: 'metroui'
                         }).show()
                     })
                 )
                 .catch(error => {
-                    console.log("error: ", error)
+                    console.log('error: ', error)
                     new Noty({
-                        type: "error",
-                        text: "Could not update user status." + error,
+                        type: 'error',
+                        text: 'Could not update user status.' + error,
                         timeout: 5000,
-                        theme: "metroui"
+                        theme: 'metroui'
                     }).show()
                 })
         } catch (error) {
@@ -119,16 +119,18 @@ export const actions = {
     },
     fetchUser ({ commit }, payload) {
         console.log('Entering fetchUser action: ')
-        // const userId = payload.userId
-        const userId = 'zoKAPbbEQ5Q0ENXBzarjQw2WyEZ2'
+        const userId = payload.userId
+        // const userId = 'zoKAPbbEQ5Q0ENXBzarjQw2WyEZ2'
         // const userId = firebase.auth().currentUser.uid
         firebase.database().ref(`/users/${userId}`).on('value', function(snapshot) {
             commit('setLoadedUser', snapshot.val())
         })
     },
     fetchAuthenticatedUser ({ commit }, payload) {
-        console.log('Call to fetchAuthenticatedUser action: ', payload)        
-        firebase.database().ref(`/users/zoKAPbbEQ5Q0ENXBzarjQw2WyEZ2`).on('value', function(snapshot) {
+        console.log('Call to fetchAuthenticatedUser action: ', payload)
+        const userId = payload.id
+        console.log('userId: ', userId)              
+        firebase.database().ref(`/users/${userId}`).on('value', function(snapshot) {
             console.log('snapshot.val(): ', snapshot.val())
             commit('setLoadedUser', snapshot.val())
         })
@@ -346,7 +348,8 @@ export const actions = {
     async loadedUserTeams({ commit, state }) {
         try {
             // console.log('Entering loadedUserTeams action')
-            const userId = firebase.auth().currentUser.uid
+            // const userId = firebase.auth().currentUser.uid
+            const userId = state.loadedUser.id
             const userTeams = []
             const temp = []
 

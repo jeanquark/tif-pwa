@@ -2,7 +2,10 @@
     <v-toolbar dark color="blue">
         <v-toolbar-side-icon></v-toolbar-side-icon>
 
-        <v-toolbar-title class="white--text">ScoreMode</v-toolbar-title>
+        <v-toolbar-title class="white--text">ScoreMode</v-toolbar-title>&nbsp;
+        <nuxt-link to="/gamemode_jm">Gamemode</nuxt-link>&nbsp;
+        <nuxt-link to="/teams/lausanne_sport">Lausanne-Sport</nuxt-link>&nbsp;
+        <nuxt-link to="/teams/neuchatel_xamax">Neuchâtel Xamax</nuxt-link>&nbsp;
 
         <v-spacer></v-spacer>
 

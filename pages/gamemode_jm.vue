@@ -49,7 +49,7 @@
     import moment from 'moment'
     export default {
         components: { GamemodeHeader, ActionsCard },
-        layout: 'layoutFront_jm',
+        layout: 'layoutFront',
         created () {
             // this.$store.dispatch('users/fetchUser')
             // this.$store.dispatch('users/fetchUserActions')

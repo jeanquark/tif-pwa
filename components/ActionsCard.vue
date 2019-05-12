@@ -5,7 +5,7 @@
                 <h1 class="text-xs-left" style="color: white; font-family: Acme">Action cards {{ this.theme }}</h1>
             </v-flex>
             <v-flex xs6 class="text-xs-right">
-                <fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="closeModal" />
+                <font-awesome-icon :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="closeModal" />
             </v-flex>
         </v-card-title>
 
@@ -35,8 +35,46 @@
                 <v-layout row wrap align-center justify-center>
                     <span v-if="!loadedActionsByTheme">Loading...</span>
                     <v-flex xs12 sm8 md4 v-for="(action, index) in loadedActionsByTheme" :key="action.slug" class="pa-2">
+
+
+
+                        <div class="flip-card" :class="[isAnimated[index] ? 'animated shake' : '']" style="border: 2px solid green;">
+                            <v-card hover class="flip-card-inner" :class="[ isFlipped[index] ? 'flipped' : '' ]" @click="toggleFlip(index, action)" style="background-color: white; border: 2px solid darkred; border-radius: 5px; position: relative; min-height: 73%">
+                                <div class="flip-card-front">
+                                    <div>
+                                        <span class="gommetteEnergy yellow" style="backface-visibility: hidden;">
+                                            <i class="material-icons gommetteIcone">flash_on</i>
+                                        </span>
+                                        <span class="gommetteDollar green" style="backface-visibility: hidden;">
+                                            <i class="material-icons gommetteIcone">attach_money</i>
+                                        </span>
+                                        <span class="gommetteToken blackOpacity" style="backface-visibility: hidden;">
+                                            <i class="material-icons gommetteIcone">title</i>
+                                        </span>
+                                        <v-spacer></v-spacer>
+                                        <span class="gommetteNiveau darkred" style="backface-visibility: hidden;">
+                                            <v-icon style="color: white">star</v-icon> N1
+                                        </span>
+                                        <!-- <img src="/images/stress.jpg" class="" style="width: 100%;" /> -->
+                                    </div>
+                                    <v-container fill-height>
+                                        <!-- <v-layout> -->
+                                            <!-- <h2>Front</h2> -->
+                                            <img src="/images/stress.jpg" class="" style="width: 100%;" />
+                                        <!-- </v-layout> -->
+                                    </v-container>
+                                </div>
+                                <div class="flip-card-back" v-if="isFlipped[index]">
+                                    Back
+                                    
+                                </div>
+                            </v-card>
+                        </div>
+
+
+
                         <!-- <div class="flip-card animated shake delay-2s"> -->
-                        <div class="flip-card" :class="[isAnimated[index] ? 'animated shake' : '']">
+                        <div class="flip-card" :class="[isAnimated[index] ? 'animated shake' : '']" v-if="!loadedUser">
                             <v-card hover class="flip-card-inner" :class="[ isFlipped[index] ? 'flipped' : '' ]" @click="toggleFlip(index, action)" style="border: 1px solid red;">
                                 <div class="flip-card-front">
                                     <h1>{{ action.name }}</h1>
@@ -328,7 +366,7 @@
         background-color: transparent;
         /* width: 150px; */
         /* width: 25%; */
-        height: 280px;
+        height: 250px;
         /* border: 1px solid #f1f1f1; */
         perspective: 1000px; /* Remove this if you don't want the 3D effect */
     }
@@ -368,5 +406,108 @@
         -moz-transform: rotateY( 180deg );
         -o-transform: rotateY( 180deg );
         transform: rotateY( 180deg );
+    }
+
+    /* CSS Gaël */
+    .imgInventory {
+        width: 100%;
+    }
+    .gommetteNiveau {
+        position: absolute; 
+        top: 10px; 
+        right: 10px; 
+        font-size: 20px; 
+        padding: 5px; 
+        border-radius: 5px; 
+        color: white;
+    }
+    .gommetteStyle {
+        position: absolute; 
+        bottom: 10px; 
+        right: 10px; 
+        font-size: 20px; 
+        padding: 5px; 
+        border-radius: 5px; 
+        color: white;
+    }
+    .gommetteEnergy {
+        padding: 5px; 
+        position: absolute; 
+        top: 10px; 
+        left: 5px; 
+        border-radius: 50%;
+        color: white;
+        z-index: 3;
+    }
+    .gommetteDollar {
+        padding: 5px; 
+        position: absolute; 
+        top: 10px; 
+        left: 25px; 
+        border-radius: 50%;
+        color: white;
+        z-index: 2;
+    }	
+    .gommetteToken {
+        padding: 5px; 
+        position: absolute; 
+        top: 10px; 
+        left: 45px; 
+        border-radius: 50%; 
+        color: white;
+        z-index: 1;
+    }
+    .gommetteIcone {
+        margin-top: 3px; 
+        font-size: 25px;
+    }
+    .blackOpacity {
+        background-color: black;
+        opacity: 0.25;
+    }
+    .darkred {
+        background-color: darkred;
+        color: white;
+    }
+    @media only screen and (max-width: 768px) {
+        .imgInventory {
+	        width: 70%;
+	    }
+        .gommetteNiveau {
+            font-size: 16px; 
+        }
+        .gommetteStyle {
+            font-size: 16px; 
+        }
+        .gommetteEnergy {
+            padding: 5px; 
+            position: absolute; 
+            top: 10px; 
+            left: 5px; 
+            border-radius: 50%;
+            color: white;
+            z-index: 3;
+        }
+        .gommetteDollar {
+            padding: 5px; 
+            position: absolute; 
+            top: 10px; 
+            left: 25px; 
+            border-radius: 50%;
+            color: white;
+            z-index: 2;
+        }	
+        .gommetteToken {
+            padding: 5px; 
+            position: absolute; 
+            top: 10px; 
+            left: 45px; 
+            border-radius: 50%; 
+            color: white;
+            z-index: 1;
+        }
+        .gommetteIcone {
+            font-size: 20px;
+        }
     }
 </style>

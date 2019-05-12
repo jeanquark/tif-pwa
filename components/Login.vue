@@ -1,10 +1,18 @@
 <template>
 	<v-card class="elevation-12">
-        <v-toolbar dark color="deep-orange">
-            <v-toolbar-title>Login</v-toolbar-title>
-        </v-toolbar>
+        <v-card-title align-center justify-center style="background-color: orangered; min-height: 60px;">
+            <h2 class="white--text">Login</h2>
+        </v-card-title>
         <v-card-text>
             <v-form>
+                <v-alert
+                    type="error"
+                    :value="error"
+                    v-if="error"
+                    class="mb-4"
+                    >
+                    {{ $t(`auth-validation-rules.${error.code}`) }}
+                </v-alert>
                 <v-text-field 
                     prepend-icon="person" 
                     name="email" 
@@ -21,19 +29,21 @@
                     v-model="form.password"
                 ></v-text-field>
             </v-form>
-
-            <v-btn block color="#df4a32" class="white--text" @click="signInWithGoogle">Login with Google</v-btn>
-            <v-btn block color="#3c5a99" class="white--text">Login with Facebook</v-btn>
         </v-card-text>
         <v-card-actions class="">
             <v-layout row wrap>
                 <v-flex xs12>
-                    <v-layout >
-                        <v-flex xs12 class="text-xs-center">
-                            <v-btn color="success" @click="signUserIn">Login</v-btn>
-                        </v-flex>
-                    </v-layout>
+                    <v-flex xs12 class="text-xs-center mb-3">
+                        <v-btn color="success" @click="signUserIn">Login</v-btn>
+                    </v-flex>
                 </v-flex>
+                <v-flex xs12 class="mb-2">
+                    <v-btn block color="#df4a32" class="white--text" @click="signInWithGoogle">Login with Google</v-btn>
+                </v-flex>
+                <v-flex xs12 class="mb-3">
+                    <v-btn block color="#3c5a99" class="white--text">Login with Facebook</v-btn>
+                </v-flex>
+
                 <v-flex xs12>
                     <v-layout>
                         <v-flex xs12 class="text-xs-center">
@@ -47,6 +57,7 @@
                         </v-flex>
                     </v-layout>
                 </v-flex>
+                
             </v-layout>
         </v-card-actions>
     </v-card>
@@ -54,6 +65,9 @@
 
 <script>
 	export default {
+        mounted () {
+            this.$store.commit('clearError')
+        },
 		data () {
 			return {
                 form: {
@@ -63,6 +77,9 @@
 			}
 		},
         computed: {
+            error () {
+                return this.$store.getters['error']
+            },
         },
         methods: {
             signUserIn () {

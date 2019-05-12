@@ -6,11 +6,15 @@ import Noty from 'noty'
 axios.defaults.headers.post['Content-Type'] = 'multipart/form-data'
 
 export const state = () => ({
+    loadedTeam: {},
 	loadedTeams: []
 })
 
 export const mutations = {
-	setTeams(state, payload) {
+    setTeam (state, payload) {
+        state.loadedTeam = payload
+    },
+	setTeams (state, payload) {
         state.loadedTeams = payload
     },
     createTeam (state, payload) {
@@ -23,6 +27,14 @@ export const mutations = {
 }
 
 export const actions = {
+    // Get a particular team
+    async fetchTeam ({ commit }, payload) {
+        // console.log('payload: ', payload)
+        const team = await firebase.database().ref('/teams').child(payload).once('value')
+        console.log('team.val(): ', team.val())
+        commit('setTeam', team.val())
+        // return team
+    },
 	// Load all teams
 	loadedTeams ({commit}) {
     	firebase.database().ref('/teams/').orderByChild('slug').once('value').then(function (snapshot) {
@@ -110,7 +122,10 @@ export const actions = {
 }
 
 export const getters = {
-	loadedTeams(state) {
+    loadedTeam (state) {
+        return state.loadedTeam
+    },
+	loadedTeams (state) {
         return state.loadedTeams
     }
 }
