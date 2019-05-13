@@ -46,35 +46,75 @@ function buildUserObject (payload) {
 		value: 0,
 		_udpated_at: moment().unix()
 	},
-	user.skillStrength = {
+	user.skillStrength = { // Physique
 		value: 1,
 		_udpated_at: moment().unix()
 	},
-	user.skillEndurance = {
+	user.skillEndurance = { // Endurance
 		value: 1,
 		_udpated_at: moment().unix()
 	},
-	user.skillMental = {
+	user.skillMental = { // Mental
 		value: 1,
 		_udpated_at: moment().unix()
 	},
-	user.skillIntelligence = {
+	user.skillMedical = { // Médical
 		value: 1,
 		_udpated_at: moment().unix()
 	},
-	user.skillCreativity = {
+	user.skillCreativity = { // Artistique
 		value: 1,
 		_udpated_at: moment().unix()
 	},
-	user.skillAuthority = {
+	user.skillAuthority = { // Leadership
 		value: 1,
 		_udpated_at: moment().unix()
 	},
-	user.skillSpiel = {
+	user.skillSpiel = { // Baratin
 		value: 1,
 		_udpated_at: moment().unix()
 	},
-	user.skillSocial = {
+	user.skillSocial = { // Travail d'équipe
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillPuissance = { // Puissance
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillZen = { // Zenitude
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillSpeed = { // Vitesse
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillGoodManners = { // Savoir-Vivre
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillHumor = { // Humour
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillCharisma = { // Charisme
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillMusical = { // Musical
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillEngineering = { // Ingénierie
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillTechnology = { // Technologie
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillResourcefulness = { // Débrouillardise
 		value: 1,
 		_udpated_at: moment().unix()
 	},
@@ -116,37 +156,77 @@ function buildUserObjectOAuth (payload) {
 		value: 0,
 		udpated_at: moment().unix()
 	},
-	user.skillStrength = {
+	user.skillStrength = { // Physique
 		value: 1,
-		udpated_at: moment().unix()
+		_udpated_at: moment().unix()
 	},
-	user.skillEndurance = {
+	user.skillEndurance = { // Endurance
 		value: 1,
-		udpated_at: moment().unix()
+		_udpated_at: moment().unix()
 	},
-	user.skillMental = {
+	user.skillMental = { // Mental
 		value: 1,
-		udpated_at: moment().unix()
+		_udpated_at: moment().unix()
 	},
-	user.skillIntelligence = {
+	user.skillMedical = { // Médical
 		value: 1,
-		udpated_at: moment().unix()
+		_udpated_at: moment().unix()
 	},
-	user.skillCreativity = {
+	user.skillCreativity = { // Artistique
 		value: 1,
-		udpated_at: moment().unix()
+		_udpated_at: moment().unix()
 	},
-	user.skillAuthority = {
+	user.skillAuthority = { // Leadership
 		value: 1,
-		udpated_at: moment().unix()
+		_udpated_at: moment().unix()
 	},
-	user.skillSpiel = {
+	user.skillSpiel = { // Baratin
 		value: 1,
-		udpated_at: moment().unix()
+		_udpated_at: moment().unix()
 	},
-	user.skillSocial = {
+	user.skillSocial = { // Travail d'équipe
 		value: 1,
-		udpated_at: moment().unix()
+		_udpated_at: moment().unix()
+	},
+	user.skillPuissance = { // Puissance
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillZen = { // Zenitude
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillSpeed = { // Vitesse
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillGoodManners = { // Savoir-Vivre
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillHumor = { // Humour
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillCharisma = { // Charisme
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillMusical = { // Musical
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillEngineering = { // Ingénierie
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillTechnology = { // Technologie
+		value: 1,
+		_udpated_at: moment().unix()
+	},
+	user.skillResourcefulness = { // Débrouillardise
+		value: 1,
+		_udpated_at: moment().unix()
 	},
     user.status = {
         value: 'user',
