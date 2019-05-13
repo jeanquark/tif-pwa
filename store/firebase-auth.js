@@ -301,7 +301,44 @@ export const actions = {
             commit('setLoading', false, { root: true })
         }
     },
-    async signInWithFacebookPopup({ commit }) {
+    async signInWithFacebookPopup ({ commit }) {
+        try {
+            commit('setLoading', true, { root: true })
+            let authData = await Auth.signInWithPopup(FacebookAuthProvider)
+            console.log('authData: ', authData)
+            console.log('authData.user.uid: ', authData.user.uid)
+            let userId = authData.user ? authData.user.uid : null
+            
+            const snapshot = await firebase.database().ref(`users/${userId}`).once('value')
+            const registeredUser = snapshot.val()
+            console.log('registeredUser: ', registeredUser)
+            if (!registeredUser) {
+                console.log('User is not registered.')
+                const registeredNewUser = await axios.post('/register-new-user', {
+                    type: 'oauth',
+                    data: authData.user
+                })
+                console.log('registeredNewUser: ', registeredNewUser)
+                userId = registeredNewUser.data.id
+            }
+
+            let that = this
+            firebase.database().ref(`users/${userId}`).on('value', function(snapshot) {
+                console.log('snapshot.val(): ', snapshot.val())
+                // return snapshot.val()
+                commit('users/setLoadedUser', snapshot.val(), { root: true })
+                console.log('Redirect now!')
+                commit('setLoading', false, { root: true })
+                that.$router.push('/gamemode_jm')
+            })
+        } catch (error) {
+            console.log('error2: ', error)
+            commit('setError', error, { root: true })
+            commit('setLoading', false, { root: true })
+            throw new Error(error)
+        }
+    },
+    async signInWithFacebookPopup2 ({ commit }) {
         try {
             commit("setLoading", true, { root: true })
             let authData = await Auth.signInWithPopup(FacebookAuthProvider)

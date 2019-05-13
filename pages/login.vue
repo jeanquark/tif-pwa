@@ -96,8 +96,8 @@
 		data() {
             return {
                 form: {
-                    email: 'jm.kleger@gmail.com',
-                    password: 'secret'
+                    email: '',
+                    password: ''
                 }
             }
 		},

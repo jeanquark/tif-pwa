@@ -87,8 +87,7 @@
 					<v-flex d-flex xs6 justify-center align-center>
 						<div class="menuMatch" style="border-right: 1px solid darkgrey">
 							Joueurs
-						</div>	
-						</nuxt-link>
+						</div>
 					</v-flex>
 					<v-flex d-flex xs6 justify-center align-center>
 						<nuxt-link to="/teamStatistique" class="hoverMatchStats" style="text-decoration: none; color: white; width: 100%">
