@@ -17,7 +17,8 @@ function buildUserObject (payload) {
     let user = {}
     user.id = payload.id,
     user.email = payload.email,
-    // user.username = payload.username ? payload.username : '',
+    user.pseudo = payload.pseudo ? payload.pseudo : '',
+	user.birthyear = payload.userbirthyear ? payload.userbirthyear : '',
     user.country = {
         name: payload.country.name ? payload.country.name : '',
         slug: payload.country.slug ? payload.country.slug : ''
@@ -118,6 +119,38 @@ function buildUserObject (payload) {
 		value: 1,
 		_udpated_at: moment().unix()
 	},
+	user.stuffAvatarTete = { // Stuff avatar Tête
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarVisage = { // Stuff avatar Visage
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarTorse = { // Stuff avatar Torse
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarBras = { // Stuff avatar Bras
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarJambes = { // Stuff avatar Jambes
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarPieds = { // Stuff avatar Pieds
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarAccessory1 = { // Stuff avatar Accessory1
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarAccessory2 = { // Stuff avatar Accessory2
+		value: '',
+		_updated_at: moment().unix()
+	},
     user.status = {
         value: 'user',
         _updated_at: moment().unix()
@@ -131,7 +164,8 @@ function buildUserObjectOAuth (payload) {
     let user = {}
     user.id = payload.uid,
     user.email = payload.email,
-    user.username = '',
+    user.pseudo = '',
+	user.userbirthyear = '',
     user.country = {
         name: '',
         slug: ''
@@ -227,6 +261,38 @@ function buildUserObjectOAuth (payload) {
 	user.skillResourcefulness = { // Débrouillardise
 		value: 1,
 		_udpated_at: moment().unix()
+	},
+	user.stuffAvatarTete = { // Stuff avatar Tête
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarVisage = { // Stuff avatar Visage
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarTorse = { // Stuff avatar Torse
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarBras = { // Stuff avatar Bras
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarJambes = { // Stuff avatar Jambes
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarPieds = { // Stuff avatar Pieds
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarAccessory1 = { // Stuff avatar Accessory1
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarAccessory2 = { // Stuff avatar Accessory2
+		value: '',
+		_updated_at: moment().unix()
 	},
     user.status = {
         value: 'user',
