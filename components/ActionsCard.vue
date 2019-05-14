@@ -65,7 +65,7 @@
                                     </v-container>
                                 </div>
                                 <div class="flip-card-back" v-if="isFlipped[index]">
-                                    Back
+                                    Back 2
                                     
                                 </div>
                             </v-card>
