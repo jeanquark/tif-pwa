@@ -18,7 +18,7 @@ function buildUserObject (payload) {
     user.id = payload.id,
     user.email = payload.email,
     user.pseudo = payload.pseudo ? payload.pseudo : '',
-	// user.birthyear = payload.userbirthyear ? payload.userbirthyear : '',
+	user.birthyear = payload.userbirthyear ? payload.userbirthyear : '',
     user.country = {
         name: payload.country.name ? payload.country.name : '',
         slug: payload.country.slug ? payload.country.slug : ''
