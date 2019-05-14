@@ -54,6 +54,16 @@
                         :error-messages="errors.collect('password_confirm')"
                         data-vv-as="Repeat Password"
                     ></v-text-field>
+                    <v-text-field
+                        label="Pseudo"
+                        type="pseudo"
+                        v-model="form.pseudo"
+                        name="pseudo"
+                        v-validate="'required|max:15'"
+                        :error="errors.has('pseudo')"
+                        :error-messages="errors.collect('pseudo')"
+                        data-vv-as="Pseudo"
+                    ></v-text-field>
 
                     <v-autocomplete
                       	v-model="form.country"
@@ -171,6 +181,7 @@
                 email: '',
                 password: '',
                 password_confirm: '',
+				pseudo: '',
                 country: null
             }
         }),
