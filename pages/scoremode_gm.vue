@@ -5,7 +5,7 @@
 			<scoremode-header />
 			
             <!-- Scrollable content -->
-            <div class="content" style="height: 100vh; border-right: 1px solid orangered; border-left: 1px solid orangered">
+            <div class="content" style="height: 100vh; border-right: 1px solid orangered; border-left: 1px solid orangered; padding: 10px 0">
 				<v-layout>
 						
 					<!-- Scrollable content -->
