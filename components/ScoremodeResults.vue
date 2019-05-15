@@ -14,13 +14,13 @@
                                 <v-card-text style="padding: 0">	
                                     <v-expansion-panel class="elevation-0" :value="0" style="margin-top: 10px; margin-bottom: 10px">
                                         <v-expansion-panel-content style="background-color: orangered">
-											<div slot="header" class="white--text" style="height: 25px; min-height: 0">
+											<div slot="header" class="white--text">
 												MOST POPULAR
 											</div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                                             <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedPopularCompetitions" :key="competition.slug">
                                                 <v-expansion-panel-content class="black">
-													<div slot="header" class="white--text" style="height: 25px; min-height: 0">
+													<div slot="header" class="white--text">
 														<div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
 															<img :src="'/images/countries/' + country.slug + '.png'" style="width: 18px; height: 18px" />&nbsp;&nbsp;{{ competition.name }}
 														</div>
@@ -294,7 +294,10 @@
             convertToLocalTime (timestamp) {
                 return moment.unix(timestamp).format('HH:mm')
             }
-		}
+		},
+		mounted() {
+				$('.v-expansion-panel__header').css('min-height' ,'25px' ,'padding' , '5px 5px');
+		}	
 	}
 </script>
 
