@@ -13,8 +13,8 @@
                             <v-card flat>
                                 <v-card-text style="padding: 0">	
                                     <v-expansion-panel class="elevation-0" :value="0" style="margin-top: 10px; margin-bottom: 10px">
-                                        <v-expansion-panel-content style="background-color: orangered">
-											<div slot="header" class="white--text">
+                                        <v-expansion-panel-content style="background-color: orangered; height: 25px">
+											<div slot="header" height="25" class="white--text" style="height: 25px">
 												MOST POPULAR
 											</div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
