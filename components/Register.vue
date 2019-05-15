@@ -27,7 +27,7 @@
                     <span class="caption grey--text text--darken-1">
                         This is the email you will use to login to your ThisIsFan account
                     </span><br />
-                    <!-- <span>{{ errors.first('email') }}</span> -->
+                   <span>{{ errors.first('email') }}</span>
                 </v-card-text>
           	</v-window-item>
 
@@ -54,6 +54,17 @@
                         :error-messages="errors.collect('password_confirm')"
                         data-vv-as="Repeat Password"
                     ></v-text-field>
+					<v-card-text>
+						<v-text-field
+							label="Pseudo"
+							v-model="form.pseudo"
+							name="pseudo"
+							v-validate="'required|max:15'"
+							:error="errors.has('pseudo')"
+							:error-messages="errors.collect('pseudo')"
+							data-vv-as="Pseudo"
+						></v-text-field>
+					</v-card-text>
 
                     <v-autocomplete
                       	v-model="form.country"
