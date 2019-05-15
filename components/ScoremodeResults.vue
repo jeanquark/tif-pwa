@@ -329,10 +329,15 @@
         border-radius: 5px; 
         font-size: 1.3em;
     }
-	.justify-content-center {
-	justify-content: center;
+	.v-expansion-panel--header {
+		display: flex;
+		cursor: pointer;
+		align-items: center;
+		position: relative;
+		padding: 6px 12px;
+		min-height: 25px;
 	}
-
+	
     /* Transition effects on score by J-M */
     .fade-enter-active, .fade-leave-active {
         transition: opacity 5s;
