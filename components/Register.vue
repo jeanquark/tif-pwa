@@ -54,8 +54,7 @@
                         :error-messages="errors.collect('password_confirm')"
                         data-vv-as="Repeat Password"
                     ></v-text-field>
-					<v-card-text>
-						<v-text-field
+					<v-text-field
 							label="Pseudo"
 							v-model="form.pseudo"
 							name="pseudo"
@@ -63,8 +62,47 @@
 							:error="errors.has('pseudo')"
 							:error-messages="errors.collect('pseudo')"
 							data-vv-as="Pseudo"
-						></v-text-field>
-					</v-card-text>
+					></v-text-field>
+					
+                    <v-autocomplete
+                      	v-model="form.birthyear"
+                      	name="birthyear"
+                      	:items="loadedBirthyear"
+                      	chips
+                      	color="blue-grey lighten-2"
+                      	label="Select your birth year"
+                      	item-text="name"
+                      	:return-object="true"
+                      	v-validate="'required'"
+                      	:error="errors.has('birthyear')"
+                      	:error-messages="errors.collect('birthyear')"
+                    	data-vv-as="Birthyear"
+                    >
+                      	<template
+	                        slot="selection"
+                        	slot-scope="data"
+                      	>
+                        	<v-chip
+                          		:selected="data.selected"
+                          		class="chip"
+                        	>
+                          	{{ data.item.value }}
+                        	</v-chip>
+                      	</template>
+                      	<template
+	                        slot="item"
+                        	slot-scope="data"
+                      	>
+                        	<template v-if="typeof data.item !== 'object'">
+	                          	<v-list-tile-content v-text="data.item"></v-list-tile-content>
+                        	</template>
+                        	<template v-else>
+                          		<v-list-tile-content>
+		                            <v-list-tile-title v-html="data.item.value"></v-list-tile-title>
+                          		</v-list-tile-content>
+                        	</template>
+                      	</template>
+                    </v-autocomplete>
 
                     <v-autocomplete
                       	v-model="form.country"
@@ -175,6 +213,7 @@
         layout: 'layoutFront',
         created () {
             this.$store.dispatch('countries/loadedCountries')
+            this.$store.dispatch('birthyear/loadedBirthyear')
         },
         data: () => ({
             step: 1,
@@ -183,6 +222,7 @@
                 password: '',
                 password_confirm: '',
 				pseudo: '',
+				birthyear: null,
                 country: null
             }
         }),
@@ -199,6 +239,9 @@
             },
             loadedCountries () {
                 return this.$store.getters['countries/loadedCountries']
+            },
+            loadedBirthyear () {
+                return this.$store.getters['birthyear/loadedBirthyear']
             }
         },
         methods: {
