@@ -1,6 +1,6 @@
 <template>
 
-	<v-tabs color="rgb(128,128,128)" height="30" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
+	<v-tabs color="rgb(128,128,128)" height="25" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
 	<v-tabs-slider color="white"></v-tabs-slider>
 		<v-tab v-for="day in days" :key="day" :href="'#' + day">
 			<span style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
@@ -130,11 +130,11 @@
 	export default {
 		async created () {
             this.$store.commit('setLoading', true)
-			for (let i = 15; i >= 1; i--) {
+			for (let i = 3; i >= 1; i--) {
                 this.days.push(moment().subtract(i, 'days').format('YYYY-MM-DD'))
             }
             this.days.push(moment().format('YYYY-MM-DD'))
-            for (let i = 1; i <= 15; i++) {
+            for (let i = 1; i <= 3; i++) {
                 this.days.push(moment().add(i, 'days').format('YYYY-MM-DD'))
             }
 
