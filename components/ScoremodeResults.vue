@@ -1,6 +1,6 @@
 <template>
 
-	<v-tabs color="rgb(128,128,128)"  height="30" class="justify-content-center" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
+	<v-tabs color="rgb(128,128,128)" height="30" justify-content="center" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
 	<v-tabs-slider color="white" class="justify-center"></v-tabs-slider>
 		<v-tab v-for="day in days" :key="day" :href="'#' + day">
 			<span style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
@@ -14,7 +14,7 @@
                                 <v-card-text style="padding: 0">	
                                     <v-expansion-panel class="elevation-0" :value="0" style="margin-top: 10px; margin-bottom: 10px">
                                         <v-expansion-panel-content style="background-color: orangered">
-											<div slot="header" class="white--text" style="min-height: 0; height: 25px">
+											<div slot="header" class="white--text">
 												MOST POPULAR
 											</div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
