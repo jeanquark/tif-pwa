@@ -1,7 +1,7 @@
 <template>
 
-	<v-tabs color="rgb(128,128,128)" height="30" justify-content="center" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
-	<v-tabs-slider color="white" class="justify-center"></v-tabs-slider>
+	<v-tabs color="rgb(128,128,128)" height="30" justify-center show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
+	<v-tabs-slider color="white"></v-tabs-slider>
 		<v-tab v-for="day in days" :key="day" :href="'#' + day">
 			<span style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
 		</v-tab>
@@ -294,10 +294,7 @@
             convertToLocalTime (timestamp) {
                 return moment.unix(timestamp).format('HH:mm')
             }
-		},
-		mounted() {
-				$('.v-expansion-panel__header').css('min-height' ,'25px' ,'padding' , '5px 5px');
-		}	
+		}
 	}
 </script>
 
