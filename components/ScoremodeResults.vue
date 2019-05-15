@@ -2,7 +2,7 @@
 
 	<v-tabs color="rgb(128,128,128)"  height="30" style="justify-content: center" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
 	<v-tabs-slider color="white" style="justify-content: center"></v-tabs-slider>
-		<v-tab v-for="day in days" :key="day" :href="'#' + day" style="justify-content: center">
+		<v-tab justify-center v-for="day in days" :key="day" :href="'#' + day" class="justify-content-center">
 			<span style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
 		</v-tab>
         <v-tabs-items>
@@ -11,8 +11,8 @@
                     <v-layout class="column fill-height" v-cloak>
                         <v-flex xs12>
                             <v-card flat>
-                                <v-card-text style="padding: 8px">	
-                                    <v-expansion-panel class="elevation-0" :value="0" style="margin-bottom: 10px">
+                                <v-card-text style="padding: 0">	
+                                    <v-expansion-panel class="elevation-0" :value="0" style="margin-top: 10px; margin-bottom: 10px">
                                         <v-expansion-panel-content style="background-color: orangered">
 											<div slot="header" class="white--text">
 												MOST POPULAR
@@ -323,6 +323,9 @@
         border-radius: 5px; 
         font-size: 1.3em;
     }
+	.justify-content-center {
+	justify-content: center;
+	}
 
     /* Transition effects on score by J-M */
     .fade-enter-active, .fade-leave-active {
