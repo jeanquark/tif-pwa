@@ -1,8 +1,8 @@
 <template>
 
-	<v-tabs color="rgb(128,128,128)"  height="30" justify-center show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
+	<v-tabs color="rgb(128,128,128)"  height="30" style="justify-content: center" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
 	<v-tabs-slider color="white"></v-tabs-slider>
-		<v-tab v-for="day in days" :key="day" :href="'#' + day" style="justify-content: center">
+		<v-tab v-for="day in days" :key="day" :href="'#' + day">
 			<span style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
 		</v-tab>
         <v-tabs-items>
@@ -12,7 +12,7 @@
                         <v-flex xs12>
                             <v-card flat>
                                 <v-card-text style="padding: 8px">	
-                                    <v-expansion-panel class="elevation-0" :value="0">
+                                    <v-expansion-panel class="elevation-0" :value="0" style="margin-bottom: 10px">
                                         <v-expansion-panel-content style="background-color: orangered">
 											<div slot="header" class="white--text">
 												MOST POPULAR
@@ -120,7 +120,7 @@
 												ALL EVENTS
 											</div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                                            <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedActiveCompetitions" :key="competition.slug">
+                                            <v-expansion-panel class="elevation-0" :value="2" v-for="competition in loadedActiveCompetitions" :key="competition.slug">
                                                 <v-expansion-panel-content class="black">
 													<div slot="header" class="white--text">
 														<div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
