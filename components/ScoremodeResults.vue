@@ -14,8 +14,10 @@
                                 <v-card-text style="padding: 0">	
                                     <v-expansion-panel class="elevation-0" :value="0" style="margin-top: 10px; margin-bottom: 10px">
                                         <v-expansion-panel-content style="background-color: orangered">
+											<div style="min-height: 0; height: 25px">
 											<div slot="header" class="white--text">
 												MOST POPULAR
+											</div>
 											</div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                                             <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedPopularCompetitions" :key="competition.slug">
@@ -329,14 +331,6 @@
         border-radius: 5px; 
         font-size: 1.3em;
     }
-	.v-expansion-panel--header {
-		display: flex;
-		cursor: pointer;
-		align-items: center;
-		position: relative;
-		padding: 6px 12px;
-		min-height: 25px;
-	}
 	
     /* Transition effects on score by J-M */
     .fade-enter-active, .fade-leave-active {
