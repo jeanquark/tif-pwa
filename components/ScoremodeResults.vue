@@ -14,10 +14,8 @@
                                 <v-card-text style="padding: 0">	
                                     <v-expansion-panel class="elevation-0" :value="0" style="margin-top: 10px; margin-bottom: 10px">
                                         <v-expansion-panel-content style="background-color: orangered">
-											<div style="min-height: 0; height: 25px">
-											<div slot="header" class="white--text">
+											<div slot="header" class="white--text" style="min-height: 0; height: 25px">
 												MOST POPULAR
-											</div>
 											</div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
                                             <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedPopularCompetitions" :key="competition.slug">
@@ -264,7 +262,7 @@
                 return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.status === 'active')
             },
             loadedPopularCompetitions () {
-                return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.importance === '1')
+                return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.importance === 1)
             },
 		},
 		methods: {
