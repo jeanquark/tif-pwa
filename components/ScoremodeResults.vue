@@ -18,7 +18,7 @@
 												MOST POPULAR
 											</div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                                            <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedActiveCompetitions &&& loadedPopularCompetitions" :key="competition.slug">
+                                            <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedPopularCompetitions" :key="competition.slug">
                                                 <v-expansion-panel-content class="black">
 													<div slot="header" class="white--text">
 														<div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
@@ -114,7 +114,7 @@
                                         </v-expansion-panel-content>
                                     </v-expansion-panel>
 
-                                    <v-expansion-panel class="elevation-0" :value="1">
+                                    <v-expansion-panel class="elevation-0" :value="1" style="margin-bottom: 10px">
                                         <v-expansion-panel-content style="background-color: green">
 											<div slot="header" class="white--text">
 												ALL EVENTS
