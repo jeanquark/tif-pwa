@@ -1,7 +1,7 @@
 <template>
 
 	<v-tabs color="rgb(128,128,128)"  height="30" class="justify-content-center" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
-	<v-tabs-slider color="white" class="justify-content-center"></v-tabs-slider>
+	<v-tabs-slider color="white" class="justify-center"></v-tabs-slider>
 		<v-tab v-for="day in days" :key="day" :href="'#' + day">
 			<span style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
 		</v-tab>
