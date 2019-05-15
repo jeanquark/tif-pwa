@@ -18,7 +18,10 @@ function buildUserObject (payload) {
     user.id = payload.id,
     user.email = payload.email,
     user.pseudo = payload.pseudo ? payload.pseudo : '',
-	// user.birthyear = payload.userbirthyear ? payload.userbirthyear : '',
+	user.birthyear = {
+		value: payload.birthyear.value ? payload.birthyear.value : '',
+		slug: payload.birthyear.slug ? payload.birthyear.slug : ''
+	},
     user.country = {
         name: payload.country.name ? payload.country.name : '',
         slug: payload.country.slug ? payload.country.slug : ''
@@ -127,15 +130,39 @@ function buildUserObject (payload) {
 		value: '',
 		_updated_at: moment().unix()
 	},
-	user.stuffAvatarTorse = { // Stuff avatar Torse
+	user.stuffAvatarLunette = { // Stuff avatar Lunette
 		value: '',
 		_updated_at: moment().unix()
 	},
-	user.stuffAvatarBras = { // Stuff avatar Bras
+	user.stuffAvatarOreilles = { // Stuff avatar Oreilles
 		value: '',
 		_updated_at: moment().unix()
 	},
-	user.stuffAvatarJambes = { // Stuff avatar Jambes
+	user.stuffAvatarCou = { // Stuff avatar Cou
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarHautCorps1 = { // Stuff avatar Haut du corps t-shirt
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarHautCorps2 = { // Stuff avatar Haut du corps pull
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarHautCorps3 = { // Stuff avatar Haut du corps veste
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarPoignet = { // Stuff avatar Poignet (bracelets)
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarBasCorps1 = { // Stuff avatar Slips
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarBasCorps2 = { // Stuff avatar Pantalons/shorts
 		value: '',
 		_updated_at: moment().unix()
 	},
@@ -143,11 +170,23 @@ function buildUserObject (payload) {
 		value: '',
 		_updated_at: moment().unix()
 	},
-	user.stuffAvatarAccessory1 = { // Stuff avatar Accessory1
+	user.stuffAvatarAccessoires1 = { // Stuff avatar Accessoires
 		value: '',
 		_updated_at: moment().unix()
 	},
-	user.stuffAvatarAccessory2 = { // Stuff avatar Accessory2
+	user.stuffAvatarAccessoires2 = { // Stuff avatar Accessoires
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAppartementCoussin1 = { // Stuff Appartement Coussin 1
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAppartementCoussin2 = { // Stuff Appartement Coussin 2
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAppartementCouverture = { // Stuff Appartement Couverture
 		value: '',
 		_updated_at: moment().unix()
 	},
@@ -165,7 +204,10 @@ function buildUserObjectOAuth (payload) {
     user.id = payload.uid,
     user.email = payload.email,
     user.pseudo = '',
-	// user.userbirthyear = '',
+	user.birthyear = {
+		value: '',
+		slug: ''
+	},
     user.country = {
         name: '',
         slug: ''
@@ -270,15 +312,39 @@ function buildUserObjectOAuth (payload) {
 		value: '',
 		_updated_at: moment().unix()
 	},
-	user.stuffAvatarTorse = { // Stuff avatar Torse
+	user.stuffAvatarLunette = { // Stuff avatar Lunette
 		value: '',
 		_updated_at: moment().unix()
 	},
-	user.stuffAvatarBras = { // Stuff avatar Bras
+	user.stuffAvatarOreilles = { // Stuff avatar Oreilles
 		value: '',
 		_updated_at: moment().unix()
 	},
-	user.stuffAvatarJambes = { // Stuff avatar Jambes
+	user.stuffAvatarCou = { // Stuff avatar Cou
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarHautCorps1 = { // Stuff avatar Haut du corps t-shirt
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarHautCorps2 = { // Stuff avatar Haut du corps pull
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarHautCorps3 = { // Stuff avatar Haut du corps veste
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarPoignet = { // Stuff avatar Poignet (bracelets)
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarBasCorps1 = { // Stuff avatar Slips
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAvatarBasCorps2 = { // Stuff avatar Pantalons/shorts
 		value: '',
 		_updated_at: moment().unix()
 	},
@@ -286,11 +352,23 @@ function buildUserObjectOAuth (payload) {
 		value: '',
 		_updated_at: moment().unix()
 	},
-	user.stuffAvatarAccessory1 = { // Stuff avatar Accessory1
+	user.stuffAvatarAccessoires1 = { // Stuff avatar Accessoires
 		value: '',
 		_updated_at: moment().unix()
 	},
-	user.stuffAvatarAccessory2 = { // Stuff avatar Accessory2
+	user.stuffAvatarAccessoires2 = { // Stuff avatar Accessoires
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAppartementCoussin1 = { // Stuff Appartement Coussin 1
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAppartementCoussin2 = { // Stuff Appartement Coussin 2
+		value: '',
+		_updated_at: moment().unix()
+	},
+	user.stuffAppartementCouverture = { // Stuff Appartement Couverture
 		value: '',
 		_updated_at: moment().unix()
 	},
