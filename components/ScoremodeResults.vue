@@ -1,6 +1,6 @@
 <template>
 
-	<v-tabs color="rgb(128,128,128)" height="30" justify-center fixed-tabs show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
+	<v-tabs color="rgb(0,0,0)" height="30" justify-center fixed-tabs show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
 	<v-tabs-slider color="white"></v-tabs-slider>
 		<v-tab v-for="day in days" :key="day" :href="'#' + day">
 			<span style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
@@ -262,7 +262,7 @@
                 return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.status === 'active')
             },
             loadedPopularCompetitions () {
-                return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.importance === 1)
+                return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.importance === '1')
             },
 		},
 		methods: {
