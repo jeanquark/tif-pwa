@@ -1,8 +1,8 @@
 <template>
 
-	<v-tabs color="rgb(128,128,128)"  height="30" style="justify-content: center" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
-	<v-tabs-slider color="white" style="justify-content: center"></v-tabs-slider>
-		<v-tab justify-center v-for="day in days" :key="day" :href="'#' + day" class="justify-content-center">
+	<v-tabs color="rgb(128,128,128)"  height="30" class="justify-content-center" show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
+	<v-tabs-slider color="white" class="justify-content-center"></v-tabs-slider>
+		<v-tab v-for="day in days" :key="day" :href="'#' + day">
 			<span style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
 		</v-tab>
         <v-tabs-items>
@@ -18,7 +18,7 @@
 												MOST POPULAR
 											</div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                                            <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedActiveCompetitions" :key="competition.slug">
+                                            <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedActiveCompetitions &&& loadedPopularCompetitions" :key="competition.slug">
                                                 <v-expansion-panel-content class="black">
 													<div slot="header" class="white--text">
 														<div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
@@ -120,7 +120,7 @@
 												ALL EVENTS
 											</div>
                                             <v-icon slot="actions" color="white">$vuetify.icons.expand</v-icon>
-                                            <v-expansion-panel class="elevation-0" :value="2" v-for="competition in loadedActiveCompetitions" :key="competition.slug">
+                                            <v-expansion-panel class="elevation-0" :value="1" v-for="competition in loadedActiveCompetitions" :key="competition.slug">
                                                 <v-expansion-panel-content class="black">
 													<div slot="header" class="white--text">
 														<div v-for="country in competition.countries" :key="country.slug" style="display: flex; align-items:center;">
@@ -260,6 +260,9 @@
             },
             loadedActiveCompetitions () {
                 return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.status === 'active')
+            },
+            loadedPopularCompetitions () {
+                return this.$store.getters['competitions/loadedCompetitions'].filter(competition => competition.importance === '1')
             },
 		},
 		methods: {
