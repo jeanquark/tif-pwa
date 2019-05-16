@@ -9,23 +9,23 @@
 				<div class="barreBlack"></div>
 				<div id="dock-container">
 					<ul>
-						<li :id="{active: isActive('teams')}">
+						<li :class="{active: isActive('teams')}">
 							<a v-on:click="setActive('teams')"><img src="/images/menuTeam.png">
 							<span class="textMenu">Equipes</span></a>
 						</li>
-						<li :id="{active: isActive('competitions')}">
+						<li :class="{active: isActive('competitions')}">
 							<a v-on:click="setActive('competitions')"><img src="/images/menuCompetition.png">
 							<span class="textMenu">Compétitions</span></a>
 						</li>
-						<li :id="{active: isActive('scoremode_gm')}">
+						<li :class="{active: isActive('scoremode_gm')}">
 							<a v-on:click="setActive('scoremode_gm')"><img src="/images/menuHome.png">
 							<span class="textMenu">Matches du jour</span></a>
 						</li>
-						<li :id="{active: isActive('players')}">
+						<li :class="{active: isActive('players')}">
 							<a v-on:click="setActive('players')"><img src="/images/menuPlayer.png">
 							<span class="textMenu">Joueurs</span></a>
 						</li>
-						<li :id="{active: isActive('tifnews')}">
+						<li :class="{active: isActive('tifnews')}">
 							<a v-on:click="setActive('tifnews')"><img src="/images/menuTifnews.png">
 							<span class="textMenu">TIF News</span></a>
 						</li>
@@ -446,7 +446,7 @@
 	border-top: 4px solid orangered;
 	}
 
-	#dock-container li#active img {
+	#dock-container li.active img {
 	-webkit-transform: scale(1.65);
 	margin: 0 0.5em;
 	}
@@ -496,7 +496,7 @@
 	border-radius: 5px;
 	}
 
-	#dock-container li#active span {
+	#dock-container li.active span {
 	display: none;
 	position: absolute;
 	bottom: 0px;
@@ -506,12 +506,12 @@
 	border-radius: 5px;
 	}
 
-	#dock-container li#active span {
+	#dock-container li.active span {
 	display: block;
 	color: #fff;
 	}
 
-	#dock-container li#active .textMenu {
+	#dock-container li.active .textMenu {
 	font: normal 120%/1 "Acme", Helvetica, sans-serif;
 	padding: 2px;
 	}
