@@ -10,11 +10,11 @@
 				<div id="dock-container">
 					<ul>
 						<li>
-							<nuxt-link to="/teams"><img src="/images/menuTeam.png">
+							<nuxt-link v-on:click="setActive('teams')" :class="{active: isActive('teams')}"><img src="/images/menuTeam.png">
 							<span class="textMenu">Equipes</span></nuxt-link>
 						</li>
 						<li>
-							<nuxt-link to="/competitions"><img src="/images/menuCompetition.png">
+							<nuxt-link v-on:click="setActive('competitions') :class="{active: isActive('competitions')}"><img src="/images/menuCompetition.png">
 							<span class="textMenu">Compétitions</span></nuxt-link>
 						</li>
 						<li id="active">
@@ -37,12 +37,15 @@
 <script>
     export default {
         data () {
-            return {
-
-            }
+            return { activeItems: 'scoremode_gm' }
         },
-        computed: {
-            
+		methods: {
+			isActive: function (menuItem) {
+				return this.activeItem === menuItem
+			},
+			setActive: function (menuItem) {
+				this.activeItem = menuItem // no need for Vue.set()
+			}         
         }
     }
 </script>
