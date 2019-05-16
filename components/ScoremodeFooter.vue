@@ -11,7 +11,7 @@
 					<ul>
 						<li>
 							<a v-on:click="setActive('teams')" :class="{active: isActive('teams')}"><img src="/images/menuTeam.png">
-							<span class="textMenu">Equipes</span></ak>
+							<span class="textMenu">Equipes</span></a>
 						</li>
 						<li>
 							<a v-on:click="setActive('competitions') :class="{active: isActive('competitions')}"><img src="/images/menuCompetition.png">
