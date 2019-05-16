@@ -67,7 +67,7 @@
                     <v-autocomplete
                       	v-model="form.birthyear"
                       	name="birthyear"
-                      	:items="loadedBirthyear"
+                      	:items="birthyear"
                       	chips
                       	color="blue-grey lighten-2"
                       	label="Select your birth year"
@@ -209,12 +209,19 @@
 </template>
 
 <script>
+	import firebase from 'firebase/app'
 	export default {
         layout: 'layoutFront',
         created () {
             this.$store.dispatch('countries/loadedCountries')
             this.$store.dispatch('birthyear/loadedBirthyear')
         },
+		async mounted () {
+			const snapshot = await firebase.database().ref('birthyear/').once('value')
+			for (const year in snapshot.val() {
+				this.birthyear.push(year)
+			}
+		},
         data: () => ({
             step: 1,
             form: {
@@ -224,7 +231,8 @@
 				pseudo: '',
 				birthyear: null,
                 country: null
-            }
+            },
+			birthyears: []
         }),
         computed: {
             loading () {
