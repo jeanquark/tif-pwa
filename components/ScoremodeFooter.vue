@@ -10,24 +10,24 @@
 				<div id="dock-container">
 					<ul>
 						<li>
-							<nuxt-link v-on:click="setActive('teams')" :class="{active: isActive('teams')}"><img src="/images/menuTeam.png">
-							<span class="textMenu">Equipes</span></nuxt-link>
+							<a v-on:click="setActive('/teams')" :class="{active: isActive('teams')}"><img src="/images/menuTeam.png">
+							<span class="textMenu">Equipes</span></ak>
 						</li>
 						<li>
-							<nuxt-link v-on:click="setActive('competitions') :class="{active: isActive('competitions')}"><img src="/images/menuCompetition.png">
-							<span class="textMenu">Compétitions</span></nuxt-link>
-						</li>
-						<li id="active">
-							<nuxt-link to="/scoremode_gm"><img src="/images/menuHome.png">
-							<span class="textMenu">Matches du jour</span></nuxt-link>
+							<a v-on:click="setActive('/competitions') :class="{active: isActive('competitions')}"><img src="/images/menuCompetition.png">
+							<span class="textMenu">Compétitions</span></a>
 						</li>
 						<li>
-							<nuxt-link to="/players"><img src="/images/menuPlayer.png">
-							<span class="textMenu">Joueurs</span></nuxt-link>
+							<a v-on:click="setActive('/scoremode_gm') :class="{active: isActive('scoremode_gm')}"><img src="/images/menuHome.png">
+							<span class="textMenu">Matches du jour</span></a>
 						</li>
 						<li>
-							<nuxt-link to="/tifnews"><img src="/images/menuTifnews.png">
-							<span class="textMenu">TIF News</span></nuxt-link>
+							<a v-on:click="setActive('/players') :class="{active: isActive('players')}">><img src="/images/menuPlayer.png">
+							<span class="textMenu">Joueurs</span></a>
+						</li>
+						<li>
+							<a v-on:click="setActive('/tifnews') :class="{active: isActive('tifnews')}"><img src="/images/menuTifnews.png">
+							<span class="textMenu">TIF News</span></a>
 						</li>
 					</ul>
 				</div>
@@ -35,21 +35,20 @@
 </template>
 
 <script>
-    export default {
-        data () {
-            return { activeItems: 'scoremode_gm' }
-        },
-		methods: {
-			isActive: function (menuItem) {
-				return this.activeItem === menuItem
-			},
-			setActive: function (menuItem) {
-				this.activeItem = menuItem // no need for Vue.set()
-			}         
-        }
-    }
+	export default {
+	  data() {
+		return { activeItem: 'scoremode_gm' }
+	  },
+	  methods: {
+		isActive: function (menuItem) {
+		  return this.activeItem === menuItem
+		},
+		setActive: function (menuItem) {
+		  this.activeItem = menuItem // no need for Vue.set()
+		}
+	  }
+	}
 </script>
-
 	<style scoped>
 	
 	.textTif {
