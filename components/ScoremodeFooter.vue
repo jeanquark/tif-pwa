@@ -10,23 +10,23 @@
 				<div id="dock-container">
 					<ul>
 						<li>
-							<a v-on:click="setActive('teams')" :class="{active: isActive('teams')}"><img src="/images/menuTeam.png">
-							<span class="textMenu">Equipes</span></a>
+							<router-link v-on:click="setActive('/teams')" :class="{active: isActive('/teams')}"><img src="/images/menuTeam.png">
+							<span class="textMenu">Equipes</span></router-link>
 						</li>
 						<li>
-							<a v-on:click="setActive('competitions')" :class="{active: isActive('competitions')}"><img src="/images/menuCompetition.png">
+							<a v-on:click="setActive('/competitions')" :class="{active: isActive('/competitions')}"><img src="/images/menuCompetition.png">
 							<span class="textMenu">Compétitions</span></a>
 						</li>
 						<li>
-							<a v-on:click="setActive('scoremode_gm')" :class="{active: isActive('scoremode_gm')}"><img src="/images/menuHome.png">
+							<a v-on:click="setActive('/scoremode_gm')" :class="{active: isActive('/scoremode_gm')}"><img src="/images/menuHome.png">
 							<span class="textMenu">Matches du jour</span></a>
 						</li>
 						<li>
-							<a v-on:click="setActive('players')" :class="{active: isActive('players')}"><img src="/images/menuPlayer.png">
+							<a v-on:click="setActive('/players')" :class="{active: isActive('/players')}"><img src="/images/menuPlayer.png">
 							<span class="textMenu">Joueurs</span></a>
 						</li>
 						<li>
-							<a v-on:click="setActive('tifnews')" :class="{active: isActive('tifnews')}"><img src="/images/menuTifnews.png">
+							<a v-on:click="setActive('/tifnews')" :class="{active: isActive('/tifnews')}"><img src="/images/menuTifnews.png">
 							<span class="textMenu">TIF News</span></a>
 						</li>
 					</ul>
