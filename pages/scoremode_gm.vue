@@ -1,5 +1,5 @@
 <template>
-    <v-content id="app">
+    <v-content id="app" style="background-color: white">
 		<v-container style="padding: 0; max-width: 1017px;">
 		
 			<scoremode-header />
@@ -18,12 +18,12 @@
 						<!-- loadedEventsByDay: {{ loadedEventsByDay('2019-03-02') }}<br /><br /> -->
 
 						<!-- Results -->
-						<v-tabs class="hidden-xs-only" color="rgb(0,0,0)" height="40" slider-color="white" fixed-tabs v-model="selectType" style="margin-bottom: 10px">
+						<v-tabs class="hidden-xs-only" color="rgb(0,0,0)" height="35" slider-color="white" fixed-tabs v-model="selectType" style="margin-bottom: 10px">
 							<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
 								<span style="font-size: 1.0em; color: white">{{ type.name }}</span>
 							</v-tab>
 						</v-tabs>
-						<v-tabs class="hidden-sm-and-up" color="rgb(0,0,0)" height="30" slider-color="white" fixed-tabs v-model="selectType" style="margin-bottom: 10px">
+						<v-tabs class="hidden-sm-and-up" color="rgb(0,0,0)" height="35" slider-color="white" fixed-tabs v-model="selectType" style="margin-bottom: 10px">
 							<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
 								<span style="font-size: 0.9em; color: white">{{ type.name }}</span>
 							</v-tab>
