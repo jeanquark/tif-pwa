@@ -328,8 +328,7 @@
     }
 	>>>.v-expansion-panel__header {
 		min-height: 0;
-		height: 25px;
-		padding: 10px 18px;
+		height: 35px;
 	}
 	
     /* Transition effects on score by J-M */
@@ -382,6 +381,11 @@
 		.notYourTeam {
 		color: grey;
 		font-size: 15px;
+		}
+		>>>.v-expansion-panel__header {
+			min-height: 0;
+			height: 35px;
+			padding: 6px 12px;
 		}
     }
 </style>

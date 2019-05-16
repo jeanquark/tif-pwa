@@ -218,7 +218,7 @@
         },
 		async mounted () {
 			const snapshot = await firebase.database().ref('birthyear/').once('value')
-			for (const year in snapshot.val() {
+			for (const year in snapshot.val()) {
 				this.birthyear.push(year)
 			}
 		},
