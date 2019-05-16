@@ -440,11 +440,11 @@
     /* End Header */
     
     .menuSport {
-        height: 40px;
+        height: 35px;
     }
     
     .menuDay {
-        height: 40px;
+        height: 35px;
     }
     
     .v-expansion-panel__header {
@@ -675,6 +675,10 @@
         max-width: 30px;
         max-height: 30px;
     }
+	>>>.v-expansion-panel__header {
+		min-height: 0;
+		height: 35px;
+	}
     
     /* End Menu */
 
@@ -751,11 +755,11 @@
         }
         
         .menuSport {
-            height: 30px;
+            height: 35px;
         }
         
         .menuDay {
-            height: 30px;
+            height: 35px;
         }
         
         .headerLogo {
@@ -889,4 +893,10 @@
             width: 2px;
         }
         /* Fin de l'ajout J-M */
+		
+		>>>.v-expansion-panel__header {
+			min-height: 0;
+			height: 35px;
+			padding: 6px 12px;
+		}
     </style>
