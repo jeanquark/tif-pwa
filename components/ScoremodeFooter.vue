@@ -10,7 +10,7 @@
 				<div id="dock-container">
 					<ul>
 						<li :class="{active: isActive('teams')}">
-							<a v-on:click="setActive('teams')"><img src="/images/menuTeam.png">
+							<a v-link="/teams" v-on:click="setActive('teams')"><img src="/images/menuTeam.png">
 							<span class="textMenu">Equipes</span></a>
 						</li>
 						<li :class="{active: isActive('competitions')}">
