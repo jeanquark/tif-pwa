@@ -10,8 +10,8 @@
 				<div id="dock-container">
 					<ul>
 						<li :class="{active: isActive('teams')}">
-							<nuxt-link v-on:click="setActive('teams')"><img src="/images/menuTeam.png">
-							<span class="textMenu">Equipes</span></nuxt-link>
+							<a v-on:click="setActive('teams')"><img src="/images/menuTeam.png">
+							<span class="textMenu">Equipes</span></a>
 						</li>
 						<li :class="{active: isActive('competitions')}">
 							<a v-on:click="setActive('competitions')"><img src="/images/menuCompetition.png">
