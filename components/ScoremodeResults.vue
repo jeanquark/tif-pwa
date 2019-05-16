@@ -326,6 +326,11 @@
         border-radius: 5px; 
         font-size: 1.3em;
     }
+	>>>.v-expansion-panel__header {
+		min-height: 0;
+		height: 25px;
+		padding: 10px 18px;
+	}
 	
     /* Transition effects on score by J-M */
     .fade-enter-active, .fade-leave-active {
