@@ -214,9 +214,10 @@
         layout: 'layoutFront',
         created () {
             this.$store.dispatch('countries/loadedCountries')
+            this.$store.dispatch('birthyear/loadedBirthyear')
         },
 		async mounted () {
-			const snapshot = await firebase.database().ref('/birthyear/').once('value')
+			const snapshot = await firebase.database().ref('/birthyear/').once('name')
 			for (const year in snapshot.val()) {
 				this.birthyear.push(year)
 			}
@@ -245,6 +246,9 @@
             },
             loadedCountries () {
                 return this.$store.getters['countries/loadedCountries']
+            },
+            loadedBirthyear () {
+                return this.$store.getters['birthyear/loadedBirthyear']
             }
         },
         methods: {
@@ -257,9 +261,9 @@
 
                 await this.$store.dispatch('firebase-auth/signUserUp', this.form)
                 if (this.$i18n.locale != 'en') {
-                    this.$router.replace('/' + this.$i18n.locale + '/gamemode_jm')
+                    this.$router.replace('/' + this.$i18n.locale + '/gamemode_gm')
                 } else {
-                    this.$router.replace('/gamemode_jm')
+                    this.$router.replace('/gamemode_gm')
                 }
             }
         }
