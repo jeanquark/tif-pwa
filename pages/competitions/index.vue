@@ -9,7 +9,7 @@
                 <v-layout>
                         
                     <!-- Scrollable content -->
-                    <div style="padding: 0; min-width: 100%; height: 100%; background-color: whitesmoke">            
+                    <div style="padding: 0; min-width: 100%; height: 100%">            
 
                         <div fluid style="padding: 0; background-color: black; color: white">
                             <v-layout>
@@ -19,17 +19,17 @@
                             </v-layout>             
                         </div>
 
-                            <v-layout justify-center row fill-height>
-                				<v-flex  xs12 align-center class="scrolling-wrapper-flexbox" style="padding: 10px">
-                				  <div class="cardMenuCompetition" :class="[continent === '' && type === '' ? 'active' : '']" @click="resetCompetitions"><h2>Tous</h2></div>
-                				  <div class="cardMenuCompetition" :class="[continent === 'europe' ? 'active' : '']" @click="competitionsByContinent('europe')"><h2>Europe</h2></div>
-                				  <div class="cardMenuCompetition" :class="[continent === 'africa' ? 'active' : '']" @click="competitionsByContinent('africa')"><h2>Afrique</h2></div>
-                				  <div class="cardMenuCompetition" :class="[continent === 'america' ? 'active' : '']" @click="competitionsByContinent('america')"><h2>Amérique</h2></div>
-                				  <div class="cardMenuCompetition" :class="[continent === 'asia' ? 'active' : '']" @click="competitionsByContinent('asia')"><h2>Asie/Océanie</h2></div>
-                				  <div class="cardMenuCompetition" :class="[type === 'selections' ? 'active' : '']" @click="competitionsByType('selections')"><h2>Sélections</h2></div>
-                				  <div class="cardMenuCompetition" :class="[type === 'clubs' ? 'active' : '']" @click="competitionsByType('clubs')"><h2>Clubs</h2></div>
-                				</v-flex>
-                            </v-layout>             
+						<v-layout justify-center row fill-height>
+							<v-flex  xs12 align-center class="scrolling-wrapper-flexbox" style="padding: 10px">
+							  <div class="cardMenuCompetition" :class="[continent === '' && type === '' ? 'active' : '']" @click="resetCompetitions"><h2>Tous</h2></div>
+							  <div class="cardMenuCompetition" :class="[continent === 'europe' ? 'active' : '']" @click="competitionsByContinent('europe')"><h2>Europe</h2></div>
+							  <div class="cardMenuCompetition" :class="[continent === 'africa' ? 'active' : '']" @click="competitionsByContinent('africa')"><h2>Afrique</h2></div>
+							  <div class="cardMenuCompetition" :class="[continent === 'america' ? 'active' : '']" @click="competitionsByContinent('america')"><h2>Amérique</h2></div>
+							  <div class="cardMenuCompetition" :class="[continent === 'asia' ? 'active' : '']" @click="competitionsByContinent('asia')"><h2>Asie/Océanie</h2></div>
+							  <div class="cardMenuCompetition" :class="[type === 'selections' ? 'active' : '']" @click="competitionsByType('selections')"><h2>Sélections</h2></div>
+							  <div class="cardMenuCompetition" :class="[type === 'clubs' ? 'active' : '']" @click="competitionsByType('clubs')"><h2>Clubs</h2></div>
+							</v-flex>
+						</v-layout>             
 
                         <div style="padding: 0; background-color: whitesmoke">
                             <v-card-text class="card-text" style="padding: 0">
@@ -227,9 +227,9 @@
 
     .cardMenuCompetition {
     border-radius: 5px;
-    color: black;
+    color: white;
     padding: 10px 10px;
-    background: white;
+    background: black;
     margin: 0 5px;
     }
     .cardMenuCompetition:hover {
