@@ -86,7 +86,7 @@
                           		:selected="data.selected"
                           		class="chip"
                         	>
-                          	{{ data.item.value }}
+                          	{{ data.item.name }}
                         	</v-chip>
                       	</template>
                       	<template
@@ -98,7 +98,7 @@
                         	</template>
                         	<template v-else>
                           		<v-list-tile-content>
-		                            <v-list-tile-title v-html="data.item.value"></v-list-tile-title>
+		                            <v-list-tile-title v-html="data.item.name"></v-list-tile-title>
                           		</v-list-tile-content>
                         	</template>
                       	</template>
