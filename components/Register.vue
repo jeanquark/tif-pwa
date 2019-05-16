@@ -86,7 +86,7 @@
                           		:selected="data.selected"
                           		class="chip"
                         	>
-                          	{{ data.item.name }}
+                          	{{ data.item.value }}
                         	</v-chip>
                       	</template>
                       	<template
@@ -98,7 +98,7 @@
                         	</template>
                         	<template v-else>
                           		<v-list-tile-content>
-		                            <v-list-tile-title v-html="data.item.name"></v-list-tile-title>
+		                            <v-list-tile-title v-html="data.item.value"></v-list-tile-title>
                           		</v-list-tile-content>
                         	</template>
                       	</template>
@@ -214,9 +214,10 @@
         layout: 'layoutFront',
         created () {
             this.$store.dispatch('countries/loadedCountries')
+            this.$store.dispatch('birthyear/loadedBirthyear')
         },
 		async mounted () {
-			const snapshot = await firebase.database().ref('/birthyear/').once('name')
+			const snapshot = await firebase.database().ref('/birthyear/').once('value')
 			for (const year in snapshot.val()) {
 				this.birthyear.push(year)
 			}
@@ -228,6 +229,7 @@
                 password: '',
                 password_confirm: '',
 				pseudo: '',
+				birthyear: '',
                 country: null
             },
 			birthyear: []
@@ -245,6 +247,9 @@
             },
             loadedCountries () {
                 return this.$store.getters['countries/loadedCountries']
+            },
+            loadedBirthyear () {
+                return this.$store.getters['birthyear/loadedBirthyear']
             }
         },
         methods: {

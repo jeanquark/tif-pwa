@@ -14,7 +14,7 @@
                         <div fluid style="padding: 0; background-color: black; color: white">
                             <v-layout>
                                 <v-flex d-flex x12 justify-center align-center class="text-xs-center menuSport">
-                                    Football - Equipes
+                                    Football - Compétitions
                                 </v-flex>
                             </v-layout>             
                         </div>
@@ -89,7 +89,7 @@
                                 </v-expansion-panel>
                             </v-card-text>
                 			
-                            <v-card-text class="card-text" style="padding: 0">
+                                <v-card-text class="card-text" style="padding: 0">
                                 <v-expansion-panel class="elevation-0" :value="0">
                                     <v-expansion-panel-content style="background-color: green">
                                         <div slot="header" class="white--text">
