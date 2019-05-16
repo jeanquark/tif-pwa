@@ -1,5 +1,5 @@
 <template>
-    <v-content id="app">
+    <v-content id="app" style="background-color: white">
         <v-container style="padding: 0; max-width: 1017px;">
         
             <scoremode-header />
