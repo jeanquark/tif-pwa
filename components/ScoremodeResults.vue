@@ -299,7 +299,9 @@
 </script>
 
 <style scoped>
-	.v-tabs__container--fixed-tabs .v-tabs__div, .v-tabs__container--icons-and-text .v-tabs__div {
+	@media only screen and (min-width: 600px) {
+		.v-tabs__container--fixed-tabs .v-tabs__div, .v-tabs__container--icons-and-text .v-tabs__div {
+		}
 	}
     [v-cloak] {
         display: none;
