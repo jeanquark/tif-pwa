@@ -19,8 +19,8 @@
                             </v-layout>             
                         </div>
 
-						<v-layout justify-center row fill-height>
-							<v-flex  xs12 align-center class="scrolling-wrapper-flexbox" style="padding: 10px">
+						<v-layout row fill-height>
+							<v-flex xs12 align-center class="scrolling-wrapper-flexbox" style="padding: 10px 0; margin-left: 10px; margin-right: 10px">
 							  <div class="cardMenuCompetition" :class="[continent === '' && type === '' ? 'active' : '']" @click="resetCompetitions"><h2>Tous</h2></div>
 							  <div class="cardMenuCompetition" :class="[continent === 'europe' ? 'active' : '']" @click="competitionsByContinent('europe')"><h2>Europe</h2></div>
 							  <div class="cardMenuCompetition" :class="[continent === 'africa' ? 'active' : '']" @click="competitionsByContinent('africa')"><h2>Afrique</h2></div>
@@ -70,7 +70,7 @@
                 														<div :class="[props.item.active ? 'greenBar' : 'redBar']"></div>
                 													</v-flex>
                 													<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-                														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none">{{ props.item.name }}</nuxt-link>
+                														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none">{{ props.item.name }} ({{ props.item.gender }}</nuxt-link>
                 													</v-flex>
                 													<v-flex sm3 hidden-xs-only class="text-xs-right">
                 														Fan de : <span style="background-color: orangered; padding: 2px 10px; border-radius: 5px; font-size: 100%">{{ props.item.nb_teams }} équipes - Fan de : FC Barcelone</span>
@@ -126,14 +126,17 @@
                 													<v-flex class="text-xs-left" style="width: 4px; padding-left: 2px; padding-right: 2px; height: 40px; margin: 0">
                 														<div :class="[props.item.active ? 'greenBar' : 'redBar']"></div>
                 													</v-flex>
-                													<v-flex sm4 xs5 align-center class="text-xs-left pd-left10">
-                														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none"><img :src="'/images/competitions/' + props.item.image" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/> {{ props.item.name }}</nuxt-link>
+                                                                    <v-flex sm1 xs2 align-center justify-center class="text-xs-left pd-left10">
+                                                                        <nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none"><img :src="'/images/competitions/' + props.item.image" :lazy-src="'/images/icon.png'" class="imgTeamLogo"/></nuxt-link>
+                                                                    </v-flex>
+                                                                    <v-flex sm5 xs5 align-center justify-start class="text-xs-left">
+                														<nuxt-link :to="'/competitions/' + props.item.id" class="teamTextSize" style="color: black; text-decoration: none">{{ props.item.name }} <span style="font-size: 0.8em">({{ props.item.gender }})</span></nuxt-link>
                 													</v-flex>
                 													<v-flex sm3 hidden-xs-only class="text-xs-right">
                 														<span style="background-color: green; color: white; padding: 2px 10px; border-radius: 5px; font-size: 100%">{{ props.item.nb_teams }} équipes</span>
                 													</v-flex>
-                													<v-flex sm4 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
-                														<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">Nb fans liés à la compétition</span>
+                													<v-flex sm3 xs5 align-center class="text-xs-right" style="width: 50px; padding-right: 15px">
+                														<span style="background-color: black; color: orange; padding: 2px 10px; border-radius: 5px; font-size: 100%">123'456 fans</span>
                                                                     </v-flex>
                                                                 </v-layout>
                                                             </v-flex>
@@ -228,7 +231,7 @@
     .cardMenuCompetition {
     border-radius: 5px;
     color: white;
-    padding: 10px 10px;
+    padding: 6px 6px;
     background: black;
     margin: 0 5px;
     }
@@ -672,19 +675,29 @@
         padding-right: 15px;
     }
     .imgTeamLogo {
-        max-width: 30px;
-        max-height: 30px;
+        max-width: 35px;
+        max-height: 35px;
     }
 	>>>.v-expansion-panel__header {
 		min-height: 0;
 		height: 35px;
 	}
-    
+    .pd-left10 {
+    padding-left: 6px;
+    }    
+
     /* End Menu */
 
         @media only screen and (max-width: 768px) {
 
-        #app {
+        .scrolling-wrapper-flexbox {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: start;
+        }
+
+            #app {
         font: normal 90%/1 "Acme", Helvetica, sans-serif;
         }
         
@@ -693,7 +706,7 @@
         }
         
         .pd-left10 {
-        padding-left: 10px;
+        padding-left: 6px;
         }
         
         .imgLogoEquipe {
@@ -701,7 +714,7 @@
         }
         
         .teamTextSize {
-        font-size: 1.0em;
+        font-size: 1.1em;
         }
         
         .headerMenus {

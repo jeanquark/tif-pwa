@@ -1,8 +1,8 @@
 <template>
 
 	<v-tabs color="rgb(0,0,0)" height="35" justify-center fixed-tabs show-arrows v-model="activeDay" @change="fetchEventsByDay(activeDay)">
-	<v-tabs-slider color="white"></v-tabs-slider>
-		<v-tab v-for="day in days" :key="day" :href="'#' + day">
+	<v-tabs-slider color="white" style="min-width: 0"></v-tabs-slider>
+		<v-tab v-for="day in days" :key="day" :href="'#' + day" style="min-width: 0">
 			<span style="font-size: 1.0em; color: white">{{ day | moment('ddd DD MMM') }}</span>
 		</v-tab>
         <v-tabs-items>
@@ -299,10 +299,8 @@
 </script>
 
 <style scoped>
-	@media only screen and (min-width: 600px) {
-		.v-tabs__container--fixed-tabs .v-tabs__div, .v-tabs__container--icons-and-text .v-tabs__div {
-		}
-	}
+    .v-tabs__container--fixed-tabs .v-tabs__div, .v-tabs__container--icons-and-text .v-tabs__div {
+    }
     [v-cloak] {
         display: none;
     }
