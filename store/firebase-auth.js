@@ -73,10 +73,9 @@ export const actions = {
             throw new Error(error)
         }
     },
-
     async signUserUp ({ commit }, payload) {
-        commit('setLoading', true, { root: true })
         try {
+            commit('setLoading', true, { root: true })
             let authData = await Auth.createUserWithEmailAndPassword(
             // let authData = await firebase.auth().createUserWithEmailAndPassword(
                 payload.email,
@@ -89,6 +88,38 @@ export const actions = {
             // Add user id to payload
             payload['id'] = userId
             console.log('payload: ', payload)
+            
+            const newUser = await axios.post('/register-new-user', {
+                type: 'form',
+                data: payload
+            })
+            console.log('newUser: ', newUser)
+
+            commit('users/setLoadedUser', newUser.data, { root: true })
+            commit('setLoading', false, { root: true })
+        } catch (error) {
+            console.log(error)
+            commit('setError', error, { root: true })
+            commit('setLoading', false, { root: true })
+            throw new Error(error)
+        }
+    },
+    async signUserUp2 ({ commit }, payload) {
+        try {
+            commit('setLoading', true, { root: true })
+            let authData = await Auth.createUserWithEmailAndPassword(
+            // let authData = await firebase.auth().createUserWithEmailAndPassword(
+                payload.email,
+                payload.password
+            )
+            console.log('authData: ', authData)
+            console.log('authData.uid: ', authData.user.uid)
+            const userId = authData.user ? authData.user.uid : null
+            
+            // Add user id to payload
+            payload['id'] = userId
+            console.log('payload: ', payload)
+            return 
 
             return axios
                 .post('/register-new-user', {

@@ -20,7 +20,7 @@
 						<!-- Results -->
 						<v-tabs class="hidden-xs-only" color="rgb(0,0,0)" height="35" slider-color="white" fixed-tabs v-model="selectType" style="margin-bottom: 10px">
 							<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
-								<span style="font-size: 1.0em; color: white">{{ type.name }}</span>
+								<span style="font-size: 1.0em; color: white">{{ type.name }}2</span>
 							</v-tab>
 						</v-tabs>
 						<v-tabs class="hidden-sm-and-up" color="rgb(0,0,0)" height="35" slider-color="white" fixed-tabs v-model="selectType" style="margin-bottom: 10px">
