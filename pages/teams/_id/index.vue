@@ -29,7 +29,7 @@
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
-							<img src="/images/teams/fc_barcelona.png" class="imgTeamSmall" />
+							<img :src="`/images/teams/${loadedTeam.image}`" width="200" />
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
@@ -47,7 +47,7 @@
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="nameTeam">
-							<v-icon class="notYourTeam">star</v-icon> FC Barcelona
+							<v-icon class="notYourTeam">star</v-icon> {{ loadedTeam.name }}
 						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-start align-center>
