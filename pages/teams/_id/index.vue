@@ -1,5 +1,5 @@
 <template>
-	<v-layout align-center justify-center row fill-height style="background-color: black" v-if="!loading && loadedUser">
+	<v-layout align-center justify-center row fill-height style="background-color: black">
 		<v-flex>
             <v-container fluid style="max-width: 1017px; padding: 0px; border: 2px solid green;">
 				<scoremode-header />
