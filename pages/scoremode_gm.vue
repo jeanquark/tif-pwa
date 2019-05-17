@@ -296,6 +296,10 @@
 </script>
 
 <style scoped>
+	@media only screen and (min-width: 600px) {
+		.v-tabs__container--fixed-tabs .v-tabs__div, .v-tabs__container--icons-and-text .v-tabs__div {
+		}
+	}
 	.orangered {
 	background-color: orangered;
 	border-color: orangered;
