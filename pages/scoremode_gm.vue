@@ -20,7 +20,7 @@
 						<!-- Results -->
 						<v-tabs class="hidden-xs-only" color="rgb(0,0,0)" height="35" slider-color="white" fixed-tabs v-model="selectType" style="margin-bottom: 10px">
 							<v-tab v-for="type in types" :key="type.slug" ripple style="cursor: pointer;">
-								<span style="font-size: 1.0em; color: white">{{ type.name }}2</span>
+								<span style="font-size: 1.0em; color: white">{{ type.name }}</span>
 							</v-tab>
 						</v-tabs>
 						<v-tabs class="hidden-sm-and-up" color="rgb(0,0,0)" height="35" slider-color="white" fixed-tabs v-model="selectType" style="margin-bottom: 10px">
@@ -296,10 +296,8 @@
 </script>
 
 <style scoped>
-	@media only screen and (min-width: 600px) {
 		.v-tabs__container--fixed-tabs .v-tabs__div, .v-tabs__container--icons-and-text .v-tabs__div {
 		}
-	}
 	.orangered {
 	background-color: orangered;
 	border-color: orangered;
