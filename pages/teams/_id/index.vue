@@ -1,6 +1,6 @@
 <template>
     <v-content id="app">      
-		<v-container text-xs-center style="padding: 0; max-width: 1017px; border-left: 1px solid orangered; border-right: 1px solid orangered">
+		<v-container text-xs-center style="padding: 0; max-width: 1017px; border-left: 1px solid orangered; border-right: 1px solid orangered" v-if="!loading">
 			<div class="backgroundImage" style="position: relative; padding-bottom: 1px">
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25)">
 					<v-flex d-flex xs2 sm2 md2>
@@ -13,7 +13,7 @@
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2>
 						<div class="text-xs-right retour">
-							<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
+							<font-awesome-icon :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" />
 						</div>			
 					</v-flex>
 				</v-layout>	
@@ -29,7 +29,7 @@
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
-							<img src="/images/teams/fc_barcelona.png" class="imgTeamSmall" />
+							<img :src="`/images/teams/${loadedTeam.image}`" :lazy-src="`/images/teams/${loadedTeam.image}`" width="200" />
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
@@ -47,7 +47,7 @@
 					</v-flex>
 					<v-flex d-flex xs6 sm6 md6 justify-center align-center>
 						<div class="nameTeam">
-							<v-icon class="notYourTeam">star</v-icon> FC Barcelona
+							<v-icon class="notYourTeam">star</v-icon> {{ loadedTeam.name }}
 						</div>
 					</v-flex>
 					<v-flex d-flex xs3 sm3 md3 justify-start align-center>
@@ -135,7 +135,7 @@
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12>
 						<v-card height="80px" flat>
-							<v-bottom-nav :active.sync="bottomNav" :value="true" absolute color="transparent" style="height: 75px">
+							<v-bottom-nav :value="true" absolute color="transparent" style="height: 75px">
 								<v-btn class="orangered" flat value="la_liga_18_19">
 									<span>La Liga</span>
 									<img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
@@ -167,7 +167,7 @@
 								<!-- Scrollable content -->
 								<div style="padding: 0; max-width: 100%; height: 100%; background-color: whitesmoke">
 									<!-- Results -->
-									<scoremode-results v-if="selectType === 0" />					
+									<!-- <scoremode-results />		 -->
 								</div>
 							</v-layout>
 						</div>
@@ -199,8 +199,6 @@
 		components: { ScoremodeHeader },
 		layout: 'layoutScoreMode',
 		async created () {
-		},
-		async mounted () {
 			await this.$store.commit('setLoading', true)
 			const team = this.$route.params.id
 			console.log('team: ', team)
@@ -211,6 +209,9 @@
 			if (!fetchedTeam) {
 				alert('Team does not exist!')
 			}
+		},
+		async mounted () {
+			
 		},
 		data () {
 			return {
