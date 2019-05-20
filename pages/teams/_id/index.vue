@@ -29,7 +29,7 @@
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
-							<img :src="`/images/teams/${loadedTeam.image}`" :lazy-src="`/images/teams/${loadedTeam.image}`" width="200" />
+							<img :src="`/images/teams/${loadedTeam.image}`" :lazy-src="`/images/teams/${loadedTeam.image}`" width="100%" />
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
@@ -229,7 +229,9 @@
 			}
 		},
 		methods: {
-
+			goBack() {
+				this.$router.go(-1)
+			}
 		}
 	}
 </script>
