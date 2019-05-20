@@ -1,5 +1,5 @@
 <template>
-	<v-app id="app" style="background-color: #000;">
+	<v-app id="app">
 		<v-content v-if="loadingPage" style="">
 			<div class="loader"></div>
 		</v-content>
@@ -24,7 +24,7 @@
 			],
 			link: [
 				{ rel: 'manifest', href: '/manifest.json' },
-				// { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }
 			]
 		},
 		// middleware: ['auth-check'],
@@ -65,9 +65,9 @@
 </script>
 
 <style>
-	/* #app {
+	#app {
 		font: normal 100%/1 "Acme", Helvetica, sans-serif;
-	} */
+	}
 	.loader {
 		position: fixed;
 		border: 16px solid orangered;
