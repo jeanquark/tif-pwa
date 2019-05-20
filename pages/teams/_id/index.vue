@@ -29,11 +29,7 @@
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2 justify-center align-center>
 						<div class="drapeau">
-<<<<<<< HEAD
 							<img :src="`/images/teams/${loadedTeam.image}`" :lazy-src="`/images/teams/${loadedTeam.image}`" width="200" />
-=======
-							<img :src="`/images/teams/${loadedTeam.image}`" width="200" />
->>>>>>> 890420dedd534cf98477ab25b4d369e5cc044ea6
 						</div>
 					</v-flex>
 					<v-flex d-flex xs4 sm4 md4 justify-start align-center>
@@ -219,7 +215,6 @@
 		},
 		data () {
 			return {
-				name: 'Gaël'
 			}
 		},
 		computed: {
@@ -425,11 +420,11 @@
 	}
 	.yourTeam {
 	color: orangered;
-	font-size: 30px;
+	font-size: 24px;
 	}
 	.notYourTeam {
 	color: grey;
-	font-size: 30px;
+	font-size: 24px;
 	}
 
 	/* Small screens */
