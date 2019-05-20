@@ -181,12 +181,12 @@
 							Informations sur {{ loadedTeam.name }}
 						</div>
 					</v-flex>
-					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
+					<v-flex d-flex xs12 sm12 md12 style="background-color: lightgrey">
 						<div class="infosMatch">
-							<p><b>Pays :</b> {{ loadedTeam.country.name }} - <b>Date de fondation :</b> {{ loadedTeam.founded }} - <b>Couleur :</b> {{ loadedTeam.color_team_1 }} et {{ loadedTeam.color_team_2 }}</p>
-							<p><b>Surnom :</b> {{ loadedTeam.surname }} - <b>Site officiel :</b> {{ loadedTeam.official_website }}</p>
-							<p><b>Stade :</b> {{ loadedTeam.venue_name }} - <b>Adresse :</b> ({{ loadedTeam.venue_adress }}, {{ loadedTeam.venue_city }})</p>
-							<p><b>Capacité :</b> {{ loadedTeam.venue_capacity }} spectateurs - <b>Surface :</b> {{ loadedTeam.venue_surface }}</p>
+							<p style="margin: 16px"><b>Pays :</b> {{ loadedTeam.country.name }} - <b>Date de fondation :</b> {{ loadedTeam.founded }} - <b>Couleur :</b> {{ loadedTeam.color_team_1 }} et {{ loadedTeam.color_team_2 }}</p>
+							<p style="margin: 16px"><b>Surnom :</b> {{ loadedTeam.surname }} - <b>Site officiel :</b> {{ loadedTeam.official_website }}</p>
+							<p style="margin: 16px"><b>Stade :</b> {{ loadedTeam.venue_name }} - <b>Adresse :</b> ({{ loadedTeam.venue_adress }}, {{ loadedTeam.venue_city }})</p>
+							<p style="margin: 16px"><b>Capacité :</b> {{ loadedTeam.venue_capacity }} spectateurs - <b>Surface :</b> {{ loadedTeam.venue_surface }}</p>
 						</div>
 					</v-flex>
 				</v-layout>
@@ -363,7 +363,7 @@
 	color: white;
 	font-size: 1.2em;
 	font-weight: 700;
-	margin-bottom: 8px 0 8px 0;
+	padding: 8px 0 8px 0;
 	}
 	.eventMatch {
 	background-color: lightgrey;
