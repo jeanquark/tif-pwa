@@ -7,8 +7,8 @@
 					</v-flex>
 					<v-flex d-flex xs8 sm8 md8 justify-center align-center>
 						<div class="infoMatch">
-						{{ loadedTeam.country.name }}, 1 compétition en cours<br/>
-						{{ loadedTeam.competition }}
+						{{ loadedTeam.country.name }}, {{ loadedTeam.competitions.length > 1 ? loadedTeam.competitions.length + ' compétitions' : loadedTeam.competitions.length + ' compétition' }} en cours<br/>
+						{{ loadedTeam.competitions }}
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2>
@@ -185,7 +185,7 @@
 						<div class="infosMatch">
 							<p style="margin: 16px"><b>Pays :</b> {{ loadedTeam.country.name }} - <b>Date de fondation :</b> {{ loadedTeam.founded }} - <b>Couleur :</b> {{ loadedTeam.color_team_1 }} et {{ loadedTeam.color_team_2 }}</p>
 							<p style="margin: 16px"><b>Surnom :</b> {{ loadedTeam.surname }} - <b>Site officiel :</b> {{ loadedTeam.official_website }}</p>
-							<p style="margin: 16px"><b>Stade :</b> {{ loadedTeam.venue_name }} - <b>Adresse :</b> ({{ loadedTeam.venue_adress }}, {{ loadedTeam.venue_city }})</p>
+							<p style="margin: 16px"><b>Stade :</b> {{ loadedTeam.venue_name }} - <b>Adresse :</b> {{ loadedTeam.venue_adress }}, {{ loadedTeam.venue_city }}</p>
 							<p style="margin: 16px"><b>Capacité :</b> {{ loadedTeam.venue_capacity }} spectateurs - <b>Surface :</b> {{ loadedTeam.venue_surface }}</p>
 						</div>
 					</v-flex>
@@ -235,9 +235,6 @@
 			}
 		},
 		methods: {
-			goBack() {
-				this.$router.go(-1)
-			}
 		}
 	}
 </script>
