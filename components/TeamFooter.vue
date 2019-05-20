@@ -1,51 +1,18 @@
 <template>
 
-		</v-container>					 
-  </v-content>
 </template>
 
 <script>
-	export default {
-		head: {
-			link: [
-				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' },
-                { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
-			]			
-		},
-		layout: 'layoutScoreMode',
-		async created () {
-			await this.$store.commit('setLoading', true)
-			const team = this.$route.params.id
-			console.log('team: ', team)
-			const fetchedTeam = await this.$store.dispatch('teams_gm/fetchTeam', team)
-			await this.$store.commit('setLoading', false)
+    export default {
+        data () {
+            return {
 
-			console.log('fetchedTeam: ', fetchedTeam)
-			if (!fetchedTeam) {
-				alert('Team does not exist!')
-			}
-		},
-		async mounted () {
-			
-		},
-		data () {
-			return {
-			}
-		},
-		computed: {
-			loading () {
-				return this.$store.getters['loading']
-			},
-			loadedUser () {
-				return this.$store.getters['users/loadedUser']
-			},
-			loadedTeam () {
-				return this.$store.getters['teams_gm/loadedTeam']
-			}
-		},
-		methods: {
-		}
-	}
+            }
+        },
+        computed: {
+            
+        }
+    }
 </script>
 
 <style scoped>
