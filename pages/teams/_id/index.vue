@@ -183,10 +183,10 @@
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
 						<div class="infosMatch">
-							Pays : {{ loadedTeam.country.name }} - Date de fondation : {{ loadedTeam.founded }} - Couleur : {{ loadedTeam.color_team_1 }} et {{ loadedTeam.color_team_2 }}<br />
-							Surnom : {{ loadedTeam.surname }} - Site officiel : {{ loadedTeam.official_website }}<br />
-							Stade : {{ loadedTeam.venue_name }} ({{ loadedTeam.venue_adress }}, {{ loadedTeam.venue_city }})<br />
-							Capacité : {{ loadedTeam.venue_capacity }} spectateurs - Surface : {{ loadedTeam.venue_surface }}
+							<p><b>Pays :</b> {{ loadedTeam.country.name }} - <b>Date de fondation :</b> {{ loadedTeam.founded }} - <b>Couleur :</b> {{ loadedTeam.color_team_1 }} et {{ loadedTeam.color_team_2 }}</p>
+							<p><b>Surnom :</b> {{ loadedTeam.surname }} - <b>Site officiel :</b> {{ loadedTeam.official_website }}</p>
+							<p><b>Stade :</b> {{ loadedTeam.venue_name }} - <b>Adresse :</b> ({{ loadedTeam.venue_adress }}, {{ loadedTeam.venue_city }})</p>
+							<p><b>Capacité :</b> {{ loadedTeam.venue_capacity }} spectateurs - <b>Surface :</b> {{ loadedTeam.venue_surface }}</p>
 						</div>
 					</v-flex>
 				</v-layout>
@@ -196,14 +196,13 @@
 </template>
 
 <script>
-	import ScoremodeHeader from '~/components/jm/ScoremodeHeader'
 	export default {
 		head: {
 			link: [
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' },
                 { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
 			]			
 		},
-		components: { ScoremodeHeader },
 		layout: 'layoutScoreMode',
 		async created () {
 			await this.$store.commit('setLoading', true)
@@ -364,7 +363,7 @@
 	color: white;
 	font-size: 1.2em;
 	font-weight: 700;
-	margin-bottom: 8px 0 4px 0;
+	margin-bottom: 8px 0 8px 0;
 	}
 	.eventMatch {
 	background-color: lightgrey;
@@ -430,11 +429,11 @@
 	}
 	.yourTeam {
 	color: orangered;
-	font-size: 24px;
+	font-size: 30px;
 	}
 	.notYourTeam {
 	color: grey;
-	font-size: 24px;
+	font-size: 30px;
 	}
 
 	/* Small screens */
