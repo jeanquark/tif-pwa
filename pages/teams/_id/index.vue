@@ -14,14 +14,14 @@
 						<!-- Results -->
 						<team-results v-if="selectType === 0" />
 
-						<!-- Standings -->
+						<!-- <!-- Standings -->
 						<team-standings v-if="selectType === 1" />
 						
 						<!-- Standings -->
 						<team-standings v-if="selectType === 2" />
 						
 						<!-- Standings -->
-						<team-standings v-if="selectType === 3" />
+						<team-standings v-if="selectType === 3" /> -->
 						
 					</div>
 					
@@ -39,7 +39,6 @@
     import moment from 'moment'
     import TeamHeader from '~/components/TeamHeader'
     import TeamResults from '~/components/TeamResults'
-    import TeamStandings from '~/components/TeamStandings'
     import TeamFooter from '~/components/TeamFooter'
     export default {
         head: {
@@ -48,7 +47,7 @@
 				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme' }                
 			]
         },
-        components: { TeamHeader, TeamResults, TeamStandings, TeamFooter },
+        components: { TeamHeader, TeamResults, TeamFooter },
         async created () {
             // console.log(moment().format('YYYY-MM-DD'))
             // console.log(moment().add(1, 'days').format('YYYY-MM-DD'))
