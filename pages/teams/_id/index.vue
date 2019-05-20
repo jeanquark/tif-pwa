@@ -1,5 +1,5 @@
 <template>
-    <v-content id="app">      
+    <v-content id="app" background-color: whitesmoke">      
 		<v-container text-xs-center style="padding: 0; max-width: 1017px; border-left: 1px solid orangered; border-right: 1px solid orangered" v-if="!loading">
 			<div class="backgroundImage" style="position: relative; padding-bottom: 1px">
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25)">
@@ -198,6 +198,11 @@
 <script>
 	import ScoremodeHeader from '~/components/jm/ScoremodeHeader'
 	export default {
+		head: {
+			link: [
+                { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
+			]			
+		},
 		components: { ScoremodeHeader },
 		layout: 'layoutScoreMode',
 		async created () {
@@ -355,10 +360,11 @@
 	background-color: white;
 	}
 	.titleResume {
-	background-color: #fafafa;
-	font-size: 1.1em;
+	background-color: black;
+	color: white;
+	font-size: 1.2em;
 	font-weight: 700;
-	margin-bottom: 5px;
+	margin-bottom: 8px 0 4px 0;
 	}
 	.eventMatch {
 	background-color: lightgrey;
