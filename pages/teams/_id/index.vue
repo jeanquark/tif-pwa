@@ -136,19 +136,11 @@
 					<v-flex d-flex xs12 sm12 md12>
 						<v-card height="80px" flat>
 							<v-bottom-nav :value="true" absolute color="transparent" style="height: 75px">
-								<v-btn class="orangered" flat value="la_liga_18_19">
-									<span>La Liga</span>
-									<img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
+								<v-btn class="orangered" flat value="{{ loadedTeam.competitions }}">
+									<span>{{ loadedTeam.competitions }}</span>
+									<img :src="`/images/teams/${loadedTeam.image}`" :lazy-src="`/images/teams/${loadedTeam.image}`" width="100%" />
 								</v-btn>
-								<v-btn class="orangered" flat value="la_copa_del_rey_18_19">	
-									<span>La Copa del Rey</span>
-									<img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
-								</v-btn>
-								<v-btn class="orangered" flat value="uefa_champions_league_18_19">
-									<span>UEFA Champions League</span>
-									<img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
-								</v-btn>
-								</v-bottom-nav>
+							</v-bottom-nav>
 						</v-card>					
 					</v-flex>
 				</v-layout>
@@ -270,7 +262,7 @@
 	position: relative;
     }
 	.backgroundImage {
-	background-color: #004C99;
+	background-color: {{ loadedTeam.color_team_1 }};
 	}
 	.imgTeamSmall {
 	width: 70%;
