@@ -16,7 +16,7 @@ export const actions = {
 	async fetchTeam ( { commit }, payload) {
 		const team = await firebase.database().ref('/teams').child(payload).once('value')
 		console.log('team action: ', team.val())
-		commit('setTeam', team.val())
+		commit('setTeam', { ...team.val(), id: team.key })
 		return team.val()
 	}
 }
