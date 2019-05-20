@@ -7,13 +7,13 @@
 					</v-flex>
 					<v-flex d-flex xs8 sm8 md8 justify-center align-center>
 						<div class="infoMatch">
-						Espagne, 3 compétitions en cours<br/>
-						La Liga, La Copa del Rey, UEFA Champions League
+						{{ loadedTeam.country.name }}, 1 compétition en cours<br/>
+						{{ loadedTeam.competition }}
 						</div>
 					</v-flex>
 					<v-flex d-flex xs2 sm2 md2>
 						<div class="text-xs-right retour">
-							<font-awesome-icon :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" />
+							<fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
 						</div>			
 					</v-flex>
 				</v-layout>	
@@ -178,13 +178,15 @@
 				<v-layout grid-list-xs row wrap style="margin-top: 10px">
 					<v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
 						<div>
-							Informations sur le FC Barcelona
+							Informations sur {{ loadedTeam.name }}
 						</div>
 					</v-flex>
 					<v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
 						<div class="infosMatch">
-							Pays : Espagne - Date de fondation : 1907 - Couleur : rouge et bleu<br />
-							Stade : Le nom du stade (ville) - Capacité : Nb de spectateurs
+							Pays : {{ loadedTeam.country.name }} - Date de fondation : {{ loadedTeam.founded }} - Couleur : {{ loadedTeam.color_team_1 }} et {{ loadedTeam.color_team_2 }}<br />
+							Surnom : {{ loadedTeam.surname }} - Site officiel : {{ loadedTeam.official_website }}<br />
+							Stade : {{ loadedTeam.venue_name }} ({{ loadedTeam.venue_adress }}, {{ loadedTeam.venue_city }})<br />
+							Capacité : {{ loadedTeam.venue_capacity }} spectateurs - Surface : {{ loadedTeam.venue_surface }}
 						</div>
 					</v-flex>
 				</v-layout>
