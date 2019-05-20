@@ -11,10 +11,10 @@
 					<!-- Scrollable content -->
 					<div style="padding: 0; min-width: 100%; height: 100%">
 			
-						<!-- Results -->
+						<!-- <!-- Results -->
 						<team-results v-if="selectType === 0" />
 
-						<!-- <!-- Standings -->
+						<!-- Standings -->
 						<team-standings v-if="selectType === 1" />
 						
 						<!-- Standings -->
