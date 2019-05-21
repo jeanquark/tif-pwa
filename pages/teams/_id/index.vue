@@ -1,5 +1,5 @@
 <template>
-    <v-content id="app" background-color: whitesmoke">      
+    <v-content id="app" background-color: whitesmoke">  
 		<v-container text-xs-center style="padding: 0; max-width: 1017px; border-left: 1px solid orangered; border-right: 1px solid orangered" v-if="!loading">
             <!-- loadedTeam: {{ loadedTeam }}<br /><br /> -->
             <!-- loadedCompetitions: {{ loadedCompetitions }}<br /><br /> -->
@@ -145,18 +145,6 @@
                                     <span>{{ competition.name }}</span>
                                     <img :src="`/images/competitions/${competition.image}`" class="imgCompetition" />
                                 </v-btn>
-                                <!-- <v-btn class="orangered" flat value="la_liga_18_19">
-                                    <span>La Liga</span>
-                                    <img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
-                                </v-btn>
-                                <v-btn class="orangered" flat value="la_copa_del_rey_18_19">    
-                                    <span>La Copa del Rey</span>
-                                    <img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
-                                </v-btn>
-                                <v-btn class="orangered" flat value="uefa_champions_league_18_19">
-                                    <span>UEFA Champions League</span>
-                                    <img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
-                                </v-btn> -->
 							</v-bottom-nav>
 						</v-card>					
 					</v-flex>
@@ -217,11 +205,6 @@
 			]			
 		},
 		layout: 'layoutScoreMode',
-        async created () {
-            await this.$store.commit('setLoading', true)
-            const team = this.$route.params.id
-            console.log('team: ', team)
-            const fetchedTeam = await this.$store.dispatch('teams_gm/fetchTeam', team)
             await this.$store.commit('setLoading', false)
 
             if (!this.$store.getters['competitions/loadedCompetitions']) {
@@ -236,24 +219,23 @@
                 alert('Team does not exist!')
             }
         },
-        async mounted () {
-            
-        },
-        data () {
-            return {
-                name: 'Gaël'
-            }
-        },
-        computed: {
-            loading () {
-                return this.$store.getters['loading']
-            },
-            loadedUser () {
-                return this.$store.getters['users/loadedUser']
-            },
-            loadedTeam () {
-                return this.$store.getters['teams_gm/loadedTeam']
-            },
+		async mounted () {
+			
+		},
+		data () {
+			return {
+			}
+		},
+		computed: {
+			loading () {
+				return this.$store.getters['loading']
+			},
+			loadedUser () {
+				return this.$store.getters['users/loadedUser']
+			},
+			loadedTeam () {
+				return this.$store.getters['teams_gm/loadedTeam']
+			},
             loadedCompetitions () {
                 return this.$store.getters['competitions/loadedCompetitions']
             },
@@ -275,11 +257,10 @@
                 const teamApiId = this.loadedTeam.apifootball_id
                 return this.loadedEvents.filter(event => event.homeTeam_id == teamApiId || event.visitorTeam_id == teamApiId)
             }
-        },
-        methods: {
-
-        }
-    }
+		},
+		methods: {
+		}
+	}
 </script>
 
 <style scoped>
