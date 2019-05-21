@@ -1,11 +1,6 @@
 <template>
-    <v-content id="app" background-color: whitesmoke">  
+    <v-content id="app" background-color: whitesmoke">      
 		<v-container text-xs-center style="padding: 0; max-width: 1017px; border-left: 1px solid orangered; border-right: 1px solid orangered" v-if="!loading">
-            <!-- loadedTeam: {{ loadedTeam }}<br /><br /> -->
-            <!-- loadedCompetitions: {{ loadedCompetitions }}<br /><br /> -->
-            <!-- teamCompetitions: {{ teamCompetitions }}<br /><br /> -->
-            <!-- loadedEvents: {{ loadedEvents }}<br /><br /> -->
-            <!-- teamEvents: {{ teamEvents }}<br /><br /> -->
 			<div class="backgroundImage" style="position: relative; padding-bottom: 1px">
 				<v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25)">
 					<v-flex d-flex xs2 sm2 md2>
@@ -141,10 +136,10 @@
 					<v-flex d-flex xs12 sm12 md12>
 						<v-card height="80px" flat>
 							<v-bottom-nav :value="true" absolute color="transparent" style="height: 75px">
-                                <v-btn class="orangered" flat value="la_liga_18_19" v-if="competition">
-                                    <span>{{ competition.name }}</span>
-                                    <img :src="`/images/competitions/${competition.image}`" class="imgCompetition" />
-                                </v-btn>
+								<v-btn class="orangered" flat value="{{ loadedTeam.competitions }}">
+									<span>{{ loadedTeam.competitions }}</span>
+									<img :src="`/images/teams/${loadedTeam.image}`" :lazy-src="`/images/teams/${loadedTeam.image}`" width="100%" />
+								</v-btn>
 							</v-bottom-nav>
 						</v-card>					
 					</v-flex>
@@ -157,22 +152,17 @@
 							Tous les matchs de la saison
 						</div>
 					</v-flex>
-                    <v-flex d-flex xs12 sm12 md12>
-                        <!-- Scrollable content -->
-                        <div class="content" style="max-height: 100vh; border-right: 1px solid orangered; border-left: 1px solid orangered">
-                            <v-layout>  
-                                <!-- Scrollable content -->
-                                <div style="padding: 0; max-width: 100%; height: 100%; background-color: whitesmoke">
-                                    <div v-for="event in teamEvents" :key="event.id">
-                                        {{ event.homeTeam_name }} {{ event.homeTeam_score }} - {{ event.visitorTeam_score }} {{ event.visitorTeam_name }}
-                                        <br />
-                                    </div>
-                                    <!-- Results -->
-                                    <!-- <scoremode-results />       -->
-                                </div>
-                            </v-layout>
-                        </div>
-                    </v-flex>
+					<v-flex d-flex xs12 sm12 md12>
+						<!-- Scrollable content -->
+						<div class="content" style="max-height: 100vh; border-right: 1px solid orangered; border-left: 1px solid orangered">
+							<v-layout>	
+								<!-- Scrollable content -->
+								<div style="padding: 0; max-width: 100%; height: 100%; background-color: whitesmoke">
+
+								</div>
+							</v-layout>
+						</div>
+					</v-flex>
 				</v-layout>
 			</div>
 			<div class="resumeMatch">
@@ -205,25 +195,18 @@
 			]			
 		},
 		layout: 'layoutScoreMode',
-        async created () {
-            await this.$store.commit('setLoading', true)
-            const team = this.$route.params.id
-            console.log('team: ', team)
-            const fetchedTeam = await this.$store.dispatch('teams_gm/fetchTeam', team)
-            await this.$store.commit('setLoading', false)
+		async created () {
+			await this.$store.commit('setLoading', true)
+			const team = this.$route.params.id
+			console.log('team: ', team)
+			const fetchedTeam = await this.$store.dispatch('teams_gm/fetchTeam', team)
+			await this.$store.commit('setLoading', false)
 
-            if (!this.$store.getters['competitions/loadedCompetitions']) {
-                this.$store.dispatch('competitions/loadedCompetitions')
-            }
-            if (!this.$store.getters['events/loadedEvents']) {
-                this.$store.dispatch('events/loadedEvents')
-            }
-
-            console.log('fetchedTeam: ', fetchedTeam)
-            if (!fetchedTeam) {
-                alert('Team does not exist!')
-            }
-        },
+			console.log('fetchedTeam: ', fetchedTeam)
+			if (!fetchedTeam) {
+				alert('Team does not exist!')
+			}
+		},
 		async mounted () {
 			
 		},
@@ -240,28 +223,7 @@
 			},
 			loadedTeam () {
 				return this.$store.getters['teams_gm/loadedTeam']
-			},
-            loadedCompetitions () {
-                return this.$store.getters['competitions/loadedCompetitions']
-            },
-            teamCompetitions () {
-                let teamCompetitions = []
-                const competitionsArray = Object.keys(this.loadedTeam.competitions)
-                competitionsArray.forEach(competition => {
-                    const competitionSlug = competition
-                    teamCompetitions.push(this.loadedCompetitions.find(competition => competition.id === competitionSlug))
-                })
-                console.log('teamCompetitions: ', teamCompetitions)
-                return teamCompetitions
-            },
-            loadedEvents () {
-                return this.$store.getters['events/loadedEvents']
-            },
-            teamEvents () {
-                console.log('this.loadedTeam.api_football_id: ', this.loadedTeam.football_api_id)
-                const teamApiId = this.loadedTeam.apifootball_id
-                return this.loadedEvents.filter(event => event.homeTeam_id == teamApiId || event.visitorTeam_id == teamApiId)
-            }
+			}
 		},
 		methods: {
 		}
