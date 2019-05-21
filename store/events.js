@@ -241,7 +241,7 @@ export const actions = {
             try {
                 firebase
                     .database()
-                    .ref("/events_new2/")
+                    .ref("/events_new3/")
                     .orderByChild("competition_id")
                     .equalTo(competitionId)
                     // .orderByChild('date')
