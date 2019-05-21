@@ -205,6 +205,11 @@
 			]			
 		},
 		layout: 'layoutScoreMode',
+        async created () {
+            await this.$store.commit('setLoading', true)
+            const team = this.$route.params.id
+            console.log('team: ', team)
+            const fetchedTeam = await this.$store.dispatch('teams_gm/fetchTeam', team)
             await this.$store.commit('setLoading', false)
 
             if (!this.$store.getters['competitions/loadedCompetitions']) {
