@@ -225,7 +225,7 @@
 				return this.$store.getters['teams_gm/loadedTeam']
 			},
 			loadedCompetitions () {
-				return.this$store.gettes['competitions/loadedCompetitions']
+				return.this$store.getters['competitions/loadedCompetitions']
 			},
 			teamCompetitions () {
 				let teamCompetitions = []
