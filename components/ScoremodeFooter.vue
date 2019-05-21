@@ -749,7 +749,7 @@
 	}
 
 	#dock-container li#active .textMenu {
-		font: normal 90%/1 "Acme", Helvetica, sans-serif;
+		font: normal 80%/1 "Acme", Helvetica, sans-serif;
 		padding: 2px;
 	}
 
@@ -759,7 +759,7 @@
 	}
 
 	#dock-container .textMenu {
-		font: normal 90%/1 "Acme", Helvetica, sans-serif;
+		font: normal 80%/1 "Acme", Helvetica, sans-serif;
 		padding: 2px;
 	}
 }
