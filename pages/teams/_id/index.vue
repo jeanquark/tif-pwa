@@ -223,6 +223,19 @@
 			},
 			loadedTeam () {
 				return this.$store.getters['teams_gm/loadedTeam']
+			},
+			loadedCompetitions () {
+				return.this$store.gettes['competitions/loadedCompetitions']
+			},
+			teamCompetitions () {
+				let teamCompetitions = []
+				const competitionsArray = Object.keys(this.loadedTeam.competitions)
+				competitionsArray.forEach(competition => {
+					const competitionSlug = competition
+					teamCompetitions.push(this.loadedCompetitions.find(competition => competition.id === competitionSlug))
+				})
+				console.log('teamCompetitions: ', teamCompetitions)
+				return teamCompetitions
 			}
 		},
 		methods: {
