@@ -207,9 +207,7 @@
 </template>
 
 <script>
-    import ScoremodeHeader from '~/components/jm/ScoremodeHeader'
     export default {
-        components: { ScoremodeHeader },
         layout: 'layoutScoreMode',
         async created () {
             await this.$store.commit('setLoading', true)
