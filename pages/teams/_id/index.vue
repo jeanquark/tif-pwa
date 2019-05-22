@@ -251,12 +251,13 @@
             },
             loadedEvents () {
                 return this.$store.getters['events/loadedEvents']
-            },
-            teamEvents () {
-                console.log('this.loadedTeam.api_football_id: ', this.loadedTeam.football_api_id)
-                const teamApiId = this.loadedTeam.apifootball_id
-                return this.loadedEvents.filter(event => event.homeTeam_id == teamApiId || event.visitorTeam_id == teamApiId)
-            }
+			}
+            // },
+            // teamEvents () {
+            //  console.log('this.loadedTeam.api_football_id: ', this.loadedTeam.football_api_id)
+            //  const teamApiId = this.loadedTeam.apifootball_id
+            //  return this.loadedEvents.filter(event => event.homeTeam_id == teamApiId || event.visitorTeam_id == teamApiId)
+            // }
         },
         methods: {
             goBack() {
