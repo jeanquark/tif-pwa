@@ -22,8 +22,8 @@ export const mutations = {
     // },
     setEvents (state, payload) {
         // console.log('Call to setEvents mutation', payload)
-        // state.loadedEvents = Object.assign({}, state.loadedEvents, { [payload.date]: payload })
-        state.loadedEvents = payload
+        state.loadedEvents = Object.assign({}, state.loadedEvents, { [payload.date]: payload })
+        // state.loadedEvents = payload
     },
     setEventsByCompetitionByRound (state, payload) {
         console.log('payload2: ', payload)

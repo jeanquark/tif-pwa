@@ -219,10 +219,10 @@
             await this.$store.commit('setLoading', false)
 
             if (!this.$store.getters['competitions/loadedCompetitions'].length) {
-                this.$store.dispatch('competitions/loadedCompetitions')
+                await this.$store.dispatch('competitions/loadedCompetitions')
             }
             if (!this.$store.getters['events/loadedEvents'].length) {
-                this.$store.dispatch('events/loadedEvents')
+                await this.$store.dispatch('events/loadedEvents')
             }
 
             console.log('fetchedTeam: ', fetchedTeam)
@@ -268,14 +268,14 @@
             teamEvents () {
                 console.log('this.loadedTeam.api_football_id: ', this.loadedTeam.football_api_id)
                 const teamApiId = this.loadedTeam.apifootball_id
-                if (this.loadedEvents.length > 0) {
-                    return this.loadedEvents.filter(event => event.homeTeam_id == teamApiId || event.visitorTeam_id ==
-                        teamApiId)
+                if (this.loadedEvents[undefined]) {
+                    return this.loadedEvents[undefined].filter(event => event.homeTeam_id == teamApiId || event.visitorTeam_id == teamApiId)
                 }
                 return []
             }
         },
         methods: {
+
 
         }
     }
