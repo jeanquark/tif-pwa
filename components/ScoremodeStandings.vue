@@ -96,7 +96,7 @@
                     { text: 'Goals against', value: 'goalsAgainst', align: 'center' },
                     { text: 'Goals diff', value: 'goalsDiff', align: 'center' }
                 ],
-				activeCompetition: 'french_league1_2018_2019, english_premier_league_2018_2019', 'german_bundesliga_2018_2019', 'italian_serie_a_2018_2019', 'major_league_soccer_2019_2020', 'spanish_la_liga_2018_2019', 'swiss_super_league_2018_2019'
+				activeCompetition: 'french_league1_2018_2019, english_premier_league_2018_2019, german_bundesliga_2018_2019, italian_serie_a_2018_2019, major_league_soccer_2019_2020, spanish_la_liga_2018_2019, swiss_super_league_2018_2019'
 			}
 		},
 		computed: {
