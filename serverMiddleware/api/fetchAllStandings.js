@@ -10,12 +10,12 @@ const app = express();
 // axios.defaults.headers.common['X-RapidAPI-Key'] = api_key;
 
 // function getLeagueStanding2(league) {
-// 	const url = `https://api-football-v1.p.rapidapi.com/V2/leagueTable/${league}`;
+// 	const url = `https://api-football-v1.p.rapidapi.com/leagueTable/${league}`;
 // 	return axios.get(url);
 // }
 
 function getLeagueStanding(league) {
-	const url = `https://api-football-v1.p.rapidapi.com/V2/leagueTable/${league}`;
+	const url = `https://api-football-v1.p.rapidapi.com/leagueTable/${league}`;
 	return unirest.get(url).headers({
 		'Accept': 'application/json',
         'X-RapidAPI-Key': 'V5NyybcqoimshrFl7oR8yKKDMyxhp10zkcfjsnGw3uB6ZeMcDI'
