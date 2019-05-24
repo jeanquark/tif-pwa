@@ -69,7 +69,7 @@
 	import moment from 'moment'
 	export default {
 		async created () {
-            await this.$store.dispatch('standings/fetchCompetitionStanding', 'english_premier_league_2018_2019');
+            await this.$store.dispatch('standings/fetchCompetitionStanding');
         },
 		data () {
 			return {
@@ -95,8 +95,7 @@
                     { text: 'Goals for', value: 'goalsFor', align: 'center' },
                     { text: 'Goals against', value: 'goalsAgainst', align: 'center' },
                     { text: 'Goals diff', value: 'goalsDiff', align: 'center' }
-                ],
-				activeCompetition: 'english_premier_league_2018_2019'
+                ]
 			}
 		},
 		computed: {
