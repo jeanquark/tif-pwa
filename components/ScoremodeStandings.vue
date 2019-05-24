@@ -42,12 +42,12 @@
                                                             	<v-img :src="`/images/teamsByID/${props.item.team_id}.png`" width="30" aspect-ratio="1"></v-img>
                                                             </td>
                                                             <td class="text-xs-center">{{ props.item.points }}</td>
-                                                            <td class="text-xs-center">{{ props.item.matchsPlayed }}</td>
-                                                            <td class="text-xs-center">{{ props.item.win }}</td>
-                                                            <td class="text-xs-center">{{ props.item.draw }}</td>
-                                                            <td class="text-xs-center">{{ props.item.lose }}</td>
-                                                            <td class="text-xs-center">{{ props.item.goalsFor }}</td>
-                                                            <td class="text-xs-center">{{ props.item.goalsAgainst }}</td>
+                                                            <td class="text-xs-center">{{ props.item.all.matchsPlayed }}</td>
+                                                            <td class="text-xs-center">{{ props.item.all.win }}</td>
+                                                            <td class="text-xs-center">{{ props.item.all.draw }}</td>
+                                                            <td class="text-xs-center">{{ props.item.all.lose }}</td>
+                                                            <td class="text-xs-center">{{ props.item.all.goalsFor }}</td>
+                                                            <td class="text-xs-center">{{ props.item.all.goalsAgainst }}</td>
                                                             <td class="text-xs-center">{{ props.item.goalsDiff }}</td>
                                                         </tr>
                                                     </template>
@@ -69,7 +69,7 @@
 	import moment from 'moment'
 	export default {
 		async created () {
-            await this.$store.dispatch('standings/fetchCompetitionStanding', 'french_league1_2018_2019');
+            await this.$store.dispatch('standings/fetchCompetitionStanding');
         },
 		data () {
 			return {
@@ -96,7 +96,7 @@
                     { text: 'Goals against', value: 'goalsAgainst', align: 'center' },
                     { text: 'Goals diff', value: 'goalsDiff', align: 'center' }
                 ],
-				activeCompetition: 'french_league1_2018_2019'
+				activeCompetition: 'french_league1_2018_2019, english_premier_league_2018_2019', 'german_bundesliga_2018_2019', 'italian_serie_a_2018_2019', 'major_league_soccer_2019_2020', 'spanish_la_liga_2018_2019', 'swiss_super_league_2018_2019'
 			}
 		},
 		computed: {
