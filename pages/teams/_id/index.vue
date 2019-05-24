@@ -205,12 +205,14 @@
             console.log('team: ', team)
             const fetchedTeam = await this.$store.dispatch('teams_gm/fetchTeam', team)
             await this.$store.commit('setLoading', false)
-            if (!this.$store.getters['competitions/loadedCompetitions']) {
-                this.$store.dispatch('competitions/loadedCompetitions')
+
+            if (!this.$store.getters['competitions/loadedCompetitions'].length) {
+                await this.$store.dispatch('competitions/loadedCompetitions')
             }
-            if (!this.$store.getters['events/loadedEvents']) {
-                this.$store.dispatch('events/loadedEvents')
+            if (!this.$store.getters['events/loadedEvents'].length) {
+                await this.$store.dispatch('events/loadedEvents')
             }
+
             console.log('fetchedTeam: ', fetchedTeam)
             if (!fetchedTeam) {
                 alert('Team does not exist!')
@@ -248,12 +250,16 @@
                 return teamCompetitions
             },
             loadedEvents () {
+                console.log('loadedEvents')
                 return this.$store.getters['events/loadedEvents']
             },
             teamEvents () {
                 console.log('this.loadedTeam.api_football_id: ', this.loadedTeam.football_api_id)
                 const teamApiId = this.loadedTeam.apifootball_id
-                return this.loadedEvents.filter(event => event.homeTeam_id == teamApiId || event.visitorTeam_id == teamApiId)
+                if (this.loadedEvents[undefined]) {
+                    return this.loadedEvents[undefined].filter(event => event.homeTeam_id == teamApiId || event.visitorTeam_id == teamApiId)
+                }
+                return []
             }
         },
         methods: {
