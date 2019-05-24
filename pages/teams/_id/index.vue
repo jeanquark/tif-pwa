@@ -10,15 +10,15 @@
                 <v-layout grid-list-xs row wrap style="background-color: rgb(0,0,0,0.25)">
                     <v-flex d-flex xs2 sm2 md2>
                     </v-flex>
-                    <v-flex d-flex xs8 sm8 md8 justify-center align-center>
-                        <div class="infoMatch">
-                        Espagne, 3 compétitions en cours<br/>
-                        La Liga, La Copa del Rey, UEFA Champions League
+                    <v-flex d-flex xs8 sm8 md8 justify-center align-center :value="true" v-for="(competition, index) in teamCompetitions" :key="index">
+                        <div class="infoMatch" v-if="competition">
+                        {{ loadedTeam.country.name }}, 3 compétitions en cours<br/>
+                        {{ competition.name }}
                         </div>
                     </v-flex>
                     <v-flex d-flex xs2 sm2 md2>
                         <div class="text-xs-right retour">
-                            <font-awesome-icon :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" />
+                            <fa :icon="['fas', 'arrow-circle-left']" size="2x" class="icon" @click="goBack" />
                         </div>          
                     </v-flex>
                 </v-layout> 
@@ -34,7 +34,7 @@
                     </v-flex>
                     <v-flex d-flex xs2 sm2 md2 justify-center align-center>
                         <div class="drapeau">
-                            <img :src="`/images/teams/${loadedTeam.image}`" width="200" />
+                            <img :src="`/images/teams/${loadedTeam.image}`" width="100%" />
                         </div>
                     </v-flex>
                     <v-flex d-flex xs4 sm4 md4 justify-start align-center>
@@ -145,18 +145,6 @@
                                     <span>{{ competition.name }}</span>
                                     <img :src="`/images/competitions/${competition.image}`" class="imgCompetition" />
                                 </v-btn>
-                                <!-- <v-btn class="orangered" flat value="la_liga_18_19">
-                                    <span>La Liga</span>
-                                    <img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
-                                </v-btn>
-                                <v-btn class="orangered" flat value="la_copa_del_rey_18_19">    
-                                    <span>La Copa del Rey</span>
-                                    <img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
-                                </v-btn>
-                                <v-btn class="orangered" flat value="uefa_champions_league_18_19">
-                                    <span>UEFA Champions League</span>
-                                    <img src="/images/teams/fc_barcelona.png" class="imgCompetition" />
-                                </v-btn> -->
                             </v-bottom-nav>
                         </v-card>                   
                     </v-flex>
@@ -191,13 +179,15 @@
                 <v-layout grid-list-xs row wrap style="margin-top: 10px">
                     <v-flex d-flex xs12 sm12 md12 justify-center align-center class="titleResume">
                         <div>
-                            Informations sur le FC Barcelona
+                            Informations sur {{ loadedTeam.name }}
                         </div>
                     </v-flex>
                     <v-flex d-flex xs12 sm12 md12 style="margin-bottom: 20px; padding: 10px; background-color: lightgrey">
                         <div class="infosMatch">
-                            Pays : Espagne - Date de fondation : 1907 - Couleur : rouge et bleu<br />
-                            Stade : Le nom du stade (ville) - Capacité : Nb de spectateurs
+                            <p style="margin: 16px"><b>Pays :</b> {{ loadedTeam.country.name }} - <b>Date de fondation :</b> {{ loadedTeam.founded }} - <b>Couleur :</b> {{ loadedTeam.color_team_1 }} et {{ loadedTeam.color_team_2 }}</p>
+                            <p style="margin: 16px"><b>Surnom :</b> {{ loadedTeam.surname }} - <b>Site officiel :</b> {{ loadedTeam.official_website }}</p>
+                            <p style="margin: 16px"><b>Stade :</b> {{ loadedTeam.venue_name }} - <b>Adresse :</b> {{ loadedTeam.venue_adress }}, {{ loadedTeam.venue_city }}</p>
+                            <p style="margin: 16px"><b>Capacité :</b> {{ loadedTeam.venue_capacity }} spectateurs - <b>Surface :</b> {{ loadedTeam.venue_surface }}</p>
                         </div>
                     </v-flex>
                 </v-layout>
@@ -207,9 +197,7 @@
 </template>
 
 <script>
-    import ScoremodeHeader from '~/components/jm/ScoremodeHeader'
     export default {
-        components: { ScoremodeHeader },
         layout: 'layoutScoreMode',
         async created () {
             await this.$store.commit('setLoading', true)
@@ -217,14 +205,12 @@
             console.log('team: ', team)
             const fetchedTeam = await this.$store.dispatch('teams_gm/fetchTeam', team)
             await this.$store.commit('setLoading', false)
-
-            if (!this.$store.getters['competitions/loadedCompetitions'].length) {
+            if (!this.$store.getters['competitions/loadedCompetitions']) {
                 this.$store.dispatch('competitions/loadedCompetitions')
             }
-            if (!this.$store.getters['events/loadedEvents'].length) {
+            if (!this.$store.getters['events/loadedEvents']) {
                 this.$store.dispatch('events/loadedEvents')
             }
-
             console.log('fetchedTeam: ', fetchedTeam)
             if (!fetchedTeam) {
                 alert('Team does not exist!')
@@ -262,21 +248,18 @@
                 return teamCompetitions
             },
             loadedEvents () {
-                console.log('loadedEvents')
                 return this.$store.getters['events/loadedEvents']
             },
             teamEvents () {
                 console.log('this.loadedTeam.api_football_id: ', this.loadedTeam.football_api_id)
                 const teamApiId = this.loadedTeam.apifootball_id
-                if (this.loadedEvents.length > 0) {
-                    return this.loadedEvents.filter(event => event.homeTeam_id == teamApiId || event.visitorTeam_id ==
-                        teamApiId)
-                }
-                return []
+                return this.loadedEvents.filter(event => event.homeTeam_id == teamApiId || event.visitorTeam_id == teamApiId)
             }
         },
         methods: {
-
+            goBack() {
+                this.$router.replace("/teams")
+            }       
         }
     }
 </script>
@@ -398,10 +381,11 @@
     background-color: white;
     }
     .titleResume {
-    background-color: #fafafa;
-    font-size: 1.1em;
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
     font-weight: 700;
-    margin-bottom: 5px;
+    padding: 8px 0 8px 0;
     }
     .eventMatch {
     background-color: lightgrey;
@@ -473,7 +457,6 @@
     color: grey;
     font-size: 30px;
     }
-
     /* Small screens */
     @media only screen and (max-width: 768px) { 
         body {
@@ -592,7 +575,5 @@
         color: grey;
         font-size: 18px;
         }
-
     }
 </style>
-        
