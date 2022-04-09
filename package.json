@@ -25,7 +25,7 @@
         "firebase": "^5.6.0",
         "firebase-admin": "^6.3.0",
         "merge-images": "^1.1.0",
-        "moment": "^2.22.2",
+        "moment": "^2.29.2",
         "noty": "^3.2.0-beta",
         "nuxt": "^2.3.4",
         "nuxt-client-init-module": "^0.1.4",
