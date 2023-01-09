@@ -23,7 +23,7 @@
         "cookie-parser": "^1.4.3",
         "dotenv": "^5.0.1",
         "firebase": "^5.6.0",
-        "firebase-admin": "^6.3.0",
+        "firebase-admin": "^11.4.1",
         "merge-images": "^1.1.0",
         "moment": "^2.22.2",
         "noty": "^3.2.0-beta",
